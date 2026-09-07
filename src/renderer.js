@@ -55,13 +55,19 @@ export class Renderer {
 
   async load(onProgress = () => {}) {
     const names = ['player','enemies','enemies-v2','bosses-v2','leaf-surface-v3'];
+    const playerRoot = 'assets/art/player/sv01';
+    const response = await fetch(`${playerRoot}/manifest.json`);
+    if (!response.ok) throw new Error(`SV-01 매니페스트를 불러올 수 없습니다: ${response.status}`);
+    const playerManifest = await response.json();
+    const sources = [...names.map(name => `assets/art/${name}.png`), ...playerManifest.frames.map(frame => `${playerRoot}/${frame.filename}`)];
     let loaded = 0;
-    const images = await Promise.all(names.map(async name => {
-      const image = await loadImage(`assets/art/${name}.png`);
-      onProgress(++loaded,names.length);
+    const images = await Promise.all(sources.map(async src => {
+      const image = await loadImage(src);
+      onProgress(++loaded,sources.length);
       return image;
     }));
     this.art = Object.fromEntries(names.map((name,i)=>[name,images[i]]));
+    this.playerFrames = images.slice(names.length);
     this.environment = new VolumeEnvironment({leafSurface:this.art['leaf-surface-v3']});
   }
 
@@ -262,7 +268,9 @@ export class Renderer {
     const mode=p.powerTime>0?p.weaponMode:'normal',palette=WEAPON_PRESENTATION[mode];
     c.save();c.translate(p.x,p.y);c.rotate(p.angle*2.4);
     if(p.invincible>0)c.globalAlpha=.55+Math.sin(t*28)*.2;
-    c.drawImage(this.art.player,-53,-53,106,106);
+    // Reuse the game's smoothed vertical tilt: descent 0, neutral 10, ascent 20.
+    const bankFrame = Math.round(10 - clamp(p.angle / .48,-1,1) * 10);
+    c.drawImage(this.playerFrames[bankFrame],-53,-53,106,106);
     c.globalAlpha=1;
     if(p.powerTime>0||p.invincible>0) {
       c.globalCompositeOperation='lighter';c.strokeStyle=p.powerTime>0?palette.color:'#c3eaff';

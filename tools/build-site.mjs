@@ -8,6 +8,8 @@ const output = resolve(root, 'dist');
 const music = JSON.parse(await readFile(resolve(root, 'assets/audio/manifest.json'), 'utf8'));
 const modules = ['boot', 'main', 'game', 'renderer', 'audio', 'presentation', 'volume-environment', 'terrain3d'];
 const images = ['player', 'enemies', 'enemies-v2', 'bosses-v2', 'leaf-surface-v3'];
+const playerRoot = 'assets/art/player/sv01';
+const playerManifest = JSON.parse(await readFile(resolve(root, playerRoot, 'manifest.json'), 'utf8'));
 const effects = ['shot-01', 'shot-02', 'shot-03', 'spread-01', 'spread-02', 'lance-01', 'lance-02', 'helix-01', 'helix-02', 'enemy-01', 'enemy-02', 'hit-01', 'hit-02', 'hit-03', 'player-hit', 'explosion-01', 'explosion-02', 'explosion-03', 'explosion-heavy', 'charge'];
 const patchEffects = [
   ...['normal', 'spread', 'lance', 'helix', 'drone'].flatMap(weapon => [1, 2, 3].map(number => `shot-${weapon}-0${number}`)),
@@ -35,6 +37,7 @@ for (const name of patchEffects) {
 const files = [
   'index.html', 'style.css', ...modules.map(name => `src/${name}.js`),
   ...images.map(name => `assets/art/${name}.png`),
+  `${playerRoot}/manifest.json`, ...playerManifest.frames.map(frame => `${playerRoot}/${frame.filename}`),
   'assets/audio/manifest.json', ...Object.values(music),
   ...effects.map(name => `assets/audio/sfx-v3/${name}.wav`),
   ...patchEffects.map(name => `${patchAudioRoot}/edited/${name}.wav`),
