@@ -1,0 +1,86 @@
+[
+  {
+    "file": "assets\\art\\clouds-v2.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 2015005,
+    "sha256": "6f7d01e8ccf15eae98a5767f1c23421b8deaebcd7e1e32acdc65709a293bd660"
+  },
+  {
+    "file": "assets\\art\\canopy-v2.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ],
+    "bytes": 2848627,
+    "sha256": "95dd22346bdeb61976d6432651bdc553a34c5108fca2614d0351c702396816d8"
+  },
+  {
+    "file": "assets\\art\\foliage-v2.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 2815718,
+    "sha256": "a7f06fe2169208e399cd25c7b0ea294ce24db06fc1b74a9d208dce77b94581db"
+  },
+  {
+    "file": "assets\\art\\palms-blender-v2.png",
+    "size": [
+      2048,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 2613849,
+    "sha256": "79d62da3761e56251bda1a94617e9b251cccb46a5900cb07577520a4391eba33"
+  },
+  {
+    "file": "assets\\art\\enemies-v2.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ],
+    "bytes": 1357230,
+    "sha256": "72f845c689717b2fbeb901c94c37200efe01caa5e54fcdd177d7c589fa5513a1"
+  },
+  {
+    "file": "assets\\art\\bosses-v2.png",
+    "size": [
+      2172,
+      724
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 1460168,
+    "sha256": "9ed7b4e467f80775de0fa9e135a2056a9cb04645049b184d1b1081c44ac8b8e2"
+  }
+]

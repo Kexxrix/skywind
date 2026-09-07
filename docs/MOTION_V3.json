@@ -1,0 +1,660 @@
+{
+  "source": "SkyWind actual V3 renderer background-only low-altitude fixture",
+  "fixture_parameters_reported_by_renderer_owner": {
+    "altitude": 0,
+    "g_speed": 1.3,
+    "camera_speed_m_s": 76,
+    "camera_direction_before_normalizing": [
+      0.55,
+      -0.33,
+      -1
+    ],
+    "roll_radians_approx": -0.206,
+    "gameplay_and_effects": "excluded"
+  },
+  "reference": {
+    "source": "E:\\codexwork\\Skywind\\.work\\motion-v2\\measurements.json",
+    "near_canopy_target_widths_s": [
+      0.7,
+      0.93
+    ],
+    "samples": [
+      {
+        "time_start_s": 53.3,
+        "near_widths_s": 0.7025,
+        "middle_widths_s": 0.3805
+      },
+      {
+        "time_start_s": 139.2,
+        "near_widths_s": 0.9302,
+        "middle_widths_s": 0.5336
+      },
+      {
+        "time_start_s": 191.2,
+        "near_widths_s": 0.7117,
+        "middle_widths_s": 0.4733
+      }
+    ]
+  },
+  "limitations": [
+    "Near/middle refer to inspected screen regions, not exact GPU depth bins. Perspective and occlusion can mix depths within a tile.",
+    "The V3 aspect ratio is 1666:937; the original source game crop is 720:498. Width normalization corrects resolution, not framing or aspect-ratio differences.",
+    "The 0.05-second interval is fixture simulation time supplied by the renderer owner; screenshot timestamps are not used as elapsed gameplay time.",
+    "A background-only 0.8-second fixed-altitude fixture does not measure combat performance, later difficulty or altitude transitions.",
+    "Native-resolution phase correlation accepted0/160 tiles in each depth band at the original confidence threshold. Its speed output was rejected; the threshold was not silently relaxed.",
+    "The normalized128px phase near band accepted only3/160 after rejection and is not a reliable standalone near-speed estimate.",
+    "The accepted32px NCC method samples coherent visible features:36/288 near tracks and39/288 middle tracks, each covering14/16 frame pairs and all9 x positions. Occluded/deforming/ambiguous patches are excluded, so this is a sparse-feature estimate, not a dense mean over all pixels.",
+    "The original video contains combat and effects; same-method reference comparisons use the existing low-canopy regions. Absolute world depth is unavailable in that source."
+  ],
+  "source_frames": [
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-00.png",
+      "fixture_time_s": 0.0,
+      "sha256": "2ad60a4c1722fb6b06bf4def65fe3c400366caffd4aa7ef4d5d63a1266d5123f"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-01.png",
+      "fixture_time_s": 0.05,
+      "sha256": "ae00bb140abc1aa7d336bfdd84e84d948788e7e78bed71f9c9039b31182ab330"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-02.png",
+      "fixture_time_s": 0.1,
+      "sha256": "8ecc4f05340df9b2447a47b8e65bf69f437935ef9fd3ebfffd9861eeb6ba28e0"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-03.png",
+      "fixture_time_s": 0.15,
+      "sha256": "59ac5ec5ed645a9a22d820b62c50f06743d947220e63348442341953a69308da"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-04.png",
+      "fixture_time_s": 0.2,
+      "sha256": "7e34043f71b16d90fa2a1d04ec9a29f1e5795a3f9187b64c78760767b88340c8"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-05.png",
+      "fixture_time_s": 0.25,
+      "sha256": "1168ce0c28879406a921b14a364d172154e33f9cb093c2688c2a8ea722f21070"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-06.png",
+      "fixture_time_s": 0.3,
+      "sha256": "ac5ed3d9a9565d2f6ffe533daa95a7cda2c32614238a9aa88f4be62c301dbcac"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-07.png",
+      "fixture_time_s": 0.35,
+      "sha256": "e889c12ca89d9d4c4b68419aad66a11007444b0a22f10a5a808b6e1e668c87d4"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-08.png",
+      "fixture_time_s": 0.4,
+      "sha256": "a64382747467da2bdd0e351bf21c98b040414c8f579aa8e82b041d73fb989860"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-09.png",
+      "fixture_time_s": 0.45,
+      "sha256": "c5cfa800c97ef982ce2995eb2da091b33525c934459f5d8254487e06dcf051e3"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-10.png",
+      "fixture_time_s": 0.5,
+      "sha256": "4a49b428b333cfebe2d0cf370c1b8bed64fa17cd56440b8b157be930d6aea976"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-11.png",
+      "fixture_time_s": 0.55,
+      "sha256": "4bbdee7182e620c87af5c102f191d1d850e39fa858b5c02e55fb6e9260613c16"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-12.png",
+      "fixture_time_s": 0.6,
+      "sha256": "1e90518413b2c4c11e9a189fbd17b16c70e9085d8309106a8c231b07f3e748af"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-13.png",
+      "fixture_time_s": 0.65,
+      "sha256": "bec9931ebe60d4c26e4fb7f107369f48211db0f32ba9722038fbc1c618c34081"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-14.png",
+      "fixture_time_s": 0.7,
+      "sha256": "78e7ee0ae7411b3ef298ff179d66d838e11ee38c11b87c32851e5fd11eee5052"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-15.png",
+      "fixture_time_s": 0.75,
+      "sha256": "3cf633db8172b5d3eb45a31760426e1b6050e4cb46b73507da1bc0b4ce3182b5"
+    },
+    {
+      "file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\low-16.png",
+      "fixture_time_s": 0.8,
+      "sha256": "e35d5c0efb5a4714d0c0f4d6ca5bb457830a389eec2994f854748db50977a095"
+    }
+  ],
+  "native_phase_correlation_attempt": {
+    "method": {
+      "algorithm": "Native-resolution local Hann-windowed FFT phase correlation; same estimator family and peak threshold as .work/motion-v2/analyze_motion.py",
+      "frame_dimensions_px": [
+        1666,
+        937
+      ],
+      "frames": 17,
+      "frame_interval_s": 0.05,
+      "duration_s": 0.8,
+      "tile_size_px": 296,
+      "tile_width_fraction": 0.17767106842737096,
+      "search_radius_px": 132,
+      "reference_tile_size_px": 128,
+      "reference_frame_width_px": 720,
+      "minimum_grayscale_std": 4,
+      "minimum_correlation_peak": 0.075,
+      "x_centres_px": [
+        200,
+        500,
+        800,
+        1100,
+        1400
+      ],
+      "robust_filter": "Reject displacement-vector distance above max(13.883px, 3x median distance from median vector).",
+      "speed_definition": "Median of individual displacement vector magnitudes / 0.05 sec; divide by 1666 for screen widths/sec. Not magnitude of independently median-filtered dx and dy.",
+      "synthetic_checks": [
+        {
+          "expected_dx_dy_px": [
+            -7,
+            3
+          ],
+          "measured_dx_dy_peak": [
+            -7.000072344191379,
+            3.000125459543683,
+            0.9854237833883283
+          ]
+        },
+        {
+          "expected_dx_dy_px": [
+            -58,
+            15
+          ],
+          "measured_dx_dy_peak": [
+            -57.999661657842076,
+            15.00091454928629,
+            0.6572428411816486
+          ]
+        },
+        {
+          "expected_dx_dy_px": [
+            -90,
+            22
+          ],
+          "measured_dx_dy_peak": [
+            -90.00021969701962,
+            22.001132132448383,
+            0.4359398671133137
+          ]
+        }
+      ],
+      "dependencies": "Existing Python, NumPy and Pillow; no new packages installed."
+    },
+    "measurements": {
+      "middle_canopy": {
+        "accepted": 0,
+        "phase_correlation_candidates": 0,
+        "status": "No tile met the original correlation threshold; no speed estimate accepted.",
+        "attempted_tiles": 160,
+        "y_centres_px": [
+          485,
+          595
+        ],
+        "per_x": {
+          "200": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "500": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "800": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "1100": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "1400": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          }
+        },
+        "per_y": {
+          "485": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "595": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          }
+        }
+      },
+      "near_canopy": {
+        "accepted": 0,
+        "phase_correlation_candidates": 0,
+        "status": "No tile met the original correlation threshold; no speed estimate accepted.",
+        "attempted_tiles": 160,
+        "y_centres_px": [
+          735,
+          780
+        ],
+        "per_x": {
+          "200": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "500": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "800": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "1100": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "1400": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          }
+        },
+        "per_y": {
+          "735": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          },
+          "780": {
+            "accepted": 0,
+            "phase_correlation_candidates": 0,
+            "status": "No tile met the original correlation threshold; no speed estimate accepted."
+          }
+        }
+      }
+    },
+    "accepted_for_speed_conclusion": false
+  },
+  "width_normalized_phase_correlation": {
+    "method": "Same 128px Hann phase estimator and 0.075 peak threshold as the original analysis, on analysis-only Lanczos resize to 720x405; source PNGs unchanged. At 20fps use +/-57px search to retain the original normalized velocity search range.",
+    "measurements": {
+      "upper_middle": {
+        "accepted": 70,
+        "phase_correlation_candidates": 73,
+        "dx_px_s": -322.496,
+        "dy_px_s": 94.97,
+        "median_vector_magnitude_px_s": 336.588,
+        "speed_iqr_px_s": [
+          244.466,
+          410.168
+        ],
+        "median_vector_magnitude_widths_s": 0.46748,
+        "speed_iqr_widths_s": [
+          0.33954,
+          0.56968
+        ],
+        "median_peak": 0.0936,
+        "max_accepted_absolute_displacement_px": 27.003,
+        "y_centres_analysis_px": [
+          170,
+          220
+        ],
+        "attempted_tiles": 160,
+        "accepted_for_primary_speed_conclusion": false,
+        "interpretation": "Supplementary only. Large tiles can mix depth; near band has too few accepted samples for a standalone speed conclusion."
+      },
+      "middle": {
+        "accepted": 20,
+        "phase_correlation_candidates": 21,
+        "dx_px_s": -430.229,
+        "dy_px_s": 121.941,
+        "median_vector_magnitude_px_s": 447.406,
+        "speed_iqr_px_s": [
+          416.572,
+          552.73
+        ],
+        "median_vector_magnitude_widths_s": 0.6214,
+        "speed_iqr_widths_s": [
+          0.57857,
+          0.76768
+        ],
+        "median_peak": 0.0911,
+        "max_accepted_absolute_displacement_px": 32.047,
+        "y_centres_analysis_px": [
+          220,
+          275
+        ],
+        "attempted_tiles": 160,
+        "accepted_for_primary_speed_conclusion": false,
+        "interpretation": "Supplementary only. Large tiles can mix depth; near band has too few accepted samples for a standalone speed conclusion."
+      },
+      "near": {
+        "accepted": 3,
+        "phase_correlation_candidates": 4,
+        "dx_px_s": -718.822,
+        "dy_px_s": 419.767,
+        "median_vector_magnitude_px_s": 813.807,
+        "speed_iqr_px_s": [
+          796.357,
+          849.962
+        ],
+        "median_vector_magnitude_widths_s": 1.13029,
+        "speed_iqr_widths_s": [
+          1.10605,
+          1.1805
+        ],
+        "median_peak": 0.0895,
+        "max_accepted_absolute_displacement_px": 36.754,
+        "y_centres_analysis_px": [
+          300,
+          340
+        ],
+        "attempted_tiles": 160,
+        "accepted_for_primary_speed_conclusion": false,
+        "interpretation": "Supplementary only. Large tiles can mix depth; near band has too few accepted samples for a standalone speed conclusion."
+      }
+    }
+  },
+  "verified_local_feature_tracking": {
+    "accepted_for_speed_conclusion": true,
+    "method": "32px local normalized cross correlation at 720x405, search +/-90, min std6, min score0.7, min unique-peak margin0.04 outside5px, reverse match error<=2px",
+    "analysis_dimensions_px": [
+      720,
+      405
+    ],
+    "pixel_rate_definition": "Per-feature hypot(dx,dy)/0.05 sec. Divide by720 for widths/sec; multiply widths/sec by1666 to express captured viewport pixels/sec.",
+    "synthetic_check": {
+      "expected_forward_position": [
+        280,
+        260
+      ],
+      "measured_forward": {
+        "x": 280,
+        "y": 260,
+        "score": 1.0,
+        "margin": 0.8606439968782081
+      },
+      "expected_backward_position": [
+        320,
+        240
+      ],
+      "measured_backward": {
+        "x": 320,
+        "y": 240,
+        "score": 1.0,
+        "margin": 0.8845429870142212
+      }
+    },
+    "measurements": {
+      "upper_middle": {
+        "attempted": 288,
+        "accepted": 16,
+        "speed_widths_s": 0.6622713960240011,
+        "iqr_widths_s": [
+          0.5341200674200984,
+          0.7737759456261005
+        ],
+        "median_dx_dy_analysis_px_s": [
+          -440.0,
+          170.0
+        ],
+        "per_y": {
+          "160": {
+            "count": 5,
+            "speed_widths_s": 0.47466687473986274
+          },
+          "200": {
+            "count": 11,
+            "speed_widths_s": 0.7479395565464588
+          }
+        },
+        "y_centres_analysis_px": [
+          160,
+          200
+        ],
+        "y_centres_original_fraction": [
+          0.3950617283950617,
+          0.49382716049382713
+        ],
+        "x_centres_analysis_px": [
+          80,
+          150,
+          220,
+          290,
+          360,
+          430,
+          500,
+          570,
+          640
+        ],
+        "speed_at_1666px_viewport_px_s": 1103.344145775986,
+        "iqr_at_1666px_viewport_px_s": [
+          889.844032321884,
+          1289.1107254130834
+        ],
+        "frame_pairs_with_tracks": 10,
+        "distinct_x_positions_with_tracks": 6,
+        "leftward_tracks": 16,
+        "median_forward_score": 0.7401155476451675,
+        "median_backward_error_px": 0.0
+      },
+      "middle": {
+        "attempted": 288,
+        "accepted": 39,
+        "speed_widths_s": 1.0311506218483657,
+        "iqr_widths_s": [
+          0.8822694986519566,
+          1.1532126037233388
+        ],
+        "median_dx_dy_analysis_px_s": [
+          -680.0,
+          320.0
+        ],
+        "per_y": {
+          "240": {
+            "count": 18,
+            "speed_widths_s": 0.9007241640394201
+          },
+          "280": {
+            "count": 21,
+            "speed_widths_s": 1.118033988749895
+          }
+        },
+        "y_centres_analysis_px": [
+          240,
+          280
+        ],
+        "y_centres_original_fraction": [
+          0.5925925925925926,
+          0.691358024691358
+        ],
+        "x_centres_analysis_px": [
+          80,
+          150,
+          220,
+          290,
+          360,
+          430,
+          500,
+          570,
+          640
+        ],
+        "speed_at_1666px_viewport_px_s": 1717.8969359993773,
+        "iqr_at_1666px_viewport_px_s": [
+          1469.8609847541597,
+          1921.2521978030825
+        ],
+        "frame_pairs_with_tracks": 14,
+        "distinct_x_positions_with_tracks": 9,
+        "leftward_tracks": 39,
+        "median_forward_score": 0.7392402543373993,
+        "median_backward_error_px": 0.0
+      },
+      "near": {
+        "attempted": 288,
+        "accepted": 36,
+        "speed_widths_s": 1.4131040880712207,
+        "iqr_widths_s": [
+          1.3112590840696465,
+          1.517197543290513
+        ],
+        "median_dx_dy_analysis_px_s": [
+          -880.0,
+          500.0
+        ],
+        "per_y": {
+          "320": {
+            "count": 21,
+            "speed_widths_s": 1.3416982973037024
+          },
+          "360": {
+            "count": 15,
+            "speed_widths_s": 1.5105084582580581
+          }
+        },
+        "y_centres_analysis_px": [
+          320,
+          360
+        ],
+        "y_centres_original_fraction": [
+          0.7901234567901234,
+          0.8888888888888888
+        ],
+        "x_centres_analysis_px": [
+          80,
+          150,
+          220,
+          290,
+          360,
+          430,
+          500,
+          570,
+          640
+        ],
+        "speed_at_1666px_viewport_px_s": 2354.231410726654,
+        "iqr_at_1666px_viewport_px_s": [
+          2184.557634060031,
+          2527.6511071219948
+        ],
+        "frame_pairs_with_tracks": 14,
+        "distinct_x_positions_with_tracks": 9,
+        "leftward_tracks": 36,
+        "median_forward_score": 0.78109865923505,
+        "median_backward_error_px": 0.0
+      }
+    },
+    "raw_tracks_file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\feature-tracks.json",
+    "reference_cross_check": {
+      "method": "Identical 32px NCC/forward-backward settings on original 720x498 game crop, ffmpeg fps=20, 17 frames per0.85s decode, first16 pairs measured.",
+      "samples": [
+        {
+          "time_start_s": 53.3,
+          "frame_dimensions": [
+            720,
+            498
+          ],
+          "frame_count": 17,
+          "frame_interval_s": 0.05,
+          "summaries": {
+            "middle": {
+              "accepted": 93,
+              "speed_widths_s": 0.5285082664011235,
+              "iqr_widths_s": [
+                0.39771725175767647,
+                0.660270240222484
+              ],
+              "dxdy_px_s": [
+                -380.0,
+                60.0
+              ]
+            },
+            "near": {
+              "accepted": 235,
+              "speed_widths_s": 0.7081971546656646,
+              "iqr_widths_s": [
+                0.5555555555555556,
+                0.8256535218093651
+              ],
+              "dxdy_px_s": [
+                -500.0,
+                80.0
+              ]
+            }
+          }
+        },
+        {
+          "time_start_s": 139.2,
+          "frame_dimensions": [
+            720,
+            498
+          ],
+          "frame_count": 17,
+          "frame_interval_s": 0.05,
+          "summaries": {
+            "middle": {
+              "accepted": 64,
+              "speed_widths_s": 0.572653559113564,
+              "iqr_widths_s": [
+                0.47466687473986274,
+                0.7484546674098441
+              ],
+              "dxdy_px_s": [
+                -380.0,
+                100.0
+              ]
+            },
+            "near": {
+              "accepted": 189,
+              "speed_widths_s": 0.8448281292080861,
+              "iqr_widths_s": [
+                0.598351645237167,
+                1.0847568994314796
+              ],
+              "dxdy_px_s": [
+                -600.0,
+                160.0
+              ]
+            }
+          }
+        }
+      ],
+      "raw_tracks_file": "E:\\codexwork\\Skywind\\.work\\motion-v3\\reference-feature-tracks.json"
+    }
+  },
+  "conclusion": {
+    "near_canopy_widths_s": 1.4131040880712207,
+    "middle_canopy_widths_s": 1.0311506218483657,
+    "near_ratio_to_original_requested_range": [
+      1.519466761366904,
+      2.0187201258160297
+    ],
+    "near_ratio_to_same_method_original_53_3s": 1.9953540885635699,
+    "near_ratio_to_same_method_original_139_2s": 1.6726527434589773,
+    "finding": "The measured V3 low-altitude near canopy is already faster than the reference: about1.52-2.02x the prior0.70-0.93 widths/sec range; same-method source checks also confirm higher V3 speed. Increasing low-altitude scroll is not supported by this fixture.",
+    "conditional_tuning_only": "If exact original speed is the target, compare camera speeds around42-50m/s with the same geometry as a first trial. This linear estimate is not a requested balance change and has not been implemented.",
+    "visual_scope": "This finding addresses apparent motion only, not reference-quality foliage, lighting, cloud appearance or overall completion."
+  }
+}

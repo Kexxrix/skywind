@@ -1,0 +1,21 @@
+{
+  "asset": "leaf-surface-v3.png",
+  "kind": "AI-generated leaf surface texture",
+  "tool": "Built-in image_gen.imagegen",
+  "generatedAt": "2026-09-06",
+  "original": "Local image-generation output; machine-specific path omitted in public backup. Original hashes below are preserved.",
+  "originalPreserved": true,
+  "transformation": "None. Original PNG copied without pixel edits.",
+  "size": [
+    1024,
+    1536
+  ],
+  "format": "RGB PNG, opaque",
+  "sha256": "1D22911B917DACB70F603A9B7E934EFE4FED9BACB8554A527A4E9541DA872EE0",
+  "uv": "Image x is leaf width with midrib at x=0.5. Image bottom is leaf base, image top is tip. Terrain geometry stores UV=(length,width), and shader samples vec2(width,1-length) from an unflipped upload.",
+  "prompt": "Use case: photorealistic-natural. Asset type: rectangular diffuse/albedo texture for one curved tropical leaf surface in a realistic WebGL rainforest game. Primary request: create ONE incredibly detailed photoreal macro photograph of the continuous upper epidermis of a healthy tropical broadleaf, as a UV material, rectangular portrait 2:3 composition. The ENTIRE image is green leaf tissue, filling every corner with leaf surface; do not show the outline or edge of a leaf, no background, no transparency. A thin pale yellow-green central midrib is perfectly vertical at image x=50%, from bottom center to top center. Fine side veins branch diagonally from the midrib upward toward the outer left/right edges; intricate finer capillary vein network, microscopic pores, subtle irregular chlorophyll mottling and patches, gentle organic wax cuticle microtexture. Bottom of image maps to leaf base, top maps to tip. Real living leaf photography, advertising product photography fidelity, naturally rich lime and emerald green local color variation with small darker olive patches. Orthographic straight-on flat surface macro scan, absolutely uniform neutral diffuse cross-polarized illumination. No cast shadow, no major baked directional highlight, no perspective, no depth of field, no water droplets, no insects, no text, no labels, no frame, no multiple panels. NOT a 3D render, NOT illustration, NOT stylized, NOT plastic. This will be wrapped on the already-modeled leaf geometry and lit dynamically, so the surface tissue must occupy the full rectangular texture and the vein color details should be physically plausible and fine.",
+  "implementationReferences": [
+    "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D",
+    "https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_filter_anisotropic"
+  ]
+}

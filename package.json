@@ -1,0 +1,13 @@
+{
+  "name": "skywind",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SkyWind — an endless cinematic aerial shooter",
+  "scripts": {
+    "start": "node server.mjs",
+    "build:site": "node tools/build-site.mjs",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/boot.js && node --check src/main.js && node --check src/game.js && node --check src/renderer.js && node --check src/environment.js && node --check src/volume-environment.js && node --check src/terrain3d.js && node --check src/audio.js"
+  }
+}

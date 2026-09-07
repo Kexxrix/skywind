@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07182c">
+  <title>SkyWind</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="SkyWind 횡스크롤 슈팅 게임">
+    <canvas id="game" width="1280" height="720" aria-label="비행 화면. WASD 또는 방향키로 이동, Space로 발사" tabindex="0"></canvas>
+    <div id="loading" role="status"><span class="loading-logo">SKYWIND</span><span id="loading-text">하늘을 준비하고 있습니다</span><i></i><button id="retry-loading" class="text-button" hidden>RETRY</button></div>
+    <div class="utilities">
+      <button id="pause-button" class="icon-button" aria-label="일시정지" title="일시정지 · P"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>
+      <button id="sound-button" class="icon-button" aria-label="음악 켜기" title="음악 켜기 · M"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-waves" d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/><path class="sound-slash" d="m16 9 6 6m0-6-6 6"/></svg></button>
+      <button id="fullscreen-button" class="icon-button" aria-label="전체 화면" title="전체 화면 · F"><svg viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></button>
+    </div>
+    <div id="status-group">
+    <section id="hud" aria-label="비행 상태" hidden>
+      <div class="energy-label"><span>ENERGY</span><span id="hp-value">100</span></div>
+      <div class="energy-track"><div id="energy-fill"></div></div>
+      <output id="score">000000</output>
+      <div id="power-status" aria-label="무기 상태">
+        <div id="weapon-row" class="weapon-row" data-mode="normal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path id="weapon-icon" d="M3 7H21M3 17H21"/></svg>
+          <span id="weapon-name">TWIN CANNON</span><span id="weapon-time" class="weapon-time">∞</span>
+          <span class="weapon-meter"><i id="weapon-gauge"></i></span>
+        </div>
+        <div id="drone-row" class="weapon-row drone-row" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7L7 2L12 7L7 12ZM12 17L17 12L22 17L17 22Z"/></svg>
+          <span>DRONE ×2</span><span id="drone-time" class="weapon-time"></span>
+          <span class="weapon-meter"><i id="drone-gauge"></i></span>
+        </div>
+      </div>
+      <div id="combo"></div>
+    </section>
+    <div id="notice" role="status"></div>
+    </div>
+    <div id="boss-hud" hidden><span>WARDEN</span><div><i id="boss-fill"></i></div></div>
+    <section id="title-screen" class="screen" hidden>
+      <div class="title-content">
+        <h1 class="wordmark"><span>SKY</span><span>WIND</span></h1>
+        <div class="wordmark-line"></div>
+        <button id="start-button" class="text-button">START<span class="start-line"></span></button>
+        <p id="title-best" class="best-score">BEST <span>000000</span></p>
+      </div>
+      <div class="instructions"><span><kbd>W A S D</kbd> / <kbd>↑ ↓ ← →</kbd> 이동</span><span><kbd>SPACE</kbd> / 마우스 누르기 발사</span><span class="touch-instruction">왼쪽 드래그 이동 · 오른쪽 SHOT</span></div>
+    </section>
+    <section id="gameover-screen" class="screen" hidden>
+      <div class="result-content"><h2>GAME OVER</h2><span class="result-label">SCORE</span><output id="final-score">000000</output><p id="new-record" hidden>NEW BEST</p><p class="best-score">BEST <span id="final-best">000000</span></p><button id="restart-button" class="text-button">RETRY<span class="start-line"></span></button><button id="title-button" class="subtle-button">TITLE</button></div>
+    </section>
+    <section id="pause-screen" class="screen" hidden><div class="pause-content"><h2>PAUSED</h2><button id="resume-button" class="text-button">RESUME<span class="start-line"></span></button></div></section>
+    <div id="touch-controls"><div id="joystick"><div id="joystick-knob"></div></div><button id="shot-button" aria-label="샷 버튼">SHOT</button></div>
+  </main>
+  <script src="src/boot.js"></script>
+</body>
+</html>

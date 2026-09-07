@@ -1,0 +1,591 @@
+{
+  "errors": [],
+  "scenes": [
+    {
+      "variant": "patched",
+      "lights": [
+        {
+          "distance": 0,
+          "kind": "shot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 0,
+          "kind": "enemyShot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 0,
+          "kind": "hit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 0,
+          "kind": "playerHit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 0,
+          "kind": "pickup",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 0,
+          "kind": "explosion",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.09541232638888889,
+          "maxDelta": 10
+        },
+        {
+          "distance": 2,
+          "kind": "shot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 2,
+          "kind": "enemyShot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 2,
+          "kind": "hit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 2,
+          "kind": "playerHit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 2,
+          "kind": "pickup",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 2,
+          "kind": "explosion",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 5,
+          "kind": "shot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.0013205295138888889,
+          "maxDelta": 2
+        },
+        {
+          "distance": 5,
+          "kind": "enemyShot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.0019205729166666666,
+          "maxDelta": 2
+        },
+        {
+          "distance": 5,
+          "kind": "hit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.00023980034722222222,
+          "maxDelta": 2
+        },
+        {
+          "distance": 5,
+          "kind": "playerHit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.0022374131944444446,
+          "maxDelta": 2
+        },
+        {
+          "distance": 5,
+          "kind": "pickup",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.004845920138888889,
+          "maxDelta": 2
+        },
+        {
+          "distance": 5,
+          "kind": "explosion",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.4559407552083333,
+          "maxDelta": 23
+        },
+        {
+          "distance": 8,
+          "kind": "shot",
+          "changedPixels": 20953,
+          "areaPercent": 2.2735460069444446,
+          "meanMaxChannelDelta": 1.4188628472222222,
+          "maxDelta": 70
+        },
+        {
+          "distance": 8,
+          "kind": "enemyShot",
+          "changedPixels": 18432,
+          "areaPercent": 2,
+          "meanMaxChannelDelta": 1.375539279513889,
+          "maxDelta": 80
+        },
+        {
+          "distance": 8,
+          "kind": "hit",
+          "changedPixels": 15510,
+          "areaPercent": 1.6829427083333335,
+          "meanMaxChannelDelta": 1.0360970052083334,
+          "maxDelta": 65
+        },
+        {
+          "distance": 8,
+          "kind": "playerHit",
+          "changedPixels": 20813,
+          "areaPercent": 2.258355034722222,
+          "meanMaxChannelDelta": 1.561672092013889,
+          "maxDelta": 84
+        },
+        {
+          "distance": 8,
+          "kind": "pickup",
+          "changedPixels": 17842,
+          "areaPercent": 1.935980902777778,
+          "meanMaxChannelDelta": 1.3064995659722223,
+          "maxDelta": 66
+        },
+        {
+          "distance": 8,
+          "kind": "explosion",
+          "changedPixels": 101896,
+          "areaPercent": 11.056423611111112,
+          "meanMaxChannelDelta": 9.081733940972223,
+          "maxDelta": 120
+        },
+        {
+          "distance": 10,
+          "kind": "shot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 10,
+          "kind": "enemyShot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 10,
+          "kind": "hit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 10,
+          "kind": "playerHit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0,
+          "maxDelta": 0
+        },
+        {
+          "distance": 10,
+          "kind": "pickup",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.000004340277777777778,
+          "maxDelta": 1
+        },
+        {
+          "distance": 10,
+          "kind": "explosion",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 0.23524848090277778,
+          "maxDelta": 12
+        },
+        {
+          "distance": 13,
+          "kind": "shot",
+          "changedPixels": 16183,
+          "areaPercent": 1.7559678819444444,
+          "meanMaxChannelDelta": 0.9642003038194444,
+          "maxDelta": 40
+        },
+        {
+          "distance": 13,
+          "kind": "enemyShot",
+          "changedPixels": 12705,
+          "areaPercent": 1.3785807291666667,
+          "meanMaxChannelDelta": 0.9482215711805555,
+          "maxDelta": 49
+        },
+        {
+          "distance": 13,
+          "kind": "hit",
+          "changedPixels": 11141,
+          "areaPercent": 1.2088758680555556,
+          "meanMaxChannelDelta": 0.6918478732638889,
+          "maxDelta": 37
+        },
+        {
+          "distance": 13,
+          "kind": "playerHit",
+          "changedPixels": 15268,
+          "areaPercent": 1.656684027777778,
+          "meanMaxChannelDelta": 1.0776486545138888,
+          "maxDelta": 50
+        },
+        {
+          "distance": 13,
+          "kind": "pickup",
+          "changedPixels": 11517,
+          "areaPercent": 1.2496744791666667,
+          "meanMaxChannelDelta": 0.9160015190972223,
+          "maxDelta": 39
+        },
+        {
+          "distance": 13,
+          "kind": "explosion",
+          "changedPixels": 97011,
+          "areaPercent": 10.5263671875,
+          "meanMaxChannelDelta": 7.239742838541667,
+          "maxDelta": 71
+        }
+      ]
+    },
+    {
+      "variant": "old-light",
+      "lights": [
+        {
+          "distance": 0,
+          "kind": "shot",
+          "changedPixels": 180014,
+          "areaPercent": 19.53276909722222,
+          "meanMaxChannelDelta": 12.837802734375,
+          "maxDelta": 118
+        },
+        {
+          "distance": 0,
+          "kind": "enemyShot",
+          "changedPixels": 206047,
+          "areaPercent": 22.357530381944443,
+          "meanMaxChannelDelta": 15.554188368055556,
+          "maxDelta": 139
+        },
+        {
+          "distance": 0,
+          "kind": "hit",
+          "changedPixels": 204293,
+          "areaPercent": 22.16720920138889,
+          "meanMaxChannelDelta": 14.306700303819444,
+          "maxDelta": 126
+        },
+        {
+          "distance": 0,
+          "kind": "playerHit",
+          "changedPixels": 206047,
+          "areaPercent": 22.357530381944443,
+          "meanMaxChannelDelta": 15.554188368055556,
+          "maxDelta": 139
+        },
+        {
+          "distance": 0,
+          "kind": "pickup",
+          "changedPixels": 204293,
+          "areaPercent": 22.16720920138889,
+          "meanMaxChannelDelta": 14.306700303819444,
+          "maxDelta": 126
+        },
+        {
+          "distance": 0,
+          "kind": "explosion",
+          "changedPixels": 256709,
+          "areaPercent": 27.85470920138889,
+          "meanMaxChannelDelta": 19.882799479166668,
+          "maxDelta": 170
+        },
+        {
+          "distance": 2,
+          "kind": "shot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 4.609105902777777,
+          "maxDelta": 20
+        },
+        {
+          "distance": 2,
+          "kind": "enemyShot",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 5.304475911458334,
+          "maxDelta": 23
+        },
+        {
+          "distance": 2,
+          "kind": "hit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 5.279427083333333,
+          "maxDelta": 23
+        },
+        {
+          "distance": 2,
+          "kind": "playerHit",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 5.304475911458334,
+          "maxDelta": 23
+        },
+        {
+          "distance": 2,
+          "kind": "pickup",
+          "changedPixels": 0,
+          "areaPercent": 0,
+          "meanMaxChannelDelta": 5.279427083333333,
+          "maxDelta": 23
+        },
+        {
+          "distance": 2,
+          "kind": "explosion",
+          "changedPixels": 2156,
+          "areaPercent": 0.23394097222222224,
+          "meanMaxChannelDelta": 7.280259331597223,
+          "maxDelta": 32
+        },
+        {
+          "distance": 5,
+          "kind": "shot",
+          "changedPixels": 380861,
+          "areaPercent": 41.32606336805556,
+          "meanMaxChannelDelta": 28.232827690972222,
+          "maxDelta": 85
+        },
+        {
+          "distance": 5,
+          "kind": "enemyShot",
+          "changedPixels": 556041,
+          "areaPercent": 60.334309895833336,
+          "meanMaxChannelDelta": 34.406178385416666,
+          "maxDelta": 106
+        },
+        {
+          "distance": 5,
+          "kind": "hit",
+          "changedPixels": 520308,
+          "areaPercent": 56.45703125,
+          "meanMaxChannelDelta": 31.46023220486111,
+          "maxDelta": 91
+        },
+        {
+          "distance": 5,
+          "kind": "playerHit",
+          "changedPixels": 556041,
+          "areaPercent": 60.334309895833336,
+          "meanMaxChannelDelta": 34.406178385416666,
+          "maxDelta": 106
+        },
+        {
+          "distance": 5,
+          "kind": "pickup",
+          "changedPixels": 520308,
+          "areaPercent": 56.45703125,
+          "meanMaxChannelDelta": 31.46023220486111,
+          "maxDelta": 91
+        },
+        {
+          "distance": 5,
+          "kind": "explosion",
+          "changedPixels": 808533,
+          "areaPercent": 87.7314453125,
+          "meanMaxChannelDelta": 43.87349826388889,
+          "maxDelta": 123
+        },
+        {
+          "distance": 8,
+          "kind": "shot",
+          "changedPixels": 792310,
+          "areaPercent": 85.97113715277777,
+          "meanMaxChannelDelta": 63.51321180555556,
+          "maxDelta": 116
+        },
+        {
+          "distance": 8,
+          "kind": "enemyShot",
+          "changedPixels": 805273,
+          "areaPercent": 87.37771267361111,
+          "meanMaxChannelDelta": 79.40086046006944,
+          "maxDelta": 159
+        },
+        {
+          "distance": 8,
+          "kind": "hit",
+          "changedPixels": 801179,
+          "areaPercent": 86.93348524305556,
+          "meanMaxChannelDelta": 68.09103841145833,
+          "maxDelta": 117
+        },
+        {
+          "distance": 8,
+          "kind": "playerHit",
+          "changedPixels": 805273,
+          "areaPercent": 87.37771267361111,
+          "meanMaxChannelDelta": 79.40086046006944,
+          "maxDelta": 159
+        },
+        {
+          "distance": 8,
+          "kind": "pickup",
+          "changedPixels": 801179,
+          "areaPercent": 86.93348524305556,
+          "meanMaxChannelDelta": 68.09103841145833,
+          "maxDelta": 117
+        },
+        {
+          "distance": 8,
+          "kind": "explosion",
+          "changedPixels": 818472,
+          "areaPercent": 88.80989583333333,
+          "meanMaxChannelDelta": 93.05077799479167,
+          "maxDelta": 161
+        },
+        {
+          "distance": 10,
+          "kind": "shot",
+          "changedPixels": 263160,
+          "areaPercent": 28.554687499999996,
+          "meanMaxChannelDelta": 18.008471137152778,
+          "maxDelta": 78
+        },
+        {
+          "distance": 10,
+          "kind": "enemyShot",
+          "changedPixels": 297724,
+          "areaPercent": 32.30512152777778,
+          "meanMaxChannelDelta": 23.725797526041667,
+          "maxDelta": 109
+        },
+        {
+          "distance": 10,
+          "kind": "hit",
+          "changedPixels": 269832,
+          "areaPercent": 29.278645833333332,
+          "meanMaxChannelDelta": 19.320483940972224,
+          "maxDelta": 81
+        },
+        {
+          "distance": 10,
+          "kind": "playerHit",
+          "changedPixels": 297724,
+          "areaPercent": 32.30512152777778,
+          "meanMaxChannelDelta": 23.725797526041667,
+          "maxDelta": 109
+        },
+        {
+          "distance": 10,
+          "kind": "pickup",
+          "changedPixels": 269832,
+          "areaPercent": 29.278645833333332,
+          "meanMaxChannelDelta": 19.320483940972224,
+          "maxDelta": 81
+        },
+        {
+          "distance": 10,
+          "kind": "explosion",
+          "changedPixels": 316961,
+          "areaPercent": 34.39246961805556,
+          "meanMaxChannelDelta": 28.099505208333333,
+          "maxDelta": 116
+        },
+        {
+          "distance": 13,
+          "kind": "shot",
+          "changedPixels": 639603,
+          "areaPercent": 69.4013671875,
+          "meanMaxChannelDelta": 43.606826171875,
+          "maxDelta": 96
+        },
+        {
+          "distance": 13,
+          "kind": "enemyShot",
+          "changedPixels": 675608,
+          "areaPercent": 73.30815972222223,
+          "meanMaxChannelDelta": 55.715533854166665,
+          "maxDelta": 125
+        },
+        {
+          "distance": 13,
+          "kind": "hit",
+          "changedPixels": 656013,
+          "areaPercent": 71.18196614583333,
+          "meanMaxChannelDelta": 46.67845160590278,
+          "maxDelta": 99
+        },
+        {
+          "distance": 13,
+          "kind": "playerHit",
+          "changedPixels": 675608,
+          "areaPercent": 73.30815972222223,
+          "meanMaxChannelDelta": 55.715533854166665,
+          "maxDelta": 125
+        },
+        {
+          "distance": 13,
+          "kind": "pickup",
+          "changedPixels": 656013,
+          "areaPercent": 71.18196614583333,
+          "meanMaxChannelDelta": 46.67845160590278,
+          "maxDelta": 99
+        },
+        {
+          "distance": 13,
+          "kind": "explosion",
+          "changedPixels": 705912,
+          "areaPercent": 76.59635416666667,
+          "meanMaxChannelDelta": 64.84434244791667,
+          "maxDelta": 133
+        }
+      ]
+    }
+  ]
+}

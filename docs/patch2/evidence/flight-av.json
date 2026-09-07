@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-09-06T13:27:09.382505+00:00",
+  "recording": "raw-flight",
+  "humanListeningVerified": false,
+  "mediaModified": false,
+  "audioSha256": "a78c3908db126096912cd945624be472db236914d25c80e96704f78990168bd1",
+  "timing": {
+    "audioStartOffsetFromVideoSeconds": 0.011409,
+    "recordingWallDurationSeconds": 51.7915,
+    "videoWallDurationSeconds": 51.81130909919739,
+    "firstPacketPtsSeconds": 0.0,
+    "lastPacketEndSeconds": 51.751,
+    "packetEndMinusWallSeconds": -0.0405,
+    "packetCount": 836,
+    "packetPtsStrictlyIncreasing": true,
+    "typicalPacketSeconds": 0.068,
+    "packetDurationsInferredCount": 0,
+    "gaps": [
+      {
+        "fromAudioSeconds": 32.15,
+        "toAudioSeconds": 32.961,
+        "gapSeconds": 0.811
+      },
+      {
+        "fromAudioSeconds": 45.569,
+        "toAudioSeconds": 46.291,
+        "gapSeconds": 0.722
+      }
+    ],
+    "plainPcmDurationSeconds": 50.16,
+    "timestampAwarePcmDurationSeconds": 51.751,
+    "timestampAwareMinusPlainSeconds": 1.591
+  },
+  "signal": {
+    "timestampAwarePeakDbFS": -3.9674,
+    "timestampAwareRmsDbFS": -22.7093,
+    "quietIntervalsBelowMinus60DbFS": [
+      {
+        "startAudioSeconds": 0.0,
+        "endAudioSeconds": 0.52
+      },
+      {
+        "startAudioSeconds": 32.12,
+        "endAudioSeconds": 32.96
+      },
+      {
+        "startAudioSeconds": 34.56,
+        "endAudioSeconds": 34.92
+      },
+      {
+        "startAudioSeconds": 45.58,
+        "endAudioSeconds": 46.28
+      },
+      {
+        "startAudioSeconds": 47.76,
+        "endAudioSeconds": 48.12
+      }
+    ]
+  },
+  "pauseIntervals": [
+    {
+      "startAudioSeconds": 22.6692,
+      "endAudioSeconds": 22.6912,
+      "wallDurationSeconds": 0.022,
+      "interiorRmsDbFS": null,
+      "interiorSilentBelowMinus60DbFS": null
+    },
+    {
+      "startAudioSeconds": 25.4353,
+      "endAudioSeconds": 25.4583,
+      "wallDurationSeconds": 0.023,
+      "interiorRmsDbFS": null,
+      "interiorSilentBelowMinus60DbFS": null
+    },
+    {
+      "startAudioSeconds": 28.2403,
+      "endAudioSeconds": 28.281,
+      "wallDurationSeconds": 0.0407,
+      "interiorRmsDbFS": null,
+      "interiorSilentBelowMinus60DbFS": null
+    },
+    {
+      "startAudioSeconds": 32.1977,
+      "endAudioSeconds": 33.015,
+      "wallDurationSeconds": 0.8173,
+      "interiorRmsDbFS": -240.0,
+      "interiorSilentBelowMinus60DbFS": true
+    },
+    {
+      "startAudioSeconds": 45.5979,
+      "endAudioSeconds": 46.3161,
+      "wallDurationSeconds": 0.7182,
+      "interiorRmsDbFS": -240.0,
+      "interiorSilentBelowMinus60DbFS": true
+    }
+  ],
+  "lifecycleMarks": [
+    {
+      "label": "normal-input-start",
+      "videoSeconds": 0.064109,
+      "gameTime": 0.016700000000000045,
+      "audio": {
+        "context": "running",
+        "contextTime": 0.13066666666666665,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "minimum-altitude-reached",
+      "videoSeconds": 8.082809,
+      "gameTime": 8.033400000000166,
+      "audio": {
+        "context": "running",
+        "contextTime": 8.152,
+        "voices": 1,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "minimum-altitude-hold-complete",
+      "videoSeconds": 17.617009,
+      "gameTime": 17.56679999999989,
+      "audio": {
+        "context": "running",
+        "contextTime": 17.690666666666665,
+        "voices": 1,
+        "retiring": 0,
+        "tones": 3,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "maximum-altitude-reached",
+      "videoSeconds": 22.645609,
+      "gameTime": 22.60019999999963,
+      "audio": {
+        "context": "running",
+        "contextTime": 22.712,
+        "voices": 2,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "fixture-start",
+      "videoSeconds": 22.681109,
+      "gameTime": 22.63349999999963,
+      "audio": {
+        "context": "suspended",
+        "contextTime": 22.741333333333333,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "fixture-result",
+      "videoSeconds": 24.403409,
+      "gameTime": 24.350099999999543,
+      "audio": {
+        "context": "running",
+        "contextTime": 24.450666666666667,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "fixture-start",
+      "videoSeconds": 25.447609,
+      "gameTime": 25.39999999999949,
+      "audio": {
+        "context": "suspended",
+        "contextTime": 25.501333333333335,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "fixture-result",
+      "videoSeconds": 27.201909,
+      "gameTime": 27.1500999999994,
+      "audio": {
+        "context": "running",
+        "contextTime": 27.24,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "fixture-start",
+      "videoSeconds": 28.252509,
+      "gameTime": 28.20019999999935,
+      "audio": {
+        "context": "suspended",
+        "contextTime": 28.290666666666667,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "fixture-result",
+      "videoSeconds": 29.954809,
+      "gameTime": 29.900099999999266,
+      "audio": {
+        "context": "running",
+        "contextTime": 29.970666666666666,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "paused",
+      "videoSeconds": 32.862109,
+      "gameTime": 32.15009999999913,
+      "audio": {
+        "context": "suspended",
+        "contextTime": 32.221333333333334,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "resumed-no-new-input",
+      "videoSeconds": 33.753609,
+      "gameTime": 32.90019999999898,
+      "audio": {
+        "context": "running",
+        "contextTime": 32.952,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "muted",
+      "videoSeconds": 34.928609,
+      "gameTime": 34.083499999998764,
+      "audio": {
+        "context": "running",
+        "contextTime": 34.13066666666667,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "unmuted-no-new-input",
+      "videoSeconds": 35.587709,
+      "gameTime": 34.733599999998646,
+      "audio": {
+        "context": "running",
+        "contextTime": 34.792,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "paused-near-expiry",
+      "videoSeconds": 46.302009,
+      "gameTime": 44.75019999999704,
+      "audio": {
+        "context": "suspended",
+        "contextTime": 44.792,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "powerup"
+      }
+    },
+    {
+      "label": "resumed-expiry-once",
+      "videoSeconds": 46.955109,
+      "gameTime": 45.40009999999693,
+      "audio": {
+        "context": "running",
+        "contextTime": 45.42133333333334,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "gameover",
+      "videoSeconds": 47.416009,
+      "gameTime": 45.50016666666358,
+      "audio": {
+        "context": "running",
+        "contextTime": 45.88,
+        "voices": 1,
+        "retiring": 0,
+        "tones": 4,
+        "state": "ending"
+      }
+    },
+    {
+      "label": "retry-effects-reset",
+      "videoSeconds": 47.912809,
+      "gameTime": 0.21679999999999558,
+      "audio": {
+        "context": "running",
+        "contextTime": 46.38133333333333,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "retry-entered",
+      "videoSeconds": 49.919209,
+      "gameTime": 2.2166999999999963,
+      "audio": {
+        "context": "running",
+        "contextTime": 48.392,
+        "voices": 1,
+        "retiring": 0,
+        "tones": 0,
+        "state": "normal"
+      }
+    },
+    {
+      "label": "title-effects-reset",
+      "videoSeconds": 50.617809,
+      "gameTime": 0,
+      "audio": {
+        "context": "running",
+        "contextTime": 49.090666666666664,
+        "voices": 0,
+        "retiring": 0,
+        "tones": 0,
+        "state": "title"
+      }
+    }
+  ],
+  "actualFixedPlayerDamage": {
+    "count": 4,
+    "actualGainObservedForEveryCue": true,
+    "sourceGain0_9All": true,
+    "playbackRate1All": true,
+    "centerPan0All": true,
+    "cues": [
+      {
+        "videoSeconds": 18.191309,
+        "gameTime": 18.150099999999863,
+        "sourceGain": 0.8999999761581421,
+        "playbackRate": 1,
+        "pan": 0,
+        "priority": 6
+      },
+      {
+        "videoSeconds": 25.857809,
+        "gameTime": 25.816799999999468,
+        "sourceGain": 0.8999999761581421,
+        "playbackRate": 1,
+        "pan": 0,
+        "priority": 6
+      },
+      {
+        "videoSeconds": 47.041409,
+        "gameTime": 45.50016666666358,
+        "sourceGain": 0.8999999761581421,
+        "playbackRate": 1,
+        "pan": 0,
+        "priority": 6
+      },
+      {
+        "videoSeconds": 50.009309,
+        "gameTime": 2.316699999999996,
+        "sourceGain": 0.8999999761581421,
+        "playbackRate": 1,
+        "pan": 0,
+        "priority": 6
+      }
+    ]
+  },
+  "fixedDamageCorrelation": {
+    "requested": true,
+    "matches": [
+      {
+        "expectedAudioSeconds": 18.1799,
+        "matchedAudioSeconds": 18.2025,
+        "offsetMs": 22.6,
+        "absoluteNormalizedCorrelation": 0.893123,
+        "bestDistantAlternativeCorrelation": 0.138964,
+        "distinctMatch": true,
+        "eventVideoSeconds": 18.191309
+      },
+      {
+        "expectedAudioSeconds": 25.8464,
+        "matchedAudioSeconds": 25.8425,
+        "offsetMs": -3.9,
+        "absoluteNormalizedCorrelation": 0.890955,
+        "bestDistantAlternativeCorrelation": 0.13992,
+        "distinctMatch": true,
+        "eventVideoSeconds": 25.857809
+      },
+      {
+        "expectedAudioSeconds": 47.03,
+        "matchedAudioSeconds": 47.044167,
+        "offsetMs": 14.167,
+        "absoluteNormalizedCorrelation": 0.640559,
+        "bestDistantAlternativeCorrelation": 0.176906,
+        "distinctMatch": true,
+        "eventVideoSeconds": 47.041409
+      },
+      {
+        "expectedAudioSeconds": 49.9979,
+        "matchedAudioSeconds": 50.012167,
+        "offsetMs": 14.267,
+        "absoluteNormalizedCorrelation": 0.675191,
+        "bestDistantAlternativeCorrelation": 0.206118,
+        "distinctMatch": true,
+        "eventVideoSeconds": 50.009309
+      }
+    ],
+    "status": "distinct-matches",
+    "medianOffsetMs": 14.217,
+    "offsetRangeMs": 26.5,
+    "limitation": "Correlation is signal evidence only. Lossy encoding, overlapping music and nonlinear limiting can prevent a distinct match; weak matches cannot certify timing."
+  },
+  "verdict": "pause-silence-preserved-at-recorded-wall-intervals",
+  "limitations": [
+    "Audio packet timestamp gaps exist; plain PCM concatenation can remove them. Timestamp-aware resampling must preserve these intervals when muxing."
+  ],
+  "encodingGuidance": "Use the original captured audio and its packet timestamps. If gaps are proven, preserve them with timestamp-aware resampling; never substitute music or demo audio. Apply the measured initial video/audio offset, and verify before/after source-event alignment. This tool does not modify or repair media."
+}

@@ -1,0 +1,43 @@
+{
+  "retrieved": "2026-09-06",
+  "sources": [
+    {
+      "name": "sci-fi",
+      "page": "https://kenney.nl/assets/sci-fi-sounds",
+      "download": "https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip",
+      "file": "source/kenney_sci-fi-sounds.zip",
+      "sha256": "119340f351a5098ad814f78719438c0da355a9ce8a4c8a3af6a8d48aa3d49e04",
+      "license": "CC0-1.0"
+    },
+    {
+      "name": "impact",
+      "page": "https://kenney.nl/assets/impact-sounds",
+      "download": "https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip",
+      "file": "source/kenney_impact-sounds.zip",
+      "sha256": "029d734af1582474edf3a694d1b0cebc97c1c152f2f39fa34d4c2bafc5de77f8",
+      "license": "CC0-1.0"
+    },
+    {
+      "name": "C_28P.wav",
+      "creator": "Ben Jaszczak and Free Firearm Sound Library team",
+      "page": "https://opengameart.org/content/the-free-firearm-sound-library",
+      "mirror": "https://github.com/buddingmonkey/FreeFirearmsSFXLibrary",
+      "commit": "beb2f4041f3d6740fa0aeaf0e71159bd65a78c1b",
+      "repository_path": "Prepared SFX/AK-47/C_28P.wav",
+      "file": "source/firearms/C_28P.wav",
+      "sha256": "e0934c1d79192d2216db62fdf6ab57bf9d5d585267af367a1cfb21f0972a537d",
+      "license": "CC0-1.0"
+    },
+    {
+      "name": "D_32P.wav",
+      "creator": "Ben Jaszczak and Free Firearm Sound Library team",
+      "page": "https://opengameart.org/content/the-free-firearm-sound-library",
+      "mirror": "https://github.com/buddingmonkey/FreeFirearmsSFXLibrary",
+      "commit": "beb2f4041f3d6740fa0aeaf0e71159bd65a78c1b",
+      "repository_path": "Prepared SFX/AR-15/D_32P.wav",
+      "file": "source/firearms/D_32P.wav",
+      "sha256": "acee9d2106b68fe5956225a19d7aedf943d97793817f9bda9d486a2b74b0a812",
+      "license": "CC0-1.0"
+    }
+  ]
+}

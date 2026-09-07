@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-09-06T13:15:29.707772+00:00",
+  "scope": "Independent PATCH2 audio lifecycle code review, mock Web Audio regression tests, supplied PCM measurements, and read-only private capture-script review. No listening or native-browser claim.",
+  "filesReviewed": [
+    {
+      "file": "src/audio.js",
+      "sha256": "1872e178a9a365eeb95306d86fe1ffa9a53169b1860232f7b4b80b7d19a8adfb"
+    },
+    {
+      "file": "src/main.js",
+      "sha256": "2602571daf81da9fe76520969e374fbf4747484bb2651785348f3e34ba9fba37"
+    },
+    {
+      "file": "tests/audio.test.js",
+      "sha256": "f2e5b6972c9abd308a11c139730c5efdef180f600044b243bc5e4d62c56b3a05"
+    }
+  ],
+  "verification": {
+    "audioUnitTests": {
+      "command": "node --test tests/audio.test.js",
+      "passed": 17,
+      "failed": 0,
+      "exitCode": 0,
+      "runtime": "Node mock Web Audio nodes"
+    },
+    "syntax": {
+      "commands": [
+        "node --check src/audio.js",
+        "node --check src/main.js"
+      ],
+      "exitCode": 0
+    },
+    "nativeBrowserLifecycleVerifiedByThisAudit": false,
+    "humanListeningVerified": false,
+    "additionalAudioRuntimeDefectsFound": []
+  },
+  "lifecycle": [
+    {
+      "boundary": "pause",
+      "verifiedBy": "unit test and code review",
+      "result": "Active and retiring sample tails plus scheduled UI oscillators are stopped and disconnected before suspension; throttle and duck state reset."
+    },
+    {
+      "boundary": "resume",
+      "verifiedBy": "unit test and code review",
+      "result": "Only new events create effects; a late suspend or resume is reconciled with the newest pause intent."
+    },
+    {
+      "boundary": "mute and unmute",
+      "verifiedBy": "unit test and code review",
+      "result": "Old effects are disposed on mute and do not reappear when unmuted; buffers and music configuration retained."
+    },
+    {
+      "boundary": "gameover",
+      "verifiedBy": "unit test and code review",
+      "result": "Old combat/UI cleared, actual player damage and death blast preserved, existing ending motif scheduled once, late expiry/shot and duplicate gameover ignored."
+    },
+    {
+      "boundary": "retry/start",
+      "verifiedBy": "main.js hook inspection and resetEffects unit test",
+      "result": "resetEffects is called before startGame and before audio resumes; ending motif disposed."
+    },
+    {
+      "boundary": "title",
+      "verifiedBy": "main.js hook inspection and resetEffects unit test",
+      "result": "toTitle invokes resetEffects before audio resumes; browser title-button interaction remains outside this audit."
+    },
+    {
+      "boundary": "late music play completion",
+      "verifiedBy": "unit test and code review",
+      "result": "A pending target.play completion cannot restart the deck after pause."
+    }
+  ],
+  "fixedPlayerDamage": {
+    "sample": "player-damage-fixed",
+    "sourceGain": 0.9,
+    "playbackRate": 1,
+    "pan": 0,
+    "durationCapSeconds": 0.3,
+    "priority": 6,
+    "impactBusGain": 0.94,
+    "effectsGain": 0.7,
+    "preLimiterProduct": 0.5922,
+    "evidence": "Actual mock GainNode gain.value, source.playbackRate.value and StereoPanner.pan.value are asserted. Native capture observer now samples the same live fields; its results are not claimed by this audit.",
+    "limitation": "Shared compressor and saturator remain dynamic; fixed source gain does not imply identical perceived final mix loudness."
+  },
+  "protectedCues": {
+    "playerDamagePriority": 6,
+    "weaponChangePriority": 5,
+    "weaponExpiryPriority": 5,
+    "destructionPriority": 4,
+    "ordinaryHitPriority": 3,
+    "activeVoiceCeiling": 20,
+    "retiringVoiceCeiling": 4,
+    "scheduledUiToneCeiling": 12,
+    "unitTestsPassed": true
+  },
+  "unchangedAudioAssets": {
+    "originalFiles": 67,
+    "editedFiles": 30,
+    "originalHashesMatchProvenance": true,
+    "editedHashesMatchProvenance": true,
+    "originalMismatch": [],
+    "editedMismatch": [],
+    "sampleAssetEditsInPatch2": 0
+  },
+  "droneSignalOnly": {
+    "files": [
+      {
+        "file": "shot-drone-01.wav",
+        "durationSeconds": 0.068,
+        "samplePeakDbFS": -12.999812,
+        "rmsDbFS": -29.286066,
+        "clippedPcmSamples": 0,
+        "sha256": "5cb90898e00081238ff74c52758802ec70453a8107b1271d4fa451219a9e67a1"
+      },
+      {
+        "file": "shot-drone-02.wav",
+        "durationSeconds": 0.068,
+        "samplePeakDbFS": -12.999812,
+        "rmsDbFS": -33.617823,
+        "clippedPcmSamples": 0,
+        "sha256": "6db7363a878e809267addf37ec76072853f6b50c3a37c4972ca54c937a8f7ee2"
+      },
+      {
+        "file": "shot-drone-03.wav",
+        "durationSeconds": 0.068,
+        "samplePeakDbFS": -12.999812,
+        "rmsDbFS": -32.997746,
+        "clippedPcmSamples": 0,
+        "sha256": "8e56f3eaaf3224a8fd0abd93e3407427a70ec0f5aab0c9412280d9c0ccea0b9d"
+      }
+    ],
+    "rmsSpanDb": 4.331757,
+    "decision": "No blind normalization. Equal duration and peak with differing envelopes/body energy; perceptual acceptability requires listening. Existing files retained."
+  },
+  "captureScriptReview": {
+    "doesNotConstituteRecordedRuntimeValidation": true,
+    "actualUiToneSetRead": true,
+    "actualSourceGainRead": true,
+    "findingsReportedToCaptureOwner": [
+      "Initial capture review findings on tone counter, gain read, decode readiness, async resume event loss, missing expiry/title sequences and generic purpose text were corrected in the private recorder and confirmed by readback.",
+      "Fatal-hit fixture injects HP 13 and a projectile; grazing/core/fast-core fixtures reset position and combat. Preserve controlled-test labels.",
+      "Fast-core screenshot is the closest sampled or first post-damage frame, not a guaranteed exact instant of collision.",
+      "Packet timestamps and actual cue-to-PCM matching will be checked separately after the final recording completes."
+    ],
+    "ownerCorrectionsConfirmedByReadback": {
+      "actualUiToneSetRead": true,
+      "actualSourceGainParamRead": true,
+      "effectsReady50BuffersNoErrorGate": true,
+      "isolatedEventWaitsForRunningContext": true,
+      "exactAudioContextStatechangeObservationsAdded": true,
+      "naturalWeaponExpiryPauseSequenceAdded": true,
+      "nativeTitleButtonSequenceAdded": true,
+      "genericPurposeReplacedWithPerSegmentClassification": true,
+      "captureExecutionVerifiedByThisAudit": false
+    }
+  },
+  "notChanged": [
+    "Sample bytes and URLs",
+    "Music tracks, volume and crossfade settings",
+    "Weapon performance, durations, acquisition and expiry rules",
+    "Gameplay enemy, damage and spawn settings",
+    "Art and public-use rights status"
+  ]
+}

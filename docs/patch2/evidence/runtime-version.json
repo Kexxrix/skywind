@@ -1,0 +1,369 @@
+{
+  "id": "SKYWIND-PATCH2-LOCAL-20260906-R1",
+  "frozenAt": "2026-09-06T22:22:37.087618+09:00",
+  "fingerprint": "5f7d69a37a71d12479cf8bd599905ec912da63998fd66628f980581525644b63",
+  "baselineFingerprint": "d692444a85c5e4cfe63583dab65feb03d7f2e6263181341d8d4dd4bae39cddea",
+  "algorithm": "SHA256 of UTF-8 newline-joined sorted relative path + NUL + sha256 rows",
+  "runtime": [
+    {
+      "file": "assets/art/bosses-v2.png",
+      "sha256": "9ed7b4e467f80775de0fa9e135a2056a9cb04645049b184d1b1081c44ac8b8e2",
+      "bytes": 1460168
+    },
+    {
+      "file": "assets/art/enemies-v2.png",
+      "sha256": "72f845c689717b2fbeb901c94c37200efe01caa5e54fcdd177d7c589fa5513a1",
+      "bytes": 1357230
+    },
+    {
+      "file": "assets/art/enemies.png",
+      "sha256": "feaec887467b00bc3521e618b2b43a2d3c01f3b0c8aef277ee8c7508315010e6",
+      "bytes": 815547
+    },
+    {
+      "file": "assets/art/leaf-surface-v3.png",
+      "sha256": "1d22911b917dacb70f603a9b7e934efe4fed9bacb8554a527a4e9541da872ee0",
+      "bytes": 3603085
+    },
+    {
+      "file": "assets/art/player.png",
+      "sha256": "5a2af138af79982c63565b2751c6ada54da58230fc6a8c6f0f68848d18a3fd06",
+      "bytes": 260289
+    },
+    {
+      "file": "assets/audio/boss-v2.m4a",
+      "sha256": "c3538c185e06bab6dc963aadab490c321c7b145983b1ec30bed393300d35baab",
+      "bytes": 3265511
+    },
+    {
+      "file": "assets/audio/danger-v2.m4a",
+      "sha256": "703b82f9cb33dc2816bf5098f4fb5e9468b3edc13a86ac98a444ee07c01ec47f",
+      "bytes": 3475695
+    },
+    {
+      "file": "assets/audio/ending-v2.m4a",
+      "sha256": "4b097e75d8e8672d3cbcc6ed0649915ab691aecca591d6849185a83b098c2529",
+      "bytes": 3268296
+    },
+    {
+      "file": "assets/audio/manifest.json",
+      "sha256": "9fd4c92cb6287ba99313bb419986f438e7685f5c67cf1280aa49877565296faa",
+      "bytes": 252
+    },
+    {
+      "file": "assets/audio/normal-v2.m4a",
+      "sha256": "3e2361eec40e3f896a1640f81f2674daaa946ec8608f183c796fcbab43e11901",
+      "bytes": 3341532
+    },
+    {
+      "file": "assets/audio/powerup-v2.m4a",
+      "sha256": "5d4cebf981b8cd003afb4c98c2686f93e7c8b5bd20acc26fbc087ab6f8625aa7",
+      "bytes": 3245705
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-armored-01.wav",
+      "sha256": "d7c21127226cf5869fb23082d8eddde41e8d33ca8c36636620ef6000c28168e7",
+      "bytes": 17324
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-armored-02.wav",
+      "sha256": "3377ddd9049f6dc1c27f4b81315461cdb9ccc1bf55e232c440998d92dbdb9905",
+      "bytes": 17324
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-armored-03.wav",
+      "sha256": "698ef878b83cd93f9880a2fa0ce660b802dfc13b8308a8ac20c28e05a82efb0c",
+      "bytes": 17324
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-light-01.wav",
+      "sha256": "1c7f50b31227e2c18768c61c6e3bfb04af6daeec8c37e5ab477c07a2a8cc6786",
+      "bytes": 16844
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-light-02.wav",
+      "sha256": "a091064a65a2929098f6904f64f1d5e84760f6eae91d2f1a59ec8e6f578eb608",
+      "bytes": 16844
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-special-01.wav",
+      "sha256": "702f524a002dbc6c3238729f66e8102244d9eaa485fc2ae71bb17ce747ad1cd5",
+      "bytes": 10604
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-target-special-02.wav",
+      "sha256": "ccdba5d05ef0aa7d96db9309aea9ad4fe00626cb285be53cd87ca450e511ccd8",
+      "bytes": 10604
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-weapon-drone.wav",
+      "sha256": "44dda80424447fdff5a6ba47240180afeb36263405449a9caa439e95c3ecb535",
+      "bytes": 4364
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-weapon-helix.wav",
+      "sha256": "bca0184f7e1a98517366246c05797aff133b4e637881b464bef52896222b1333",
+      "bytes": 11564
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-weapon-lance.wav",
+      "sha256": "ca58a72b5800e242b21330d1a97f53af5c03fa461f6a2da948ff941ea49806ae",
+      "bytes": 9644
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-weapon-normal.wav",
+      "sha256": "b633925e574a3161eff8a27e17a62ba8891ba46fce4acde0dfffc27e9b160f0e",
+      "bytes": 4364
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/hit-weapon-spread.wav",
+      "sha256": "f64303c4ce907f68c334f60bb1f0d48bae7d0610db443ca393b297c869b3e154",
+      "bytes": 7148
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/player-damage-fixed.wav",
+      "sha256": "4e9b3901af17d6cfc08d33a9ebf96ec241744556c35d59cc6b27037390c3d58a",
+      "bytes": 28844
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-drone-01.wav",
+      "sha256": "5cb90898e00081238ff74c52758802ec70453a8107b1271d4fa451219a9e67a1",
+      "bytes": 6572
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-drone-02.wav",
+      "sha256": "6db7363a878e809267addf37ec76072853f6b50c3a37c4972ca54c937a8f7ee2",
+      "bytes": 6572
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-drone-03.wav",
+      "sha256": "8e56f3eaaf3224a8fd0abd93e3407427a70ec0f5aab0c9412280d9c0ccea0b9d",
+      "bytes": 6572
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-helix-01.wav",
+      "sha256": "6af7c400a0ed4e4044f7a0411adb68e59a23215b462483327743387ae72d236b",
+      "bytes": 13964
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-helix-02.wav",
+      "sha256": "b3907c350f5eb4c43b42ad3701a3f19ef8d7e6ce89291e0538e5abe805696214",
+      "bytes": 13964
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-helix-03.wav",
+      "sha256": "cce73541133666be6873f213baa6e7875d534a1f96ba66ab1e1e9b4e1b507622",
+      "bytes": 13964
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-lance-01.wav",
+      "sha256": "363f3e36ef1e5b8b7add3bcaaee7a30bb4ce12e4a1a1e8e95c9fddc14b75e205",
+      "bytes": 12044
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-lance-02.wav",
+      "sha256": "c11d8271b0d3a3b4cdf0055dd61eaf97a9d32f8b0ff2c485242a5e1188a5da96",
+      "bytes": 13004
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-lance-03.wav",
+      "sha256": "ea3d574cebff4e5fb465c49075e880c39ae14b71a07d1e79f98c5e2f5b8ee328",
+      "bytes": 12524
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-normal-01.wav",
+      "sha256": "35646cdcf9f262a2220e093d0d70f0f34809be207dbac7d7d858e688577f011c",
+      "bytes": 9188
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-normal-02.wav",
+      "sha256": "194c2cae18d123582d521059b424bb32a1f88b60135acf4f96269eeaed8ebc65",
+      "bytes": 9066
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-normal-03.wav",
+      "sha256": "597c3208a89072c902b88702113e39f0fe96d4c9fa145434cbc4af0fdbc881fc",
+      "bytes": 9432
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-spread-01.wav",
+      "sha256": "5e399757ba0747c0e20286434860e0c1f23a7d9b6d318d0fb9928139104e28bb",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-spread-02.wav",
+      "sha256": "88f3d548439bcfc2177a71666e5b0ff6d19a20c6b1f28f7764181b4e288f5990",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/shot-spread-03.wav",
+      "sha256": "a3abb897793b22f712c66a8c022d55eeeac0bc63f1b241b9a67454fb5a844815",
+      "bytes": 8108
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/weapon-change.wav",
+      "sha256": "227c41e3201950f6d9f272a6b093393c3fa7af77470c4a3dc0b16767e224487a",
+      "bytes": 34604
+    },
+    {
+      "file": "assets/audio/sfx-patch1/edited/weapon-expire.wav",
+      "sha256": "46385f2d9c02971faa9abd958fefa0908fbe0c7a96f33bc1491de777167cb2aa",
+      "bytes": 26924
+    },
+    {
+      "file": "assets/audio/sfx-v3/charge.wav",
+      "sha256": "b32102d5bb11ebbf706db95d4dcea11514d8fd27010730484970de665326ad4c",
+      "bytes": 48554
+    },
+    {
+      "file": "assets/audio/sfx-v3/enemy-01.wav",
+      "sha256": "a7c7074309130cc95722503c2f07832c181039ab3c5ed743d96834b9ae3b94c9",
+      "bytes": 22976
+    },
+    {
+      "file": "assets/audio/sfx-v3/enemy-02.wav",
+      "sha256": "83fd9cdd2c5c792df81909e1be6002d907d9ff8605a0f6ab9f11d2b793afb439",
+      "bytes": 22976
+    },
+    {
+      "file": "assets/audio/sfx-v3/explosion-01.wav",
+      "sha256": "dad78f7185954e2ae5fe027caf367dd14d271ecc702dd447f95fe7f8f0f5b18e",
+      "bytes": 99462
+    },
+    {
+      "file": "assets/audio/sfx-v3/explosion-02.wav",
+      "sha256": "3235bd87613eb045b14a458ac2605d2d282218783bae01d0a3294eb85555d268",
+      "bytes": 109832
+    },
+    {
+      "file": "assets/audio/sfx-v3/explosion-03.wav",
+      "sha256": "90bb39bcac86899a02f8abfe776b6e712f6fd103ccc8c0468ee33dcaae83c79d",
+      "bytes": 110294
+    },
+    {
+      "file": "assets/audio/sfx-v3/explosion-heavy.wav",
+      "sha256": "731ca76949f01fe4fa2109c9a073b1af386c84da8cbae408eda17f472af301d4",
+      "bytes": 198508
+    },
+    {
+      "file": "assets/audio/sfx-v3/helix-01.wav",
+      "sha256": "27b9a4596c62cd5a86029daa0169427346e106370070a1509cd23c6de286dd78",
+      "bytes": 23048
+    },
+    {
+      "file": "assets/audio/sfx-v3/helix-02.wav",
+      "sha256": "c6495f7c1ace126c0e1d64030b1c5be6cf594a5cee0f6e5b7d23858505e19696",
+      "bytes": 19920
+    },
+    {
+      "file": "assets/audio/sfx-v3/hit-01.wav",
+      "sha256": "4602b1c3ced84b62000be49470b747a3ce02e31ea17fcf174039f91dc45255cc",
+      "bytes": 16272
+    },
+    {
+      "file": "assets/audio/sfx-v3/hit-02.wav",
+      "sha256": "c35378d42c973a460c3ceab96859761115991f91a4a7c2fbb4ad2625d27ebaf2",
+      "bytes": 16272
+    },
+    {
+      "file": "assets/audio/sfx-v3/hit-03.wav",
+      "sha256": "e59eaaa6bcfe09f88bb81d65fdf71b398532f16ad6f195b8d14f210a24f5c757",
+      "bytes": 16272
+    },
+    {
+      "file": "assets/audio/sfx-v3/lance-01.wav",
+      "sha256": "7df880bd0d238feba8f41cca67fb8b217d312a056880b9897441d51699f54661",
+      "bytes": 34090
+    },
+    {
+      "file": "assets/audio/sfx-v3/lance-02.wav",
+      "sha256": "3def3e575323071ec6d157278dad12d776263896f7ad8dbad07b8843aadfbf63",
+      "bytes": 34090
+    },
+    {
+      "file": "assets/audio/sfx-v3/player-hit.wav",
+      "sha256": "f2f824e6c54c8851cf6c18197d65ebf9c14e7177d272cde0a36d762ac3345fe3",
+      "bytes": 45466
+    },
+    {
+      "file": "assets/audio/sfx-v3/shot-01.wav",
+      "sha256": "789ea86998484847944cb90fa9e6ba6fa94c5da9f4e031efe8bfd265c7ffc037",
+      "bytes": 16802
+    },
+    {
+      "file": "assets/audio/sfx-v3/shot-02.wav",
+      "sha256": "0e87292ada56b0b09a7fd56904b15b7667ab342f9cbaa858a70528a56b4ac2e7",
+      "bytes": 16802
+    },
+    {
+      "file": "assets/audio/sfx-v3/shot-03.wav",
+      "sha256": "a1b81667755373782ee81c0a16f01c2b65f8a37cdaa00a9299fc8d4d46adab63",
+      "bytes": 16802
+    },
+    {
+      "file": "assets/audio/sfx-v3/spread-01.wav",
+      "sha256": "c40f623ddb181200501c04dc05ce91cf68e83c9d2c96f4088e8a655ff133f6b4",
+      "bytes": 22094
+    },
+    {
+      "file": "assets/audio/sfx-v3/spread-02.wav",
+      "sha256": "27c49350099a84bb2d89387d5c83c6dda89243f54d1abcedc7d82f1557ce569e",
+      "bytes": 22094
+    },
+    {
+      "file": "assets/audio/title-v2.m4a",
+      "sha256": "67ba85ff085f4943e1932b9bbc8c8696b54e28ad5c3d710a2e1d08b4d03ddc89",
+      "bytes": 3472014
+    },
+    {
+      "file": "index.html",
+      "sha256": "321ba185c113de8dd29ed22cfddcbcff869771ffa1373839bf4a1e4e26f41004",
+      "bytes": 4261
+    },
+    {
+      "file": "src/audio.js",
+      "sha256": "1872e178a9a365eeb95306d86fe1ffa9a53169b1860232f7b4b80b7d19a8adfb",
+      "bytes": 27661
+    },
+    {
+      "file": "src/boot.js",
+      "sha256": "9c7406f0b228ef589e378e6b691851249963f4328b9076556c2cc3d4003657a5",
+      "bytes": 1218
+    },
+    {
+      "file": "src/game.js",
+      "sha256": "d860083d4efc42db0bbb2c31712284fb1937204bf3ac48b1bade58f95d7c21e4",
+      "bytes": 35136
+    },
+    {
+      "file": "src/main.js",
+      "sha256": "2602571daf81da9fe76520969e374fbf4747484bb2651785348f3e34ba9fba37",
+      "bytes": 11598
+    },
+    {
+      "file": "src/presentation.js",
+      "sha256": "0a65a8363e6b9c1ccfacb1073cebb415b600ee52c06632271d59bf631433e285",
+      "bytes": 645
+    },
+    {
+      "file": "src/renderer.js",
+      "sha256": "d15b0d2583fbc47401ef01f212b5248a6688d3e2e7e3d0c9258ab223318e89d1",
+      "bytes": 24398
+    },
+    {
+      "file": "src/terrain3d.js",
+      "sha256": "7dd713e559c97890e7ba7d59d85eee56717e687913edb9d9242740b584cd94f5",
+      "bytes": 22034
+    },
+    {
+      "file": "src/volume-environment.js",
+      "sha256": "94e5d3ca7d0854595768d58f8a046a2939d915ed7a5115ea07d4130645a75835",
+      "bytes": 27266
+    },
+    {
+      "file": "style.css",
+      "sha256": "3ea57204e4b93b604df52f85436405a616766d8172227ae7d9cadff7ccd0b929",
+      "bytes": 10142
+    }
+  ]
+}

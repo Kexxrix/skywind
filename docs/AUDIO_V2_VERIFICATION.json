@@ -1,0 +1,74 @@
+[
+  {
+    "track": "boss-v2",
+    "source": "boss-v2-siege_of_the_titan.mp4",
+    "bytes": 3265511,
+    "duration": 132.153,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "c3538c185e06bab6dc963aadab490c321c7b145983b1ec30bed393300d35baab",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "danger-v2",
+    "source": "danger-v2-piston_collapse.mp4",
+    "bytes": 3475695,
+    "duration": 137.822,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "703b82f9cb33dc2816bf5098f4fb5e9468b3edc13a86ac98a444ee07c01ec47f",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "ending-v2",
+    "source": "ending-v2-sunset_over_the_hull.mp4",
+    "bytes": 3268296,
+    "duration": 132.728,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "4b097e75d8e8672d3cbcc6ed0649915ab691aecca591d6849185a83b098c2529",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "normal-v2",
+    "source": "normal-v2-kinetic_protocol.mp4",
+    "bytes": 3341532,
+    "duration": 133.355,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "3e2361eec40e3f896a1640f81f2674daaa946ec8608f183c796fcbab43e11901",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "powerup-v2",
+    "source": "powerup-v2-apex_surge.mp4",
+    "bytes": 3245705,
+    "duration": 132.232,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "5d4cebf981b8cd003afb4c98c2686f93e7c8b5bd20acc26fbc087ab6f8625aa7",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "title-v2",
+    "source": "title-v2-armored_protocol.mp4",
+    "bytes": 3472014,
+    "duration": 138.762,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "67ba85ff085f4943e1932b9bbc8c8696b54e28ad5c3d710a2e1d08b4d03ddc89",
+    "decoded": true,
+    "losslessStreamCopy": true
+  }
+]

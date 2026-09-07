@@ -1,0 +1,296 @@
+[
+  {
+    "file": "source/sci-fi/Audio/laserSmall_000.ogg",
+    "seconds": 0.236,
+    "peak": 0.738,
+    "rms": 0.118,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserSmall_001.ogg",
+    "seconds": 0.244,
+    "peak": 1.056,
+    "rms": 0.114,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserSmall_002.ogg",
+    "seconds": 0.344,
+    "peak": 0.733,
+    "rms": 0.104,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserSmall_003.ogg",
+    "seconds": 0.297,
+    "peak": 0.584,
+    "rms": 0.111,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserSmall_004.ogg",
+    "seconds": 0.411,
+    "peak": 0.982,
+    "rms": 0.236,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserLarge_000.ogg",
+    "seconds": 0.677,
+    "peak": 0.898,
+    "rms": 0.138,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserLarge_001.ogg",
+    "seconds": 0.721,
+    "peak": 0.897,
+    "rms": 0.148,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserLarge_002.ogg",
+    "seconds": 0.744,
+    "peak": 0.908,
+    "rms": 0.15,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserLarge_003.ogg",
+    "seconds": 0.716,
+    "peak": 0.898,
+    "rms": 0.127,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/laserLarge_004.ogg",
+    "seconds": 0.693,
+    "peak": 0.899,
+    "rms": 0.141,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/explosionCrunch_000.ogg",
+    "seconds": 0.777,
+    "peak": 0.896,
+    "rms": 0.205,
+    "onset_ms": 0.1
+  },
+  {
+    "file": "source/sci-fi/Audio/explosionCrunch_001.ogg",
+    "seconds": 1.357,
+    "peak": 0.894,
+    "rms": 0.251,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/explosionCrunch_002.ogg",
+    "seconds": 1.256,
+    "peak": 0.896,
+    "rms": 0.152,
+    "onset_ms": 0.1
+  },
+  {
+    "file": "source/sci-fi/Audio/explosionCrunch_003.ogg",
+    "seconds": 1.553,
+    "peak": 0.893,
+    "rms": 0.201,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/explosionCrunch_004.ogg",
+    "seconds": 1.98,
+    "peak": 0.893,
+    "rms": 0.184,
+    "onset_ms": 0.2
+  },
+  {
+    "file": "source/sci-fi/Audio/lowFrequency_explosion_000.ogg",
+    "seconds": 2.0,
+    "peak": 1.275,
+    "rms": 0.178,
+    "onset_ms": 3.9
+  },
+  {
+    "file": "source/sci-fi/Audio/lowFrequency_explosion_001.ogg",
+    "seconds": 1.0,
+    "peak": 1.285,
+    "rms": 0.234,
+    "onset_ms": 2.4
+  },
+  {
+    "file": "source/sci-fi/Audio/impactMetal_000.ogg",
+    "seconds": 0.635,
+    "peak": 0.897,
+    "rms": 0.079,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/impactMetal_001.ogg",
+    "seconds": 0.688,
+    "peak": 0.901,
+    "rms": 0.102,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/impactMetal_002.ogg",
+    "seconds": 0.471,
+    "peak": 0.9,
+    "rms": 0.095,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/impactMetal_003.ogg",
+    "seconds": 0.777,
+    "peak": 0.899,
+    "rms": 0.084,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/sci-fi/Audio/impactMetal_004.ogg",
+    "seconds": 0.39,
+    "peak": 0.897,
+    "rms": 0.087,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactMetal_heavy_000.ogg",
+    "seconds": 0.165,
+    "peak": 1.271,
+    "rms": 0.135,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactMetal_heavy_001.ogg",
+    "seconds": 0.356,
+    "peak": 1.247,
+    "rms": 0.094,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactMetal_heavy_002.ogg",
+    "seconds": 0.114,
+    "peak": 1.234,
+    "rms": 0.165,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactMetal_heavy_003.ogg",
+    "seconds": 0.204,
+    "peak": 1.263,
+    "rms": 0.123,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactMetal_heavy_004.ogg",
+    "seconds": 0.131,
+    "peak": 1.22,
+    "rms": 0.151,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPlate_heavy_000.ogg",
+    "seconds": 0.489,
+    "peak": 1.264,
+    "rms": 0.104,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPlate_heavy_001.ogg",
+    "seconds": 0.349,
+    "peak": 1.277,
+    "rms": 0.191,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPlate_heavy_002.ogg",
+    "seconds": 0.494,
+    "peak": 1.198,
+    "rms": 0.115,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPlate_heavy_003.ogg",
+    "seconds": 0.344,
+    "peak": 1.239,
+    "rms": 0.182,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPlate_heavy_004.ogg",
+    "seconds": 0.559,
+    "peak": 1.32,
+    "rms": 0.117,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactGlass_medium_000.ogg",
+    "seconds": 0.54,
+    "peak": 1.237,
+    "rms": 0.076,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactGlass_medium_001.ogg",
+    "seconds": 0.54,
+    "peak": 1.274,
+    "rms": 0.077,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactGlass_medium_002.ogg",
+    "seconds": 0.54,
+    "peak": 1.26,
+    "rms": 0.074,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactGlass_medium_003.ogg",
+    "seconds": 0.54,
+    "peak": 1.224,
+    "rms": 0.075,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactGlass_medium_004.ogg",
+    "seconds": 0.54,
+    "peak": 1.206,
+    "rms": 0.084,
+    "onset_ms": 0.0
+  },
+  {
+    "file": "source/impact/Audio/impactPunch_heavy_000.ogg",
+    "seconds": 0.649,
+    "peak": 1.265,
+    "rms": 0.178,
+    "onset_ms": 0.5
+  },
+  {
+    "file": "source/impact/Audio/impactPunch_heavy_001.ogg",
+    "seconds": 0.536,
+    "peak": 1.235,
+    "rms": 0.189,
+    "onset_ms": 0.1
+  },
+  {
+    "file": "source/impact/Audio/impactPunch_heavy_002.ogg",
+    "seconds": 0.457,
+    "peak": 1.265,
+    "rms": 0.209,
+    "onset_ms": 0.5
+  },
+  {
+    "file": "source/impact/Audio/impactPunch_heavy_003.ogg",
+    "seconds": 0.474,
+    "peak": 1.276,
+    "rms": 0.196,
+    "onset_ms": 0.4
+  },
+  {
+    "file": "source/impact/Audio/impactPunch_heavy_004.ogg",
+    "seconds": 0.536,
+    "peak": 1.265,
+    "rms": 0.192,
+    "onset_ms": 0.4
+  }
+]

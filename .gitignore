@@ -1,0 +1,21 @@
+# Machine-local work, generated builds, review archives and capture scratch data.
+/.work/
+/dist/
+/Feedback/
+/qa-share-*/
+/SampleGame.mp4
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.pid
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+# Source music MP4s and sound WAVs in assets/ are intentionally backed up.

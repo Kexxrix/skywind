@@ -1,0 +1,196 @@
+{
+  "errors": [],
+  "scenes": [
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": 0,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "name": "low",
+      "light": "none",
+      "weapon": "normal",
+      "player": {
+        "x": 245.97949008961393,
+        "y": 291.0954444905174,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": 0,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "name": "middle",
+      "light": "none",
+      "weapon": "normal",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 1,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": 0,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "name": "high",
+      "light": "none",
+      "weapon": "normal",
+      "player": {
+        "x": 244.38018063160246,
+        "y": 300.9664627273909,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 5,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": 0,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "name": "middle-depth",
+      "light": "none",
+      "weapon": "normal",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "none",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "shot",
+      "weapon": "lance",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "hit",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "pickup",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "enemyShot",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "playerHit",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    },
+    {
+      "sceneTime": 2,
+      "distance": 0,
+      "altitude": 0.5,
+      "cameraY": 0,
+      "seed": 74912,
+      "threats": true,
+      "variant": "baseline",
+      "method": "Paused actual renderer, explicit same-scene fixture; secondary particles/shake/exposure suppressed for isolated cloud lighting. No survival-play claim.",
+      "light": "explosion",
+      "weapon": "drone",
+      "player": {
+        "x": 245.148988026959,
+        "y": 296.02595570182075,
+        "radius": 1.85
+      }
+    }
+  ]
+}

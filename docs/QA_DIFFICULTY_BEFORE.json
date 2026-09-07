@@ -1,0 +1,732 @@
+{
+  "seed": 74912,
+  "durationSeconds": 300,
+  "substepSeconds": 0.008333333333333333,
+  "source": "E:\\codexwork\\Skywind\\.work\\qa-difficulty\\game-before.mjs",
+  "sourceSha256": "5257976dd3e6e10012a2d90b3c35ca174561e80b905eb1555aaec1af652dbdfb",
+  "fixedInput": "{ x: 0, y: Math.sin(step / 240) * 0.2, shoot: true }, step = 0..35999 at 120 Hz",
+  "definitions": {
+    "attackSources": "Live enemies charging, dashing, or holding the post-shot attack reservation. Before tuning there is no reservation; compare firedSourcesPerStep and active bullets alongside this count.",
+    "window": "Since the previous reached checkpoint; maxima sampled each 1/120 s simulation step.",
+    "enemyCounts": "All live entities, including bosses and entering/offscreen bodies; not a projected-viewport count.",
+    "speed": "Magnitude in gameplay coordinates, px/s; zero when the pool is empty.",
+    "upgrades": "Cumulative simulation seconds active, per power mode and drone; not granted duration sums.",
+    "rendering": "Node simulation only. No browser rendering, audio listening, FPS or human play measurement."
+  },
+  "configurationWithoutBossVictories": [
+    {
+      "time": 0,
+      "tier": 1,
+      "waveInterval": 2.35,
+      "waveSize": 3,
+      "enemySpeed": 1,
+      "bulletSpeed": 230,
+      "hpBonus": 0,
+      "maxEnemies": 15,
+      "scrollSpeed": 1.3
+    },
+    {
+      "time": 30,
+      "tier": 2,
+      "waveInterval": 1.313235294117647,
+      "waveSize": 4,
+      "enemySpeed": 1.3157894736842106,
+      "bulletSpeed": 279.5,
+      "hpBonus": 0,
+      "maxEnemies": 17,
+      "scrollSpeed": 1.6157894736842104
+    },
+    {
+      "time": 60,
+      "tier": 4,
+      "waveInterval": 0.9112244897959184,
+      "waveSize": 6,
+      "enemySpeed": 1.631578947368421,
+      "bulletSpeed": 329,
+      "hpBonus": 1,
+      "maxEnemies": 20,
+      "scrollSpeed": 1.931578947368421
+    },
+    {
+      "time": 120,
+      "tier": 7,
+      "waveInterval": 0.62,
+      "waveSize": 8,
+      "enemySpeed": 2.1,
+      "bulletSpeed": 365,
+      "hpBonus": 2,
+      "maxEnemies": 25,
+      "scrollSpeed": 2.5631578947368423
+    },
+    {
+      "time": 180,
+      "tier": 11,
+      "waveInterval": 0.62,
+      "waveSize": 8,
+      "enemySpeed": 2.1,
+      "bulletSpeed": 365,
+      "hpBonus": 4,
+      "maxEnemies": 30,
+      "scrollSpeed": 2.6
+    },
+    {
+      "time": 300,
+      "tier": 17,
+      "waveInterval": 0.62,
+      "waveSize": 8,
+      "enemySpeed": 2.1,
+      "bulletSpeed": 365,
+      "hpBonus": 6,
+      "maxEnemies": 40,
+      "scrollSpeed": 2.6
+    }
+  ],
+  "runs": {
+    "invincibleLoad": {
+      "purpose": "Invincible load/pattern observation only; not survival or balance evidence.",
+      "invincibleOverride": true,
+      "simulatedUntil": 300,
+      "survived300Seconds": true,
+      "mode": "playing",
+      "hp": 100,
+      "hitCount": 0,
+      "totalMaxima": {
+        "enemies": 39,
+        "attackSources": 13,
+        "firedSourcesPerStep": 2,
+        "enemyBullets": 135,
+        "bulletSpeed": 420
+      },
+      "firstDrops": {
+        "power": 3.008,
+        "health": 13.017,
+        "drone": 23.025
+      },
+      "firstPowerCollection": 104.708,
+      "upgradeSeconds": {
+        "spread": 28.017,
+        "lance": 17.9,
+        "helix": 11.375,
+        "drone": 36.192
+      },
+      "snapshots": [
+        {
+          "requestedTime": 0,
+          "reached": true,
+          "simulationTime": 0,
+          "mode": "entering",
+          "hp": 100,
+          "score": 0,
+          "bossesDefeated": 0,
+          "enemies": 0,
+          "attackSources": 0,
+          "enemyBullets": 0,
+          "bulletSpeed": 0,
+          "difficulty": {
+            "tier": 1,
+            "waveInterval": 2.35,
+            "waveSize": 3,
+            "enemySpeed": 1,
+            "bulletSpeed": 230,
+            "hpBonus": 0,
+            "maxEnemies": 15,
+            "scrollSpeed": 1.3
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 0,
+            "attackSources": 0,
+            "firedSourcesPerStep": 0,
+            "enemyBullets": 0,
+            "bulletSpeed": 0
+          },
+          "windowMeanEnemies": 0,
+          "windowMeanEnemyBullets": 0,
+          "upgradeSeconds": {
+            "spread": 0,
+            "lance": 0,
+            "helix": 0,
+            "drone": 0
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 0
+        },
+        {
+          "requestedTime": 30,
+          "reached": true,
+          "simulationTime": 30,
+          "mode": "playing",
+          "hp": 100,
+          "score": 5790,
+          "bossesDefeated": 0,
+          "enemies": 6,
+          "attackSources": 1,
+          "enemyBullets": 20,
+          "bulletSpeed": 274.56374999999855,
+          "difficulty": {
+            "tier": 2,
+            "waveInterval": 1.3132352941176677,
+            "waveSize": 4,
+            "enemySpeed": 1.3157894736841993,
+            "bulletSpeed": 279.49999999999824,
+            "hpBonus": 0,
+            "maxEnemies": 17,
+            "scrollSpeed": 1.6157894736841993
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 11,
+            "attackSources": 5,
+            "firedSourcesPerStep": 1,
+            "enemyBullets": 24,
+            "bulletSpeed": 334.925
+          },
+          "windowMeanEnemies": 4.803,
+          "windowMeanEnemyBullets": 10.752,
+          "upgradeSeconds": {
+            "spread": 0,
+            "lance": 0,
+            "helix": 0,
+            "drone": 2.442
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 12.558
+        },
+        {
+          "requestedTime": 60,
+          "reached": true,
+          "simulationTime": 60,
+          "mode": "playing",
+          "hp": 100,
+          "score": 14390,
+          "bossesDefeated": 0,
+          "enemies": 1,
+          "attackSources": 0,
+          "enemyBullets": 11,
+          "bulletSpeed": 383.3812499999955,
+          "difficulty": {
+            "tier": 4,
+            "waveInterval": 0.9112244897959442,
+            "waveSize": 6,
+            "enemySpeed": 1.631578947368392,
+            "bulletSpeed": 328.99999999999545,
+            "hpBonus": 1,
+            "maxEnemies": 19,
+            "scrollSpeed": 1.931578947368392
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 15,
+            "attackSources": 4,
+            "firedSourcesPerStep": 2,
+            "enemyBullets": 36,
+            "bulletSpeed": 383.381
+          },
+          "windowMeanEnemies": 4.2,
+          "windowMeanEnemyBullets": 16.688,
+          "upgradeSeconds": {
+            "spread": 0,
+            "lance": 0,
+            "helix": 0,
+            "drone": 21.183
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 0
+        },
+        {
+          "requestedTime": 120,
+          "reached": true,
+          "simulationTime": 120,
+          "mode": "playing",
+          "hp": 100,
+          "score": 108190,
+          "bossesDefeated": 1,
+          "enemies": 23,
+          "attackSources": 2,
+          "enemyBullets": 68,
+          "bulletSpeed": 375,
+          "difficulty": {
+            "tier": 8,
+            "waveInterval": 0.62,
+            "waveSize": 8,
+            "enemySpeed": 2.1,
+            "bulletSpeed": 365,
+            "hpBonus": 2,
+            "maxEnemies": 25,
+            "scrollSpeed": 2.5631578947372797
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 24,
+            "attackSources": 11,
+            "firedSourcesPerStep": 2,
+            "enemyBullets": 100,
+            "bulletSpeed": 420
+          },
+          "windowMeanEnemies": 9.271,
+          "windowMeanEnemyBullets": 28.035,
+          "upgradeSeconds": {
+            "spread": 14.008,
+            "lance": 0.258,
+            "helix": 0,
+            "drone": 21.183
+          },
+          "activeWeapon": "lance",
+          "weaponRemaining": 13.742,
+          "droneRemaining": 0
+        },
+        {
+          "requestedTime": 180,
+          "reached": true,
+          "simulationTime": 180,
+          "mode": "playing",
+          "hp": 100,
+          "score": 204510,
+          "bossesDefeated": 2,
+          "enemies": 1,
+          "attackSources": 1,
+          "enemyBullets": 11,
+          "bulletSpeed": 383,
+          "difficulty": {
+            "tier": 13,
+            "waveInterval": 0.62,
+            "waveSize": 8,
+            "enemySpeed": 2.1,
+            "bulletSpeed": 365,
+            "hpBonus": 5,
+            "maxEnemies": 30,
+            "scrollSpeed": 2.6
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 29,
+            "attackSources": 12,
+            "firedSourcesPerStep": 2,
+            "enemyBullets": 119,
+            "bulletSpeed": 420
+          },
+          "windowMeanEnemies": 16.941,
+          "windowMeanEnemyBullets": 55.137,
+          "upgradeSeconds": {
+            "spread": 28.017,
+            "lance": 3.892,
+            "helix": 11.375,
+            "drone": 36.192
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 0
+        },
+        {
+          "requestedTime": 300,
+          "reached": true,
+          "simulationTime": 300,
+          "mode": "playing",
+          "hp": 100,
+          "score": 216610,
+          "bossesDefeated": 3,
+          "enemies": 1,
+          "attackSources": 0,
+          "enemyBullets": 28,
+          "bulletSpeed": 395.00000000000006,
+          "difficulty": {
+            "tier": 20,
+            "waveInterval": 0.62,
+            "waveSize": 8,
+            "enemySpeed": 2.1,
+            "bulletSpeed": 365,
+            "hpBonus": 7,
+            "maxEnemies": 39,
+            "scrollSpeed": 2.6
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 39,
+            "attackSources": 13,
+            "firedSourcesPerStep": 2,
+            "enemyBullets": 135,
+            "bulletSpeed": 420
+          },
+          "windowMeanEnemies": 9.407,
+          "windowMeanEnemyBullets": 32.683,
+          "upgradeSeconds": {
+            "spread": 28.017,
+            "lance": 17.9,
+            "helix": 11.375,
+            "drone": 36.192
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 0
+        }
+      ],
+      "hits": [],
+      "pickups": [
+        {
+          "time": 27.558,
+          "type": "drone",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 33.733,
+          "type": "drone",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 77.5,
+          "type": "health",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 104.708,
+          "type": "power",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 119.742,
+          "type": "power",
+          "weaponMode": "lance"
+        },
+        {
+          "time": 123.633,
+          "type": "power",
+          "weaponMode": "helix"
+        },
+        {
+          "time": 135.008,
+          "type": "power",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 135.15,
+          "type": "drone",
+          "weaponMode": "spread"
+        },
+        {
+          "time": 251.283,
+          "type": "power",
+          "weaponMode": "lance"
+        },
+        {
+          "time": 297.492,
+          "type": "health",
+          "weaponMode": "lance"
+        }
+      ],
+      "deathEvidence": null
+    },
+    "normalDamageFixedInput": {
+      "purpose": "Normal damage rules with fixed non-reactive input; one reproducible survival observation, not a player skill or balance certification.",
+      "invincibleOverride": false,
+      "simulatedUntil": 31.8,
+      "survived300Seconds": false,
+      "mode": "gameover",
+      "hp": 0,
+      "hitCount": 7,
+      "totalMaxima": {
+        "enemies": 11,
+        "attackSources": 5,
+        "firedSourcesPerStep": 1,
+        "enemyBullets": 28,
+        "bulletSpeed": 334.925
+      },
+      "firstDrops": {
+        "power": 3.008,
+        "health": 13.017,
+        "drone": 23.025
+      },
+      "firstPowerCollection": null,
+      "upgradeSeconds": {
+        "spread": 0,
+        "lance": 0,
+        "helix": 0,
+        "drone": 4.242
+      },
+      "snapshots": [
+        {
+          "requestedTime": 0,
+          "reached": true,
+          "simulationTime": 0,
+          "mode": "entering",
+          "hp": 100,
+          "score": 0,
+          "bossesDefeated": 0,
+          "enemies": 0,
+          "attackSources": 0,
+          "enemyBullets": 0,
+          "bulletSpeed": 0,
+          "difficulty": {
+            "tier": 1,
+            "waveInterval": 2.35,
+            "waveSize": 3,
+            "enemySpeed": 1,
+            "bulletSpeed": 230,
+            "hpBonus": 0,
+            "maxEnemies": 15,
+            "scrollSpeed": 1.3
+          },
+          "hitsTotal": 0,
+          "hitsInWindow": 0,
+          "windowMax": {
+            "enemies": 0,
+            "attackSources": 0,
+            "firedSourcesPerStep": 0,
+            "enemyBullets": 0,
+            "bulletSpeed": 0
+          },
+          "windowMeanEnemies": 0,
+          "windowMeanEnemyBullets": 0,
+          "upgradeSeconds": {
+            "spread": 0,
+            "lance": 0,
+            "helix": 0,
+            "drone": 0
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 0
+        },
+        {
+          "requestedTime": 30,
+          "reached": true,
+          "simulationTime": 30,
+          "mode": "playing",
+          "hp": 8,
+          "score": 4530,
+          "bossesDefeated": 0,
+          "enemies": 6,
+          "attackSources": 1,
+          "enemyBullets": 20,
+          "bulletSpeed": 274.56374999999855,
+          "difficulty": {
+            "tier": 2,
+            "waveInterval": 1.3132352941176677,
+            "waveSize": 4,
+            "enemySpeed": 1.3157894736841993,
+            "bulletSpeed": 279.49999999999824,
+            "hpBonus": 0,
+            "maxEnemies": 17,
+            "scrollSpeed": 1.6157894736841993
+          },
+          "hitsTotal": 6,
+          "hitsInWindow": 6,
+          "windowMax": {
+            "enemies": 11,
+            "attackSources": 5,
+            "firedSourcesPerStep": 1,
+            "enemyBullets": 24,
+            "bulletSpeed": 334.925
+          },
+          "windowMeanEnemies": 4.803,
+          "windowMeanEnemyBullets": 10.752,
+          "upgradeSeconds": {
+            "spread": 0,
+            "lance": 0,
+            "helix": 0,
+            "drone": 2.442
+          },
+          "activeWeapon": "normal",
+          "weaponRemaining": 0,
+          "droneRemaining": 12.558
+        },
+        {
+          "requestedTime": 60,
+          "reached": false,
+          "reason": "gameover",
+          "frozenAt": 31.8
+        },
+        {
+          "requestedTime": 120,
+          "reached": false,
+          "reason": "gameover",
+          "frozenAt": 31.8
+        },
+        {
+          "requestedTime": 180,
+          "reached": false,
+          "reason": "gameover",
+          "frozenAt": 31.8
+        },
+        {
+          "requestedTime": 300,
+          "reached": false,
+          "reason": "gameover",
+          "frozenAt": 31.8
+        }
+      ],
+      "hits": [
+        {
+          "time": 9.833,
+          "hpAfter": 88,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 7,
+          "attackSources": 0,
+          "enemyBullets": 20,
+          "bulletSpeed": 245.93625000000017,
+          "firedSourcesPerStep": 0,
+          "sourceX": 255.107,
+          "sourceY": 380.764,
+          "playerX": 234.689,
+          "playerY": 387.635
+        },
+        {
+          "time": 11.3,
+          "hpAfter": 76,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 2,
+          "attackSources": 0,
+          "enemyBullets": 16,
+          "bulletSpeed": 245.93625000000017,
+          "firedSourcesPerStep": 0,
+          "sourceX": 245.614,
+          "sourceY": 286.097,
+          "playerX": 234.689,
+          "playerY": 267.131
+        },
+        {
+          "time": 14.733,
+          "hpAfter": 54,
+          "damage": 22,
+          "mechanism": "body contact",
+          "enemies": 4,
+          "attackSources": 0,
+          "enemyBullets": 16,
+          "bulletSpeed": 264.25499999999965,
+          "firedSourcesPerStep": 0,
+          "sourceX": 275.97,
+          "sourceY": 358.946,
+          "playerX": 234.689,
+          "playerY": 324.253
+        },
+        {
+          "time": 17.575,
+          "hpAfter": 42,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 3,
+          "attackSources": 0,
+          "enemyBullets": 15,
+          "bulletSpeed": 265.05249999999967,
+          "firedSourcesPerStep": 0,
+          "sourceX": 252.992,
+          "sourceY": 585.716,
+          "playerX": 234.689,
+          "playerY": 575.085
+        },
+        {
+          "time": 24.308,
+          "hpAfter": 20,
+          "damage": 22,
+          "mechanism": "body contact",
+          "enemies": 5,
+          "attackSources": 1,
+          "enemyBullets": 0,
+          "bulletSpeed": 0,
+          "firedSourcesPerStep": 0,
+          "sourceX": 265.988,
+          "sourceY": 187.624,
+          "playerX": 239.198,
+          "playerY": 222.016
+        },
+        {
+          "time": 27.942,
+          "hpAfter": 8,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 8,
+          "attackSources": 1,
+          "enemyBullets": 19,
+          "bulletSpeed": 274.56374999999855,
+          "firedSourcesPerStep": 0,
+          "sourceX": 260.408,
+          "sourceY": 357.987,
+          "playerX": 239.198,
+          "playerY": 360.506
+        },
+        {
+          "time": 31.8,
+          "hpAfter": 0,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 8,
+          "attackSources": 1,
+          "enemyBullets": 27,
+          "bulletSpeed": 291.2874999999982,
+          "firedSourcesPerStep": 0,
+          "sourceX": 261.078,
+          "sourceY": 582.895,
+          "playerX": 240.522,
+          "playerY": 586.576
+        }
+      ],
+      "pickups": [
+        {
+          "time": 27.558,
+          "type": "drone",
+          "weaponMode": "spread"
+        }
+      ],
+      "deathEvidence": {
+        "finalHit": {
+          "time": 31.8,
+          "hpAfter": 0,
+          "damage": 12,
+          "mechanism": "hostile projectile",
+          "enemies": 8,
+          "attackSources": 1,
+          "enemyBullets": 27,
+          "bulletSpeed": 291.2874999999982,
+          "firedSourcesPerStep": 0,
+          "sourceX": 261.078,
+          "sourceY": 582.895,
+          "playerX": 240.522,
+          "playerY": 586.576
+        },
+        "priorFiveSecondHits": [
+          {
+            "time": 27.942,
+            "hpAfter": 8,
+            "damage": 12,
+            "mechanism": "hostile projectile",
+            "enemies": 8,
+            "attackSources": 1,
+            "enemyBullets": 19,
+            "bulletSpeed": 274.56374999999855,
+            "firedSourcesPerStep": 0,
+            "sourceX": 260.408,
+            "sourceY": 357.987,
+            "playerX": 239.198,
+            "playerY": 360.506
+          },
+          {
+            "time": 31.8,
+            "hpAfter": 0,
+            "damage": 12,
+            "mechanism": "hostile projectile",
+            "enemies": 8,
+            "attackSources": 1,
+            "enemyBullets": 27,
+            "bulletSpeed": 291.2874999999982,
+            "firedSourcesPerStep": 0,
+            "sourceX": 261.078,
+            "sourceY": 582.895,
+            "playerX": 240.522,
+            "playerY": 586.576
+          }
+        ],
+        "limitations": "Damage constants identify contact vs projectile. This headless replay cannot establish cloud occlusion, edge visibility, perceived speed, safe-route readability or slow-kill causation."
+      }
+    }
+  }
+}

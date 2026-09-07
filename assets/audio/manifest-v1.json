@@ -1,0 +1,8 @@
+{
+  "title": "assets/audio/title.m4a",
+  "normal": "assets/audio/normal.m4a",
+  "danger": "assets/audio/danger.m4a",
+  "boss": "assets/audio/boss.m4a",
+  "powerup": "assets/audio/powerup.m4a",
+  "ending": "assets/audio/ending.m4a"
+}

@@ -1,0 +1,107 @@
+{
+  "sameCount": 25,
+  "total": 25,
+  "allSame": true,
+  "checks": [
+    {
+      "function": "cameraRoll",
+      "same": true
+    },
+    {
+      "function": "worldToScreen",
+      "same": true
+    },
+    {
+      "function": "screenToWorld",
+      "same": true
+    },
+    {
+      "function": "getWeaponStatus",
+      "same": true
+    },
+    {
+      "function": "playerMuzzle",
+      "same": true
+    },
+    {
+      "function": "difficultyAt",
+      "same": true
+    },
+    {
+      "function": "random",
+      "same": true
+    },
+    {
+      "function": "spawnPickup",
+      "same": true
+    },
+    {
+      "function": "spawnEnemy",
+      "same": true
+    },
+    {
+      "function": "spawnWave",
+      "same": true
+    },
+    {
+      "function": "spawnBoss",
+      "same": true
+    },
+    {
+      "function": "playerShot",
+      "same": true
+    },
+    {
+      "function": "firePlayer",
+      "same": true
+    },
+    {
+      "function": "enemyBullet",
+      "same": true
+    },
+    {
+      "function": "fan",
+      "same": true
+    },
+    {
+      "function": "fireBoss",
+      "same": true
+    },
+    {
+      "function": "fireEnemy",
+      "same": true
+    },
+    {
+      "function": "updateAttack",
+      "same": true
+    },
+    {
+      "function": "destroyEnemy",
+      "same": true
+    },
+    {
+      "function": "damagePlayer",
+      "same": true
+    },
+    {
+      "function": "constrainPlayer",
+      "same": true
+    },
+    {
+      "function": "updatePlayer",
+      "same": true
+    },
+    {
+      "function": "updateGame",
+      "same": true
+    },
+    {
+      "block": "const DIFFICULTY_PHASES",
+      "same": true
+    },
+    {
+      "block": "const ENEMY_SPECS",
+      "same": true
+    }
+  ]
+}

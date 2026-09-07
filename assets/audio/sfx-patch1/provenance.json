@@ -1,0 +1,1506 @@
+{
+  "schemaVersion": 1,
+  "label": "SkyWind patch 1 local candidate sound edits",
+  "publicationApproved": true,
+  "licenseStatus": "Public use rights confirmed by the user on 2026-09-07; not independently audited by Codex.",
+  "humanListeningVerified": false,
+  "verificationScope": "Decoded signal, duration, finite samples, envelope endpoints, peak headroom, output hashes and preservation of all 67 original byte streams. Not human sound-quality approval.",
+  "method": "One-event crops from supplied originals; deterministic filters and envelope; float decode before gain staging; mono PCM16 48000 Hz. No demo files, loops or gameplay timing changes.",
+  "generator": "prepare_sound.py",
+  "generatorSha256": "9f261902fb9a687f6becdf305d24d52b9331e336a3bd987d53fb826d0b488a43",
+  "sourceRootRelativeToDesignArchive": "audio/original",
+  "sourceRootRelativeToGenerator": "source",
+  "rightsEvidence": "2026-09-07 KST: In reply to the explicit public GitHub backup rights question for Kexxrix/skywind, the user confirmed: 사운드 공개 사용 권한이 확인됐으니 공개 저장소에 전체 백업. Covers the supplied sound originals and current edited files in this backup. User attestation; no separate license document was independently verified. See docs/RIGHTS_STATUS.md. Human listening remains unverified.",
+  "originalFilesVerifiedUnchanged": 67,
+  "originalHashes": {
+    "23.wav": "4fce4f8b068ed9f0aa12994bc859db1017a5c3ced313d8201e434b5702fee76d",
+    "26.wav": "451e7b894f1e95ddbb6694ad799d50f851f60d897033f8734c1f05b63bf7e4be",
+    "2F.wav": "641d94492487b58bd585f852ce597d160e40ad81a4f6de2fdca6d00df74ec22e",
+    "aaexplo.wav": "1ee9d5b0c59807c6b4b30ba49b7175794de8ff12a1d4b33a563fe53ba159bc4e",
+    "aaspawn.wav": "cde6a2aac483af90e391bb5039864dc2332f25edb044915fbdfbc5e948b57b7a",
+    "BOM2_V100.wav": "bc277e63ce39b1b7c080bbe6a9d96ce871a93dfa9ac8f2fa81e6bd3653181d75",
+    "BOMB8_V100.wav": "dad6d3904f4cfbe375c1900a7645820b571738fee7fd69f07c79542102181c00",
+    "bomb_p1_V100.wav": "2da3edd4e970a88eba71faf12d1acd0739a2026f02c3d170ef0fb0d8aa022d3e",
+    "bomb_p3_V100.wav": "735445b4d8781142442e18c33494ca6b98701064f92ef911ea408ce93c527895",
+    "bomb_p5_V100.wav": "75208bf770e957986bf829ccdbe9660c4d60d00ed0bf614040bd5399395d09e4",
+    "bombgroundexplo.wav": "931f50a513bd9a7c7ec3da3d76fc48c5c8e336b973fde216d2072d699c00925c",
+    "bombspawn.wav": "9c38e551a99cddaae7f9e686ca9fecba5a586a5974d761ba136f9d9063d58cf9",
+    "bombwaterexplo.wav": "62936472622809a64a71a811d177c5c3421434ca7b96121e77dc9b6cb79d6ee7",
+    "BOOOM_V100.wav": "5fecdab3a69f2a056a30a166bd9b3f5b257e925c459bde698be3b09e9d707add",
+    "buildingexplo1.wav": "403481009671a9f423cacffcb2a4cd570e084c151fa49fd6bfdddedacac5f79f",
+    "buildingexplo2.wav": "3462f1fb83a443cc7a4f697f63c8fc0c7c90bc78a883aadf39ae3fbdd0f64ebd",
+    "enginebomber.wav": "301ae9432bc4d4ebc42c7fb3b1f7715dccbf635f21a1a7670c40e5f5e1ac3dd1",
+    "enginedive.wav": "1ca7669b97187b19e66d88c7d01ffaac57e9e091bbf12e2500e91ec13a40237c",
+    "enginefighter.wav": "5af86759c18fc9fbd57438997dd70c11e20d17b68571c43fc94dc96b3d28efd8",
+    "enginefighterbomber.wav": "e67921779767cbb28288d61afe4b0c9f7dce4253b91e4c9271b96f7d3158a00c",
+    "enginerocket.wav": "2ebe830aa7856dcdfdf1e1a9e744c3598b0c3a7a24202f573c521efc68fa75a4",
+    "engineup.wav": "46f1a8197f9d3e08fa740adb7e44523c1ceffd72caec946e3cb4dadf5ce9e747",
+    "flash_logo.wav": "2679d5f9796781036f056ac5d8eec1d0dbe4ba3dab50f1e47684cd08b13a369a",
+    "groundrico1.wav": "516bcb7677f93c453cb0dc744bb2bb36b52ff6b53b701b9648aebce98b06cdc4",
+    "groundrico2.wav": "e8918761b96987cffbf424fab10df00f9248cabd1a22ac59e3969245e7659e42",
+    "groundrico3.wav": "3d115fc672ceb3690c203f5da43161f106e58717e5033bb8e34efd638ed74451",
+    "gun1.wav": "7ea230d64929eb70a01cb7a6a89738cd6859e14d83a65009a6f0343c8703d28e",
+    "gun2.wav": "aa3a073e7df0c248fbbdfefddfa95e01942b8d5e08e6705ddbd8b3b434b5aa2b",
+    "gun3.wav": "ec48e83bd1827b9912e6cb37e984fc6e93b832e365a01bb687724db84d22cc7d",
+    "menu1.wav": "431f19e15dbc5a36d533b25e53071c58df38b7bcd49dbfc0ade051e8ec5cd186",
+    "menu2.wav": "07fcb08fb0727dec0c437e5c4b57e6c2e1134e48198062d6f86194e9ba614ed1",
+    "planeexploair.wav": "707ba8ce46fc33e87ebe4d18936109d1b6a2080532716f3244048af90f632471",
+    "planeexploground.wav": "d375782cdfac0097efcb6f5126f2bbc4352df22890e8300d9c2eb3d34e1bd745",
+    "planegunheavy.wav": "efc094bcac0a5e06630b8e84d07e00ccfe61614e0804002d54c295473b4dd47d",
+    "planegunlight.wav": "d7c665108d41a1cf4745ba5b5f79600cb95342bccf510255770bb7a2b520b7fb",
+    "planegunmedium.wav": "b37c94358d9848d2028a38a6aef0489bd287e6d1d4e785177b7522a804131802",
+    "planemetalscrew.wav": "ec2e798226f8e182a8eb89d2cacd040b711baf6415d604b9869239710a81a531",
+    "planerico1.wav": "4db6deb7bc45c8923168eafb55c5e9853a13b99a5fce9062373a7b29010fd043",
+    "planerico2.wav": "6f0f93c027e262bda6e91264ab302fe7c39895b574e7a3122f4883e53439bff3",
+    "planerico3.wav": "fbca0815e241852bc75f55629b6ae2bea034fd31ab65d60d4b1dd34d023e6621",
+    "rico1.wav": "df42a02c9658ac890e6d1b1d8b3a984dd9eea295cdefa2fd06800230e121da61",
+    "rico2.wav": "a4b7d456c648c57b92aeeedc8302869e1f8ade66ad4106b96ee6cff9330cc60f",
+    "rico3.wav": "2a8755ee646bbb0bdc9f2a6a55cf7d288834a4fc10db7112e35635a685db5aed",
+    "rocketgroundexplo.wav": "3f30293907b478b338dd25912c1e5f17cbb6e030200f8c222fca1b368fbc083c",
+    "rocketspawn.wav": "fb818f20e9a8a8bb5d11082e674695da08b134a2e6ae50f4f0b01cf537488521",
+    "rocketwaterexplo.wav": "4da5629fd831d6b77ec5b2ecff00db2d0cb942468d04fb98fff1da69f1ee5b8f",
+    "shipexplo.wav": "05addfe2467cd04375b20b5173e7f6ec732e74a2e8a003b464eb3eaefa5de39c",
+    "so_com_engine_bass_rumble.wav": "ce9899a9fbd45d71947195fb75fc8601b1bebea9e3c44d20495a7e95665a4eb2",
+    "so_com_get_boost_a.wav": "77b5ad1109cd9ed88858cff0ed931df6e0f180c972d4c642c599d114072a7ec9",
+    "so_com_get_boost_b.wav": "9af1d43237090f8203576bb4b6bea8c10f97e9cdfce9e40c5f591f2fd0dc9057",
+    "so_com_get_boost_c.wav": "73aa61690908291597ff5e875a8988c53b9035dd234c00d9f6376c5719c3e469",
+    "so_com_get_boost_d.wav": "cefe2db04f88ae5ccab254d833315b42625594dfd2f5eef783a232daa8fcba8b",
+    "so_com_get_boost_e.wav": "9807f4ae911e9d6544df1067426a47780131bccb6febf7e980c1582d4374269e",
+    "so_com_get_boost_f.wav": "6183850c9a9f162b80355fd3f51196dba09b06ca7f9189936c300731b0a41168",
+    "so_com_hllcrshr_zaps_a.wav": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281",
+    "so_com_hllcrshr_zaps_b.wav": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0",
+    "so_com_hullcrusher_a.wav": "4d3dd468db1401612338b5e302815a340a6f092216534b19c88085c7db358b2a",
+    "so_com_hullcrusher_b.wav": "a6eecbc23ed656e8dc547b6941d701650239cc2959765901ac9a38f54fd86076",
+    "so_com_hullcrusher_c.wav": "db467d6d500806484a907cd2b5cb5f1fc2f1edc43f17f74165386f02e82dd356",
+    "so_com_rkbst_start_a.wav": "c85487a92149e95546cf5e2b47d35a9b066460567b4feacc2afbe6c8910236d2",
+    "so_com_rkbst_start_a1.wav": "5562966b1a8d28bf6c203532483b0950cd6633a154612ab1f0fc2f18ebade057",
+    "so_com_rkbst_start_a1b.wav": "c2b5ff17cf457a4296cd288e25e6e5099c9c052cbd574bbac4a6260fa7ebc14b",
+    "vehicleexplo1.wav": "9143c2a5602ad71cad1305571c3237910f8e3941fcb494aefcd3e98fae88e547",
+    "vehicleexplo2.wav": "4cc4c29e4300fd3e5cf67eb69ff92f852df6192ac2b323fdafd3b63b5f3f7fe1",
+    "waterrico1.wav": "72458814724ada7f05062655fbb63e6fddbc25d9f407c3a10f3082e173e5ed6f",
+    "waterrico2.wav": "2f9e1b29d75f2f8b1ba4011d74746b87937222df3c0c3e4daeb9e4592b7d3418",
+    "waterrico3.wav": "3995f776062e305efd5edb29adb48a561d9f7bd56c084eb3c647dd60504b6fd5"
+  },
+  "editedCount": 30,
+  "edits": [
+    {
+      "file": "edited/shot-normal-01.wav",
+      "role": "normal single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun1.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.09525,
+          "highpassHz": 100,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "7ea230d64929eb70a01cb7a6a89738cd6859e14d83a65009a6f0343c8703d28e"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 7,
+        "exponentialDecay": 0,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19.5,
+        "appliedGainDb": -8.1555
+      },
+      "sha256": "35646cdcf9f262a2220e093d0d70f0f34809be207dbac7d7d858e688577f011c",
+      "measurements": {
+        "durationSeconds": 0.09525,
+        "peakDbFS": -8,
+        "rmsDbFS": -22.019,
+        "spectralPowerCentroidHz": 1110.5,
+        "dcOffset": -0.00119248,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-normal-02.wav",
+      "role": "normal single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun2.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.09397916666666667,
+          "highpassHz": 100,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "aa3a073e7df0c248fbbdfefddfa95e01942b8d5e08e6705ddbd8b3b434b5aa2b"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 7,
+        "exponentialDecay": 0,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19.5,
+        "appliedGainDb": -10.82631
+      },
+      "sha256": "194c2cae18d123582d521059b424bb32a1f88b60135acf4f96269eeaed8ebc65",
+      "measurements": {
+        "durationSeconds": 0.093979,
+        "peakDbFS": -8,
+        "rmsDbFS": -23.811,
+        "spectralPowerCentroidHz": 534.7,
+        "dcOffset": -0.00001143,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-normal-03.wav",
+      "role": "normal single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun3.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.09779166666666667,
+          "highpassHz": 100,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "ec48e83bd1827b9912e6cb37e984fc6e93b832e365a01bb687724db84d22cc7d"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 7,
+        "exponentialDecay": 0,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19.5,
+        "appliedGainDb": -9.95821
+      },
+      "sha256": "597c3208a89072c902b88702113e39f0fe96d4c9fa145434cbc4af0fdbc881fc",
+      "measurements": {
+        "durationSeconds": 0.097792,
+        "peakDbFS": -8,
+        "rmsDbFS": -22.455,
+        "spectralPowerCentroidHz": 382.2,
+        "dcOffset": 5.5e-7,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-spread-01.wav",
+      "role": "spread single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planegunlight.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.084,
+          "highpassHz": 90,
+          "lowpassHz": 8000,
+          "mixWeight": 1,
+          "sourceSha256": "d7c665108d41a1cf4745ba5b5f79600cb95342bccf510255770bb7a2b520b7fb"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.45,
+        "fadeOutMs": 14,
+        "exponentialDecay": 1.15,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19,
+        "appliedGainDb": -6.83559
+      },
+      "sha256": "5e399757ba0747c0e20286434860e0c1f23a7d9b6d318d0fb9928139104e28bb",
+      "measurements": {
+        "durationSeconds": 0.084,
+        "peakDbFS": -8.197,
+        "rmsDbFS": -19,
+        "spectralPowerCentroidHz": 1027.9,
+        "dcOffset": 0.00036928,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-spread-02.wav",
+      "role": "spread single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planegunmedium.wav",
+          "startSeconds": 0.1,
+          "durationSeconds": 0.084,
+          "highpassHz": 90,
+          "lowpassHz": 8000,
+          "mixWeight": 1,
+          "sourceSha256": "b37c94358d9848d2028a38a6aef0489bd287e6d1d4e785177b7522a804131802"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.45,
+        "fadeOutMs": 14,
+        "exponentialDecay": 1.15,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19,
+        "appliedGainDb": -8.80344
+      },
+      "sha256": "88f3d548439bcfc2177a71666e5b0ff6d19a20c6b1f28f7764181b4e288f5990",
+      "measurements": {
+        "durationSeconds": 0.084,
+        "peakDbFS": -8,
+        "rmsDbFS": -20.732,
+        "spectralPowerCentroidHz": 846.9,
+        "dcOffset": 0.00024109,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-spread-03.wav",
+      "role": "spread single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planegunheavy.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.084,
+          "highpassHz": 90,
+          "lowpassHz": 8000,
+          "mixWeight": 1,
+          "sourceSha256": "efc094bcac0a5e06630b8e84d07e00ccfe61614e0804002d54c295473b4dd47d"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.45,
+        "fadeOutMs": 14,
+        "exponentialDecay": 1.15,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -8,
+        "targetRmsDbFS": -19,
+        "appliedGainDb": -5.66412
+      },
+      "sha256": "a3abb897793b22f712c66a8c022d55eeeac0bc63f1b241b9a67454fb5a844815",
+      "measurements": {
+        "durationSeconds": 0.084,
+        "peakDbFS": -8,
+        "rmsDbFS": -19.382,
+        "spectralPowerCentroidHz": 825,
+        "dcOffset": 0.00030718,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-lance-01.wav",
+      "role": "lance single pulse",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_a.wav",
+          "startSeconds": 0.022,
+          "durationSeconds": 0.125,
+          "highpassHz": 800,
+          "lowpassHz": 11500,
+          "mixWeight": 1,
+          "sourceSha256": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.55,
+        "fadeOutMs": 26,
+        "exponentialDecay": 2.3,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -7.10593
+      },
+      "sha256": "363f3e36ef1e5b8b7add3bcaaee7a30bb4ce12e4a1a1e8e95c9fddc14b75e205",
+      "measurements": {
+        "durationSeconds": 0.125,
+        "peakDbFS": -10,
+        "rmsDbFS": -27.587,
+        "spectralPowerCentroidHz": 5002.3,
+        "dcOffset": 0.00001707,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-lance-02.wav",
+      "role": "lance single pulse",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_b.wav",
+          "startSeconds": 0.025,
+          "durationSeconds": 0.135,
+          "highpassHz": 800,
+          "lowpassHz": 11500,
+          "mixWeight": 1,
+          "sourceSha256": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.55,
+        "fadeOutMs": 26,
+        "exponentialDecay": 2.3,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -7.43694
+      },
+      "sha256": "c11d8271b0d3a3b4cdf0055dd61eaf97a9d32f8b0ff2c485242a5e1188a5da96",
+      "measurements": {
+        "durationSeconds": 0.135,
+        "peakDbFS": -10,
+        "rmsDbFS": -27.378,
+        "spectralPowerCentroidHz": 4627.4,
+        "dcOffset": 0.00000653,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-lance-03.wav",
+      "role": "lance single pulse",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_a.wav",
+          "startSeconds": 0.14,
+          "durationSeconds": 0.13,
+          "highpassHz": 800,
+          "lowpassHz": 11500,
+          "mixWeight": 1,
+          "sourceSha256": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.55,
+        "fadeOutMs": 26,
+        "exponentialDecay": 2.3,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -5.32606
+      },
+      "sha256": "ea3d574cebff4e5fb465c49075e880c39ae14b71a07d1e79f98c5e2f5b8ee328",
+      "measurements": {
+        "durationSeconds": 0.13,
+        "peakDbFS": -10,
+        "rmsDbFS": -26.083,
+        "spectralPowerCentroidHz": 3851,
+        "dcOffset": -0.00017011,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-helix-01.wav",
+      "role": "helix single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_b.wav",
+          "startSeconds": 0.265,
+          "durationSeconds": 0.145,
+          "highpassHz": 340,
+          "lowpassHz": 5500,
+          "mixWeight": 1,
+          "sourceSha256": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.8,
+        "fadeOutMs": 30,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 42,
+        "tremoloDepth": 0.22
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -4.95299
+      },
+      "sha256": "6af7c400a0ed4e4044f7a0411adb68e59a23215b462483327743387ae72d236b",
+      "measurements": {
+        "durationSeconds": 0.145,
+        "peakDbFS": -10,
+        "rmsDbFS": -24.635,
+        "spectralPowerCentroidHz": 2092,
+        "dcOffset": 0.00026011,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-helix-02.wav",
+      "role": "helix single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_a.wav",
+          "startSeconds": 0.31,
+          "durationSeconds": 0.145,
+          "highpassHz": 340,
+          "lowpassHz": 5500,
+          "mixWeight": 1,
+          "sourceSha256": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.8,
+        "fadeOutMs": 30,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 42,
+        "tremoloDepth": 0.22
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -7.03013
+      },
+      "sha256": "b3907c350f5eb4c43b42ad3701a3f19ef8d7e6ce89291e0538e5abe805696214",
+      "measurements": {
+        "durationSeconds": 0.145,
+        "peakDbFS": -10,
+        "rmsDbFS": -26.094,
+        "spectralPowerCentroidHz": 2467.2,
+        "dcOffset": -0.00039975,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-helix-03.wav",
+      "role": "helix single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_b.wav",
+          "startSeconds": 0.385,
+          "durationSeconds": 0.145,
+          "highpassHz": 340,
+          "lowpassHz": 5500,
+          "mixWeight": 1,
+          "sourceSha256": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.8,
+        "fadeOutMs": 30,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 42,
+        "tremoloDepth": 0.22
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10,
+        "targetRmsDbFS": -23,
+        "appliedGainDb": -3.91274
+      },
+      "sha256": "cce73541133666be6873f213baa6e7875d534a1f96ba66ab1e1e9b4e1b507622",
+      "measurements": {
+        "durationSeconds": 0.145,
+        "peakDbFS": -10,
+        "rmsDbFS": -25.664,
+        "spectralPowerCentroidHz": 1546.6,
+        "dcOffset": -0.00043936,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-drone-01.wav",
+      "role": "drone single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun1.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.068,
+          "highpassHz": 1650,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "7ea230d64929eb70a01cb7a6a89738cd6859e14d83a65009a6f0343c8703d28e"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 13,
+        "exponentialDecay": 1.7,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -4.94049
+      },
+      "sha256": "5cb90898e00081238ff74c52758802ec70453a8107b1271d4fa451219a9e67a1",
+      "measurements": {
+        "durationSeconds": 0.068,
+        "peakDbFS": -13,
+        "rmsDbFS": -29.286,
+        "spectralPowerCentroidHz": 3984.3,
+        "dcOffset": -0.00006733,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-drone-02.wav",
+      "role": "drone single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun2.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.068,
+          "highpassHz": 1650,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "aa3a073e7df0c248fbbdfefddfa95e01942b8d5e08e6705ddbd8b3b434b5aa2b"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 13,
+        "exponentialDecay": 1.7,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -7.94254
+      },
+      "sha256": "6db7363a878e809267addf37ec76072853f6b50c3a37c4972ca54c937a8f7ee2",
+      "measurements": {
+        "durationSeconds": 0.068,
+        "peakDbFS": -13,
+        "rmsDbFS": -33.618,
+        "spectralPowerCentroidHz": 1866.7,
+        "dcOffset": 0.00000254,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/shot-drone-03.wav",
+      "role": "drone single volley",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun3.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.068,
+          "highpassHz": 1650,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "ec48e83bd1827b9912e6cb37e984fc6e93b832e365a01bb687724db84d22cc7d"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.35,
+        "fadeOutMs": 13,
+        "exponentialDecay": 1.7,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -7.06185
+      },
+      "sha256": "8e56f3eaaf3224a8fd0abd93e3407427a70ec0f5aab0c9412280d9c0ccea0b9d",
+      "measurements": {
+        "durationSeconds": 0.068,
+        "peakDbFS": -13,
+        "rmsDbFS": -32.998,
+        "spectralPowerCentroidHz": 1402.9,
+        "dcOffset": 3e-7,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-weapon-normal.wav",
+      "role": "enemy impact weapon layer: normal",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun3.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.045,
+          "highpassHz": 900,
+          "lowpassHz": 8000,
+          "mixWeight": 1,
+          "sourceSha256": "ec48e83bd1827b9912e6cb37e984fc6e93b832e365a01bb687724db84d22cc7d"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.4,
+        "fadeOutMs": 12,
+        "exponentialDecay": 3,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -15,
+        "targetRmsDbFS": -29,
+        "appliedGainDb": -10.64727
+      },
+      "sha256": "b633925e574a3161eff8a27e17a62ba8891ba46fce4acde0dfffc27e9b160f0e",
+      "measurements": {
+        "durationSeconds": 0.045,
+        "peakDbFS": -15,
+        "rmsDbFS": -33.439,
+        "spectralPowerCentroidHz": 753.3,
+        "dcOffset": 0.00000356,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-weapon-spread.wav",
+      "role": "enemy impact weapon layer: spread",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planegunheavy.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.074,
+          "highpassHz": 350,
+          "lowpassHz": 5200,
+          "mixWeight": 1,
+          "sourceSha256": "efc094bcac0a5e06630b8e84d07e00ccfe61614e0804002d54c295473b4dd47d"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.4,
+        "fadeOutMs": 12,
+        "exponentialDecay": 3.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -15,
+        "targetRmsDbFS": -29,
+        "appliedGainDb": -9.91188
+      },
+      "sha256": "f64303c4ce907f68c334f60bb1f0d48bae7d0610db443ca393b297c869b3e154",
+      "measurements": {
+        "durationSeconds": 0.074,
+        "peakDbFS": -15,
+        "rmsDbFS": -31.194,
+        "spectralPowerCentroidHz": 1419.4,
+        "dcOffset": 0.00007348,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-weapon-lance.wav",
+      "role": "enemy impact weapon layer: lance",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_a.wav",
+          "startSeconds": 0.19,
+          "durationSeconds": 0.1,
+          "highpassHz": 1600,
+          "lowpassHz": 11000,
+          "mixWeight": 1,
+          "sourceSha256": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.4,
+        "fadeOutMs": 12,
+        "exponentialDecay": 3,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -15,
+        "targetRmsDbFS": -29,
+        "appliedGainDb": -7.6934
+      },
+      "sha256": "ca58a72b5800e242b21330d1a97f53af5c03fa461f6a2da948ff941ea49806ae",
+      "measurements": {
+        "durationSeconds": 0.1,
+        "peakDbFS": -15,
+        "rmsDbFS": -31.63,
+        "spectralPowerCentroidHz": 4761.9,
+        "dcOffset": 0.00004052,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-weapon-helix.wav",
+      "role": "enemy impact weapon layer: helix",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_b.wav",
+          "startSeconds": 0.255,
+          "durationSeconds": 0.12,
+          "highpassHz": 600,
+          "lowpassHz": 6400,
+          "mixWeight": 1,
+          "sourceSha256": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.4,
+        "fadeOutMs": 12,
+        "exponentialDecay": 2.5,
+        "tremoloHz": 39,
+        "tremoloDepth": 0.22
+      },
+      "normalization": {
+        "peakCeilingDbFS": -15,
+        "targetRmsDbFS": -29,
+        "appliedGainDb": -11.47093
+      },
+      "sha256": "bca0184f7e1a98517366246c05797aff133b4e637881b464bef52896222b1333",
+      "measurements": {
+        "durationSeconds": 0.12,
+        "peakDbFS": -15,
+        "rmsDbFS": -33.517,
+        "spectralPowerCentroidHz": 2735,
+        "dcOffset": 0.00000423,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-weapon-drone.wav",
+      "role": "enemy impact weapon layer: drone",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "gun2.wav",
+          "startSeconds": 0.005,
+          "durationSeconds": 0.045,
+          "highpassHz": 2200,
+          "lowpassHz": 9500,
+          "mixWeight": 1,
+          "sourceSha256": "aa3a073e7df0c248fbbdfefddfa95e01942b8d5e08e6705ddbd8b3b434b5aa2b"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.4,
+        "fadeOutMs": 12,
+        "exponentialDecay": 3.5,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -15,
+        "targetRmsDbFS": -29,
+        "appliedGainDb": -6.17217
+      },
+      "sha256": "44dda80424447fdff5a6ba47240180afeb36263405449a9caa439e95c3ecb535",
+      "measurements": {
+        "durationSeconds": 0.045,
+        "peakDbFS": -15,
+        "rmsDbFS": -34.283,
+        "spectralPowerCentroidHz": 2051.5,
+        "dcOffset": 0.00001786,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-light-01.wav",
+      "role": "enemy target layer: light aircraft",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planerico1.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.175,
+          "highpassHz": 420,
+          "lowpassHz": 8400,
+          "mixWeight": 1,
+          "sourceSha256": "4db6deb7bc45c8923168eafb55c5e9853a13b99a5fce9062373a7b29010fd043"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 38,
+        "exponentialDecay": 1.6,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -7.7993
+      },
+      "sha256": "1c7f50b31227e2c18768c61c6e3bfb04af6daeec8c37e5ab477c07a2a8cc6786",
+      "measurements": {
+        "durationSeconds": 0.175,
+        "peakDbFS": -13,
+        "rmsDbFS": -27.101,
+        "spectralPowerCentroidHz": 1425.9,
+        "dcOffset": 8.2e-7,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-light-02.wav",
+      "role": "enemy target layer: light aircraft",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planerico3.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.175,
+          "highpassHz": 420,
+          "lowpassHz": 8400,
+          "mixWeight": 1,
+          "sourceSha256": "fbca0815e241852bc75f55629b6ae2bea034fd31ab65d60d4b1dd34d023e6621"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 38,
+        "exponentialDecay": 1.6,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -5.89548
+      },
+      "sha256": "a091064a65a2929098f6904f64f1d5e84760f6eae91d2f1a59ec8e6f578eb608",
+      "measurements": {
+        "durationSeconds": 0.175,
+        "peakDbFS": -13,
+        "rmsDbFS": -25.714,
+        "spectralPowerCentroidHz": 1321,
+        "dcOffset": 0.00000256,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-armored-01.wav",
+      "role": "enemy target layer: armored",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "rico1.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.18,
+          "highpassHz": 250,
+          "lowpassHz": 5800,
+          "mixWeight": 1,
+          "sourceSha256": "df42a02c9658ac890e6d1b1d8b3a984dd9eea295cdefa2fd06800230e121da61"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 38,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -6.89861
+      },
+      "sha256": "d7c21127226cf5869fb23082d8eddde41e8d33ca8c36636620ef6000c28168e7",
+      "measurements": {
+        "durationSeconds": 0.18,
+        "peakDbFS": -13,
+        "rmsDbFS": -26.726,
+        "spectralPowerCentroidHz": 3132,
+        "dcOffset": 0.00000131,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-armored-02.wav",
+      "role": "enemy target layer: armored",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "rico2.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.18,
+          "highpassHz": 250,
+          "lowpassHz": 5800,
+          "mixWeight": 1,
+          "sourceSha256": "a4b7d456c648c57b92aeeedc8302869e1f8ade66ad4106b96ee6cff9330cc60f"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 38,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -5.5647
+      },
+      "sha256": "3377ddd9049f6dc1c27f4b81315461cdb9ccc1bf55e232c440998d92dbdb9905",
+      "measurements": {
+        "durationSeconds": 0.18,
+        "peakDbFS": -13,
+        "rmsDbFS": -25.787,
+        "spectralPowerCentroidHz": 3976.7,
+        "dcOffset": 0.00000142,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-armored-03.wav",
+      "role": "enemy target layer: armored",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "rico3.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.18,
+          "highpassHz": 250,
+          "lowpassHz": 5800,
+          "mixWeight": 1,
+          "sourceSha256": "2a8755ee646bbb0bdc9f2a6a55cf7d288834a4fc10db7112e35635a685db5aed"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 38,
+        "exponentialDecay": 1.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -9.87782
+      },
+      "sha256": "698ef878b83cd93f9880a2fa0ce660b802dfc13b8308a8ac20c28e05a82efb0c",
+      "measurements": {
+        "durationSeconds": 0.18,
+        "peakDbFS": -13,
+        "rmsDbFS": -27.477,
+        "spectralPowerCentroidHz": 1356.4,
+        "dcOffset": 4.6e-7,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-special-01.wav",
+      "role": "enemy target layer: existing special energy craft",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_a.wav",
+          "startSeconds": 0.4,
+          "durationSeconds": 0.11,
+          "highpassHz": 1100,
+          "lowpassHz": 7000,
+          "mixWeight": 1,
+          "sourceSha256": "68a45028436e42ae596706fd7139d9bc81987f793cffb30532b56033c18a0281"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 28,
+        "exponentialDecay": 2.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -4.14974
+      },
+      "sha256": "702f524a002dbc6c3238729f66e8102244d9eaa485fc2ae71bb17ce747ad1cd5",
+      "measurements": {
+        "durationSeconds": 0.11,
+        "peakDbFS": -13,
+        "rmsDbFS": -27.541,
+        "spectralPowerCentroidHz": 3001.4,
+        "dcOffset": -0.00003548,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/hit-target-special-02.wav",
+      "role": "enemy target layer: existing special energy craft",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_hllcrshr_zaps_b.wav",
+          "startSeconds": 0.39,
+          "durationSeconds": 0.11,
+          "highpassHz": 1100,
+          "lowpassHz": 7000,
+          "mixWeight": 1,
+          "sourceSha256": "9287433df5f780e6ed94fc0cfd4b4143b65845debeb7294ef97c80c35efa14b0"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 28,
+        "exponentialDecay": 2.8,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -13,
+        "targetRmsDbFS": -25,
+        "appliedGainDb": -4.96575
+      },
+      "sha256": "ccdba5d05ef0aa7d96db9309aea9ad4fe00626cb285be53cd87ca450e511ccd8",
+      "measurements": {
+        "durationSeconds": 0.11,
+        "peakDbFS": -13,
+        "rmsDbFS": -29.372,
+        "spectralPowerCentroidHz": 2676,
+        "dcOffset": -0.00003266,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/player-damage-fixed.wav",
+      "role": "fixed player HP loss cue only",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "planemetalscrew.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.3,
+          "highpassHz": 140,
+          "lowpassHz": 8400,
+          "mixWeight": 0.68,
+          "sourceSha256": "ec2e798226f8e182a8eb89d2cacd040b711baf6415d604b9869239710a81a531"
+        },
+        {
+          "source": "planerico2.wav",
+          "startSeconds": 0,
+          "durationSeconds": 0.3,
+          "highpassHz": 240,
+          "lowpassHz": 10000,
+          "mixWeight": 0.42,
+          "sourceSha256": "6f0f93c027e262bda6e91264ab302fe7c39895b574e7a3122f4883e53439bff3"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 0.6,
+        "fadeOutMs": 62,
+        "exponentialDecay": 0.35,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -7.5,
+        "targetRmsDbFS": null,
+        "appliedGainDb": -6.14815
+      },
+      "sha256": "4e9b3901af17d6cfc08d33a9ebf96ec241744556c35d59cc6b27037390c3d58a",
+      "measurements": {
+        "durationSeconds": 0.3,
+        "peakDbFS": -7.5,
+        "rmsDbFS": -21.688,
+        "spectralPowerCentroidHz": 1173.1,
+        "dcOffset": -0.00001251,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/weapon-change.wav",
+      "role": "weapon acquired or changed once",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_get_boost_a.wav",
+          "startSeconds": 0.025,
+          "durationSeconds": 0.36,
+          "highpassHz": 120,
+          "lowpassHz": 10500,
+          "mixWeight": 1,
+          "sourceSha256": "77b5ad1109cd9ed88858cff0ed931df6e0f180c972d4c642c599d114072a7ec9"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 3,
+        "fadeOutMs": 90,
+        "exponentialDecay": 0.7,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -10.5,
+        "targetRmsDbFS": null,
+        "appliedGainDb": -6.81417
+      },
+      "sha256": "227c41e3201950f6d9f272a6b093393c3fa7af77470c4a3dc0b16767e224487a",
+      "measurements": {
+        "durationSeconds": 0.36,
+        "peakDbFS": -10.5,
+        "rmsDbFS": -24.003,
+        "spectralPowerCentroidHz": 2621.7,
+        "dcOffset": 0.00000182,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    },
+    {
+      "file": "edited/weapon-expire.wav",
+      "role": "weapon expiry once",
+      "oneEvent": true,
+      "loop": false,
+      "publicationApproved": true,
+      "humanListeningVerified": false,
+      "format": {
+        "codec": "PCM signed 16-bit little endian",
+        "channels": 1,
+        "sampleRateHz": 48000
+      },
+      "sourceLayers": [
+        {
+          "source": "so_com_get_boost_b.wav",
+          "startSeconds": 0.21,
+          "durationSeconds": 0.28,
+          "highpassHz": 180,
+          "lowpassHz": 4900,
+          "mixWeight": 1,
+          "sourceSha256": "9af1d43237090f8203576bb4b6bea8c10f97e9cdfce9e40c5f591f2fd0dc9057"
+        }
+      ],
+      "envelope": {
+        "fadeInMs": 2,
+        "fadeOutMs": 80,
+        "exponentialDecay": 2,
+        "tremoloHz": 0,
+        "tremoloDepth": 0
+      },
+      "normalization": {
+        "peakCeilingDbFS": -11.5,
+        "targetRmsDbFS": null,
+        "appliedGainDb": -7.26736
+      },
+      "sha256": "46385f2d9c02971faa9abd958fefa0908fbe0c7a96f33bc1491de777167cb2aa",
+      "measurements": {
+        "durationSeconds": 0.28,
+        "peakDbFS": -11.501,
+        "rmsDbFS": -29.06,
+        "spectralPowerCentroidHz": 1710.2,
+        "dcOffset": 0.00003545,
+        "firstSample": 0,
+        "lastSample": 0,
+        "clippedSamples": 0
+      }
+    }
+  ]
+}

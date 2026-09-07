@@ -1,0 +1,68 @@
+[
+  {
+    "track": "boss",
+    "bytes": 3510795,
+    "duration": 142.393,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "1e03a9380c3d440a174d13fe4297a765cd852666ff2ef890f40ab1bae4ee0f78",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "danger",
+    "bytes": 3504262,
+    "duration": 136.829,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "2df642cf99aa5dd8daf663a70dc1bba3c4a02bc63f30b67fd5273546d66e55ef",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "ending",
+    "bytes": 2841756,
+    "duration": 116.636,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "6347e6e7382a42eac6ddc4c142c527f39d398f27f739498574290800d6c1f3ee",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "normal",
+    "bytes": 3541678,
+    "duration": 139.99,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "7f28a59c41f536f59296977248695e200a369c7ab65e1e9cc15d6902837ce612",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "powerup",
+    "bytes": 3363305,
+    "duration": 135.81,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "63f8ba6e6ec405f2e7237b523dd26ac32b705d1328a7a549e07e579d4b248aa8",
+    "decoded": true,
+    "losslessStreamCopy": true
+  },
+  {
+    "track": "title",
+    "bytes": 3248820,
+    "duration": 131.892,
+    "codec": "aac",
+    "sampleRate": "44100",
+    "channels": 2,
+    "sha256": "2181dadc7ff595726e39fe45bdecb368f0405045fd73286a8a9640f9a6d33b5d",
+    "decoded": true,
+    "losslessStreamCopy": true
+  }
+]

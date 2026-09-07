@@ -1,0 +1,202 @@
+[
+  {
+    "file": "shot-01.wav",
+    "design": "AK-47 near recorded shot 1; short metal bolt and quiet high-passed energy texture.",
+    "seconds": 0.19,
+    "peak": 0.84,
+    "rms": 0.10602,
+    "onset_ms": 0.091,
+    "energy_below_250hz": 0.1815,
+    "sha256": "789ea86998484847944cb90fa9e6ba6fa94c5da9f4e031efe8bfd265c7ffc037"
+  },
+  {
+    "file": "shot-02.wav",
+    "design": "AK-47 near recorded shot 2; short metal bolt and quiet high-passed energy texture.",
+    "seconds": 0.19,
+    "peak": 0.84,
+    "rms": 0.08354,
+    "onset_ms": 0.091,
+    "energy_below_250hz": 0.2297,
+    "sha256": "0e87292ada56b0b09a7fd56904b15b7667ab342f9cbaa858a70528a56b4ac2e7"
+  },
+  {
+    "file": "shot-03.wav",
+    "design": "AK-47 near recorded shot 3; short metal bolt and quiet high-passed energy texture.",
+    "seconds": 0.19,
+    "peak": 0.84,
+    "rms": 0.08137,
+    "onset_ms": 0.159,
+    "energy_below_250hz": 0.162,
+    "sha256": "a1b81667755373782ee81c0a16f01c2b65f8a37cdaa00a9299fc8d4d46adab63"
+  },
+  {
+    "file": "spread-01.wav",
+    "design": "Spread: two recorded cracks 14 ms apart, impact body, restrained energy layer; variation 1.",
+    "seconds": 0.25,
+    "peak": 0.84,
+    "rms": 0.10109,
+    "onset_ms": 0.227,
+    "energy_below_250hz": 0.292,
+    "sha256": "c40f623ddb181200501c04dc05ce91cf68e83c9d2c96f4088e8a655ff133f6b4"
+  },
+  {
+    "file": "lance-01.wav",
+    "design": "Lance: AR-15 near recorded crack 1, slower resonant plate and longer energy tail.",
+    "seconds": 0.386,
+    "peak": 0.84,
+    "rms": 0.06246,
+    "onset_ms": 0.839,
+    "energy_below_250hz": 0.293,
+    "sha256": "7df880bd0d238feba8f41cca67fb8b217d312a056880b9897441d51699f54661"
+  },
+  {
+    "file": "helix-01.wav",
+    "design": "Helix: fast rifle transient with double metallic texture; variation 1.",
+    "seconds": 0.2608,
+    "peak": 0.84,
+    "rms": 0.07684,
+    "onset_ms": 0.068,
+    "energy_below_250hz": 0.1793,
+    "sha256": "27b9a4596c62cd5a86029daa0169427346e106370070a1509cd23c6de286dd78"
+  },
+  {
+    "file": "enemy-01.wav",
+    "design": "Enemy pulse: lower, softer energy/foley body kept distinct from player weapon; variation 1.",
+    "seconds": 0.26,
+    "peak": 0.84,
+    "rms": 0.1644,
+    "onset_ms": 0.113,
+    "energy_below_250hz": 0.599,
+    "sha256": "a7c7074309130cc95722503c2f07832c181039ab3c5ed743d96834b9ae3b94c9"
+  },
+  {
+    "file": "spread-02.wav",
+    "design": "Spread: two recorded cracks 14 ms apart, impact body, restrained energy layer; variation 2.",
+    "seconds": 0.25,
+    "peak": 0.84,
+    "rms": 0.09159,
+    "onset_ms": 0.295,
+    "energy_below_250hz": 0.3478,
+    "sha256": "27c49350099a84bb2d89387d5c83c6dda89243f54d1abcedc7d82f1557ce569e"
+  },
+  {
+    "file": "lance-02.wav",
+    "design": "Lance: AR-15 near recorded crack 2, slower resonant plate and longer energy tail.",
+    "seconds": 0.386,
+    "peak": 0.84,
+    "rms": 0.06489,
+    "onset_ms": 0.839,
+    "energy_below_250hz": 0.3483,
+    "sha256": "3def3e575323071ec6d157278dad12d776263896f7ad8dbad07b8843aadfbf63"
+  },
+  {
+    "file": "helix-02.wav",
+    "design": "Helix: fast rifle transient with double metallic texture; variation 2.",
+    "seconds": 0.2254,
+    "peak": 0.84,
+    "rms": 0.07338,
+    "onset_ms": 0.068,
+    "energy_below_250hz": 0.1384,
+    "sha256": "c6495f7c1ace126c0e1d64030b1c5be6cf594a5cee0f6e5b7d23858505e19696"
+  },
+  {
+    "file": "enemy-02.wav",
+    "design": "Enemy pulse: lower, softer energy/foley body kept distinct from player weapon; variation 2.",
+    "seconds": 0.26,
+    "peak": 0.84,
+    "rms": 0.17518,
+    "onset_ms": 0.0,
+    "energy_below_250hz": 0.9169,
+    "sha256": "83fd9cdd2c5c792df81909e1be6002d907d9ff8605a0f6ab9f11d2b793afb439"
+  },
+  {
+    "file": "hit-01.wav",
+    "design": "Armor hit: recorded metal contact with short metallic resonance; variation 1.",
+    "seconds": 0.184,
+    "peak": 0.84,
+    "rms": 0.08039,
+    "onset_ms": 0.045,
+    "energy_below_250hz": 0.0227,
+    "sha256": "4602b1c3ced84b62000be49470b747a3ce02e31ea17fcf174039f91dc45255cc"
+  },
+  {
+    "file": "hit-02.wav",
+    "design": "Armor hit: recorded metal contact with short metallic resonance; variation 2.",
+    "seconds": 0.184,
+    "peak": 0.84,
+    "rms": 0.1151,
+    "onset_ms": 0.023,
+    "energy_below_250hz": 0.0235,
+    "sha256": "c35378d42c973a460c3ceab96859761115991f91a4a7c2fbb4ad2625d27ebaf2"
+  },
+  {
+    "file": "hit-03.wav",
+    "design": "Armor hit: recorded metal contact with short metallic resonance; variation 3.",
+    "seconds": 0.184,
+    "peak": 0.84,
+    "rms": 0.07878,
+    "onset_ms": 0.045,
+    "energy_below_250hz": 0.0255,
+    "sha256": "e59eaaa6bcfe09f88bb81d65fdf71b398532f16ad6f195b8d14f210a24f5c757"
+  },
+  {
+    "file": "player-hit.wav",
+    "design": "Player damage: heavy hull contact, muffled rupture, delayed glass flecks.",
+    "seconds": 0.515,
+    "peak": 0.84,
+    "rms": 0.13634,
+    "onset_ms": 0.091,
+    "energy_below_250hz": 0.8793,
+    "sha256": "f2f824e6c54c8851cf6c18197d65ebf9c14e7177d272cde0a36d762ac3345fe3"
+  },
+  {
+    "file": "explosion-01.wav",
+    "design": "Explosion: Kenney crunch 0, recorded gun transient, filtered low blast, offset hull/debris textures.",
+    "seconds": 1.1272,
+    "peak": 0.84,
+    "rms": 0.11751,
+    "onset_ms": 0.091,
+    "energy_below_250hz": 0.5861,
+    "sha256": "dad78f7185954e2ae5fe027caf367dd14d271ecc702dd447f95fe7f8f0f5b18e"
+  },
+  {
+    "file": "explosion-02.wav",
+    "design": "Explosion: Kenney crunch 1, recorded gun transient, filtered low blast, offset hull/debris textures.",
+    "seconds": 1.2448,
+    "peak": 0.84,
+    "rms": 0.12805,
+    "onset_ms": 0.091,
+    "energy_below_250hz": 0.5493,
+    "sha256": "3235bd87613eb045b14a458ac2605d2d282218783bae01d0a3294eb85555d268"
+  },
+  {
+    "file": "explosion-03.wav",
+    "design": "Explosion: Kenney crunch 2, recorded gun transient, filtered low blast, offset hull/debris textures.",
+    "seconds": 1.25,
+    "peak": 0.84,
+    "rms": 0.13553,
+    "onset_ms": 0.113,
+    "energy_below_250hz": 0.2736,
+    "sha256": "90bb39bcac86899a02f8abfe776b6e712f6fd103ccc8c0468ee33dcaae83c79d"
+  },
+  {
+    "file": "explosion-heavy.wav",
+    "design": "Boss/player destruction: filtered long crunch, recorded gun transient and low blast, staggered secondary rupture/fragments.",
+    "seconds": 2.2502,
+    "peak": 0.84,
+    "rms": 0.07024,
+    "onset_ms": 0.34,
+    "energy_below_250hz": 0.4404,
+    "sha256": "731ca76949f01fe4fa2109c9a073b1af386c84da8cbae408eda17f472af301d4"
+  },
+  {
+    "file": "charge.wav",
+    "design": "Pickup equipment energize: compact field sample plus mechanical latch; UI note motif stays separate.",
+    "seconds": 0.55,
+    "peak": 0.84,
+    "rms": 0.17458,
+    "onset_ms": 1.973,
+    "energy_below_250hz": 0.0001,
+    "sha256": "b32102d5bb11ebbf706db95d4dcea11514d8fd27010730484970de665326ad4c"
+  }
+]

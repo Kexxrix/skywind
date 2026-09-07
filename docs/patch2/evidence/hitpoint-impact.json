@@ -1,0 +1,560 @@
+{
+  "kind": "deterministic nonreactive automated input simulation; not human play or visual/audio QA",
+  "seedCount": 20,
+  "capSeconds": 120,
+  "inputHz": 60,
+  "seeds": [
+    74912,
+    75009,
+    75106,
+    75203,
+    75300,
+    75397,
+    75494,
+    75591,
+    75688,
+    75785,
+    75882,
+    75979,
+    76076,
+    76173,
+    76270,
+    76367,
+    76464,
+    76561,
+    76658,
+    76755
+  ],
+  "input": "shoot always; x = sign(sin(t*0.53)) outside +/-0.4 deadzone, y = sign(sin(t*0.31)) outside +/-0.2 deadzone; t is frame index/60",
+  "entryIncluded": true,
+  "playerOrEnemyStateOverrides": false,
+  "repeatVerified": true,
+  "beforeGameSha256": "5f036f6f19a977e40a348ab9c7694dbbd2389baaa6c9576a32c54d66e3bd0c48",
+  "afterGameSha256": "d860083d4efc42db0bbb2c31712284fb1937204bf3ac48b1bade58f95d7c21e4",
+  "before": {
+    "summary": {
+      "survivedToCap": 4,
+      "runs": 20,
+      "finalHp": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "mean": 3.9,
+        "p75": 0,
+        "max": 30
+      },
+      "damageEvents": {
+        "min": 5,
+        "p25": 6,
+        "median": 6,
+        "mean": 6.25,
+        "p75": 7,
+        "max": 9
+      },
+      "totalHpLost": {
+        "min": 70,
+        "p25": 100,
+        "median": 100,
+        "mean": 100.6,
+        "p75": 100,
+        "max": 130
+      },
+      "survivalGameSeconds": {
+        "min": 70.74166666666903,
+        "p25": 82.53541666667842,
+        "median": 99.28750000002509,
+        "mean": 97.33416666669021,
+        "p75": 106.71458333336433,
+        "max": 120.00000000004157
+      }
+    },
+    "runs": [
+      {
+        "seed": 74912,
+        "survivedToCap": false,
+        "survivalGameSeconds": 96.8416666666898,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 21,
+        "finalScore": 3100
+      },
+      {
+        "seed": 75009,
+        "survivedToCap": false,
+        "survivalGameSeconds": 96.89166666668984,
+        "finalHp": 0,
+        "damageEvents": 7,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 23,
+        "finalScore": 3560
+      },
+      {
+        "seed": 75106,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 30,
+        "damageEvents": 5,
+        "totalHpLost": 70,
+        "healthPickups": 0,
+        "kills": 24,
+        "finalScore": 3640
+      },
+      {
+        "seed": 75203,
+        "survivedToCap": false,
+        "survivalGameSeconds": 101.55000000002688,
+        "finalHp": 0,
+        "damageEvents": 8,
+        "totalHpLost": 130,
+        "healthPickups": 1,
+        "kills": 20,
+        "finalScore": 2900
+      },
+      {
+        "seed": 75300,
+        "survivedToCap": false,
+        "survivalGameSeconds": 106.70000000003098,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 20,
+        "finalScore": 2940
+      },
+      {
+        "seed": 75397,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 20,
+        "damageEvents": 5,
+        "totalHpLost": 80,
+        "healthPickups": 0,
+        "kills": 21,
+        "finalScore": 3410
+      },
+      {
+        "seed": 75494,
+        "survivedToCap": false,
+        "survivalGameSeconds": 81.95000000001129,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 14,
+        "finalScore": 2160
+      },
+      {
+        "seed": 75591,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 8,
+        "damageEvents": 6,
+        "totalHpLost": 92,
+        "healthPickups": 0,
+        "kills": 18,
+        "finalScore": 2710
+      },
+      {
+        "seed": 75688,
+        "survivedToCap": false,
+        "survivalGameSeconds": 81.91666666667793,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 16,
+        "finalScore": 2310
+      },
+      {
+        "seed": 75785,
+        "survivedToCap": false,
+        "survivalGameSeconds": 72.05833333333675,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 19,
+        "finalScore": 2930
+      },
+      {
+        "seed": 75882,
+        "survivedToCap": false,
+        "survivalGameSeconds": 102.38333333336088,
+        "finalHp": 0,
+        "damageEvents": 9,
+        "totalHpLost": 130,
+        "healthPickups": 1,
+        "kills": 19,
+        "finalScore": 2750
+      },
+      {
+        "seed": 75979,
+        "survivedToCap": false,
+        "survivalGameSeconds": 82.71666666667856,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 23,
+        "finalScore": 3130
+      },
+      {
+        "seed": 76076,
+        "survivedToCap": false,
+        "survivalGameSeconds": 82.31666666667824,
+        "finalHp": 0,
+        "damageEvents": 5,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 18,
+        "finalScore": 2830
+      },
+      {
+        "seed": 76173,
+        "survivedToCap": false,
+        "survivalGameSeconds": 70.74166666666903,
+        "finalHp": 0,
+        "damageEvents": 7,
+        "totalHpLost": 130,
+        "healthPickups": 1,
+        "kills": 11,
+        "finalScore": 1300
+      },
+      {
+        "seed": 76270,
+        "survivedToCap": false,
+        "survivalGameSeconds": 102.3250000000275,
+        "finalHp": 0,
+        "damageEvents": 7,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 21,
+        "finalScore": 3230
+      },
+      {
+        "seed": 76367,
+        "survivedToCap": false,
+        "survivalGameSeconds": 82.60833333334514,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 14,
+        "finalScore": 2020
+      },
+      {
+        "seed": 76464,
+        "survivedToCap": false,
+        "survivalGameSeconds": 101.90000000002716,
+        "finalHp": 0,
+        "damageEvents": 7,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 22,
+        "finalScore": 2980
+      },
+      {
+        "seed": 76561,
+        "survivedToCap": false,
+        "survivalGameSeconds": 106.75833333336436,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 24,
+        "finalScore": 3580
+      },
+      {
+        "seed": 76658,
+        "survivedToCap": false,
+        "survivalGameSeconds": 97.02500000002328,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 16,
+        "finalScore": 1790
+      },
+      {
+        "seed": 76755,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 20,
+        "damageEvents": 5,
+        "totalHpLost": 80,
+        "healthPickups": 0,
+        "kills": 39,
+        "finalScore": 6470
+      }
+    ]
+  },
+  "after": {
+    "summary": {
+      "survivedToCap": 18,
+      "runs": 20,
+      "finalHp": {
+        "min": 0,
+        "p25": 22,
+        "median": 42,
+        "mean": 38.2,
+        "p75": 52.5,
+        "max": 74
+      },
+      "damageEvents": {
+        "min": 2,
+        "p25": 3,
+        "median": 4,
+        "mean": 3.95,
+        "p75": 5,
+        "max": 6
+      },
+      "totalHpLost": {
+        "min": 34,
+        "p25": 56,
+        "median": 68,
+        "mean": 66.3,
+        "p75": 78.5,
+        "max": 100
+      },
+      "survivalGameSeconds": {
+        "min": 96.95000000002322,
+        "p25": 120.00000000004157,
+        "median": 120.00000000004157,
+        "mean": 118.34291666670693,
+        "p75": 120.00000000004157,
+        "max": 120.00000000004157
+      }
+    },
+    "runs": [
+      {
+        "seed": 74912,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 32,
+        "damageEvents": 4,
+        "totalHpLost": 68,
+        "healthPickups": 0,
+        "kills": 22,
+        "finalScore": 3300
+      },
+      {
+        "seed": 75009,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 52,
+        "damageEvents": 4,
+        "totalHpLost": 78,
+        "healthPickups": 1,
+        "kills": 29,
+        "finalScore": 4770
+      },
+      {
+        "seed": 75106,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 54,
+        "damageEvents": 3,
+        "totalHpLost": 46,
+        "healthPickups": 0,
+        "kills": 24,
+        "finalScore": 3640
+      },
+      {
+        "seed": 75203,
+        "survivedToCap": false,
+        "survivalGameSeconds": 109.90833333336687,
+        "finalHp": 0,
+        "damageEvents": 6,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 19,
+        "finalScore": 2750
+      },
+      {
+        "seed": 75300,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 42,
+        "damageEvents": 4,
+        "totalHpLost": 58,
+        "healthPickups": 0,
+        "kills": 20,
+        "finalScore": 2940
+      },
+      {
+        "seed": 75397,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 44,
+        "damageEvents": 3,
+        "totalHpLost": 56,
+        "healthPickups": 0,
+        "kills": 21,
+        "finalScore": 3410
+      },
+      {
+        "seed": 75494,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 22,
+        "damageEvents": 4,
+        "totalHpLost": 78,
+        "healthPickups": 0,
+        "kills": 17,
+        "finalScore": 2460
+      },
+      {
+        "seed": 75591,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 30,
+        "damageEvents": 5,
+        "totalHpLost": 70,
+        "healthPickups": 0,
+        "kills": 18,
+        "finalScore": 2710
+      },
+      {
+        "seed": 75688,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 22,
+        "damageEvents": 4,
+        "totalHpLost": 78,
+        "healthPickups": 0,
+        "kills": 20,
+        "finalScore": 2840
+      },
+      {
+        "seed": 75785,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 20,
+        "damageEvents": 5,
+        "totalHpLost": 80,
+        "healthPickups": 0,
+        "kills": 25,
+        "finalScore": 3720
+      },
+      {
+        "seed": 75882,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 48,
+        "damageEvents": 6,
+        "totalHpLost": 82,
+        "healthPickups": 1,
+        "kills": 23,
+        "finalScore": 3510
+      },
+      {
+        "seed": 75979,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 20,
+        "damageEvents": 5,
+        "totalHpLost": 80,
+        "healthPickups": 0,
+        "kills": 26,
+        "finalScore": 3530
+      },
+      {
+        "seed": 76076,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 44,
+        "damageEvents": 3,
+        "totalHpLost": 56,
+        "healthPickups": 0,
+        "kills": 24,
+        "finalScore": 3860
+      },
+      {
+        "seed": 76173,
+        "survivedToCap": false,
+        "survivalGameSeconds": 96.95000000002322,
+        "finalHp": 0,
+        "damageEvents": 5,
+        "totalHpLost": 100,
+        "healthPickups": 0,
+        "kills": 21,
+        "finalScore": 2550
+      },
+      {
+        "seed": 76270,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 42,
+        "damageEvents": 4,
+        "totalHpLost": 58,
+        "healthPickups": 0,
+        "kills": 25,
+        "finalScore": 3950
+      },
+      {
+        "seed": 76367,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 66,
+        "damageEvents": 2,
+        "totalHpLost": 34,
+        "healthPickups": 0,
+        "kills": 15,
+        "finalScore": 2120
+      },
+      {
+        "seed": 76464,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 74,
+        "damageEvents": 3,
+        "totalHpLost": 56,
+        "healthPickups": 1,
+        "kills": 26,
+        "finalScore": 3800
+      },
+      {
+        "seed": 76561,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 32,
+        "damageEvents": 4,
+        "totalHpLost": 68,
+        "healthPickups": 0,
+        "kills": 30,
+        "finalScore": 4650
+      },
+      {
+        "seed": 76658,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 66,
+        "damageEvents": 2,
+        "totalHpLost": 34,
+        "healthPickups": 0,
+        "kills": 20,
+        "finalScore": 2470
+      },
+      {
+        "seed": 76755,
+        "survivedToCap": true,
+        "survivalGameSeconds": 120.00000000004157,
+        "finalHp": 54,
+        "damageEvents": 3,
+        "totalHpLost": 46,
+        "healthPickups": 0,
+        "kills": 39,
+        "finalScore": 6770
+      }
+    ]
+  },
+  "limitations": [
+    "Twenty seeds and one fixed input pattern do not estimate human survival probability, skill, readability, or difficulty satisfaction.",
+    "Runs stop at 120 seconds, so extended boss and late-stage balance are not measured.",
+    "Same starting seed/input does not guarantee identical later encounters: different HP and deaths can change conditional drop RNG and subsequent game state.",
+    "This measures the combined intended smaller hitpoint plus swept-contact change. No compensatory enemy, weapon, pattern, damage, or pacing values were changed."
+  ]
+}

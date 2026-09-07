@@ -1,0 +1,3 @@
+# Preserve exact source and asset bytes across Windows/macOS/Linux checkouts.
+# The PATCH2 runtime evidence is a byte-level SHA-256 manifest.
+* -text whitespace=cr-at-eol
