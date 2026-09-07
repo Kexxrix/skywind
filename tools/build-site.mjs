@@ -2,11 +2,12 @@ import { copyFile, mkdir, readFile, readdir, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PILOT_IMAGES } from '../src/pilot-ui.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');
 const music = JSON.parse(await readFile(resolve(root, 'assets/audio/manifest.json'), 'utf8'));
-const modules = ['boot', 'main', 'game', 'renderer', 'audio', 'presentation', 'volume-environment', 'terrain3d'];
+const modules = ['boot', 'main', 'game', 'renderer', 'audio', 'presentation', 'volume-environment', 'terrain3d', 'pilot-state', 'pilot-ui'];
 const images = ['player', 'enemies', 'enemies-v2', 'bosses-v2', 'leaf-surface-v3'];
 const playerRoot = 'assets/art/player/sv01';
 const playerManifest = JSON.parse(await readFile(resolve(root, playerRoot, 'manifest.json'), 'utf8'));
@@ -37,6 +38,7 @@ for (const name of patchEffects) {
 const files = [
   'index.html', 'style.css', ...modules.map(name => `src/${name}.js`),
   ...images.map(name => `assets/art/${name}.png`),
+  ...Object.values(PILOT_IMAGES),
   `${playerRoot}/manifest.json`, ...playerManifest.frames.map(frame => `${playerRoot}/${frame.filename}`),
   'assets/audio/manifest.json', ...Object.values(music),
   ...effects.map(name => `assets/audio/sfx-v3/${name}.wav`),

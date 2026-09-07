@@ -1,4 +1,4 @@
-import { cameraRoll, screenToWorld, PLAYER_HIT_RADIUS } from './game.js';
+import { cameraRoll, screenToWorld, playerHeading, PLAYER_HIT_RADIUS } from './game.js';
 import { VolumeEnvironment } from './volume-environment.js';
 import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT } from './presentation.js';
 
@@ -216,7 +216,7 @@ export class Renderer {
     for(const p of this.trail){p.x-=dt*720*(g.speed/1.3);p.life-=dt;}
     this.trail=this.trail.filter(p=>p.life>0);
     if(g.mode!=='gameover') {
-      const angle=g.player.angle*2.4;
+      const angle=playerHeading(g.player);
       this.trail.push({x:g.player.x-Math.cos(angle)*24,y:g.player.y-Math.sin(angle)*24+3,life:.85});
     }
     for(const p of this.particles){p.x+=(p.vx-85)*dt;p.y+=p.vy*dt;p.vy+=dt*80;p.life-=dt;p.vx*=Math.exp(-dt*.8);}
@@ -259,14 +259,14 @@ export class Renderer {
       c.stroke();
     }
     this.glow(c,last.x,last.y,powered?95:60,'cyan',.7);
-    c.translate(last.x,last.y);c.rotate(g.player.angle*2.4);c.scale(2.6,.42);this.glow(c,-8,0,31,'cyan',.9);
+    c.translate(last.x,last.y);c.rotate(playerHeading(g.player));c.scale(2.6,.42);this.glow(c,-8,0,31,'cyan',.9);
     c.restore();
   }
 
   drawPlayer(c,g,t) {
     const p=g.player;if(g.mode==='gameover')return;
     const mode=p.powerTime>0?p.weaponMode:'normal',palette=WEAPON_PRESENTATION[mode];
-    c.save();c.translate(p.x,p.y);c.rotate(p.angle*2.4);
+    c.save();c.translate(p.x,p.y);c.rotate(playerHeading(p));
     if(p.invincible>0)c.globalAlpha=.55+Math.sin(t*28)*.2;
     // Reuse the game's smoothed vertical tilt: descent 0, neutral 10, ascent 20.
     const bankFrame = Math.round(10 - clamp(p.angle / .48,-1,1) * 10);

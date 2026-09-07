@@ -2,14 +2,17 @@ import { createGame, startGame, updateGame, consumeEvents, getWeaponStatus } fro
 import { Renderer } from './renderer.js';
 import { AudioDirector } from './audio.js';
 import { WEAPON_PRESENTATION } from './presentation.js';
+import { PilotUI } from './pilot-ui.js';
 
 const $ = id => document.getElementById(id);
 const canvas = $('game');
 export const game = createGame(74912);
 export const renderer = new Renderer(canvas);
 export const audio = new AudioDirector();
+const pilot = new PilotUI($('pilot-hud'));
 let ready = false, paused = false, best = 0, recordBeforeRun = 0;
 let noticeTime = 0, previousMode = 'loading', lastStage = 1, lastFrame = 0;
+let lastPilotFrame = 0;
 let pointer = null, pointerHeld = false, touchFire = false, joystickPointer = null;
 const joystickInput = {x:0,y:0};
 const keys = new Set();
@@ -43,6 +46,7 @@ export function start() {
   if(!ready || (game.mode!=='title'&&game.mode!=='gameover'))return;
   unlockAudio();
   recordBeforeRun=best;renderer.reset();audio.resetEffects();startGame(game);paused=false;
+  pilot.reset();pilot.update(game,0);lastPilotFrame=performance.now();
   pointer=null;joystickInput.x=joystickInput.y=0;lastStage=1;noticeTime=0;
   $('notice').classList.remove('show');audio.setPaused(false);audio.setState('normal');
   canvas.focus({preventScroll:true});updateUI();
@@ -54,13 +58,14 @@ export function setPaused(value) {
   joystickInput.x=joystickInput.y=0;$('joystick-knob').style.transform='';
   audio.setPaused(paused);$('pause-screen').hidden=!paused;
   $('pause-button').setAttribute('aria-label',paused?'계속하기':'일시정지');
-  if(!paused)canvas.focus({preventScroll:true});
+  if(!paused){lastPilotFrame=performance.now();canvas.focus({preventScroll:true});}
 }
 
 function toTitle() {
   const sceneTime=game.sceneTime,altitude=game.altitude,scrollTime=game.scrollTime;
   Object.assign(game,createGame(74912));game.sceneTime=sceneTime;game.altitude=altitude;game.scrollTime=scrollTime;
   renderer.reset();audio.resetEffects();paused=false;keys.clear();pointer=null;pointerHeld=false;touchFire=false;
+  pilot.reset();pilot.update(game,0);lastPilotFrame=performance.now();
   noticeTime=0;$('notice').classList.remove('show');
   audio.setPaused(false);audio.setState('title');$('title-best').querySelector('span').textContent=formatScore(best);
   updateUI();
@@ -127,6 +132,8 @@ function chooseMusic() {
 }
 
 function frame(now) {
+  // HUD effects keep real durations even when the expensive background drops frames.
+  const pilotDt=Math.max(0,(now-lastPilotFrame)/1000 || 0);lastPilotFrame=now;
   const dt=Math.min(.05,(now-lastFrame)/1000 || 0);lastFrame=now;
   if(ready && !paused) {
     const input={
@@ -135,7 +142,7 @@ function frame(now) {
       shoot:keys.has('Space')||keys.has('KeyJ')||pointerHeld||touchFire,
       pointer:pointerHeld&&pointer?renderer.screenToWorld(pointer.x,pointer.y):null,
     };
-    updateGame(game,dt,input);processEvents(consumeEvents(game));
+    updateGame(game,dt,input);const events=consumeEvents(game);processEvents(events);pilot.update(game,pilotDt,events);
     if(game.stage!==lastStage){lastStage=game.stage;if(!game.boss)notice(`SECTOR ${String(game.stage).padStart(2,'0')}`,2);}
     if(noticeTime>0){noticeTime-=dt;if(noticeTime<=0)$('notice').classList.remove('show');}
     audio.setState(chooseMusic());renderer.draw(game,dt);updateUI();
@@ -200,6 +207,6 @@ stick.addEventListener('pointermove',moveStick);
 for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,()=>{joystickPointer=null;joystickInput.x=joystickInput.y=0;$('joystick-knob').style.transform='';});
 
 refreshSoundButton();
-renderer.load((loaded,total)=>{$('loading-text').textContent=`하늘을 준비하고 있습니다 · ${loaded} / ${total}`;}).then(()=>{
+Promise.all([renderer.load((loaded,total)=>{$('loading-text').textContent=`하늘을 준비하고 있습니다 · ${loaded} / ${total}`;}),pilot.load()]).then(()=>{
   ready=true;$('loading').hidden=true;window.dispatchEvent(new Event('skywind-ready'));updateUI();requestAnimationFrame(frame);
 }).catch(error=>{window.dispatchEvent(new Event('skywind-load-error'));$('loading-text').textContent=error.message;$('retry-loading').hidden=false;$('loading').querySelector('i').hidden=true;console.error(error);});

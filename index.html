@@ -11,6 +11,15 @@
 <body>
   <main id="game-shell" aria-label="SkyWind 횡스크롤 슈팅 게임">
     <canvas id="game" width="1280" height="720" aria-label="비행 화면. WASD 또는 방향키로 이동, Space로 발사" tabindex="0"></canvas>
+    <section id="pilot-hud" role="img" aria-label="파일럿: 정상" data-mode="normal" hidden>
+      <div class="pilot-mask">
+        <div class="pilot-images" aria-hidden="true"></div>
+        <div class="pilot-tint" aria-hidden="true"></div>
+        <div class="pilot-fx" aria-hidden="true"><i class="pilot-scan"></i><i class="pilot-visor"></i><i class="pilot-alert">!</i><i class="pilot-telemetry"></i><span class="pilot-caption"></span></div>
+        <div class="pilot-impact" aria-hidden="true"></div>
+      </div>
+      <svg class="pilot-frame" viewBox="0 0 362 108" preserveAspectRatio="none" aria-hidden="true"><path d="M0 .6H361L282 107.4H0"/></svg>
+    </section>
     <div id="loading" role="status"><span class="loading-logo">SKYWIND</span><span id="loading-text">하늘을 준비하고 있습니다</span><i></i><button id="retry-loading" class="text-button" hidden>RETRY</button></div>
     <div class="utilities">
       <button id="pause-button" class="icon-button" aria-label="일시정지" title="일시정지 · P"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg></button>

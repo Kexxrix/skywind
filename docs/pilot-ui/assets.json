@@ -1,0 +1,32 @@
+[
+  {
+    "source": "Temp/파워업.png",
+    "runtime": "assets/art/pilot/powerup.png",
+    "sha256": "b92a2ad5f26665d7697efdaac55bfa983a9e06d84321569ab4afc5e6e994d3e2",
+    "exactCopy": true
+  },
+  {
+    "source": "Temp/기본표정1.png",
+    "runtime": "assets/art/pilot/normal.png",
+    "sha256": "e21bed7adabcf3f336e6685b77f943240172b556745c45c4d8a765e71db190e3",
+    "exactCopy": true
+  },
+  {
+    "source": "Temp/기본표정2.png",
+    "runtime": "assets/art/pilot/blink.png",
+    "sha256": "8f75651e648a9ed3fec5a05665271da83cb1c77326caccee51bf3547ad8c744c",
+    "exactCopy": true
+  },
+  {
+    "source": "Temp/낮은체력.png",
+    "runtime": "assets/art/pilot/low-hp.png",
+    "sha256": "b89c3f2d338ee32b09acc1e2b46324addabba12f3642ba55a3a0f2ead919787a",
+    "exactCopy": true
+  },
+  {
+    "source": "Temp/피격.png",
+    "runtime": "assets/art/pilot/hit.png",
+    "sha256": "6000a8c74c65aad12f1ab1ef8538dc11b64288fc85571e7c32a042de87760827",
+    "exactCopy": true
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "label": "normal",
+    "mode": "normal",
+    "blink": "false",
+    "hp": 100,
+    "powerTime": 0,
+    "gameTime": 20.0167,
+    "frame": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "mask": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "hpBounds": {
+      "x": 852,
+      "y": 20,
+      "width": 216,
+      "height": 124
+    },
+    "imageTransform": "translate(0px, 0px)",
+    "frameTransform": "none",
+    "maskTransform": "none",
+    "fxTransform": "none",
+    "visibleImage": "assets/art/pilot/normal.png"
+  },
+  {
+    "label": "powerup",
+    "mode": "powerup",
+    "blink": "false",
+    "hp": 100,
+    "powerTime": 13.991633333333336,
+    "gameTime": 20.016699999999997,
+    "frame": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "mask": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "hpBounds": {
+      "x": 852,
+      "y": 20,
+      "width": 216,
+      "height": 124
+    },
+    "imageTransform": "translate(0px, 0px)",
+    "frameTransform": "none",
+    "maskTransform": "none",
+    "fxTransform": "none",
+    "visibleImage": "assets/art/pilot/powerup.png"
+  },
+  {
+    "label": "low",
+    "mode": "low",
+    "blink": "false",
+    "hp": 25,
+    "powerTime": 7.983400000000001,
+    "gameTime": 20.016599999999997,
+    "frame": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "mask": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "hpBounds": {
+      "x": 852,
+      "y": 20,
+      "width": 216,
+      "height": 124
+    },
+    "imageTransform": "translate(0px, 0px)",
+    "frameTransform": "none",
+    "maskTransform": "none",
+    "fxTransform": "none",
+    "visibleImage": "assets/art/pilot/low-hp.png"
+  },
+  {
+    "label": "hit",
+    "mode": "hit",
+    "blink": "false",
+    "hp": 12,
+    "powerTime": 7.983399999999993,
+    "gameTime": 20.016600000000004,
+    "frame": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "mask": {
+      "x": 0,
+      "y": 32,
+      "width": 362,
+      "height": 108
+    },
+    "hpBounds": {
+      "x": 852,
+      "y": 20,
+      "width": 216,
+      "height": 124
+    },
+    "imageTransform": "translate(3px, 1.28844px)",
+    "frameTransform": "none",
+    "maskTransform": "none",
+    "fxTransform": "none",
+    "visibleImage": "assets/art/pilot/hit.png"
+  }
+]

@@ -43,8 +43,14 @@ export function getWeaponStatus(player) {
   };
 }
 
+export function playerHeading(player) {
+  // Keep the nose within six degrees of the forward volley; bank frames still
+  // use the full movement signal independently of this gentle screen pitch.
+  return clamp(player.angle / 0.48, -1, 1) * Math.PI / 30;
+}
+
 export function playerMuzzle(player) {
-  const angle = player.angle * 2.4, c = Math.cos(angle), s = Math.sin(angle);
+  const angle = playerHeading(player), c = Math.cos(angle), s = Math.sin(angle);
   return { x: player.x + 30 * c + 4 * s, y: player.y + 30 * s - 4 * c };
 }
 

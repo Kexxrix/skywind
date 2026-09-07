@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createGame, startGame, updateGame, consumeEvents, cameraRoll, playerMuzzle, difficultyAt, screenToWorld, worldToScreen, ENEMY_TYPES, BOSS_KINDS, MAX_ENEMY_BULLET_SPEED } from '../src/game.js';
+import { createGame, startGame, updateGame, consumeEvents, cameraRoll, playerMuzzle, playerHeading, difficultyAt, screenToWorld, worldToScreen, ENEMY_TYPES, BOSS_KINDS, MAX_ENEMY_BULLET_SPEED } from '../src/game.js';
 
 function playable(seed = 12) {
   const game = createGame(seed);
@@ -422,7 +422,7 @@ test('tilted ships fire and flash from the rotated visible nose while shots trav
     const muzzle = playerMuzzle(game.player);
     const shot = consumeEvents(game).find(event => event.type === 'shot');
     assert.ok(Math.hypot(shot.x - muzzle.x, shot.y - muzzle.y) < 1e-6);
-    const angle = game.player.angle * 2.4;
+    const angle = playerHeading(game.player);
     assert.ok(Math.abs(muzzle.x - game.player.x - (30 * Math.cos(angle) + 4 * Math.sin(angle))) < 1e-6);
     assert.ok(Math.abs(muzzle.y - game.player.y - (30 * Math.sin(angle) - 4 * Math.cos(angle))) < 1e-6);
     game.bullets.forEach((bullet, index) => {

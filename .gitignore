@@ -2,6 +2,7 @@
 /.work/
 /dist/
 /Feedback/
+/Temp/
 /qa-share-*/
 /SampleGame.mp4
 node_modules/
