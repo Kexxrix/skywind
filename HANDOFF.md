@@ -2,7 +2,7 @@
 
 작성 기준: **2026-09-07 KST**. 저장소: <https://github.com/Kexxrix/skywind>, 기본 브랜치 `main`.
 
-이 백업은 최신 로컬 **PATCH2 구현본**이다. 게임 소스와 실제 실행 자산, 제작 원본, 테스트, 설계·검토 문서를 포함한다. GitHub 백업이 공개 게임 사이트의 배포를 뜻하지는 않는다.
+이 백업은 최신 **PATCH2 구현본**이다. 게임 소스와 실제 실행 자산, 제작 원본, 테스트, 설계·검토 문서를 포함한다. 최초 GitHub 백업 후 사용자의 별도 지시로 **기존 공개 사이트에도 버전 3 배포를 완료**했다. [2026-09-07 배포 기록](docs/PUBLIC_UPDATE_20260907.md)을 참고한다. 향후 GitHub push가 Sites 자동 배포를 뜻하지는 않는다.
 
 ## 다른 PC에서 시작
 
@@ -81,7 +81,7 @@ PATCH2는 구름 중간 형태·깊이·가로줄, 근경 구름의 과도한 �
 
 `npm run build:site`는 현재 허용된 72개 실행 파일만 `dist/`에 생성한다. 제공 사운드 승인 기록과 30개 편집본의 SHA를 검사한다. 원본·문서·테스트는 게임 배포 산출물에 넣지 않는다. `prepare_sound.py`를 다시 실행하면 안전한 기본값으로 승인 기록이 초기화되므로, 새 산출물의 출처와 기존 사용자 승인 적용 범위를 대조한 후 메타데이터를 갱신한다.
 
-기존 공개 게임: <https://skywind.kexxadrix.chatgpt.site/>. 마지막 별도 배포 검증 기록은 2026-09-06의 이전 41개 런타임 버전이며, 이 백업 작업에서 공개 사이트의 현재 바이트나 새 배포는 검증하지 않는다. `.openai/hosting.json`의 기존 project_id와 `dist` 설정은 보존한다. Sites 전용 과거 체크아웃은 로컬 `.work/sites-source`였고 GitHub 백업에 포함하지 않는다. 다른 PC에서 추후 배포할 때는 기존 Sites 접근 권한으로 연결해야 한다.
+기존 공개 게임: <https://skywind.kexxadrix.chatgpt.site/>. **2026-09-07 10:03 KST, 버전 3에 현재 PATCH2 런타임 72개를 배포했다.** 익명 HTTP에서 71개는 바이트 일치, HTML은 Cloudflare 삽입 스크립트를 제외한 앱 내용의 정확한 일치를 확인했다. 새 브라우저 플레이/직접 청음 검증은 하지 않았다. `.openai/hosting.json`의 기존 project_id와 `dist` 설정은 보존한다. Sites 전용 과거 `.work/sites-source`는 유지하고, 최신 배포에는 `.work/sites-deploy-20260907` 사본을 사용했다. 두 사본 모두 GitHub에서 제외하며 다른 PC에서 추후 배포할 때는 기존 Sites 접근 권한으로 연결해야 한다.
 
 ## 백업에서 제외한 것
 
