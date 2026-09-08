@@ -42,3 +42,101 @@ body:not(.in-game) #status-group{top:18%}
 #pilot-hud[data-mode=hit] .pilot-caption::after{content:"IMPACT DETECTED"}
 #pilot-hud[data-mode=low] .pilot-alert,#pilot-hud[data-mode=hit] .pilot-alert{display:block}
 @media(prefers-reduced-motion:reduce){.pilot-images{will-change:auto}.pilot-scan{display:none}}
+/* I07: every overlay uses the actual 16:9 image rectangle, including fullscreen. */
+#game-ui{position:absolute;inset:0;pointer-events:none;--game-width:100vw}
+#game-ui button,#game-ui #joystick{pointer-events:auto}
+#game-ui .screen{pointer-events:none}#game-ui .screen button{pointer-events:auto}
+#game-ui .utilities{top:12px;right:16px;gap:4px}
+#game-ui .icon-button{width:44px;height:44px;padding:12px}
+#game-ui #status-group{top:20px;width:216px}
+#flight-status{display:flex;justify-content:space-between;font:10px Consolas,monospace;letter-spacing:.08em;color:#d9edffb8;margin-bottom:7px}
+#game-ui .energy-label{font-size:9px}#game-ui #score{font-size:16px;margin-top:7px}
+#game-ui #power-status{font-size:11px;margin-top:7px}
+#game-ui .weapon-row{grid-template-columns:18px 1fr 38px;gap:3px 5px;padding:4px 6px}
+#game-ui .weapon-row svg{width:18px;height:18px}
+#base-level{font:9px Consolas,monospace;color:#c5e0eea6;text-align:right;padding-top:3px}
+#tension-row{display:flex;justify-content:space-between;position:relative;font:9px Consolas,monospace;letter-spacing:.04em;color:#e5d4a09e;margin-top:7px;padding-bottom:6px}
+#tension-row>i{position:absolute;bottom:0;left:0;right:0;height:2px;background:#ffdb6620;overflow:hidden}
+#tension-gauge{display:block;height:100%;background:#ffe484;box-shadow:0 0 8px #ffd34d;transform-origin:left;transform:scaleX(0)}
+#tension-row::before{content:"";position:absolute;inset:-5px -8px -4px;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 25% 65%,#ffe78655,transparent 68%),linear-gradient(90deg,#ffcd4314,#fff5bb24 48%,#ffce4314);border-top:1px solid #fff2b766;border-bottom:1px solid #ffd56866;box-shadow:0 0 15px #ffd85b26,inset 0 1px 8px #ffdf4926;transition:opacity .16s;z-index:-1}
+#tension-row[data-active=true]{color:#fff7d1;text-shadow:0 0 3px #fff7cf99,0 0 10px #ffc247,0 0 19px #ffab424d}
+#tension-row[data-active=true]::before{opacity:1;animation:tension-glow 1.05s ease-in-out infinite}
+#tension-row[data-active=true]>span:first-child{font-weight:800;letter-spacing:.065em;color:#fff5b1}
+#tension-row[data-active=true] #tension-time{font-weight:800;color:#fff}
+#tension-row[data-active=true]>i{height:3px;background:#ffe58435;box-shadow:0 0 9px #ffc84166}
+#tension-row[data-active=true] #tension-gauge{background:linear-gradient(90deg,#ffb832,#ffe877 35%,#fffbe0);box-shadow:0 0 4px #fff7cb,0 0 13px #ffbc38}
+#tension-row[data-fresh=true]::before{opacity:1;background:radial-gradient(ellipse at center,#fff5b78c,#ffdf5538 50%,transparent 80%);box-shadow:0 0 20px #ffe77866,inset 0 1px 12px #fff6b35c}
+@keyframes tension-glow{0%,100%{filter:brightness(1);opacity:.7}50%{filter:brightness(1.3);opacity:1}}
+#game-ui #boss-hud{width:280px;bottom:40px}#game-ui #boss-hud>span{font-size:10px}
+#game-ui #pilot-hud{width:clamp(96px,18.854167%,362px)}
+.pause-utilities{display:flex;justify-content:center;gap:12px}.pause-utilities button{min-height:44px;font-size:12px;margin-top:15px}
+#run-summary{font:11px Consolas,monospace;letter-spacing:.08em;color:#c6e5eeae;margin:14px 0 0}
+#supply-hud,.supply-side,.supply-side>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#supply-hud{z-index:2}.supply-side{color:var(--supply-color)}
+.supply-side>svg{fill:none;stroke:currentColor;stroke-width:1.2;filter:drop-shadow(0 0 3px currentColor) drop-shadow(0 0 10px color-mix(in srgb,currentColor 50%,transparent))}
+.visor-arc{opacity:.82;animation:supply-breathe 2.6s ease-in-out infinite}.visor-direction{stroke-width:1.8;stroke:#fff9df;filter:drop-shadow(0 0 5px currentColor)}
+.visor-stream{stroke:#fffde8;stroke-width:1.7;stroke-dasharray:48 720;stroke-linecap:round;opacity:.86;animation:supply-stream 3.6s linear infinite}
+[data-side=bottom] .visor-stream{animation-direction:reverse}
+.supply-label{position:absolute;right:15%;top:9%;width:max-content;max-width:44%;padding:5px 9px 7px;border-left:1px solid currentColor;background:linear-gradient(105deg,color-mix(in srgb,currentColor 14%,transparent),#fffbe60d 62%,transparent);text-shadow:0 0 5px color-mix(in srgb,currentColor 75%,transparent),0 0 14px color-mix(in srgb,currentColor 40%,transparent);box-shadow:inset 0 1px 0 #fffde53b,0 0 16px color-mix(in srgb,currentColor 8%,transparent);overflow:hidden}
+.supply-label::after{content:"";position:absolute;inset:0 auto 0 -45%;width:36%;pointer-events:none;background:linear-gradient(105deg,transparent,#fffdeb30 48%,transparent);transform:skewX(-14deg);animation:supply-glass 3.2s ease-in-out infinite}
+[data-side=bottom] .supply-label{top:auto;bottom:9%;border-left:0;border-right:1px solid currentColor;text-align:right;background:linear-gradient(255deg,color-mix(in srgb,currentColor 14%,transparent),#f0fff70d 62%,transparent)}
+[data-side=bottom] .supply-label::after{animation-delay:-1.1s}
+.supply-phase{display:block;font:9px Consolas,monospace;letter-spacing:.2em;opacity:.88;margin-bottom:3px}
+.supply-copy{font:600 12px Consolas,monospace;letter-spacing:.02em;white-space:nowrap}
+.supply-icon{display:inline-block;width:13px;height:13px;margin-right:5px;vertical-align:-2px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.supply-label>i{position:absolute;left:9px;right:9px;bottom:1px;height:1px;background:color-mix(in srgb,currentColor 22%,transparent)}
+.supply-label b{display:block;height:100%;background:currentColor;box-shadow:0 0 5px currentColor;transform-origin:left}
+.supply-side[data-phase=active] .visor-arc{opacity:1;stroke-width:1.7}
+.supply-side[data-phase=active] .supply-phase{color:#fff;opacity:1;text-shadow:0 0 6px currentColor}
+.supply-side[data-phase=active] .supply-label{box-shadow:inset 0 1px 0 #fffde573,0 0 18px color-mix(in srgb,currentColor 18%,transparent)}
+@keyframes supply-breathe{0%,100%{opacity:.66}50%{opacity:1}}
+@keyframes supply-stream{to{stroke-dashoffset:-768}}
+@keyframes supply-glass{0%,18%{left:-45%;opacity:0}34%{opacity:.8}72%,100%{left:120%;opacity:0}}
+#game-ui[data-size=medium] #status-group{width:184px;top:14px}
+#game-ui[data-size=medium] #score{font-size:14px}
+#game-ui[data-size=medium] #boss-hud{width:240px;bottom:28px}
+#game-ui[data-size=medium] #joystick{width:82px;height:82px}
+#game-ui[data-size=medium] #shot-button{width:66px;height:66px}
+#game-ui[data-size=small] #status-group{width:140px;top:8px}
+#game-ui[data-size=small] #flight-status{font-size:8px;margin-bottom:3px}
+#game-ui[data-size=small] .energy-label{font-size:8px;margin-bottom:3px}
+#game-ui[data-size=small] #score{font-size:13px;margin-top:4px}
+#game-ui[data-size=small] #power-status{font-size:11px;margin-top:4px}
+#game-ui[data-size=small] .weapon-row{grid-template-columns:13px 1fr 32px;padding:3px 4px;gap:2px 3px;letter-spacing:-.045em}
+#game-ui[data-size=small] .weapon-row svg{width:13px;height:15px}
+#game-ui[data-size=small] #weapon-name{overflow:hidden;white-space:nowrap;text-overflow:clip;font-size:10px}
+#game-ui[data-size=small] .drone-row{font-size:10px;padding-top:1px;padding-bottom:2px}
+#game-ui[data-size=small] .weapon-meter{height:2px}
+#game-ui[data-size=small] #tension-row{font-size:8px;letter-spacing:-.035em;margin-top:4px;padding-bottom:4px}
+#game-ui[data-size=small] #tension-row[data-active=false] #tension-time{font-size:7px}
+#game-ui[data-size=small] #combo{font-size:8px;height:9px;margin-top:3px}
+#game-ui[data-size=small] #boss-hud{width:min(190px,48%);bottom:12px}
+#game-ui[data-size=small] #boss-hud>span{font-size:9px;letter-spacing:.14em}
+#game-ui[data-size=small] #boss-hud>div{margin-top:4px}
+#game-ui[data-size=small] .utilities{right:4px;top:2px;gap:0}
+#game-ui[data-size=small] #joystick{width:72px;height:72px;left:16px;bottom:14px}
+#game-ui #joystick-knob{left:50%;top:50%;margin:-16px 0 0 -16px;width:32px;height:32px}
+#game-ui[data-size=small] #shot-button{width:58px;height:58px;right:17px;bottom:19px}
+#game-ui[data-size=small] .supply-label{right:12%;top:19%;padding:4px 6px 6px}
+#game-ui[data-size=small] [data-side=bottom] .supply-label{top:auto;bottom:18%}
+#game-ui[data-size=small] .supply-phase{font-size:7px;margin-bottom:2px}
+#game-ui[data-size=small] .supply-copy{font-size:10px}
+#game-ui[data-size=small] #notice{font-size:9px;letter-spacing:.1em;width:270px;max-width:90%}
+#game-ui[data-compact=true] .pilot-caption,#game-ui[data-compact=true] .pilot-telemetry{display:none}
+body.in-game #game-ui[data-compact=true] .utilities #sound-button,body.in-game #game-ui[data-compact=true] .utilities #fullscreen-button{display:none}
+#game-ui[data-compact=true] .supply-label{right:4%;top:25%;max-width:calc(50% - 86px)}
+#game-ui[data-compact=true] [data-side=bottom] .supply-label{top:auto;bottom:31%}
+#game-ui[data-compact=true] .supply-copy{font-size:10px;letter-spacing:-.035em;white-space:normal;line-height:1.3}
+#game-ui[data-short=true] .wordmark{font-size:42px}
+#game-ui[data-short=true] .wordmark-line{margin:8px 0 10px}
+#game-ui[data-short=true] .title-content{margin-top:-8px}
+#game-ui[data-short=true] .instructions{bottom:9px;font-size:8px;gap:9px}
+#game-ui[data-short=true] .instructions kbd{font-size:8px}
+#game-ui[data-short=true] .best-score{margin-top:10px;font-size:9px}
+#game-ui[data-short=true] h2{font-size:20px;margin-bottom:9px}
+#game-ui[data-short=true] #final-score{font-size:21px;margin-top:5px}
+#game-ui[data-short=true] #run-summary{font-size:9px;margin-top:7px}
+#game-ui[data-short=true] .result-content .text-button{margin-top:7px;font-size:10px;padding:8px 18px 13px}
+#game-ui[data-short=true] .result-content .subtle-button{margin-top:1px;padding:5px;font-size:9px}
+#game-ui[data-short=true] .text-button{font-size:11px;padding-top:9px;padding-bottom:13px}
+@media(prefers-reduced-motion:reduce){.supply-side>svg{filter:drop-shadow(0 0 3px currentColor)}.visor-arc,.visor-stream,.supply-label::after,#tension-row[data-active=true]::before{animation:none}.visor-arc{opacity:.9}.supply-label::after{display:none}#tension-row[data-active=true]::before{opacity:.9}}

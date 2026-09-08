@@ -1,146 +1,209 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createGame, startGame, updateGame, consumeEvents, difficultyAt, cameraRoll, worldToScreen, screenToWorld, ENEMY_TYPES, BOSS_KINDS } from '../src/game.js';
-import { Renderer } from '../src/renderer.js';
+import { createGame, startGame, updateGame, consumeEvents, difficultyAt, worldToScreen, screenToWorld, sequenceToWorld } from '../src/game.js';
+import { barragePlan, AIM_SPEEDS } from '../src/barrage.js';
 
-function playable(time = 0) {
-  const game = createGame(74912);
-  startGame(game);
-  game.mode = 'playing';
-  game.time = time;
-  game.player.x = 220;
-  game.player.invincible = 1000;
-  game.nextWaveAt = Infinity;
-  game.nextBossAt = Infinity;
-  game.nextPickupAt = Infinity;
-  consumeEvents(game);
-  return game;
+function playable(tier = 0) {
+  const game = createGame(74912); startGame(game); game.mode = 'playing';
+  Object.assign(game.player, { x: 220, y: 360, invincible: 1000 });
+  game.bossesDefeated = tier; game.difficulty = difficultyAt(0, tier);
+  game.nextWaveAt = game.nextBossAt = game.nextPickupAt = Infinity;
+  consumeEvents(game); return game;
 }
-
-function emitter(id, type = 'beetle') {
-  return { id, type, x: 1000, y: 360, baseY: 360, radius: 28, hp: 999, maxHp: 999,
-    speed: 0, phase: 0, age: 0, fireCooldown: 0, attack: 0, attackAngle: Math.PI,
-    telegraph: 0, chargeTime: 0, locked: false, dashTime: 0, dead: false };
+function emitter(id, type = 'beetle', pattern = null) {
+  return { id, type, pattern, holdScreenY: 360, holdUntil: 30, x: 1000, y: 360, baseY: 360,
+    radius: 28, hp: 999, maxHp: 999, speed: 0, phase: 0, age: 0, fireCooldown: 0, attack: 0,
+    attackAngle: Math.PI, telegraph: 0, chargeTime: 0, locked: false, dashTime: 0, dead: false };
 }
-
-const active = game => game.enemies.filter(e => !e.dead && (e.locked || e.dashTime > 0 || e.attackActiveUntil > game.time));
-
-test('combat phases add sources gradually and preserve scenery speed regardless of boss victories', () => {
-  for (const [time, count] of [[0, 1], [30, 1], [59.99, 1], [60, 2], [179.99, 2], [180, 3], [299.99, 3], [300, 4], [420, 5], [7200, 5]]) {
-    const d = difficultyAt(time, 50);
-    assert.equal(d.maxAttackers, count, `time ${time}`);
-    assert.equal(d.scrollSpeed, 1.3 + Math.min(1.3, time / 95));
-    assert.equal(d.hpBonus, Math.min(2, Math.floor(time / 180)));
-    assert.ok(d.maxEnemies <= 14 && d.maxBulletSpeed <= 330 && d.maxPatternBullets <= 16);
-    assert.equal(d.waveInterval, difficultyAt(time).waveInterval, 'boss victories do not multiply spawn pressure');
+const active = g => g.enemies.filter(e => !e.dead && (e.locked || e.sequence || e.attackActiveUntil > g.time));
+function advance(g, seconds, input = {}) {
+  const events = [];
+  for (let time = 0; time < seconds - 1e-9; time += 1 / 120) {
+    updateGame(g, Math.min(1 / 120, seconds - time), input); events.push(...consumeEvents(g));
   }
-  assert.ok(difficultyAt(30).waveInterval > difficultyAt(0).waveInterval * 0.9);
-  assert.ok(difficultyAt(60).enemySpeed <= 1.1);
+  return events;
+}
+
+test('two trial tiers depend only on victories and hold all declared population and speed budgets', () => {
+  const first = difficultyAt(0), second = difficultyAt(0, 1);
+  assert.deepEqual(difficultyAt(8000), first);
+  assert.deepEqual([first.maxEnemies, first.maxAttackers, first.maxEnemyBullets, first.maxSequenceBullets, first.maxBulletSpeed], [10, 2, 120, 72, 160]);
+  assert.deepEqual([second.maxEnemies, second.maxAttackers, second.maxEnemyBullets, second.maxSequenceBullets, second.maxBulletSpeed], [12, 3, 180, 112, 340]);
+  assert.equal(difficultyAt(8000, 99).pace, 1);
+  assert.equal(difficultyAt(8000, 99).tier, 100);
 });
 
-test('ready enemies share the phase source cap across charge, release and its short reservation', () => {
-  for (const time of [0, 60, 180, 300, 420]) {
-    const game = playable(time);
-    game.enemies = Array.from({ length: 14 }, (_, index) => emitter(index + 1));
-    let fired = 0;
-    for (let step = 0; step < 90; step += 1) {
-      updateGame(game, 1 / 120);
-      const shots = consumeEvents(game).filter(event => event.type === 'enemyShot');
-      fired += shots.length;
-      assert.ok(shots.length <= game.difficulty.maxAttackers);
-      assert.ok(active(game).length <= game.difficulty.maxAttackers);
+test('B01-B04 plans retain complete geometric sequences within bundle and full-sequence budgets', () => {
+  const counts = [[54, 24, 54, 40], [72, 60, 96, 84]];
+  for (let tier = 0; tier < 2; tier++) for (const [index, pattern] of ['B01', 'B02', 'B03', 'B04'].entries()) {
+    const plan = barragePlan(pattern, tier, 0.7), d = difficultyAt(0, tier);
+    assert.equal(plan.total, counts[tier][index]);
+    assert.ok(plan.total <= d.maxSequenceBullets);
+    assert.ok(plan.bundles.every(bundle => bundle.count <= d.maxPatternBullets));
+    assert.ok(plan.bundles.every((bundle, i) => !i || bundle.at >= plan.bundles[i - 1].at));
+  }
+});
+
+test('whole attack source and bullet reservations survive every ring and port until release', () => {
+  for (let tier = 0; tier < 2; tier++) for (const pattern of ['B01', 'B02', 'B03', 'B04']) {
+    const g = playable(tier); g.enemies = [emitter(1, 'orb', pattern), emitter(2), emitter(3), emitter(4)];
+    const seen = [];
+    for (let frame = 0; frame < 7 * 120; frame++) {
+      updateGame(g, 1 / 120);
+      assert.ok(active(g).length <= g.difficulty.maxAttackers);
+      assert.ok(active(g).filter(e => e.attackName?.startsWith('B')).length <= 1);
+      const reserved = g.enemies.reduce((sum, e) => sum + (e.reservedBullets || 0), 0);
+      assert.ok(g.enemyBullets.length + reserved <= g.difficulty.maxEnemyBullets);
+      const events = consumeEvents(g).filter(e => e.type === 'enemyShot'); seen.push(...events);
+      assert.ok(events.every(e => e.bulletCount <= g.difficulty.maxPatternBullets));
+      assert.ok(g.enemyBullets.every(b => Math.hypot(b.vx, b.vy) <= g.difficulty.maxBulletSpeed + 1e-6));
     }
-    assert.equal(fired, difficultyAt(time).maxAttackers, `time ${time}: other emitters wait after release`);
+    assert.ok(seen.some(e => e.pattern === pattern), pattern);
   }
 });
 
-test('opening regular attacks remain a single shot or a told dive despite the old stage counter', () => {
-  for (const type of ENEMY_TYPES) {
-    const game = playable(55);
-    game.enemies = [emitter(1, type)];
-    for (let step = 0; step < 110; step += 1) updateGame(game, 1 / 120);
-    const events = consumeEvents(game).filter(event => event.type === 'enemyShot');
-    assert.equal(events.length, 1, type);
-    assert.equal(events[0].bulletCount, type === 'wasp' ? 0 : 1, type);
+test('a sequence that cannot reserve its whole shape waits without partial tell or stray bullets', () => {
+  const g = playable(); g.enemies = [emitter(1, 'orb', 'B01')];
+  g.enemyBullets = Array.from({ length: 90 }, (_, i) => ({ id: i + 50, x: 650, y: 650, vx: 0, vy: 0, radius: 5.5, age: 0 }));
+  advance(g, 0.5);
+  assert.equal(g.enemies[0].locked, false); assert.equal(g.enemies[0].sequence, undefined);
+  assert.equal(g.enemyBullets.length, 90);
+  g.enemyBullets = [];
+  advance(g, 0.1); assert.ok(g.enemies[0].locked); assert.equal(g.enemies[0].reservedBullets, 54);
+});
+
+test('the 42 second quiet period blocks new tells and 45 seconds clears damage with no score', () => {
+  const g = playable(); g.time = g.normalTime = 42; g.recoverySpawned = true; g.nextWaveAt = 0; g.nextBossAt = 45;
+  g.enemies = [emitter(1)];
+  g.enemyBullets = [{ x: 800, y: 650, vx: -10, vy: 0, radius: 5.5, age: 0 }];
+  advance(g, 0.1); assert.equal(g.enemies[0].locked, false); assert.equal(g.enemies.length, 1);
+  assert.ok(g.enemyBullets[0].x < 800);
+  advance(g, 2.91); assert.equal(g.phase, 'boss-entry'); assert.equal(g.enemies.length, 1);
+  assert.equal(g.enemies[0].type, 'boss'); assert.equal(g.enemyBullets.length, 0); assert.equal(g.score, 0);
+});
+
+test('aiming tracks through its tell and locks a straight velocity at actual release for all three speeds', () => {
+  for (let speedIndex = 0; speedIndex < 3; speedIndex++) {
+    const g = playable(1), e = emitter(1); g.aimCounter = speedIndex; g.enemies = [e];
+    advance(g, 0.4); const firstAngle = e.attackAngle;
+    g.player.y = 470; advance(g, 0.3);
+    const b = g.enemyBullets[0]; assert.ok(b); assert.notEqual(e.attackAngle, firstAngle);
+    assert.equal(Math.round(Math.hypot(b.vx, b.vy)), AIM_SPEEDS[speedIndex]);
+    const origin = { x: b.x - b.vx * b.age, y: b.y - b.vy * b.age }, angle = Math.atan2(b.aimedAt.y - origin.y, b.aimedAt.x - origin.x);
+    assert.ok(Math.abs(Math.atan2(b.vy, b.vx) - angle) < 1e-8);
+    const velocity = [b.vx, b.vy]; g.player.y = 200; advance(g, 0.1);
+    assert.deepEqual([b.vx, b.vy], velocity);
   }
 });
 
-test('all boss patterns retain phase bullet and speed caps including their secondary emitters', () => {
-  for (const time of [60, 180, 300, 420]) {
-    for (let kind = 0; kind < BOSS_KINDS.length; kind += 1) {
-      for (let pattern = 0; pattern < 3; pattern += 1) {
-        const game = playable(time);
-        game.bossesDefeated = kind;
-        game.nextBossAt = 0;
-        updateGame(game, 1 / 120);
-        Object.assign(game.boss, { x: 1040, fireCooldown: 0, attack: pattern });
-        consumeEvents(game);
-        for (let step = 0; step < 135; step += 1) updateGame(game, 1 / 120);
-        const shots = consumeEvents(game).filter(event => event.type === 'enemyShot' && event.boss);
-        assert.equal(shots.length, 1, `${time} ${BOSS_KINDS[kind]} ${pattern}`);
-        assert.ok(shots[0].bulletCount <= game.difficulty.maxPatternBullets);
-        assert.ok(game.enemyBullets.every(bullet => Math.hypot(bullet.vx, bullet.vy) <= game.difficulty.maxBulletSpeed + 1e-6));
-        assert.ok(game.enemies.length <= game.difficulty.maxEnemies);
+test('too close fast aiming delays fire instead of violating the post-release flight allowance', () => {
+  const g = playable(1), e = emitter(1); g.aimCounter = 2; e.x = 550; e.baseY = g.player.y;
+  g.player.x = 378; g.enemies = [e];
+  const events = advance(g, 1.1);
+  assert.equal(events.filter(e => e.type === 'enemyShot').length, 0);
+  assert.equal(g.aimCounter, 2, 'a blocked fast release does not consume its speed slot');
+});
+
+test('natural waves and boss loops actually release all three aimed speeds in tier two while tier one stays slow', () => {
+  for (const victories of [0, 1, 2]) {
+    const g = createGame(74912); startGame(g); g.bossesDefeated = victories;
+    const speeds = new Set(), released = new Set(), types = new Set();
+    for (let frame = 0; frame < 120 * 120; frame++) {
+      g.player.invincible = 2; // Load/availability observation, not survival proof.
+      updateGame(g, 1 / 120);
+      for (const event of consumeEvents(g)) if (event.type === 'enemyShot' && event.pattern === 'aim') {
+        speeds.add(event.speedTier); types.add(event.boss ? 'boss' : 'wave');
+      }
+      for (const b of g.enemyBullets) if (b.aimedAt && !released.has(b.id)) {
+        released.add(b.id);
+        const origin = { x: b.x - b.vx * b.age, y: b.y - b.vy * b.age };
+        const flightTime = (Math.hypot(b.aimedAt.x - origin.x, b.aimedAt.y - origin.y) - b.radius - g.player.radius) / Math.hypot(b.vx, b.vy);
+        assert.ok(flightTime >= (victories ? 0.7 : 0.9) - 1e-8);
       }
     }
+    assert.deepEqual([...speeds].sort(), victories ? ['fast', 'medium', 'slow'] : ['slow']);
+    assert.deepEqual([...types].sort(), ['boss', 'wave']);
+    assert.ok(released.size >= 6);
+    startGame(g); assert.equal(g.aimCounter, 0, 'a retry starts a new released-shot rotation');
   }
 });
 
-test('24 seconds of combat are followed by six seconds without new waves or attack starts', () => {
-  for (let start = 60; start <= 270; start += 30) {
-    assert.equal(difficultyAt(start + 23.99).recovery, false);
-    assert.equal(difficultyAt(start + 24).recovery, true);
-    assert.equal(difficultyAt(start + 29.99).recovery, true);
-    assert.equal(difficultyAt(start + 30).recovery, false);
+test('B04 uses actual ports and preserves a core-clear cross-section window after camera movement', () => {
+  for (let tier = 0; tier < 2; tier++) {
+    const g = playable(tier), e = emitter(1, 'ray', 'B04'); g.enemies = [e];
+    advance(g, 0.2); const plan = e.sequence;
+    g.cameraY = -100; g.player.y -= 100;
+    let bullets;
+    for (let frame = 0; frame < 100; frame++) {
+      updateGame(g, 1 / 120); consumeEvents(g);
+      if (g.enemyBullets.length) { bullets = [...g.enemyBullets]; break; }
+    }
+    assert.ok(bullets?.length);
+    const center = sequenceToWorld(plan, { x: 360, y: e.safeLane });
+    for (const b of bullets) {
+      // Convert world trajectories back into the original, advertised cross-section.
+      const px = 640 + (b.x - 640) * plan.cos - (b.y - 360) * plan.sin;
+      const py = 360 + (b.x - 640) * plan.sin + (b.y - 360) * plan.cos - plan.cameraY;
+      const vx = b.vx * plan.cos - b.vy * plan.sin, vy = b.vx * plan.sin + b.vy * plan.cos;
+      const crossY = py + vy * (360 - px) / vx;
+      assert.ok(Math.abs(crossY - e.safeLane) >= g.difficulty.corridorWidth / 2 + b.radius + g.player.radius - 1e-6);
+      assert.ok(Number.isFinite(center.x));
+    }
   }
-  const game = playable(84);
-  game.nextWaveAt = 0;
-  game.enemies = [emitter(1)];
-  game.enemyBullets.push({ id: 2, x: 900, y: 360, vx: -10, vy: 0, age: 0, radius: 5, power: 12 });
-  updateGame(game, 0.1);
-  assert.equal(game.enemies.length, 1);
-  assert.equal(game.enemies[0].locked, false);
-  assert.equal(game.enemyBullets.length, 1, 'recovery leaves existing bullets moving');
-  assert.ok(game.enemyBullets[0].x < 900);
-  assert.ok(!consumeEvents(game).some(event => event.type === 'wave' || event.type === 'enemyShot'));
-  Object.assign(game.enemies[0], { locked: true, chargeDuration: 0.34, chargeTime: 0.01 });
-  updateGame(game, 0.02);
-  assert.ok(consumeEvents(game).some(event => event.type === 'enemyShot'), 'an already announced attack finishes');
 });
 
-test('a boss waits for population room, and default opening keeps the unchanged first pickup schedule', () => {
-  const full = playable(120);
-  full.enemies = Array.from({ length: difficultyAt(120).maxEnemies }, (_, index) => emitter(index + 1));
-  full.nextBossAt = 0;
-  updateGame(full, 1 / 120);
-  assert.equal(full.boss, null);
-  full.enemies.pop();
-  updateGame(full, 1 / 120);
-  assert.equal(full.boss.type, 'boss');
-  assert.equal(full.enemies.length, full.difficulty.maxEnemies);
-
-  const game = createGame(74912);
-  startGame(game);
-  assert.equal(game.nextBossAt, 120);
-  assert.equal(game.nextPickupAt, 3);
-  for (let step = 0; step < 361; step += 1) updateGame(game, 1 / 120);
-  assert.ok(game.pickups.some(item => item.type === 'power'));
-  assert.ok(game.nextPickupAt >= 13 && game.nextPickupAt < 13.02);
+test('six repeated cycles retain bounded sources, ammunition and zero escort score', () => {
+  const g = playable(); g.nextBossAt = 0;
+  let defeated = 0;
+  for (let frame = 0; frame < 170 * 120 && defeated < 6; frame++) {
+    updateGame(g, 1 / 120);
+    if (g.phase === 'boss' && g.phaseTime > 6) {
+      g.bullets.push({ x: g.boss.x, y: g.boss.y, vx: 0, vy: 0, radius: 90, power: 10000 });
+    }
+    if (g.bossesDefeated > defeated) { defeated = g.bossesDefeated; g.nextBossAt = g.time + 0.5; }
+    assert.ok(g.enemies.length <= g.difficulty.maxEnemies);
+    assert.ok(active(g).length <= g.difficulty.maxAttackers);
+    assert.ok(g.enemyBullets.length <= g.difficulty.maxEnemyBullets);
+    assert.ok(g.enemies.filter(e => e.escort).every(e => e.score === 0));
+    consumeEvents(g);
+  }
+  assert.equal(defeated, 6);
+  assert.equal(g.difficulty.pace, 1);
 });
 
-test('five minute invincible load replay obeys bodies, attack sources, active bullets and speed limits', () => {
-  const game = createGame(74912);
-  startGame(game);
-  for (let step = 0; step < 300 * 120; step += 1) {
-    game.player.invincible = 2; // Load observation only; this does not test survival balance.
-    updateGame(game, 1 / 120, { x: 0, y: Math.sin(step / 240) * 0.2, shoot: true });
-    assert.ok(game.enemies.length <= game.difficulty.maxEnemies, `bodies at ${game.time}`);
-    assert.ok(active(game).length <= game.difficulty.maxAttackers, `sources at ${game.time}`);
-    assert.ok(game.enemyBullets.length <= game.difficulty.maxEnemyBullets, `bullets at ${game.time}`);
-    assert.ok(game.enemyBullets.every(b => Math.hypot(b.vx, b.vy) <= game.difficulty.maxBulletSpeed + 1e-6));
-    consumeEvents(game);
+test('both tiers retain a continuous normal-input survival route through each pattern plus permitted aiming sources', () => {
+  // This is a controlled geometry/path regression, not a human difficulty rating.
+  for (let tier = 0; tier < 2; tier++) for (const pattern of ['B01', 'B02', 'B03', 'B04']) {
+    const g = playable(tier), lane = pattern === 'B04' ? 240 : pattern === 'B02' && tier ? 200 : 150;
+    const followWindow = pattern === 'B04' && tier === 1;
+    Object.assign(g.player, screenToWorld(g, { x: 240, y: lane }), { invincible: 0 });
+    g.enemies = [emitter(90, 'orb', pattern), Object.assign(emitter(91), { x: 1100, attack: 1 })];
+    if (tier) g.enemies.push(Object.assign(emitter(92), { x: 1080, attack: 2 }));
+    let patternShots = 0, aimedShots = 0, travelled = 0, targetY = lane, lastDodge = -2;
+    for (let frame = 0; frame < 8 * 120; frame++) {
+      const before = { x: g.player.x, y: g.player.y }, screenY = worldToScreen(g, g.player).y;
+      if (!followWindow) targetY = lane;
+      const imminent = g.enemyBullets.map(b => {
+        const arrival = (g.player.x - b.x) / (b.vx || 1);
+        return { arrival, y: b.y + b.vy * arrival };
+      }).filter(b => b.arrival > 0 && b.arrival < 1 && Math.abs(b.y - g.player.y) < (followWindow ? 40 : 30));
+      if (imminent.length && (!followWindow || g.time - lastDodge > 0.35)) {
+        const center = (Math.min(...imminent.map(b => b.y)) + Math.max(...imminent.map(b => b.y))) / 2;
+        targetY = screenY + (g.player.y < center ? -1 : 1) * (followWindow ? 55 : 65);
+        lastDodge = g.time;
+      } else if (g.time - lastDodge > 1.3) targetY = lane;
+      const pointer = screenToWorld(g, { x: 240, y: Math.max(90, Math.min(630, targetY)) });
+      updateGame(g, 1 / 120, { pointer });
+      travelled += Math.hypot(g.player.x - before.x, g.player.y - before.y);
+      for (const event of consumeEvents(g)) if (event.type === 'enemyShot') {
+        if (event.pattern === pattern) patternShots++;
+        if (event.pattern === 'aim') aimedShots++;
+      }
+      assert.equal(g.player.hp, 100, `${pattern} tier ${tier} at ${g.time}`);
+    }
+    assert.ok(patternShots >= 2 && aimedShots >= 1, `${pattern} actually overlapped its aimed pressure`);
+    assert.ok(travelled > 30, 'normal movement, not invulnerability or a teleported safe position, traversed the route');
   }
-  assert.ok(Math.abs(game.time - 300) < 1e-6);
 });
 
 test('an enemy projected beyond the right edge cannot begin or finish a hidden attack', () => {
@@ -160,12 +223,13 @@ test('an enemy projected beyond the right edge cannot begin or finish a hidden a
   }
 });
 
-test('a pickup keeps moving across the visible lower left corner until its projected exit', () => {
+test('an uncaught pickup keeps moving across the visible lower left corner until its projected exit', () => {
   const game = playable();
   game.sceneTime = 3 * Math.PI / (2 * 0.18);
   game.altitude = 0;
   game.cameraY = 156;
-  Object.assign(game.player, screenToWorld(game, { x: 220, y: 672 }));
+  // Keep the ship away from the enlarged rear attraction area for this culling check.
+  Object.assign(game.player, screenToWorld(game, { x: 378, y: 300 }));
   game.pickups = [{ id: 99, type: 'power', x: -59, y: 650, baseY: 650, radius: 22, age: 0, phase: 0 }];
   updateGame(game, 1 / 120, { y: 1 });
   assert.equal(game.pickups.length, 1);
@@ -173,83 +237,4 @@ test('a pickup keeps moving across the visible lower left corner until its proje
   game.pickups[0].x = -250;
   updateGame(game, 1 / 120, { y: 1 });
   assert.equal(game.pickups.length, 0, 'the pickup is removed after its projected left margin');
-});
-
-test('carrier walls cycle three viewport lanes and match their rendered tell at both camera extremes', () => {
-  for (const cameraY of [-156, 156]) {
-    const game = playable(180);
-    game.bossesDefeated = 1;
-    game.nextBossAt = 0;
-    updateGame(game, 1 / 120);
-    const boss = game.boss;
-    const direction = Math.sign(cameraY);
-    for (const [attack, safeLane] of [[0, 160], [3, 350], [6, 540]]) {
-      game.sceneTime = 0;
-      game.altitude = direction < 0 ? 1 : 0;
-      game.cameraY = cameraY;
-      Object.assign(game.player, screenToWorld(game, { x: 220, y: direction < 0 ? 48 : 672 }));
-      Object.assign(boss, { x: 1035, age: Math.PI / (2 * 0.42), attack, locked: false, fireCooldown: 0, dashTime: 0 });
-      game.enemies = [boss];
-      game.enemyBullets = [];
-      consumeEvents(game);
-      updateGame(game, 1 / 120, { y: direction });
-      assert.equal(boss.locked, true);
-      assert.equal(boss.safeLane, safeLane);
-
-      // Read drawThreats' actual polygon vertices without constructing a browser renderer.
-      const polygons = [];
-      let path = [];
-      const context = {
-        save() {}, restore() {}, setLineDash() {}, beginPath() { path = []; }, closePath() {},
-        moveTo(x, y) { path.push({ x, y }); }, lineTo(x, y) { path.push({ x, y }); },
-        fill() { polygons.push(path); }, stroke() {},
-      };
-      Renderer.prototype.drawThreats.call({ glow() {} }, context, game);
-      const projected = polygons[0].map(point => worldToScreen(game, point));
-      const expected = [{ x: 0, y: safeLane - 90 }, { x: 1280, y: safeLane - 90 }, { x: 1280, y: safeLane + 90 }, { x: 0, y: safeLane + 90 }];
-      projected.forEach((point, index) => assert.ok(Math.hypot(point.x - expected[index].x, point.y - expected[index].y) < 1e-6));
-
-      let fired = false;
-      for (let step = 0; step < 150 && !fired; step += 1) {
-        updateGame(game, 1 / 120, { y: direction });
-        fired = consumeEvents(game).some(event => event.type === 'enemyShot' && event.boss);
-      }
-      assert.equal(fired, true);
-      const wall = game.enemyBullets.filter(bullet => bullet.sourceId === boss.id);
-      const rows = wall.map(bullet => worldToScreen(game, bullet).y);
-      assert.ok(rows.every(y => Math.abs(y - safeLane) >= 90 - 1e-6));
-      assert.ok(Math.min(...rows) <= 30.001 && Math.max(...rows) >= 669.999, 'wall spans current top and bottom');
-      for (const bullet of wall) {
-        const roll = cameraRoll(game);
-        assert.ok(Math.abs(bullet.vx * Math.sin(roll) + bullet.vy * Math.cos(roll)) < 1e-6, 'new wall travels horizontally in the projected view');
-      }
-    }
-  }
-});
-
-test('all four bosses keep their normal vertical path visible for thirty seconds at either camera extreme', () => {
-  const radii = [92, 95, 78, 90];
-  for (const direction of [-1, 1]) {
-    for (let kind = 0; kind < BOSS_KINDS.length; kind += 1) {
-      const game = playable(170);
-      for (let step = 0; step < 1200; step += 1) updateGame(game, 1 / 120, { y: direction });
-      game.bossesDefeated = kind;
-      game.nextBossAt = 0;
-      let shots = 0, sawDash = false;
-      consumeEvents(game);
-      for (let step = 0; step < 30 * 120; step += 1) {
-        updateGame(game, 1 / 120, { y: direction });
-        const boss = game.boss;
-        assert.equal(boss.radius, radii[kind]);
-        assert.equal(boss.speed, 75);
-        const screen = worldToScreen(game, boss);
-        assert.ok(screen.y - boss.radius >= 50 && screen.y + boss.radius <= 670, `${BOSS_KINDS[kind]} at ${game.time}, camera ${game.cameraY}: ${screen.y}`);
-        sawDash ||= boss.dashTime > 0;
-        shots += consumeEvents(game).filter(event => event.type === 'enemyShot' && event.boss).length;
-      }
-      assert.ok(shots >= 3, `${BOSS_KINDS[kind]} must keep its attack loop available`);
-      if (BOSS_KINDS[kind] === 'leviathan') assert.equal(sawDash, true, 'the normal surge remains in the visible corridor');
-      assert.ok(Math.abs(game.cameraY - direction * 156) < 1e-6);
-    }
-  }
 });

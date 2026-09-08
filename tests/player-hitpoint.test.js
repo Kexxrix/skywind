@@ -197,15 +197,15 @@ test('frame rates and camera altitude/bank leave the same world-space hit and gr
   }
 });
 
-test('all existing items retain the old radius 22 + player reach 17 + ease 14 boundary', () => {
-  for (const type of ['health', 'power', 'drone']) for (const [distance, collected] of [[52.9, true], [53.1, false]]) {
+test('all item types use the wider 212-unit attraction boundary independently of damage', () => {
+  for (const type of ['health', 'power', 'drone']) for (const [distance, attracted] of [[211.9, true], [212.1, false]]) {
     const game = playable();
     game.player.hp = 70;
     game.pickups.push({ x: game.player.x + distance + 240 * STEP,
       y: game.player.y, baseY: game.player.y - Math.sin(STEP * 2.2) * 9, radius: 22, type, phase: 0 });
     updateGame(game, STEP);
-    assert.equal(game.pickups.length, collected ? 0 : 1, `${type}, distance ${distance}`);
-    assert.equal(consumeEvents(game).filter(e => e.type === 'pickup').length, collected ? 1 : 0);
+    assert.equal(Boolean(game.pickups[0].attracting), attracted, `${type}, distance ${distance}`);
+    assert.equal(consumeEvents(game).filter(e => e.type === 'pickupAttract').length, attracted ? 1 : 0);
     assert.equal(game.player.radius, PLAYER_HIT_RADIUS);
   }
 });

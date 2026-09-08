@@ -1,0 +1,916 @@
+{
+  "version": "SKYWIND-FIRST-LOCAL-20260908-R1",
+  "seed": 74912,
+  "method": "Actual browser requestAnimationFrame, automated ordinary WASD and Space events; no HP, invulnerability, time or speed correction. Stops 1.05s after second boss defeat.",
+  "viewport": {
+    "width": 1286,
+    "height": 960
+  },
+  "sourceBase": "d5c4234507badf0325908fc9545580dc34ba50a0",
+  "capturedAt": "2026-09-08T11:23:48.854Z",
+  "final": {
+    "label": "AUTO INPUT 74912 · HP/속도/시간 보정 없음",
+    "time": 138.6667000000339,
+    "normalTime": 1.0582666666666716,
+    "phase": "normal",
+    "cycle": 3,
+    "hp": 100,
+    "score": 111080,
+    "bosses": 2,
+    "boss": null,
+    "player": {
+      "x": 253.33645128930362,
+      "y": 50.68230503165802,
+      "level": 1,
+      "weapon": "spread",
+      "powerTime": 20.433200000008163
+    },
+    "cameraY": -23.984943607413133,
+    "altitude": 0.4169571893263526,
+    "daylight": 1,
+    "speed": 1.0014230047271748,
+    "tension": 0,
+    "supply": {
+      "id": 8644,
+      "arrivalAt": 141,
+      "items": [
+        {
+          "id": 8645,
+          "side": "top",
+          "type": "maintain",
+          "weaponMode": "lance",
+          "status": "preview",
+          "remaining": 2.3332999999661013
+        },
+        {
+          "id": 8646,
+          "side": "bottom",
+          "type": "change",
+          "weaponMode": "lance",
+          "status": "preview",
+          "remaining": 2.3332999999661013
+        }
+      ]
+    },
+    "bullets": 0,
+    "frames": 8392
+  },
+  "frames": {
+    "cycle1-normal": {
+      "n": 2639,
+      "medianMs": 16.6,
+      "p95Ms": 17.6,
+      "maxMs": 27.7,
+      "peakEnemyBullets": 95,
+      "peakSampleVoices": 9
+    },
+    "cycle1-boss-entry": {
+      "n": 72,
+      "medianMs": 16.6,
+      "p95Ms": 17.9,
+      "maxMs": 20.1,
+      "peakEnemyBullets": 0,
+      "peakSampleVoices": 2
+    },
+    "cycle1-boss": {
+      "n": 1050,
+      "medianMs": 16.7,
+      "p95Ms": 17.6,
+      "maxMs": 26.6,
+      "peakEnemyBullets": 85,
+      "peakSampleVoices": 7
+    },
+    "cycle2-normal": {
+      "n": 2700,
+      "medianMs": 16.6,
+      "p95Ms": 17.7,
+      "maxMs": 27.7,
+      "peakEnemyBullets": 111,
+      "peakSampleVoices": 9
+    },
+    "cycle2-boss-entry": {
+      "n": 72,
+      "medianMs": 16.6,
+      "p95Ms": 17.5,
+      "maxMs": 19.6,
+      "peakEnemyBullets": 0,
+      "peakSampleVoices": 3
+    },
+    "cycle2-boss": {
+      "n": 1663,
+      "medianMs": 16.6,
+      "p95Ms": 17.6,
+      "maxMs": 28.2,
+      "peakEnemyBullets": 163,
+      "peakSampleVoices": 8
+    },
+    "cycle3-normal": {
+      "n": 64,
+      "medianMs": 16.6,
+      "p95Ms": 17.9,
+      "maxMs": 20,
+      "peakEnemyBullets": 0,
+      "peakSampleVoices": 6
+    }
+  },
+  "audioObservation": {
+    "ready": true,
+    "effectsReady": true,
+    "context": "running",
+    "buffers": 50,
+    "state": "powerup",
+    "samples": 5,
+    "uiTones": 1,
+    "error": "",
+    "musicPlaying": "powerup-v2.m4a"
+  },
+  "limitations": [
+    "Frame intervals include browser/UI work, not isolated renderer GPU cost. First game second excluded as warmup; later pauses/outliers not removed.",
+    "The raw tones field used a nonexistent property and is invalid; excluded from metrics. One live uiTones observation above and 142 automated checks verify node paths, not final sound quality.",
+    "Earlier live-input-run.json predates final aim-counter and 42s prewarning fixes; it is preserved as intermediate evidence."
+  ],
+  "events": [
+    {
+      "time": 6.099900000000081,
+      "type": "pickup",
+      "x": 258.76440537948025,
+      "y": 706.4205676632764,
+      "pickupType": "change",
+      "itemType": "change",
+      "effect": "change",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "bottom"
+    },
+    {
+      "time": 7.749900000000146,
+      "type": "pickup",
+      "x": 261.99076551743605,
+      "y": -90.18336875923416,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 21.09989999999971,
+      "type": "pickup",
+      "x": 237.71240043721116,
+      "y": 682.2627636432943,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "bottom"
+    },
+    {
+      "time": 25.58329999999947,
+      "type": "pickup",
+      "x": 246.11455130499098,
+      "y": 479.0558254595446,
+      "pickupType": "health",
+      "itemType": "health",
+      "effect": "health",
+      "weaponMode": "spread",
+      "basicLevel": 1
+    },
+    {
+      "time": 34.74999999999868,
+      "type": "hit",
+      "x": 1292.092542542363,
+      "y": 701.903113126257,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 34.78339999999868,
+      "type": "hit",
+      "x": 951.9094674726485,
+      "y": 705.5421413325406,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 34.849999999998666,
+      "type": "hit",
+      "x": 929.1973875401036,
+      "y": 707.2300304933923,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 34.899999999998656,
+      "type": "hit",
+      "x": 526.0067461181527,
+      "y": 497.32283027537346,
+      "player": false,
+      "enemyType": "dragonfly",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 35.24999999999859,
+      "type": "hit",
+      "x": 1111.4541747867079,
+      "y": 624.0934520056304,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 35.29999999999858,
+      "type": "hit",
+      "x": 1179.4541747867074,
+      "y": 829.1601186722999,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 35.51659999999854,
+      "type": "hit",
+      "x": 1246.4849410963975,
+      "y": 323.2451526000763,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 36.11669999999844,
+      "type": "pickup",
+      "x": 378.5825562112803,
+      "y": -82.46010633433929,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 36.73339999999834,
+      "type": "hit",
+      "x": 1242.177965447446,
+      "y": 290.747943939453,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 36.79999999999833,
+      "type": "hit",
+      "x": 1220.9028961166741,
+      "y": 289.16041473419347,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 36.883299999998314,
+      "type": "hit",
+      "x": 1217.3870146627432,
+      "y": 322.51325878615756,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 41.99999999999746,
+      "type": "bossWarning",
+      "bossKind": "warden",
+      "bossName": "WARDEN",
+      "remaining": 3
+    },
+    {
+      "time": 44.99999999999696,
+      "type": "phaseChange",
+      "phase": "boss-entry",
+      "cycle": 1
+    },
+    {
+      "time": 44.99999999999696,
+      "type": "boss",
+      "x": 1481.4808728293049,
+      "y": 486.5303942238028,
+      "level": 1,
+      "bossKind": "warden",
+      "bossName": "WARDEN"
+    },
+    {
+      "time": 46.19999999999675,
+      "type": "phaseChange",
+      "phase": "boss",
+      "cycle": 1
+    },
+    {
+      "time": 51.08329999999588,
+      "type": "pickup",
+      "x": 421.13153080836713,
+      "y": -102.90956271727362,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 63.70009999999381,
+      "type": "bossDefeated",
+      "x": 1030,
+      "y": 446.1287370508376,
+      "bossKind": "warden"
+    },
+    {
+      "time": 63.70009999999381,
+      "type": "phaseChange",
+      "phase": "normal",
+      "cycle": 2
+    },
+    {
+      "time": 65.99999999999527,
+      "type": "pickup",
+      "x": 382.1779653725465,
+      "y": -79.52744363681768,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 81.00010000000685,
+      "type": "pickup",
+      "x": 248.6576900010598,
+      "y": 686.632119833482,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "bottom"
+    },
+    {
+      "time": 97.78330000001968,
+      "type": "pickup",
+      "x": 119.08236968797887,
+      "y": 700.9401577341343,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "bottom"
+    },
+    {
+      "time": 99.06670000002066,
+      "type": "hit",
+      "x": 997.3471429659726,
+      "y": 566.8353326705081,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 99.8001000000212,
+      "type": "hit",
+      "x": 1290.0361050775878,
+      "y": 223.54998005800482,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 99.86670000002125,
+      "type": "hit",
+      "x": 1275.614902101069,
+      "y": 193.38645528092255,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 99.95010000002132,
+      "type": "hit",
+      "x": 1295.6285919072204,
+      "y": 382.8520091469661,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 100.10000000002142,
+      "type": "hit",
+      "x": 1291.008002146514,
+      "y": 505.95151300021394,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 100.2000000000215,
+      "type": "hit",
+      "x": 1212.2265964650323,
+      "y": 234.0437536606215,
+      "player": false,
+      "enemyType": "ray",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 100.25010000002156,
+      "type": "hit",
+      "x": 1280.3172631317104,
+      "y": 610.8437536606208,
+      "player": false,
+      "enemyType": "beetle",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 104.26670000002449,
+      "type": "pickup",
+      "x": 342.1123364844948,
+      "y": 315.57954088664036,
+      "pickupType": "drone",
+      "itemType": "drone",
+      "effect": "drone",
+      "weaponMode": "spread",
+      "basicLevel": 1
+    },
+    {
+      "time": 105.7001000000256,
+      "type": "bossWarning",
+      "bossKind": "carrier",
+      "bossName": "IRON CARRIER",
+      "remaining": 3
+    },
+    {
+      "time": 108.70010000002792,
+      "type": "phaseChange",
+      "phase": "boss-entry",
+      "cycle": 2
+    },
+    {
+      "time": 108.70010000002792,
+      "type": "boss",
+      "x": 1494.3054613648733,
+      "y": 396.80546919732694,
+      "level": 2,
+      "bossKind": "carrier",
+      "bossName": "IRON CARRIER"
+    },
+    {
+      "time": 109.90000000002884,
+      "type": "phaseChange",
+      "phase": "boss",
+      "cycle": 2
+    },
+    {
+      "time": 111.1501000000298,
+      "type": "pickup",
+      "x": 381.8429238753354,
+      "y": -86.15071317229183,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 126.05010000004114,
+      "type": "pickup",
+      "x": 418.31694606630043,
+      "y": -100.3586515208529,
+      "pickupType": "maintain",
+      "itemType": "maintain",
+      "effect": "extend",
+      "weaponMode": "spread",
+      "basicLevel": 1,
+      "side": "top"
+    },
+    {
+      "time": 129.20010000004172,
+      "type": "hit",
+      "x": 1003.3423450770152,
+      "y": 363.2779126957616,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.25010000004167,
+      "type": "hit",
+      "x": 966.3735892595259,
+      "y": 386.56878622563875,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.31670000004164,
+      "type": "hit",
+      "x": 952.060618923213,
+      "y": 418.4385905171376,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.40010000004153,
+      "type": "hit",
+      "x": 964.8884046581896,
+      "y": 463.3832538477855,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.50010000004144,
+      "type": "hit",
+      "x": 983.0355537049047,
+      "y": 374.391436766562,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.58340000004137,
+      "type": "hit",
+      "x": 963.7549153566579,
+      "y": 415.15930642458244,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.66670000004132,
+      "type": "hit",
+      "x": 963.0625011007471,
+      "y": 460.06905971344514,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.7835000000412,
+      "type": "hit",
+      "x": 981.4042976817785,
+      "y": 374.4052901360575,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.8001000000412,
+      "type": "hit",
+      "x": 1004.2522976817628,
+      "y": 506.58862346938827,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.86680000004114,
+      "type": "hit",
+      "x": 965.5502082579708,
+      "y": 384.44834224777685,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 129.95010000004106,
+      "type": "hit",
+      "x": 962.5004824227096,
+      "y": 386.18380637739415,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.05010000004097,
+      "type": "hit",
+      "x": 959.6870384363338,
+      "y": 386.3517077681847,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.1334000000409,
+      "type": "hit",
+      "x": 958.1380684096433,
+      "y": 386.29756134472336,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.2334000000408,
+      "type": "hit",
+      "x": 957.3941951111085,
+      "y": 386.24792764766727,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.31670000004075,
+      "type": "hit",
+      "x": 956.798007239664,
+      "y": 386.2215898657551,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.41680000004067,
+      "type": "hit",
+      "x": 956.761864678133,
+      "y": 386.20958825914636,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.50000000004061,
+      "type": "hit",
+      "x": 956.5115456913779,
+      "y": 386.2044430108242,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.6001000000405,
+      "type": "hit",
+      "x": 956.5874741778488,
+      "y": 386.20230682417747,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.68340000004042,
+      "type": "hit",
+      "x": 956.5558729283034,
+      "y": 386.201433886088,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.78340000004033,
+      "type": "hit",
+      "x": 956.6752570155141,
+      "y": 386.2010806953766,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 130.86680000004029,
+      "type": "hit",
+      "x": 956.3491714244427,
+      "y": 386.2009383236144,
+      "player": false,
+      "enemyType": "boss",
+      "weaponMode": "spread",
+      "drone": false,
+      "tension": true,
+      "impactCue": "tension"
+    },
+    {
+      "time": 137.6168000000348,
+      "type": "bossDefeated",
+      "x": 1035,
+      "y": 345.4120255167512,
+      "bossKind": "carrier"
+    },
+    {
+      "time": 137.6168000000348,
+      "type": "phaseChange",
+      "phase": "normal",
+      "cycle": 3
+    }
+  ],
+  "aimCounts": {
+    "slow": 10,
+    "medium": 2,
+    "fast": 2
+  },
+  "patterns": {
+    "B01": 7,
+    "B02": 0,
+    "B03": 20,
+    "B04": 15
+  },
+  "tensionEvents": 4,
+  "motion": {
+    "minimumWorldY": -91.66533154977418,
+    "maximumWorldY": 753.1662746837379
+  },
+  "notes": [
+    "After two-cycle capture, main.js alone added the 0.7-second pickup HUD pulse and removed a duplicate touch-hidden assignment; combat, audio and render modules match the captured run."
+  ],
+  "finalBuildSmoke": {
+    "loading": "passed",
+    "start": "passed",
+    "pause": {
+      "samples": 0,
+      "retiring": 0,
+      "tones": 0,
+      "context": "suspended",
+      "touchHidden": true,
+      "qaToolbar": false
+    },
+    "newConsoleErrors": 0,
+    "rebuiltHudStart": "passed"
+  },
+  "commands": {
+    "test": {
+      "passed": 142,
+      "failed": 0
+    },
+    "check": "passed",
+    "buildSite": {
+      "files": 103,
+      "MiB": 29.71
+    },
+    "diffCheck": "passed"
+  },
+  "pickupHudObservation": [
+    {
+      "time": 0,
+      "fresh": "false",
+      "label": "TWIN CANNONLv.1"
+    },
+    {
+      "time": 6.083300000000056,
+      "fresh": "true",
+      "label": "SPREAD18.0s"
+    },
+    {
+      "time": 6.783400000000078,
+      "fresh": "false",
+      "label": "SPREAD17.3s"
+    },
+    {
+      "time": 7.683300000000107,
+      "fresh": "true",
+      "label": "SPREAD31.4s"
+    },
+    {
+      "time": 8.38330000000011,
+      "fresh": "false",
+      "label": "SPREAD30.7s"
+    },
+    {
+      "time": 21.14999999999965,
+      "fresh": "true",
+      "label": "SPREAD33.0s"
+    },
+    {
+      "time": 21.85009999999962,
+      "fresh": "false",
+      "label": "SPREAD32.3s"
+    },
+    {
+      "time": 36.03339999999837,
+      "fresh": "true",
+      "label": "SPREAD33.1s"
+    },
+    {
+      "time": 36.73339999999826,
+      "fresh": "false",
+      "label": "SPREAD32.4s"
+    },
+    {
+      "time": 51.08339999999576,
+      "fresh": "true",
+      "label": "SPREAD33.0s"
+    },
+    {
+      "time": 51.79999999999565,
+      "fresh": "false",
+      "label": "SPREAD32.3s"
+    }
+  ]
+}

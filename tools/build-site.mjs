@@ -7,7 +7,7 @@ import { PILOT_IMAGES } from '../src/pilot-ui.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');
 const music = JSON.parse(await readFile(resolve(root, 'assets/audio/manifest.json'), 'utf8'));
-const modules = ['boot', 'main', 'game', 'renderer', 'audio', 'presentation', 'volume-environment', 'terrain3d', 'pilot-state', 'pilot-ui'];
+const modules = ['boot', 'main', 'game', 'level', 'barrage', 'renderer', 'audio', 'presentation', 'volume-environment', 'terrain3d', 'pilot-state', 'pilot-ui'];
 const images = ['player', 'enemies', 'enemies-v2', 'bosses-v2', 'leaf-surface-v3'];
 const playerRoot = 'assets/art/player/sv01';
 const playerManifest = JSON.parse(await readFile(resolve(root, playerRoot, 'manifest.json'), 'utf8'));

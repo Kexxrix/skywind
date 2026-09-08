@@ -89,29 +89,29 @@ test('world/screen coordinates invert at both extreme camera offsets and preserv
   }
 });
 
-test('weapon status exposes independent fourteen/fifteen-second slots and bounded gauges', () => {
+test('weapon status exposes independent eighteen/fifteen-second slots and bounded gauges', () => {
   const game = playable();
-  assert.deepEqual(getWeaponStatus(game.player), { mode: 'normal', remaining: 0, gauge: 0, drone: null });
+  assert.deepEqual(getWeaponStatus(game.player), { mode: 'normal', remaining: 0, gauge: 0, level: 1, maxDuration: 45, drone: null });
   collect(game, 'power', 'drone');
   let status = getWeaponStatus(game.player);
   assert.equal(status.mode, 'spread');
   assert.equal(status.remaining, WEAPON_DURATION);
-  assert.equal(status.gauge, 1);
+  assert.equal(status.gauge, 18 / 45);
   assert.deepEqual(status.drone, { remaining: DRONE_DURATION, gauge: 1 });
   advance(game, 7);
   status = getWeaponStatus(game.player);
-  close(status.remaining, 7);
-  close(status.gauge, 0.5);
+  close(status.remaining, 11);
+  close(status.gauge, 11 / 45);
   close(status.drone.remaining, 8);
   close(status.drone.gauge, 8 / 15);
-  const overfilled = getWeaponStatus({ ...game.player, powerTime: 28, droneTime: 30 });
+  const overfilled = getWeaponStatus({ ...game.player, powerTime: 50, droneTime: 30 });
   assert.equal(overfilled.gauge, 1);
   assert.equal(overfilled.drone.gauge, 1);
   const inactive = getWeaponStatus({ ...game.player, powerTime: -1, droneTime: -1 });
-  assert.deepEqual(inactive, { mode: 'normal', remaining: 0, gauge: 0, drone: null });
+  assert.deepEqual(inactive, { mode: 'normal', remaining: 0, gauge: 0, level: 1, maxDuration: 45, drone: null });
 });
 
-test('power pickups refresh fourteen seconds and cycle spread/lance/helix without overwriting the drone slot', () => {
+test('power pickups refresh eighteen seconds and cycle spread/lance/helix without overwriting the drone slot', () => {
   const game = playable();
   collect(game, 'drone');
   for (const mode of ['spread', 'lance', 'helix', 'spread']) {
@@ -119,8 +119,8 @@ test('power pickups refresh fourteen seconds and cycle spread/lance/helix withou
     const events = collect(game, 'power');
     const status = getWeaponStatus(game.player);
     assert.equal(status.mode, mode);
-    assert.equal(status.remaining, 14, 'pickup refreshes, rather than adds, duration');
-    assert.equal(status.gauge, 1);
+    assert.equal(status.remaining, 18, 'pickup refreshes, rather than adds, duration');
+    assert.equal(status.gauge, 18 / 45);
     close(status.drone.remaining, beforeDrone - 1 / 120);
     assert.equal(events.filter(event => event.type === 'pickup' && event.pickupType === 'power').length, 1);
     advance(game, 1.5);
@@ -132,23 +132,19 @@ test('power pickups refresh fourteen seconds and cycle spread/lance/helix withou
   assert.equal(getWeaponStatus(game.player).mode, 'spread');
 });
 
-test('each slot warns once at three seconds, expires once, and restores normal while the drone can remain active', () => {
+test('each slot warns and expires once at its independent new duration', () => {
   const game = playable();
   collect(game, 'power', 'drone');
-  const events = advance(game, 10.9);
-  assert.equal(events.filter(event => event.type === 'weaponWarning').length, 0);
-  events.push(...advance(game, 0.11));
-  assert.deepEqual(events.filter(event => event.type === 'weaponWarning').map(event => [event.slot, event.weaponMode]), [['weapon', 'spread']]);
-  events.push(...advance(game, 1));
-  assert.deepEqual(events.filter(event => event.type === 'weaponWarning').map(event => [event.slot, event.weaponMode]), [['weapon', 'spread'], ['drone', 'drone']]);
-  events.push(...advance(game, 2));
+  const events = advance(game, 12.01);
+  assert.deepEqual(events.filter(event => event.type === 'weaponWarning').map(event => event.slot), ['drone']);
+  events.push(...advance(game, 3));
+  assert.equal(getWeaponStatus(game.player).mode, 'spread');
+  assert.equal(getWeaponStatus(game.player).drone, null);
+  assert.deepEqual(events.filter(event => event.type === 'weaponWarning').map(event => event.slot), ['drone', 'weapon']);
+  events.push(...advance(game, 3));
+  assert.deepEqual(events.filter(event => event.type === 'weaponExpired').map(event => event.slot), ['drone', 'weapon']);
   assert.equal(getWeaponStatus(game.player).mode, 'normal');
-  assert.ok(getWeaponStatus(game.player).drone.remaining > 0.9);
-  assert.deepEqual(events.filter(event => event.type === 'weaponExpired').map(event => [event.slot, event.weaponMode]), [['weapon', 'spread']]);
-  events.push(...advance(game, 12));
-  assert.deepEqual(events.filter(event => event.type === 'weaponExpired').map(event => [event.slot, event.weaponMode]), [['weapon', 'spread'], ['drone', 'drone']]);
   assert.equal(events.filter(event => event.type === 'weaponWarning').length, 2);
-  assert.deepEqual(getWeaponStatus(game.player), { mode: 'normal', remaining: 0, gauge: 0, drone: null });
 });
 
 test('same-frame slot crossings each emit a cue, and refreshing after a warning re-arms only the renewed duration', () => {
@@ -159,7 +155,7 @@ test('same-frame slot crossings each emit a cue, and refreshing after a warning 
   together.push(...advance(simultaneous, 3.1));
   assert.deepEqual(together.filter(event => event.type === 'weaponExpired').map(event => event.slot), ['weapon', 'drone']);
 
-  for (const [type, duration, slot] of [['power', 14, 'weapon'], ['drone', 15, 'drone']]) {
+  for (const [type, duration, slot] of [['power', 18, 'weapon'], ['drone', 15, 'drone']]) {
     const game = playable();
     collect(game, type);
     const first = advance(game, duration - 2.9);
@@ -184,9 +180,9 @@ test('weapon timers and one-shot cues agree across 30 Hz and 144 Hz update sched
     collect(game, 'power', 'drone');
     const events = advance(game, 12.5, {}, frame);
     const active = getWeaponStatus(game.player);
-    close(active.remaining, 1.5);
+    close(active.remaining, 5.5);
     close(active.drone.remaining, 2.5);
-    events.push(...advance(game, 3, {}, frame));
+    events.push(...advance(game, 6, {}, frame));
     results.push(events.filter(event => event.type === 'weaponWarning' || event.type === 'weaponExpired').map(event => [event.type, event.slot, event.weaponMode]));
   }
   assert.deepEqual(results[0], results[1]);
@@ -209,7 +205,7 @@ test('restart clears old weapon/drone state, projectiles, camera offset, and cue
   assert.equal(game.player.fireCooldown, 0);
   assert.equal(game.player.droneCooldown, 0);
   assert.equal(game.bullets.length, 0);
-  assert.deepEqual(getWeaponStatus(game.player), { mode: 'normal', remaining: 0, gauge: 0, drone: null });
+  assert.deepEqual(getWeaponStatus(game.player), { mode: 'normal', remaining: 0, gauge: 0, level: 1, maxDuration: 45, drone: null });
   assert.deepEqual(consumeEvents(game).map(event => event.type), ['start']);
   game.mode = 'playing';
   Object.assign(game.player, screenToWorld(game, { x: 240, y: 360 }));

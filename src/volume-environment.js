@@ -56,7 +56,7 @@ uniform sampler2D terrainColor,terrainDepth,cloudColor;
 uniform sampler3D volumeNoise,cloudVolume;
 uniform mat4 inverseVP,viewProjection;
 uniform vec3 camera,forward,sun;
-uniform float time,segment,altitude,frameTravel;
+uniform float time,segment,altitude,frameTravel,daylight;
 uniform float cloudCoverage,peakHeight,edgeErosion,centralNearOptical,nearExtinction,farExtinction;
 uniform vec3 lightPos[5],lightColor[5];
 uniform float lightRange[5];
@@ -64,7 +64,13 @@ const float cloudPeriod=1024.;
 const float cloudFloor=48.,cloudCeiling=238.;
 vec3 ray(){vec4 p=inverseVP*vec4(uv*2.-1.,1,1);return normalize(p.xyz/p.w-camera);}
 float groundDistance(){float d=texture(terrainDepth,uv).r;if(d>.99999)return 900.;vec4 p=inverseVP*vec4(uv*2.-1.,d*2.-1.,1);return length(p.xyz/p.w-camera);}
-vec3 sky(vec3 rd){float horizon=pow(1.-max(rd.y,0.),5.);vec3 c=mix(vec3(.025,.11,.23),vec3(.21,.37,.50),horizon);float light=pow(max(dot(rd,sun),0.),24.);return c+vec3(.33,.38,.40)*light;}
+vec3 sky(vec3 rd){
+  float horizon=pow(1.-max(rd.y,0.),5.);
+  vec3 zenith=mix(vec3(.012,.043,.125),vec3(.133,.557,1.),daylight);
+  vec3 haze=mix(vec3(.055,.137,.271),vec3(.722,.91,1.),daylight);
+  float light=pow(max(dot(rd,sun),0.),24.);
+  return mix(zenith,haze,horizon)+mix(vec3(.026,.048,.088),vec3(.22,.25,.24),daylight)*light;
+}
 vec3 bankHash(vec2 cell){
   vec3 p=fract(vec3(cell.x,cell.y,cell.x)*vec3(.1031,.1030,.0973));
   p+=dot(p,p.yxz+33.33);
@@ -215,7 +221,11 @@ void main(){
     stepSize=min(stepSize,end-t);
     if(d>.003){
       float powder=1.-exp(-d*2.4);
-      vec3 illumination=volume.rgb;
+      // Re-light the cached volume, preserving its density, contrast and depth.
+      // Day/night changes never rebuild the 3D texture or reset its position.
+      vec3 moonlit=volume.rgb*vec3(.19,.27,.43)+vec3(.016,.025,.045);
+      vec3 sunlit=volume.rgb*vec3(1.08,1.06,1.)+vec3(.09,.08,.065);
+      vec3 illumination=mix(moonlit,sunlit,daylight);
       vec3 scattered=vec3(0);
       for(int j=0;j<5;j++){
         if(dot(lightColor[j],lightColor[j])<.0001)continue;
@@ -344,7 +354,11 @@ export class VolumeEnvironment {
     if(shapeChanged){const prior=this.volume;this.volume=this.createCloudVolume();this.gl.deleteTexture(prior);}
   }
 
-  update(g,dt){this.travel=dt*(g.speed||1.3)/1.3*76;this.distance+=dt*(g.speed||1.3)/1.3;}
+  update(g,dt){
+    this.daylight=Math.max(0,Math.min(1,g.daylight??1));
+    this.travel=Math.max(0,dt)*(g.speed??1.3)/1.3*76;
+    this.distance+=this.travel/76;
+  }
 
   lightWorld(x,y) {
     const nx=(x+PAD)/GW*2-1,ny=1-(y+PAD)/GH*2;
@@ -359,7 +373,7 @@ export class VolumeEnvironment {
     const point=this.lightWorld(g.player.x-20+offset.x,g.player.y+offset.y);
     this.lights.set(point);this.colors.set(g.mode==='title'?[0,0,0]:[.0088,.121,.0616]);this.lightRanges[0]=6.5;
     // Radius / gain affect cloud transmission only, not the existing 2D flares.
-    const profiles={shot:[9,.60],enemyShot:[10,.34],hit:[8,.44],playerHit:[10,.40],pickup:[11,.28],explosion:[24,.65]};
+    const profiles={shot:[9,.60],enemyShot:[10,.34],hit:[8,.44],playerHit:[10,.40],pickup:[11,.28],explosion:[24,.65],tension:[7,.22]};
     active.forEach((f,i)=>{
       const kind=f.kind||(f.ring?'pickup':f.color==='pink'?'enemyShot':'hit');
       const [radius,gain]=profiles[kind]||profiles.hit;
@@ -376,7 +390,7 @@ export class VolumeEnvironment {
     const bindings=[['terrainColor',this.scene.texture,gl.TEXTURE_2D],['terrainDepth',this.scene.depthTexture,gl.TEXTURE_2D],['volumeNoise',this.noise,gl.TEXTURE_3D],['cloudColor',this.cloud.texture,gl.TEXTURE_2D],['cloudVolume',this.volume,gl.TEXTURE_3D]];
     bindings.forEach(([name,texture,target],i)=>{gl.activeTexture(gl.TEXTURE0+i);gl.bindTexture(target,texture);gl.uniform1i(uniform(gl,p,name),i);});
     gl.uniformMatrix4fv(uniform(gl,p,'inverseVP'),false,this.inverseVP);gl.uniform3fv(uniform(gl,p,'camera'),this.camera);gl.uniform3fv(uniform(gl,p,'forward'),this.forward);gl.uniform3fv(uniform(gl,p,'sun'),this.sun);gl.uniform1f(uniform(gl,p,'segment'),segment);gl.uniform1f(uniform(gl,p,'time'),this.distance);gl.uniform1f(uniform(gl,p,'altitude'),this.altitude);gl.uniform3fv(uniform(gl,p,'lightPos[0]'),this.lights);gl.uniform3fv(uniform(gl,p,'lightColor[0]'),this.colors);gl.uniform1fv(uniform(gl,p,'lightRange[0]'),this.lightRanges);
-    gl.uniformMatrix4fv(uniform(gl,p,'viewProjection'),false,this.basis.vp);gl.uniform1f(uniform(gl,p,'frameTravel'),this.travel||0);this.bindCloudTuning(p);
+    gl.uniformMatrix4fv(uniform(gl,p,'viewProjection'),false,this.basis.vp);gl.uniform1f(uniform(gl,p,'frameTravel'),this.travel||0);gl.uniform1f(uniform(gl,p,'daylight'),this.daylight??1);this.bindCloudTuning(p);
   }
 
   drawSegment(segment) {
@@ -392,7 +406,7 @@ export class VolumeEnvironment {
     const groundPitch=.08*Math.max(0,1-g.altitude/.18);
     this.forward=norm([.55,-.25-groundPitch+.45*climb*climb*(3-2*climb),-1]);this.basis=cameraMatrix(this.camera,this.forward);this.inverseVP=inverse(this.basis.vp);this.setLights(g,renderer);
     gl.bindFramebuffer(gl.FRAMEBUFFER,this.sceneMS.fbo);gl.viewport(0,0,GW,GH);gl.depthMask(true);gl.clearColor(0,0,0,0);gl.clearDepth(1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-    this.terrain.draw({viewProjection:this.basis.vp,camera:this.camera,time:g.sceneTime,altitude:g.altitude,light:this.sun});
+    this.terrain.draw({viewProjection:this.basis.vp,camera:this.camera,time:g.sceneTime,altitude:g.altitude,light:this.sun,daylight:this.daylight});
     gl.bindFramebuffer(gl.READ_FRAMEBUFFER,this.sceneMS.fbo);gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER,this.scene.fbo);gl.blitFramebuffer(0,0,GW,GH,0,0,GW,GH,gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT,gl.NEAREST);
     this.drawSegment(0);c.drawImage(this.canvas,-PAD,-PAD,GW,GH);
   }

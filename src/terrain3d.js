@@ -85,6 +85,7 @@ in vec2 vLeafUV;
 uniform vec3 uCamera;
 uniform vec3 uLight;
 uniform float uAltitude;
+uniform float uDaylight;
 uniform sampler2D uLeafSurface;
 uniform bool uHasLeafSurface;
 out vec4 outColor;
@@ -171,8 +172,12 @@ void main() {
   if(material>2.5)color+=vec3(.22,.35,.27)*pow(1.0-abs(dot(normal,view)),4.0)*.14;
   float distance=length(uCamera-vWorld);
   float fog=1.0-exp(-distance*(.0030+uAltitude*.0007));
-  vec3 haze=vec3(.20,.36,.49);
+  vec3 haze=mix(vec3(.055,.137,.271),vec3(.722,.91,1.),uDaylight);
   color=pow(max(color,vec3(0.0)),vec3(.86));
+  // Keep all forest geometry/material variation while lighting the same leaves
+  // and terrain for clear daylight or a readable cool night silhouette.
+  vec3 moonlit=color*vec3(.19,.32,.48)+vec3(.006,.013,.024)*(up*.6+.4);
+  color=mix(moonlit,color*vec3(1.15,1.16,1.08),uDaylight);
   color=mix(color,haze,clamp(fog,0.0,.9));
   outColor=vec4(color,1.0);
 }`;
@@ -373,7 +378,7 @@ export class Terrain3D {
     this.program=gl.createProgram();gl.attachShader(this.program,vertex);gl.attachShader(this.program,fragment);gl.linkProgram(this.program);
     gl.deleteShader(vertex);gl.deleteShader(fragment);
     if(!gl.getProgramParameter(this.program,gl.LINK_STATUS))throw new Error(`Terrain3D program link failed: ${gl.getProgramInfoLog(this.program)}`);
-    this.uniforms=Object.fromEntries(['ViewProjection','Camera','Time','Wrap','Ground','Light','Altitude','LeafSurface','HasLeafSurface'].map(name=>[name,gl.getUniformLocation(this.program,`u${name}`)]));
+    this.uniforms=Object.fromEntries(['ViewProjection','Camera','Time','Wrap','Ground','Light','Altitude','Daylight','LeafSurface','HasLeafSurface'].map(name=>[name,gl.getUniformLocation(this.program,`u${name}`)]));
     this.hasLeafSurface=Boolean(leafSurface);
     this.leafTexture=this.createLeafTexture(leafSurface);
     this.ground=this.createMesh(terrainMesh(),new Float32Array([0,0,1,0,0,1,1,0]),1040,true);
@@ -443,7 +448,7 @@ export class Terrain3D {
   }
 
   /** light is a world-space direction toward the sun, not a point position. */
-  draw({viewProjection,camera,time=0,altitude=0,light=[-.45,.85,.25]}) {
+  draw({viewProjection,camera,time=0,altitude=0,light=[-.45,.85,.25],daylight=1}) {
     if(!viewProjection||viewProjection.length!==16||!camera||camera.length!==3)throw new Error('Terrain3D.draw requires viewProjection[16] and camera[3].');
     const gl=this.gl,u=this.uniforms;
     gl.useProgram(this.program);
@@ -452,6 +457,7 @@ export class Terrain3D {
     gl.uniformMatrix4fv(u.ViewProjection,false,viewProjection);
     gl.uniform3fv(u.Camera,camera);gl.uniform3fv(u.Light,light);
     gl.uniform1f(u.Time,time);gl.uniform1f(u.Altitude,Math.max(0,Math.min(1,altitude)));
+    gl.uniform1f(u.Daylight,Math.max(0,Math.min(1,daylight)));
     gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,this.leafTexture);
     gl.uniform1i(u.LeafSurface,0);gl.uniform1i(u.HasLeafSurface,this.hasLeafSurface?1:0);
     for(const mesh of this.meshes) {

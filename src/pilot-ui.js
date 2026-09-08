@@ -8,7 +8,7 @@ const labels = {normal:'파일럿: 정상',powerup:'파일럿: 파워업',low:'�
 
 export class PilotUI {
   constructor(root) {
-    this.root=root;this.state=createPilotState();
+    this.root=root;this.state=createPilotState();this.scale=1;
     this.imageLayer=root.querySelector('.pilot-images');
     this.images=new Map();
     this.reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
@@ -42,7 +42,7 @@ export class PilotUI {
     const reduced=this.reducedMotion.matches;
     this.root.dataset.blink=String(state.blink);
     // Only this inner layer moves. The mask, frame and FX keep fixed geometry.
-    this.imageLayer.style.transform=`translate(${reduced?0:state.shakeX}px,${reduced?0:state.shakeY}px)`;
+    this.imageLayer.style.transform=`translate(${reduced?0:state.shakeX*this.scale}px,${reduced?0:state.shakeY*this.scale}px)`;
     const opacity=reduced?(state.mode==='hit'?config.REDUCED_HIT_OPACITY:state.mode==='low'?config.REDUCED_LOW_HP_OPACITY:state.mode==='powerup'?config.REDUCED_POWERUP_OPACITY:0):state.overlayOpacity;
     const tint=reduced?(state.mode==='hit'?config.REDUCED_HIT_TINT_OPACITY:state.mode==='low'?config.REDUCED_LOW_HP_TINT_OPACITY:state.mode==='powerup'?config.REDUCED_POWERUP_TINT_OPACITY:0):state.tintOpacity;
     this.root.style.setProperty('--pilot-fx-opacity',String(opacity));

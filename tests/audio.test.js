@@ -99,7 +99,7 @@ test('samples load/decode once; combat reuses buffers without fetching and music
   assert.equal(context.decoded, 50);
   assert.deepEqual(Object.keys(audio.tracks), ['title', 'normal', 'danger', 'boss', 'powerup', 'ending']);
   for (const state of Object.keys(audio.tracks)) assert.ok(audio.tracks[state].endsWith(`/${state}-v2.m4a`));
-  assert.equal(audio._buses.shot.gain.value, 0.78);
+  assert.equal(audio._buses.shot.gain.value, 0.84);
   assert.equal(audio._buses.impact.gain.value, 0.94);
   assert.equal(audio._buses.ui.gain.value, 0.92);
   for (const bus of Object.values(audio._buses)) assert.equal(bus.connections[0], audio._effects);
@@ -259,7 +259,7 @@ test('shuffled shot bags avoid adjacent repeats across bags and preserve every a
       const before = context.sources.length, event = Object.freeze({ type: 'shot', weaponMode: mode, drone: mode === 'drone', x: 220 });
       audio.playEvent(event);
       assert.equal(context.sources.length, before + 1, 'no random shot dropout or extra rhythmic audio source');
-      const voice = [...audio._voices].at(-1), expectedGain = mode === 'drone' ? 0.7 : ['lance', 'helix'].includes(mode) ? 0.84 : 0.82;
+      const voice = [...audio._voices].at(-1), expectedGain = ({ normal: 0.9, spread: 0.88, lance: 0.91, helix: 0.9, drone: 0.56 })[mode];
       assert.equal(voice.startedAt, context.currentTime);
       const cents = 1200 * Math.log2(voice.source.playbackRate.value);
       const db = 20 * Math.log10(voice.volume / expectedGain);
@@ -444,4 +444,229 @@ test('a music play promise settling after pause cannot restart its deck', async 
   finishPlay();
   await Promise.resolve(); await Promise.resolve();
   assert.equal(target.paused, true);
+});
+
+test('tension adds a bounded immediate weapon accent and keeps the fired shot timbre after expiry', async t => {
+  const { audio, context } = await readyAudio(t, { soundVariation: false });
+  const tracks = { ...audio.tracks };
+  t.mock.method(Math, 'random', () => { throw new Error('Combat accents must not consume the game RNG'); });
+  for (const mode of ['normal', 'spread', 'lance', 'helix', 'drone']) {
+    context.advance(1);
+    audio.playEvent({ type: 'shot', weaponMode: mode, drone: mode === 'drone', tension: false });
+    const ordinary = [...audio._voices].at(-1);
+    context.advance(0.3);
+    const event = Object.freeze({ type: 'shot', weaponMode: mode, drone: mode === 'drone', tension: true });
+    audio.playEvent(event);
+    const enhanced = [...audio._voices].at(-1), resonance = [...audio._uiTones].at(-1);
+    assert.equal(enhanced.sampleName, ordinary.sampleName);
+    assert.ok(enhanced.source.playbackRate.value > ordinary.source.playbackRate.value);
+    assert.ok(enhanced.volume <= ordinary.volume * 1.041, 'enhancement mainly changes timbre, not loudness');
+    assert.equal(enhanced.startedAt, context.currentTime);
+    assert.equal(resonance.oscillator.startedAt, context.currentTime, 'never waits for a music phase');
+    assert.equal(resonance.combat, true);
+    assert.equal(resonance.gain.connections[0], audio._buses.impact);
+    audio.playEvent({ type: 'tensionEnd', reason: 'expired' });
+    context.advance(0.3);
+    // This event is the still-in-flight enhanced projectile, after the player reverted.
+    audio.playEvent(Object.freeze({ type: 'hit', weaponMode: mode, drone: mode === 'drone', enemyType: 'worm', tension: true }));
+    const [weapon, surface] = [...audio._voices].slice(-2);
+    assert.equal(weapon.source.playbackRate.value, enhanced.source.playbackRate.value);
+    assert.equal(weapon.sampleName, `hit-weapon-${mode}`);
+    assert.match(surface.sampleName, /^hit-target-armored-/);
+    assert.equal(surface.source.playbackRate.value, 1, 'the target material stays recognizable');
+    assert.equal(weapon.tension, true);
+    context.advance(0.3);
+    audio.playEvent({ type: 'hit', weaponMode: mode, enemyType: 'worm', tension: false });
+    assert.equal([...audio._voices].slice(-2)[0].source.playbackRate.value, 1, 'an ordinary in-flight projectile stays ordinary');
+    assert.deepEqual(event, { type: 'shot', weaponMode: mode, drone: mode === 'drone', tension: true });
+  }
+  assert.deepEqual(audio.tracks, tracks);
+  assert.equal(audio.state, 'title');
+});
+
+test('tension start, grouped refresh and quiet expiry are distinct; damage clears and suppresses reward tones', async t => {
+  const { audio, context } = await readyAudio(t);
+  audio.playEvent({ type: 'tension', refresh: false, remaining: 2 });
+  const start = [...audio._uiTones][0];
+  assert.deepEqual(start.oscillator.frequency.events[0], ['set', 523, 0]);
+  for (let i = 0; i < 30; i += 1) audio.playEvent({ type: 'tension', refresh: true, remaining: 2 });
+  assert.equal(context.sources.length, 3, 'same-frame graze burst is grouped');
+  context.advance(0.17);
+  audio.playEvent({ type: 'tension', refresh: true, remaining: 2 });
+  const refresh = [...audio._uiTones].at(-1);
+  assert.equal(refresh.oscillator.frequency.events[0][1], 1175);
+  assert.ok(refresh.endsAt - context.currentTime < 0.111);
+  audio.playEvent({ type: 'hit', player: true, damage: 12 });
+  assert.equal(audio._uiTones.size, 0);
+  assert.equal(start.oscillator.disconnected, true);
+  assert.equal(refresh.oscillator.disconnected, true);
+  const sourceCount = context.sources.length;
+  audio.playEvent({ type: 'tensionEnd', reason: 'hit' });
+  audio.playEvent({ type: 'explosion', chain: 100, tension: true });
+  audio.playEvent({ type: 'tension', refresh: false });
+  assert.equal(context.sources.length, sourceCount + 1, 'only the real destruction sample may play during danger hold');
+  const damage = [...audio._voices].find(voice => voice.playerCue);
+  assert.deepEqual([damage.sampleName, damage.source.playbackRate.value, damage.volume, damage.pan.pan.value, damage.priority],
+    ['player-damage-fixed', 1, 0.9, 0, 6]);
+  context.advance(0.3);
+  audio.playEvent({ type: 'tensionEnd', reason: 'expired' });
+  assert.equal([...audio._uiTones].at(-1).oscillator.frequency.events[0][1], 784);
+});
+
+test('chain accents use four capped notes at constant gain with no unbounded source or throttle keys', async t => {
+  const { audio, context } = await readyAudio(t);
+  const notes = [], gains = [];
+  for (const chain of [1, 4, 7, 10, 99999]) {
+    context.advance(1);
+    audio.playEvent(Object.freeze({ type: 'explosion', chain, tension: false }));
+    const tone = [...audio._uiTones].at(-1);
+    notes.push(tone.oscillator.frequency.events[0][1]);
+    gains.push(tone.gain.gain.events[1][1]);
+    assert.equal(tone.oscillator.startedAt, context.currentTime);
+  }
+  assert.deepEqual(notes, [392, 494, 587, 784, 784]);
+  assert.ok(gains.every(gain => gain === 0.045));
+  for (let i = 0; i < 1000; i += 1) {
+    context.advance(0.003);
+    audio.playEvent({ type: 'explosion', chain: i + 1, tension: true });
+    audio.playEvent({ type: 'shot', weaponMode: 'helix', tension: true });
+    audio.playEvent({ type: 'hit', weaponMode: 'lance', enemyType: 'boss', tension: true });
+    assert.ok(audio._voices.size <= 20);
+    assert.ok(audio._retiringVoices.size <= 4);
+    assert.ok([...audio._uiTones].filter(tone => tone.combat).length <= 4);
+    assert.ok(audio._uiTones.size <= 12);
+  }
+  assert.ok(audio._lastEffects.size <= 6, 'keys do not contain chain counts or enemy ids');
+});
+
+test('same-frame change and maintain pickups keep their different meanings and warning slots stay protected', async t => {
+  const { audio, context } = await readyAudio(t);
+  audio.playEvent({ type: 'pickup', effect: 'change', pickupType: 'power', weaponMode: 'spread' });
+  assert.equal([...audio._voices].at(-1).sampleName, 'weapon-change');
+  audio.playEvent({ type: 'pickup', effect: 'extend', pickupType: 'maintain', weaponMode: 'spread' });
+  assert.equal(audio._uiTones.size, 2, 'maintain is not swallowed by simultaneous change');
+  assert.deepEqual([...audio._uiTones].map(tone => tone.oscillator.frequency.events[0][1]), [660, 880]);
+  context.advance(1);
+  audio.playEvent({ type: 'pickup', effect: 'levelUp', pickupType: 'maintain', weaponMode: 'normal' });
+  assert.deepEqual([...audio._uiTones].map(tone => tone.oscillator.frequency.events[0][1]), [523, 784, 1047]);
+  context.advance(1);
+  audio.playEvent({ type: 'shot', weaponMode: 'helix', tension: true });
+  for (let i = 0; i < 11; i += 1) audio._tone(440, 440, 0.2, 0.03);
+  assert.equal(audio._uiTones.size, 12);
+  const accent = [...audio._uiTones].find(tone => tone.combat);
+  audio.playEvent({ type: 'weaponWarning', slot: 'weapon' });
+  assert.equal(audio._uiTones.size, 12);
+  assert.equal(accent.oscillator.disconnected, true, 'warning displaces a reward accent at the tone ceiling');
+  assert.equal([...audio._uiTones].at(-1).oscillator.frequency.events[0][1], 660);
+});
+
+test('combat accents leave no delayed tails after pause, mute, gameover or retry', async t => {
+  const { audio, context } = await readyAudio(t);
+  for (const boundary of ['pause', 'mute', 'gameover', 'retry']) {
+    audio.resetEffects();
+    audio.playEvent({ type: 'tension', refresh: false });
+    audio.playEvent({ type: 'shot', weaponMode: 'spread', tension: true });
+    audio.playEvent({ type: 'hit', weaponMode: 'spread', enemyType: 'beetle', tension: true });
+    audio.playEvent({ type: 'explosion', chain: 9, tension: true });
+    const accents = [...audio._uiTones].filter(tone => tone.combat);
+    assert.ok(accents.length > 0);
+    if (boundary === 'pause') audio.setPaused(true);
+    else if (boundary === 'mute') audio.setMuted(true);
+    else if (boundary === 'gameover') audio.playEvent({ type: 'gameover' });
+    else audio.resetEffects();
+    for (const tone of accents) assert.equal(tone.oscillator.disconnected, true);
+    assert.equal([...audio._uiTones].filter(tone => tone.combat).length, 0);
+    const sources = context.sources.length;
+    context.advance(1);
+    assert.equal(context.sources.length, sources);
+    audio.setPaused(false); audio.setMuted(false);
+  }
+  audio.resetEffects();
+  audio.playEvent({ type: 'tension', refresh: false });
+  assert.equal(audio._uiTones.size, 3, 'a new run starts immediately without stale suppression');
+});
+
+
+test('tension startup survives a saturated combat accent budget without stealing warnings', async t => {
+  const { audio, context } = await readyAudio(t);
+  for (let i = 0; i < 4; i += 1) audio._tone(440, 440, 0.5, 0.03, 'sine', 0, true);
+  const ordinary = [...audio._uiTones];
+  audio.playEvent({ type: 'tension', refresh: false });
+  const startup = [...audio._uiTones].filter(tone => tone.priority === 2);
+  assert.equal(startup.length, 3, 'all three startup layers survive busy fire and impact');
+  assert.equal(ordinary.filter(tone => tone.oscillator.disconnected).length, 3);
+  assert.equal(audio._uiTones.size, 4);
+  assert.ok(startup.every(tone => tone.combat));
+  assert.equal(startup[0].oscillator.startedAt, context.currentTime);
+  assert.equal(startup[2].oscillator.startedAt, context.currentTime + 0.1);
+  for (let i = 0; i < 8; i += 1) audio._tone(660, 660, 0.5, 0.03);
+  const warnings = [...audio._uiTones].filter(tone => tone.priority === 3);
+  audio.playEvent({ type: 'weaponWarning', slot: 'weapon' });
+  assert.equal(audio._uiTones.size, 12);
+  assert.ok(warnings.every(tone => !tone.oscillator.disconnected));
+  assert.equal([...audio._uiTones].at(-1).priority, 3);
+});
+
+test('music duck ramps independently of crossfade and restores both deck levels', async t => {
+  const { audio, context } = await readyAudio(t);
+  const tracks = { ...audio.tracks };
+  audio._musicVolumes = [0.14, 0.14];
+  audio._applyMusicVolumes();
+  const positions = audio._decks.map(deck => deck.currentTime);
+  audio.playEvent({ type: 'tension', refresh: false });
+  assert.deepEqual(audio._decks.map(deck => deck.volume), [0.14, 0.14], 'duck begins without a discontinuity');
+  context.advance(0.04);
+  audio._applyMusicVolumes();
+  for (const deck of audio._decks) assert.ok(Math.abs(deck.volume - 0.14 * 0.58) < 1e-9);
+  audio._musicVolumes = [0.07, 0.21];
+  audio._applyMusicVolumes();
+  assert.ok(Math.abs(audio._decks[1].volume / audio._decks[0].volume - 3) < 1e-9, 'crossfade balance survives duck');
+  context.advance(0.5);
+  audio._applyMusicVolumes();
+  assert.deepEqual(audio._decks.map(deck => deck.volume), [0.07, 0.21]);
+  assert.deepEqual(audio.tracks, tracks);
+  assert.deepEqual(audio._decks.map(deck => deck.currentTime), positions);
+});
+
+test('pause, mute, gameover and retry cancel pending music duck work and restore nominal gain', async t => {
+  const { audio, context } = await readyAudio(t);
+  const pending = new Map(); let next = 1;
+  t.mock.method(globalThis, 'requestAnimationFrame', callback => { const id = next++; pending.set(id, callback); return id; });
+  t.mock.method(globalThis, 'cancelAnimationFrame', id => pending.delete(id));
+  for (const boundary of ['pause', 'mute', 'gameover', 'retry']) {
+    audio.resetEffects();
+    audio._musicVolumes = [0.28, 0];
+    audio.playEvent({ type: 'tension', refresh: false });
+    assert.ok(pending.has(audio._musicDuckFrame));
+    context.advance(0.04);
+    audio._applyMusicVolumes();
+    assert.ok(audio._decks[0].volume < 0.28);
+    if (boundary === 'pause') audio.setPaused(true);
+    else if (boundary === 'mute') audio.setMuted(true);
+    else if (boundary === 'gameover') audio.playEvent({ type: 'gameover' });
+    else audio.resetEffects();
+    assert.equal(audio._musicDuckFrame, 0);
+    assert.equal(pending.size, 0);
+    assert.deepEqual(audio._decks.map(deck => deck.volume), [0.28, 0]);
+    audio.setPaused(false); audio.setMuted(false);
+    await Promise.resolve();
+    // A resumed music state owns its separate crossfade frame.
+    pending.delete(audio._fadeFrame);
+  }
+});
+
+test('pickup approach is grouped and actual collection keeps its distinct reward cue', async t => {
+  const { audio, context } = await readyAudio(t);
+  const event = Object.freeze({ type: 'pickupAttract', pickupType: 'maintain', x: 330, y: 360 });
+  audio.playEvent(event);
+  const approach = [...audio._uiTones][0];
+  assert.equal(approach.oscillator.startedAt, context.currentTime);
+  assert.equal(approach.oscillator.frequency.events[0][1], 330);
+  for (let i = 0; i < 20; i += 1) audio.playEvent(event);
+  assert.equal(context.sources.length, 1);
+  context.advance(0.2);
+  audio.playEvent({ type: 'pickup', effect: 'extend', pickupType: 'maintain' });
+  assert.deepEqual([...audio._uiTones].map(tone => tone.oscillator.frequency.events[0][1]), [660, 880]);
+  audio.setMuted(true);
+  assert.equal(audio._uiTones.size, 0);
 });

@@ -70,21 +70,21 @@ test('health pickups cap at maximum HP and are collected only once', () => {
   assert.equal(game.score, 50);
 });
 
-test('power lasts fourteen seconds, changes the projectile pattern, then expires', () => {
+test('power lasts eighteen seconds, changes the projectile pattern, then expires', () => {
   const game = playable();
   updateGame(game, 1 / 120, { shoot: true });
   assert.equal(game.bullets.length, 2);
   game.bullets = [];
   game.pickups.push({ x: 220, y: 360, baseY: 360, radius: 22, type: 'power', phase: 0 });
   updateGame(game, 1 / 120);
-  assert.equal(game.player.powerTime, 14);
+  assert.equal(game.player.powerTime, 18);
   game.player.fireCooldown = 0;
   updateGame(game, 1 / 120, { shoot: true });
   assert.equal(game.bullets.length, 5);
   assert.ok(game.bullets.every(bullet => bullet.power === 2));
   assert.ok(game.bullets.some(bullet => bullet.vy < 0));
   assert.ok(game.bullets.some(bullet => bullet.vy > 0));
-  advance(game, 14.1);
+  advance(game, 18.1);
   assert.equal(game.player.powerTime, 0);
   game.bullets = [];
   game.player.fireCooldown = 0;
@@ -106,36 +106,37 @@ test('destroying an enemy awards score exactly once even when two shots overlap'
   assert.equal(consumeEvents(game).filter(event => event.type === 'explosion').length, 1);
 });
 
-test('stage and scroll speed increase while the default first boss waits until two minutes', () => {
+test('normal combat reaches the first boss at 45 seconds and only victories raise its cycle', () => {
   const game = playable();
   game.nextBossAt = createGame().nextBossAt;
-  assert.equal(game.nextBossAt, 120);
-  advance(game, 117.1);
-  assert.ok(game.stage > 2);
-  assert.ok(game.speed > 1);
+  assert.equal(game.nextBossAt, 45);
+  advance(game, 44.9);
+  assert.equal(game.stage, 1);
   assert.equal(game.boss, null);
-  advance(game, 3);
-  assert.equal(game.boss.type, 'boss');
-  assert.ok(game.boss.maxHp >= 320);
-  assert.equal(game.enemies.filter(enemy => enemy.type === 'boss').length, 1);
+  assert.ok(Math.abs(game.backgroundSpeed - 2.2) < 1e-8);
+  advance(game, 0.2);
+  assert.equal(game.boss.bossKind, 'warden');
+  assert.equal(game.boss.maxHp, 420);
+  assert.equal(game.phase, 'boss-entry');
 });
 
-test('defeating boss clears its projectiles, drops rewards and schedules another encounter', () => {
+test('defeating a vulnerable boss clears combat once and starts the next full normal segment', () => {
   const game = playable();
   game.nextBossAt = 0;
   updateGame(game, 1 / 120);
+  advance(game, 1.21);
   const boss = game.boss;
-  boss.x = 1100;
   boss.hp = 1;
-  game.bullets.push({ x: boss.x, y: boss.y, vx: 0, vy: 0, radius: 5, power: 2 });
+  game.bullets.push({ x: boss.x, y: boss.y, vx: 0, vy: 0, radius: 50, power: 2 });
   game.enemyBullets.push({ x: 600, y: 600, vx: -80, vy: 0, radius: 6, power: 20 });
   updateGame(game, 1 / 120);
   assert.equal(game.boss, null);
   assert.equal(game.bossesDefeated, 1);
   assert.equal(game.enemyBullets.length, 0);
   assert.equal(game.score, 3500);
-  assert.deepEqual(game.pickups.map(item => item.type), ['health', 'power']);
-  assert.ok(game.nextBossAt > game.time + 35 && game.nextBossAt < game.time + 37);
+  assert.deepEqual(game.pickups.map(item => item.type), ['health']);
+  assert.equal(game.nextBossAt, game.time + 45);
+  assert.equal(game.phase, 'normal');
 });
 
 test('horizontal acceleration is gentler than vertical and diagonal input preserves each axis', () => {
@@ -178,11 +179,12 @@ test('restarting resets gameplay without resetting the animated backdrop clock',
 
 function gameWithWorm() {
   const game = playable();
-  game.waveIndex = ENEMY_TYPES.indexOf('worm');
+  game.normalTime = 23; game.patternSection = 'B03';
   game.nextWaveAt = 0;
   updateGame(game, 1 / 120);
   const worm = game.enemies.find(enemy => enemy.type === 'worm');
   Object.assign(worm, { x: 270, y: 360, baseY: 360, phase: 0, age: 0, speed: 0, fireCooldown: 10 });
+  worm.pattern = null;
   game.enemies = [worm];
   game.nextWaveAt = Infinity;
   return { game, worm };
@@ -292,31 +294,24 @@ test('title starts above the cloud band and entering preserves the current backd
   assert.ok(Math.abs(game.altitude - altitude) < 0.02, 'starting must not snap the camera into the cloud layer');
 });
 
-test('scenery stays fast while first-minute combat pressure grows gently with a hard ceiling', () => {
-  const start = difficultyAt(0), halfMinute = difficultyAt(30), minute = difficultyAt(60), late = difficultyAt(7200, 50);
-  assert.ok(halfMinute.waveInterval < start.waveInterval);
-  assert.ok(minute.waveInterval > start.waveInterval * 0.8);
-  assert.ok(minute.waveSize < start.waveSize * 2);
-  assert.ok(minute.enemySpeed < start.enemySpeed * 1.2);
-  assert.equal(start.maxAttackers,1);
-  assert.equal(minute.maxAttackers,2);
-  assert.ok(minute.scrollSpeed > start.scrollSpeed * 1.4);
-  assert.ok(minute.maxEnemies > start.maxEnemies);
-  assert.ok(late.hpBonus <= 2 && late.tier > minute.tier);
-  assert.ok(late.bulletSpeed <= MAX_ENEMY_BULLET_SPEED);
+test('combat tier is independent of elapsed time and capped at the second trial row', () => {
+  assert.deepEqual(difficultyAt(0), difficultyAt(7200));
+  const first = difficultyAt(0), second = difficultyAt(0, 1), late = difficultyAt(7200, 50);
+  assert.equal(first.maxAttackers, 2); assert.equal(second.maxAttackers, 3);
+  assert.equal(first.maxEnemyBullets, 120); assert.equal(second.maxEnemyBullets, 180);
+  assert.equal(late.maxEnemyBullets, second.maxEnemyBullets);
+  assert.equal(late.tier, 51);
 });
 
-test('all nine distinct enemy behaviors appear during the opening survival sequence', () => {
-  const game = playable();
-  game.nextWaveAt = 0;
-  const types = new Set(), behaviors = new Set();
-  for (let frame = 0; frame < 60 * 24; frame += 1) {
-    game.player.invincible = 2;
-    updateGame(game, 1 / 60);
-    for (const enemy of game.enemies) { types.add(enemy.type); behaviors.add(enemy.behavior); }
+test('opening normal sequence assigns the four taught patterns to existing sprites', () => {
+  const game = playable(); game.nextWaveAt = 0;
+  const patterns = new Set(), types = new Set();
+  for (let frame = 0; frame < 40 * 60; frame++) {
+    game.player.invincible = 2; updateGame(game, 1 / 60);
+    for (const enemy of game.enemies) { if (enemy.pattern) patterns.add(enemy.pattern); types.add(enemy.type); }
   }
-  assert.deepEqual([...types].sort(), [...ENEMY_TYPES].sort());
-  assert.equal(behaviors.size, 9);
+  assert.deepEqual([...patterns].sort(), ['B01', 'B02', 'B03', 'B04']);
+  assert.deepEqual([...types].sort(), ['beetle', 'claw', 'dragonfly', 'orb', 'ray', 'worm']);
 });
 
 function gameWithBoss(index = 0, time = 0) {
@@ -326,6 +321,7 @@ function gameWithBoss(index = 0, time = 0) {
   game.nextBossAt = 0;
   game.player.invincible = 100;
   updateGame(game, 1 / 120);
+  advance(game, 1.21);
   const boss = game.boss;
   boss.x = 1040;
   boss.fireCooldown = 0;
@@ -333,34 +329,23 @@ function gameWithBoss(index = 0, time = 0) {
   return { game, boss };
 }
 
-test('four bosses use distinct opening patterns after visible locked-aim telegraphs', () => {
-  const patterns = new Set(), signatures = new Set();
-  for (let index = 0; index < 4; index += 1) {
+test('the two trial bosses open with their designed ring and moving window tells', () => {
+  for (let index = 0; index < 2; index++) {
     const { game, boss } = gameWithBoss(index);
-    assert.equal(boss.bossKind, BOSS_KINDS[index]);
     updateGame(game, 1 / 120);
-    const angle = boss.attackAngle;
-    game.player.y -= 160;
-    advance(game, 0.55);
-    assert.equal(game.enemyBullets.length, 0, 'attack must wait through its tell');
-    assert.ok(boss.telegraph > 0 && boss.telegraph < 1);
-    assert.equal(boss.attackAngle, angle, 'aim must not keep tracking during the tell');
-    patterns.add(boss.attackName);
+    assert.equal(boss.attackName, index ? 'B04' : 'B01');
+    advance(game, 0.5);
+    assert.equal(game.enemyBullets.length, 0);
+    assert.ok(boss.telegraph > 0);
     advance(game, 0.5);
     assert.ok(game.enemyBullets.length > 0);
-    signatures.add(game.enemyBullets.map(b => `${Math.round(b.vx)},${Math.round(b.vy)}`).join('|'));
-    if (boss.bossKind === 'carrier') {
-      assert.ok(game.enemyBullets.every(b => Math.abs(worldToScreen(game, b).y - boss.safeLane) >= 90), 'carrier wall must keep its advertised viewport gap after camera movement');
-    }
   }
-  assert.equal(patterns.size, 4);
-  assert.equal(signatures.size, 4);
 });
 
 test('late boss special attacks respect the absolute projectile speed ceiling', () => {
-  for (let index = 0; index < 4; index += 1) {
+  for (let index = 0; index < 2; index += 1) {
     const { game, boss } = gameWithBoss(index, 7200);
-    boss.attack = 2;
+    boss.attack = 0;
     advance(game, 1.15);
     assert.ok(game.enemyBullets.length > 0);
     assert.ok(game.enemyBullets.every(b => Math.hypot(b.vx, b.vy) <= MAX_ENEMY_BULLET_SPEED + 1e-6));
@@ -398,19 +383,19 @@ test('successive timed power items change firing behavior and lance hits each ta
   assert.deepEqual(patterns, [{ mode: 'spread', count: 5 }, { mode: 'lance', count: 3 }, { mode: 'helix', count: 4 }]);
 });
 
-test('stalling a boss still brings growing escort pressure without exceeding the population cap', () => {
-  const { game } = gameWithBoss();
-  let sawEscort = false, maxPopulation = 0;
-  for (let frame = 0; frame < 60 * 100; frame += 1) {
-    game.player.invincible = 2;
-    updateGame(game, 1 / 60);
-    if (game.time > 14 && game.enemies.some(enemy => enemy.type !== 'boss')) sawEscort = true;
-    maxPopulation = Math.max(maxPopulation, game.enemies.length);
+test('a stalled carrier stays in tier two and never accumulates more than two escorts', () => {
+  const { game } = gameWithBoss(1);
+  let sawEscort = false;
+  for (let frame = 0; frame < 60 * 65; frame++) {
+    game.player.invincible = 2; updateGame(game, 1 / 60);
+    const escorts = game.enemies.filter(enemy => enemy.escort);
+    sawEscort ||= escorts.length > 0;
+    assert.ok(escorts.length <= 2);
     assert.ok(game.enemies.length <= game.difficulty.maxEnemies);
-    assert.ok(game.enemyBullets.length <= 260);
+    assert.ok(game.enemyBullets.length <= game.difficulty.maxEnemyBullets);
   }
-  assert.ok(sawEscort && maxPopulation > 1);
-  assert.equal(game.boss.bossKind, 'warden');
+  assert.ok(sawEscort);
+  assert.equal(game.boss.bossKind, 'carrier'); assert.equal(game.bossesDefeated, 1);
 });
 
 test('tilted ships fire and flash from the rotated visible nose while shots travel forward', () => {

@@ -33,18 +33,35 @@ const SAMPLE_GROUPS = {
   heavy: ['explosion-heavy'],
   charge: ['charge'],
 };
-const BUS_VOLUME = { shot: 0.78, impact: 0.94, ui: 0.92 };
+const BUS_VOLUME = { shot: 0.84, impact: 0.94, ui: 0.92 };
 const VOICE_LIMITS = { shot: 4, enemy: 3, hit: 4, explosion: 4, critical: 3, ui: 2 };
 const MAX_VOICES = 20;
 const WEAPON_SOUNDS = {
-  normal: { sample: 'fire-normal', volume: 0.82, duration: 0.14 },
-  spread: { sample: 'fire-spread', volume: 0.82, duration: 0.18 },
-  lance: { sample: 'fire-lance', volume: 0.84, duration: 0.22 },
-  helix: { sample: 'fire-helix', volume: 0.84, duration: 0.2 },
-  drone: { sample: 'fire-drone', volume: 0.7, duration: 0.12 },
+  normal: { sample: 'fire-normal', volume: 0.9, duration: 0.14 },
+  spread: { sample: 'fire-spread', volume: 0.88, duration: 0.18 },
+  lance: { sample: 'fire-lance', volume: 0.91, duration: 0.22 },
+  helix: { sample: 'fire-helix', volume: 0.9, duration: 0.2 },
+  drone: { sample: 'fire-drone', volume: 0.56, duration: 0.12 },
 };
+// Short event accents use their own small budget, never a music/beat clock.
+const COMBAT_ACCENTS = {
+  maxTones: 4,
+  playerDamageHold: 0.24,
+  shotCooldown: 0.12,
+  hitCooldown: 0.1,
+  chainCooldown: 0.1,
+  chainNotes: [392, 494, 587, 784],
+  weapons: {
+    normal: { note: 660, rate: 1.08, duration: 0.075, volume: 0.06, wave: 'triangle' },
+    spread: { note: 523, rate: 1.035, duration: 0.1, volume: 0.064, wave: 'triangle' },
+    lance: { note: 988, rate: 1.12, duration: 0.13, volume: 0.053, wave: 'sine' },
+    helix: { note: 784, rate: 1.065, duration: 0.12, volume: 0.058, wave: 'triangle' },
+    drone: { note: 1320, rate: 1.1, duration: 0.055, volume: 0.028, wave: 'sine' },
+  },
+};
+const PICKUP_EFFECTS = new Set(['change', 'extend', 'levelUp', 'drone', 'health']);
 
-/** Existing music plus preloaded effects; synthesis is limited to retained UI notes. */
+/** Existing music, preloaded effects and bounded, immediate combat/UI accents. */
 export class AudioDirector {
   constructor(manifestUrl = './assets/audio/manifest.json', { soundVariation = true, pitchCents = 25, gainDb = 0.6, accentDb = 0.8, audioSeed = 0x5a17c3d9 } = {}) {
     this.soundVariation = Boolean(soundVariation);
@@ -60,6 +77,13 @@ export class AudioDirector {
     this._buses = {};
     this._duckUntil = 0;
     this._duckLevel = 1;
+    this._musicVolumes = [0, 0];
+    this._musicDuckUntil = 0;
+    this._musicDuckLevel = 1;
+    this._musicDuckFrame = 0;
+    this._musicDuckFrom = 1;
+    this._musicDuckStarted = 0;
+    this._combatQuietUntil = 0;
     this._uiTones = new Set();
     this._limiter = null;
     this._saturator = null;
@@ -293,6 +317,12 @@ export class AudioDirector {
     this._uiTones.clear();
     this._lastEffects.clear();
     this._duckUntil = 0; this._duckLevel = 1;
+    cancelAnimationFrame(this._musicDuckFrame);
+    this._musicDuckFrame = 0;
+    this._musicDuckUntil = 0; this._musicDuckLevel = 1;
+    this._musicDuckFrom = 1;
+    this._applyMusicVolumes();
+    this._combatQuietUntil = 0;
     const gain = this._buses.shot?.gain;
     if (gain) { gain.cancelScheduledValues(now); gain.setValueAtTime(BUS_VOLUME.shot, now); }
   }
@@ -311,6 +341,7 @@ export class AudioDirector {
       index = this._decks[0].volume <= this._decks[1].volume ? 0 : 1;
       const deck = this._decks[index];
       deck.pause();
+      this._musicVolumes[index] = 0;
       deck.volume = 0;
       deck.src = source;
       deck.load();
@@ -331,7 +362,7 @@ export class AudioDirector {
           void deck.play().catch(() => {});
         }
       }
-      const starting = this._decks.map(deck => deck.volume);
+      const starting = [...this._musicVolumes];
       const started = performance.now();
       const fade = now => {
         if (token !== this._switchToken || this._paused) return;
@@ -339,8 +370,9 @@ export class AudioDirector {
         const progress = t * t * (3 - 2 * t);
         for (let i = 0; i < this._decks.length; i += 1) {
           const volume = i === index ? MUSIC_VOLUME : 0;
-          this._decks[i].volume = Math.max(0, Math.min(1, starting[i] + (volume - starting[i]) * progress));
+          this._musicVolumes[i] = Math.max(0, Math.min(1, starting[i] + (volume - starting[i]) * progress));
         }
+        this._applyMusicVolumes();
         if (t < 1) this._fadeFrame = requestAnimationFrame(fade);
         else for (let i = 0; i < this._decks.length; i += 1) if (i !== index) this._decks[i].pause();
       };
@@ -352,11 +384,49 @@ export class AudioDirector {
     }
   }
 
-  _tone(from, to, duration, volume, type = 'sine', delay = 0) {
+  _applyMusicVolumes() {
+    const now = this.context?.currentTime || 0;
+    const release = Math.max(0, Math.min(1, (now - this._musicDuckUntil) / 0.24));
+    const attack = Math.max(0, Math.min(1, (now - this._musicDuckStarted) / 0.035));
+    const held = this._musicDuckFrom + (this._musicDuckLevel - this._musicDuckFrom) * attack;
+    const level = held + (1 - held) * release;
+    for (let i = 0; i < this._decks.length; i += 1) this._decks[i].volume = this._musicVolumes[i] * level;
+    return level;
+  }
+
+  _duckMusic(level, hold) {
+    const now = this.context.currentTime;
+    // Mix contrast only: retain the same tracks, playback position and state crossfade.
+    this._musicDuckFrom = this._applyMusicVolumes();
+    this._musicDuckLevel = now < this._musicDuckUntil ? Math.min(level, this._musicDuckLevel) : Math.min(level, this._musicDuckFrom);
+    this._musicDuckStarted = now;
+    this._musicDuckUntil = Math.max(this._musicDuckUntil, now + hold);
+    cancelAnimationFrame(this._musicDuckFrame);
+    const update = () => {
+      this._applyMusicVolumes();
+      this._musicDuckFrame = this.context.currentTime < this._musicDuckUntil + 0.24
+        ? requestAnimationFrame(update) : 0;
+    };
+    update();
+  }
+
+  _tone(from, to, duration, volume, type = 'sine', delay = 0, combat = false, priority = combat ? 1 : 3) {
     const context = this.context;
     // UI motifs have a separate small ceiling, including notes scheduled ahead.
     for (const tone of this._uiTones) if (tone.endsAt <= context.currentTime) this._uiTones.delete(tone);
-    if (this._uiTones.size >= 12) return;
+    const accents = [...this._uiTones].filter(tone => tone.combat);
+    if (combat && context.currentTime < this._combatQuietUntil) return false;
+    // Tension lifecycle cues can replace ordinary combat resonance; warnings remain above both.
+    if (combat && accents.length >= COMBAT_ACCENTS.maxTones) {
+      const victim = accents.sort((a, b) => a.priority - b.priority || a.endsAt - b.endsAt)[0];
+      if (victim.priority >= priority) return false;
+      this._stopTone(victim);
+    }
+    if (this._uiTones.size >= 12) {
+      const victim = [...this._uiTones].sort((a, b) => a.priority - b.priority || a.endsAt - b.endsAt)[0];
+      if (victim.priority >= priority) return false;
+      this._stopTone(victim);
+    }
     const at = context.currentTime + delay;
     const oscillator = context.createOscillator();
     const gain = context.createGain();
@@ -367,12 +437,28 @@ export class AudioDirector {
     gain.gain.exponentialRampToValueAtTime(volume, at + Math.min(0.003, duration * 0.08));
     gain.gain.exponentialRampToValueAtTime(0.0001, at + duration);
     oscillator.connect(gain);
-    gain.connect(this._buses.ui || this._effects);
-    const tone = { oscillator, gain, endsAt: at + duration + 0.015 };
+    gain.connect(this._buses[combat ? 'impact' : 'ui'] || this._effects);
+    const tone = { oscillator, gain, combat, priority, endsAt: at + duration + 0.015 };
     this._uiTones.add(tone);
     oscillator.start(at);
     oscillator.stop(at + duration + 0.015);
     oscillator.onended = () => { this._uiTones.delete(tone); oscillator.disconnect(); gain.disconnect(); };
+    return true;
+  }
+
+  _stopTone(tone) {
+    try { tone.oscillator.stop(this.context.currentTime); } catch { /* An already ended note is harmless. */ }
+    tone.oscillator.onended = null;
+    tone.oscillator.disconnect(); tone.gain.disconnect();
+    this._uiTones.delete(tone);
+  }
+
+  _combatAccent(key, from, to, duration, volume, wave = 'triangle', cooldown = 0.1, priority = 1) {
+    const now = this.context.currentTime, throttleKey = `accent-${key}`;
+    if (now - (this._lastEffects.get(throttleKey) ?? -Infinity) < cooldown) return false;
+    if (!this._tone(from, to, duration, volume, wave, 0, true, priority)) return false;
+    this._lastEffects.set(throttleKey, now);
+    return true;
   }
 
   _duckShots(level, hold) {
@@ -485,7 +571,7 @@ export class AudioDirector {
       gain.gain.setValueAtTime(gain.gain.value, now + Math.max(0, playDuration - 0.025));
       gain.gain.linearRampToValueAtTime(0, now + playDuration);
     }
-    const voice = { source, gain, pan, group, priority, sampleName, playerCue: Boolean(event.player), accent: Boolean(options.accent), volume: gain.gain.value,
+    const voice = { source, gain, pan, group, priority, sampleName, playerCue: Boolean(event.player), tension: event.tension === true, accent: Boolean(options.accent), volume: gain.gain.value,
       startedAt: now, endsAt: now + playDuration };
     this._voices.add(voice);
     source.onended = () => {
@@ -508,11 +594,15 @@ export class AudioDirector {
       : event.type === 'shot' && event.powered === false ? 'normal'
         : Object.hasOwn(WEAPON_SOUNDS, event.weaponMode) ? event.weaponMode : 'normal';
     const targetProfile = TARGET_SOUNDS[event.enemyType] || 'targetLight';
+    const tension = event.tension === true, accent = COMBAT_ACCENTS.weapons[weaponMode];
+    const pickupEffect = PICKUP_EFFECTS.has(event.effect) ? event.effect
+      : (event.pickupType || event.itemType) === 'health' ? 'health' : 'change';
     // Three bounded target-profile keys allow distinct surfaces in one frame.
     const key = event.type === 'hit' && !event.player ? `hit-${targetProfile}`
       : event.type === 'hit' || event.type === 'explosion' ? `${event.type}-${Boolean(event.player)}-${Boolean(event.boss)}`
         : event.type === 'shot' ? `shot-${weaponMode === 'drone' ? 'drone' : 'weapon'}`
-          : event.type === 'weaponWarning' || event.type === 'weaponExpired' ? `${event.type}-${event.slot || 'weapon'}` : event.type;
+          : event.type === 'weaponWarning' || event.type === 'weaponExpired' ? `${event.type}-${event.slot || 'weapon'}`
+            : event.type === 'pickup' ? `pickup-${pickupEffect}` : event.type;
     const cooldown = event.type === 'shot' ? 0.04 : event.type === 'enemyShot' ? 0.1
       : event.type === 'hit' ? (event.player ? 0 : 0.065) : event.type === 'explosion' ? 0.075 : 0.08;
     if (now - (this._lastEffects.get(key) ?? -Infinity) < cooldown) return;
@@ -521,35 +611,77 @@ export class AudioDirector {
       case 'shot': {
         const sound = WEAPON_SOUNDS[weaponMode];
         const variation = this._shotVariation(weaponMode);
-        this._sample(sound.sample, 'shot', sound.volume * variation.gain, event, weaponMode === 'drone' ? 1 : 2, variation.rate, sound.duration, { ...variation, variation: false });
+        const played = this._sample(sound.sample, 'shot', sound.volume * variation.gain * (tension ? 1.04 : 1), event, weaponMode === 'drone' ? 1 : 2,
+          variation.rate * (tension ? accent.rate : 1), sound.duration, { ...variation, variation: false });
+        if (played && tension) this._combatAccent(`shot-${weaponMode === 'drone' ? 'drone' : 'weapon'}`, accent.note * 1.5, accent.note,
+          accent.duration, accent.volume, accent.wave, COMBAT_ACCENTS.shotCooldown);
         break;
       }
       case 'enemyShot':
         this._sample('enemy', 'enemy', event.boss ? 0.27 : 0.17, event, 1, event.boss ? 0.82 : 1, 0.2);
         break;
-      case 'explosion':
+      case 'explosion': {
         if (event.boss || event.player) {
-          if (this._sample('heavy', 'critical', event.boss ? 0.8 : 0.76, event, 4)) this._duckShots(0.4, 0.2);
-        } else if (this._sample('explosion', 'explosion', 0.56, event, 4, 1, 0.72)) this._duckShots(0.67, 0.09);
-        break;
-      case 'hit': {
-        if (event.player) {
-          if (this._sample('fixedPlayerDamage', 'critical', 0.9, event, 6, 1, 0.3, { variation: false, centered: true })) this._duckShots(0.32, 0.18);
-        } else {
-          const weaponHit = this._sample(`impact-${weaponMode}`, 'hit', weaponMode === 'drone' ? 0.65 : 0.8, event, 3, 1, 0.16, { variation: false });
-          const targetHit = this._sample(targetProfile, 'hit', weaponMode === 'drone' ? 0.65 : 0.85, event, 3, 1, 0.19, { variation: false });
-          if (weaponHit || targetHit) this._duckShots(0.82, 0.035);
+          if (this._sample('heavy', 'critical', event.boss ? 0.86 : 0.78, event, 4, 1, event.boss ? 0.9 : 0.72)) this._duckShots(0.4, 0.2);
+        } else if (this._sample('explosion', 'explosion', 0.62, event, 4, 1, 0.46)) this._duckShots(0.67, 0.09);
+        if (!event.player && Number.isFinite(event.chain) && event.chain > 0) {
+          const step = Math.min(3, Math.floor((event.chain - 1) / 3));
+          const note = COMBAT_ACCENTS.chainNotes[step] * (tension ? 1.5 : 1);
+          this._combatAccent('chain', note, note, event.boss ? 0.19 : 0.12, event.boss ? 0.06 : 0.045,
+            'triangle', COMBAT_ACCENTS.chainCooldown);
         }
         break;
       }
+      case 'hit': {
+        if (event.player) {
+          this._combatQuietUntil = now + COMBAT_ACCENTS.playerDamageHold;
+          for (const tone of [...this._uiTones]) if (tone.combat) this._stopTone(tone);
+          if (this._sample('fixedPlayerDamage', 'critical', 0.9, event, 6, 1, 0.3, { variation: false, centered: true })) {
+            this._duckShots(0.32, 0.18);
+            this._duckMusic(0.52, 0.2);
+          }
+        } else {
+          const weaponHit = this._sample(`impact-${weaponMode}`, 'hit', (weaponMode === 'drone' ? 0.5 : 0.86) * (tension ? 1.04 : 1), event, 3,
+            tension ? accent.rate : 1, 0.16, { variation: false });
+          const targetHit = this._sample(targetProfile, 'hit', weaponMode === 'drone' ? 0.5 : 0.58, event, 3, 1, 0.14, { variation: false });
+          if (weaponHit || targetHit) this._duckShots(0.82, 0.035);
+          if ((weaponHit || targetHit) && tension) this._combatAccent('hit', accent.note, accent.note * 0.75,
+            0.085, weaponMode === 'drone' ? 0.025 : 0.05, accent.wave, COMBAT_ACCENTS.hitCooldown);
+        }
+        break;
+      }
+      case 'pickupAttract':
+        // One short approach cue; actual collection still owns the reward motif.
+        this._combatAccent('pickup-attract', 330, 880, 0.14, 0.075, 'sine', 0.12, 2);
+        break;
       case 'pickup': {
-        const type = event.pickupType || event.itemType;
-        if (type === 'health') {
-          [523, 659, 784, 1047].forEach((note, i) => this._tone(note, note * 1.004, 0.25, 0.075, 'sine', i * 0.055));
-        } else this._sample('weaponChange', 'ui', 0.7, event, 5, 1, 0.36, { variation: false, centered: true });
+        if (pickupEffect === 'health') {
+          [523, 659, 784, 1047].forEach((note, i) => this._tone(note, note * 1.004, 0.25, 0.09, 'sine', i * 0.055));
+        } else if (pickupEffect === 'extend') {
+          [660, 880].forEach((note, i) => this._tone(note, note, 0.16, 0.08, 'sine', i * 0.065));
+        } else if (pickupEffect === 'levelUp') {
+          [523, 784, 1047].forEach((note, i) => this._tone(note, note, 0.18, 0.08, 'triangle', i * 0.055));
+        } else {
+          this._sample('weaponChange', 'ui', pickupEffect === 'drone' ? 0.65 : 0.82, event, 5,
+            pickupEffect === 'drone' ? 1.12 : 1, 0.36, { variation: false, centered: true });
+        }
         this._duckShots(0.48, 0.22);
         break;
       }
+      case 'tension':
+        if (event.refresh) {
+          if (this._combatAccent('tension-refresh', 1175, 1568, 0.095, 0.07, 'triangle', 0.24, 2)) this._duckShots(0.72, 0.08);
+        } else if (this._combatAccent('tension-start', 523, 1047, 0.21, 0.18, 'triangle', 0.24, 2)) {
+          this._tone(131, 262, 0.2, 0.1, 'sine', 0, true, 2);
+          this._tone(1568, 1568, 0.18, 0.075, 'sine', 0.1, true, 2);
+          this._duckShots(0.38, 0.24);
+          this._duckMusic(0.58, 0.22);
+        }
+        break;
+      case 'tensionEnd':
+        // Damage/defeat owns the danger cue; do not layer a reward-ending note over it.
+        if (event.reason === 'expired') this._combatAccent('tension-end', 784, 392, 0.16, 0.055, 'sine', 0.2, 2);
+        break;
       case 'weaponWarning': {
         const note = event.slot === 'drone' ? 740 : 660;
         this._tone(note, note * 0.94, 0.13, 0.035, 'sine');
