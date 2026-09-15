@@ -4,11 +4,17 @@ Updated: 2026-09-15 KST
 
 Branch: `main`
 
-HEAD: `bd0357a430c8c3d83b712cf982ab7354bbe1a7a6`
+## Git 기준
 
-Remote `main`: `bd0357a430c8c3d83b712cf982ab7354bbe1a7a6` — 같은 날 `git ls-remote origin refs/heads/main`으로 확인.
+현재 Git 상태는 작업 시작 시 반드시 실제 저장소에서 확인한다.
 
-HEAD는 이번 문서 정리의 소스 대조 기준이다. 이 문서 변경은 아직 커밋하지 않았다.
+```text
+git status --short --branch
+git log -1 --oneline
+git ls-remote origin refs/heads/main
+```
+
+이 문서에 기록된 날짜나 과거 SHA를 현재 Git 상태의 대체물로 사용하지 않는다.
 
 ## HUMAN SUMMARY
 
@@ -36,7 +42,8 @@ STATUS: 1차 전투 확인본 구현됨. 전체 제작 완료·최종 사용자 
 
 현재 작업:
 
-- 문서 체계 1차 최소 정리. 게임 코드·자산·테스트 변경, 커밋·푸시·배포는 범위 밖.
+- 문서 체계 1차 정리 완료.
+- 다음 사용자 요청 대기.
 
 다음 후보:
 
