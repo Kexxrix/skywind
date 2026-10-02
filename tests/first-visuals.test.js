@@ -150,17 +150,24 @@ test('speed focus lines are deterministic, stay presentation-only and grow with 
   assert.ok(length(fast[0])>length(slow[0]));
 });
 
-test('enemy cue corona uses light compositing without a dark backing and leaves the danger core unchanged',()=>{
-  const stops=[],fills=[],arcs=[];
-  const c=new Proxy({createRadialGradient(){return {addColorStop(offset,color){stops.push([offset,color]);}};},
-    fillRect(){fills.push(this.globalCompositeOperation);},arc(x,y,radius){arcs.push(radius);}},
-    {get(target,key){return key in target?target[key]:()=>{};}});
-  const b={x:300,y:200,vx:-160,vy:0,radius:5.5};
-  Renderer.prototype.drawCombatCues.call({presentation:{threatVariant:'C'},flashes:[]},c,{mode:'title',enemies:[],enemyBullets:[b]});
-  assert.deepEqual(fills,['lighter']);
-  assert.ok(stops.every(([,color])=>color.startsWith('rgba(255,')));
-  assert.deepEqual(arcs,[5.5,5.5*.32]);
-  assert.equal(b.radius,5.5);
+test('enemy cue corona follows its palette with light compositing and preserves the complete danger nucleus',async()=>{
+  const {PROJECTILE_STYLES,PROJECTILE_PALETTES}=await import('../src/projectile-style.js');
+  for(const style of Object.keys(PROJECTILE_STYLES))for(const palette of Object.values(PROJECTILE_PALETTES)) {
+    const stops=[],coronaFills=[],nuclei=[];let lastArc;
+    const c=new Proxy({createRadialGradient(){return {addColorStop(offset,color){stops.push([offset,color]);}};},
+      fillRect(){coronaFills.push(this.globalCompositeOperation);},arc(x,y,radius){lastArc=[x,y,radius];},
+      fill(){nuclei.push({arc:lastArc,color:this.fillStyle,composite:this.globalCompositeOperation,alpha:this.globalAlpha});}},
+      {get(target,key){return key in target?target[key]:()=>{};}});
+    const b={x:300,y:200,vx:-160,vy:0,radius:5.5,style,palette:palette.id};
+    const g={mode:'title',sceneTime:5,rng:82731,enemies:[],enemyBullets:[b]},before=structuredClone(g);
+    Renderer.prototype.drawCombatCues.call({presentation:{threatVariant:'C'},flashes:[]},c,g);
+    assert.deepEqual(coronaFills,['lighter']);
+    assert.deepEqual(stops,[[0,palette.core+'b8'],[.35,palette.color+'59'],[1,palette.color+'00']]);
+    assert.ok(nuclei.some(fill=>fill.color===palette.color&&fill.composite==='source-over'&&fill.alpha===1&&
+      JSON.stringify(fill.arc)===JSON.stringify([300,200,5.5])),style+' '+palette.id+' full collision nucleus');
+    assert.ok(nuclei.some(fill=>fill.color===palette.core&&JSON.stringify(fill.arc)===JSON.stringify([300,200,5.5*.32])),style+' '+palette.id+' bright center');
+    assert.deepEqual(g,before);
+  }
 });
 
 test('supply light colors follow side independently of item type and never draw a dark panel',()=>{

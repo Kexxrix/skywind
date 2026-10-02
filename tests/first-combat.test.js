@@ -84,7 +84,7 @@ test('the named three-second boss warning emits once per normal segment and rest
   assert.deepEqual(first.map(e => [e.bossName, e.bossKind, e.remaining]), [['WARDEN', 'warden', 3]]);
   assert.equal(advance(g, 0.1).filter(e => e.type === 'bossWarning').length, 0);
   g.bossesDefeated = 1; g.normalTime = 41.99;
-  assert.equal(advance(g, 0.04).find(e => e.type === 'bossWarning').bossName, 'IRON CARRIER');
+  assert.equal(advance(g, 0.04).find(e => e.type === 'bossWarning').bossName, bossProfile(1).name);
   startGame(g); g.mode = 'playing'; g.normalTime = 41.99; g.nextBossAt = Infinity;
   assert.equal(advance(g, 0.04).filter(e => e.type === 'bossWarning').length, 1);
 });

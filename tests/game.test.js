@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, startGame, updateGame, consumeEvents, cameraRoll, playerMuzzle, playerHeading, difficultyAt, screenToWorld, worldToScreen, ENEMY_TYPES, BOSS_KINDS, MAX_ENEMY_BULLET_SPEED } from '../src/game.js';
+import { bossProfile } from '../src/level.js';
 
 function playable(seed = 12) {
   const game = createGame(seed);
@@ -306,15 +307,20 @@ test('combat tier is independent of elapsed time, advances through five victorie
   assert.equal(late.tier, 51);
 });
 
-test('opening normal sequence assigns the four taught patterns to existing sprites', () => {
-  const game = playable(); game.nextWaveAt = 0;
-  const patterns = new Set(), types = new Set();
-  for (let frame = 0; frame < 40 * 60; frame++) {
-    game.player.invincible = 2; updateGame(game, 1 / 60);
-    for (const enemy of game.enemies) { if (enemy.pattern) patterns.add(enemy.pattern); types.add(enemy.type); }
+test('D52 normal scripts actually admit all twelve roles and their silhouette-matched attack grammar', () => {
+  const patterns = new Set(), types = new Set(), dashTypes = new Set();
+  for (let pace = 0; pace < 6; pace++) {
+    const game = playable(); game.bossesDefeated = pace; game.difficulty = difficultyAt(0, pace); game.nextWaveAt = 0;
+    for (let frame = 0; frame < 42 * 60; frame++) {
+      game.player.invincible = 2; // Runtime content availability only, not survival evidence.
+      updateGame(game, 1 / 60);
+      for (const enemy of game.enemies) { if (enemy.pattern) patterns.add(enemy.pattern); types.add(enemy.type); }
+      for (const event of consumeEvents(game)) if (event.type === 'dashStart') dashTypes.add(event.enemyType);
+    }
   }
-  assert.deepEqual([...patterns].sort(), ['B01', 'B02', 'B03', 'B04']);
-  assert.deepEqual([...types].sort(), ['beetle', 'claw', 'dragonfly', 'orb', 'ray', 'worm']);
+  assert.deepEqual([...patterns].sort(), ['deploy', 'halo', 'loom', 'lunge', 'petal', 'rail', 'seed', 'snapshot', 'trident', 'zipper']);
+  assert.deepEqual([...types].sort(), ['beetle', 'claw', 'dart', 'dragonfly', 'mantis', 'needle', 'orb', 'pincer', 'ray', 'scarab', 'wasp', 'worm']);
+  assert.ok(dashTypes.has('wasp') && dashTypes.has('pincer'), 'both body attack roles actually start a committed dash');
 });
 
 function gameWithBoss(index = 0, time = 0) {
@@ -332,26 +338,64 @@ function gameWithBoss(index = 0, time = 0) {
   return { game, boss };
 }
 
-test('the two trial bosses open with their designed ring and moving window tells', () => {
+test('the two trial bosses first tell cathedral ports and real limited deployment', () => {
   for (let index = 0; index < 2; index++) {
     const { game, boss } = gameWithBoss(index);
     updateGame(game, 1 / 120);
-    assert.equal(boss.attackName, index ? 'B04' : 'B01');
-    advance(game, 0.5);
+    const first = bossProfile(index).attackOrder[0];
+    assert.equal(first, index ? 'deploy' : 'cathedral');
+    assert.equal(boss.attackName, first);
+    advance(game, .5);
     assert.equal(game.enemyBullets.length, 0);
     assert.ok(boss.telegraph > 0);
-    advance(game, 0.5);
-    assert.ok(game.enemyBullets.length > 0);
+    const events = consumeEvents(game);
+    advance(game, .6); events.push(...consumeEvents(game));
+    if (!index) {
+      assert.ok(game.enemyBullets.length > 0);
+      assert.ok(events.some(event => event.type === 'enemyShot' && event.boss && event.pattern === 'cathedral' && event.bulletCount > 0));
+    } else {
+      const children = game.enemies.filter(enemy => enemy.summoned && enemy.parentId === boss.id);
+      assert.equal(children.length, 2);
+      assert.ok(events.some(event => event.type === 'escortDeployed' && event.enemyId === boss.id && event.count === 2 && event.backlog === false));
+      assert.ok(!events.some(event => event.type === 'enemyShot' && event.enemyId === boss.id), 'deployment itself creates no projectile');
+      for (const child of children) {
+        assert.equal(child.score, 0); assert.equal(child.dropHealth, false);
+        assert.equal(child.bossRewardEligible, false); assert.equal(child.canDeploy, false);
+      }
+      const child = children[0], score = game.score;
+      Object.assign(child, screenToWorld(game, { x: 650, y: 360 }), { hp: 1, speed: 0 }); child.baseY = child.y;
+      game.bullets.push({ x: child.x, y: child.y, vx: 0, vy: 0, radius: 5, power: 2 });
+      updateGame(game, 1 / 120);
+      assert.ok(child.dead && !game.enemies.includes(child));
+      assert.equal(game.score, score);
+      assert.equal(game.pickups.filter(item => item.type === 'health').length, 0, 'a real summoned death grants no recovery');
+    }
   }
 });
 
-test('late boss special attacks respect the absolute projectile speed ceiling', () => {
-  for (let index = 0; index < 2; index += 1) {
-    const { game, boss } = gameWithBoss(index, 7200);
-    boss.attack = 0;
-    advance(game, 1.15);
-    assert.ok(game.enemyBullets.length > 0);
-    assert.ok(game.enemyBullets.every(b => Math.hypot(b.vx, b.vy) <= MAX_ENEMY_BULLET_SPEED + 1e-6));
+test('late boss loops sample actual projectile families within the absolute speed ceiling after zero-shot actions', () => {
+  for (let variant = 0; variant < 5; variant++) {
+    const { game, boss } = gameWithBoss(50 + variant, 7200);
+    const sampled = new Map(), deployed = [];
+    for (let frame = 0; frame < 80 * 120; frame++) {
+      updateGame(game, 1 / 120);
+      for (const event of consumeEvents(game)) {
+        if (event.type === 'escortDeployed' && event.enemyId === boss.id) deployed.push(event);
+        if (event.type !== 'enemyShot' || event.enemyId !== boss.id || !event.bulletCount) continue;
+        const samples = sampled.get(event.pattern) || [];
+        for (const shot of event.shots) {
+          const speed = Math.hypot(shot.vx, shot.vy);
+          assert.ok(speed > 0 && speed <= MAX_ENEMY_BULLET_SPEED + 1e-6, `${boss.bossKind} ${event.pattern}: ${speed}`);
+          samples.push(speed);
+        }
+        sampled.set(event.pattern, samples);
+      }
+      assert.ok(game.enemyBullets.every(bullet => Math.hypot(bullet.vx, bullet.vy) <= MAX_ENEMY_BULLET_SPEED + 1e-6));
+    }
+    for (const pattern of bossProfile(50 + variant).attackOrder.filter(pattern => !['deploy', 'lunge'].includes(pattern))) {
+      assert.ok(sampled.get(pattern)?.length, `${boss.bossKind} actually releases ${pattern} samples`);
+    }
+    if (boss.bossKind === 'carrier') assert.ok(deployed.length > 0 && deployed[0].count === 2);
   }
 });
 

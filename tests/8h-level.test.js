@@ -26,8 +26,9 @@ test('each normal stage has a runtime script with distinct teaching blocks and a
       blocks.set(encounter.blockId, encounter);
       assert.equal(normalPattern(second, pace), encounter.pattern);
       assert.ok(encounter.roles.every(role => role.count > 0 && role.lane >= 112 && role.lane <= 608));
-      if (encounter.movementWindow) assert.equal(encounter.aimLimit, 0, 'mandatory lane travel excludes aimed fire');
-      assert.ok(encounter.maxAttackFamilies <= 2, 'hell cannot accumulate unrelated pattern families');
+      assert.equal(encounter.movementWindow, false, 'row apertures no longer exclude all other pressure');
+      assert.ok(encounter.maxPatternFamilies <= 2);
+      assert.ok(encounter.maxAttackFamilies <= 3, 'simultaneous families remain explicitly bounded');
       if (second >= 42) {
         assert.equal(encounter.pattern, null);
         assert.deepEqual(encounter.roles, []);
@@ -39,11 +40,11 @@ test('each normal stage has a runtime script with distinct teaching blocks and a
     assert.ok(normalEncounter(9, pace).roles.some(role => role.pattern));
   }
   assert.equal(new Set(scripts).size, 6);
-  assert.ok(normalEncounter(9, 3).roles.some(role => role.pattern === 'B05'));
-  assert.ok(normalEncounter(21, 2).roles.some(role => role.lane === 480 && role.pattern === 'B04'));
+  assert.ok(normalEncounter(9, 3).roles.some(role => role.pattern === 'zipper'));
+  assert.ok(normalEncounter(21, 2).roles.some(role => role.type === 'worm' && role.lane === 500 && role.pattern === 'loom' && role.prefillMode === 'field-only' && role.holdScreenX === 1100));
   const editable = normalEncounter(10, 0); editable.roles[0].type = 'bad'; editable.safeLanes[0] = 999;
   assert.equal(normalEncounter(10, 0).roles[0].type, 'orb');
-  assert.equal(normalEncounter(10, 0).safeLanes[0], 240);
+  assert.equal(normalEncounter(10, 0).safeLanes[0], 220);
 });
 
 test('five bosses differ in attack actions and movement rather than color or HP alone', () => {
@@ -52,12 +53,12 @@ test('five bosses differ in attack actions and movement rather than color or HP 
   assert.equal(new Set(profiles.map(p => p.attackOrder.join(','))).size, 5);
   assert.equal(new Set(profiles.map(p => JSON.stringify(p.motion))).size, 5);
   assert.equal(new Set(profiles.map(p => p.mechanic)).size, 5);
-  assert.ok(profiles[1].attackOrder.includes('escort'));
+  assert.ok(profiles[1].attackOrder.includes('deploy'));
   assert.ok(profiles[3].attackOrder.includes('B05'));
   for (let stage = 0; stage < 10; stage++) for (let attackIndex = 0; attackIndex < 12; attackIndex++) {
     const attack = bossAttack(stage, attackIndex);
     assert.ok(attack.telegraph >= trialDifficulty(stage).minTelegraph);
-    assert.equal(attack.aimLock, 'release');
+    assert.equal(attack.aimLock, attackPolicy(attack.pattern).family === 'aim' ? 'snapshot' : 'release');
     if (attack.movementWindow) { assert.equal(attack.aimLimit, 0); assert.ok(attack.pauseAfter >= 1.1); }
   }
   assert.equal(bossProfile(5).kind, 'warden');
@@ -93,7 +94,7 @@ test('geometry preserves advertised corridors while retaining source ports and s
       }
     }
   }
-  for (const pattern of ['B04', 'B05']) assert.ok(attackPolicy(pattern, 5).forbidden.includes('aim'));
+  for (const pattern of ['B04', 'B05']) assert.ok(!attackPolicy(pattern, 5).forbidden.includes('aim'));
 });
 
 test('an uninterrupted runtime reaches all five bosses and hell only after six real defeat transitions', () => {
@@ -153,7 +154,7 @@ test('a surviving boss is never deleted or advanced by the five-minute tempo tar
   assert.ok(Number.isFinite(worldToScreen(g, boss).y));
 });
 
-test('an offscreen curtain tail cannot unlock aimed fire before altitude travel can reveal it again', () => {
+test('an offscreen row tail remains alive without granting blanket aimed-fire exclusivity', () => {
   for (const route of ['B04', 'B05']) {
     const g = createGame(9317); startGame(g); g.mode = 'playing'; g.bossesDefeated = 3;
     g.normalTime = 1; g.nextWaveAt = g.nextBossAt = g.nextPickupAt = Infinity;
@@ -168,7 +169,7 @@ test('an offscreen curtain tail cannot unlock aimed fire before altitude travel 
     updateGame(g, 1 / 120, { y: 1 });
     assert.equal(g.enemyBullets.length, 1, 'the tail is still alive inside the projected culling margin');
     assert.ok(worldToScreen(g, g.enemyBullets[0]).y > 700, 'this tail is outside the current visible attack window');
-    assert.equal(enemy.locked, false, `${route} keeps its travel window exclusive beyond the present camera`);
-    assert.ok(!consumeEvents(g).some(event => event.type === 'charge' && event.attackName === 'aim'));
+    assert.equal(enemy.locked, true, `${route} retains its real tail while a separate aimed family can warn`);
+    assert.ok(consumeEvents(g).some(event => event.type === 'charge' && event.attackName === 'aim'));
   }
 });

@@ -105,25 +105,28 @@ test('too close fast aiming skips an unsafe shot instead of violating the post-r
   assert.equal(g.aimCounter, 2, 'a blocked fast release does not consume its speed slot');
 });
 
-test('natural waves and boss loops actually release all three aimed speeds in tier two while tier one stays slow', () => {
+test('natural waves and boss loops release numeric aimed speeds across aim, snapshot and rail families', () => {
   for (const victories of [0, 1, 2]) {
     const g = createGame(74912); startGame(g); g.bossesDefeated = victories;
-    const speeds = new Set(), released = new Set(), types = new Set();
+    const speeds = new Set(), released = new Set(), types = new Set(), launches = new Map(), aimedPatterns = new Set();
     for (let frame = 0; frame < 120 * 120; frame++) {
       g.player.invincible = 2; // Load/availability observation, not survival proof.
       updateGame(g, 1 / 120);
-      for (const event of consumeEvents(g)) if (event.type === 'enemyShot' && event.pattern === 'aim') {
-        speeds.add(event.speedTier); types.add(event.boss ? 'boss' : 'wave');
+      for (const event of consumeEvents(g)) if (event.type === 'enemyShot' && ['aim', 'snapshot', 'rail'].includes(event.pattern)) {
+        types.add(event.boss ? 'boss' : 'wave'); aimedPatterns.add(event.pattern);
+        for (const shot of event.shots) { speeds.add(Math.round(Math.hypot(shot.vx, shot.vy))); launches.set(shot.id, shot); }
       }
       for (const b of g.enemyBullets) if (b.aimedAt && !released.has(b.id)) {
         released.add(b.id);
-        const origin = { x: b.x - b.vx * b.age, y: b.y - b.vy * b.age };
+        const origin = launches.get(b.id);
+        assert.ok(origin, 'every sampled aimed projectile has a real release record');
         const flightTime = (Math.hypot(b.aimedAt.x - origin.x, b.aimedAt.y - origin.y) - b.radius - g.player.radius) / Math.hypot(b.vx, b.vy);
         assert.ok(flightTime >= g.difficulty.minimumFlightTime - 1e-8);
       }
     }
-    assert.deepEqual([...speeds].sort(), victories ? ['fast', 'medium', 'slow'] : ['slow']);
+    assert.deepEqual([...speeds].sort((a, b) => a - b), victories === 0 ? [160] : victories === 1 ? [160, 240, 340] : [160, 240, 340, 430]);
     assert.deepEqual([...types].sort(), ['boss', 'wave']);
+    assert.ok(aimedPatterns.has('snapshot') || aimedPatterns.has('rail'));
     assert.ok(released.size >= 6);
     startGame(g); assert.equal(g.aimCounter, 0, 'a retry starts a new released-shot rotation');
   }
@@ -177,25 +180,29 @@ test('both tiers retain a continuous normal-input survival route through each pa
   for (let tier = 0; tier < 2; tier++) for (const pattern of ['B01', 'B02', 'B03', 'B04']) {
     const g = playable(tier), lane = pattern === 'B04' ? 240 : pattern === 'B02' && tier ? 200 : 150;
     const followWindow = pattern === 'B04' && tier === 1;
+    // Tight moving rows require small local dodges; the old 55px excursion crossed the curtain itself.
     Object.assign(g.player, screenToWorld(g, { x: 240, y: lane }), { invincible: 0 });
     g.enemies = [emitter(90, 'orb', pattern), Object.assign(emitter(91), { x: 1100, attack: 1 })];
     if (tier) g.enemies.push(Object.assign(emitter(92), { x: 1080, attack: 2 }));
-    let patternShots = 0, aimedShots = 0, travelled = 0, targetY = lane, lastDodge = -2;
+    let patternShots = 0, aimedShots = 0, travelled = 0, targetY = lane, lastDodge = -2, overlapObserved = false;
     for (let frame = 0; frame < 8 * 120; frame++) {
       const before = { x: g.player.x, y: g.player.y }, screenY = worldToScreen(g, g.player).y;
       if (!followWindow) targetY = lane;
       const imminent = g.enemyBullets.map(b => {
         const arrival = (g.player.x - b.x) / (b.vx || 1);
         return { arrival, y: b.y + b.vy * arrival };
-      }).filter(b => b.arrival > 0 && b.arrival < 1 && Math.abs(b.y - g.player.y) < (followWindow ? 40 : 30));
+      }).filter(b => b.arrival > 0 && b.arrival < (followWindow ? .5 : 1) && Math.abs(b.y - g.player.y) < 30);
       if (imminent.length && (!followWindow || g.time - lastDodge > 0.35)) {
         const center = (Math.min(...imminent.map(b => b.y)) + Math.max(...imminent.map(b => b.y))) / 2;
-        targetY = screenY + (g.player.y < center ? -1 : 1) * (followWindow ? 55 : 65);
+        targetY = screenY + (g.player.y < center ? -1 : 1) * (followWindow ? 12 : 65);
         lastDodge = g.time;
       } else if (g.time - lastDodge > 1.3) targetY = lane;
       const pointer = screenToWorld(g, { x: 240, y: Math.max(90, Math.min(630, targetY)) });
       updateGame(g, 1 / 120, { pointer });
       travelled += Math.hypot(g.player.x - before.x, g.player.y - before.y);
+      assert.ok(Math.abs(g.player.y - before.y) <= 490 / 120 + 1e-6, 'route uses the preserved vertical input speed');
+      const visible = g.enemyBullets.filter(bullet => { const point = worldToScreen(g, bullet); return point.x > 40 && point.x < 1280 && point.y > 20 && point.y < 700; });
+      overlapObserved ||= visible.some(bullet => bullet.pattern === pattern) && visible.some(bullet => bullet.family === 'aim');
       for (const event of consumeEvents(g)) if (event.type === 'enemyShot') {
         if (event.pattern === pattern) patternShots++;
         if (event.pattern === 'aim') aimedShots++;
@@ -203,8 +210,8 @@ test('both tiers retain a continuous normal-input survival route through each pa
       assert.equal(g.player.hp, 100, `${pattern} tier ${tier} at ${g.time}`);
     }
     assert.ok(patternShots >= 2, `${pattern} actually released multiple rows`);
-    if (pattern === 'B04') assert.equal(aimedShots, 0, 'mandatory window travel excludes aimed overlap');
-    else assert.ok(aimedShots >= 1, `${pattern} actually overlapped its permitted aimed pressure`);
+    assert.ok(aimedShots >= 1, `${pattern} actually releases permitted aimed pressure`);
+    assert.ok(overlapObserved, `${pattern} and aimed projectiles coexist inside the visible flight space`);
     if (pattern !== 'B04' || tier > 0) assert.ok(travelled > 30, `${pattern} tier ${tier}: normal movement traversed the route`);
     // The first 80-unit window deliberately also permits a stationary prepositioned core.
   }

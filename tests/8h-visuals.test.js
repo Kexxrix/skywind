@@ -81,7 +81,7 @@ test('model pixel anchors share fixed pivot, scale and combat-selected state wit
     assert.equal(getMechaSpec({...enemy,armorOpen:false,telegraph:.8}).filename,'runtime/drone-idle.png','an absent charge frame falls back with the same anchor set');
   } finally {emptyManifest();}
   assert.equal(getMechaSpec({type:'beetle'}),null);
-  assert.equal(MECHA_MANIFEST_PATH,'./assets/art/mecha-8h/manifest.json');
+  assert.equal(MECHA_MANIFEST_PATH,'./assets/art/mecha-12h-local.json');
 });
 
 test('model registration rejects unsafe paths and does not partially overwrite a working registry',()=>{
@@ -206,6 +206,9 @@ test('a visible core marker or missing open render does not grant weakpoint perm
     registerMechaManifest(fixture);
     assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,false);
     fixture.entries[0].frames.open={...idle,filename:'open.png'};
+    registerMechaManifest(fixture);
+    assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,false,'an open filename and marker alone are not exposure permission');
+    fixture.entries[0].frames.open.coreExposed=true;
     registerMechaManifest(fixture);
     assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,true);
     fixture.entries[0].weakpointEnabled=false;registerMechaManifest(fixture);

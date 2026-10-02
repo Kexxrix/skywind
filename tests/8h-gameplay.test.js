@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createGame, startGame, updateGame, consumeEvents, worldToScreen, screenToWorld, PLAYER_HIT_RADIUS } from '../src/game.js';
 import { registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaTransform } from '../src/mecha-art.js';
-import { bossProfile, trialDifficulty } from '../src/level.js';
+import { bossProfile, bossAttack, trialDifficulty } from '../src/level.js';
 
 function play(seed = 82615) {
   const game = createGame(seed);
@@ -114,28 +114,30 @@ test('lancer reacts to altitude between attacks and uses both physical ports in 
     game.boss.fireCooldown = 100;
     advance(game, 0.25);
   }
-  assert.ok(worldToScreen(high, high.boss).y > worldToScreen(low, low.boss).y + 30,
+  assert.ok(worldToScreen(high, high.boss).y + 30 < worldToScreen(low, low.boss).y,
     'the boss prepositions against the player altitude instead of only changing its HP');
   high.boss.fireCooldown = 0;
   updateGame(high, 1 / 120);
-  assert.equal(high.boss.attackName, 'B02');
+  assert.equal(high.boss.attackName, 'rail');
   assert.deepEqual([...new Set(high.boss.sequence.bundles.map(bundle => bundle.port))].sort(), [0, 1]);
   assert.equal(high.boss.muzzles.length, 2);
 });
 
-test('bastion discloses its ordered gate route before any gate bullet is released', () => {
+test('bastion discloses closing jaws before its narrowing paired fans are released', () => {
   const game = bossGame(3);
   game.boss.fireCooldown = 0;
   updateGame(game, 1 / 120);
   const cue = consumeEvents(game).find(event => event.type === 'charge');
   assert.equal(cue.bossKind, 'bastion');
-  assert.equal(cue.attackName, 'B05');
-  assert.deepEqual(cue.routeLanes, [240, 330, 240]);
-  assert.ok(cue.duration >= 1.05);
+  assert.equal(cue.attackName, 'jaws');
+  assert.deepEqual(cue.routeLanes, []);
+  assert.ok(cue.duration >= .75);
+  const spreads = game.boss.sequence.bundles.map(bundle => bundle.spread);
+  assert.ok(spreads.every((spread,index) => !index || spread < spreads[index - 1]));
   assert.equal(game.enemyBullets.length, 0);
 });
 
-test('an aimed source waits for the last moving-route bullet to leave the player corridor', () => {
+test('an aimed source can warn while a moving-route tail still crosses the player corridor', () => {
   const game = play();
   const enemy = { id: 80, type: 'beetle', x: 960, y: 360, baseY: 360, radius: 28, hp: 3,
     speed: 0, age: 0, phase: 0, fireCooldown: 0, attack: 0 };
@@ -144,15 +146,15 @@ test('an aimed source waits for the last moving-route bullet to leave the player
     vx: -150, vy: 0, radius: 5.5, age: 0, power: 12 };
   game.enemyBullets.push(tail);
   updateGame(game, 1 / 120);
-  assert.equal(enemy.sequence, undefined);
-  assert.ok(!consumeEvents(game).some(event => event.type === 'charge'));
+  assert.ok(enemy.sequence);
+  assert.ok(consumeEvents(game).some(event => event.type === 'charge'));
   tail.dead = true;
   updateGame(game, 1 / 120);
   assert.equal(enemy.attackName, 'aim');
   assert.ok(enemy.locked);
 });
 
-test('a route tail above the current camera still blocks aim as altitude motion brings it back', () => {
+test('a route tail returning with altitude movement remains real while permitting aimed pressure', () => {
   const game = play();
   game.cameraY = 156;
   Object.assign(game.player, screenToWorld(game, { x: 220, y: 300 }), { invincible: 100 });
@@ -165,15 +167,15 @@ test('a route tail above the current camera still blocks aim as altitude motion 
   game.enemyBullets.push(tail);
   assert.ok(worldToScreen(game, tail).y < 20, 'the existing row begins outside the current danger view');
   updateGame(game, 1 / 120, { y: -1 });
-  assert.equal(enemy.sequence, undefined, 'aim remains prohibited before camera re-entry');
-  assert.ok(!consumeEvents(game).some(event => event.type === 'charge'));
+  assert.ok(enemy.sequence, 'the surviving route does not grant blanket attack exclusivity');
+  assert.ok(consumeEvents(game).some(event => event.type === 'charge'));
   advance(game, 0.6, { y: -1 });
   assert.ok(game.enemyBullets.includes(tail), 'the route tail has not been culled');
   assert.ok(worldToScreen(game, tail).y > 20, 'normal altitude input brings the same tail back into view');
-  assert.ok(!consumeEvents(game).some(event => event.type === 'charge'));
+  assert.ok(enemy.locked || enemy.sequence, 'aim pressure remains active during camera re-entry');
   tail.dead = true;
   updateGame(game, 1 / 120);
-  assert.ok(enemy.locked, 'only removal of the actual tail permits the next aim tell');
+  assert.ok(enemy.locked || enemy.sequence, 'removing the tail does not restart or cancel the independent aim tell');
 });
 
 test('apex opens only its authored windows and only an actual projected core hit gains damage', () => {
@@ -183,12 +185,12 @@ test('apex opens only its authored windows and only an actual projected core hit
   registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'apex-fixture', roles: ['apex'],
     weakpointEnabled: true,
     canvasWidth: 200, canvasHeight: 200, displayWidth: 200, pivotPixels: { x: 100, y: 100 },
-    frames: { idle: frame, charge: frame, open: frame } }] });
+    frames: { idle: frame, charge: frame, open: { ...frame, coreExposed: true } } }] });
   try {
     const game = bossGame(4), boss = game.boss;
-    boss.attack = 2; boss.fireCooldown = 0;
-    advance(game, 0.85);
-    assert.equal(boss.attackName, 'B03');
+    boss.attack = 3; boss.fireCooldown = 0;
+    advance(game, 1.05);
+    assert.equal(boss.attackName, bossAttack(4, 3).pattern);
     assert.equal(boss.coreVulnerable, true);
     const opening = consumeEvents(game).filter(event => event.type === 'coreOpen');
     assert.equal(opening.length, 1);
@@ -201,10 +203,10 @@ test('apex opens only its authored windows and only an actual projected core hit
     updateGame(game, 1 / 120);
     assert.ok(Math.abs(boss.hp - (originalHP - 22)) < 1e-8);
     assert.ok(consumeEvents(game).some(event => event.type === 'hit' && !event.coreHit));
-    boss.attack = 0; boss.sequence = null; boss.locked = false; boss.coreOpenUntil = 0; boss.fireCooldown = 0;
+    boss.attack = 1; boss.sequence = null; boss.locked = false; boss.coreOpenUntil = 0; boss.fireCooldown = 0; boss.attackActiveUntil = 0;
     game.enemyBullets = [];
     updateGame(game, 1 / 120);
-    assert.equal(boss.attackName, 'B01');
+    assert.equal(boss.attackName, bossAttack(4, 1).pattern);
     assert.equal(boss.coreVulnerable, false);
   } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
 });
@@ -214,7 +216,7 @@ function anchoredTarget({ offset = 0, radius = 96, open = true, enabled = true, 
     corePixels: { x: 100 + offset, y: 100, radius: 9 } };
   registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'apex-fixture', roles: ['apex'],
     weakpointEnabled: enabled, canvasWidth: 200, canvasHeight: 200, displayWidth: 200,
-    pivotPixels: { x: 100, y: 100 }, frames: { idle: frame, ...(withOpenFrame ? { open: frame } : {}) } }] });
+    pivotPixels: { x: 100, y: 100 }, frames: { idle: frame, ...(withOpenFrame ? { open: { ...frame, coreExposed: true } } : {}) } }] });
   const game = play();
   game.phase = 'boss'; game.bossesDefeated = 4;
   Object.assign(game.player, screenToWorld(game, { x: 220, y: 360 }), { invincible: 100 });

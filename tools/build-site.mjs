@@ -8,7 +8,7 @@ import { MECHA_MANIFEST_PATH } from '../src/mecha-art.js';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');
 const music = JSON.parse(await readFile(resolve(root, 'assets/audio/manifest.json'), 'utf8'));
-const modules = ['boot', 'main', 'game', 'level', 'barrage', 'renderer', 'mecha-art', 'audio', 'presentation', 'volume-environment', 'terrain3d', 'pilot-state', 'pilot-ui'];
+const modules = ['boot', 'main', 'game', 'level', 'barrage', 'combat-tuning', 'projectile-motion', 'projectile-style', 'mecha-collision', 'renderer', 'mecha-art', 'audio', 'presentation', 'volume-environment', 'terrain3d', 'pilot-state', 'pilot-ui'];
 const images = ['player', 'enemies', 'enemies-v2', 'bosses-v2', 'leaf-surface-v3'];
 const playerRoot = 'assets/art/player/sv01';
 const playerManifest = JSON.parse(await readFile(resolve(root, playerRoot, 'manifest.json'), 'utf8'));
@@ -33,10 +33,13 @@ if (provenance.publicationApproved !== true || typeof provenance.rightsEvidence 
 const mechaFiles = [];
 if (MECHA_MANIFEST_PATH) {
   const manifestPath = MECHA_MANIFEST_PATH.replace(/^\.\//, '');
-  if (manifestPath !== 'assets/art/mecha-8h/manifest.json') throw new Error('Unexpected mecha runtime manifest path');
+  if (!['assets/art/mecha-8h/manifest.json', 'assets/art/mecha-12h-local.json'].includes(manifestPath)) throw new Error('Unexpected mecha runtime manifest path');
   const manifest = JSON.parse(await readFile(resolve(root, manifestPath), 'utf8'));
   if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.entries)) throw new Error('Invalid mecha build manifest');
   mechaFiles.push(manifestPath);
+  // Preserve the previous approved manifest in the local build alongside the
+  // combined candidate; original images keep their existing paths and hashes.
+  if (manifestPath === 'assets/art/mecha-12h-local.json') mechaFiles.push('assets/art/mecha-8h/manifest.json');
   const assetRoot = dirname(manifestPath);
   for (const entry of manifest.entries) for (const frame of Object.values(entry.frames || {})) {
     if (typeof frame.filename !== 'string' || !/^[\w./-]+$/.test(frame.filename) || frame.filename.startsWith('/') || frame.filename.split('/').includes('..')) throw new Error('Unsafe mecha frame path');

@@ -163,7 +163,7 @@ function processEvents(events) {
   for(const event of events) {
     audio.playEvent(event);
     if(event.type==='pickup'&&['change','extend','levelUp'].includes(event.effect))weaponFeedbackTime=.7;
-    if(event.type==='pickup'&&event.pickupType==='health')notice(game.player.hp===100?'FULL HP':'ENERGY +30');
+    if(event.type==='pickup'&&event.pickupType==='health')notice(game.player.hp===game.player.maxHp?'FULL HP':`ENERGY +${event.effectiveHeal??event.rawHeal??30}`);
     if(event.type==='bossWarning')notice(`${event.bossName||'WARDEN'} INCOMING`,3);
     if(event.type==='boss')notice(`${event.bossName||'WARDEN'} APPROACHING`,3);
     if(event.type==='bossDefeated')notice(event.hell?'HELL / ENDURE':`STAGE ${Math.min(5,event.cycle||game.cycle)} / SKY CLEAR`,3);
