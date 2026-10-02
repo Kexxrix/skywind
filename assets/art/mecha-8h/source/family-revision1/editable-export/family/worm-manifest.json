@@ -1,0 +1,360 @@
+{
+  "id": "worm",
+  "version": 2,
+  "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+  "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+  "family": "artillery-spine",
+  "width": 384,
+  "height": 384,
+  "format": "PNG",
+  "colorMode": "RGBA",
+  "imagePixelOrigin": "top-left",
+  "pivotPixels": [
+    192.0,
+    192.0
+  ],
+  "displayWidth": 170,
+  "facing": "left",
+  "axes": {
+    "forward": "-X",
+    "starboard": "+Y",
+    "up": "+Z"
+  },
+  "source": "sources/worm.blend",
+  "generator": "family_generator.py",
+  "mechanism": "Four modeled armor segments and three independent visible ports.",
+  "flameBaked": false,
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      0.0,
+      -15.0,
+      4.0
+    ],
+    "rotationEuler": [
+      1.3101938962936401,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.150000095367432,
+    "inheritedFrom": "approved INT-01 representative",
+    "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+  },
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "filmTransparent": true,
+    "colorTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.25,
+    "denoising": false,
+    "elapsedSeconds": 2.161
+  },
+  "collisionSemantics": {
+    "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+    "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+    "coreExposedInArt": [
+      "neutral",
+      "open"
+    ],
+    "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+  },
+  "states": {
+    "neutral": {
+      "muzzlesPixels": [
+        [
+          49.0625,
+          215.7269
+        ],
+        [
+          115.4237,
+          205.6406
+        ],
+        [
+          181.7849,
+          243.8727
+        ]
+      ],
+      "muzzleIds": [
+        "segment_0",
+        "segment_1",
+        "segment_2"
+      ],
+      "nozzlesPixels": [
+        [
+          351.9379,
+          191.6157
+        ]
+      ],
+      "nozzleIds": [
+        "aft"
+      ],
+      "corePixels": [
+        157.701,
+        198.6282
+      ],
+      "coreRadiusPixels": 5.7637,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "projectedAnchors": {
+        "muzzle_segment_0": {
+          "world": [
+            -1.917,
+            -0.41,
+            -0.22
+          ],
+          "pixels": [
+            49.0625,
+            215.7269
+          ]
+        },
+        "direction_segment_0": {
+          "world": [
+            -2.117,
+            -0.41,
+            -0.22
+          ],
+          "pixels": [
+            34.1499,
+            215.7269
+          ]
+        },
+        "muzzle_segment_1": {
+          "world": [
+            -1.027,
+            -0.41,
+            -0.08
+          ],
+          "pixels": [
+            115.4237,
+            205.6406
+          ]
+        },
+        "direction_segment_1": {
+          "world": [
+            -1.227,
+            -0.41,
+            -0.08
+          ],
+          "pixels": [
+            100.5111,
+            205.6406
+          ]
+        },
+        "muzzle_segment_2": {
+          "world": [
+            -0.137,
+            -0.75,
+            -0.52
+          ],
+          "pixels": [
+            181.7849,
+            243.8727
+          ]
+        },
+        "direction_segment_2": {
+          "world": [
+            -0.337,
+            -0.75,
+            -0.52
+          ],
+          "pixels": [
+            166.8722,
+            243.8727
+          ]
+        },
+        "core": {
+          "world": [
+            -0.46,
+            -0.645,
+            0.08
+          ],
+          "pixels": [
+            157.701,
+            198.6282
+          ]
+        },
+        "core_radius": {
+          "world": [
+            -0.46,
+            -0.645,
+            0.16
+          ],
+          "pixels": [
+            157.701,
+            192.8645
+          ]
+        },
+        "nozzle_aft": {
+          "world": [
+            2.145,
+            0.02,
+            0.0
+          ],
+          "pixels": [
+            351.9379,
+            191.6157
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/worm-neutral.png",
+      "frame": 1,
+      "stateProgress": 0,
+      "coreExposed": false,
+      "mechanicalPose": "neutral",
+      "weakpointEnabledByArt": false,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "6a063d60073c5846e5605844775806caf4491110c0c7b0585998f562f59fdd85",
+      "muzzleDirectionsWorld": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "muzzleDirectionsPixels": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "nozzleDirectionsWorld": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "nozzleDirectionsPixels": [
+        [
+          1,
+          0
+        ]
+      ],
+      "verifiedPortClearance": [
+        {
+          "role": "worm",
+          "state": "neutral",
+          "anchor": "ANCHOR_muzzle_segment_0",
+          "world": [
+            -1.917,
+            -0.41,
+            -0.22
+          ],
+          "worldDirection": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "cameraObstruction": null,
+          "axisObstruction": null,
+          "cameraClear": true,
+          "axisClear": true
+        },
+        {
+          "role": "worm",
+          "state": "neutral",
+          "anchor": "ANCHOR_muzzle_segment_1",
+          "world": [
+            -1.027,
+            -0.41,
+            -0.08
+          ],
+          "worldDirection": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "cameraObstruction": null,
+          "axisObstruction": null,
+          "cameraClear": true,
+          "axisClear": true
+        },
+        {
+          "role": "worm",
+          "state": "neutral",
+          "anchor": "ANCHOR_muzzle_segment_2",
+          "world": [
+            -0.137,
+            -0.75,
+            -0.52
+          ],
+          "worldDirection": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "cameraObstruction": null,
+          "axisObstruction": null,
+          "cameraClear": true,
+          "axisClear": true
+        },
+        {
+          "role": "worm",
+          "state": "neutral",
+          "anchor": "ANCHOR_nozzle_aft",
+          "world": [
+            2.145,
+            0.02,
+            0.0
+          ],
+          "worldDirection": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "cameraObstruction": null,
+          "axisObstruction": null,
+          "cameraClear": true,
+          "axisClear": true
+        }
+      ]
+    }
+  },
+  "geometry": {
+    "meshObjects": 47,
+    "vertices": 708,
+    "mechanismGroups": 4
+  },
+  "sha256": {
+    "blend": "6d14bb58d60aef4921fb171faa175d44344db3fc2238608f8dfe58029dbd77d4",
+    "generator": "e1243dff36b65fb5ea375d7ff3283649336f4ac16bed0aab1461414e0446c2cf",
+    "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+  },
+  "artifactRevision": 1,
+  "revisionReason": "Actual port geometry clearance correction; fixed camera/materials/pivot",
+  "projectionCaveat": "Rear gun now has a clear 3D and projected straight-left lane. Middle gun is clear in actual 3D, but its projected leftward line overlaps the earlier hull silhouette; do not claim a fully unobstructed 2D corridor for this port.",
+  "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+  "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+}

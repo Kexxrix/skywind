@@ -1,6 +1,6 @@
 // Shared model-projected anchors only. This module has no browser, clock,
 // random-number or game-state side effects. Registration happens during loading.
-export const MECHA_MANIFEST_PATH = null;
+export const MECHA_MANIFEST_PATH = './assets/art/mecha-8h/manifest.json';
 const registry = new Map();
 const finite = (value, label) => {
   if (!Number.isFinite(value)) throw new Error(`Invalid mecha ${label}`);
@@ -28,12 +28,21 @@ export function registerMechaManifest(manifest) {
     const scale = displayWidth / width, states = {};
     for (const [name, frame] of Object.entries(entry.frames)) {
       const muzzles = (frame.muzzlesPixels || []).map(anchor => point(anchor, pivot, scale));
+      const directions = (frame.muzzleDirectionsPixels || []).map((direction,index)=>{
+        const muzzle=frame.muzzlesPixels[index];
+        if(!muzzle)throw new Error('Mecha direction has no matching muzzle');
+        const dx=finite(direction.x,'direction x')-muzzle.x,dy=finite(direction.y,'direction y')-muzzle.y,length=Math.hypot(dx,dy);
+        if(length<=0)throw new Error('Invalid mecha muzzle direction');
+        return Object.freeze({x:dx/length,y:dy/length});
+      });
       const nozzles = (frame.nozzlesPixels || []).map(anchor => point(anchor, pivot, scale));
       const core = frame.corePixels ? Object.freeze({...point(frame.corePixels,pivot,scale),radius:finite(frame.corePixels.radius,'core radius')*scale}) : null;
       if (core && core.radius <= 0) throw new Error('Invalid mecha core radius');
-      states[name] = Object.freeze({filename:safeFilename(frame.filename),runtimeMuzzles:Object.freeze(muzzles),runtimeNozzles:Object.freeze(nozzles),runtimeCore:core});
+      states[name] = Object.freeze({filename:safeFilename(frame.filename),runtimeMuzzles:Object.freeze(muzzles),runtimeMuzzleDirections:Object.freeze(directions),runtimeNozzles:Object.freeze(nozzles),runtimeCore:core,
+        coreExposed:frame.coreExposed===true,sourceState:frame.sourceState||name});
     }
     const common = {key:entry.key,canvasWidth:width,canvasHeight:height,displayWidth,displayHeight:height*scale,
+      weakpointEnabled:entry.weakpointEnabled===true&&Boolean(entry.frames.open?.corePixels),facing:entry.facing||'left',
       pivot:Object.freeze({x:pivot.x*scale,y:pivot.y*scale})};
     const views = Object.freeze(Object.fromEntries(Object.entries(states).map(([state,frame])=>[state,Object.freeze({...common,...frame,state})])));
     const spec = Object.freeze({...common,states:Object.freeze(states),views});
@@ -55,6 +64,15 @@ export function getMechaSpec(enemy) {
 }
 
 export function mechaAnchorWorld(enemy, anchor) {
-  const angle = enemy.artAngle || 0, cos = Math.cos(angle), sin = Math.sin(angle);
-  return {x:enemy.x+anchor.x*cos-anchor.y*sin,y:enemy.y+anchor.x*sin+anchor.y*cos};
+  const {angle,flipX,flipY}=mechaTransform(enemy),cos=Math.cos(angle),sin=Math.sin(angle),x=anchor.x*flipX,y=anchor.y*flipY;
+  return {x:enemy.x+x*cos-y*sin,y:enemy.y+x*sin+y*cos};
+}
+
+export function mechaTransform(enemy, spec=getMechaSpec(enemy)) {
+  return {angle:enemy.artAngle||0,flipX:(enemy.artFlipX===-1?-1:1)*(spec?.facing==='right'?-1:1),flipY:enemy.artFlipY===-1?-1:1};
+}
+
+export function mechaDirectionWorld(enemy,direction) {
+  const {angle,flipX,flipY}=mechaTransform(enemy),cos=Math.cos(angle),sin=Math.sin(angle),x=direction.x*flipX,y=direction.y*flipY;
+  return {x:x*cos-y*sin,y:x*sin+y*cos};
 }

@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PILOT_IMAGES } from '../src/pilot-ui.js';
+import { MECHA_MANIFEST_PATH } from '../src/mecha-art.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = resolve(root, 'dist');
@@ -28,6 +29,25 @@ const provenance = JSON.parse(await readFile(resolve(root, patchAudioRoot, 'prov
 if (provenance.publicationApproved !== true || typeof provenance.rightsEvidence !== 'string' || !provenance.rightsEvidence.trim()) {
   throw new Error('Patch sound publication rights are unconfirmed. Public build stopped before writing dist. Use npm start for local testing; record verified rights evidence before approving publication.');
 }
+
+const mechaFiles = [];
+if (MECHA_MANIFEST_PATH) {
+  const manifestPath = MECHA_MANIFEST_PATH.replace(/^\.\//, '');
+  if (manifestPath !== 'assets/art/mecha-8h/manifest.json') throw new Error('Unexpected mecha runtime manifest path');
+  const manifest = JSON.parse(await readFile(resolve(root, manifestPath), 'utf8'));
+  if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.entries)) throw new Error('Invalid mecha build manifest');
+  mechaFiles.push(manifestPath);
+  const assetRoot = dirname(manifestPath);
+  for (const entry of manifest.entries) for (const frame of Object.values(entry.frames || {})) {
+    if (typeof frame.filename !== 'string' || !/^[\w./-]+$/.test(frame.filename) || frame.filename.startsWith('/') || frame.filename.split('/').includes('..')) throw new Error('Unsafe mecha frame path');
+    const file = `${assetRoot}/${frame.filename}`;
+    if (frame.sha256) {
+      const actual = createHash('sha256').update(await readFile(resolve(root, file))).digest('hex');
+      if (frame.sha256 !== actual) throw new Error(`Mecha frame differs from its source record: ${file}`);
+    }
+    if (!mechaFiles.includes(file)) mechaFiles.push(file);
+  }
+}
 for (const name of patchEffects) {
   const file = `edited/${name}.wav`;
   const entry = provenance.edits?.find(edit => edit.file === file);
@@ -40,6 +60,7 @@ const files = [
   ...images.map(name => `assets/art/${name}.png`),
   ...Object.values(PILOT_IMAGES),
   `${playerRoot}/manifest.json`, ...playerManifest.frames.map(frame => `${playerRoot}/${frame.filename}`),
+  ...mechaFiles,
   'assets/audio/manifest.json', ...Object.values(music),
   ...effects.map(name => `assets/audio/sfx-v3/${name}.wav`),
   ...patchEffects.map(name => `${patchAudioRoot}/edited/${name}.wav`),

@@ -150,11 +150,36 @@ test('an aimed source waits for the last moving-route bullet to leave the player
   assert.ok(enemy.locked);
 });
 
+test('a route tail above the current camera still blocks aim as altitude motion brings it back', () => {
+  const game = play();
+  game.cameraY = 156;
+  Object.assign(game.player, screenToWorld(game, { x: 220, y: 300 }), { invincible: 100 });
+  const position = screenToWorld(game, { x: 960, y: 360 });
+  const enemy = { id: 80, type: 'beetle', ...position, baseY: position.y, radius: 28, hp: 3,
+    speed: 0, age: 0, phase: 0, fireCooldown: 0, attack: 0 };
+  game.enemies.push(enemy);
+  const tail = { id: 81, sourceId: 90, pattern: 'B04', ...screenToWorld(game, { x: 500, y: -10 }),
+    vx: -20, vy: 0, radius: 5.5, age: 0, power: 12 };
+  game.enemyBullets.push(tail);
+  assert.ok(worldToScreen(game, tail).y < 20, 'the existing row begins outside the current danger view');
+  updateGame(game, 1 / 120, { y: -1 });
+  assert.equal(enemy.sequence, undefined, 'aim remains prohibited before camera re-entry');
+  assert.ok(!consumeEvents(game).some(event => event.type === 'charge'));
+  advance(game, 0.6, { y: -1 });
+  assert.ok(game.enemyBullets.includes(tail), 'the route tail has not been culled');
+  assert.ok(worldToScreen(game, tail).y > 20, 'normal altitude input brings the same tail back into view');
+  assert.ok(!consumeEvents(game).some(event => event.type === 'charge'));
+  tail.dead = true;
+  updateGame(game, 1 / 120);
+  assert.ok(enemy.locked, 'only removal of the actual tail permits the next aim tell');
+});
+
 test('apex opens only its authored windows and only an actual projected core hit gains damage', () => {
   // Synthetic anchor metadata is a test fixture, never a runtime art deliverable.
   const frame = { filename: 'fixture.png', muzzlesPixels: [{ x: 25, y: 75 }, { x: 25, y: 125 }],
     corePixels: { x: 100, y: 100, radius: 9 } };
   registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'apex-fixture', roles: ['apex'],
+    weakpointEnabled: true,
     canvasWidth: 200, canvasHeight: 200, displayWidth: 200, pivotPixels: { x: 100, y: 100 },
     frames: { idle: frame, charge: frame, open: frame } }] });
   try {
@@ -179,5 +204,129 @@ test('apex opens only its authored windows and only an actual projected core hit
     updateGame(game, 1 / 120);
     assert.equal(boss.attackName, 'B01');
     assert.equal(boss.coreVulnerable, false);
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+function anchoredTarget({ offset = 0, radius = 96, open = true, enabled = true, withOpenFrame = true } = {}) {
+  const frame = { filename: 'fixture.png', muzzlesPixels: [{ x: 20, y: 100 }],
+    corePixels: { x: 100 + offset, y: 100, radius: 9 } };
+  registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'apex-fixture', roles: ['apex'],
+    weakpointEnabled: enabled, canvasWidth: 200, canvasHeight: 200, displayWidth: 200,
+    pivotPixels: { x: 100, y: 100 }, frames: { idle: frame, ...(withOpenFrame ? { open: frame } : {}) } }] });
+  const game = play();
+  game.phase = 'boss'; game.bossesDefeated = 4;
+  Object.assign(game.player, screenToWorld(game, { x: 220, y: 360 }), { invincible: 100 });
+  const boss = { id: 100, type: 'boss', bossKind: 'apex', ...screenToWorld(game, { x: 1000, y: 360 }),
+    radius, hp: 100, maxHp: 100, angle: 0, artAngle: 0, age: 0, attack: 0, fireCooldown: 100,
+    armorOpen: open, coreVulnerable: open, coreOpenUntil: Infinity,
+    motion: { x: 1000, centerY: 360, amplitude: 0, frequency: 0, bank: 0 } };
+  game.boss = boss; game.enemies = [boss]; consumeEvents(game);
+  return { game, boss };
+}
+
+test('a real traveling shot reaches an open central core before awarding its bonus', () => {
+  for (const rate of [30, 60, 144]) {
+    try {
+      const { game, boss } = anchoredTarget();
+      game.bullets.push({ id: 101, x: boss.x - 180, y: boss.y, vx: 1360, vy: 0, radius: 5,
+        age: 0, power: 10, weaponMode: 'normal' });
+      advance(game, 0.09, {}, 1 / rate);
+      assert.equal(boss.hp, 100, 'predicted alignment or the broad body proxy does not award a premature core hit');
+      assert.ok(!consumeEvents(game).some(event => event.type === 'hit'));
+      advance(game, 0.07, {}, 1 / rate);
+      const hits = consumeEvents(game).filter(event => event.type === 'hit' && !event.player);
+      assert.equal(hits.length, 1);
+      assert.equal(hits[0].coreHit, true);
+      assert.equal(boss.hp, 88);
+    } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+  }
+});
+
+test('a projected open core outside the body proxy still registers its actual first contact', () => {
+  try {
+    const { game, boss } = anchoredTarget({ offset: -65, radius: 30 });
+    game.bullets.push({ id: 101, x: boss.x - 180, y: boss.y, vx: 1360, vy: 0, radius: 5,
+      age: 0, power: 10, weaponMode: 'normal' });
+    advance(game, 0.1);
+    assert.equal(boss.hp, 88);
+    const hits = consumeEvents(game).filter(event => event.type === 'hit' && !event.player);
+    assert.equal(hits.length, 1);
+    assert.equal(hits[0].coreHit, true);
+    assert.ok(Math.abs(hits[0].x - boss.x + 65) < 16, 'contact occurs on the actual projected core');
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('closed armor, neutral markers, missing open states and off-core shots retain normal body damage', () => {
+  for (const options of [{ open: false }, { enabled: false }, { withOpenFrame: false }, { offCore: 35 }]) {
+    try {
+      const { game, boss } = anchoredTarget(options);
+      game.bullets.push({ id: 101, x: boss.x - 180, y: boss.y + (options.offCore || 0), vx: 1360, vy: 0,
+        radius: 5, age: 0, power: 10, weaponMode: 'normal' });
+      advance(game, 0.16);
+      const hits = consumeEvents(game).filter(event => event.type === 'hit' && !event.player);
+      assert.equal(hits.length, 1);
+      assert.equal(hits[0].coreHit, false);
+      assert.equal(boss.hp, 90);
+    } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+  }
+});
+
+test('swept core contact cannot be skipped when both projectile endpoints miss the small circle', () => {
+  try {
+    const { game, boss } = anchoredTarget();
+    // A stress projectile verifies geometry, not a new gameplay weapon speed.
+    game.bullets.push({ id: 101, x: boss.x - 180, y: boss.y, vx: 400000, vy: 0, radius: 5,
+      age: 0, power: 10, weaponMode: 'normal' });
+    updateGame(game, 0.001);
+    assert.equal(boss.hp, 88);
+    const hit = consumeEvents(game).find(event => event.type === 'hit');
+    assert.equal(hit.coreHit, true);
+    assert.ok(Math.hypot(hit.x - boss.x, hit.y - boss.y) < 1, 'VFX anchors to contact, not the far endpoint');
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('charge and first release use their actual frame anchors when muzzle positions differ', () => {
+  const frame = (x, y = 100) => ({ filename: 'fixture.png', muzzlesPixels: [{ x, y }], corePixels: { x: 100, y: 100, radius: 9 } });
+  registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'apex-fixture', roles: ['apex'], weakpointEnabled: true,
+    canvasWidth: 200, canvasHeight: 200, displayWidth: 200, pivotPixels: { x: 100, y: 100 },
+    frames: { idle: frame(20), charge: frame(30), open: frame(40), fire: frame(50) } }] });
+  try {
+    const game = bossGame(4), boss = game.boss;
+    boss.fireCooldown = 0;
+    updateGame(game, 1 / 120);
+    const charge = consumeEvents(game).find(event => event.type === 'charge');
+    assert.equal(getMechaSpec(boss).state, 'charge');
+    const chargingPort = mechaAnchorWorld(boss, getMechaSpec(boss).runtimeMuzzles[0]);
+    assert.ok(Math.hypot(charge.x - chargingPort.x, charge.y - chargingPort.y) < 1e-8);
+    let release;
+    for (let frameIndex = 0; frameIndex < 120 && !release; frameIndex++) {
+      updateGame(game, 1 / 120);
+      release = consumeEvents(game).find(event => event.type === 'enemyShot');
+    }
+    assert.ok(release);
+    assert.equal(getMechaSpec(boss).state, 'fire');
+    const firingPort = mechaAnchorWorld(boss, getMechaSpec(boss).runtimeMuzzles[0]);
+    assert.ok(Math.hypot(release.x - firingPort.x, release.y - firingPort.y) < 1e-8);
+    assert.deepEqual(release.launchMuzzles, [firingPort]);
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('a skipped unsafe aimed shot does not leave a false fire frame or launch event', () => {
+  const frame = x => ({ filename: 'fixture.png', muzzlesPixels: [{ x, y: 100 }] });
+  registerMechaManifest({ schemaVersion: 1, entries: [{ key: 'beetle-fixture', roles: ['beetle'], weakpointEnabled: false,
+    canvasWidth: 200, canvasHeight: 200, displayWidth: 200, pivotPixels: { x: 100, y: 100 },
+    frames: { idle: frame(20), charge: frame(30), fire: frame(50) } }] });
+  try {
+    const game = play();
+    game.bossesDefeated = 1; game.aimCounter = 2; game.player.x = 378;
+    const enemy = { id: 80, type: 'beetle', x: 600, y: 360, baseY: 360, radius: 28, hp: 3,
+      speed: 0, age: 0, phase: 0, fireCooldown: 0, attack: 0 };
+    game.enemies = [enemy];
+    advance(game, 0.9);
+    const events = consumeEvents(game);
+    assert.ok(events.some(event => event.type === 'attackSkipped' && event.reason === 'minimum-flight-time'));
+    assert.ok(!events.some(event => event.type === 'enemyShot'));
+    assert.equal(enemy.fireFlash, 0);
+    assert.equal(getMechaSpec(enemy).state, 'idle');
   } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
 });

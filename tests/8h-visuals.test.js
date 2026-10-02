@@ -1,12 +1,38 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Renderer, threatNeighborCounts, COMBAT_FX } from '../src/renderer.js';
-import { registerMechaManifest, getMechaSpec, mechaAnchorWorld, MECHA_MANIFEST_PATH } from '../src/mecha-art.js';
+import { registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaDirectionWorld, mechaTransform, MECHA_MANIFEST_PATH } from '../src/mecha-art.js';
 import { sequenceToWorld } from '../src/game.js';
 import { barragePlan, patternGeometry } from '../src/barrage.js';
+import { readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { enemyMuzzles } from '../src/game.js';
+import { inflateSync } from 'node:zlib';
 
 const context = overrides => new Proxy(overrides || {},{get(target,key){return key in target?target[key]:()=>{};}});
 const emptyManifest = () => registerMechaManifest({schemaVersion:1,entries:[]});
+
+// Native RGBA PNG verification uses only Node's existing standard library.
+function rgbaPixels(png) {
+  const width=png.readUInt32BE(16),height=png.readUInt32BE(20),pieces=[];
+  assert.equal(png[24],8);assert.equal(png[25],6);assert.equal(png[28],0);
+  for(let offset=8;offset<png.length;) {
+    const length=png.readUInt32BE(offset),type=png.toString('ascii',offset+4,offset+8);
+    if(type==='IDAT')pieces.push(png.subarray(offset+8,offset+8+length));offset+=length+12;
+  }
+  const filtered=inflateSync(Buffer.concat(pieces)),stride=width*4,pixels=Buffer.alloc(stride*height);
+  assert.equal(filtered.length,(stride+1)*height);
+  const paeth=(a,b,c)=>{const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c;};
+  for(let y=0;y<height;y++) {
+    const filter=filtered[y*(stride+1)];assert.ok(filter>=0&&filter<=4);
+    for(let x=0;x<stride;x++) {
+      const index=y*stride+x,a=x>=4?pixels[index-4]:0,b=y>0?pixels[index-stride]:0,c=x>=4&&y>0?pixels[index-stride-4]:0;
+      const predictor=[0,a,b,Math.floor((a+b)/2),paeth(a,b,c)][filter];
+      pixels[index]=(filtered[y*(stride+1)+x+1]+predictor)&255;
+    }
+  }
+  return {width,height,pixels};
+}
 
 test('density grid preserves exact halo response across cell edges and different physical radii',()=>{
   const bullets=Array.from({length:480},(_,i)=>({x:(i*73)%1380-100,y:(i*97)%820-50,radius:[4,5.5,8,14][i%4]}));
@@ -55,7 +81,7 @@ test('model pixel anchors share fixed pivot, scale and combat-selected state wit
     assert.equal(getMechaSpec({...enemy,armorOpen:false,telegraph:.8}).filename,'runtime/drone-idle.png','an absent charge frame falls back with the same anchor set');
   } finally {emptyManifest();}
   assert.equal(getMechaSpec({type:'beetle'}),null);
-  assert.equal(MECHA_MANIFEST_PATH,null,'new model artwork is not claimed before its files arrive');
+  assert.equal(MECHA_MANIFEST_PATH,'./assets/art/mecha-8h/manifest.json');
 });
 
 test('model registration rejects unsafe paths and does not partially overwrite a working registry',()=>{
@@ -123,4 +149,156 @@ test('multi-port fire, projected core opening and five boss breaks use actual ev
     geometries.push(JSON.stringify(points));
   }
   assert.equal(new Set(geometries).size,5);
+});
+
+test('INT01 runtime retains actual source hashes, RGBA canvas and projected attachment anchors',async()=>{
+  const native=JSON.parse(await readFile(new URL('../assets/art/mecha-8h/source/int01/manifest.json',import.meta.url),'utf8'));
+  const runtime=JSON.parse(await readFile(new URL('../assets/art/mecha-8h/manifest.json',import.meta.url),'utf8'));
+  const entry=runtime.entries.find(entry=>entry.key==='int01-wedge'),frame=entry.frames.idle;
+  const png=await readFile(new URL('../assets/art/mecha-8h/'+frame.filename,import.meta.url));
+  assert.equal(createHash('sha256').update(png).digest('hex'),native.sha256.png);assert.equal(frame.sha256,native.sha256.png);
+  assert.equal(png.readUInt32BE(16),384);assert.equal(png.readUInt32BE(20),384);assert.equal(png[25],6,'native 8-bit RGBA frame');
+  const decoded=rgbaPixels(png),bbox=[384,384,0,0];let minAlpha=255,maxAlpha=0;
+  for(let y=0;y<decoded.height;y++)for(let x=0;x<decoded.width;x++) {
+    const alpha=decoded.pixels[(y*decoded.width+x)*4+3];minAlpha=Math.min(minAlpha,alpha);maxAlpha=Math.max(maxAlpha,alpha);
+    if(x===0||y===0||x===383||y===383)assert.equal(alpha,0,'every outer-border pixel is fully transparent');
+    if(alpha>0){bbox[0]=Math.min(bbox[0],x);bbox[1]=Math.min(bbox[1],y);bbox[2]=Math.max(bbox[2],x+1);bbox[3]=Math.max(bbox[3],y+1);}
+  }
+  assert.deepEqual([minAlpha,maxAlpha],[0,255]);assert.deepEqual(bbox,[14,108,325,233]);
+  for(const [file,key] of [['int01-wedge.blend','blend'],['generator.py','generator']]) {
+    const data=await readFile(new URL('../assets/art/mecha-8h/source/int01/'+file,import.meta.url));
+    assert.equal(createHash('sha256').update(data).digest('hex'),native.sha256[key]);
+  }
+  assert.deepEqual(entry.pivotPixels,{x:native.pivotPixels[0],y:native.pivotPixels[1]});
+  assert.deepEqual(frame.muzzlesPixels,native.states.neutral.muzzlesPixels.map(([x,y])=>({x,y})));
+  assert.deepEqual(frame.nozzlesPixels,native.states.neutral.nozzlesPixels.map(([x,y])=>({x,y})));
+  assert.equal(frame.corePixels.radius,native.coreRadiusPixels);
+  try {
+    registerMechaManifest(runtime);
+    const spec=getMechaSpec({type:'beetle',armorOpen:true});
+    assert.equal(spec.filename,'runtime/int01-idle.png');assert.equal(spec.state,'idle');assert.equal(spec.weakpointEnabled,false);
+    assert.equal(spec.displayWidth,87);assert.equal(spec.displayHeight,87);assert.deepEqual(spec.pivot,{x:43.5,y:43.5});
+    const scale=87/384,pixel=native.states.neutral.muzzlesPixels[0],local={x:(pixel[0]-192)*scale,y:(pixel[1]-192)*scale};
+    for(const angle of [0,.37,-.5,Math.PI/2]) {
+      const enemy={type:'beetle',x:930,y:315,artAngle:angle,angle,pattern:'aim'},actual=enemyMuzzles(enemy)[0];
+      const expected={x:enemy.x+local.x*Math.cos(angle)-local.y*Math.sin(angle),y:enemy.y+local.x*Math.sin(angle)+local.y*Math.cos(angle)};
+      assert.ok(Math.abs(actual.x-expected.x)<1e-10);assert.ok(Math.abs(actual.y-expected.y)<1e-10);
+    }
+    const core=spec.runtimeCore;
+    assert.ok(Math.hypot(core.x,core.y)+core.radius<28,'the projected neutral attachment is inside the existing beetle body envelope');
+  } finally {emptyManifest();}
+});
+
+test('carrier escort armor displays only while the actual shield state is active',()=>{
+  const art={enemies:{width:512,height:512},'bosses-v2':{width:1536,height:768}},lines=[];
+  const c=context({lineTo(x,y){lines.push([x,y]);}}),enemy={type:'boss',bossKind:'carrier',x:1000,y:300,radius:95};
+  Renderer.prototype.drawEnemy.call({art,glow(){}},c,enemy,0);
+  assert.equal(lines.length,0);
+  Renderer.prototype.drawEnemy.call({art,glow(){}},c,{...enemy,escortShield:true},0);
+  assert.equal(lines.length,6);
+});
+
+test('a visible core marker or missing open render does not grant weakpoint permission',()=>{
+  const idle={filename:'idle.png',corePixels:{x:128,y:128,radius:6}};
+  const fixture={schemaVersion:1,entries:[{key:'marker',roles:['apex'],canvasWidth:256,canvasHeight:256,displayWidth:200,pivotPixels:{x:128,y:128},
+    weakpointEnabled:true,frames:{idle}}]};
+  try {
+    registerMechaManifest(fixture);
+    assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,false);
+    fixture.entries[0].frames.open={...idle,filename:'open.png'};
+    registerMechaManifest(fixture);
+    assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,true);
+    fixture.entries[0].weakpointEnabled=false;registerMechaManifest(fixture);
+    assert.equal(getMechaSpec({type:'boss',bossKind:'apex',armorOpen:true}).weakpointEnabled,false);
+  } finally {emptyManifest();}
+});
+
+test('native family files keep source hashes, unclipped alpha and all adopted display-size anchors',async()=>{
+  const sourceRoot='../assets/art/mecha-8h/source/family-revision1/',artRoot='../assets/art/mecha-8h/';
+  const native=JSON.parse(await readFile(new URL(sourceRoot+'runtime-export/family-manifest.json',import.meta.url),'utf8'));
+  const runtime=JSON.parse(await readFile(new URL(artRoot+'manifest.json',import.meta.url),'utf8'));
+  const widths={beetle:87,dragonfly:88,wasp:76,mantis:96,orb:82,claw:108,ray:118,worm:170,needle:112,warden:340,carrier:300,lancer:360,bastion:266,apex:340};
+  assert.equal(native.assets.length,14);assert.equal(runtime.entries.length,14);
+  assert.deepEqual(runtime.heldRoles,[]);
+  let frames=0;
+  for(const asset of native.assets) {
+    const blend=await readFile(new URL(sourceRoot+'editable-export/family/'+asset.source,import.meta.url));
+    assert.equal(createHash('sha256').update(blend).digest('hex'),asset.sha256.blend,asset.id+' source model hash');
+    for(const [sourceState,state] of Object.entries(asset.states)) {
+      const raw=await readFile(new URL(sourceRoot+'runtime-export/'+state.file,import.meta.url));
+      assert.equal(createHash('sha256').update(raw).digest('hex'),state.sha256||asset.sha256.png,asset.id+' '+sourceState);
+      const {width,height,pixels}=rgbaPixels(raw);assert.equal(width,384);assert.equal(height,384);
+      let visible=0;
+      for(let y=0;y<height;y++)for(let x=0;x<width;x++) {
+        const alpha=pixels[(y*width+x)*4+3];if(alpha)visible++;
+        if(x===0||y===0||x===width-1||y===height-1)assert.equal(alpha,0,asset.id+' '+sourceState+' frame clipping');
+      }
+      assert.ok(visible>0,asset.id+' '+sourceState+' is not empty');
+      const entry=runtime.entries.find(entry=>entry.roles.includes(asset.id)),frame=Object.values(entry.frames).find(frame=>frame.sourceState===sourceState);
+      assert.equal(entry.displayWidth,widths[asset.id]);assert.deepEqual(entry.pivotPixels,{x:192,y:192});
+      assert.deepEqual(frame.muzzlesPixels,state.muzzlesPixels.map(([x,y])=>({x,y})),asset.id+' actual model projection');
+      assert.deepEqual(frame.nozzlesPixels,state.nozzlesPixels.map(([x,y])=>({x,y})));
+      const adopted=await readFile(new URL(artRoot+frame.filename,import.meta.url));
+      assert.equal(createHash('sha256').update(adopted).digest('hex'),frame.sha256);
+      frames++;
+    }
+  }
+  assert.equal(frames,24);
+  try {
+    registerMechaManifest(runtime);
+    assert.ok(getMechaSpec({type:'orb'}),'the reviewed corrected orb now has a runtime model');
+    for(const entry of runtime.entries) {
+      const role=entry.roles[0],boss=native.bossRoles.includes(role),enemy={type:boss?'boss':role,bossKind:boss?role:undefined,x:980,y:330,artAngle:.23};
+      const idle=getMechaSpec(enemy),charge=getMechaSpec({...enemy,telegraph:.6});
+      assert.equal(charge.filename,idle.filename,'charge deliberately shares neutral geometry and uses code muzzle light');
+      assert.equal(charge.state,'charge');assert.equal(entry.stateContracts.charge.dedicatedBodyPNGRequired,false);
+      assert.equal(entry.statesComplete,true);
+      if(boss) {
+        const opened=getMechaSpec({...enemy,armorOpen:true,fireFlash:.12});
+        assert.equal(opened.sourceState,'open');assert.equal(opened.state,'open');assert.equal(opened.weakpointEnabled,true);assert.equal(opened.coreExposed,true);
+        assert.deepEqual(opened.runtimeCore,idle.runtimeCore,'same physical core before and after opening');
+      } else {
+        assert.equal(idle.weakpointEnabled,false);
+        if(entry.frames.fire) {
+          const fired=getMechaSpec({...enemy,fireFlash:.12});assert.equal(fired.state,'fire');assert.equal(fired.sourceState,'open');assert.equal(fired.weakpointEnabled,false);
+        }
+      }
+    }
+  } finally {emptyManifest();}
+});
+
+test('reflections and body rotation apply identically to sprite, muzzle, nozzle, core and direction',()=>{
+  const fixture={schemaVersion:1,entries:[{key:'transform',roles:['beetle'],canvasWidth:200,canvasHeight:200,displayWidth:100,pivotPixels:{x:100,y:100},
+    frames:{idle:{filename:'left.png',muzzlesPixels:[{x:60,y:120}],muzzleDirectionsPixels:[{x:40,y:120}],nozzlesPixels:[{x:160,y:90}],corePixels:{x:95,y:105,radius:4}}}}]};
+  try {
+    registerMechaManifest(fixture);
+    for(const artFlipX of [1,-1])for(const artFlipY of [1,-1]) {
+      const enemy={type:'beetle',x:800,y:300,artAngle:Math.PI/2,artFlipX,artFlipY},spec=getMechaSpec(enemy),scales=[];
+      assert.deepEqual(mechaTransform(enemy),{angle:Math.PI/2,flipX:artFlipX,flipY:artFlipY});
+      for(const anchor of [...spec.runtimeMuzzles,...spec.runtimeNozzles,spec.runtimeCore]) {
+        const actual=mechaAnchorWorld(enemy,anchor);
+        assert.ok(Math.abs(actual.x-(enemy.x-anchor.y*artFlipY))<1e-10);assert.ok(Math.abs(actual.y-(enemy.y+anchor.x*artFlipX))<1e-10);
+      }
+      const direction=mechaDirectionWorld(enemy,spec.runtimeMuzzleDirections[0]);
+      assert.ok(Math.abs(direction.x)<1e-10);assert.ok(Math.abs(direction.y+artFlipX)<1e-10);
+      Renderer.prototype.drawEnemy.call({mechaFrames:{'left.png':{}},glow(){}},context({scale(x,y){scales.push([x,y]);}}),enemy,0);
+      assert.deepEqual(scales[0],[artFlipX,artFlipY]);
+    }
+  } finally {emptyManifest();}
+});
+
+test('a projected worm middle-port launch remains over the body and foreground at its unchanged anchor',()=>{
+  const order=[],paths=[];let path=[];
+  const c=context({createLinearGradient(){return {addColorStop(){}};},createRadialGradient(){return {addColorStop(){}};},
+    beginPath(){path=[];},moveTo(x,y){path.push([x,y]);},lineTo(x,y){path.push([x,y]);},stroke(){paths.push([...path]);order.push('cue');}});
+  const renderer={art:{},ctx:c,canvas:{width:1280,height:720},scale:1,offsetX:0,offsetY:0,reducedMotion:true,impactShake:0,exposure:0,
+    flashes:[{kind:'enemyShot',x:976,y:315,life:.12,max:.18}],presentation:{threatVariant:'C'},
+    environment:{update(){},drawBack(){},drawFront(){order.push('foreground');}},drawEnemy(){order.push('hull');},
+    drawEffects(){order.push('rear-effects');},drawCombatCues(ctx,g){Renderer.prototype.drawCombatCues.call(this,ctx,g);}};
+  for(const method of ['drawAtmosphere','updateEffects','drawExitGhosts','drawTrail','drawPickup','drawBullets','drawPlayer','drawSpeedLines','drawThreats','drawTension','drawLight'])renderer[method]=()=>{};
+  const g={mode:'playing',sceneTime:0,altitude:.5,daylight:1,time:0,shake:0,player:{x:200,y:300,hp:100,powerTime:0},enemies:[{type:'worm',x:980,y:315}],pickups:[],enemyBullets:[]};
+  Renderer.prototype.draw.call(renderer,g,0);
+  assert.ok(order.indexOf('hull')<order.indexOf('foreground'));assert.ok(order.indexOf('foreground')<order.indexOf('cue'));
+  assert.deepEqual(paths[0],[[969,311],[979,315],[969,319]]);
+  assert.deepEqual(renderer.flashes[0],{kind:'enemyShot',x:976,y:315,life:.12,max:.18});
 });

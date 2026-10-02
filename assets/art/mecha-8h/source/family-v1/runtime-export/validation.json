@@ -1,0 +1,587 @@
+{
+  "staticChecks": [
+    {
+      "role": "beetle",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        14,
+        108,
+        325,
+        233
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": null,
+      "coreCameraRayFirstMesh": null,
+      "visibleSizeAtDisplayWidth": [
+        70.461,
+        28.32
+      ]
+    },
+    {
+      "role": "dragonfly",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        77,
+        110,
+        300,
+        285
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        51.104,
+        40.104
+      ]
+    },
+    {
+      "role": "wasp",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        30,
+        123,
+        309,
+        251
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        55.219,
+        25.333
+      ]
+    },
+    {
+      "role": "mantis",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        45,
+        126,
+        315,
+        268
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        67.5,
+        35.5
+      ]
+    },
+    {
+      "role": "mantis",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        39,
+        113,
+        315,
+        281
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        69.0,
+        42.0
+      ]
+    },
+    {
+      "role": "orb",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        72,
+        95,
+        292,
+        298
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        46.979,
+        43.349
+      ]
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        72,
+        87,
+        306,
+        311
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        49.969,
+        47.833
+      ]
+    },
+    {
+      "role": "claw",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        61,
+        100,
+        311,
+        271
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        70.312,
+        48.094
+      ]
+    },
+    {
+      "role": "claw",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        61,
+        100,
+        311,
+        283
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        70.312,
+        51.469
+      ]
+    },
+    {
+      "role": "ray",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        61,
+        89,
+        311,
+        294
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        76.823,
+        62.995
+      ]
+    },
+    {
+      "role": "ray",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        61,
+        73,
+        311,
+        310
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        76.823,
+        72.828
+      ]
+    },
+    {
+      "role": "worm",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        48,
+        153,
+        342,
+        240
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        130.156,
+        38.516
+      ]
+    },
+    {
+      "role": "needle",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        26,
+        119,
+        340,
+        236
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        91.583,
+        34.125
+      ]
+    },
+    {
+      "role": "needle",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        40,
+        119,
+        340,
+        236
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        87.5,
+        34.125
+      ]
+    },
+    {
+      "role": "warden",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        43,
+        96,
+        333,
+        294
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "WARDEN | inner core shield 1",
+      "visibleSizeAtDisplayWidth": [
+        256.771,
+        175.312
+      ]
+    },
+    {
+      "role": "warden",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        43,
+        96,
+        333,
+        294
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        256.771,
+        175.312
+      ]
+    },
+    {
+      "role": "carrier",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        36,
+        84,
+        344,
+        294
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "CARRIER | small bridge shutter",
+      "visibleSizeAtDisplayWidth": [
+        240.625,
+        164.062
+      ]
+    },
+    {
+      "role": "carrier",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        36,
+        84,
+        344,
+        311
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        240.625,
+        177.344
+      ]
+    },
+    {
+      "role": "lancer",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        28,
+        117,
+        340,
+        260
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "LANCER | reactor sliding shutter 1",
+      "visibleSizeAtDisplayWidth": [
+        292.5,
+        134.062
+      ]
+    },
+    {
+      "role": "lancer",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        19,
+        117,
+        340,
+        260
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        300.938,
+        134.062
+      ]
+    },
+    {
+      "role": "bastion",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        57,
+        83,
+        328,
+        313
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "BASTION | command shield 1",
+      "visibleSizeAtDisplayWidth": [
+        211.719,
+        179.688
+      ]
+    },
+    {
+      "role": "bastion",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        42,
+        74,
+        328,
+        322
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        223.438,
+        193.75
+      ]
+    },
+    {
+      "role": "apex",
+      "state": "neutral",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        46,
+        78,
+        335,
+        321
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "APEX | central core shutter -1",
+      "visibleSizeAtDisplayWidth": [
+        255.885,
+        215.156
+      ]
+    },
+    {
+      "role": "apex",
+      "state": "open",
+      "rgba": true,
+      "size": [
+        384,
+        384
+      ],
+      "alphaBoundsPixels": [
+        46,
+        57,
+        335,
+        343
+      ],
+      "transparentBorder": true,
+      "sha256Matches": true,
+      "anchorsWithinCanvas": true,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "visibleSizeAtDisplayWidth": [
+        255.885,
+        253.229
+      ]
+    }
+  ],
+  "failures": [],
+  "allStaticChecksPassed": true,
+  "limitations": [
+    "These checks are asset validation, not actual runtime acceptance",
+    "Only neutral/open endpoint renders are exported; editable source has frame 1 to 21 mechanisms",
+    "Runtime owns authoritative hull and weakpoint collision semantics"
+  ]
+}

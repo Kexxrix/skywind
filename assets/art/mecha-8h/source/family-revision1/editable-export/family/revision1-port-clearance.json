@@ -1,0 +1,271 @@
+{
+  "checks": [
+    {
+      "role": "orb",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_left_0",
+      "world": [
+        -1.837,
+        -0.12,
+        -0.63
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_left_1",
+      "world": [
+        -1.617,
+        -0.12,
+        0.0
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_left_2",
+      "world": [
+        -1.837,
+        -0.12,
+        0.63
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "neutral",
+      "anchor": "ANCHOR_nozzle_lower",
+      "world": [
+        1.905,
+        0.12,
+        -0.5
+      ],
+      "worldDirection": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "neutral",
+      "anchor": "ANCHOR_nozzle_upper",
+      "world": [
+        1.905,
+        0.12,
+        0.5
+      ],
+      "worldDirection": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "anchor": "ANCHOR_muzzle_left_0",
+      "world": [
+        -1.837,
+        -0.12,
+        -0.63
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "anchor": "ANCHOR_muzzle_left_1",
+      "world": [
+        -1.617,
+        -0.12,
+        0.0
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "anchor": "ANCHOR_muzzle_left_2",
+      "world": [
+        -1.837,
+        -0.12,
+        0.63
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "anchor": "ANCHOR_nozzle_lower",
+      "world": [
+        1.905,
+        0.12,
+        -0.5
+      ],
+      "worldDirection": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "orb",
+      "state": "open",
+      "anchor": "ANCHOR_nozzle_upper",
+      "world": [
+        1.905,
+        0.12,
+        0.5
+      ],
+      "worldDirection": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "worm",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_segment_0",
+      "world": [
+        -1.917,
+        -0.41,
+        -0.22
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "worm",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_segment_1",
+      "world": [
+        -1.027,
+        -0.41,
+        -0.08
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "worm",
+      "state": "neutral",
+      "anchor": "ANCHOR_muzzle_segment_2",
+      "world": [
+        -0.137,
+        -0.75,
+        -0.52
+      ],
+      "worldDirection": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    },
+    {
+      "role": "worm",
+      "state": "neutral",
+      "anchor": "ANCHOR_nozzle_aft",
+      "world": [
+        2.145,
+        0.02,
+        0.0
+      ],
+      "worldDirection": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "cameraObstruction": null,
+      "axisObstruction": null,
+      "cameraClear": true,
+      "axisClear": true
+    }
+  ],
+  "allClear": true
+}

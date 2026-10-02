@@ -2,6 +2,7 @@
 import { mkdir, readdir, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
+import { saveEvidenceScreenshot } from './qa-8h-capture.mjs';
 const port = Number(process.env.SKYWIND_QA_CDP_PORT || 9230);
 const base = process.env.SKYWIND_QA_URL || 'http://127.0.0.1:5173/';
 const output = resolve('.work/8h-build/evidence');
@@ -43,22 +44,21 @@ async function ready() {
 }
 async function snapshot() {
   return evaluate(`(async()=>{const {game,renderer,audio}=await import(new URL('src/main.js',location.href));
+    const {getMechaSpec,mechaAnchorWorld}=await import(new URL('src/mecha-art.js',location.href));
     const gl=renderer.environment?.gl,ext=gl?.getExtension('WEBGL_debug_renderer_info');
     const box=id=>{const e=document.getElementById(id),r=e.getBoundingClientRect();return {hidden:e.hidden,x:r.x,y:r.y,width:r.width,height:r.height,text:e.innerText?.slice(0,180)}};
     return {url:location.href,viewport:{width:innerWidth,height:innerHeight},gameArea:box('game-ui'),title:box('title-screen'),pause:box('pause-screen'),touch:box('touch-controls'),pilot:box('pilot-hud'),
       mode:game.mode,time:game.time,normalTime:game.normalTime,phase:game.phase,stage:game.stage,cycle:game.cycle,bossesDefeated:game.bossesDefeated,hp:game.player.hp,
       player:{x:game.player.x,y:game.player.y,vx:game.player.vx,vy:game.player.vy},score:game.score,shots:game.bullets.length,enemyBullets:game.enemyBullets.length,
       weapon:document.getElementById('weapon-name').textContent,flight:document.getElementById('flight-status').textContent,
+      models:game.enemies.map(enemy=>{const spec=getMechaSpec(enemy);if(!spec)return null;const expected=spec.runtimeMuzzles.map(anchor=>mechaAnchorWorld(enemy,anchor));return{role:enemy.type==='boss'?enemy.bossKind:enemy.type,key:spec.key,state:spec.state,weakpointEnabled:spec.weakpointEnabled,displayWidth:spec.displayWidth,renderLoaded:Boolean(renderer.mechaFrames?.[spec.filename]),angle:enemy.artAngle,muzzles:enemy.muzzles,expectedMuzzles:expected,maxMuzzleError:Math.max(0,...expected.map((point,index)=>Math.hypot(point.x-(enemy.muzzles?.[index]?.x??Infinity),point.y-(enemy.muzzles?.[index]?.y??Infinity))))}}).filter(Boolean),
       audio:{ready:audio.ready,muted:audio.muted,context:audio.context?.state,error:audio.error},
       webgl:{version:gl?.getParameter(gl.VERSION),renderer:ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl?.getParameter(gl.RENDERER)}}})()`);
 }
 async function capture(name) {
   if (process.env.SKYWIND_QA_CAPTURE === '0') return;
-  const existing = (await readdir(output)).filter(file => file.endsWith('.png'));
   const filename = `${run}-${name}.png`;
-  if (!existing.includes(filename) && existing.length >= 24) throw new Error('24-screenshot task budget reached');
-  const response = await cdp('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
-  await writeFile(resolve(output, filename), Buffer.from(response.data, 'base64'));
+  await saveEvidenceScreenshot(cdp, output, filename);
   report.screenshots.push(filename);
 }
 async function key(code, key, type = 'keyDown') {
@@ -89,8 +89,14 @@ try {
   const up = await snapshot(); assert.ok(up.player.vy < 0, 'keyboard direction reverses');
   await key('ArrowUp', 'ArrowUp', 'keyUp'); await delay(650);
   const shooting = await snapshot(); assert.ok(shooting.shots > 0, 'native shoot input creates projectiles');
+  report.observations.push({ name: 'native-keyboard-response-fire', before, down, up, shooting });
+  if (process.env.SKYWIND_QA_MODELS === '1') {
+    const observedModels = [before, down, up, shooting].flatMap(state => state.models);
+    assert.ok(observedModels.some(model => model.role === 'beetle' && model.renderLoaded), 'real representative PNG is loaded for an observed active enemy');
+    assert.ok(observedModels.every(model => typeof model.maxMuzzleError === 'number' && model.maxMuzzleError < 1e-7), 'actual firing ports follow the shared rotated model projection');
+  }
   await key('Space', ' ', 'keyUp');
-  report.observations.push({ name: 'native-keyboard-response-fire', before, down, up, shooting }); await capture('playing');
+  await capture('playing');
   await tap('KeyP', 'p'); const paused = await snapshot(); await delay(400); const pausedAfter = await snapshot();
   assert.equal(paused.time, pausedAfter.time); assert.equal(pausedAfter.pause.hidden, false);
   report.observations.push({ name: 'pause-keeps-game-clock', before: paused, after: pausedAfter });

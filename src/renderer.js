@@ -1,7 +1,7 @@
 import { cameraRoll, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION } from './game.js';
 import { VolumeEnvironment } from './volume-environment.js';
 import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT } from './presentation.js';
-import { MECHA_MANIFEST_PATH, registerMechaManifest, getMechaSpec, mechaAnchorWorld } from './mecha-art.js';
+import { MECHA_MANIFEST_PATH, registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaTransform } from './mecha-art.js';
 
 const W = 1280, H = 720;
 const TAU = Math.PI * 2;
@@ -38,6 +38,18 @@ function fillDenseNeighbors(bullets,radiiSq,counts) {
       if(distanceSq<radiiSq[otherIndex])counts[otherIndex]++;
     }
   }
+}
+
+function drawEscortArmor(c,e) {
+  if(!e.escortShield)return;
+  c.save();c.globalCompositeOperation='screen';c.globalAlpha=.6;c.strokeStyle='#9be4ff';c.lineWidth=2;
+  const radius=e.radius||90;
+  c.beginPath();
+  for(const side of [-1,1]) {
+    c.moveTo(-radius*.7,side*radius*.22);c.lineTo(-radius*.91,side*radius*.33);
+    c.lineTo(-radius*.84,side*radius*.65);c.lineTo(-radius*.55,side*radius*.76);
+  }
+  c.stroke();c.restore();
 }
 
 // The halo radius stays exact. A spatial grid removes the whole-array scan
@@ -449,7 +461,8 @@ export class Renderer {
   drawEnemy(c,e,t) {
     const mecha=getMechaSpec(e),frame=mecha&&this.mechaFrames?.[mecha.filename];
     if(frame) {
-      c.save();c.translate(e.x,e.y);c.rotate(e.artAngle||0);
+      const transform=mechaTransform(e,mecha);
+      c.save();c.translate(e.x,e.y);c.rotate(transform.angle);c.scale(transform.flipX,transform.flipY);
       c.save();c.globalCompositeOperation='lighter';
       for(const nozzle of mecha.runtimeNozzles) {
         c.save();c.translate(nozzle.x,nozzle.y);c.scale(1.8,.45);
@@ -457,6 +470,7 @@ export class Renderer {
       }
       c.restore();
       c.drawImage(frame,-mecha.pivot.x,-mecha.pivot.y,mecha.displayWidth,mecha.displayHeight);
+      drawEscortArmor(c,e);
       if(e.flash>0){c.globalCompositeOperation='screen';this.glow(c,0,0,mecha.displayWidth*.8,'white',.85);}
       c.restore();
       return;
@@ -476,6 +490,7 @@ export class Renderer {
     }
     c.save();c.translate(e.x,e.y);c.rotate(e.angle||0);
     c.drawImage(atlas,sx,sy,sw,sh,-dw/2,-dh/2,dw,dh);
+    drawEscortArmor(c,e);
     if(e.flash>0){c.globalCompositeOperation='screen';this.glow(c,0,0,dw*.8,'white',.85);}
     if(e.type==='boss') {
       c.globalCompositeOperation='lighter';this.glow(c,-35,0,95+(e.telegraph||0)*130,'orange',.25+(e.telegraph||0)*.5);
@@ -563,6 +578,13 @@ export class Renderer {
         c.strokeStyle=b.arming>0?'#ffc8ea':'#ff62a4';c.globalAlpha=b.arming>0?.4:.85;c.lineWidth=1.5;
         c.beginPath();c.arc(b.x,b.y,b.radius+6+Math.sin(g.sceneTime*8)*2,0,TAU);c.stroke();
       }
+    }
+    // A projected middle gun can overlap another hull section in the image.
+    // The compact real launch cue is composed after hull and foreground cloud,
+    // so its origin stays readable without moving the model-derived anchor.
+    for(const f of this.flashes)if(f.kind==='enemyShot'&&f.life>0) {
+      c.globalCompositeOperation='lighter';c.globalAlpha=(f.life/f.max)**2*.8;c.strokeStyle='#fff0f5';c.lineWidth=1.5;
+      c.beginPath();c.moveTo(f.x-7,f.y-4);c.lineTo(f.x+3,f.y);c.lineTo(f.x-7,f.y+4);c.stroke();
     }
     if(g.mode==='playing'){
       // Draw the contrast backing outside the damage core, never over its edge.

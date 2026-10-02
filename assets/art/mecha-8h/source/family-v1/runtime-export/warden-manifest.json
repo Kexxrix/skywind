@@ -1,0 +1,366 @@
+{
+  "id": "warden",
+  "version": 1,
+  "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+  "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+  "family": "pressurecraft-boss",
+  "width": 384,
+  "height": 384,
+  "format": "PNG",
+  "colorMode": "RGBA",
+  "imagePixelOrigin": "top-left",
+  "pivotPixels": [
+    192.0,
+    192.0
+  ],
+  "displayWidth": 340,
+  "facing": "left",
+  "axes": {
+    "forward": "-X",
+    "starboard": "+Y",
+    "up": "+Z"
+  },
+  "source": "sources/warden.blend",
+  "generator": "family_generator.py",
+  "mechanism": "Two central armored jaws separate to expose a small core; heavy paired assault cannons.",
+  "flameBaked": false,
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      0.0,
+      -15.0,
+      4.0
+    ],
+    "rotationEuler": [
+      1.3101938962936401,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.150000095367432,
+    "inheritedFrom": "approved INT-01 representative",
+    "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+  },
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "filmTransparent": true,
+    "colorTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.25,
+    "denoising": false,
+    "elapsedSeconds": 14.945
+  },
+  "collisionSemantics": {
+    "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+    "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+    "coreExposedInArt": [
+      "open"
+    ],
+    "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+  },
+  "states": {
+    "neutral": {
+      "muzzlesPixels": [
+        [
+          42.3518,
+          247.571
+        ],
+        [
+          42.3518,
+          139.5028
+        ]
+      ],
+      "muzzleIds": [
+        "assault_-1",
+        "assault_1"
+      ],
+      "nozzlesPixels": [
+        [
+          333.2971,
+          237.1965
+        ],
+        [
+          333.2971,
+          140.6556
+        ]
+      ],
+      "nozzleIds": [
+        "assault_-1",
+        "assault_1"
+      ],
+      "corePixels": [
+        182.3068,
+        206.313
+      ],
+      "coreRadiusPixels": 12.9682,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "WARDEN | inner core shield 1",
+      "projectedAnchors": {
+        "core": {
+          "world": [
+            -0.13,
+            -0.745,
+            0.0
+          ],
+          "pixels": [
+            182.3068,
+            206.313
+          ]
+        },
+        "core_radius": {
+          "world": [
+            -0.13,
+            -0.745,
+            0.18
+          ],
+          "pixels": [
+            182.3068,
+            193.3448
+          ]
+        },
+        "muzzle_assault_-1": {
+          "world": [
+            -2.007,
+            -0.08,
+            -0.75
+          ],
+          "pixels": [
+            42.3518,
+            247.571
+          ]
+        },
+        "direction_assault_-1": {
+          "world": [
+            -2.207,
+            -0.08,
+            -0.75
+          ],
+          "pixels": [
+            27.4392,
+            247.571
+          ]
+        },
+        "nozzle_assault_-1": {
+          "world": [
+            1.895,
+            0.16,
+            -0.67
+          ],
+          "pixels": [
+            333.2971,
+            237.1965
+          ]
+        },
+        "muzzle_assault_1": {
+          "world": [
+            -2.007,
+            -0.08,
+            0.75
+          ],
+          "pixels": [
+            42.3518,
+            139.5028
+          ]
+        },
+        "direction_assault_1": {
+          "world": [
+            -2.207,
+            -0.08,
+            0.75
+          ],
+          "pixels": [
+            27.4392,
+            139.5028
+          ]
+        },
+        "nozzle_assault_1": {
+          "world": [
+            1.895,
+            0.16,
+            0.67
+          ],
+          "pixels": [
+            333.2971,
+            140.6556
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/warden-neutral.png",
+      "frame": 1,
+      "stateProgress": 0,
+      "coreExposed": false,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "6ca5683a5fa0b3e6016aa60916099dc3826559ab8c2ebec920a6b0fdac435b8a"
+    },
+    "open": {
+      "muzzlesPixels": [
+        [
+          42.3518,
+          247.571
+        ],
+        [
+          42.3518,
+          139.5028
+        ]
+      ],
+      "muzzleIds": [
+        "assault_-1",
+        "assault_1"
+      ],
+      "nozzlesPixels": [
+        [
+          333.2971,
+          237.1965
+        ],
+        [
+          333.2971,
+          140.6556
+        ]
+      ],
+      "nozzleIds": [
+        "assault_-1",
+        "assault_1"
+      ],
+      "corePixels": [
+        182.3068,
+        206.313
+      ],
+      "coreRadiusPixels": 12.9682,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "projectedAnchors": {
+        "core": {
+          "world": [
+            -0.13,
+            -0.745,
+            0.0
+          ],
+          "pixels": [
+            182.3068,
+            206.313
+          ]
+        },
+        "core_radius": {
+          "world": [
+            -0.13,
+            -0.745,
+            0.18
+          ],
+          "pixels": [
+            182.3068,
+            193.3448
+          ]
+        },
+        "muzzle_assault_-1": {
+          "world": [
+            -2.007,
+            -0.08,
+            -0.75
+          ],
+          "pixels": [
+            42.3518,
+            247.571
+          ]
+        },
+        "direction_assault_-1": {
+          "world": [
+            -2.207,
+            -0.08,
+            -0.75
+          ],
+          "pixels": [
+            27.4392,
+            247.571
+          ]
+        },
+        "nozzle_assault_-1": {
+          "world": [
+            1.895,
+            0.16,
+            -0.67
+          ],
+          "pixels": [
+            333.2971,
+            237.1965
+          ]
+        },
+        "muzzle_assault_1": {
+          "world": [
+            -2.007,
+            -0.08,
+            0.75
+          ],
+          "pixels": [
+            42.3518,
+            139.5028
+          ]
+        },
+        "direction_assault_1": {
+          "world": [
+            -2.207,
+            -0.08,
+            0.75
+          ],
+          "pixels": [
+            27.4392,
+            139.5028
+          ]
+        },
+        "nozzle_assault_1": {
+          "world": [
+            1.895,
+            0.16,
+            0.67
+          ],
+          "pixels": [
+            333.2971,
+            140.6556
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/warden-open.png",
+      "frame": 21,
+      "stateProgress": 1,
+      "coreExposed": true,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "3044745cd06631535f88c6f896502340d61fbcd50c4ca343317353556ff7677b"
+    }
+  },
+  "geometry": {
+    "meshObjects": 45,
+    "vertices": 728,
+    "mechanismGroups": 2
+  },
+  "sha256": {
+    "blend": "b7d815080058bc410a6cfc0b49eaba2590fb3d89c866c184d8889d69225f4514",
+    "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+    "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+  },
+  "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+  "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+}

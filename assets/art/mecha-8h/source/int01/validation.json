@@ -1,0 +1,22 @@
+{
+  "validation": "native representative static asset checks",
+  "alpha_bbox": [
+    14,
+    108,
+    325,
+    233
+  ],
+  "visible_size_at_displayWidth87": [
+    70.461,
+    28.32
+  ],
+  "transparent_border": true,
+  "source_file_hashes_match_manifest": true,
+  "projection_source": "Blender world_to_camera_view on named Empty objects",
+  "source_reference_sha256": "530b68cbad52545909579ad8d922fa933b85aecc8a2fab954c83760451ad0c9f",
+  "limitations": [
+    "Single neutral pose only",
+    "Not actual game execution",
+    "Parent and independent visual approval still pending"
+  ]
+}

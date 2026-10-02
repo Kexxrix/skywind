@@ -1,0 +1,285 @@
+{
+  "id": "needle",
+  "version": 2,
+  "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+  "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+  "family": "artillery-spine",
+  "width": 384,
+  "height": 384,
+  "format": "PNG",
+  "colorMode": "RGBA",
+  "imagePixelOrigin": "top-left",
+  "pivotPixels": [
+    192.0,
+    192.0
+  ],
+  "displayWidth": 112,
+  "facing": "left",
+  "axes": {
+    "forward": "-X",
+    "starboard": "+Y",
+    "up": "+Z"
+  },
+  "source": "sources/needle.blend",
+  "generator": "family_generator_v1.py",
+  "mechanism": "Physical rail recoil; open is mechanically recoiled/recovery pose, not core availability.",
+  "flameBaked": false,
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      0.0,
+      -15.0,
+      4.0
+    ],
+    "rotationEuler": [
+      1.3101938962936401,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.150000095367432,
+    "inheritedFrom": "approved INT-01 representative",
+    "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+  },
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "filmTransparent": true,
+    "colorTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.25,
+    "denoising": false,
+    "elapsedSeconds": 9.682
+  },
+  "collisionSemantics": {
+    "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+    "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+    "coreExposedInArt": [
+      "neutral",
+      "open"
+    ],
+    "coreBonusPermission": "No vulnerable-core intent in this recoil pose. The open key is retained only for animation compatibility; it must not enable a weakpoint."
+  },
+  "states": {
+    "neutral": {
+      "muzzlesPixels": [
+        [
+          25.948,
+          197.2353
+        ]
+      ],
+      "muzzleIds": [
+        "rail"
+      ],
+      "nozzlesPixels": [
+        [
+          340.0078,
+          194.1133
+        ]
+      ],
+      "nozzleIds": [
+        "reactor"
+      ],
+      "corePixels": [
+        208.4039,
+        200.8135
+      ],
+      "coreRadiusPixels": 6.4841,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "projectedAnchors": {
+        "muzzle_rail": {
+          "world": [
+            -2.227,
+            -0.01,
+            -0.07
+          ],
+          "pixels": [
+            25.948,
+            197.2353
+          ]
+        },
+        "direction_rail": {
+          "world": [
+            -2.427,
+            -0.01,
+            -0.07
+          ],
+          "pixels": [
+            11.0353,
+            197.2353
+          ]
+        },
+        "core": {
+          "world": [
+            0.22,
+            -0.665,
+            0.055
+          ],
+          "pixels": [
+            208.4039,
+            200.8135
+          ]
+        },
+        "core_radius": {
+          "world": [
+            0.22,
+            -0.665,
+            0.145
+          ],
+          "pixels": [
+            208.4039,
+            194.3294
+          ]
+        },
+        "nozzle_reactor": {
+          "world": [
+            1.985,
+            0.04,
+            -0.04
+          ],
+          "pixels": [
+            340.0078,
+            194.1133
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/needle-neutral.png",
+      "frame": 1,
+      "stateProgress": 0,
+      "coreExposed": false,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "31fe579acede552e4ab28a34dcbc2bb856b784f12c5a1b55c76304bc510072b9"
+    },
+    "open": {
+      "muzzlesPixels": [
+        [
+          39.3693,
+          197.2353
+        ]
+      ],
+      "muzzleIds": [
+        "rail"
+      ],
+      "nozzlesPixels": [
+        [
+          340.0078,
+          194.1133
+        ]
+      ],
+      "nozzleIds": [
+        "reactor"
+      ],
+      "corePixels": [
+        208.4039,
+        200.8135
+      ],
+      "coreRadiusPixels": 6.4841,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "projectedAnchors": {
+        "muzzle_rail": {
+          "world": [
+            -2.047,
+            -0.01,
+            -0.07
+          ],
+          "pixels": [
+            39.3693,
+            197.2353
+          ]
+        },
+        "direction_rail": {
+          "world": [
+            -2.247,
+            -0.01,
+            -0.07
+          ],
+          "pixels": [
+            24.4567,
+            197.2353
+          ]
+        },
+        "core": {
+          "world": [
+            0.22,
+            -0.665,
+            0.055
+          ],
+          "pixels": [
+            208.4039,
+            200.8135
+          ]
+        },
+        "core_radius": {
+          "world": [
+            0.22,
+            -0.665,
+            0.145
+          ],
+          "pixels": [
+            208.4039,
+            194.3294
+          ]
+        },
+        "nozzle_reactor": {
+          "world": [
+            1.985,
+            0.04,
+            -0.04
+          ],
+          "pixels": [
+            340.0078,
+            194.1133
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/needle-open.png",
+      "frame": 21,
+      "stateProgress": 1,
+      "coreExposed": false,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "This is a mechanical recoil pose, not a vulnerable-core pose. It must not activate bonus damage from the state name.",
+      "sha256": "ccd11c0679003b942e09f2a8f8bc9428182c0ffb54b38385d94da5d613c94438",
+      "mechanicalPose": "recoil",
+      "weakpointEnabledByArt": false
+    }
+  },
+  "geometry": {
+    "meshObjects": 25,
+    "vertices": 390,
+    "mechanismGroups": 1
+  },
+  "sha256": {
+    "blend": "adf14bc2e12be1f8a7fedc0f8f0a2fae2de61ef9bf3aaf3b5d5359eee8a5c474",
+    "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+    "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+  },
+  "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+  "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility",
+  "artifactRevision": 1,
+  "revisionReason": "Metadata only: open denotes recoil, not weakpoint exposure"
+}

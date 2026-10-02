@@ -1,0 +1,4577 @@
+{
+  "version": 1,
+  "production": "Actual Blender geometry / Cycles RGBA",
+  "approvalStatus": "Parent art direction approved for runtime integration; full-family independent/runtime QA pending",
+  "roles": [
+    "beetle",
+    "dragonfly",
+    "wasp",
+    "mantis",
+    "orb",
+    "claw",
+    "ray",
+    "worm",
+    "needle",
+    "warden",
+    "carrier",
+    "lancer",
+    "bastion",
+    "apex"
+  ],
+  "regularRoles": [
+    "beetle",
+    "dragonfly",
+    "wasp",
+    "mantis",
+    "orb",
+    "claw",
+    "ray",
+    "worm",
+    "needle"
+  ],
+  "bossRoles": [
+    "warden",
+    "carrier",
+    "lancer",
+    "bastion",
+    "apex"
+  ],
+  "stateCount": 24,
+  "decodedRGBABytes": 14155776,
+  "displayWidthPolicy": "Only beetle 87 is fixed. All other display widths are provisional and may be changed in metadata without rerendering.",
+  "coordinateContract": {
+    "imagePixelOrigin": "top-left",
+    "pivot": "fixed center",
+    "facing": "left",
+    "geometryForward": "-X",
+    "worldUp": "+Z"
+  },
+  "neutralCorePolicy": "Visible cyan markers in neutral never imply active bonus damage. Runtime combat state owns activation.",
+  "runtimeAcceptance": "Pending locallead game integration and actual runtime QA.",
+  "assets": [
+    {
+      "id": "beetle",
+      "assetId": "int01-wedge",
+      "version": 1,
+      "approvalStatus": "representative-parent-and-independent-approved",
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "width": 384,
+      "height": 384,
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 87,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "referenceMatch": "visual estimate; SV-01 numeric source camera unavailable"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "resolution": 384,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "frame": 1,
+        "elapsedSeconds": 3.134
+      },
+      "source": "sources/beetle.blend",
+      "generator": "representative_generator.py",
+      "flameBaked": false,
+      "states": {
+        "neutral": {
+          "file": "renders/beetle-neutral.png",
+          "frame": 1,
+          "muzzlesPixels": [
+            [
+              26.8427,
+              219.4253
+            ]
+          ],
+          "nozzlesPixels": [
+            [
+              325.468,
+              209.1468
+            ],
+            [
+              325.468,
+              184.9395
+            ]
+          ],
+          "corePixels": [
+            183.7981,
+            203.2823
+          ],
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Neutral core is a visual attachment marker only; no bonus damage."
+        }
+      },
+      "projectedAnchors": {
+        "nozzle_port": {
+          "world": [
+            1.7899999618530273,
+            -0.6299999952316284,
+            -0.07000000029802322
+          ],
+          "pixels": [
+            325.468,
+            209.1468
+          ]
+        },
+        "nozzle_starboard": {
+          "world": [
+            1.7899999618530273,
+            0.6299999952316284,
+            -0.07000000029802322
+          ],
+          "pixels": [
+            325.468,
+            184.9395
+          ]
+        },
+        "muzzle_primary": {
+          "world": [
+            -2.2149999141693115,
+            -0.3400000035762787,
+            -0.28999999165534973
+          ],
+          "pixels": [
+            26.8427,
+            219.4253
+          ]
+        },
+        "core": {
+          "world": [
+            -0.10999999940395355,
+            -0.6060000061988831,
+            0.004999999888241291
+          ],
+          "pixels": [
+            183.7981,
+            203.2823
+          ]
+        },
+        "core_radius": {
+          "world": [
+            -0.10999999940395355,
+            -0.6060000061988831,
+            0.07000000029802322
+          ],
+          "pixels": [
+            183.7981,
+            198.5993
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "coreRadiusPixels": 4.682999999999993,
+      "geometry": {
+        "meshObjects": 56,
+        "vertices": 776,
+        "reusableModules": [
+          "faceted armor panel",
+          "tapered inner spine",
+          "hollow octagonal nozzle",
+          "rail weapon",
+          "swept outerplane",
+          "canted stabilizer"
+        ]
+      },
+      "notes": [
+        "One neutral state only. No body animation validation claimed.",
+        "Camera, canvas and pivot remain fixed; no auto-fit or post-render recenter.",
+        "Projected anchors are Blender empties evaluated through the scene camera.",
+        "Runtime role beetle and displayWidth 87 supplied by local implementation lead.",
+        "Core is an attachment marker, not approval for neutral weakpoint damage."
+      ],
+      "sha256": {
+        "blend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa",
+        "png": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+        "generator": "2581c7a0d97af4832f099567dfb123c6fc6620bcd0ed0263102627e9f090fb4c"
+      },
+      "displayWidthStatus": "fixed_by_locallead",
+      "displayWidthSource": "Locallead explicit 87-unit contract"
+    },
+    {
+      "id": "dragonfly",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "angular-frame",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 88,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/dragonfly.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Runtime root rotation; all anchors rotate through the sprite transform. Physical square frame.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 1.845
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              76.6509,
+              192.9606
+            ]
+          ],
+          "muzzleIds": [
+            "primary"
+          ],
+          "nozzlesPixels": [
+            [
+              300.4893,
+              191.0394
+            ]
+          ],
+          "nozzleIds": [
+            "aft"
+          ],
+          "corePixels": [
+            192.0,
+            200.7415
+          ],
+          "coreRadiusPixels": 6.4841,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.0,
+                -0.455,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                200.7415
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.0,
+                -0.455,
+                0.09
+              ],
+              "pixels": [
+                192.0,
+                194.2574
+              ]
+            },
+            "muzzle_primary": {
+              "world": [
+                -1.547,
+                -0.05,
+                0.0
+              ],
+              "pixels": [
+                76.6509,
+                192.9606
+              ]
+            },
+            "direction_primary": {
+              "world": [
+                -1.747,
+                -0.05,
+                0.0
+              ],
+              "pixels": [
+                61.7383,
+                192.9606
+              ]
+            },
+            "nozzle_aft": {
+              "world": [
+                1.455,
+                0.05,
+                0.0
+              ],
+              "pixels": [
+                300.4893,
+                191.0394
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/dragonfly-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "f437abcb988f6405c5e69e40e078fb46e3f8a21e5774bd9a036dcf1ac2347535"
+        }
+      },
+      "geometry": {
+        "meshObjects": 21,
+        "vertices": 356,
+        "mechanismGroups": 0
+      },
+      "sha256": {
+        "blend": "9986294209758045771bb7f6d26c062d90feeefd0c62cf313860f2866aa87188",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "wasp",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "split-skimmer",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 76,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/wasp.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Fast spear/skimmer with narrow swept foils and twin propulsion.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 4.97
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              28.9305,
+              197.9797
+            ]
+          ],
+          "muzzleIds": [
+            "primary"
+          ],
+          "nozzlesPixels": [
+            [
+              309.4369,
+              165.4872
+            ],
+            [
+              309.4369,
+              217.36
+            ]
+          ],
+          "nozzleIds": [
+            "upper",
+            "lower"
+          ],
+          "corePixels": [
+            214.3689,
+            208.3303
+          ],
+          "coreRadiusPixels": 4.8271,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.3,
+                -0.625,
+                -0.06
+              ],
+              "pixels": [
+                214.3689,
+                208.3303
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.3,
+                -0.625,
+                0.007
+              ],
+              "pixels": [
+                214.3689,
+                203.5032
+              ]
+            },
+            "muzzle_primary": {
+              "world": [
+                -2.187,
+                -0.03,
+                -0.075
+              ],
+              "pixels": [
+                28.9305,
+                197.9797
+              ]
+            },
+            "direction_primary": {
+              "world": [
+                -2.387,
+                -0.03,
+                -0.075
+              ],
+              "pixels": [
+                14.0179,
+                197.9797
+              ]
+            },
+            "nozzle_upper": {
+              "world": [
+                1.575,
+                0.03,
+                0.36
+              ],
+              "pixels": [
+                309.4369,
+                165.4872
+              ]
+            },
+            "nozzle_lower": {
+              "world": [
+                1.575,
+                0.03,
+                -0.36
+              ],
+              "pixels": [
+                309.4369,
+                217.36
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/wasp-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "d1efd3343864c50e3a107d4b555da67a42eebac4ee42dc55a5ac1909456bdff5"
+        }
+      },
+      "geometry": {
+        "meshObjects": 28,
+        "vertices": 488,
+        "mechanismGroups": 1
+      },
+      "sha256": {
+        "blend": "ed415bc6d0de59ea7b99eb778a6cd76455f2f3ddcf788fa64c314970eb1e950a",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "mantis",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "split-skimmer",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 96,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/mantis.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Twin hooked arms physically translate outward, carrying their gun anchors.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 7.79
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              44.5887,
+              245.0254
+            ],
+            [
+              44.5887,
+              147.0436
+            ]
+          ],
+          "muzzleIds": [
+            "arm_-1",
+            "arm_1"
+          ],
+          "nozzlesPixels": [
+            [
+              315.4019,
+              190.8472
+            ]
+          ],
+          "nozzleIds": [
+            "center"
+          ],
+          "corePixels": [
+            195.7282,
+            213.0372
+          ],
+          "coreRadiusPixels": 6.1238,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_arm_-1": {
+              "world": [
+                -1.977,
+                -0.21,
+                -0.68
+              ],
+              "pixels": [
+                44.5887,
+                245.0254
+              ]
+            },
+            "direction_arm_-1": {
+              "world": [
+                -2.177,
+                -0.21,
+                -0.68
+              ],
+              "pixels": [
+                29.6761,
+                245.0254
+              ]
+            },
+            "muzzle_arm_1": {
+              "world": [
+                -1.977,
+                -0.21,
+                0.68
+              ],
+              "pixels": [
+                44.5887,
+                147.0436
+              ]
+            },
+            "direction_arm_1": {
+              "world": [
+                -2.177,
+                -0.21,
+                0.68
+              ],
+              "pixels": [
+                29.6761,
+                147.0436
+              ]
+            },
+            "core": {
+              "world": [
+                0.05,
+                -0.495,
+                -0.16
+              ],
+              "pixels": [
+                195.7282,
+                213.0372
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.05,
+                -0.495,
+                -0.075
+              ],
+              "pixels": [
+                195.7282,
+                206.9134
+              ]
+            },
+            "nozzle_center": {
+              "world": [
+                1.655,
+                0.06,
+                0.0
+              ],
+              "pixels": [
+                315.4019,
+                190.8472
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/mantis-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "0200293c75b0fd6cace8f095b4f6e37a8438d297385f7a4cf4abd8525b6fd849"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              38.6237,
+              258.7141
+            ],
+            [
+              38.6237,
+              133.355
+            ]
+          ],
+          "muzzleIds": [
+            "arm_-1",
+            "arm_1"
+          ],
+          "nozzlesPixels": [
+            [
+              315.4019,
+              190.8472
+            ]
+          ],
+          "nozzleIds": [
+            "center"
+          ],
+          "corePixels": [
+            195.7282,
+            213.0372
+          ],
+          "coreRadiusPixels": 6.1238,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_arm_-1": {
+              "world": [
+                -2.057,
+                -0.21,
+                -0.87
+              ],
+              "pixels": [
+                38.6237,
+                258.7141
+              ]
+            },
+            "direction_arm_-1": {
+              "world": [
+                -2.257,
+                -0.21,
+                -0.87
+              ],
+              "pixels": [
+                23.7111,
+                258.7141
+              ]
+            },
+            "muzzle_arm_1": {
+              "world": [
+                -2.057,
+                -0.21,
+                0.87
+              ],
+              "pixels": [
+                38.6237,
+                133.355
+              ]
+            },
+            "direction_arm_1": {
+              "world": [
+                -2.257,
+                -0.21,
+                0.87
+              ],
+              "pixels": [
+                23.7111,
+                133.355
+              ]
+            },
+            "core": {
+              "world": [
+                0.05,
+                -0.495,
+                -0.16
+              ],
+              "pixels": [
+                195.7282,
+                213.0372
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.05,
+                -0.495,
+                -0.075
+              ],
+              "pixels": [
+                195.7282,
+                206.9134
+              ]
+            },
+            "nozzle_center": {
+              "world": [
+                1.655,
+                0.06,
+                0.0
+              ],
+              "pixels": [
+                315.4019,
+                190.8472
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/mantis-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "97804fe622538e140ed5f6ec3fd310bcd04a6428c9ffddd879fb2a9105d688ab"
+        }
+      },
+      "geometry": {
+        "meshObjects": 26,
+        "vertices": 442,
+        "mechanismGroups": 2
+      },
+      "sha256": {
+        "blend": "f831aee0d6eb3affdab633f0e3f1b2d8d29ecb729803ce52528bac284fefa6f8",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "orb",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "angular-frame",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 82,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/orb.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Eight radial armor segments translate outwards; three visible left-facing ports.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 7.659
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              87.8353,
+              239.6941
+            ],
+            [
+              71.4315,
+              194.3054
+            ],
+            [
+              87.8353,
+              148.9168
+            ]
+          ],
+          "muzzleIds": [
+            "left_0",
+            "left_1",
+            "left_2"
+          ],
+          "nozzlesPixels": [
+            [
+              285.5767,
+              153.6718
+            ],
+            [
+              285.5767,
+              225.7172
+            ]
+          ],
+          "nozzleIds": [
+            "upper",
+            "lower"
+          ],
+          "corePixels": [
+            192.0,
+            200.7415
+          ],
+          "coreRadiusPixels": 7.925,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_left_0": {
+              "world": [
+                -1.397,
+                -0.12,
+                -0.63
+              ],
+              "pixels": [
+                87.8353,
+                239.6941
+              ]
+            },
+            "direction_left_0": {
+              "world": [
+                -1.597,
+                -0.12,
+                -0.63
+              ],
+              "pixels": [
+                72.9227,
+                239.6941
+              ]
+            },
+            "muzzle_left_1": {
+              "world": [
+                -1.617,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                71.4315,
+                194.3054
+              ]
+            },
+            "direction_left_1": {
+              "world": [
+                -1.817,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                56.5188,
+                194.3054
+              ]
+            },
+            "muzzle_left_2": {
+              "world": [
+                -1.397,
+                -0.12,
+                0.63
+              ],
+              "pixels": [
+                87.8353,
+                148.9168
+              ]
+            },
+            "direction_left_2": {
+              "world": [
+                -1.597,
+                -0.12,
+                0.63
+              ],
+              "pixels": [
+                72.9227,
+                148.9168
+              ]
+            },
+            "core": {
+              "world": [
+                0.0,
+                -0.455,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                200.7415
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.0,
+                -0.455,
+                0.11
+              ],
+              "pixels": [
+                192.0,
+                192.8165
+              ]
+            },
+            "nozzle_upper": {
+              "world": [
+                1.255,
+                0.12,
+                0.5
+              ],
+              "pixels": [
+                285.5767,
+                153.6718
+              ]
+            },
+            "nozzle_lower": {
+              "world": [
+                1.255,
+                0.12,
+                -0.5
+              ],
+              "pixels": [
+                285.5767,
+                225.7172
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/orb-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "e93036fc418064d1ae4111f157c12ae340add249d79e25e43b68bf0c6f0328d3"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              87.8353,
+              239.6941
+            ],
+            [
+              71.4315,
+              194.3054
+            ],
+            [
+              87.8353,
+              148.9168
+            ]
+          ],
+          "muzzleIds": [
+            "left_0",
+            "left_1",
+            "left_2"
+          ],
+          "nozzlesPixels": [
+            [
+              285.5767,
+              153.6718
+            ],
+            [
+              285.5767,
+              225.7172
+            ]
+          ],
+          "nozzleIds": [
+            "upper",
+            "lower"
+          ],
+          "corePixels": [
+            192.0,
+            200.7415
+          ],
+          "coreRadiusPixels": 7.925,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_left_0": {
+              "world": [
+                -1.397,
+                -0.12,
+                -0.63
+              ],
+              "pixels": [
+                87.8353,
+                239.6941
+              ]
+            },
+            "direction_left_0": {
+              "world": [
+                -1.597,
+                -0.12,
+                -0.63
+              ],
+              "pixels": [
+                72.9227,
+                239.6941
+              ]
+            },
+            "muzzle_left_1": {
+              "world": [
+                -1.617,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                71.4315,
+                194.3054
+              ]
+            },
+            "direction_left_1": {
+              "world": [
+                -1.817,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                56.5188,
+                194.3054
+              ]
+            },
+            "muzzle_left_2": {
+              "world": [
+                -1.397,
+                -0.12,
+                0.63
+              ],
+              "pixels": [
+                87.8353,
+                148.9168
+              ]
+            },
+            "direction_left_2": {
+              "world": [
+                -1.597,
+                -0.12,
+                0.63
+              ],
+              "pixels": [
+                72.9227,
+                148.9168
+              ]
+            },
+            "core": {
+              "world": [
+                0.0,
+                -0.455,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                200.7415
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.0,
+                -0.455,
+                0.11
+              ],
+              "pixels": [
+                192.0,
+                192.8165
+              ]
+            },
+            "nozzle_upper": {
+              "world": [
+                1.255,
+                0.12,
+                0.5
+              ],
+              "pixels": [
+                285.5767,
+                153.6718
+              ]
+            },
+            "nozzle_lower": {
+              "world": [
+                1.255,
+                0.12,
+                -0.5
+              ],
+              "pixels": [
+                285.5767,
+                225.7172
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/orb-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "85cb7c833ff348465c507c92e0fb2b53acf139794fee64d93d0771ec6e5dc5a4"
+        }
+      },
+      "geometry": {
+        "meshObjects": 35,
+        "vertices": 692,
+        "mechanismGroups": 8
+      },
+      "sha256": {
+        "blend": "256e16794bf68e1070b3ce76e63a9b3573cdcbe915d95beff6d900d655928156",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "claw",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "pressurecraft",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 108,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/claw.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Two armored cannon shoulders separate vertically.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 8.564
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              60.247,
+              232.4415
+            ],
+            [
+              60.247,
+              154.6324
+            ]
+          ],
+          "muzzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "nozzlesPixels": [
+            [
+              311.6738,
+              228.9833
+            ],
+            [
+              311.6738,
+              151.1742
+            ]
+          ],
+          "nozzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "corePixels": [
+            177.0874,
+            205.5445
+          ],
+          "coreRadiusPixels": 7.5648,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_lane_-1": {
+              "world": [
+                -1.767,
+                -0.08,
+                -0.54
+              ],
+              "pixels": [
+                60.247,
+                232.4415
+              ]
+            },
+            "direction_lane_-1": {
+              "world": [
+                -1.967,
+                -0.08,
+                -0.54
+              ],
+              "pixels": [
+                45.3344,
+                232.4415
+              ]
+            },
+            "nozzle_lane_-1": {
+              "world": [
+                1.605,
+                0.1,
+                -0.54
+              ],
+              "pixels": [
+                311.6738,
+                228.9833
+              ]
+            },
+            "muzzle_lane_1": {
+              "world": [
+                -1.767,
+                -0.08,
+                0.54
+              ],
+              "pixels": [
+                60.247,
+                154.6324
+              ]
+            },
+            "direction_lane_1": {
+              "world": [
+                -1.967,
+                -0.08,
+                0.54
+              ],
+              "pixels": [
+                45.3344,
+                154.6324
+              ]
+            },
+            "nozzle_lane_1": {
+              "world": [
+                1.605,
+                0.1,
+                0.54
+              ],
+              "pixels": [
+                311.6738,
+                151.1742
+              ]
+            },
+            "core": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                177.0874,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.105
+              ],
+              "pixels": [
+                177.0874,
+                197.9797
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/claw-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "c804b03e16b6f3abbf749bf9c5a23aa72900d56fd4fe0f08cfee1b8b49e21963"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              60.247,
+              245.4097
+            ],
+            [
+              60.247,
+              141.6642
+            ]
+          ],
+          "muzzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "nozzlesPixels": [
+            [
+              311.6738,
+              241.9515
+            ],
+            [
+              311.6738,
+              138.206
+            ]
+          ],
+          "nozzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "corePixels": [
+            177.0874,
+            205.5445
+          ],
+          "coreRadiusPixels": 7.5648,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_lane_-1": {
+              "world": [
+                -1.767,
+                -0.08,
+                -0.72
+              ],
+              "pixels": [
+                60.247,
+                245.4097
+              ]
+            },
+            "direction_lane_-1": {
+              "world": [
+                -1.967,
+                -0.08,
+                -0.72
+              ],
+              "pixels": [
+                45.3344,
+                245.4097
+              ]
+            },
+            "nozzle_lane_-1": {
+              "world": [
+                1.605,
+                0.1,
+                -0.72
+              ],
+              "pixels": [
+                311.6738,
+                241.9515
+              ]
+            },
+            "muzzle_lane_1": {
+              "world": [
+                -1.767,
+                -0.08,
+                0.72
+              ],
+              "pixels": [
+                60.247,
+                141.6642
+              ]
+            },
+            "direction_lane_1": {
+              "world": [
+                -1.967,
+                -0.08,
+                0.72
+              ],
+              "pixels": [
+                45.3344,
+                141.6642
+              ]
+            },
+            "nozzle_lane_1": {
+              "world": [
+                1.605,
+                0.1,
+                0.72
+              ],
+              "pixels": [
+                311.6738,
+                138.206
+              ]
+            },
+            "core": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                177.0874,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.105
+              ],
+              "pixels": [
+                177.0874,
+                197.9797
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/claw-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "49fdc9f6cc90b90e393285f8d21979f46791c51376167ce0510f8a86343b26b4"
+        }
+      },
+      "geometry": {
+        "meshObjects": 39,
+        "vertices": 660,
+        "mechanismGroups": 2
+      },
+      "sha256": {
+        "blend": "9dfe301feeaef1572a014fd91f3349f074e563649f02d767f655e34eaed7d370",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "ray",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "pressurecraft",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 118,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/ray.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Separated upper/lower pressure lanes with a readable center gap.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 11.228
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              60.247,
+              256.2165
+            ],
+            [
+              60.247,
+              130.8574
+            ]
+          ],
+          "muzzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "nozzlesPixels": [
+            [
+              311.6738,
+              252.7583
+            ],
+            [
+              311.6738,
+              127.3992
+            ]
+          ],
+          "nozzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "corePixels": [
+            177.0874,
+            205.5445
+          ],
+          "coreRadiusPixels": 7.5648,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_lane_-1": {
+              "world": [
+                -1.767,
+                -0.08,
+                -0.87
+              ],
+              "pixels": [
+                60.247,
+                256.2165
+              ]
+            },
+            "direction_lane_-1": {
+              "world": [
+                -1.967,
+                -0.08,
+                -0.87
+              ],
+              "pixels": [
+                45.3344,
+                256.2165
+              ]
+            },
+            "nozzle_lane_-1": {
+              "world": [
+                1.605,
+                0.1,
+                -0.87
+              ],
+              "pixels": [
+                311.6738,
+                252.7583
+              ]
+            },
+            "muzzle_lane_1": {
+              "world": [
+                -1.767,
+                -0.08,
+                0.87
+              ],
+              "pixels": [
+                60.247,
+                130.8574
+              ]
+            },
+            "direction_lane_1": {
+              "world": [
+                -1.967,
+                -0.08,
+                0.87
+              ],
+              "pixels": [
+                45.3344,
+                130.8574
+              ]
+            },
+            "nozzle_lane_1": {
+              "world": [
+                1.605,
+                0.1,
+                0.87
+              ],
+              "pixels": [
+                311.6738,
+                127.3992
+              ]
+            },
+            "core": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                177.0874,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.105
+              ],
+              "pixels": [
+                177.0874,
+                197.9797
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/ray-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "08cc0fc6f5fb1fe243b04c3f7f8b2979844f7f29b7ff0c9e01b0238d2c02aa40"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              60.247,
+              272.0665
+            ],
+            [
+              60.247,
+              115.0074
+            ]
+          ],
+          "muzzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "nozzlesPixels": [
+            [
+              311.6738,
+              268.6083
+            ],
+            [
+              311.6738,
+              111.5492
+            ]
+          ],
+          "nozzleIds": [
+            "lane_-1",
+            "lane_1"
+          ],
+          "corePixels": [
+            177.0874,
+            205.5445
+          ],
+          "coreRadiusPixels": 7.5648,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_lane_-1": {
+              "world": [
+                -1.767,
+                -0.08,
+                -1.09
+              ],
+              "pixels": [
+                60.247,
+                272.0665
+              ]
+            },
+            "direction_lane_-1": {
+              "world": [
+                -1.967,
+                -0.08,
+                -1.09
+              ],
+              "pixels": [
+                45.3344,
+                272.0665
+              ]
+            },
+            "nozzle_lane_-1": {
+              "world": [
+                1.605,
+                0.1,
+                -1.09
+              ],
+              "pixels": [
+                311.6738,
+                268.6083
+              ]
+            },
+            "muzzle_lane_1": {
+              "world": [
+                -1.767,
+                -0.08,
+                1.09
+              ],
+              "pixels": [
+                60.247,
+                115.0074
+              ]
+            },
+            "direction_lane_1": {
+              "world": [
+                -1.967,
+                -0.08,
+                1.09
+              ],
+              "pixels": [
+                45.3344,
+                115.0074
+              ]
+            },
+            "nozzle_lane_1": {
+              "world": [
+                1.605,
+                0.1,
+                1.09
+              ],
+              "pixels": [
+                311.6738,
+                111.5492
+              ]
+            },
+            "core": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                177.0874,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.2,
+                -0.705,
+                0.105
+              ],
+              "pixels": [
+                177.0874,
+                197.9797
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/ray-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "e032a39b491c726e4eea84ae89c77a474a5a14c43a5beefc1d9e7ddcb21a7253"
+        }
+      },
+      "geometry": {
+        "meshObjects": 38,
+        "vertices": 652,
+        "mechanismGroups": 2
+      },
+      "sha256": {
+        "blend": "0fa28c835e8a6db8cc7f3a12c5b0b1944ae199ed5cf0c96bf9b7f300b89684e7",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "worm",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "artillery-spine",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 170,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/worm.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Four modeled armor segments and three independent visible ports.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 4.126
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              49.0625,
+              215.7269
+            ],
+            [
+              115.4237,
+              205.6406
+            ],
+            [
+              181.7849,
+              215.7269
+            ]
+          ],
+          "muzzleIds": [
+            "segment_0",
+            "segment_1",
+            "segment_2"
+          ],
+          "nozzlesPixels": [
+            [
+              339.2621,
+              191.6157
+            ]
+          ],
+          "nozzleIds": [
+            "aft"
+          ],
+          "corePixels": [
+            157.701,
+            198.6282
+          ],
+          "coreRadiusPixels": 5.7637,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_segment_0": {
+              "world": [
+                -1.917,
+                -0.41,
+                -0.22
+              ],
+              "pixels": [
+                49.0625,
+                215.7269
+              ]
+            },
+            "direction_segment_0": {
+              "world": [
+                -2.117,
+                -0.41,
+                -0.22
+              ],
+              "pixels": [
+                34.1499,
+                215.7269
+              ]
+            },
+            "muzzle_segment_1": {
+              "world": [
+                -1.027,
+                -0.41,
+                -0.08
+              ],
+              "pixels": [
+                115.4237,
+                205.6406
+              ]
+            },
+            "direction_segment_1": {
+              "world": [
+                -1.227,
+                -0.41,
+                -0.08
+              ],
+              "pixels": [
+                100.5111,
+                205.6406
+              ]
+            },
+            "muzzle_segment_2": {
+              "world": [
+                -0.137,
+                -0.41,
+                -0.22
+              ],
+              "pixels": [
+                181.7849,
+                215.7269
+              ]
+            },
+            "direction_segment_2": {
+              "world": [
+                -0.337,
+                -0.41,
+                -0.22
+              ],
+              "pixels": [
+                166.8722,
+                215.7269
+              ]
+            },
+            "core": {
+              "world": [
+                -0.46,
+                -0.645,
+                0.08
+              ],
+              "pixels": [
+                157.701,
+                198.6282
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.46,
+                -0.645,
+                0.16
+              ],
+              "pixels": [
+                157.701,
+                192.8645
+              ]
+            },
+            "nozzle_aft": {
+              "world": [
+                1.975,
+                0.02,
+                0.0
+              ],
+              "pixels": [
+                339.2621,
+                191.6157
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/worm-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "39a788952eaf0536e26afb8848d5ba03681347884613634b9c8e08481397073b"
+        }
+      },
+      "geometry": {
+        "meshObjects": 46,
+        "vertices": 700,
+        "mechanismGroups": 4
+      },
+      "sha256": {
+        "blend": "49c392643820e39b47549cb2448a123619fba18a8aec947d13dbd98f59f5cf0a",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "needle",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "artillery-spine",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 112,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/needle.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Physical rail recoil; open is mechanically recoiled/recovery pose, not core availability.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 9.682
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "neutral",
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              25.948,
+              197.2353
+            ]
+          ],
+          "muzzleIds": [
+            "rail"
+          ],
+          "nozzlesPixels": [
+            [
+              340.0078,
+              194.1133
+            ]
+          ],
+          "nozzleIds": [
+            "reactor"
+          ],
+          "corePixels": [
+            208.4039,
+            200.8135
+          ],
+          "coreRadiusPixels": 6.4841,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_rail": {
+              "world": [
+                -2.227,
+                -0.01,
+                -0.07
+              ],
+              "pixels": [
+                25.948,
+                197.2353
+              ]
+            },
+            "direction_rail": {
+              "world": [
+                -2.427,
+                -0.01,
+                -0.07
+              ],
+              "pixels": [
+                11.0353,
+                197.2353
+              ]
+            },
+            "core": {
+              "world": [
+                0.22,
+                -0.665,
+                0.055
+              ],
+              "pixels": [
+                208.4039,
+                200.8135
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.22,
+                -0.665,
+                0.145
+              ],
+              "pixels": [
+                208.4039,
+                194.3294
+              ]
+            },
+            "nozzle_reactor": {
+              "world": [
+                1.985,
+                0.04,
+                -0.04
+              ],
+              "pixels": [
+                340.0078,
+                194.1133
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/needle-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "31fe579acede552e4ab28a34dcbc2bb856b784f12c5a1b55c76304bc510072b9"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              39.3693,
+              197.2353
+            ]
+          ],
+          "muzzleIds": [
+            "rail"
+          ],
+          "nozzlesPixels": [
+            [
+              340.0078,
+              194.1133
+            ]
+          ],
+          "nozzleIds": [
+            "reactor"
+          ],
+          "corePixels": [
+            208.4039,
+            200.8135
+          ],
+          "coreRadiusPixels": 6.4841,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "muzzle_rail": {
+              "world": [
+                -2.047,
+                -0.01,
+                -0.07
+              ],
+              "pixels": [
+                39.3693,
+                197.2353
+              ]
+            },
+            "direction_rail": {
+              "world": [
+                -2.247,
+                -0.01,
+                -0.07
+              ],
+              "pixels": [
+                24.4567,
+                197.2353
+              ]
+            },
+            "core": {
+              "world": [
+                0.22,
+                -0.665,
+                0.055
+              ],
+              "pixels": [
+                208.4039,
+                200.8135
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.22,
+                -0.665,
+                0.145
+              ],
+              "pixels": [
+                208.4039,
+                194.3294
+              ]
+            },
+            "nozzle_reactor": {
+              "world": [
+                1.985,
+                0.04,
+                -0.04
+              ],
+              "pixels": [
+                340.0078,
+                194.1133
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/needle-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "ccd11c0679003b942e09f2a8f8bc9428182c0ffb54b38385d94da5d613c94438"
+        }
+      },
+      "geometry": {
+        "meshObjects": 25,
+        "vertices": 390,
+        "mechanismGroups": 1
+      },
+      "sha256": {
+        "blend": "adf14bc2e12be1f8a7fedc0f8f0a2fae2de61ef9bf3aaf3b5d5359eee8a5c474",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "warden",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "pressurecraft-boss",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 340,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/warden.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Two central armored jaws separate to expose a small core; heavy paired assault cannons.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 14.945
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              42.3518,
+              247.571
+            ],
+            [
+              42.3518,
+              139.5028
+            ]
+          ],
+          "muzzleIds": [
+            "assault_-1",
+            "assault_1"
+          ],
+          "nozzlesPixels": [
+            [
+              333.2971,
+              237.1965
+            ],
+            [
+              333.2971,
+              140.6556
+            ]
+          ],
+          "nozzleIds": [
+            "assault_-1",
+            "assault_1"
+          ],
+          "corePixels": [
+            182.3068,
+            206.313
+          ],
+          "coreRadiusPixels": 12.9682,
+          "coreVisibleFromCamera": false,
+          "coreCameraRayFirstMesh": "WARDEN | inner core shield 1",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                -0.13,
+                -0.745,
+                0.0
+              ],
+              "pixels": [
+                182.3068,
+                206.313
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.13,
+                -0.745,
+                0.18
+              ],
+              "pixels": [
+                182.3068,
+                193.3448
+              ]
+            },
+            "muzzle_assault_-1": {
+              "world": [
+                -2.007,
+                -0.08,
+                -0.75
+              ],
+              "pixels": [
+                42.3518,
+                247.571
+              ]
+            },
+            "direction_assault_-1": {
+              "world": [
+                -2.207,
+                -0.08,
+                -0.75
+              ],
+              "pixels": [
+                27.4392,
+                247.571
+              ]
+            },
+            "nozzle_assault_-1": {
+              "world": [
+                1.895,
+                0.16,
+                -0.67
+              ],
+              "pixels": [
+                333.2971,
+                237.1965
+              ]
+            },
+            "muzzle_assault_1": {
+              "world": [
+                -2.007,
+                -0.08,
+                0.75
+              ],
+              "pixels": [
+                42.3518,
+                139.5028
+              ]
+            },
+            "direction_assault_1": {
+              "world": [
+                -2.207,
+                -0.08,
+                0.75
+              ],
+              "pixels": [
+                27.4392,
+                139.5028
+              ]
+            },
+            "nozzle_assault_1": {
+              "world": [
+                1.895,
+                0.16,
+                0.67
+              ],
+              "pixels": [
+                333.2971,
+                140.6556
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/warden-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "6ca5683a5fa0b3e6016aa60916099dc3826559ab8c2ebec920a6b0fdac435b8a"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              42.3518,
+              247.571
+            ],
+            [
+              42.3518,
+              139.5028
+            ]
+          ],
+          "muzzleIds": [
+            "assault_-1",
+            "assault_1"
+          ],
+          "nozzlesPixels": [
+            [
+              333.2971,
+              237.1965
+            ],
+            [
+              333.2971,
+              140.6556
+            ]
+          ],
+          "nozzleIds": [
+            "assault_-1",
+            "assault_1"
+          ],
+          "corePixels": [
+            182.3068,
+            206.313
+          ],
+          "coreRadiusPixels": 12.9682,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                -0.13,
+                -0.745,
+                0.0
+              ],
+              "pixels": [
+                182.3068,
+                206.313
+              ]
+            },
+            "core_radius": {
+              "world": [
+                -0.13,
+                -0.745,
+                0.18
+              ],
+              "pixels": [
+                182.3068,
+                193.3448
+              ]
+            },
+            "muzzle_assault_-1": {
+              "world": [
+                -2.007,
+                -0.08,
+                -0.75
+              ],
+              "pixels": [
+                42.3518,
+                247.571
+              ]
+            },
+            "direction_assault_-1": {
+              "world": [
+                -2.207,
+                -0.08,
+                -0.75
+              ],
+              "pixels": [
+                27.4392,
+                247.571
+              ]
+            },
+            "nozzle_assault_-1": {
+              "world": [
+                1.895,
+                0.16,
+                -0.67
+              ],
+              "pixels": [
+                333.2971,
+                237.1965
+              ]
+            },
+            "muzzle_assault_1": {
+              "world": [
+                -2.007,
+                -0.08,
+                0.75
+              ],
+              "pixels": [
+                42.3518,
+                139.5028
+              ]
+            },
+            "direction_assault_1": {
+              "world": [
+                -2.207,
+                -0.08,
+                0.75
+              ],
+              "pixels": [
+                27.4392,
+                139.5028
+              ]
+            },
+            "nozzle_assault_1": {
+              "world": [
+                1.895,
+                0.16,
+                0.67
+              ],
+              "pixels": [
+                333.2971,
+                140.6556
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/warden-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "3044745cd06631535f88c6f896502340d61fbcd50c4ca343317353556ff7677b"
+        }
+      },
+      "geometry": {
+        "meshObjects": 45,
+        "vertices": 728,
+        "mechanismGroups": 2
+      },
+      "sha256": {
+        "blend": "b7d815080058bc410a6cfc0b49eaba2590fb3d89c866c184d8889d69225f4514",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "carrier",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "pressurecraft-boss",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 300,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/carrier.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Two long hangar doors slide away to expose modeled docked drone frames; bridge shutter opens.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 13.438
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              35.6412,
+              269.3288
+            ],
+            [
+              35.6412,
+              110.8287
+            ]
+          ],
+          "muzzleIds": [
+            "defense_-1",
+            "defense_1"
+          ],
+          "nozzlesPixels": [
+            [
+              344.4816,
+              246.1301
+            ],
+            [
+              344.4816,
+              135.1801
+            ]
+          ],
+          "nozzleIds": [
+            "bay_-1",
+            "bay_1"
+          ],
+          "corePixels": [
+            262.8349,
+            206.313
+          ],
+          "coreRadiusPixels": 10.0864,
+          "coreVisibleFromCamera": false,
+          "coreCameraRayFirstMesh": "CARRIER | small bridge shutter",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.95,
+                -0.745,
+                0.0
+              ],
+              "pixels": [
+                262.8349,
+                206.313
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.95,
+                -0.745,
+                0.14
+              ],
+              "pixels": [
+                262.8349,
+                196.2266
+              ]
+            },
+            "muzzle_defense_-1": {
+              "world": [
+                -2.097,
+                0.1,
+                -1.1
+              ],
+              "pixels": [
+                35.6412,
+                269.3288
+              ]
+            },
+            "direction_defense_-1": {
+              "world": [
+                -2.297,
+                0.1,
+                -1.1
+              ],
+              "pixels": [
+                20.7286,
+                269.3288
+              ]
+            },
+            "nozzle_bay_-1": {
+              "world": [
+                2.045,
+                0.07,
+                -0.77
+              ],
+              "pixels": [
+                344.4816,
+                246.1301
+              ]
+            },
+            "muzzle_defense_1": {
+              "world": [
+                -2.097,
+                0.1,
+                1.1
+              ],
+              "pixels": [
+                35.6412,
+                110.8287
+              ]
+            },
+            "direction_defense_1": {
+              "world": [
+                -2.297,
+                0.1,
+                1.1
+              ],
+              "pixels": [
+                20.7286,
+                110.8287
+              ]
+            },
+            "nozzle_bay_1": {
+              "world": [
+                2.045,
+                0.07,
+                0.77
+              ],
+              "pixels": [
+                344.4816,
+                135.1801
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/carrier-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "1eb71c452140971456ec306e1c3b0530da795becd07a99b4c53c09de1699b016"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              35.6412,
+              269.3288
+            ],
+            [
+              35.6412,
+              110.8287
+            ]
+          ],
+          "muzzleIds": [
+            "defense_-1",
+            "defense_1"
+          ],
+          "nozzlesPixels": [
+            [
+              344.4816,
+              246.1301
+            ],
+            [
+              344.4816,
+              135.1801
+            ]
+          ],
+          "nozzleIds": [
+            "bay_-1",
+            "bay_1"
+          ],
+          "corePixels": [
+            262.8349,
+            206.313
+          ],
+          "coreRadiusPixels": 10.0864,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.95,
+                -0.745,
+                0.0
+              ],
+              "pixels": [
+                262.8349,
+                206.313
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.95,
+                -0.745,
+                0.14
+              ],
+              "pixels": [
+                262.8349,
+                196.2266
+              ]
+            },
+            "muzzle_defense_-1": {
+              "world": [
+                -2.097,
+                0.1,
+                -1.1
+              ],
+              "pixels": [
+                35.6412,
+                269.3288
+              ]
+            },
+            "direction_defense_-1": {
+              "world": [
+                -2.297,
+                0.1,
+                -1.1
+              ],
+              "pixels": [
+                20.7286,
+                269.3288
+              ]
+            },
+            "nozzle_bay_-1": {
+              "world": [
+                2.045,
+                0.07,
+                -0.77
+              ],
+              "pixels": [
+                344.4816,
+                246.1301
+              ]
+            },
+            "muzzle_defense_1": {
+              "world": [
+                -2.097,
+                0.1,
+                1.1
+              ],
+              "pixels": [
+                35.6412,
+                110.8287
+              ]
+            },
+            "direction_defense_1": {
+              "world": [
+                -2.297,
+                0.1,
+                1.1
+              ],
+              "pixels": [
+                20.7286,
+                110.8287
+              ]
+            },
+            "nozzle_bay_1": {
+              "world": [
+                2.045,
+                0.07,
+                0.77
+              ],
+              "pixels": [
+                344.4816,
+                135.1801
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/carrier-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "3b26562c76b5e7e6f4caab92942b8b28ff2e922ceb59a140fb302adc075d5f4e"
+        }
+      },
+      "geometry": {
+        "meshObjects": 54,
+        "vertices": 792,
+        "mechanismGroups": 3
+      },
+      "sha256": {
+        "blend": "4b95b5c6076765334e277cd599b32b4619b5d1db055a72712a2af2de0cf2dfaf",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "lancer",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "artillery-spine-boss",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 360,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/lancer.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Long lance extends while split strike rails separate and core shutters uncover the reactor cell.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 7.819
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              27.4392,
+              192.7684
+            ]
+          ],
+          "muzzleIds": [
+            "lance"
+          ],
+          "nozzlesPixels": [
+            [
+              338.5165,
+              227.8786
+            ],
+            [
+              338.5165,
+              151.5104
+            ],
+            [
+              340.7534,
+              194.3054
+            ]
+          ],
+          "nozzleIds": [
+            "outer_-1",
+            "outer_1",
+            "reactor"
+          ],
+          "corePixels": [
+            199.4563,
+            204.9681
+          ],
+          "coreRadiusPixels": 11.5272,
+          "coreVisibleFromCamera": false,
+          "coreCameraRayFirstMesh": "LANCER | reactor sliding shutter 1",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.1,
+                -0.675,
+                0.0
+              ],
+              "pixels": [
+                199.4563,
+                204.9681
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.1,
+                -0.675,
+                0.16
+              ],
+              "pixels": [
+                199.4563,
+                193.4409
+              ]
+            },
+            "nozzle_outer_-1": {
+              "world": [
+                1.965,
+                0.12,
+                -0.53
+              ],
+              "pixels": [
+                338.5165,
+                227.8786
+              ]
+            },
+            "nozzle_outer_1": {
+              "world": [
+                1.965,
+                0.12,
+                0.53
+              ],
+              "pixels": [
+                338.5165,
+                151.5104
+              ]
+            },
+            "muzzle_lance": {
+              "world": [
+                -2.207,
+                -0.04,
+                0.0
+              ],
+              "pixels": [
+                27.4392,
+                192.7684
+              ]
+            },
+            "direction_lance": {
+              "world": [
+                -2.407,
+                -0.04,
+                0.0
+              ],
+              "pixels": [
+                12.5266,
+                192.7684
+              ]
+            },
+            "nozzle_reactor": {
+              "world": [
+                1.995,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                340.7534,
+                194.3054
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/lancer-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "163ccd372cee457c3fc4879212e6d1e7ee24bcc2f4463002d314cc675184d724"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              17.746,
+              192.7684
+            ]
+          ],
+          "muzzleIds": [
+            "lance"
+          ],
+          "nozzlesPixels": [
+            [
+              338.5165,
+              227.8786
+            ],
+            [
+              338.5165,
+              151.5104
+            ],
+            [
+              340.7534,
+              194.3054
+            ]
+          ],
+          "nozzleIds": [
+            "outer_-1",
+            "outer_1",
+            "reactor"
+          ],
+          "corePixels": [
+            199.4563,
+            204.9681
+          ],
+          "coreRadiusPixels": 11.5272,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.1,
+                -0.675,
+                0.0
+              ],
+              "pixels": [
+                199.4563,
+                204.9681
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.1,
+                -0.675,
+                0.16
+              ],
+              "pixels": [
+                199.4563,
+                193.4409
+              ]
+            },
+            "nozzle_outer_-1": {
+              "world": [
+                1.965,
+                0.12,
+                -0.53
+              ],
+              "pixels": [
+                338.5165,
+                227.8786
+              ]
+            },
+            "nozzle_outer_1": {
+              "world": [
+                1.965,
+                0.12,
+                0.53
+              ],
+              "pixels": [
+                338.5165,
+                151.5104
+              ]
+            },
+            "muzzle_lance": {
+              "world": [
+                -2.337,
+                -0.04,
+                0.0
+              ],
+              "pixels": [
+                17.746,
+                192.7684
+              ]
+            },
+            "direction_lance": {
+              "world": [
+                -2.537,
+                -0.04,
+                0.0
+              ],
+              "pixels": [
+                2.8334,
+                192.7684
+              ]
+            },
+            "nozzle_reactor": {
+              "world": [
+                1.995,
+                -0.12,
+                0.0
+              ],
+              "pixels": [
+                340.7534,
+                194.3054
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/lancer-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "a4ab6ecf0f61d8a030d85dea1208b6c5f6bfc3ec4cf970a3bbaf8c6a32f97907"
+        }
+      },
+      "geometry": {
+        "meshObjects": 39,
+        "vertices": 678,
+        "mechanismGroups": 3
+      },
+      "sha256": {
+        "blend": "33989f4d4293db55f01758549a744adc59c32dd85f10c1f64a009cf176f352b0",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "bastion",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "pressurecraft-boss",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 300,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/bastion.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Four cannon battery barrels extend with two shoulder units; command shutters open.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 12.254
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              56.5188,
+              280.2557
+            ],
+            [
+              56.5188,
+              264.8379
+            ],
+            [
+              56.5188,
+              117.4329
+            ],
+            [
+              56.5188,
+              102.0152
+            ]
+          ],
+          "muzzleIds": [
+            "battery_-1_0",
+            "battery_-1_1",
+            "battery_1_0",
+            "battery_1_1"
+          ],
+          "nozzlesPixels": [
+            [
+              328.8233,
+              249.4922
+            ],
+            [
+              328.8233,
+              124.1331
+            ]
+          ],
+          "nozzleIds": [
+            "fortress_-1",
+            "fortress_1"
+          ],
+          "corePixels": [
+            192.7456,
+            205.5445
+          ],
+          "coreRadiusPixels": 12.2477,
+          "coreVisibleFromCamera": false,
+          "coreCameraRayFirstMesh": "BASTION | command shield 1",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.01,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                192.7456,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.01,
+                -0.705,
+                0.17
+              ],
+              "pixels": [
+                192.7456,
+                193.2968
+              ]
+            },
+            "muzzle_battery_-1_0": {
+              "world": [
+                -1.817,
+                -0.15,
+                -1.185
+              ],
+              "pixels": [
+                56.5188,
+                280.2557
+              ]
+            },
+            "direction_battery_-1_0": {
+              "world": [
+                -2.017,
+                -0.15,
+                -1.185
+              ],
+              "pixels": [
+                41.6062,
+                280.2557
+              ]
+            },
+            "muzzle_battery_-1_1": {
+              "world": [
+                -1.817,
+                0.24,
+                -1.075
+              ],
+              "pixels": [
+                56.5188,
+                264.8379
+              ]
+            },
+            "direction_battery_-1_1": {
+              "world": [
+                -2.017,
+                0.24,
+                -1.075
+              ],
+              "pixels": [
+                41.6062,
+                264.8379
+              ]
+            },
+            "nozzle_fortress_-1": {
+              "world": [
+                1.835,
+                0.27,
+                -0.87
+              ],
+              "pixels": [
+                328.8233,
+                249.4922
+              ]
+            },
+            "muzzle_battery_1_0": {
+              "world": [
+                -1.817,
+                -0.15,
+                1.075
+              ],
+              "pixels": [
+                56.5188,
+                117.4329
+              ]
+            },
+            "direction_battery_1_0": {
+              "world": [
+                -2.017,
+                -0.15,
+                1.075
+              ],
+              "pixels": [
+                41.6062,
+                117.4329
+              ]
+            },
+            "muzzle_battery_1_1": {
+              "world": [
+                -1.817,
+                0.24,
+                1.185
+              ],
+              "pixels": [
+                56.5188,
+                102.0152
+              ]
+            },
+            "direction_battery_1_1": {
+              "world": [
+                -2.017,
+                0.24,
+                1.185
+              ],
+              "pixels": [
+                41.6062,
+                102.0152
+              ]
+            },
+            "nozzle_fortress_1": {
+              "world": [
+                1.835,
+                0.27,
+                0.87
+              ],
+              "pixels": [
+                328.8233,
+                124.1331
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/bastion-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "355a3883994cf05c168a0b6e3f2f5fdbfb4029efcc73c185637bbe13b1dacc56"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              41.6062,
+              289.6216
+            ],
+            [
+              41.6062,
+              274.2038
+            ],
+            [
+              41.6062,
+              108.067
+            ],
+            [
+              41.6062,
+              92.6493
+            ]
+          ],
+          "muzzleIds": [
+            "battery_-1_0",
+            "battery_-1_1",
+            "battery_1_0",
+            "battery_1_1"
+          ],
+          "nozzlesPixels": [
+            [
+              328.8233,
+              249.4922
+            ],
+            [
+              328.8233,
+              124.1331
+            ]
+          ],
+          "nozzleIds": [
+            "fortress_-1",
+            "fortress_1"
+          ],
+          "corePixels": [
+            192.7456,
+            205.5445
+          ],
+          "coreRadiusPixels": 12.2477,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.01,
+                -0.705,
+                0.0
+              ],
+              "pixels": [
+                192.7456,
+                205.5445
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.01,
+                -0.705,
+                0.17
+              ],
+              "pixels": [
+                192.7456,
+                193.2968
+              ]
+            },
+            "muzzle_battery_-1_0": {
+              "world": [
+                -2.017,
+                -0.15,
+                -1.315
+              ],
+              "pixels": [
+                41.6062,
+                289.6216
+              ]
+            },
+            "direction_battery_-1_0": {
+              "world": [
+                -2.217,
+                -0.15,
+                -1.315
+              ],
+              "pixels": [
+                26.6936,
+                289.6216
+              ]
+            },
+            "muzzle_battery_-1_1": {
+              "world": [
+                -2.017,
+                0.24,
+                -1.205
+              ],
+              "pixels": [
+                41.6062,
+                274.2038
+              ]
+            },
+            "direction_battery_-1_1": {
+              "world": [
+                -2.217,
+                0.24,
+                -1.205
+              ],
+              "pixels": [
+                26.6936,
+                274.2038
+              ]
+            },
+            "nozzle_fortress_-1": {
+              "world": [
+                1.835,
+                0.27,
+                -0.87
+              ],
+              "pixels": [
+                328.8233,
+                249.4922
+              ]
+            },
+            "muzzle_battery_1_0": {
+              "world": [
+                -2.017,
+                -0.15,
+                1.205
+              ],
+              "pixels": [
+                41.6062,
+                108.067
+              ]
+            },
+            "direction_battery_1_0": {
+              "world": [
+                -2.217,
+                -0.15,
+                1.205
+              ],
+              "pixels": [
+                26.6936,
+                108.067
+              ]
+            },
+            "muzzle_battery_1_1": {
+              "world": [
+                -2.017,
+                0.24,
+                1.315
+              ],
+              "pixels": [
+                41.6062,
+                92.6493
+              ]
+            },
+            "direction_battery_1_1": {
+              "world": [
+                -2.217,
+                0.24,
+                1.315
+              ],
+              "pixels": [
+                26.6936,
+                92.6493
+              ]
+            },
+            "nozzle_fortress_1": {
+              "world": [
+                1.835,
+                0.27,
+                0.87
+              ],
+              "pixels": [
+                328.8233,
+                124.1331
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/bastion-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "cb1555f67e3ab758fcd3b4f4315f8bab269c95becd57457cfe5df0294cb651c7"
+        }
+      },
+      "geometry": {
+        "meshObjects": 52,
+        "vertices": 888,
+        "mechanismGroups": 4
+      },
+      "sha256": {
+        "blend": "f1cdc94fd106edcdf5b3686da808f7bc686b633ecdaa64ff08bb9695909f2fab",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    },
+    {
+      "id": "apex",
+      "version": 1,
+      "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+      "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+      "family": "angular-frame-boss",
+      "width": 384,
+      "height": 384,
+      "format": "PNG",
+      "colorMode": "RGBA",
+      "imagePixelOrigin": "top-left",
+      "pivotPixels": [
+        192.0,
+        192.0
+      ],
+      "displayWidth": 340,
+      "facing": "left",
+      "axes": {
+        "forward": "-X",
+        "starboard": "+Y",
+        "up": "+Z"
+      },
+      "source": "sources/apex.blend",
+      "generator": "family_generator.py",
+      "mechanism": "Six mechanical petal carriages translate radially; center cage slides apart around a small core.",
+      "flameBaked": false,
+      "camera": {
+        "type": "ORTHO",
+        "location": [
+          0.0,
+          -15.0,
+          4.0
+        ],
+        "rotationEuler": [
+          1.3101938962936401,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.150000095367432,
+        "inheritedFrom": "approved INT-01 representative",
+        "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+      },
+      "render": {
+        "engine": "Cycles",
+        "device": "CPU",
+        "samples": 128,
+        "filmTransparent": true,
+        "colorTransform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.25,
+        "denoising": false,
+        "elapsedSeconds": 8.387
+      },
+      "collisionSemantics": {
+        "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+        "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+        "coreExposedInArt": [
+          "open"
+        ],
+        "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+      },
+      "states": {
+        "neutral": {
+          "muzzlesPixels": [
+            [
+              47.5713,
+              242.816
+            ],
+            [
+              47.5713,
+              141.9524
+            ],
+            [
+              45.3344,
+              189.8866
+            ]
+          ],
+          "muzzleIds": [
+            "front_-1",
+            "front_1",
+            "axis"
+          ],
+          "nozzlesPixels": [
+            [
+              335.534,
+              228.503
+            ],
+            [
+              335.534,
+              147.8121
+            ]
+          ],
+          "nozzleIds": [
+            "halo_-1",
+            "halo_1"
+          ],
+          "corePixels": [
+            205.4214,
+            203.4312
+          ],
+          "coreRadiusPixels": 10.8068,
+          "coreVisibleFromCamera": false,
+          "coreCameraRayFirstMesh": "APEX | central core shutter -1",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.18,
+                -0.595,
+                0.0
+              ],
+              "pixels": [
+                205.4214,
+                203.4312
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.18,
+                -0.595,
+                0.15
+              ],
+              "pixels": [
+                205.4214,
+                192.6244
+              ]
+            },
+            "muzzle_front_-1": {
+              "world": [
+                -1.937,
+                -0.02,
+                -0.7
+              ],
+              "pixels": [
+                47.5713,
+                242.816
+              ]
+            },
+            "direction_front_-1": {
+              "world": [
+                -2.137,
+                -0.02,
+                -0.7
+              ],
+              "pixels": [
+                32.6586,
+                242.816
+              ]
+            },
+            "nozzle_halo_-1": {
+              "world": [
+                1.925,
+                0.2,
+                -0.56
+              ],
+              "pixels": [
+                335.534,
+                228.503
+              ]
+            },
+            "muzzle_front_1": {
+              "world": [
+                -1.937,
+                -0.02,
+                0.7
+              ],
+              "pixels": [
+                47.5713,
+                141.9524
+              ]
+            },
+            "direction_front_1": {
+              "world": [
+                -2.137,
+                -0.02,
+                0.7
+              ],
+              "pixels": [
+                32.6586,
+                141.9524
+              ]
+            },
+            "nozzle_halo_1": {
+              "world": [
+                1.925,
+                0.2,
+                0.56
+              ],
+              "pixels": [
+                335.534,
+                147.8121
+              ]
+            },
+            "muzzle_axis": {
+              "world": [
+                -1.967,
+                0.11,
+                0.0
+              ],
+              "pixels": [
+                45.3344,
+                189.8866
+              ]
+            },
+            "direction_axis": {
+              "world": [
+                -2.167,
+                0.11,
+                0.0
+              ],
+              "pixels": [
+                30.4217,
+                189.8866
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/apex-neutral.png",
+          "frame": 1,
+          "stateProgress": 0,
+          "coreExposed": false,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "8b90fe0cbc58dcea47099c4ecc2dcce97069512ef54679daa40ce0665e0c4075"
+        },
+        "open": {
+          "muzzlesPixels": [
+            [
+              47.5713,
+              242.816
+            ],
+            [
+              47.5713,
+              141.9524
+            ],
+            [
+              45.3344,
+              189.8866
+            ]
+          ],
+          "muzzleIds": [
+            "front_-1",
+            "front_1",
+            "axis"
+          ],
+          "nozzlesPixels": [
+            [
+              335.534,
+              228.503
+            ],
+            [
+              335.534,
+              147.8121
+            ]
+          ],
+          "nozzleIds": [
+            "halo_-1",
+            "halo_1"
+          ],
+          "corePixels": [
+            205.4214,
+            203.4312
+          ],
+          "coreRadiusPixels": 10.8068,
+          "coreVisibleFromCamera": true,
+          "coreCameraRayFirstMesh": "CORE | small cyan cell",
+          "projectedAnchors": {
+            "core": {
+              "world": [
+                0.18,
+                -0.595,
+                0.0
+              ],
+              "pixels": [
+                205.4214,
+                203.4312
+              ]
+            },
+            "core_radius": {
+              "world": [
+                0.18,
+                -0.595,
+                0.15
+              ],
+              "pixels": [
+                205.4214,
+                192.6244
+              ]
+            },
+            "muzzle_front_-1": {
+              "world": [
+                -1.937,
+                -0.02,
+                -0.7
+              ],
+              "pixels": [
+                47.5713,
+                242.816
+              ]
+            },
+            "direction_front_-1": {
+              "world": [
+                -2.137,
+                -0.02,
+                -0.7
+              ],
+              "pixels": [
+                32.6586,
+                242.816
+              ]
+            },
+            "nozzle_halo_-1": {
+              "world": [
+                1.925,
+                0.2,
+                -0.56
+              ],
+              "pixels": [
+                335.534,
+                228.503
+              ]
+            },
+            "muzzle_front_1": {
+              "world": [
+                -1.937,
+                -0.02,
+                0.7
+              ],
+              "pixels": [
+                47.5713,
+                141.9524
+              ]
+            },
+            "direction_front_1": {
+              "world": [
+                -2.137,
+                -0.02,
+                0.7
+              ],
+              "pixels": [
+                32.6586,
+                141.9524
+              ]
+            },
+            "nozzle_halo_1": {
+              "world": [
+                1.925,
+                0.2,
+                0.56
+              ],
+              "pixels": [
+                335.534,
+                147.8121
+              ]
+            },
+            "muzzle_axis": {
+              "world": [
+                -1.967,
+                0.11,
+                0.0
+              ],
+              "pixels": [
+                45.3344,
+                189.8866
+              ]
+            },
+            "direction_axis": {
+              "world": [
+                -2.167,
+                0.11,
+                0.0
+              ],
+              "pixels": [
+                30.4217,
+                189.8866
+              ]
+            },
+            "pivot": {
+              "world": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "pixels": [
+                192.0,
+                192.0
+              ]
+            }
+          },
+          "file": "renders/apex-open.png",
+          "frame": 21,
+          "stateProgress": 1,
+          "coreExposed": true,
+          "neutralBonusDamage": false,
+          "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+          "sha256": "99daf7f591307a5ae408a84e218a19ba7c158245b0b21720aa92da20c5b24a7d"
+        }
+      },
+      "geometry": {
+        "meshObjects": 47,
+        "vertices": 840,
+        "mechanismGroups": 8
+      },
+      "sha256": {
+        "blend": "523b74c333e19fb5b74de6de7435d8d5c1e43e729f7a7287f9316349b66cc036",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+      "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+    }
+  ]
+}

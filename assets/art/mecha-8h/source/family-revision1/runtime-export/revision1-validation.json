@@ -1,0 +1,36 @@
+{
+  "artifactRevision": 1,
+  "changedBinaryFiles": {
+    "renders/orb-neutral.png": {
+      "before": "e93036fc418064d1ae4111f157c12ae340add249d79e25e43b68bf0c6f0328d3",
+      "after": "0a2b2fa8eb8434c5381246f8d2ce22b853b0a3978ce3780145853915b1fb611b"
+    },
+    "renders/worm-neutral.png": {
+      "before": "39a788952eaf0536e26afb8848d5ba03681347884613634b9c8e08481397073b",
+      "after": "6a063d60073c5846e5605844775806caf4491110c0c7b0585998f562f59fdd85"
+    },
+    "renders/orb-open.png": {
+      "before": "85cb7c833ff348465c507c92e0fb2b53acf139794fee64d93d0771ec6e5dc5a4",
+      "after": "487a9c0f1a9ea3bd194027cb0865298d55067367ee4248888abf9099267fc698"
+    },
+    "sources/orb.blend": {
+      "before": "256e16794bf68e1070b3ce76e63a9b3573cdcbe915d95beff6d900d655928156",
+      "after": "53221314f796782702427426bb7df8e9b57d1b700b41341ee02c561f7bbd46f6"
+    },
+    "sources/worm.blend": {
+      "before": "49c392643820e39b47549cb2448a123619fba18a8aec947d13dbd98f59f5cf0a",
+      "after": "6d14bb58d60aef4921fb171faa175d44344db3fc2238608f8dfe58029dbd77d4"
+    }
+  },
+  "unchangedSpriteCount": 21,
+  "changedSpriteCount": 3,
+  "unchangedBlendCount": 12,
+  "changedBlendCount": 2,
+  "metadataOnlyRole": "needle",
+  "fixedCameraScalePivot": true,
+  "portChecks": 14,
+  "allPortChecksClear": true,
+  "wormOriginalRearGunHit": "segment_0 | receiver",
+  "wormMiddleGunProjectionCaveat": "Physical 3D left-axis clear; 2D projection overlaps earlier hull silhouette",
+  "replacementLibraryExpectedVersion": 0
+}

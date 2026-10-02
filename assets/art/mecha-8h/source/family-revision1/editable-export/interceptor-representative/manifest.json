@@ -1,0 +1,171 @@
+{
+  "id": "beetle",
+  "assetId": "int01-wedge",
+  "version": 1,
+  "approvalStatus": "representative-review-only",
+  "format": "PNG",
+  "colorMode": "RGBA",
+  "width": 384,
+  "height": 384,
+  "imagePixelOrigin": "top-left",
+  "pivotPixels": [
+    192.0,
+    192.0
+  ],
+  "displayWidth": 87,
+  "facing": "left",
+  "axes": {
+    "forward": "-X",
+    "starboard": "+Y",
+    "up": "+Z"
+  },
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      0.0,
+      -15.0,
+      4.0
+    ],
+    "rotationEuler": [
+      1.3101938962936401,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.150000095367432,
+    "referenceMatch": "visual estimate; SV-01 numeric source camera unavailable"
+  },
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "resolution": 384,
+    "filmTransparent": true,
+    "colorTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.25,
+    "frame": 1,
+    "elapsedSeconds": 3.134
+  },
+  "source": "int01-wedge.blend",
+  "generator": "generator.py",
+  "flameBaked": false,
+  "states": {
+    "neutral": {
+      "file": "renders/int01-neutral.png",
+      "frame": 1,
+      "muzzlesPixels": [
+        [
+          26.8427,
+          219.4253
+        ]
+      ],
+      "nozzlesPixels": [
+        [
+          325.468,
+          209.1468
+        ],
+        [
+          325.468,
+          184.9395
+        ]
+      ],
+      "corePixels": [
+        183.7981,
+        203.2823
+      ]
+    }
+  },
+  "projectedAnchors": {
+    "nozzle_port": {
+      "world": [
+        1.7899999618530273,
+        -0.6299999952316284,
+        -0.07000000029802322
+      ],
+      "pixels": [
+        325.468,
+        209.1468
+      ]
+    },
+    "nozzle_starboard": {
+      "world": [
+        1.7899999618530273,
+        0.6299999952316284,
+        -0.07000000029802322
+      ],
+      "pixels": [
+        325.468,
+        184.9395
+      ]
+    },
+    "muzzle_primary": {
+      "world": [
+        -2.2149999141693115,
+        -0.3400000035762787,
+        -0.28999999165534973
+      ],
+      "pixels": [
+        26.8427,
+        219.4253
+      ]
+    },
+    "core": {
+      "world": [
+        -0.10999999940395355,
+        -0.6060000061988831,
+        0.004999999888241291
+      ],
+      "pixels": [
+        183.7981,
+        203.2823
+      ]
+    },
+    "core_radius": {
+      "world": [
+        -0.10999999940395355,
+        -0.6060000061988831,
+        0.07000000029802322
+      ],
+      "pixels": [
+        183.7981,
+        198.5993
+      ]
+    },
+    "pivot": {
+      "world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pixels": [
+        192.0,
+        192.0
+      ]
+    }
+  },
+  "coreRadiusPixels": 4.682999999999993,
+  "geometry": {
+    "meshObjects": 56,
+    "vertices": 776,
+    "reusableModules": [
+      "faceted armor panel",
+      "tapered inner spine",
+      "hollow octagonal nozzle",
+      "rail weapon",
+      "swept outerplane",
+      "canted stabilizer"
+    ]
+  },
+  "notes": [
+    "One neutral state only. No body animation validation claimed.",
+    "Camera, canvas and pivot remain fixed; no auto-fit or post-render recenter.",
+    "Projected anchors are Blender empties evaluated through the scene camera.",
+    "Runtime role beetle and displayWidth 87 supplied by local implementation lead.",
+    "Core is an attachment marker, not approval for neutral weakpoint damage."
+  ],
+  "sha256": {
+    "blend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa",
+    "png": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+    "generator": "2581c7a0d97af4832f099567dfb123c6fc6620bcd0ed0263102627e9f090fb4c"
+  }
+}

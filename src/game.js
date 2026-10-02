@@ -96,6 +96,32 @@ function overlapsEnemy(enemy, circle, radiusScale) {
   return (localX / rx) ** 2 + (localY / ry) ** 2 < 1;
 }
 
+function projectileCoreContact(bullet, start, enemy, enemyStart) {
+  const art = getMechaSpec(enemy);
+  const core = enemy.armorOpen && enemy.coreVulnerable && art?.weakpointEnabled === true && art.runtimeCore;
+  if (!core) return { hit: false, throughOpening: false };
+  const center = mechaAnchorWorld(enemy, core);
+  const oldCenter = mechaAnchorWorld(enemyStart || enemy, core);
+  const oldBullet = start || bullet;
+  const from = { x: oldBullet.x - oldCenter.x, y: oldBullet.y - oldCenter.y };
+  const to = { x: bullet.x - center.x, y: bullet.y - center.y };
+  const radius = core.radius + bullet.radius;
+  const dx = to.x - from.x, dy = to.y - from.y, length = dx * dx + dy * dy;
+  const hit = sweptInsideCircle(from, to, radius);
+  if (hit) {
+    const at = length ? clamp(-(from.x * dx + from.y * dy) / length, 0, 1) : 1;
+    return { hit: true, throughOpening: false,
+      point: { x: lerp(oldBullet.x, bullet.x, at), y: lerp(oldBullet.y, bullet.y, at) } };
+  }
+  // An authored open weakpoint exposes a narrow entrance through the broad body
+  // proxy. The real shot travels to the projected circle; a predicted line alone
+  // never awards damage or emits coreHit. Closed armor keeps its original shape.
+  const approaching = length > 0 && dx > 0 && to.x < 0;
+  const ahead = approaching ? -(to.x * dx + to.y * dy) / length : -1;
+  const throughOpening = ahead > 0 && (to.x + dx * ahead) ** 2 + (to.y + dy * ahead) ** 2 < radius * radius - 1e-10;
+  return { hit: false, throughOpening };
+}
+
 function sweptInsideCircle(from, to, radius, activeFrom = 0) {
   const dx = to.x - from.x, dy = to.y - from.y;
   const lengthSquared = dx * dx + dy * dy;
@@ -367,8 +393,13 @@ function spawnEscorts(g, boss) {
 }
 
 function releaseBundle(g, e, bundle) {
-  const origin = e.muzzles[bundle.port % e.muzzles.length], plan = e.sequence;
-  const before = g.enemyBullets.length, pattern = bundle.pattern || plan.pattern;
+  const plan = e.sequence, pattern = bundle.pattern || plan.pattern;
+  const previousFireFlash = e.fireFlash || 0;
+  // Choose the actual firing frame before reading its projected anchors. The
+  // renderer and the first projectile then use the same open/fire-state port.
+  if (pattern !== 'escort') { e.fireFlash = 0.12; e.muzzles = enemyMuzzles(e); }
+  const origin = e.muzzles[bundle.port % e.muzzles.length];
+  const before = g.enemyBullets.length;
   const referenceX = 360;
   if (pattern === 'escort') {
     spawnEscorts(g, e);
@@ -382,6 +413,7 @@ function releaseBundle(g, e, bundle) {
       // A denied single aimed shot must not suspend its source indefinitely.
       // Structured rings/curtains keep their whole pre-reserved geometry.
       emit(g, 'attackSkipped', { enemyId: e.id, bossKind: e.bossKind, pattern, reason: 'minimum-flight-time' });
+      e.fireFlash = previousFireFlash; e.muzzles = enemyMuzzles(e);
       return true;
     }
     e.attackAngle = Math.atan2(target.y - origin.y, target.x - origin.x);
@@ -404,7 +436,7 @@ function releaseBundle(g, e, bundle) {
   }
   const bulletCount = g.enemyBullets.length - before;
   const launchMuzzles = [...new Map(g.enemyBullets.slice(before).map(bullet => [`${bullet.x}:${bullet.y}`, { x: bullet.x, y: bullet.y }])).values()];
-  if (bulletCount) e.fireFlash = 0.12;
+  if (!bulletCount && pattern !== 'escort') { e.fireFlash = previousFireFlash; e.muzzles = enemyMuzzles(e); }
   emit(g, pattern === 'escort' ? 'escortDeployed' : 'enemyShot', { ...origin, enemyId: e.id, bulletCount, launchMuzzles, boss: e.type === 'boss', bossKind: e.bossKind,
     enemyType: e.type, attackName: pattern, pattern, attackIndex: e.attackIndex ?? e.attack,
     armorOpen: Boolean(e.armorOpen), corePhase: e.corePhase || 0,
@@ -415,7 +447,8 @@ function releaseBundle(g, e, bundle) {
 function setArmorOpen(g, e, open) {
   const changed = e.armorOpen !== Boolean(open);
   e.armorOpen = Boolean(open);
-  const core = getMechaSpec(e)?.runtimeCore;
+  const spec = getMechaSpec(e);
+  const core = spec?.weakpointEnabled === true ? spec.runtimeCore : null;
   e.coreVulnerable = Boolean(open && core);
   if (changed && e.coreVulnerable) emit(g, 'coreOpen', { ...mechaAnchorWorld(e, core),
     enemyId: e.id, boss: e.type === 'boss', bossKind: e.bossKind,
@@ -469,7 +502,11 @@ function updateAttack(g, e, dt) {
     const pressure = new Set(g.enemyBullets.filter(bullet => {
       if (bullet.dead) return false;
       const position = worldToScreen(g, bullet);
-      return position.x > 40 && position.x < WORLD_WIDTH + 80 && position.y > 20 && position.y < WORLD_HEIGHT - 20;
+      const routeTail = bullet.pattern === 'B04' || bullet.pattern === 'B05';
+      // A surviving route row outside the present camera can re-enter during a
+      // broad altitude move. Its tail stays exclusive across the flight space.
+      return position.x > 40 && position.x < WORLD_WIDTH + 80
+        && (routeTail || (position.y > 20 && position.y < WORLD_HEIGHT - 20));
     }).map(bullet => bullet.pattern));
     // Required travel windows remain exclusive until their tail has passed the
     // player's flight corridor, not merely until the emitter's last release.
@@ -504,6 +541,8 @@ function updateAttack(g, e, dt) {
     e.chargeTime = e.chargeDuration;
     e.aimTarget = { x: g.player.x, y: g.player.y };
     if (boss) { e.corePhase = attack.corePhase; setArmorOpen(g, e, false); }
+    e.telegraph = 0.03;
+    e.muzzles = enemyMuzzles(e);
     const activeMuzzles = e.muzzles.filter((_, index) => plan.movementWindow || plan.bundles.some(bundle => bundle.port % e.muzzles.length === index));
     emit(g, 'charge', { ...e.muzzles[0], muzzles: activeMuzzles, enemyId: e.id, enemyType: e.type, boss, bossKind: e.bossKind,
       attackName: pattern, attackIndex: e.attackIndex, armorOpen: false, corePhase: e.corePhase || 0,
@@ -637,7 +676,7 @@ function updatePlayer(g, dt, input) {
 function updateEnemies(g, dt, starts) {
   for (const e of g.enemies) {
     if (e.dead) continue;
-    starts.set(e, { x: e.x, y: e.y, angle: e.angle || 0 });
+    starts.set(e, { x: e.x, y: e.y, angle: e.angle || 0, artAngle: e.artAngle || 0 });
     e.age = (e.age || 0) + dt;
     e.flash = Math.max(0, (e.flash || 0) - dt);
     e.fireFlash = Math.max(0, (e.fireFlash || 0) - dt);
@@ -707,6 +746,7 @@ function updateEnemies(g, dt, starts) {
         e.angle = Math.cos(e.age * frequency + phase) * 0.18;
       }
     }
+    e.artAngle = e.angle || 0;
     updateAttack(g, e, dt);
   }
   g.enemies = g.enemies.filter(e => !e.dead && e.x > -200 && e.y > FLIGHT_MIN_Y - 260 && e.y < FLIGHT_MAX_Y + 260);
@@ -714,6 +754,8 @@ function updateEnemies(g, dt, starts) {
 
 function updateProjectiles(g, dt, playerStart, enemyStarts) {
   const hostileStarts = new Map(g.enemyBullets.map(b => [b, { x: b.x, y: b.y, arming: b.arming || 0 }]));
+  const hasOpenCore = g.enemies.some(enemy => enemy.coreVulnerable && getMechaSpec(enemy)?.weakpointEnabled === true);
+  const friendlyStarts = hasOpenCore ? new Map(g.bullets.map(bullet => [bullet, { x: bullet.x, y: bullet.y }])) : null;
   for (const bullet of [...g.bullets, ...g.enemyBullets]) {
     bullet.x += bullet.vx * dt;
     bullet.y += bullet.vy * dt;
@@ -725,15 +767,16 @@ function updateProjectiles(g, dt, playerStart, enemyStarts) {
     if (bullet.dead) continue;
     for (const enemy of g.enemies) {
       if (enemy.dead || (enemy.type === 'boss' && g.phase === 'boss-entry') || enemy.x > WORLD_WIDTH + enemy.radius || bullet.hits?.includes(enemy.id)) continue;
-      if (overlapsEnemy(enemy, bullet, 0.82)) {
+      const contact = hasOpenCore ? projectileCoreContact(bullet, friendlyStarts.get(bullet), enemy, enemyStarts.get(enemy)) : { hit: false, throughOpening: false };
+      const bodyHit = overlapsEnemy(enemy, bullet, 0.82);
+      if (contact.hit || (bodyHit && !contact.throughOpening)) {
         if (bullet.pierce > 0) { bullet.pierce -= 1; bullet.hits.push(enemy.id); }
         else bullet.dead = true;
-        const art = getMechaSpec(enemy), core = enemy.coreVulnerable && art?.runtimeCore;
-        const coreHit = Boolean(core && distanceSquared(bullet, mechaAnchorWorld(enemy, core)) < (bullet.radius + core.radius) ** 2);
+        const coreHit = contact.hit;
         const escortShield = enemy.bossKind === 'carrier' && g.enemies.some(other => !other.dead && other.escort && other.sourceBossId === enemy.id);
         enemy.hp -= bullet.power * (coreHit ? 1.2 : 1) * (escortShield ? 0.7 : 1);
         enemy.flash = 0.07;
-        emit(g, 'hit', { x: bullet.x, y: bullet.y, player: false, enemyType: enemy.type,
+        emit(g, 'hit', { x: contact.point?.x ?? bullet.x, y: contact.point?.y ?? bullet.y, player: false, enemyType: enemy.type,
           boss: enemy.type === 'boss', bossKind: enemy.bossKind, attackName: enemy.attackName,
           attackIndex: enemy.attackIndex, armorOpen: Boolean(enemy.armorOpen), corePhase: enemy.corePhase || 0, coreHit,
           weaponMode: bullet.weaponMode || 'normal', drone: Boolean(bullet.drone), tension: Boolean(bullet.tension), impactCue: bullet.impactCue });

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-02T13:02:00Z",
+  "status": "representative-runtime-integration",
+  "provenance": {
+    "sourceManifest": "source/int01/manifest.json",
+    "sourceBlend": "source/int01/int01-wedge.blend",
+    "generator": "source/int01/generator.py",
+    "sourceHashes": {
+      "blend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa",
+      "png": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+      "generator": "2581c7a0d97af4832f099567dfb123c6fc6620bcd0ed0263102627e9f090fb4c"
+    },
+    "camera": {
+      "type": "ORTHO",
+      "location": [
+        0,
+        -15,
+        4
+      ],
+      "rotationEuler": [
+        1.3101938962936401,
+        0,
+        0
+      ],
+      "orthoScale": 5.150000095367432,
+      "referenceMatch": "visual estimate; SV-01 numeric source camera unavailable"
+    },
+    "axes": {
+      "forward": "-X",
+      "starboard": "+Y",
+      "up": "+Z"
+    },
+    "facing": "left",
+    "productionMethod": "Native Blender mesh source and CPU Cycles RGBA render; no raster generation or post-render recentering",
+    "parentReview": "Parent reported direct and independent visual review without blockers before local connection",
+    "limitations": [
+      "One neutral render only",
+      "Charge/open/fire/destruction animation frames not produced",
+      "SV-01 numeric camera unavailable; visual match only",
+      "Neutral core is an attachment marker, not a damage weakpoint"
+    ]
+  },
+  "entries": [
+    {
+      "key": "int01-wedge",
+      "roles": [
+        "beetle"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 87,
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "weakpointEnabled": false,
+      "statesComplete": false,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [
+        "charge"
+      ],
+      "optionalUnrenderedStates": [
+        "open",
+        "fire",
+        "destroyed"
+      ],
+      "frames": {
+        "idle": {
+          "filename": "runtime/int01-idle.png",
+          "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+          "muzzlesPixels": [
+            {
+              "x": 26.8427,
+              "y": 219.4253
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 325.468,
+              "y": 209.1468
+            },
+            {
+              "x": 325.468,
+              "y": 184.9395
+            }
+          ],
+          "corePixels": {
+            "x": 183.7981,
+            "y": 203.2823,
+            "radius": 4.682999999999993
+          }
+        }
+      }
+    }
+  ]
+}

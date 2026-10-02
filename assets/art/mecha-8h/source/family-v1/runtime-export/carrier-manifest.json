@@ -1,0 +1,366 @@
+{
+  "id": "carrier",
+  "version": 1,
+  "approvalStatus": "parent-art-direction-approved; full-family-independent-and-runtime-QA-pending",
+  "provenance": "Actual 3D Blender meshes rendered in Cycles; no image-generated body assets",
+  "family": "pressurecraft-boss",
+  "width": 384,
+  "height": 384,
+  "format": "PNG",
+  "colorMode": "RGBA",
+  "imagePixelOrigin": "top-left",
+  "pivotPixels": [
+    192.0,
+    192.0
+  ],
+  "displayWidth": 300,
+  "facing": "left",
+  "axes": {
+    "forward": "-X",
+    "starboard": "+Y",
+    "up": "+Z"
+  },
+  "source": "sources/carrier.blend",
+  "generator": "family_generator.py",
+  "mechanism": "Two long hangar doors slide away to expose modeled docked drone frames; bridge shutter opens.",
+  "flameBaked": false,
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      0.0,
+      -15.0,
+      4.0
+    ],
+    "rotationEuler": [
+      1.3101938962936401,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.150000095367432,
+    "inheritedFrom": "approved INT-01 representative",
+    "referenceMatch": "Visually reviewed; unavailable SV-01 numeric camera is not claimed"
+  },
+  "render": {
+    "engine": "Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "filmTransparent": true,
+    "colorTransform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.25,
+    "denoising": false,
+    "elapsedSeconds": 13.438
+  },
+  "collisionSemantics": {
+    "hull": "Existing runtime body collider remains authoritative; sprite alpha is not a new collision rule",
+    "core": "Small model-derived attachment marker; bonus damage only when runtime combat state explicitly enables it",
+    "coreExposedInArt": [
+      "open"
+    ],
+    "coreBonusPermission": "No new damage or multiplier rule authorized by this art manifest"
+  },
+  "states": {
+    "neutral": {
+      "muzzlesPixels": [
+        [
+          35.6412,
+          269.3288
+        ],
+        [
+          35.6412,
+          110.8287
+        ]
+      ],
+      "muzzleIds": [
+        "defense_-1",
+        "defense_1"
+      ],
+      "nozzlesPixels": [
+        [
+          344.4816,
+          246.1301
+        ],
+        [
+          344.4816,
+          135.1801
+        ]
+      ],
+      "nozzleIds": [
+        "bay_-1",
+        "bay_1"
+      ],
+      "corePixels": [
+        262.8349,
+        206.313
+      ],
+      "coreRadiusPixels": 10.0864,
+      "coreVisibleFromCamera": false,
+      "coreCameraRayFirstMesh": "CARRIER | small bridge shutter",
+      "projectedAnchors": {
+        "core": {
+          "world": [
+            0.95,
+            -0.745,
+            0.0
+          ],
+          "pixels": [
+            262.8349,
+            206.313
+          ]
+        },
+        "core_radius": {
+          "world": [
+            0.95,
+            -0.745,
+            0.14
+          ],
+          "pixels": [
+            262.8349,
+            196.2266
+          ]
+        },
+        "muzzle_defense_-1": {
+          "world": [
+            -2.097,
+            0.1,
+            -1.1
+          ],
+          "pixels": [
+            35.6412,
+            269.3288
+          ]
+        },
+        "direction_defense_-1": {
+          "world": [
+            -2.297,
+            0.1,
+            -1.1
+          ],
+          "pixels": [
+            20.7286,
+            269.3288
+          ]
+        },
+        "nozzle_bay_-1": {
+          "world": [
+            2.045,
+            0.07,
+            -0.77
+          ],
+          "pixels": [
+            344.4816,
+            246.1301
+          ]
+        },
+        "muzzle_defense_1": {
+          "world": [
+            -2.097,
+            0.1,
+            1.1
+          ],
+          "pixels": [
+            35.6412,
+            110.8287
+          ]
+        },
+        "direction_defense_1": {
+          "world": [
+            -2.297,
+            0.1,
+            1.1
+          ],
+          "pixels": [
+            20.7286,
+            110.8287
+          ]
+        },
+        "nozzle_bay_1": {
+          "world": [
+            2.045,
+            0.07,
+            0.77
+          ],
+          "pixels": [
+            344.4816,
+            135.1801
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/carrier-neutral.png",
+      "frame": 1,
+      "stateProgress": 0,
+      "coreExposed": false,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "1eb71c452140971456ec306e1c3b0530da795becd07a99b4c53c09de1699b016"
+    },
+    "open": {
+      "muzzlesPixels": [
+        [
+          35.6412,
+          269.3288
+        ],
+        [
+          35.6412,
+          110.8287
+        ]
+      ],
+      "muzzleIds": [
+        "defense_-1",
+        "defense_1"
+      ],
+      "nozzlesPixels": [
+        [
+          344.4816,
+          246.1301
+        ],
+        [
+          344.4816,
+          135.1801
+        ]
+      ],
+      "nozzleIds": [
+        "bay_-1",
+        "bay_1"
+      ],
+      "corePixels": [
+        262.8349,
+        206.313
+      ],
+      "coreRadiusPixels": 10.0864,
+      "coreVisibleFromCamera": true,
+      "coreCameraRayFirstMesh": "CORE | small cyan cell",
+      "projectedAnchors": {
+        "core": {
+          "world": [
+            0.95,
+            -0.745,
+            0.0
+          ],
+          "pixels": [
+            262.8349,
+            206.313
+          ]
+        },
+        "core_radius": {
+          "world": [
+            0.95,
+            -0.745,
+            0.14
+          ],
+          "pixels": [
+            262.8349,
+            196.2266
+          ]
+        },
+        "muzzle_defense_-1": {
+          "world": [
+            -2.097,
+            0.1,
+            -1.1
+          ],
+          "pixels": [
+            35.6412,
+            269.3288
+          ]
+        },
+        "direction_defense_-1": {
+          "world": [
+            -2.297,
+            0.1,
+            -1.1
+          ],
+          "pixels": [
+            20.7286,
+            269.3288
+          ]
+        },
+        "nozzle_bay_-1": {
+          "world": [
+            2.045,
+            0.07,
+            -0.77
+          ],
+          "pixels": [
+            344.4816,
+            246.1301
+          ]
+        },
+        "muzzle_defense_1": {
+          "world": [
+            -2.097,
+            0.1,
+            1.1
+          ],
+          "pixels": [
+            35.6412,
+            110.8287
+          ]
+        },
+        "direction_defense_1": {
+          "world": [
+            -2.297,
+            0.1,
+            1.1
+          ],
+          "pixels": [
+            20.7286,
+            110.8287
+          ]
+        },
+        "nozzle_bay_1": {
+          "world": [
+            2.045,
+            0.07,
+            0.77
+          ],
+          "pixels": [
+            344.4816,
+            135.1801
+          ]
+        },
+        "pivot": {
+          "world": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "pixels": [
+            192.0,
+            192.0
+          ]
+        }
+      },
+      "file": "renders/carrier-open.png",
+      "frame": 21,
+      "stateProgress": 1,
+      "coreExposed": true,
+      "neutralBonusDamage": false,
+      "weakpointActivation": "Never enable from artwork alone; authoritative runtime combat state controls bonus damage. Neutral always has no bonus.",
+      "sha256": "3b26562c76b5e7e6f4caab92942b8b28ff2e922ceb59a140fb302adc075d5f4e"
+    }
+  },
+  "geometry": {
+    "meshObjects": 54,
+    "vertices": 792,
+    "mechanismGroups": 3
+  },
+  "sha256": {
+    "blend": "4b95b5c6076765334e277cd599b32b4619b5d1db055a72712a2af2de0cf2dfaf",
+    "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+    "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+  },
+  "displayWidthStatus": "provisional_for_locallead_final_adaptation",
+  "displayWidthSource": "Art concept-fit proposal only; final runtime width is locallead responsibility"
+}

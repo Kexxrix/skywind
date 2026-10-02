@@ -1,0 +1,2340 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-02T13:43:44.230Z",
+  "status": "family-revision1-integrated-awaiting-runtime-QA",
+  "runtimeImageCount": 24,
+  "decodedRGBABytes": 14155776,
+  "provenance": {
+    "sourceFamilyManifest": "source/family-revision1/runtime-export/family-manifest.json",
+    "sourceFamilyManifestSha256": "a32d9c17e51040b452b1589e19c7394b6f88f589fd17cb41bb83595d1fad1071",
+    "productionMethod": "Actual Blender geometry / Cycles RGBA",
+    "parentApproval": "Parent art direction approved for runtime integration; full-family independent/runtime QA pending",
+    "parentIndependentReview": "Parent reported revision1 independent art review PASS and orb adoption hold released",
+    "renderSourcePreserved": true,
+    "sourceArchives": {
+      "runtimeSha256": "1d2034887e7edc0c255f2471c311508f76cce70a833777958c2b64210b3d365e",
+      "editableSha256": "e0dabd16d4690be0a562961ccfcbbfd232127513fecf14782f16177747fd17c9"
+    },
+    "chargeStatePolicy": "Intentional minimal body-state set: charge shares neutral geometry and uses actual muzzle light/attack tell VFX. No dedicated charge PNG is required.",
+    "limitations": [
+      "Normal deployment/recoil fire poses do not authorize weakpoint damage",
+      "Worm middle muzzle overlaps a forward body in the 2D projection; source flash/tell must be drawn above body",
+      "Actual runtime visual and collision-boundary QA pending"
+    ]
+  },
+  "heldRoles": [],
+  "entries": [
+    {
+      "key": "int01-wedge",
+      "roles": [
+        "beetle"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 87,
+      "nativeDisplayWidth": 87,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/beetle-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/beetle.blend",
+      "generator": "source/family-revision1/editable-export/family/representative_generator.py",
+      "sourceHashes": {
+        "blend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa",
+        "png": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+        "generator": "2581c7a0d97af4832f099567dfb123c6fc6620bcd0ed0263102627e9f090fb4c"
+      },
+      "mechanism": "Approved INT01 wedge representative",
+      "frames": {
+        "idle": {
+          "filename": "runtime/int01-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/beetle-neutral.png",
+          "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+          "muzzlesPixels": [
+            {
+              "x": 26.8427,
+              "y": 219.4253
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 325.468,
+              "y": 209.1468
+            },
+            {
+              "x": 325.468,
+              "y": 184.9395
+            }
+          ],
+          "corePixels": {
+            "x": 183.7981,
+            "y": 203.2823,
+            "radius": 4.682999999999993
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false
+        },
+        "charge": {
+          "filename": "runtime/int01-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/beetle-neutral.png",
+          "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40",
+          "muzzlesPixels": [
+            {
+              "x": 26.8427,
+              "y": 219.4253
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 325.468,
+              "y": 209.1468
+            },
+            {
+              "x": 325.468,
+              "y": 184.9395
+            }
+          ],
+          "corePixels": {
+            "x": 183.7981,
+            "y": 203.2823,
+            "radius": 4.682999999999993
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "dragonfly",
+      "roles": [
+        "dragonfly"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 88,
+      "nativeDisplayWidth": 88,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/dragonfly-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/dragonfly.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "9986294209758045771bb7f6d26c062d90feeefd0c62cf313860f2866aa87188",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Runtime root rotation; all anchors rotate through the sprite transform. Physical square frame.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/dragonfly-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/dragonfly-neutral.png",
+          "sha256": "f437abcb988f6405c5e69e40e078fb46e3f8a21e5774bd9a036dcf1ac2347535",
+          "muzzlesPixels": [
+            {
+              "x": 76.6509,
+              "y": 192.9606
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 300.4893,
+              "y": 191.0394
+            }
+          ],
+          "corePixels": {
+            "x": 192,
+            "y": 200.7415,
+            "radius": 6.4841
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 61.7383,
+              "y": 192.9606
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/dragonfly-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/dragonfly-neutral.png",
+          "sha256": "f437abcb988f6405c5e69e40e078fb46e3f8a21e5774bd9a036dcf1ac2347535",
+          "muzzlesPixels": [
+            {
+              "x": 76.6509,
+              "y": 192.9606
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 300.4893,
+              "y": 191.0394
+            }
+          ],
+          "corePixels": {
+            "x": 192,
+            "y": 200.7415,
+            "radius": 6.4841
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 61.7383,
+              "y": 192.9606
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "wasp",
+      "roles": [
+        "wasp"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 76,
+      "nativeDisplayWidth": 76,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/wasp-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/wasp.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "ed415bc6d0de59ea7b99eb778a6cd76455f2f3ddcf788fa64c314970eb1e950a",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Fast spear/skimmer with narrow swept foils and twin propulsion.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/wasp-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/wasp-neutral.png",
+          "sha256": "d1efd3343864c50e3a107d4b555da67a42eebac4ee42dc55a5ac1909456bdff5",
+          "muzzlesPixels": [
+            {
+              "x": 28.9305,
+              "y": 197.9797
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 309.4369,
+              "y": 165.4872
+            },
+            {
+              "x": 309.4369,
+              "y": 217.36
+            }
+          ],
+          "corePixels": {
+            "x": 214.3689,
+            "y": 208.3303,
+            "radius": 4.8271
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 14.0179,
+              "y": 197.9797
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/wasp-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/wasp-neutral.png",
+          "sha256": "d1efd3343864c50e3a107d4b555da67a42eebac4ee42dc55a5ac1909456bdff5",
+          "muzzlesPixels": [
+            {
+              "x": 28.9305,
+              "y": 197.9797
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 309.4369,
+              "y": 165.4872
+            },
+            {
+              "x": 309.4369,
+              "y": 217.36
+            }
+          ],
+          "corePixels": {
+            "x": 214.3689,
+            "y": 208.3303,
+            "radius": 4.8271
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 14.0179,
+              "y": 197.9797
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "mantis",
+      "roles": [
+        "mantis"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 96,
+      "nativeDisplayWidth": 96,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/mantis-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/mantis.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "f831aee0d6eb3affdab633f0e3f1b2d8d29ecb729803ce52528bac284fefa6f8",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Twin hooked arms physically translate outward, carrying their gun anchors.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/mantis-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/mantis-neutral.png",
+          "sha256": "0200293c75b0fd6cace8f095b4f6e37a8438d297385f7a4cf4abd8525b6fd849",
+          "muzzlesPixels": [
+            {
+              "x": 44.5887,
+              "y": 245.0254
+            },
+            {
+              "x": 44.5887,
+              "y": 147.0436
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 315.4019,
+              "y": 190.8472
+            }
+          ],
+          "corePixels": {
+            "x": 195.7282,
+            "y": 213.0372,
+            "radius": 6.1238
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 29.6761,
+              "y": 245.0254
+            },
+            {
+              "x": 29.6761,
+              "y": 147.0436
+            }
+          ]
+        },
+        "fire": {
+          "filename": "runtime/mantis-fire.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/mantis-open.png",
+          "sha256": "97804fe622538e140ed5f6ec3fd310bcd04a6428c9ffddd879fb2a9105d688ab",
+          "muzzlesPixels": [
+            {
+              "x": 38.6237,
+              "y": 258.7141
+            },
+            {
+              "x": 38.6237,
+              "y": 133.355
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 315.4019,
+              "y": 190.8472
+            }
+          ],
+          "corePixels": {
+            "x": 195.7282,
+            "y": 213.0372,
+            "radius": 6.1238
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 23.7111,
+              "y": 258.7141
+            },
+            {
+              "x": 23.7111,
+              "y": 133.355
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/mantis-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/mantis-neutral.png",
+          "sha256": "0200293c75b0fd6cace8f095b4f6e37a8438d297385f7a4cf4abd8525b6fd849",
+          "muzzlesPixels": [
+            {
+              "x": 44.5887,
+              "y": 245.0254
+            },
+            {
+              "x": 44.5887,
+              "y": 147.0436
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 315.4019,
+              "y": 190.8472
+            }
+          ],
+          "corePixels": {
+            "x": 195.7282,
+            "y": 213.0372,
+            "radius": 6.1238
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 29.6761,
+              "y": 245.0254
+            },
+            {
+              "x": 29.6761,
+              "y": 147.0436
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "orb",
+      "roles": [
+        "orb"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 82,
+      "nativeDisplayWidth": 82,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/orb-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/orb.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator.py",
+      "sourceHashes": {
+        "blend": "53221314f796782702427426bb7df8e9b57d1b700b41341ee02c561f7bbd46f6",
+        "generator": "e1243dff36b65fb5ea375d7ff3283649336f4ac16bed0aab1461414e0446c2cf",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Eight radial armor segments translate outwards; three visible left-facing ports.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/orb-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/orb-neutral.png",
+          "sha256": "0a2b2fa8eb8434c5381246f8d2ce22b853b0a3978ce3780145853915b1fb611b",
+          "muzzlesPixels": [
+            {
+              "x": 55.0276,
+              "y": 239.6941
+            },
+            {
+              "x": 71.4315,
+              "y": 194.3054
+            },
+            {
+              "x": 55.0276,
+              "y": 148.9168
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 334.0427,
+              "y": 153.6718
+            },
+            {
+              "x": 334.0427,
+              "y": 225.7172
+            }
+          ],
+          "corePixels": {
+            "x": 192,
+            "y": 200.7415,
+            "radius": 7.925
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 40.115,
+              "y": 239.6941
+            },
+            {
+              "x": 56.5188,
+              "y": 194.3054
+            },
+            {
+              "x": 40.115,
+              "y": 148.9168
+            }
+          ]
+        },
+        "fire": {
+          "filename": "runtime/orb-fire.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/orb-open.png",
+          "sha256": "487a9c0f1a9ea3bd194027cb0865298d55067367ee4248888abf9099267fc698",
+          "muzzlesPixels": [
+            {
+              "x": 55.0276,
+              "y": 239.6941
+            },
+            {
+              "x": 71.4315,
+              "y": 194.3054
+            },
+            {
+              "x": 55.0276,
+              "y": 148.9168
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 334.0427,
+              "y": 153.6718
+            },
+            {
+              "x": 334.0427,
+              "y": 225.7172
+            }
+          ],
+          "corePixels": {
+            "x": 192,
+            "y": 200.7415,
+            "radius": 7.925
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 40.115,
+              "y": 239.6941
+            },
+            {
+              "x": 56.5188,
+              "y": 194.3054
+            },
+            {
+              "x": 40.115,
+              "y": 148.9168
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/orb-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/orb-neutral.png",
+          "sha256": "0a2b2fa8eb8434c5381246f8d2ce22b853b0a3978ce3780145853915b1fb611b",
+          "muzzlesPixels": [
+            {
+              "x": 55.0276,
+              "y": 239.6941
+            },
+            {
+              "x": 71.4315,
+              "y": 194.3054
+            },
+            {
+              "x": 55.0276,
+              "y": 148.9168
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 334.0427,
+              "y": 153.6718
+            },
+            {
+              "x": 334.0427,
+              "y": 225.7172
+            }
+          ],
+          "corePixels": {
+            "x": 192,
+            "y": 200.7415,
+            "radius": 7.925
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 40.115,
+              "y": 239.6941
+            },
+            {
+              "x": 56.5188,
+              "y": 194.3054
+            },
+            {
+              "x": 40.115,
+              "y": 148.9168
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "claw",
+      "roles": [
+        "claw"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 108,
+      "nativeDisplayWidth": 108,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/claw-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/claw.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "9dfe301feeaef1572a014fd91f3349f074e563649f02d767f655e34eaed7d370",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Two armored cannon shoulders separate vertically.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/claw-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/claw-neutral.png",
+          "sha256": "c804b03e16b6f3abbf749bf9c5a23aa72900d56fd4fe0f08cfee1b8b49e21963",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 232.4415
+            },
+            {
+              "x": 60.247,
+              "y": 154.6324
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 228.9833
+            },
+            {
+              "x": 311.6738,
+              "y": 151.1742
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 232.4415
+            },
+            {
+              "x": 45.3344,
+              "y": 154.6324
+            }
+          ]
+        },
+        "fire": {
+          "filename": "runtime/claw-fire.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/claw-open.png",
+          "sha256": "49fdc9f6cc90b90e393285f8d21979f46791c51376167ce0510f8a86343b26b4",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 245.4097
+            },
+            {
+              "x": 60.247,
+              "y": 141.6642
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 241.9515
+            },
+            {
+              "x": 311.6738,
+              "y": 138.206
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 245.4097
+            },
+            {
+              "x": 45.3344,
+              "y": 141.6642
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/claw-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/claw-neutral.png",
+          "sha256": "c804b03e16b6f3abbf749bf9c5a23aa72900d56fd4fe0f08cfee1b8b49e21963",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 232.4415
+            },
+            {
+              "x": 60.247,
+              "y": 154.6324
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 228.9833
+            },
+            {
+              "x": 311.6738,
+              "y": 151.1742
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 232.4415
+            },
+            {
+              "x": 45.3344,
+              "y": 154.6324
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "ray",
+      "roles": [
+        "ray"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 118,
+      "nativeDisplayWidth": 118,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/ray-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/ray.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "0fa28c835e8a6db8cc7f3a12c5b0b1944ae199ed5cf0c96bf9b7f300b89684e7",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Separated upper/lower pressure lanes with a readable center gap.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/ray-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/ray-neutral.png",
+          "sha256": "08cc0fc6f5fb1fe243b04c3f7f8b2979844f7f29b7ff0c9e01b0238d2c02aa40",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 256.2165
+            },
+            {
+              "x": 60.247,
+              "y": 130.8574
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 252.7583
+            },
+            {
+              "x": 311.6738,
+              "y": 127.3992
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 256.2165
+            },
+            {
+              "x": 45.3344,
+              "y": 130.8574
+            }
+          ]
+        },
+        "fire": {
+          "filename": "runtime/ray-fire.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/ray-open.png",
+          "sha256": "e032a39b491c726e4eea84ae89c77a474a5a14c43a5beefc1d9e7ddcb21a7253",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 272.0665
+            },
+            {
+              "x": 60.247,
+              "y": 115.0074
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 268.6083
+            },
+            {
+              "x": 311.6738,
+              "y": 111.5492
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 272.0665
+            },
+            {
+              "x": 45.3344,
+              "y": 115.0074
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/ray-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/ray-neutral.png",
+          "sha256": "08cc0fc6f5fb1fe243b04c3f7f8b2979844f7f29b7ff0c9e01b0238d2c02aa40",
+          "muzzlesPixels": [
+            {
+              "x": 60.247,
+              "y": 256.2165
+            },
+            {
+              "x": 60.247,
+              "y": 130.8574
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 311.6738,
+              "y": 252.7583
+            },
+            {
+              "x": 311.6738,
+              "y": 127.3992
+            }
+          ],
+          "corePixels": {
+            "x": 177.0874,
+            "y": 205.5445,
+            "radius": 7.5648
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 45.3344,
+              "y": 256.2165
+            },
+            {
+              "x": 45.3344,
+              "y": 130.8574
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "worm",
+      "roles": [
+        "worm"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 170,
+      "nativeDisplayWidth": 170,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/worm-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/worm.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator.py",
+      "sourceHashes": {
+        "blend": "6d14bb58d60aef4921fb171faa175d44344db3fc2238608f8dfe58029dbd77d4",
+        "generator": "e1243dff36b65fb5ea375d7ff3283649336f4ac16bed0aab1461414e0446c2cf",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Four modeled armor segments and three independent visible ports.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/worm-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/worm-neutral.png",
+          "sha256": "6a063d60073c5846e5605844775806caf4491110c0c7b0585998f562f59fdd85",
+          "muzzlesPixels": [
+            {
+              "x": 49.0625,
+              "y": 215.7269
+            },
+            {
+              "x": 115.4237,
+              "y": 205.6406
+            },
+            {
+              "x": 181.7849,
+              "y": 243.8727
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 351.9379,
+              "y": 191.6157
+            }
+          ],
+          "corePixels": {
+            "x": 157.701,
+            "y": 198.6282,
+            "radius": 5.7637
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 34.1499,
+              "y": 215.7269
+            },
+            {
+              "x": 100.5111,
+              "y": 205.6406
+            },
+            {
+              "x": 166.8722,
+              "y": 243.8727
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/worm-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/worm-neutral.png",
+          "sha256": "6a063d60073c5846e5605844775806caf4491110c0c7b0585998f562f59fdd85",
+          "muzzlesPixels": [
+            {
+              "x": 49.0625,
+              "y": 215.7269
+            },
+            {
+              "x": 115.4237,
+              "y": 205.6406
+            },
+            {
+              "x": 181.7849,
+              "y": 243.8727
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 351.9379,
+              "y": 191.6157
+            }
+          ],
+          "corePixels": {
+            "x": 157.701,
+            "y": 198.6282,
+            "radius": 5.7637
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 34.1499,
+              "y": 215.7269
+            },
+            {
+              "x": 100.5111,
+              "y": 205.6406
+            },
+            {
+              "x": 166.8722,
+              "y": 243.8727
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "needle",
+      "roles": [
+        "needle"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 112,
+      "nativeDisplayWidth": 112,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": false,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/needle-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/needle.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "adf14bc2e12be1f8a7fedc0f8f0a2fae2de61ef9bf3aaf3b5d5359eee8a5c474",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Physical rail recoil; open is mechanically recoiled/recovery pose, not core availability.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/needle-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/needle-neutral.png",
+          "sha256": "31fe579acede552e4ab28a34dcbc2bb856b784f12c5a1b55c76304bc510072b9",
+          "muzzlesPixels": [
+            {
+              "x": 25.948,
+              "y": 197.2353
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 340.0078,
+              "y": 194.1133
+            }
+          ],
+          "corePixels": {
+            "x": 208.4039,
+            "y": 200.8135,
+            "radius": 6.4841
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 11.0353,
+              "y": 197.2353
+            }
+          ]
+        },
+        "fire": {
+          "filename": "runtime/needle-fire.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/needle-open.png",
+          "sha256": "ccd11c0679003b942e09f2a8f8bc9428182c0ffb54b38385d94da5d613c94438",
+          "muzzlesPixels": [
+            {
+              "x": 39.3693,
+              "y": 197.2353
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 340.0078,
+              "y": 194.1133
+            }
+          ],
+          "corePixels": {
+            "x": 208.4039,
+            "y": 200.8135,
+            "radius": 6.4841
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 24.4567,
+              "y": 197.2353
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/needle-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/needle-neutral.png",
+          "sha256": "31fe579acede552e4ab28a34dcbc2bb856b784f12c5a1b55c76304bc510072b9",
+          "muzzlesPixels": [
+            {
+              "x": 25.948,
+              "y": 197.2353
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 340.0078,
+              "y": 194.1133
+            }
+          ],
+          "corePixels": {
+            "x": 208.4039,
+            "y": 200.8135,
+            "radius": 6.4841
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 11.0353,
+              "y": 197.2353
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "warden",
+      "roles": [
+        "warden"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 340,
+      "nativeDisplayWidth": 340,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": true,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge",
+        "open"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        },
+        "open": {
+          "bodyPose": "actual model open render",
+          "activationOwner": "game.armorOpen/coreVulnerable",
+          "corePermission": "Explicit adopted boss model and projected physical core"
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/warden-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/warden.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "b7d815080058bc410a6cfc0b49eaba2590fb3d89c866c184d8889d69225f4514",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Two central armored jaws separate to expose a small core; heavy paired assault cannons.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/warden-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/warden-neutral.png",
+          "sha256": "6ca5683a5fa0b3e6016aa60916099dc3826559ab8c2ebec920a6b0fdac435b8a",
+          "muzzlesPixels": [
+            {
+              "x": 42.3518,
+              "y": 247.571
+            },
+            {
+              "x": 42.3518,
+              "y": 139.5028
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 333.2971,
+              "y": 237.1965
+            },
+            {
+              "x": 333.2971,
+              "y": 140.6556
+            }
+          ],
+          "corePixels": {
+            "x": 182.3068,
+            "y": 206.313,
+            "radius": 12.9682
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 27.4392,
+              "y": 247.571
+            },
+            {
+              "x": 27.4392,
+              "y": 139.5028
+            }
+          ]
+        },
+        "open": {
+          "filename": "runtime/warden-open.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/warden-open.png",
+          "sha256": "3044745cd06631535f88c6f896502340d61fbcd50c4ca343317353556ff7677b",
+          "muzzlesPixels": [
+            {
+              "x": 42.3518,
+              "y": 247.571
+            },
+            {
+              "x": 42.3518,
+              "y": 139.5028
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 333.2971,
+              "y": 237.1965
+            },
+            {
+              "x": 333.2971,
+              "y": 140.6556
+            }
+          ],
+          "corePixels": {
+            "x": 182.3068,
+            "y": 206.313,
+            "radius": 12.9682
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 27.4392,
+              "y": 247.571
+            },
+            {
+              "x": 27.4392,
+              "y": 139.5028
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/warden-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/warden-neutral.png",
+          "sha256": "6ca5683a5fa0b3e6016aa60916099dc3826559ab8c2ebec920a6b0fdac435b8a",
+          "muzzlesPixels": [
+            {
+              "x": 42.3518,
+              "y": 247.571
+            },
+            {
+              "x": 42.3518,
+              "y": 139.5028
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 333.2971,
+              "y": 237.1965
+            },
+            {
+              "x": 333.2971,
+              "y": 140.6556
+            }
+          ],
+          "corePixels": {
+            "x": 182.3068,
+            "y": 206.313,
+            "radius": 12.9682
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 27.4392,
+              "y": 247.571
+            },
+            {
+              "x": 27.4392,
+              "y": 139.5028
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "carrier",
+      "roles": [
+        "carrier"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 300,
+      "nativeDisplayWidth": 300,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": true,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge",
+        "open"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        },
+        "open": {
+          "bodyPose": "actual model open render",
+          "activationOwner": "game.armorOpen/coreVulnerable",
+          "corePermission": "Explicit adopted boss model and projected physical core"
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/carrier-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/carrier.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "4b95b5c6076765334e277cd599b32b4619b5d1db055a72712a2af2de0cf2dfaf",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Two long hangar doors slide away to expose modeled docked drone frames; bridge shutter opens.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/carrier-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/carrier-neutral.png",
+          "sha256": "1eb71c452140971456ec306e1c3b0530da795becd07a99b4c53c09de1699b016",
+          "muzzlesPixels": [
+            {
+              "x": 35.6412,
+              "y": 269.3288
+            },
+            {
+              "x": 35.6412,
+              "y": 110.8287
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 344.4816,
+              "y": 246.1301
+            },
+            {
+              "x": 344.4816,
+              "y": 135.1801
+            }
+          ],
+          "corePixels": {
+            "x": 262.8349,
+            "y": 206.313,
+            "radius": 10.0864
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 20.7286,
+              "y": 269.3288
+            },
+            {
+              "x": 20.7286,
+              "y": 110.8287
+            }
+          ]
+        },
+        "open": {
+          "filename": "runtime/carrier-open.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/carrier-open.png",
+          "sha256": "3b26562c76b5e7e6f4caab92942b8b28ff2e922ceb59a140fb302adc075d5f4e",
+          "muzzlesPixels": [
+            {
+              "x": 35.6412,
+              "y": 269.3288
+            },
+            {
+              "x": 35.6412,
+              "y": 110.8287
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 344.4816,
+              "y": 246.1301
+            },
+            {
+              "x": 344.4816,
+              "y": 135.1801
+            }
+          ],
+          "corePixels": {
+            "x": 262.8349,
+            "y": 206.313,
+            "radius": 10.0864
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 20.7286,
+              "y": 269.3288
+            },
+            {
+              "x": 20.7286,
+              "y": 110.8287
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/carrier-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/carrier-neutral.png",
+          "sha256": "1eb71c452140971456ec306e1c3b0530da795becd07a99b4c53c09de1699b016",
+          "muzzlesPixels": [
+            {
+              "x": 35.6412,
+              "y": 269.3288
+            },
+            {
+              "x": 35.6412,
+              "y": 110.8287
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 344.4816,
+              "y": 246.1301
+            },
+            {
+              "x": 344.4816,
+              "y": 135.1801
+            }
+          ],
+          "corePixels": {
+            "x": 262.8349,
+            "y": 206.313,
+            "radius": 10.0864
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 20.7286,
+              "y": 269.3288
+            },
+            {
+              "x": 20.7286,
+              "y": 110.8287
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "lancer",
+      "roles": [
+        "lancer"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 360,
+      "nativeDisplayWidth": 360,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": true,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge",
+        "open"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        },
+        "open": {
+          "bodyPose": "actual model open render",
+          "activationOwner": "game.armorOpen/coreVulnerable",
+          "corePermission": "Explicit adopted boss model and projected physical core"
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/lancer-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/lancer.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "33989f4d4293db55f01758549a744adc59c32dd85f10c1f64a009cf176f352b0",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Long lance extends while split strike rails separate and core shutters uncover the reactor cell.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/lancer-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/lancer-neutral.png",
+          "sha256": "163ccd372cee457c3fc4879212e6d1e7ee24bcc2f4463002d314cc675184d724",
+          "muzzlesPixels": [
+            {
+              "x": 27.4392,
+              "y": 192.7684
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 338.5165,
+              "y": 227.8786
+            },
+            {
+              "x": 338.5165,
+              "y": 151.5104
+            },
+            {
+              "x": 340.7534,
+              "y": 194.3054
+            }
+          ],
+          "corePixels": {
+            "x": 199.4563,
+            "y": 204.9681,
+            "radius": 11.5272
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 12.5266,
+              "y": 192.7684
+            }
+          ]
+        },
+        "open": {
+          "filename": "runtime/lancer-open.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/lancer-open.png",
+          "sha256": "a4ab6ecf0f61d8a030d85dea1208b6c5f6bfc3ec4cf970a3bbaf8c6a32f97907",
+          "muzzlesPixels": [
+            {
+              "x": 17.746,
+              "y": 192.7684
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 338.5165,
+              "y": 227.8786
+            },
+            {
+              "x": 338.5165,
+              "y": 151.5104
+            },
+            {
+              "x": 340.7534,
+              "y": 194.3054
+            }
+          ],
+          "corePixels": {
+            "x": 199.4563,
+            "y": 204.9681,
+            "radius": 11.5272
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 2.8334,
+              "y": 192.7684
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/lancer-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/lancer-neutral.png",
+          "sha256": "163ccd372cee457c3fc4879212e6d1e7ee24bcc2f4463002d314cc675184d724",
+          "muzzlesPixels": [
+            {
+              "x": 27.4392,
+              "y": 192.7684
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 338.5165,
+              "y": 227.8786
+            },
+            {
+              "x": 338.5165,
+              "y": 151.5104
+            },
+            {
+              "x": 340.7534,
+              "y": 194.3054
+            }
+          ],
+          "corePixels": {
+            "x": 199.4563,
+            "y": 204.9681,
+            "radius": 11.5272
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 12.5266,
+              "y": 192.7684
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "bastion",
+      "roles": [
+        "bastion"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 266,
+      "nativeDisplayWidth": 300,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": true,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge",
+        "open"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        },
+        "open": {
+          "bodyPose": "actual model open render",
+          "activationOwner": "game.armorOpen/coreVulnerable",
+          "corePermission": "Explicit adopted boss model and projected physical core"
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/bastion-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/bastion.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "f1cdc94fd106edcdf5b3686da808f7bc686b633ecdaa64ff08bb9695909f2fab",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Four cannon battery barrels extend with two shoulder units; command shutters open.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/bastion-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/bastion-neutral.png",
+          "sha256": "355a3883994cf05c168a0b6e3f2f5fdbfb4029efcc73c185637bbe13b1dacc56",
+          "muzzlesPixels": [
+            {
+              "x": 56.5188,
+              "y": 280.2557
+            },
+            {
+              "x": 56.5188,
+              "y": 264.8379
+            },
+            {
+              "x": 56.5188,
+              "y": 117.4329
+            },
+            {
+              "x": 56.5188,
+              "y": 102.0152
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 328.8233,
+              "y": 249.4922
+            },
+            {
+              "x": 328.8233,
+              "y": 124.1331
+            }
+          ],
+          "corePixels": {
+            "x": 192.7456,
+            "y": 205.5445,
+            "radius": 12.2477
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 41.6062,
+              "y": 280.2557
+            },
+            {
+              "x": 41.6062,
+              "y": 264.8379
+            },
+            {
+              "x": 41.6062,
+              "y": 117.4329
+            },
+            {
+              "x": 41.6062,
+              "y": 102.0152
+            }
+          ]
+        },
+        "open": {
+          "filename": "runtime/bastion-open.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/bastion-open.png",
+          "sha256": "cb1555f67e3ab758fcd3b4f4315f8bab269c95becd57457cfe5df0294cb651c7",
+          "muzzlesPixels": [
+            {
+              "x": 41.6062,
+              "y": 289.6216
+            },
+            {
+              "x": 41.6062,
+              "y": 274.2038
+            },
+            {
+              "x": 41.6062,
+              "y": 108.067
+            },
+            {
+              "x": 41.6062,
+              "y": 92.6493
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 328.8233,
+              "y": 249.4922
+            },
+            {
+              "x": 328.8233,
+              "y": 124.1331
+            }
+          ],
+          "corePixels": {
+            "x": 192.7456,
+            "y": 205.5445,
+            "radius": 12.2477
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 26.6936,
+              "y": 289.6216
+            },
+            {
+              "x": 26.6936,
+              "y": 274.2038
+            },
+            {
+              "x": 26.6936,
+              "y": 108.067
+            },
+            {
+              "x": 26.6936,
+              "y": 92.6493
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/bastion-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/bastion-neutral.png",
+          "sha256": "355a3883994cf05c168a0b6e3f2f5fdbfb4029efcc73c185637bbe13b1dacc56",
+          "muzzlesPixels": [
+            {
+              "x": 56.5188,
+              "y": 280.2557
+            },
+            {
+              "x": 56.5188,
+              "y": 264.8379
+            },
+            {
+              "x": 56.5188,
+              "y": 117.4329
+            },
+            {
+              "x": 56.5188,
+              "y": 102.0152
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 328.8233,
+              "y": 249.4922
+            },
+            {
+              "x": 328.8233,
+              "y": 124.1331
+            }
+          ],
+          "corePixels": {
+            "x": 192.7456,
+            "y": 205.5445,
+            "radius": 12.2477
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 41.6062,
+              "y": 280.2557
+            },
+            {
+              "x": 41.6062,
+              "y": 264.8379
+            },
+            {
+              "x": 41.6062,
+              "y": 117.4329
+            },
+            {
+              "x": 41.6062,
+              "y": 102.0152
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    },
+    {
+      "key": "apex",
+      "roles": [
+        "apex"
+      ],
+      "canvasWidth": 384,
+      "canvasHeight": 384,
+      "displayWidth": 340,
+      "nativeDisplayWidth": 340,
+      "displayWidthPolicy": "Existing runtime display width retained by local integration lead",
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "facing": "left",
+      "weakpointEnabled": true,
+      "statesComplete": true,
+      "requiredStates": [
+        "idle",
+        "charge",
+        "open"
+      ],
+      "missingStates": [],
+      "stateContracts": {
+        "idle": {
+          "bodyPose": "neutral",
+          "combatOwner": "game"
+        },
+        "charge": {
+          "bodyPose": "neutral shared with idle",
+          "muzzleLightOwner": "renderer.drawThreats from enemy.telegraph and actual muzzles",
+          "timingOwner": "game.chargeTime/telegraph",
+          "dedicatedBodyPNGRequired": false
+        },
+        "open": {
+          "bodyPose": "actual model open render",
+          "activationOwner": "game.armorOpen/coreVulnerable",
+          "corePermission": "Explicit adopted boss model and projected physical core"
+        }
+      },
+      "sourceManifest": "source/family-revision1/runtime-export/apex-manifest.json",
+      "sourceBlend": "source/family-revision1/editable-export/family/sources/apex.blend",
+      "generator": "source/family-revision1/editable-export/family/family_generator_v1.py",
+      "sourceHashes": {
+        "blend": "523b74c333e19fb5b74de6de7435d8d5c1e43e729f7a7287f9316349b66cc036",
+        "generator": "3830694951fbd9a30f4b0760131b121954a28c7d050f59d529c02a3d2a929920",
+        "approvedBaseBlend": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa"
+      },
+      "mechanism": "Six mechanical petal carriages translate radially; center cage slides apart around a small core.",
+      "frames": {
+        "idle": {
+          "filename": "runtime/apex-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/apex-neutral.png",
+          "sha256": "8b90fe0cbc58dcea47099c4ecc2dcce97069512ef54679daa40ce0665e0c4075",
+          "muzzlesPixels": [
+            {
+              "x": 47.5713,
+              "y": 242.816
+            },
+            {
+              "x": 47.5713,
+              "y": 141.9524
+            },
+            {
+              "x": 45.3344,
+              "y": 189.8866
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 335.534,
+              "y": 228.503
+            },
+            {
+              "x": 335.534,
+              "y": 147.8121
+            }
+          ],
+          "corePixels": {
+            "x": 205.4214,
+            "y": 203.4312,
+            "radius": 10.8068
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 32.6586,
+              "y": 242.816
+            },
+            {
+              "x": 32.6586,
+              "y": 141.9524
+            },
+            {
+              "x": 30.4217,
+              "y": 189.8866
+            }
+          ]
+        },
+        "open": {
+          "filename": "runtime/apex-open.png",
+          "sourceState": "open",
+          "sourceFile": "source/family-revision1/runtime-export/renders/apex-open.png",
+          "sha256": "99daf7f591307a5ae408a84e218a19ba7c158245b0b21720aa92da20c5b24a7d",
+          "muzzlesPixels": [
+            {
+              "x": 47.5713,
+              "y": 242.816
+            },
+            {
+              "x": 47.5713,
+              "y": 141.9524
+            },
+            {
+              "x": 45.3344,
+              "y": 189.8866
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 335.534,
+              "y": 228.503
+            },
+            {
+              "x": 335.534,
+              "y": 147.8121
+            }
+          ],
+          "corePixels": {
+            "x": 205.4214,
+            "y": 203.4312,
+            "radius": 10.8068
+          },
+          "coreExposed": true,
+          "coreVisibleFromCamera": true,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 32.6586,
+              "y": 242.816
+            },
+            {
+              "x": 32.6586,
+              "y": 141.9524
+            },
+            {
+              "x": 30.4217,
+              "y": 189.8866
+            }
+          ]
+        },
+        "charge": {
+          "filename": "runtime/apex-idle.png",
+          "sourceState": "neutral",
+          "sourceFile": "source/family-revision1/runtime-export/renders/apex-neutral.png",
+          "sha256": "8b90fe0cbc58dcea47099c4ecc2dcce97069512ef54679daa40ce0665e0c4075",
+          "muzzlesPixels": [
+            {
+              "x": 47.5713,
+              "y": 242.816
+            },
+            {
+              "x": 47.5713,
+              "y": 141.9524
+            },
+            {
+              "x": 45.3344,
+              "y": 189.8866
+            }
+          ],
+          "nozzlesPixels": [
+            {
+              "x": 335.534,
+              "y": 228.503
+            },
+            {
+              "x": 335.534,
+              "y": 147.8121
+            }
+          ],
+          "corePixels": {
+            "x": 205.4214,
+            "y": 203.4312,
+            "radius": 10.8068
+          },
+          "coreExposed": false,
+          "coreVisibleFromCamera": false,
+          "muzzleDirectionsPixels": [
+            {
+              "x": 32.6586,
+              "y": 242.816
+            },
+            {
+              "x": 32.6586,
+              "y": 141.9524
+            },
+            {
+              "x": 30.4217,
+              "y": 189.8866
+            }
+          ],
+          "bodyPoseSharedWith": "idle",
+          "visualState": "charge via authoritative muzzle light and attack-family tell"
+        }
+      }
+    }
+  ]
+}

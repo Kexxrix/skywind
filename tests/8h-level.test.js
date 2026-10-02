@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { LEVEL_RULES, trialDifficulty, normalEncounter, normalPattern, bossProfile, bossAttack, attackPolicy, LEVEL_BOSS_KINDS } from '../src/level.js';
 import { barragePlan, patternGeometry } from '../src/barrage.js';
-import { createGame, startGame, updateGame, consumeEvents, worldToScreen } from '../src/game.js';
+import { createGame, startGame, updateGame, consumeEvents, worldToScreen, screenToWorld } from '../src/game.js';
 
 test('difficulty has five learning stages and a capped endless sixth row without clock progression', () => {
   const rows = Array.from({ length: 6 }, (_, i) => trialDifficulty(i));
@@ -151,4 +151,24 @@ test('a surviving boss is never deleted or advanced by the five-minute tempo tar
   assert.equal(g.phase, 'boss'); assert.equal(g.bossesDefeated, 0);
   assert.equal(g.difficulty.pace, 0);
   assert.ok(Number.isFinite(worldToScreen(g, boss).y));
+});
+
+test('an offscreen curtain tail cannot unlock aimed fire before altitude travel can reveal it again', () => {
+  for (const route of ['B04', 'B05']) {
+    const g = createGame(9317); startGame(g); g.mode = 'playing'; g.bossesDefeated = 3;
+    g.normalTime = 1; g.nextWaveAt = g.nextBossAt = g.nextPickupAt = Infinity;
+    Object.assign(g.player, { x: 220, y: 360, invincible: 0 });
+    const screenPoint = { x: 700, y: 760 };
+    const point = screenToWorld(g, screenPoint);
+    g.enemyBullets = [{ id: 91, ...point, vx: -175, vy: 0, radius: 5.5, power: 12, age: 0, pattern: route }];
+    const enemy = { id: 90, type: 'beetle', x: 1000, y: 360, baseY: 360, radius: 28,
+      hp: 20, maxHp: 20, speed: 0, phase: 0, age: 0, fireCooldown: 0, attack: 0,
+      attackAngle: Math.PI, telegraph: 0, chargeTime: 0, locked: false, dashTime: 0, dead: false };
+    g.enemies = [enemy]; consumeEvents(g);
+    updateGame(g, 1 / 120, { y: 1 });
+    assert.equal(g.enemyBullets.length, 1, 'the tail is still alive inside the projected culling margin');
+    assert.ok(worldToScreen(g, g.enemyBullets[0]).y > 700, 'this tail is outside the current visible attack window');
+    assert.equal(enemy.locked, false, `${route} keeps its travel window exclusive beyond the present camera`);
+    assert.ok(!consumeEvents(g).some(event => event.type === 'charge' && event.attackName === 'aim'));
+  }
 });
