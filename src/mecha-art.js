@@ -62,6 +62,53 @@ function mechanismFrames(entry,states) {
   for(let i=1;i<frames.length;i++)if(frames[i].progress===frames[i-1].progress)throw new Error('Invalid duplicated mecha mechanism progress');
   return Object.freeze(frames);
 }
+function dockCenters(value,pivot,scale) {
+  if(value==null)return Object.freeze([]);
+  if(!Array.isArray(value)||value.length!==2)throw new Error('Invalid mecha dock centers');
+  return Object.freeze(value.map(anchor=>point(anchor,pivot,scale)));
+}
+function matchingChild(entry,pivot,scale) {
+  const raw=entry.matchingChild;
+  if(raw==null)return null;
+  if(typeof raw.entryKey!=='string'||!raw.entryKey||raw.entryKey===entry.key)throw new Error('Invalid mecha matching child key');
+  const docks=dockCenters(raw.dockCentersPixels,pivot,scale);
+  if(docks.length!==2)throw new Error('Invalid mecha matching child docks');
+  if(raw.sameCameraScale!=null&&typeof raw.sameCameraScale!=='boolean')throw new Error('Invalid mecha matching child scale');
+  if(raw.dockNames!=null&&(!Array.isArray(raw.dockNames)||raw.dockNames.length!==2||raw.dockNames.some(name=>typeof name!=='string')))
+    throw new Error('Invalid mecha matching child dock names');
+  if(raw.spawnPivotRule!=null&&typeof raw.spawnPivotRule!=='string')throw new Error('Invalid mecha matching child pivot rule');
+  return Object.freeze({entryKey:raw.entryKey,runtimeDockCenters:docks,
+    ...(raw.sameCameraScale!=null?{sameCameraScale:raw.sameCameraScale}:{}),
+    ...(raw.dockNames?{dockNames:Object.freeze([...raw.dockNames])}:{}),
+    ...(raw.spawnPivotRule!=null?{spawnPivotRule:raw.spawnPivotRule}:{})});
+}
+function payloadSelection(entry,child) {
+  const raw=entry.payloadMechanismSelection;
+  if(raw==null)return null;
+  if(!child)throw new Error('Invalid mecha payload selection without matching child');
+  for(const key of ['frameTemplate','progressRule','selectionPriority','spawnRule'])
+    if(typeof raw[key]!=='string'||!raw[key])throw new Error('Invalid mecha payload selection template');
+  const near=raw.nearDockIndex,far=raw.farDockIndex;
+  if(!Number.isInteger(near)||!Number.isInteger(far)||near===far||near<0||far<0||near>=2||far>=2)
+    throw new Error('Invalid mecha payload dock indices');
+  return Object.freeze({frameTemplate:raw.frameTemplate,progressRule:raw.progressRule,selectionPriority:raw.selectionPriority,
+    nearDockIndex:near,farDockIndex:far,spawnRule:raw.spawnRule});
+}
+function framePayload(frame,pivot,scale,child,selection) {
+  const docks=dockCenters(frame.dockCentersPixels,pivot,scale);
+  const present=frame.payloadVisible!=null||frame.payloadCount!=null||frame.payloadVariant!=null;
+  if(!present) {
+    if(child)throw new Error('Invalid mecha matching child frame payload');
+    return {runtimeDockCenters:docks};
+  }
+  if(!child||!selection||docks.length!==2||!Array.isArray(frame.payloadVisible)||frame.payloadVisible.length!==2
+    ||frame.payloadVisible.some(value=>typeof value!=='boolean'))throw new Error('Invalid mecha payload visibility or docks');
+  const count=frame.payloadVisible.filter(Boolean).length,variant=frame.payloadVariant;
+  if(!Number.isInteger(frame.payloadCount)||frame.payloadCount!==count)throw new Error('Invalid mecha payload count');
+  const expected=count===2?'payload2':count===0?'payload0':frame.payloadVisible[selection.nearDockIndex]?'payload1near':'payload1far';
+  if(variant!==expected)throw new Error('Invalid mecha payload variant');
+  return {runtimeDockCenters:docks,payloadVisible:Object.freeze([...frame.payloadVisible]),payloadCount:count,payloadVariant:variant};
+}
 const safeFilename = filename => {
   if (typeof filename !== 'string' || !/^[\w./-]+$/.test(filename) || filename.startsWith('/') || filename.split('/').includes('..')) {
     throw new Error('Invalid mecha frame filename');
@@ -78,7 +125,7 @@ export function registerMechaManifest(manifest) {
     const displayWidth = finite(entry.displayWidth, 'display width');
     if (width <= 0 || height <= 0 || displayWidth <= 0 || !entry.frames?.idle) throw new Error('Invalid mecha dimensions or idle frame');
     const pivot = Object.freeze({x:finite(entry.pivotPixels?.x, 'pivot x'),y:finite(entry.pivotPixels?.y, 'pivot y')});
-    const scale = displayWidth / width, states = {};
+    const scale = displayWidth / width, states = {},child=matchingChild(entry,pivot,scale),selection=payloadSelection(entry,child);
     for (const [name, frame] of Object.entries(entry.frames)) {
       const muzzles = (frame.muzzlesPixels || []).map(anchor => point(anchor, pivot, scale));
       const directions = (frame.muzzleDirectionsPixels || []).map((direction,index)=>{
@@ -93,12 +140,13 @@ export function registerMechaManifest(manifest) {
       if (core && core.radius <= 0) throw new Error('Invalid mecha core radius');
       states[name] = Object.freeze({filename:safeFilename(frame.filename),runtimeMuzzles:Object.freeze(muzzles),runtimeMuzzleDirections:Object.freeze(directions),runtimeNozzles:Object.freeze(nozzles),runtimeCore:core,
         runtimeBodyHulls:bodyHulls(frame.bodyHullPixels??entry.bodyHullPixels,pivot,scale),runtimeBodyBounds:bodyBounds(frame.bodyBoundsPixels??entry.bodyBoundsPixels,pivot,scale),
-        coreExposed:frame.coreExposed===true,sourceState:frame.sourceState||name});
+        coreExposed:frame.coreExposed===true,sourceState:frame.sourceState||name,...framePayload(frame,pivot,scale,child,selection)});
     }
     const mechanism=mechanismFrames(entry,states);
     const common = {key:entry.key,canvasWidth:width,canvasHeight:height,displayWidth,displayHeight:height*scale,mechanismFrames:mechanism,
       weakpointEnabled:entry.weakpointEnabled===true&&Object.values(states).some(frame=>frame.coreExposed===true&&frame.runtimeCore),facing:entry.facing||'left',
-      pivot:Object.freeze({x:pivot.x*scale,y:pivot.y*scale})};
+      pivot:Object.freeze({x:pivot.x*scale,y:pivot.y*scale}),
+      ...(child?{matchingChild:child}:{}),...(selection?{payloadMechanismSelection:selection}:{})};
     const views = Object.freeze(Object.fromEntries(Object.entries(states).map(([state,frame])=>[state,Object.freeze({...common,...frame,state})])));
     const spec = Object.freeze({...common,states:Object.freeze(states),views,mechanismFrames:mechanism});
     nextEntries.set(entry.key,spec);
@@ -106,6 +154,12 @@ export function registerMechaManifest(manifest) {
       if (typeof role !== 'string' || nextRoles.has(role)) throw new Error('Invalid or duplicated mecha role');
       nextRoles.set(role,spec);
     }
+  }
+  for(const spec of nextEntries.values())if(spec.matchingChild) {
+    const child=nextEntries.get(spec.matchingChild.entryKey);
+    if(!child||[...nextRoles.values()].includes(child))throw new Error('Invalid mecha matching child: exact art-only entry required');
+    if(spec.matchingChild.sameCameraScale&&spec.displayWidth/spec.canvasWidth!==child.displayWidth/child.canvasWidth)
+      throw new Error('Invalid mecha matching child camera scale');
   }
   roleRegistry.clear();entryRegistry.clear();
   for (const [role, spec] of nextRoles) roleRegistry.set(role,spec);

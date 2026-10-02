@@ -6,6 +6,8 @@ import { registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaDirectionWo
 import { mechaBodyContact } from '../src/mecha-collision.js';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { createGame, enemyMuzzles, enemyDeployDocks } from '../src/game.js';
+import { barragePlan } from '../src/barrage.js';
 
 const context = overrides => new Proxy(overrides||{}, {get(target,key){return key in target?target[key]:()=>{};}});
 const reset = () => registerMechaManifest({schemaVersion:1,entries:[]});
@@ -302,16 +304,16 @@ test('duplicate or invalid entry keys reject atomically without damaging either 
   } finally {reset();}
 });
 
-test('local composite preserves every original entry and adopts only approved pincer-v2 state images and anchors',async()=>{
+test('local composite preserves original entries outside approved boss overrides and pincer-v2 state images and anchors',async()=>{
   const old=JSON.parse(await readFile(new URL('../assets/art/mecha-8h/manifest.json',import.meta.url),'utf8'));
   const url=new URL('../'+MECHA_MANIFEST_PATH.slice(2),import.meta.url),raw=JSON.parse(await readFile(url,'utf8'));
-  assert.equal(old.entries.length,14);assert.equal(raw.entries.length,15);assert.equal(raw.runtimeImageCount,28);
-  const original=structuredClone(raw.entries.slice(0,14));
+  assert.equal(old.entries.length,14);assert.equal(raw.entries.length,16);assert.equal(raw.runtimeImageCount,62);
+  const original=structuredClone(raw.entries.slice(0,14).filter((_,index)=>![9,10,11].includes(index)));
   for(const entry of original)for(const frame of Object.values(entry.frames)) {
     assert.ok(frame.filename.startsWith('mecha-8h/'));
     frame.filename=frame.filename.slice('mecha-8h/'.length);
   }
-  assert.deepEqual(original,old.entries,'metadata and PNG hashes remain the original 14 entries');
+  assert.deepEqual(original,old.entries.filter((_,index)=>![9,10,11].includes(index)),'metadata and PNG hashes outside approved Warden/Carrier/Lancer replacements remain original');
   const entry=raw.entries[14];assert.equal(entry.key,'local-v2-pincer');assert.deepEqual(entry.roles,['pincer']);
   assert.deepEqual(Object.keys(entry.frames),['idle','charge','fire','recovery']);
   assert.deepEqual(entry.mechanismFrames,[],'authoring frames and axial stroke do not imply opening progress');
@@ -320,7 +322,7 @@ test('local composite preserves every original entry and adopts only approved pi
     fire:'f37ff6ac262ca33e2ec6c4d4791a8bf982697a4079b89b2b742f88c2d01109e9',
     recovery:'027b91013eae3abdda818993d93fb017cefff95a287cee6f4794e5683d50cdf2'};
   try {
-    const specs=registerMechaManifest(raw);assert.equal(specs.length,15);
+    const specs=registerMechaManifest(raw);assert.equal(specs.length,16);
     for(const [state,frame] of Object.entries(entry.frames)) {
       const png=await readFile(new URL(frame.filename,url));
       assert.equal(createHash('sha256').update(png).digest('hex'),approved[state]);assert.equal(frame.sha256,approved[state]);
@@ -337,6 +339,117 @@ test('local composite preserves every original entry and adopts only approved pi
       Renderer.prototype.drawEnemy.call({mechaFrames:{[frame.filename]:{actual:true}},glow(...args){glows.push(args);}},context({drawImage(...args){draws.push(args);}}),enemy,100);
       assert.deepEqual(draws[0].slice(1),[-48,-48,96,96]);assert.equal(glows.length,1,'only the authored rear nozzle emits a glow');
     }
+  } finally {reset();}
+});
+
+test('approved Warden images preserve five ordered state-specific ports, protected physical phases and exact open override',async()=>{
+  const url=new URL('../assets/art/mecha-12h-local.json',import.meta.url),raw=JSON.parse(await readFile(url,'utf8')),entry=raw.entries[9];
+  assert.equal(entry.key,'local-v2-warden');assert.deepEqual(entry.roles,['warden']);assert.equal(entry.displayWidth,380);
+  assert.deepEqual(entry.pivotPixels,{x:192,y:192});assert.equal(entry.facing,'left');
+  assert.deepEqual(entry.mechanismFrames,[{state:'phase_0',progress:0},{state:'phase_25',progress:.25},
+    {state:'phase_50',progress:.5},{state:'phase_75',progress:.75},{state:'phase_100',progress:1}]);
+  const approved={idle:'9378c53b6df2a0e8a9e2e970c3525d0a4ae57f2184eb6c6680c58384ea332c07',
+    charge:'42bf2f8751a3494172817b310ce52f499412a9c7feb9ce238fa3f95ec829ccea',
+    fire:'2c52c1333a4a4a65b4e2f3943ae5c2d112a3771cba09b95f368edaacbf5f080f',
+    open:'6f3994fec65858c4c513d04e6a7dc38159eeed482ce9005f323c1d17d497f202',
+    phase_0:'34ff1253a76a7094ac476d1bc0850b9c20c3d8689c6df03963f55869fbc91c3f',
+    phase_25:'0f2c7231a619749a248325d022c0f376f38603685a5258dcb9863109eeba97bb',
+    phase_50:'8ef73e110917639c983cd8dc4138027273020aa5819bc351c289c58d85876c57',
+    phase_75:'4a11cdb2c4ad9899b72e6df33984686612411f9471d6c8720e7689288e75eed8',
+    phase_100:'e3c7f9990300bbcbc5f3aa93bd8bfa8c0dbfaeecd5e25118f6961891af0f15e8'};
+  try {
+    registerMechaManifest(raw);
+    for(const [state,frame] of Object.entries(entry.frames)) {
+      const png=await readFile(new URL(frame.filename,url));assert.equal(createHash('sha256').update(png).digest('hex'),approved[state]);
+      assert.equal(frame.sha256,approved[state]);assert.equal(png.readUInt32BE(16),384);assert.equal(png.readUInt32BE(20),384);
+      const spec=getMechaSpec({type:'boss',bossKind:'warden',artState:state}),exposed=['open','phase_100'].includes(state);
+      assert.equal(spec.state,state);assert.equal(spec.coreExposed,exposed);assert.equal(frame.physicalInterlockClosed,!exposed);
+      assert.equal(spec.runtimeBodyHulls.length,exposed?27:26);assert.equal(spec.runtimeMuzzles.length,5);assert.equal(spec.runtimeNozzles.length,2);
+      assert.ok(spec.runtimeCore&&spec.weakpointEnabled,'protected frames retain the authored core coordinate without exposing it');
+      // Ordered lower pair, upper pair, then central lance: no per-frame resort.
+      const p=frame.muzzlesPixels;assert.ok(p[0].y>p[1].y&&p[1].y>p[4].y&&p[4].y>p[2].y&&p[2].y>p[3].y);
+      assert.ok(p[4].x<p[0].x);assert.equal(p[0].x,p[1].x);assert.equal(p[2].x,p[3].x);
+      for(let index=0;index<5;index++) {
+        assert.deepEqual(spec.runtimeMuzzles[index],{x:(p[index].x-192)*(380/384),y:(p[index].y-192)*(380/384)});
+        assert.deepEqual(spec.runtimeMuzzleDirections[index],{x:-1,y:0});
+      }
+    }
+    for(const [progress,state] of [[0,'phase_0'],[.249999,'phase_0'],[.25,'phase_25'],[.5,'phase_50'],[.75,'phase_75'],[.999,'phase_75'],[1,'phase_100']]) {
+      const spec=getMechaSpec({type:'boss',bossKind:'warden',mechanismProgress:progress,artState:'open',armorOpen:true,coreVulnerable:true});
+      assert.equal(spec.state,state);assert.equal(spec.coreExposed,progress===1);
+    }
+    for(const artFrame of ['open','phase_100']) {
+      const spec=getMechaSpec({type:'boss',bossKind:'warden',artFrame,mechanismProgress:.999});
+      assert.equal(spec.state,artFrame);assert.equal(spec.coreExposed,true,'exact override remains explicit and must be synchronized by the game');
+    }
+    assert.equal(getMechaSpec({type:'boss',bossKind:'warden',mechanismProgress:.999,artFrame:'missing'}).coreExposed,false);
+    for(const [role,count] of Object.entries({beetle:1,dragonfly:1,wasp:1,mantis:2,orb:3,claw:2,ray:2,worm:3,needle:1}))
+      assert.equal(getMechaSpec({type:role}).runtimeMuzzles.length,count,'original '+role+' art port count');
+    const claw=barragePlan('snapshot',0,.5);assert.equal(claw.total,1);assert.equal(claw.bundles[0].port,0,'Stage1 claw remains one snapshot at port0');
+  } finally {reset();}
+});
+
+test('all eighteen Warden inter-barrel probes stay empty through state projection, reflection and player-radius sweeps',async()=>{
+  const raw=JSON.parse(await readFile(new URL('../assets/art/mecha-12h-local.json',import.meta.url),'utf8'));
+  try {
+    registerMechaManifest(raw);let sourceProbes=0;
+    for(const [state,frame] of Object.entries(raw.entries[9].frames)) {
+      for(const [a,b] of [[0,1],[2,3]]) {
+        const source={x:frame.muzzlesPixels[a].x,y:(frame.muzzlesPixels[a].y+frame.muzzlesPixels[b].y)/2};sourceProbes++;
+        for(const [angle,flipX,flipY] of [[0,1,1],[.67,-1,1],[-Math.PI/2,1,-1]]) {
+          const enemy={type:'boss',bossKind:'warden',artFrame:state,x:950,y:340,artAngle:angle,artFlipX:flipX,artFlipY:flipY};
+          const local={x:(source.x-192)*380/384,y:(source.y-192)*380/384},point=mechaAnchorWorld(enemy,local);
+          assert.equal(mechaBodyContact(enemy,{...point,radius:1.85}),false,state+' does not fill between tower guns');
+          const start={...mechaAnchorWorld(enemy,{x:local.x-4,y:local.y}),radius:1.85};
+          const end={...mechaAnchorWorld(enemy,{x:local.x+4,y:local.y}),radius:1.85};
+          assert.equal(mechaBodyContact(enemy,end,start,enemy),false,state+' gap also stays empty during travel');
+        }
+      }
+    }
+    assert.equal(sourceProbes,18);
+  } finally {reset();}
+});
+
+test('Warden reward marker requires both game permission and an actually exposed selected core',async()=>{
+  const raw=JSON.parse(await readFile(new URL('../assets/art/mecha-12h-local.json',import.meta.url),'utf8'));
+  const draw=enemy=>{
+    const paths=[];let path=[];
+    const c=context({beginPath(){path=[];},moveTo(x,y){path.push([x,y]);},lineTo(x,y){path.push([x,y]);},stroke(){paths.push([...path]);}});
+    const before=structuredClone(enemy);
+    Renderer.prototype.drawCombatCues.call({presentation:{threatVariant:'A'},flashes:[]},c,{mode:'title',enemies:[enemy],enemyBullets:[]});
+    assert.deepEqual(enemy,before);return paths;
+  };
+  try {
+    registerMechaManifest(raw);
+    const base={type:'boss',bossKind:'warden',x:950,y:340,armorOpen:true,coreVulnerable:true};
+    for(const mechanismProgress of [0,.25,.5,.75,.999])assert.deepEqual(draw({...base,mechanismProgress}),[],'protected coordinates never produce a reward marker');
+    assert.equal(draw({...base,mechanismProgress:1}).length,1);
+    assert.deepEqual(draw({...base,mechanismProgress:1,armorOpen:false}),[]);
+    assert.deepEqual(draw({...base,mechanismProgress:1,coreVulnerable:false}),[]);
+    assert.deepEqual(draw({...base,mechanismProgress:.75,artFrame:'phase_100',armorOpen:false,coreVulnerable:false}),[],'revoked game permission blocks a stale exposed override marker');
+  } finally {reset();}
+});
+
+test('Warden charge illuminates only the next actual tower or lance while fire illuminates only actual launch positions',async()=>{
+  const raw=JSON.parse(await readFile(new URL('../assets/art/mecha-12h-local.json',import.meta.url),'utf8'));
+  try {
+    registerMechaManifest(raw);
+    const g=createGame(20261002),plan={...barragePlan('cathedral',0,.5),cos:1,sin:0,roll:0,cameraY:0,index:0};
+    const enemy={type:'boss',bossKind:'warden',x:950,y:340,radius:80,mechanismProgress:.5,artAngle:.37,artFlipX:-1,
+      telegraph:.8,attackName:'cathedral',safeLane:240,safeDirection:1,sequence:plan,muzzles:[{x:-999,y:-999}]};
+    g.enemies=[enemy];const ports=enemyMuzzles(enemy);
+    for(let index=0;index<5;index++) {
+      plan.index=index;const glows=[],before=structuredClone(g);
+      Renderer.prototype.drawThreats.call({glow(c,x,y){glows.push({x,y});}},context(),g);
+      assert.deepEqual(glows,[ports[plan.bundles[index].port]],'only upcoming authored port '+plan.bundles[index].port+' glows');
+      assert.deepEqual(g,before,'cue selection consumes no RNG or sequence state');
+    }
+    plan.index=plan.bundles.length;const none=[];
+    Renderer.prototype.drawThreats.call({glow(...args){none.push(args);}},context(),g);assert.deepEqual(none,[],'finished sequence has no fabricated source');
+    const renderer=Object.assign(Object.create(Renderer.prototype),{flashes:[],labels:[],particles:[],trail:[],exitGhosts:[],impactShake:0,exposure:0});
+    const event={type:'enemyShot',x:-999,y:-999,boss:true,bossKind:'warden',attackName:'cathedral',launchMuzzles:[ports[0],ports[2],ports[0]]},before=structuredClone(event);
+    renderer.handleEvents([event]);assert.deepEqual(renderer.flashes.map(f=>({x:f.x,y:f.y})),[ports[0],ports[2]]);
+    assert.deepEqual(event,before,'actual launch positions are copied without changing the event');
   } finally {reset();}
 });
 
@@ -369,5 +482,127 @@ test('actual pincer poses share rotated collision projection, preserve piston ga
     const pose={type:'pincer',x:800,y:300},extendedPlate={...mechaAnchorWorld(pose,{x:(25-192)*.25,y:0}),radius:1.85};
     assert.equal(mechaBodyContact({...pose,artState:'fire'},extendedPlate),true);
     assert.equal(mechaBodyContact({...pose,artState:'recovery'},extendedPlate),false,'recovery never retains the fire plate reach');
+  } finally {reset();}
+});
+
+test('all twenty Carrier payload poses retain exact dock metadata, separate removed components and protected phase floors',async()=>{
+  const url=new URL('../assets/art/mecha-12h-local.json',import.meta.url),raw=JSON.parse(await readFile(url,'utf8'));
+  const entry=raw.entries[10],variants={payload2:[true,true],payload1near:[true,false],payload1far:[false,true],payload0:[false,false]};
+  assert.equal(entry.key,'local-carrier-v2');assert.equal(raw.entries[15].key,'local-carrier-child-v2');
+  assert.deepEqual(raw.entries[15].roles,[]);assert.equal(entry.matchingChild.entryKey,'local-carrier-child-v2');
+  try {
+    const specs=registerMechaManifest(raw);assert.equal(specs.length,16);
+    const base=getMechaSpec({type:'boss',bossKind:'carrier'}),scale=448/384;
+    assert.deepEqual(base.matchingChild.runtimeDockCenters,[{x:(122.5143-192)*scale,y:(245.7479-192)*scale},
+      {x:(202.24-192)*scale,y:(245.7479-192)*scale}]);
+    assert.equal(base.payloadMechanismSelection.frameTemplate,entry.payloadMechanismSelection.frameTemplate);
+    assert.equal(base.payloadMechanismSelection.nearDockIndex,0);assert.equal(base.payloadMechanismSelection.farDockIndex,1);
+    assert.ok(Object.isFrozen(base.matchingChild)&&Object.isFrozen(base.matchingChild.runtimeDockCenters)&&Object.isFrozen(base.payloadMechanismSelection));
+    const uniqueFiles=new Set();let states=0;
+    for(const [phase,progress] of [['000',0],['025',.25],['050',.5],['075',.75],['100',1]]) {
+      const selected={};
+      for(const [variant,visible] of Object.entries(variants)) {
+        const state=`phase_${phase}_${variant}`,enemy={type:'boss',bossKind:'carrier',artFrame:state,artState:'damaged',
+          phase:4,fireFlash:.12,flash:.1,mechanismProgress:progress,x:900,y:340,artAngle:.42,artFlipX:-1},spec=getMechaSpec(enemy);
+        selected[variant]=spec;states++;assert.equal(spec.state,state,'damage retains the exact current mechanism and payload pose');
+        assert.deepEqual(spec.payloadVisible,visible);assert.equal(spec.payloadCount,visible.filter(Boolean).length);assert.equal(spec.payloadVariant,variant);
+        assert.ok(Object.isFrozen(spec.payloadVisible)&&Object.isFrozen(spec.runtimeDockCenters));
+        assert.deepEqual(spec.runtimeDockCenters,base.matchingChild.runtimeDockCenters);
+        assert.equal(spec.coreExposed,progress===1);assert.equal(spec.runtimeBodyHulls.length,(progress===1?22:21)+spec.payloadCount*6);
+        for(const [x,y] of [[165,208],[190,215]]) {
+          const point=mechaAnchorWorld(enemy,{x:(x-192)*scale,y:(y-192)*scale});
+          assert.equal(mechaBodyContact(enemy,{...point,radius:1.85}),false,'actual empty bay probes stay empty after reflection');
+        }
+        const frame=entry.frames[state];uniqueFiles.add(frame.filename);
+        const png=await readFile(new URL(frame.filename,url));assert.equal(createHash('sha256').update(png).digest('hex'),frame.sha256);
+      }
+      const pieces=spec=>new Set(spec.runtimeBodyHulls.map(hull=>JSON.stringify(hull)));
+      const full=pieces(selected.payload2),near=pieces(selected.payload1near),far=pieces(selected.payload1far),empty=pieces(selected.payload0);
+      assert.equal([...full].filter(piece=>!near.has(piece)).length,6);assert.equal([...full].filter(piece=>!far.has(piece)).length,6);
+      assert.equal([...near].filter(piece=>!empty.has(piece)).length,6);assert.equal([...far].filter(piece=>!empty.has(piece)).length,6);
+    }
+    assert.equal(states,20);assert.equal(uniqueFiles.size,20);
+    const preview=getMechaSpec({type:'boss',bossKind:'carrier',mechanismProgress:.999,artState:'fire',fireFlash:.12});
+    assert.equal(preview.state,'phase_075_payload2');assert.equal(preview.coreExposed,false);
+    const child=getMechaSpec({type:'dragonfly',appearanceKey:base.matchingChild.entryKey});
+    assert.equal(child.key,'local-carrier-child-v2');assert.equal(child.displayWidth,448);assert.equal(child.runtimeBodyHulls.length,6);
+    assert.equal(child.runtimeMuzzles.length,1);assert.equal(child.runtimeCore,null);assert.equal(child.weakpointEnabled,false);
+    assert.equal(getMechaSpec({type:'local-carrier-child-v2'}),null,'appearance helper is never a combat type');
+    assert.ok(specs.flatMap(spec=>Object.values(spec.states)).some(frame=>frame.filename.endsWith('/carrier-child.png')),'loader includes the exact matching child');
+  } finally {reset();}
+});
+
+test('all ten Lancer neutral and recoil snapshots move only the main port with the same selected hull and core permission',async()=>{
+  const url=new URL('../assets/art/mecha-12h-local.json',import.meta.url),raw=JSON.parse(await readFile(url,'utf8')),entry=raw.entries[11];
+  assert.equal(entry.key,'local-lancer-v2');
+  try {
+    registerMechaManifest(raw);const files=new Set();
+    for(const [phase,progress] of [['000',0],['025',.25],['050',.5],['075',.75],['100',1]]) {
+      const before={type:'boss',bossKind:'lancer',mechanismProgress:progress,artFrame:`phase_${phase}`,x:900,y:340,artAngle:.41,artFlipX:-1};
+      const neutral=getMechaSpec(before),after={...before,artFrame:`phase_${phase}_fire`,fireFlash:.12,artState:'damaged',flash:.1},recoil=getMechaSpec(after);
+      assert.ok(Math.abs(recoil.runtimeMuzzles[0].x-neutral.runtimeMuzzles[0].x-38.87854)<1e-5);
+      assert.deepEqual(recoil.runtimeMuzzles[1],neutral.runtimeMuzzles[1],'secondary port does not inherit the main gun recoil');
+      assert.equal(recoil.runtimeMuzzles[0].y,neutral.runtimeMuzzles[0].y);
+      assert.deepEqual(recoil.runtimeMuzzleDirections,neutral.runtimeMuzzleDirections);
+      const a=mechaAnchorWorld(before,neutral.runtimeMuzzles[0]),b=mechaAnchorWorld(after,recoil.runtimeMuzzles[0]);
+      assert.ok(Math.abs(Math.hypot(a.x-b.x,a.y-b.y)-38.87854)<1e-5);
+      for(const spec of [neutral,recoil]) {
+        assert.equal(spec.coreExposed,progress===1);assert.equal(spec.runtimeBodyHulls.length,progress===1?24:23);
+        const png=await readFile(new URL(spec.filename,url)),frame=entry.frames[spec.state];files.add(spec.filename);
+        assert.equal(createHash('sha256').update(png).digest('hex'),frame.sha256);
+        const calls=[];Renderer.prototype.drawEnemy.call({mechaFrames:{[spec.filename]:{}},glow(){}},context({drawImage(...args){calls.push(args);}}),spec===neutral?before:after,1000);
+        assert.deepEqual(calls[0].slice(1),[-200,-200,400,400],'recoil and damage never crop or shift the fixed source canvas');
+      }
+    }
+    assert.equal(files.size,10);
+    const partial=getMechaSpec({type:'boss',bossKind:'lancer',mechanismProgress:.999,fireFlash:.12,artState:'fire'});
+    assert.equal(partial.state,'phase_075');assert.equal(partial.coreExposed,false,'game owns the explicit same-floor recoil suffix');
+  } finally {reset();}
+});
+
+test('invalid dock, payload and matching-child contracts reject atomically and preserve the previous complete registry',async()=>{
+  const raw=JSON.parse(await readFile(new URL('../assets/art/mecha-12h-local.json',import.meta.url),'utf8'));
+  const mutations=[
+    m=>{m.entries[10].matchingChild.entryKey='missing-child';},
+    m=>{m.entries[15].roles=['invented-child-combat'];},
+    m=>{m.entries[15].displayWidth=100;},
+    m=>{m.entries[10].matchingChild.dockCentersPixels=[];},
+    m=>{m.entries[10].payloadMechanismSelection.nearDockIndex=2;},
+    m=>{m.entries[10].payloadMechanismSelection.frameTemplate='';},
+    m=>{m.entries[10].frames.idle.dockCentersPixels[0].x=NaN;},
+    m=>{m.entries[10].frames.idle.payloadVisible=[1,true];},
+    m=>{m.entries[10].frames.idle.payloadCount=1;},
+    m=>{m.entries[10].frames.idle.payloadVariant='payload1far';},
+  ];
+  try {
+    registerMechaManifest(raw);
+    for(const mutate of mutations) {
+      const invalid=structuredClone(raw);mutate(invalid);assert.throws(()=>registerMechaManifest(invalid),/mecha/);
+      const carrier=getMechaSpec({type:'boss',bossKind:'carrier'});
+      assert.equal(carrier.matchingChild.entryKey,'local-carrier-child-v2');assert.deepEqual(carrier.payloadVisible,[true,true]);
+      assert.equal(getMechaSpec({type:'dragonfly',appearanceKey:'local-carrier-child-v2'}).key,'local-carrier-child-v2');
+      assert.equal(getMechaSpec({type:'invented-child-combat'}),null);
+    }
+  } finally {reset();}
+});
+
+test('Carrier bay warnings use only actual remaining deploy docks without fabricating gun glows',async()=>{
+  const raw=JSON.parse(await readFile(new URL('../assets/art/mecha-12h-local.json',import.meta.url),'utf8'));
+  try {
+    registerMechaManifest(raw);
+    const g=createGame(20261002),enemy={id:30,type:'boss',bossKind:'carrier',x:950,y:340,radius:95,artFrame:'phase_075_payload1far',
+      mechanismProgress:.75,payloadDockOccupied:[false,true],telegraph:.8,attackName:'deploy',artAngle:.3,artFlipX:-1,
+      sequence:{...barragePlan('deploy',0,.5),index:0},attackSpec:{action:{count:2,childLimit:4}}};
+    assert.equal(enemy.sequence.bundles[0].count,0,'deploy reserves zero projectiles while action.count requests actual children');
+    g.enemies=[enemy];const expected=enemyDeployDocks(g,enemy),translations=[],glows=[],before=structuredClone(g);
+    assert.equal(expected.length,1);
+    Renderer.prototype.drawThreats.call({glow(...args){glows.push(args);}},context({translate(x,y){translations.push({x,y});}}),g);
+    assert.deepEqual(translations,expected);assert.deepEqual(glows,[],'the launch bay never receives a fake muzzle flash');
+    assert.deepEqual(g,before);
+    enemy.attackSpec.action.count=0;assert.deepEqual(enemyDeployDocks(g,enemy),[],'an explicitly zero child action has no bay warning');
+    enemy.attackSpec.action.count=2;
+    enemy.payloadDockOccupied=[false,false];const empty=[];
+    Renderer.prototype.drawThreats.call({glow(...args){glows.push(args);}},context({translate(x,y){empty.push({x,y});}}),g);
+    assert.deepEqual(empty,[],'consumed docks stop emitting bay warnings');
   } finally {reset();}
 });

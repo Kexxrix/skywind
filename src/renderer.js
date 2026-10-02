@@ -1,4 +1,4 @@
-import { cameraRoll, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION } from './game.js';
+import { cameraRoll, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION, enemyChargeMuzzles, enemyDeployDocks } from './game.js';
 import { VolumeEnvironment } from './volume-environment.js';
 import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT } from './presentation.js';
 import { MECHA_MANIFEST_PATH, registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaTransform } from './mecha-art.js';
@@ -616,7 +616,7 @@ export class Renderer {
     }
     for(const e of g.enemies) {
       const spec=getMechaSpec(e);
-      if(!e.coreVulnerable||!spec?.runtimeCore)continue;
+      if(!e.armorOpen||!e.coreVulnerable||spec?.weakpointEnabled!==true||spec.coreExposed!==true||!spec.runtimeCore)continue;
       const core=mechaAnchorWorld(e,spec.runtimeCore),radius=spec.runtimeCore.radius;
       c.globalCompositeOperation='source-over';c.globalAlpha=.85;c.strokeStyle='#a9fff0';c.lineWidth=1.2;
       c.beginPath();c.moveTo(core.x-radius-3,core.y);c.lineTo(core.x,core.y-radius-3);c.lineTo(core.x+radius+3,core.y);c.lineTo(core.x,core.y+radius+3);c.closePath();c.stroke();
@@ -725,6 +725,18 @@ export class Renderer {
       if(!(e.telegraph>0)&&!windowActive&&!bodyActive)continue;
       const strength=e.telegraph>0?clamp(e.telegraph,0,1):.6;
       if(body) {drawRamTell(c,e,strength);continue;}
+      const muzzles=enemyChargeMuzzles(g,e);
+      // Bay brackets identify the real remaining payload docks. They do not
+      // turn a deployment into a gun flash or invent a projectile origin.
+      for(const dock of enemyDeployDocks(g,e)) {
+        c.save();c.translate(dock.x,dock.y);c.rotate(mechaTransform(e).angle);
+        c.strokeStyle='#b7ffee';c.globalAlpha=.45+strength*.4;c.lineWidth=1.5;
+        const r=8+(1-strength)*3;c.beginPath();
+        for(const sx of [-1,1])for(const sy of [-1,1]) {
+          c.moveTo(sx*(r+4),sy*r);c.lineTo(sx*r,sy*r);c.lineTo(sx*r,sy*(r-4));
+        }
+        c.stroke();c.restore();
+      }
       if(windowActive) {
         const plan=e.sequence,bundle=plan.bundles[plan.index],row=bundle.row||0;
         const center=clamp(e.safeLane+(bundle.safeOffset??row*28)*(e.safeDirection||1),155,565),half=(e.safeWidth||94.7)/2;
@@ -738,7 +750,7 @@ export class Renderer {
           c.beginPath();c.moveTo(points[0].x,points[0].y);c.lineTo(points[1].x,points[1].y);c.lineTo(points[2].x,points[2].y);c.stroke();
         }
         c.globalAlpha=.12*strength;c.lineWidth=1;c.setLineDash([6,12]);
-        for(const muzzle of e.muzzles||[])for(const edge of [top,bottom]){c.beginPath();c.moveTo(muzzle.x,muzzle.y);c.lineTo(edge.x,edge.y);c.stroke();}
+        for(const muzzle of muzzles)for(const edge of [top,bottom]){c.beginPath();c.moveTo(muzzle.x,muzzle.y);c.lineTo(edge.x,edge.y);c.stroke();}
       } else if(e.attackName==='lane-wall') {
         const half=(e.safeWidth||180)/2;
         const corners=[{x:0,y:e.safeLane-half},{x:W,y:e.safeLane-half},{x:W,y:e.safeLane+half},{x:0,y:e.safeLane+half}].map(point=>screenToWorld(g,point));
@@ -749,12 +761,11 @@ export class Renderer {
           const left=screenToWorld(g,{x:0,y}),right=screenToWorld(g,{x:W,y});
           c.beginPath();c.moveTo(left.x,left.y);c.lineTo(right.x,right.y);c.stroke();
         }
-      } else if(!e.muzzles?.length) {
+      } else if(!muzzles.length&&!e.sequence&&!e.pendingAttackPlan) {
         c.strokeStyle='#ff91bb';c.globalAlpha=.19*strength;c.lineWidth=1;c.setLineDash([5,15]);
         c.beginPath();c.moveTo(e.x-e.radius, e.y);c.lineTo(e.x+Math.cos(e.attackAngle||Math.PI)*1600,e.y+Math.sin(e.attackAngle||Math.PI)*1600);c.stroke();
       }
       c.setLineDash([]);
-      const muzzles=e.muzzles?.length?e.muzzles:[{x:e.x-e.radius*.7,y:e.y}];
       for(const muzzle of muzzles) {
         this.glow(c,muzzle.x,muzzle.y,38+strength*26,'pink',strength*.42);
         c.save();c.translate(muzzle.x,muzzle.y);c.strokeStyle='#ff91bb';c.globalAlpha=.3+strength*.45;c.lineWidth=1.25;

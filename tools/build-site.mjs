@@ -34,14 +34,16 @@ const mechaFiles = [];
 if (MECHA_MANIFEST_PATH) {
   const manifestPath = MECHA_MANIFEST_PATH.replace(/^\.\//, '');
   if (!['assets/art/mecha-8h/manifest.json', 'assets/art/mecha-12h-local.json'].includes(manifestPath)) throw new Error('Unexpected mecha runtime manifest path');
-  const manifest = JSON.parse(await readFile(resolve(root, manifestPath), 'utf8'));
-  if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.entries)) throw new Error('Invalid mecha build manifest');
-  mechaFiles.push(manifestPath);
   // Preserve the previous approved manifest in the local build alongside the
   // combined candidate; original images keep their existing paths and hashes.
-  if (manifestPath === 'assets/art/mecha-12h-local.json') mechaFiles.push('assets/art/mecha-8h/manifest.json');
-  const assetRoot = dirname(manifestPath);
-  for (const entry of manifest.entries) for (const frame of Object.values(entry.frames || {})) {
+  const manifests = manifestPath === 'assets/art/mecha-12h-local.json'
+    ? [manifestPath, 'assets/art/mecha-8h/manifest.json'] : [manifestPath];
+  for (const sourceManifest of manifests) {
+    const manifest = JSON.parse(await readFile(resolve(root, sourceManifest), 'utf8'));
+    if (manifest.schemaVersion !== 1 || !Array.isArray(manifest.entries)) throw new Error('Invalid mecha build manifest');
+    mechaFiles.push(sourceManifest);
+    const assetRoot = dirname(sourceManifest);
+    for (const entry of manifest.entries) for (const frame of Object.values(entry.frames || {})) {
     if (typeof frame.filename !== 'string' || !/^[\w./-]+$/.test(frame.filename) || frame.filename.startsWith('/') || frame.filename.split('/').includes('..')) throw new Error('Unsafe mecha frame path');
     const file = `${assetRoot}/${frame.filename}`;
     if (frame.sha256) {
@@ -49,6 +51,7 @@ if (MECHA_MANIFEST_PATH) {
       if (frame.sha256 !== actual) throw new Error(`Mecha frame differs from its source record: ${file}`);
     }
     if (!mechaFiles.includes(file)) mechaFiles.push(file);
+    }
   }
 }
 for (const name of patchEffects) {
