@@ -295,7 +295,12 @@ function spawnWave(g) {
 
 function clearCombat(g) {
   // Only the visual exit survives; these objects can no longer collide or score.
-  emit(g, 'combatClear', { duration: 0.2, enemies: g.enemies.map(e => ({ x: e.x, y: e.y, radius: e.radius, type: e.type, bossKind: e.bossKind, variant: e.variant, angle: e.angle })),
+  emit(g, 'combatClear', { duration: 0.2, enemies: g.enemies.map(e => ({
+    x: e.x, y: e.y, radius: e.radius, type: e.type, bossKind: e.bossKind, variant: e.variant, angle: e.angle,
+    // Retain the current model pose while the renderer suppresses attack cues.
+    artAngle: e.artAngle, artFlipX: e.artFlipX, artFlipY: e.artFlipY,
+    fireFlash: e.fireFlash, armorOpen: e.armorOpen, escortShield: e.escortShield,
+  })),
     bullets: g.enemyBullets.map(b => ({ x: b.x, y: b.y, radius: b.radius, vx: b.vx, vy: b.vy, type: b.type, speedTier: b.speedTier })) });
   g.enemies = [];
   g.enemyBullets = [];
@@ -676,7 +681,8 @@ function updatePlayer(g, dt, input) {
 function updateEnemies(g, dt, starts) {
   for (const e of g.enemies) {
     if (e.dead) continue;
-    starts.set(e, { x: e.x, y: e.y, angle: e.angle || 0, artAngle: e.artAngle || 0 });
+    starts.set(e, { x: e.x, y: e.y, angle: e.angle || 0, artAngle: e.artAngle || 0,
+      type: e.type, bossKind: e.bossKind, artFlipX: e.artFlipX, artFlipY: e.artFlipY });
     e.age = (e.age || 0) + dt;
     e.flash = Math.max(0, (e.flash || 0) - dt);
     e.fireFlash = Math.max(0, (e.fireFlash || 0) - dt);

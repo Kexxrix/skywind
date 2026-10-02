@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { createGame, startGame, updateGame, consumeEvents, worldToScreen, screenToWorld, PLAYER_HIT_RADIUS } from '../src/game.js';
-import { registerMechaManifest, getMechaSpec, mechaAnchorWorld } from '../src/mecha-art.js';
+import { registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaTransform } from '../src/mecha-art.js';
+import { bossProfile, trialDifficulty } from '../src/level.js';
 
 function play(seed = 82615) {
   const game = createGame(seed);
@@ -328,5 +330,134 @@ test('a skipped unsafe aimed shot does not leave a false fire frame or launch ev
     assert.ok(!events.some(event => event.type === 'enemyShot'));
     assert.equal(enemy.fireFlash, 0);
     assert.equal(getMechaSpec(enemy).state, 'idle');
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+const actualManifest = JSON.parse(readFileSync(new URL('../assets/art/mecha-8h/manifest.json', import.meta.url), 'utf8'));
+const actualBossKinds = ['warden', 'carrier', 'lancer', 'bastion', 'apex'];
+
+function actualCoreTarget(kind, { open = true, angle = 0, flipX = 1, flipY = 1, moving = false } = {}) {
+  const game = createGame(913733);
+  startGame(game);
+  advance(game, 1.2);
+  game.nextWaveAt = game.nextBossAt = game.nextPickupAt = Infinity;
+  game.player.invincible = 100;
+  const victories = actualBossKinds.indexOf(kind), profile = bossProfile(victories);
+  game.bossesDefeated = victories;
+  game.difficulty = trialDifficulty(victories);
+  game.phase = 'boss'; game.phaseTime = moving ? 0.35 : 0;
+  const position = screenToWorld(game, { x: 1000, y: 360 });
+  const boss = { id: 700, type: 'boss', bossKind: kind, ...position, baseY: position.y, radius: profile.radius,
+    hp: 1000, maxHp: 1000, score: 3500, age: 0, angle, artAngle: angle, artFlipX: flipX, artFlipY: flipY,
+    fireCooldown: 1e6, coreOpenUntil: Infinity, armorOpen: open, coreVulnerable: open,
+    attack: 0, phase: 0, altitudeCenter: 360, locked: true, chargeDuration: 1e6, chargeTime: 1e6,
+    motion: { x: 1000, centerY: 360, amplitude: moving ? 48 : 0, frequency: moving ? 5 : 0, bank: angle } };
+  game.enemies = [boss]; game.boss = boss;
+  consumeEvents(game);
+  return { game, boss };
+}
+
+test('combat clear keeps actual fire and charge body poses, reflection and the original atlas angle', () => {
+  registerMechaManifest(actualManifest);
+  try {
+    const actors = [
+      ...['mantis', 'orb', 'claw', 'ray', 'needle'].map(type => ({ type, fireFlash: 0.12 })),
+      ...actualManifest.entries.map(entry => ({ type: actualBossKinds.includes(entry.roles[0]) ? 'boss' : entry.roles[0],
+        bossKind: entry.roles[0], telegraph: 0.8, escortShield: entry.roles[0] === 'carrier' })),
+      { type: 'unregistered-fallback', artAngle: undefined },
+    ];
+    for (const actor of actors) {
+      const game = play();
+      Object.assign(game, { time: 45, nextBossAt: 45 });
+      const enemy = { id: 700, ...screenToWorld(game, { x: 900, y: 360 }), radius: 38,
+        hp: 3, maxHp: 3, angle: 0.17, artAngle: 0.17, artFlipX: -1, artFlipY: -1, ...actor };
+      game.enemies = [enemy];
+      game.enemyBullets = [{ id: 701, x: 900, y: 360, radius: 5, vx: -180, vy: 0, power: 8 }];
+      const filename = getMechaSpec(enemy)?.filename, transform = mechaTransform(enemy);
+      updateGame(game, 1 / 120);
+      const clear = consumeEvents(game).find(event => event.type === 'combatClear');
+      const ghost = { ...clear.enemies[0], telegraph: 0, flash: 0 };
+      assert.equal(clear.duration, 0.2);
+      assert.equal(getMechaSpec(ghost)?.filename, filename, `${actor.type}: visible pose is retained`);
+      assert.deepEqual(mechaTransform(ghost), transform, `${actor.type}: model rotation and reflection are retained`);
+      assert.equal(ghost.angle, enemy.angle, 'original atlas fallback retains its own angle');
+      assert.equal(ghost.escortShield, enemy.escortShield);
+      assert.ok(!game.enemies.some(actor => actor.id === 700), 'the ghost cannot collide or score');
+      assert.ok(!game.enemyBullets.some(bullet => bullet.id === 701), 'cleared bullets cannot cause damage');
+    }
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('actual open boss defeat ghosts retain their final pose while rewards and transition occur once', () => {
+  registerMechaManifest(actualManifest);
+  try {
+    for (const kind of actualBossKinds) {
+      const { game, boss } = actualCoreTarget(kind, { angle: 0.17, flipX: -1, flipY: -1 });
+      const filename = getMechaSpec(boss).filename, transform = mechaTransform(boss), victories = game.bossesDefeated;
+      boss.hp = 1;
+      for (let index = 0; index < 3; index++) shotAt(game, boss, 10000);
+      updateGame(game, 1 / 120);
+      const events = consumeEvents(game), clear = events.find(event => event.type === 'combatClear');
+      const ghost = { ...clear.enemies.find(enemy => enemy.type === 'boss'), telegraph: 0, flash: 0 };
+      assert.equal(getMechaSpec(ghost).filename, filename, `${kind}: open armor stays open during the visual exit`);
+      assert.deepEqual(mechaTransform(ghost), transform);
+      assert.equal(clear.duration, 0.2);
+      assert.equal(events.filter(event => event.type === 'combatClear').length, 1);
+      assert.equal(events.filter(event => event.type === 'bossDefeated').length, 1);
+      assert.equal(events.filter(event => event.type === 'hit' && !event.player).length, 1);
+      assert.equal(game.bossesDefeated, victories + 1);
+      assert.equal(game.phase, 'normal');
+      assert.equal(game.enemies.length, 0);
+      assert.equal(game.enemyBullets.length, 0);
+      assert.ok(Math.abs(game.nextBossAt - game.time - 45) <= 1 / 120);
+      const score = game.score;
+      advance(game, 0.3);
+      assert.equal(game.score, score, 'departed visual objects never score again');
+      assert.ok(!consumeEvents(game).some(event => event.type === 'bossDefeated'));
+    }
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('actual core contact keeps production damage and reflected previous poses at 20, 60 and 144Hz', () => {
+  // Reflections are injected boundary fixtures; current spawns do not add this content.
+  registerMechaManifest(actualManifest);
+  try {
+    for (const kind of actualBossKinds) for (const rate of [20, 60, 144]) for (const angle of [-0.18, 0, 0.18]) {
+      for (const mode of ['open', 'closed', 'off-core', 'reflected']) {
+        const { game, boss } = actualCoreTarget(kind, { open: mode !== 'closed', angle,
+          flipX: mode === 'reflected' ? -1 : 1, flipY: mode === 'reflected' ? -1 : 1 });
+        const core = mechaAnchorWorld(boss, getMechaSpec(boss).runtimeCore);
+        game.bullets.push({ id: 800, x: core.x - 180, y: core.y + (mode === 'off-core' ? 40 : 0),
+          vx: 1360, vy: 0, radius: 5, age: 0, power: 10, weaponMode: 'normal' });
+        advance(game, 0.25, {}, 1 / rate);
+        const hits = consumeEvents(game).filter(event => event.type === 'hit' && !event.player);
+        const expected = mode === 'closed' || mode === 'off-core' ? 10 : 12, label = `${kind}/${rate}/${angle}/${mode}`;
+        assert.equal(hits.length, 1, label);
+        assert.ok(Math.abs(1000 - boss.hp - expected) < 1e-7, `${label}: actual core bonus only`);
+        assert.equal(hits[0].coreHit, expected === 12, label);
+      }
+    }
+  } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
+});
+
+test('moving actual cores retain their previous reflected pose during a swept crossing', () => {
+  registerMechaManifest(actualManifest);
+  try {
+    for (const kind of actualBossKinds) for (const [flipX, flipY] of [[1, 1], [-1, 1], [1, -1], [-1, -1]]) {
+      const { game, boss } = actualCoreTarget(kind, { angle: 0.18, flipX, flipY, moving: true }), dt = 0.001;
+      const previous = mechaAnchorWorld(boss, getMechaSpec(boss).runtimeCore), forecast = structuredClone(game);
+      updateGame(forecast, dt);
+      const next = mechaAnchorWorld(forecast.boss, getMechaSpec(forecast.boss).runtimeCore);
+      assert.ok(Math.hypot(next.x - previous.x, next.y - previous.y) > 1, 'the projected core actually moves');
+      // A geometry stress shot starts and ends outside the circle. It is not a new gameplay speed.
+      game.bullets.push({ id: 800, x: previous.x - 160, y: previous.y,
+        vx: (next.x - previous.x + 320) / dt, vy: (next.y - previous.y) / dt,
+        radius: 5, age: 0, power: 10, weaponMode: 'normal' });
+      updateGame(game, dt);
+      const hits = consumeEvents(game).filter(event => event.type === 'hit' && !event.player);
+      assert.equal(hits.length, 1, `${kind}/${flipX}/${flipY}`);
+      assert.equal(hits[0].coreHit, true);
+      assert.equal(boss.hp, 988);
+    }
   } finally { registerMechaManifest({ schemaVersion: 1, entries: [] }); }
 });
