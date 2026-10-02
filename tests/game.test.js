@@ -294,12 +294,15 @@ test('title starts above the cloud band and entering preserves the current backd
   assert.ok(Math.abs(game.altitude - altitude) < 0.02, 'starting must not snap the camera into the cloud layer');
 });
 
-test('combat tier is independent of elapsed time and capped at the second trial row', () => {
+test('combat tier is independent of elapsed time, advances through five victories and stays bounded in hell', () => {
   assert.deepEqual(difficultyAt(0), difficultyAt(7200));
   const first = difficultyAt(0), second = difficultyAt(0, 1), late = difficultyAt(7200, 50);
   assert.equal(first.maxAttackers, 2); assert.equal(second.maxAttackers, 3);
   assert.equal(first.maxEnemyBullets, 120); assert.equal(second.maxEnemyBullets, 180);
-  assert.equal(late.maxEnemyBullets, second.maxEnemyBullets);
+  assert.equal(late.maxEnemyBullets, difficultyAt(0, 5).maxEnemyBullets);
+  assert.ok(late.maxEnemyBullets > second.maxEnemyBullets);
+  assert.equal(late.pace, 5);
+  assert.equal(late.hell, true);
   assert.equal(late.tier, 51);
 });
 

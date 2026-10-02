@@ -24,12 +24,13 @@ function advance(g, seconds, input = {}) {
   return events;
 }
 
-test('two trial tiers depend only on victories and hold all declared population and speed budgets', () => {
+test('five stages and bounded hell depend only on victories and hold population and speed budgets', () => {
   const first = difficultyAt(0), second = difficultyAt(0, 1);
   assert.deepEqual(difficultyAt(8000), first);
   assert.deepEqual([first.maxEnemies, first.maxAttackers, first.maxEnemyBullets, first.maxSequenceBullets, first.maxBulletSpeed], [10, 2, 120, 72, 160]);
   assert.deepEqual([second.maxEnemies, second.maxAttackers, second.maxEnemyBullets, second.maxSequenceBullets, second.maxBulletSpeed], [12, 3, 180, 112, 340]);
-  assert.equal(difficultyAt(8000, 99).pace, 1);
+  assert.equal(difficultyAt(8000, 99).pace, 5);
+  assert.equal(difficultyAt(8000, 99).hell, true);
   assert.equal(difficultyAt(8000, 99).tier, 100);
 });
 
@@ -96,7 +97,7 @@ test('aiming tracks through its tell and locks a straight velocity at actual rel
   }
 });
 
-test('too close fast aiming delays fire instead of violating the post-release flight allowance', () => {
+test('too close fast aiming skips an unsafe shot instead of violating the post-release flight allowance', () => {
   const g = playable(1), e = emitter(1); g.aimCounter = 2; e.x = 550; e.baseY = g.player.y;
   g.player.x = 378; g.enemies = [e];
   const events = advance(g, 1.1);
@@ -118,7 +119,7 @@ test('natural waves and boss loops actually release all three aimed speeds in ti
         released.add(b.id);
         const origin = { x: b.x - b.vx * b.age, y: b.y - b.vy * b.age };
         const flightTime = (Math.hypot(b.aimedAt.x - origin.x, b.aimedAt.y - origin.y) - b.radius - g.player.radius) / Math.hypot(b.vx, b.vy);
-        assert.ok(flightTime >= (victories ? 0.7 : 0.9) - 1e-8);
+        assert.ok(flightTime >= g.difficulty.minimumFlightTime - 1e-8);
       }
     }
     assert.deepEqual([...speeds].sort(), victories ? ['fast', 'medium', 'slow'] : ['slow']);
@@ -168,7 +169,7 @@ test('six repeated cycles retain bounded sources, ammunition and zero escort sco
     consumeEvents(g);
   }
   assert.equal(defeated, 6);
-  assert.equal(g.difficulty.pace, 1);
+  assert.equal(g.difficulty.pace, 5);
 });
 
 test('both tiers retain a continuous normal-input survival route through each pattern plus permitted aiming sources', () => {
@@ -201,16 +202,19 @@ test('both tiers retain a continuous normal-input survival route through each pa
       }
       assert.equal(g.player.hp, 100, `${pattern} tier ${tier} at ${g.time}`);
     }
-    assert.ok(patternShots >= 2 && aimedShots >= 1, `${pattern} actually overlapped its aimed pressure`);
-    assert.ok(travelled > 30, 'normal movement, not invulnerability or a teleported safe position, traversed the route');
+    assert.ok(patternShots >= 2, `${pattern} actually released multiple rows`);
+    if (pattern === 'B04') assert.equal(aimedShots, 0, 'mandatory window travel excludes aimed overlap');
+    else assert.ok(aimedShots >= 1, `${pattern} actually overlapped its permitted aimed pressure`);
+    if (pattern !== 'B04' || tier > 0) assert.ok(travelled > 30, `${pattern} tier ${tier}: normal movement traversed the route`);
+    // The first 80-unit window deliberately also permits a stationary prepositioned core.
   }
 });
 
 test('an enemy projected beyond the right edge cannot begin or finish a hidden attack', () => {
   for (const locked of [false, true]) {
     const game = playable();
-    game.sceneTime = 3 * Math.PI / (2 * 0.18);
-    game.altitude = 0;
+    game.sceneTime = game.time = 3 * Math.PI / (2 * 0.18);
+    game.altitude = game.flightAltitude = 0;
     game.cameraY = 156;
     Object.assign(game.player, screenToWorld(game, { x: 220, y: 672 }));
     const enemy = Object.assign(emitter(99, 'dragonfly'), { x: 1225, y: 960, baseY: 960, radius: 18, locked, chargeTime: 0, chargeDuration: 0.34 });
@@ -225,15 +229,16 @@ test('an enemy projected beyond the right edge cannot begin or finish a hidden a
 
 test('an uncaught pickup keeps moving across the visible lower left corner until its projected exit', () => {
   const game = playable();
-  game.sceneTime = 3 * Math.PI / (2 * 0.18);
-  game.altitude = 0;
+  game.sceneTime = game.time = 3 * Math.PI / (2 * 0.18);
+  game.altitude = game.flightAltitude = 0;
   game.cameraY = 156;
   // Keep the ship away from the enlarged rear attraction area for this culling check.
   Object.assign(game.player, screenToWorld(game, { x: 378, y: 300 }));
   game.pickups = [{ id: 99, type: 'power', x: -59, y: 650, baseY: 650, radius: 22, age: 0, phase: 0 }];
   updateGame(game, 1 / 120, { y: 1 });
   assert.equal(game.pickups.length, 1);
-  assert.ok(worldToScreen(game, game.pickups[0]).x > 30, 'the visible icon is preserved past world x=-60');
+  assert.ok(game.pickups[0].x < -60, 'the item crosses the old world-space culling boundary');
+  assert.ok(worldToScreen(game, game.pickups[0]).x > game.pickups[0].radius, 'the entire visible ring is preserved past world x=-60');
   game.pickups[0].x = -250;
   updateGame(game, 1 / 120, { y: 1 });
   assert.equal(game.pickups.length, 0, 'the pickup is removed after its projected left margin');

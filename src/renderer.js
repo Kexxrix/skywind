@@ -1,24 +1,80 @@
 import { cameraRoll, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION } from './game.js';
 import { VolumeEnvironment } from './volume-environment.js';
 import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT } from './presentation.js';
+import { MECHA_MANIFEST_PATH, registerMechaManifest, getMechaSpec, mechaAnchorWorld } from './mecha-art.js';
 
 const W = 1280, H = 720;
 const TAU = Math.PI * 2;
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const mod = (v, n) => ((v % n) + n) % n;
 export const TENSION_PALETTE=Object.freeze({color:'#ffe36b',core:'#fff7cf',rgb:Object.freeze([1,227/255,107/255])});
-export const COMBAT_FX=Object.freeze({shotLife:.105,hitLife:.14,tensionLife:.52,refreshLife:.22,maxChainStage:3,maxParticles:850});
+export const COMBAT_FX=Object.freeze({shotLife:.105,hitLife:.14,tensionLife:.52,refreshLife:.22,maxChainStage:3,maxParticles:850,maxFlashes:160,maxLabels:40});
 const visualSeed=index=>mod(Math.sin(index*127.1+311.7)*43758.5453,1);
 export const AIM_SHOT_VISUALS=Object.freeze({
   slow:Object.freeze({trail:10,shoulder:3,stretch:1.8}),
   medium:Object.freeze({trail:19,shoulder:7,stretch:2.8}),
   fast:Object.freeze({trail:30,shoulder:12,stretch:4.0}),
 });
+export const BOSS_BREAK_SHAPES=Object.freeze({
+  warden:Object.freeze({facets:4,aspect:1,rotation:Math.PI/4}),
+  carrier:Object.freeze({facets:6,aspect:1.6,rotation:0}),
+  lancer:Object.freeze({facets:3,aspect:2.3,rotation:0}),
+  bastion:Object.freeze({facets:8,aspect:1.25,rotation:Math.PI/8}),
+  apex:Object.freeze({facets:10,aspect:1.1,rotation:Math.PI/10}),
+});
 export function projectilePalette(projectile) {
   return projectile.tension?TENSION_PALETTE:WEAPON_PRESENTATION[projectile.drone?'drone':projectile.weaponMode]||WEAPON_PRESENTATION.normal;
 }
 const effectColor=event=>event.tension?'tension':event.drone?'drone':event.weaponMode in WEAPON_PRESENTATION?event.weaponMode:'normal';
 const effectPalette=color=>color==='tension'?TENSION_PALETTE:WEAPON_PRESENTATION[color];
+
+function fillDenseNeighbors(bullets,radiiSq,counts) {
+  for(let index=0;index<bullets.length;index++) {
+    const bullet=bullets[index];
+    for(let otherIndex=index+1;otherIndex<bullets.length;otherIndex++) {
+      const other=bullets[otherIndex];if(other===bullet)continue;
+      const dx=other.x-bullet.x,dy=other.y-bullet.y,distanceSq=dx*dx+dy*dy;
+      if(distanceSq<radiiSq[index])counts[index]++;
+      if(distanceSq<radiiSq[otherIndex])counts[otherIndex]++;
+    }
+  }
+}
+
+// The halo radius stays exact. A spatial grid removes the whole-array scan
+// without changing the density response, bullet geometry or simulation RNG.
+export function threatNeighborCounts(bullets, cellSize=64) {
+  if(!Number.isFinite(cellSize)||cellSize<=0)throw new Error('Invalid threat grid cell size');
+  const cells=new Map(),counts=new Uint32Array(bullets.length),radiiSq=new Float64Array(bullets.length);
+  let comparisons=0,maxRadius=30,occupiedCells=0;
+  bullets.forEach((bullet,index)=>{
+    const x=Math.floor(bullet.x/cellSize),y=Math.floor(bullet.y/cellSize);
+    let column=cells.get(x);if(!column)cells.set(x,column=new Map());
+    let cell=column.get(y);if(!cell){column.set(y,cell=[]);occupiedCells++;}cell.push(index);
+    const radius=Math.max(30,bullet.radius*7);radiiSq[index]=radius*radius;maxRadius=Math.max(maxRadius,radius);
+  });
+  // Very compact clusters have few useful partitions. A direct symmetric pass
+  // avoids Map traversal there, with one distance calculation per pair.
+  if(bullets.length>=96&&occupiedCells<=12) {
+    fillDenseNeighbors(bullets,radiiSq,counts);
+    return {counts,comparisons:bullets.length*(bullets.length-1)/2};
+  }
+  bullets.forEach((bullet,index)=>{
+    const minX=Math.floor((bullet.x-maxRadius)/cellSize),maxX=Math.floor((bullet.x+maxRadius)/cellSize);
+    const minY=Math.floor((bullet.y-maxRadius)/cellSize),maxY=Math.floor((bullet.y+maxRadius)/cellSize);
+    for(let x=minX;x<=maxX;x++) {
+      const column=cells.get(x);if(!column)continue;
+      for(let y=minY;y<=maxY;y++)for(const otherIndex of column.get(y)||[]) {
+        if(otherIndex<=index)continue;
+        const other=bullets[otherIndex];if(other===bullet)continue;
+        comparisons++;
+        const distanceSq=(other.x-bullet.x)**2+(other.y-bullet.y)**2;
+        if(distanceSq<radiiSq[index])counts[index]++;
+        if(distanceSq<radiiSq[otherIndex])counts[otherIndex]++;
+      }
+    }
+  });
+  return {counts,comparisons};
+}
 
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -84,6 +140,18 @@ export class Renderer {
     }));
     this.art = Object.fromEntries(names.map((name,i)=>[name,images[i]]));
     this.playerFrames = images.slice(names.length);
+    this.mechaFrames={};
+    if(MECHA_MANIFEST_PATH) {
+      const response=await fetch(MECHA_MANIFEST_PATH);
+      if(!response.ok)throw new Error(`메카닉 매니페스트를 불러올 수 없습니다: ${response.status}`);
+      const specs=registerMechaManifest(await response.json()),root=MECHA_MANIFEST_PATH.slice(0,MECHA_MANIFEST_PATH.lastIndexOf('/')+1);
+      const files=[...new Set(specs.flatMap(spec=>Object.values(spec.states).map(state=>state.filename)))];
+      await Promise.all(files.map(async filename=>{this.mechaFrames[filename]=await loadImage(root+filename);}));
+      for(const spec of specs)for(const state of Object.values(spec.states)) {
+        const image=this.mechaFrames[state.filename];
+        if(image.width!==spec.canvasWidth||image.height!==spec.canvasHeight)throw new Error(`메카닉 프레임 규격 불일치: ${state.filename}`);
+      }
+    }
     this.environment = new VolumeEnvironment({leafSurface:this.art['leaf-surface-v3']});
   }
 
@@ -108,13 +176,21 @@ export class Renderer {
     return {x:x*c-y*s+W/2,y:x*s+y*c+H/2};
   }
 
-  reset() { this.trail.length=0; this.particles.length=0; this.flashes.length=0; this.labels.length=0; this.exitGhosts.length=0;this.impactShake=0;this.exposure=0;this.frozen=false; }
+  reset() { this.trail.length=0; this.particles.length=0; this.flashes.length=0; this.labels.length=0; this.exitGhosts.length=0;this.impactShake=0;this.exposure=0;this.flowKick=0;this.frozen=false; }
 
   handleEvents(events) {
     for (const e of events) {
       const mode=effectColor(e),palette=projectilePalette(e);
       if (e.type === 'shot') this.flashes.push({x:e.x,y:e.y,life:COMBAT_FX.shotLife,max:COMBAT_FX.shotLife,size:(e.drone?35:e.powered?125:76)*(e.tension?1.55:1),color:mode,rgb:palette.rgb,kind:'shot',powered:e.powered,drone:e.drone,tension:e.tension,weaponMode:e.weaponMode});
-      if (e.type === 'enemyShot') this.flashes.push({x:e.x,y:e.y,life:.18,max:.18,size:e.boss?100:38,color:'pink',kind:'enemyShot',speedTier:e.speedTier});
+      if (e.type === 'enemyShot') {
+        const sources=e.launchMuzzles?.length?e.launchMuzzles:[e],seen=new Set();
+        for(const source of sources) {
+          const key=`${source.x},${source.y}`;if(seen.has(key))continue;seen.add(key);
+          this.flashes.push({x:source.x,y:source.y,life:.18,max:.18,size:e.boss?100:38,color:'pink',kind:'enemyShot',speedTier:e.speedTier,bossKind:e.bossKind,attackName:e.attackName,attackIndex:e.attackIndex});
+        }
+      }
+      if(e.type==='coreOpen')this.flashes.push({x:e.x,y:e.y,life:.18,max:.18,size:65,color:'cyan',kind:'coreOpen',bossKind:e.bossKind});
+      if(e.type==='bossDefeated')this.flashes.push({x:e.x,y:e.y,life:.58,max:.58,size:180,color:'orange',kind:'bossBreak',bossKind:e.bossKind});
       if (e.type === 'hit') {
         const armored=['claw','worm','boss','mantis'].includes(e.enemyType);
         this.burst(e.x,e.y,e.player?38:armored?16:12,e.player?'cyan':mode,e.player?390:armored?285:230,.32);
@@ -127,6 +203,7 @@ export class Renderer {
         this.flashes.push({x:e.x,y:e.y,life:e.boss?1.3:.68,max:e.boss?1.3:.68,size:e.boss?600:270*(1+chain*.04),color,rgb:e.tension?palette.rgb:undefined,ring:true,kind:'explosion',boss:e.boss,chain,tension:e.tension,seed:Math.random()*100});
         this.impactShake=Math.max(this.impactShake,e.boss?17:4.5);
         this.exposure=Math.max(this.exposure,e.boss?.24:.075);
+        this.flowKick=Math.max(this.flowKick||0,e.boss?.2:.015+chain*.012);
         if (e.score) this.labels.push({x:e.x,y:e.y-30,text:`+${e.score}${e.chain>1?`  ×${e.chain}`:''}`,life:1.3,max:1.3});
       }
       if(e.type === 'pickup') {
@@ -147,6 +224,12 @@ export class Renderer {
       }
     }
     if (this.particles.length>COMBAT_FX.maxParticles) this.particles.splice(0,this.particles.length-COMBAT_FX.maxParticles);
+    if (this.flashes.length>COMBAT_FX.maxFlashes) {
+      let remove=this.flashes.length-COMBAT_FX.maxFlashes;
+      this.flashes=this.flashes.filter(f=>{if(remove>0&&!['playerHit','tension'].includes(f.kind)){remove--;return false;}return true;});
+      if(remove>0)this.flashes.splice(0,remove);
+    }
+    if (this.labels.length>COMBAT_FX.maxLabels) this.labels.splice(0,this.labels.length-COMBAT_FX.maxLabels);
   }
 
   burst(x,y,count,color,speed,lifetime) {
@@ -233,7 +316,7 @@ export class Renderer {
   }
 
   drawSpeedLines(c,g) {
-    const speed=Math.max(1,g.backgroundSpeed||1),energy=1-1/speed;
+    const speed=Math.max(1,g.backgroundSpeed||1),energy=clamp(1-1/speed+(this.flowKick||0),0,.95);
     const count=this.reducedMotion?14:22+Math.round(28*energy);
     const focusX=W*.84,focusY=H*(.43+(g.altitude-.5)*.08),travel=this.environment.distance;
     c.save();c.globalCompositeOperation='screen';c.lineCap='round';
@@ -276,6 +359,7 @@ export class Renderer {
   updateEffects(g,dt) {
     if(dt<=0)return;
     this.impactShake*=Math.exp(-dt*13);this.exposure*=Math.exp(-dt*23);
+    this.flowKick=(this.flowKick||0)*Math.exp(-dt*8);
     for(const p of this.trail){p.x-=dt*720*(g.speed/1.3);p.life-=dt;}
     this.trail=this.trail.filter(p=>p.life>0);
     if(g.mode!=='gameover') {
@@ -363,6 +447,20 @@ export class Renderer {
   }
 
   drawEnemy(c,e,t) {
+    const mecha=getMechaSpec(e),frame=mecha&&this.mechaFrames?.[mecha.filename];
+    if(frame) {
+      c.save();c.translate(e.x,e.y);c.rotate(e.artAngle||0);
+      c.save();c.globalCompositeOperation='lighter';
+      for(const nozzle of mecha.runtimeNozzles) {
+        c.save();c.translate(nozzle.x,nozzle.y);c.scale(1.8,.45);
+        this.glow(c,5,0,e.type==='boss'?34:22,'cyan',e.telegraph>0?.28:.16);c.restore();
+      }
+      c.restore();
+      c.drawImage(frame,-mecha.pivot.x,-mecha.pivot.y,mecha.displayWidth,mecha.displayHeight);
+      if(e.flash>0){c.globalCompositeOperation='screen';this.glow(c,0,0,mecha.displayWidth*.8,'white',.85);}
+      c.restore();
+      return;
+    }
     let atlas=this.art.enemies,cw=atlas.width/2,ch=atlas.height/2;
     const configs={beetle:[0,0,87],claw:[1,0,108],worm:[0,1,170],boss:[1,1,340]};
     let [column,row,size]=configs[e.type]||configs.beetle;
@@ -372,7 +470,7 @@ export class Renderer {
       const [index,x1,y1,x2,y2,width]=variants[e.type];atlas=this.art['enemies-v2'];cw=atlas.width/3;ch=atlas.height/2;
       sx=(index%3)*cw+x1-14;sy=Math.floor(index/3)*ch+y1-14;sw=x2-x1+28;sh=y2-y1+28;dw=width;dh=dw*sh/sw;
     } else if(e.type==='boss'&&e.bossKind!=='warden') {
-      const bosses={carrier:[0,16,101,700,557,300],leviathan:[1,11,213,712,478,360],hive:[2,36,16,709,683,266]};
+      const bosses={carrier:[0,16,101,700,557,300],lancer:[1,11,213,712,478,360],bastion:[2,36,16,709,683,266],apex:[0,16,101,700,557,340]};
       const cfg=bosses[e.bossKind]||bosses.carrier;const [index,x1,y1,x2,y2,width]=cfg;
       atlas=this.art['bosses-v2'];cw=atlas.width/3;sx=index*cw+Math.max(0,x1-8);sy=Math.max(0,y1-8);sw=Math.min(cw,x2-x1+16);sh=y2-y1+16;dw=width;dh=dw*sh/sw;
     }
@@ -402,13 +500,12 @@ export class Renderer {
       c.globalAlpha=.95;c.lineWidth=lance?3.5:b.powered?2.8:1.7;c.strokeStyle=palette.core;c.beginPath();c.moveTo(b.x-dx,b.y-dy);c.lineTo(b.x,b.y);c.stroke();
       this.glow(c,b.x,b.y,(b.powered?44:28)*(b.tension?1.4:1),color,.9);
     }
-    for(const b of g.enemyBullets) {
+    const density=this.presentation?.threatVariant==='C'?threatNeighborCounts(g.enemyBullets).counts:null;
+    for(let index=0;index<g.enemyBullets.length;index++) {
+      const b=g.enemyBullets[index];
       const size=Math.max(30,b.radius*7),angle=Math.atan2(b.vy,b.vx);
       const profile=AIM_SHOT_VISUALS[b.speedTier];
-      let neighbors=0;
-      if(this.presentation.threatVariant==='C')for(const other of g.enemyBullets){
-        if(other!==b&&(other.x-b.x)**2+(other.y-b.y)**2<size*size)neighbors++;
-      }
+      const neighbors=density?.[index]||0;
       // Only the outer halo is restrained in dense clusters; the core is unchanged.
       const alpha=(b.arming>0?.3:.88)/Math.sqrt(1+neighbors*.35);
       this.glow(c,b.x,b.y,size,'pink',alpha);
@@ -427,6 +524,13 @@ export class Renderer {
       c.strokeStyle='#173b48';c.lineWidth=4;
       c.beginPath();c.moveTo(e.x-9,e.y-40);c.lineTo(e.x,e.y-32);c.lineTo(e.x+9,e.y-40);c.stroke();
       c.strokeStyle='#96ffd3';c.lineWidth=1.6;c.stroke();
+    }
+    for(const e of g.enemies) {
+      const spec=getMechaSpec(e);
+      if(!e.coreVulnerable||!spec?.runtimeCore)continue;
+      const core=mechaAnchorWorld(e,spec.runtimeCore),radius=spec.runtimeCore.radius;
+      c.globalCompositeOperation='source-over';c.globalAlpha=.85;c.strokeStyle='#a9fff0';c.lineWidth=1.2;
+      c.beginPath();c.moveTo(core.x-radius-3,core.y);c.lineTo(core.x,core.y-radius-3);c.lineTo(core.x+radius+3,core.y);c.lineTo(core.x,core.y+radius+3);c.closePath();c.stroke();
     }
     for(const b of g.enemyBullets) {
       const angle=Math.atan2(b.vy,b.vx);
@@ -451,7 +555,9 @@ export class Renderer {
         c.lineWidth=b.radius*.8;c.strokeStyle='#ff6dab';c.beginPath();
         c.moveTo(b.x-Math.cos(angle)*profile.shoulder,b.y-Math.sin(angle)*profile.shoulder);c.lineTo(b.x,b.y);c.stroke();
       }
-      c.fillStyle='#ff6dab';c.beginPath();c.arc(b.x,b.y,b.radius*.72,0,TAU);c.fill();
+      // The saturated nucleus covers the complete physical damage radius;
+      // the much larger decorative flare never implies additional damage.
+      c.fillStyle='#ff6dab';c.beginPath();c.arc(b.x,b.y,b.radius,0,TAU);c.fill();
       c.fillStyle='#fff4df';c.beginPath();c.arc(b.x,b.y,Math.max(1.3,b.radius*.32),0,TAU);c.fill();
       if(b.type==='mine') {
         c.strokeStyle=b.arming>0?'#ffc8ea':'#ff62a4';c.globalAlpha=b.arming>0?.4:.85;c.lineWidth=1.5;
@@ -511,11 +617,12 @@ export class Renderer {
   drawThreats(c,g) {
     c.save();c.globalCompositeOperation='screen';
     for(const e of g.enemies) {
-      if(!(e.telegraph>0))continue;
-      const strength=clamp(e.telegraph,0,1);
-      if(e.attackName==='B04'&&e.sequence) {
-        const plan=e.sequence,row=plan.bundles[plan.index]?.row||0;
-        const center=e.safeLane+row*(e.safeDirection||1)*28,half=(e.safeWidth||94.7)/2;
+      const windowActive=['B04','B05'].includes(e.attackName)&&e.sequence?.bundles[e.sequence.index];
+      if(!(e.telegraph>0)&&!windowActive)continue;
+      const strength=e.telegraph>0?clamp(e.telegraph,0,1):.6;
+      if(windowActive) {
+        const plan=e.sequence,bundle=plan.bundles[plan.index],row=bundle.row||0;
+        const center=clamp(e.safeLane+(bundle.safeOffset??row*28)*(e.safeDirection||1),155,565),half=(e.safeWidth||94.7)/2;
         const top=sequenceToWorld(plan,{x:360,y:center-half}),bottom=sequenceToWorld(plan,{x:360,y:center+half});
         const transform=point=>sequenceToWorld(plan,point);
         // This is the real target cross-section, not a screen-wide promise of
@@ -556,6 +663,8 @@ export class Renderer {
           c.beginPath();for(let i=-2;i<=2;i++){c.moveTo(-r-9,i*9-2);c.lineTo(-r-15,i*9+2);}c.stroke();
         } else if(e.attackName==='B03') {
           c.beginPath();for(const a of [-.48,0,.48]){c.moveTo(-r,0);c.lineTo(-r-23*Math.cos(a),23*Math.sin(a));}c.stroke();
+        } else if(e.attackName==='B05') {
+          c.beginPath();c.moveTo(-r-8,-12);c.lineTo(-r-18,-12);c.lineTo(-r-18,0);c.lineTo(-r-28,0);c.lineTo(-r-28,12);c.stroke();
         } else if(e.attackName==='aim') {
           c.beginPath();c.moveTo(-r-18,-5);c.lineTo(-r-24,0);c.lineTo(-r-18,5);c.stroke();
         }
@@ -653,10 +762,39 @@ export class Renderer {
     }
     for(const f of this.flashes) {
       const alpha=f.life/f.max;
-      if(f.kind==='tension') {
+      if(f.kind==='tension'||f.kind==='bossBreak'||f.kind==='coreOpen') {
         c.save();c.translate(f.x,f.y);c.scale(1.55,.58);
         this.glow(c,0,0,f.size*(1+(1-alpha)*.6),f.color,Math.pow(alpha,.7)*.32);c.restore();
       } else this.glow(c,f.x,f.y,f.size*(1+(1-alpha)*.6),f.color,Math.pow(alpha,.7));
+      if(f.kind==='enemyShot') {
+        const radius=9+(1-alpha)*24;
+        c.strokeStyle='#ffe7f1';c.lineWidth=1.3;c.globalAlpha=alpha*alpha*.75;c.beginPath();
+        if(f.attackName==='B01')c.arc(f.x,f.y,radius,Math.PI*.6,Math.PI*1.4);
+        else if(f.attackName==='B02') {
+          c.moveTo(f.x-radius*.3,f.y-radius*.8);c.lineTo(f.x-radius,f.y);c.lineTo(f.x-radius*.3,f.y+radius*.8);
+        } else if(f.attackName==='B04'||f.attackName==='B05') {
+          for(const side of [-1,1]){c.moveTo(f.x-6,f.y+side*radius*.7);c.lineTo(f.x-radius,f.y+side*radius);}
+        } else for(const offset of [-.45,0,.45]) {
+          c.moveTo(f.x-4,f.y);c.lineTo(f.x-radius*Math.cos(offset),f.y+radius*Math.sin(offset));
+        }
+        c.stroke();
+      }
+      if(f.kind==='coreOpen') {
+        const r=9+(1-alpha)*15;c.globalAlpha=alpha;c.strokeStyle='#b7ffed';c.lineWidth=1.4;
+        c.beginPath();c.moveTo(f.x-r,f.y);c.lineTo(f.x,f.y-r*.6);c.lineTo(f.x+r,f.y);c.lineTo(f.x,f.y+r*.6);c.closePath();c.stroke();
+      }
+      if(f.kind==='bossBreak') {
+        const shape=BOSS_BREAK_SHAPES[f.bossKind]||BOSS_BREAK_SHAPES.warden,age=1-alpha;
+        c.save();c.translate(f.x,f.y);c.scale(shape.aspect,.65);c.strokeStyle='#fff0c9';c.lineWidth=1.7;c.globalAlpha=alpha*alpha*.7;
+        c.beginPath();
+        for(let i=0;i<shape.facets;i++) {
+          const angle=i*TAU/shape.facets+shape.rotation,r=22+age*150,length=16+alpha*28;
+          c.moveTo(Math.cos(angle)*r,Math.sin(angle)*r);
+          c.lineTo(Math.cos(angle+.08)*(r+length),Math.sin(angle+.08)*(r+length));
+          c.lineTo(Math.cos(angle+.16)*(r+length*.65),Math.sin(angle+.16)*(r+length*.65));
+        }
+        c.stroke();c.restore();
+      }
       if(f.kind==='shot') {
         const palette=effectPalette(f.color)||WEAPON_PRESENTATION.normal;
         c.save();c.translate(f.x,f.y);c.scale(f.weaponMode==='lance'?3.6:2.8,.22);this.glow(c,0,0,f.size*.9,f.color,alpha*.8);c.restore();

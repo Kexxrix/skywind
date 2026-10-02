@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { bossProfile } from '../src/level.js';
 import { createGame, startGame, updateGame, consumeEvents, PLAYER_HIT_RADIUS, BOSS_KINDS } from '../src/game.js';
 import { Renderer } from '../src/renderer.js';
 
@@ -158,7 +159,7 @@ test('worm and needle preserve offset/rotated elliptical bodies without wing con
 test('all boss bodies retain their circle and 30 contact damage without a wing-only hit', () => {
   for (const [index, bossKind] of BOSS_KINDS.entries()) for (const [offset, expectedHp] of [[5, 100], [-0.1, 70]]) {
     const game = playable();
-    const radius = [92, 95, 78, 90][index];
+    const radius = bossProfile(index).radius;
     // Start overlap is intentional; moving away within the step still counts.
     game.enemies.push(enemy(game, { type: 'boss', bossKind, radius,
       x: game.player.x + radius * 0.7 + PLAYER_HIT_RADIUS + offset }));

@@ -4,11 +4,13 @@
 
 ## 1. 작업 단계와 읽기 순서
 
-1. 이 문서와 [현재 구현·인계](HANDOFF.md)를 읽는다.
+1. 이 문서와 [현재 작업 상태](STATE.md)를 먼저 읽고, 해당 영역 문서1~2개와 필요한 소스만 추가로 확인한다. 과거 구현·인계는 [HANDOFF.md](HANDOFF.md)를 따른다.
    다른 환경에서 첫 구현을 시작할 때는 [첫 구현 시작 안내](FIRST_IMPLEMENTATION_HANDOFF.md)의 준비·읽기 순서·실행 범위를 함께 확인한다.
 2. [결정 기록](docs/plan/DECISIONS.md)의 확정 결정과 **전체/1차 범위의 구현 승인 상태**를 확인한다. 현재 우선 검토 대상은 [1차 전투 감각 확인본](docs/plan/FIRST_IMPLEMENTATION.md)이다.
 3. 전체 개선을 설계하거나 실행할 때 [구현 설계](docs/plan/IMPLEMENTATION.md), [레벨·전투·보급 설계](docs/plan/LEVEL_DESIGN.md), [탄막·텐션업](docs/plan/BARRAGE_DESIGN.md), [검증 기준](docs/plan/QUALITY.md)을 읽는다. 자산·연출 작업에는 [메카닉 제작](docs/plan/MECHA_ART.md), [빛·소리 연출](docs/plan/AUDIO_VISUAL.md), [효과음 제작 도구](docs/plan/SFX_WORKBENCH.md)를 추가로 읽는다.
 4. 관련 소스와 해당 기능의 증거만 추가로 읽는다. 모든 과거 패치 문서를 매 작업마다 읽거나 과거 QA를 자동 재개하지 않는다.
+
+2026-10-02 최신 사용자는 8시간 자율 로컬 제작을 승인했다(DECISIONS D50). 현재 범위와 시간·게시 제외·증거 제한은 STATE.md를 따른다. 아래 D42의 제한은 당시 1차 작업의 기록이며 D50이 승인한 범위를 다시 차단하지 않는다.
 
 2026-09-08 사용자는 첫 구현 안내에 따른 I01~I07의 로컬 구현을 승인했고, 필요한 선택은 질문 없이 우선 판단하라고 지시했다(DECISIONS D42). 이 범위의 게임 코드·스타일·실행 구성·테스트를 변경하고 권장 시험값의 선택·조정 이유를 기록한다. 전체 제작·효과음 제작 앱·Blender 제작·Git 게시·Sites 배포는 이 승인에 자동 포함하지 않는다.
 

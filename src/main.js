@@ -3,6 +3,7 @@ import { Renderer } from './renderer.js';
 import { AudioDirector } from './audio.js';
 import { WEAPON_PRESENTATION, WEAPON_NAMES, supplyPresentation, tensionPresentation, gameViewport } from './presentation.js';
 import { PilotUI } from './pilot-ui.js';
+import { LEVEL_RULES } from './level.js';
 
 const $ = id => document.getElementById(id);
 const canvas = $('game');
@@ -13,7 +14,7 @@ const pilot = new PilotUI($('pilot-hud'));
 let ready = false, paused = false, best = 0, recordBeforeRun = 0;
 let noticeTime = 0, weaponFeedbackTime = 0, previousMode = 'loading', lastStage = 1, lastFrame = 0;
 let lastPilotFrame = 0;
-let pointer = null, pointerHeld = false, touchFire = false, joystickPointer = null;
+let pointer = null, pointerHeld = false, touchFire = false, touchFirePointer = null, joystickPointer = null;
 const joystickInput = {x:0,y:0};
 const keys = new Set();
 const formatScore = value => Math.floor(value).toString().padStart(6,'0');
@@ -45,7 +46,7 @@ new ResizeObserver(resizeHUD).observe($('game-shell'));
 resizeHUD();
 
 function clearInput() {
-  keys.clear();pointerHeld=false;touchFire=false;pointer=null;joystickPointer=null;
+  keys.clear();pointerHeld=false;touchFire=false;touchFirePointer=null;pointer=null;joystickPointer=null;
   joystickInput.x=joystickInput.y=0;$('joystick-knob').style.transform='';
 }
 
@@ -74,10 +75,11 @@ export function start() {
 
 export function setPaused(value) {
   if(game.mode!=='playing'&&game.mode!=='entering')return;
-  paused=value;clearInput();
+  if(paused===value)return;
+  paused=value;clearInput();game.player.vx=game.player.vy=0;
   audio.setPaused(paused);$('pause-screen').hidden=!paused;
   $('pause-button').setAttribute('aria-label',paused?'계속하기':'일시정지');
-  if(!paused){lastPilotFrame=performance.now();canvas.focus({preventScroll:true});}
+  if(!paused){lastFrame=lastPilotFrame=performance.now();canvas.focus({preventScroll:true});}
   updateUI();
 }
 
@@ -107,8 +109,8 @@ function updateUI() {
   $('title-screen').hidden=game.mode!=='title';$('gameover-screen').hidden=game.mode!=='gameover';
   $('pause-screen').hidden=!paused;$('hud').hidden=!active;
   $('touch-controls').hidden=paused||(!active&&game.mode!=='title');
-  $('cycle-label').textContent=`CYCLE ${String(game.cycle||1).padStart(2,'0')}`;
-  const phaseRemaining=Math.max(0,45-(game.normalTime||0));
+  $('cycle-label').textContent=game.difficulty.hell?`HELL ${String(Math.max(1,game.cycle-5)).padStart(2,'0')}`:`STAGE ${String(Math.min(5,game.cycle||1)).padStart(2,'0')}`;
+  const phaseRemaining=Math.max(0,LEVEL_RULES.normalDuration-(game.normalTime||0));
   $('phase-label').textContent=game.phase==='boss-entry'?'INCOMING':game.phase==='boss'?'BOSS':`${game.normalTime>=42?'BOSS ':''}${phaseRemaining.toFixed(1)}s`;
   $('energy-fill').style.width=`${game.player.hp}%`;
   $('energy-fill').style.background=game.player.hp<=30?'#ff728b':game.player.hp<=55?'#e8dc75':'#82ee75';
@@ -164,7 +166,11 @@ function processEvents(events) {
     if(event.type==='pickup'&&event.pickupType==='health')notice(game.player.hp===100?'FULL HP':'ENERGY +30');
     if(event.type==='bossWarning')notice(`${event.bossName||'WARDEN'} INCOMING`,3);
     if(event.type==='boss')notice(`${event.bossName||'WARDEN'} APPROACHING`,3);
-    if(event.type==='bossDefeated')notice('SKY CLEAR',3);
+    if(event.type==='bossDefeated')notice(event.hell?'HELL / ENDURE':`STAGE ${Math.min(5,event.cycle||game.cycle)} / SKY CLEAR`,3);
+    if(event.type==='charge'&&event.boss&&event.bossKind==='bastion'&&event.routeLanes?.length) {
+      const labels=event.routeLanes.map(y=>y<300?'UP':y>420?'LOW':'MID');
+      notice(`GATES: ${labels.join(' > ')}`,Math.min(2,event.duration+0.35));
+    }
     if(event.type==='gameover')finish();
   }
 }
@@ -181,7 +187,9 @@ function chooseMusic() {
 function frame(now) {
   // HUD effects keep real durations even when the expensive background drops frames.
   const pilotDt=Math.max(0,(now-lastPilotFrame)/1000 || 0);lastPilotFrame=now;
-  const dt=Math.min(.05,(now-lastFrame)/1000 || 0);lastFrame=now;
+  // The game owns fixed 1/120s collision steps. Keep legitimate 10–20Hz frames
+  // in game time too; a resume explicitly resets lastFrame above.
+  const dt=Math.min(.12,(now-lastFrame)/1000 || 0);lastFrame=now;
   if(ready && !paused) {
     const input={
       x:((keys.has('KeyD')||keys.has('ArrowRight'))?1:0)-((keys.has('KeyA')||keys.has('ArrowLeft'))?1:0)+joystickInput.x,
@@ -242,8 +250,13 @@ canvas.addEventListener('pointermove',e=>{if(pointerHeld)pointer={x:e.clientX,y:
 for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,()=>{pointerHeld=false;pointer=null;});
 
 const shot=$('shot-button');
-shot.addEventListener('pointerdown',e=>{e.preventDefault();if(game.mode==='title')start();if(!paused){touchFire=true;shot.setPointerCapture(e.pointerId);}});
-for(const event of ['pointerup','pointercancel','lostpointercapture'])shot.addEventListener(event,()=>{touchFire=false;});
+shot.addEventListener('pointerdown',e=>{
+  e.preventDefault();if(game.mode==='title'||game.mode==='gameover')start();
+  if(!paused&&touchFirePointer===null){touchFire=true;touchFirePointer=e.pointerId;shot.setPointerCapture(e.pointerId);}
+});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])shot.addEventListener(event,e=>{
+  if(e.pointerId===touchFirePointer){touchFire=false;touchFirePointer=null;}
+});
 const stick=$('joystick');
 function moveStick(e) {
   if(e.pointerId!==joystickPointer)return;
@@ -252,9 +265,11 @@ function moveStick(e) {
   const length=Math.hypot(x,y);if(length>1){x/=length;y/=length;}
   joystickInput.x=x;joystickInput.y=y;$('joystick-knob').style.transform=`translate(${x*limit}px,${y*limit}px)`;
 }
-stick.addEventListener('pointerdown',e=>{e.preventDefault();if(paused)return;joystickPointer=e.pointerId;stick.setPointerCapture(e.pointerId);moveStick(e);});
+stick.addEventListener('pointerdown',e=>{e.preventDefault();if(paused||joystickPointer!==null)return;joystickPointer=e.pointerId;stick.setPointerCapture(e.pointerId);moveStick(e);});
 stick.addEventListener('pointermove',moveStick);
-for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,()=>{joystickPointer=null;joystickInput.x=joystickInput.y=0;$('joystick-knob').style.transform='';});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])stick.addEventListener(event,e=>{
+  if(e.pointerId===joystickPointer){joystickPointer=null;joystickInput.x=joystickInput.y=0;$('joystick-knob').style.transform='';}
+});
 
 refreshSoundButton();
 Promise.all([renderer.load((loaded,total)=>{$('loading-text').textContent=`하늘을 준비하고 있습니다 · ${loaded} / ${total}`;}),pilot.load()]).then(()=>{

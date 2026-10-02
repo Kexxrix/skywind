@@ -1,5 +1,6 @@
-import { LEVEL_RULES as RULES, trialDifficulty, normalPattern, basicWeapon } from './level.js';
-import { barragePlan, AIM_SPEEDS, relativeMinimumDistance } from './barrage.js';
+import { LEVEL_RULES as RULES, trialDifficulty, normalEncounter, bossProfile, bossAttack, attackPolicy, LEVEL_BOSS_KINDS, basicWeapon } from './level.js';
+import { barragePlan, patternGeometry, AIM_SPEEDS, relativeMinimumDistance } from './barrage.js';
+import { getMechaSpec, mechaAnchorWorld } from './mecha-art.js';
 export const WORLD_WIDTH = 1280;
 export const WORLD_HEIGHT = 720;
 export const FLIGHT_CENTER_Y = 360;
@@ -12,10 +13,14 @@ export const WEAPON_MAX_DURATION = RULES.weaponMaximum;
 export const TENSION_DURATION = RULES.tensionDuration;
 export const DRONE_DURATION = 15;
 export const ENEMY_TYPES = ['beetle', 'wasp', 'claw', 'dragonfly', 'worm', 'ray', 'mantis', 'orb', 'needle'];
-export const BOSS_KINDS = ['warden', 'carrier'];
+export const BOSS_KINDS = LEVEL_BOSS_KINDS;
 export const MAX_ENEMY_BULLET_SPEED = 420;
 // The old 2.6px marker's 1.5px centered stroke left a 1.85px clear nucleus.
 export const PLAYER_HIT_RADIUS = 1.85;
+// Keep top speed independent from response tuning. Release/reversal damping is
+// faster than cruising acceleration so a small dodge ends where it is intended.
+export const FLIGHT_CONTROL = Object.freeze({ horizontalSpeed: 225, verticalSpeed: 490,
+  horizontalResponse: 12, verticalResponse: 24, horizontalBrake: 24, verticalBrake: 30 });
 // Double the previous reach in every direction, with extra screen-left coverage
 // for passed items. This remains separate from the 1.85-unit damage core.
 export const PICKUP_ATTRACTION = Object.freeze({ radius: 212, rearExtension: 106, duration: 0.18, minVisibleDuration: 0.14, absorbRadius: 12 });
@@ -25,7 +30,12 @@ const lerp = (a, b, amount) => a + (b - a) * amount;
 const distanceSquared = (a, b) => (a.x - b.x) ** 2 + (a.y - b.y) ** 2;
 
 export function cameraRoll(g) {
-  return clamp(-0.18 + Math.sin(g.sceneTime * 0.18) * 0.055 + (g.altitude - 0.5) * 0.025 + g.player.angle * 0.03, -0.27, -0.09);
+  // Title animation may keep running between attempts. Combat geometry must not
+  // inherit its clock or backdrop altitude: replay uses only simulation state.
+  const title = g.mode === 'title';
+  const clock = title ? g.sceneTime : g.time;
+  const altitude = title ? g.altitude : (g.flightAltitude ?? 0.5);
+  return clamp(-0.18 + Math.sin(clock * 0.18) * 0.055 + (altitude - 0.5) * 0.025 + g.player.angle * 0.03, -0.27, -0.09);
 }
 
 export function worldToScreen(g, point) {
@@ -60,7 +70,7 @@ export function playerMuzzle(player) {
   return { x: player.x + 30 * c + 4 * s, y: player.y + 30 * s - 4 * c };
 }
 
-// Time is intentionally ignored: the first trial repeats tier two after one victory.
+// Only real victories advance the five stages, followed by bounded endless hell.
 export function difficultyAt(time, bossesDefeated = 0) { return trialDifficulty(bossesDefeated); }
 
 const ENEMY_SPECS = {
@@ -141,12 +151,14 @@ export function createGame(seed = 74912) {
     comboTime: 0,
     altitude: 0.65,
     targetAltitude: 0.65,
+    flightAltitude: 0.5,
     cameraY: 0,
     speed: RULES.baseScroll, backgroundSpeed: 1, night: 0, daylight: 1,
     phase: 'normal', phaseTime: 0, normalTime: 0, cycle: 1, returnFromNight: 0,
     tensionTime: 0, tensionDuration: TENSION_DURATION, supply: null,
     recoverySpawned: false, droneMarked: false, patternSection: null,
     difficulty: difficultyAt(0),
+    encounter: normalEncounter(0, 0),
     shake: 0,
     boss: null,
     bossesDefeated: 0,
@@ -222,30 +234,37 @@ function spawnEnemy(g, type, x, y, index = 0) {
 
 function spawnWave(g) {
   const wave = g.waveIndex++;
-  const pattern = normalPattern(g.normalTime);
-  const patternType = { B01: 'orb', B02: 'claw', B03: 'worm', B04: 'ray' }[pattern];
-  const heavy = pattern && !g.enemies.some(e => !e.dead && e.pattern === pattern);
-  const lanes = [112, 240, 360, 480, 608];
-  const lane = Math.floor(random(g) * lanes.length);
-  const count = Math.min(pattern ? 4 : 4 + Math.floor(random(g) * 2), g.difficulty.maxEnemies - g.enemies.length);
+  const encounter = g.encounter = normalEncounter(g.normalTime, g.bossesDefeated);
+  const budget = Math.min(g.difficulty.waveSize, g.difficulty.maxEnemies - g.enemies.length);
   let emitted = 0;
-  for (let i = 0; i < count; i++) {
-    const type = i === 0 && heavy ? patternType : wave % 2 ? 'dragonfly' : 'beetle';
-    const position = screenToWorld(g, { x: 1320 + i * 65, y: lanes[(lane + i) % lanes.length] });
-    const enemy = spawnEnemy(g, type, position.x, position.y, i);
-    if (!enemy) break;
-    if (i === 0 && heavy) {
-      enemy.pattern = pattern;
-      enemy.holdScreenY = lanes[lane];
-      enemy.holdUntil = g.time + 5.8;
+  for (const role of encounter.roles) {
+    if (role.pattern && g.enemies.some(e => !e.dead && e.pattern === role.pattern && e.encounterBlock === encounter.blockId)) continue;
+    for (let i = 0; i < role.count && emitted < budget; i++) {
+      const lane = role.lane ?? 360;
+      const formation = role.formation || 'stagger';
+      const y = clamp(formation === 'pincer' ? (i % 2 ? 720 - lane : lane)
+        : formation === 'column' ? lane + (i - (role.count - 1) / 2) * 64
+          : formation === 'line' ? lane : lane + (i % 3 - 1) * 48, 96, 624);
+      const position = screenToWorld(g, { x: 1320 + emitted * (formation === 'column' ? 24 : 65), y });
+      const enemy = spawnEnemy(g, role.type, position.x, position.y, emitted);
+      if (!enemy) break;
+      enemy.encounterBlock = encounter.blockId;
+      enemy.formation = formation;
+      if (role.pattern) {
+        enemy.pattern = role.pattern;
+        enemy.holdScreenY = lane;
+        enemy.holdUntil = g.time + (role.holdSeconds || 6);
+        enemy.safeLanes = encounter.safeLanes;
+      }
+      if (g.normalTime >= 36 && !g.droneMarked && !role.pattern) {
+        enemy.markedDrone = true;
+        g.droneMarked = true;
+      }
+      emitted++;
     }
-    if (g.normalTime >= 36 && !g.droneMarked && type !== patternType) {
-      enemy.markedDrone = true;
-      g.droneMarked = true;
-    }
-    emitted++;
   }
-  emit(g, 'wave', { enemyType: patternType || 'beetle', count: emitted, tier: g.stage, pattern });
+  emit(g, 'wave', { enemyType: encounter.roles[0]?.type || 'beetle', count: emitted,
+    tier: g.stage, pattern: encounter.pattern, blockId: encounter.blockId, theme: encounter.theme, wave });
 }
 
 function clearCombat(g) {
@@ -258,21 +277,23 @@ function clearCombat(g) {
 
 function spawnBoss(g) {
   clearCombat(g);
-  const variant = g.bossesDefeated % BOSS_KINDS.length, bossKind = BOSS_KINDS[variant];
-  const hp = Math.round(g.difficulty.bossHp * (variant === 1 ? 1.05 : 1));
+  const profile = bossProfile(g.bossesDefeated), { variant, kind: bossKind } = profile;
+  const hp = Math.round(g.difficulty.bossHp * profile.hpMultiplier);
   const position = screenToWorld(g, { x: 1490, y: 320 });
   const boss = {
-    id: nextId(g), type: 'boss', bossKind, bossName: ['WARDEN', 'IRON CARRIER'][variant], variant,
-    behavior: bossKind, ...position, baseY: position.y, radius: [92, 95][variant], hp, maxHp: hp,
+    id: nextId(g), type: 'boss', bossKind, bossName: profile.name, variant,
+    behavior: profile.mechanic, motion: profile.motion, safeLanes: profile.safeLanes, hell: profile.hell,
+    ...position, baseY: position.y, radius: profile.radius, hp, maxHp: hp,
     angle: 0, age: 0, phase: 0, speed: 75, score: 3500 + g.bossesDefeated * 1500,
     fireCooldown: 0.4, flash: 0, attack: 0, telegraph: 0, chargeTime: 0,
     locked: false, attackAngle: Math.PI, attackName: '', safeLane: 360, safeAngle: Math.PI,
+    armorOpen: false, corePhase: 0, attackIndex: 0,
     dashTime: 0, dead: false, spawnedAt: g.time, entryX: position.x,
   };
   g.phase = 'boss-entry'; g.phaseTime = 0;
   g.boss = boss; g.enemies.push(boss);
   emit(g, 'phaseChange', { phase: g.phase, cycle: g.cycle });
-  emit(g, 'boss', { x: boss.x, y: boss.y, level: g.cycle, bossKind, bossName: boss.bossName });
+  emit(g, 'boss', { x: boss.x, y: boss.y, level: g.cycle, bossKind, bossName: boss.bossName, hell: profile.hell });
 }
 
 function playerShot(g, x, y, vy, powered = false, drone = false) {
@@ -311,10 +332,12 @@ function firePlayer(g) {
   emit(g, 'shot', { x: muzzle.x, y: muzzle.y, powered, weaponMode: powered ? p.weaponMode : 'normal', tension: g.tensionTime > 0, basicLevel: p.basicLevel });
 }
 
-function enemyMuzzles(e) {
+export function enemyMuzzles(e) {
+  const art = getMechaSpec(e);
+  if (art?.runtimeMuzzles.length) return art.runtimeMuzzles.map(anchor => mechaAnchorWorld(e, anchor));
   const angle = e.angle || 0, c = Math.cos(angle), s = Math.sin(angle);
   const offsets = e.type === 'boss' ? [[-e.radius * 0.7, -e.radius * 0.48], [-e.radius * 0.7, e.radius * 0.48]]
-    : e.pattern === 'B02' || e.pattern === 'B04' ? [[-e.radius * 0.7, -e.radius * 0.4], [-e.radius * 0.7, e.radius * 0.4]]
+    : e.pattern === 'B02' || e.pattern === 'B04' || e.pattern === 'B05' ? [[-e.radius * 0.7, -e.radius * 0.4], [-e.radius * 0.7, e.radius * 0.4]]
       : [[-e.radius * 0.7, 0]];
   return offsets.map(([x, y]) => ({ x: e.x + x * c - y * s, y: e.y + x * s + y * c }));
 }
@@ -333,57 +356,70 @@ export function sequenceToWorld(plan, point) {
     y: 360 - (point.x - 640) * plan.sin + (point.y + plan.cameraY - 360) * plan.cos };
 }
 
+function spawnEscorts(g, boss) {
+  const occupied = new Set(g.enemies.filter(other => !other.dead && other.escort && other.sourceBossId === boss.id).map(other => other.escortSlot));
+  for (let i = 0; i < 2; i++) {
+    if (occupied.has(i)) continue;
+    const position = screenToWorld(g, { x: 820, y: i ? 500 : 220 });
+    const escort = spawnEnemy(g, 'beetle', position.x, position.y, i);
+    if (escort) Object.assign(escort, { escort: true, sourceBossId: boss.id, escortSlot: i, score: 0, fireCooldown: 0.65 + i * 0.35 });
+  }
+}
+
 function releaseBundle(g, e, bundle) {
   const origin = e.muzzles[bundle.port % e.muzzles.length], plan = e.sequence;
   const before = g.enemyBullets.length, pattern = bundle.pattern || plan.pattern;
-  const safeCenter = e.safeLane + (bundle.row || 0) * (e.safeDirection || 1) * 28;
-  const referenceX = 360, safeHalf = g.difficulty.corridorWidth / 2 + PLAYER_HIT_RADIUS + (e.type === 'boss' ? 7 : 5.5);
+  const referenceX = 360;
   if (pattern === 'escort') {
-    const current = g.enemies.filter(other => !other.dead && other.escort).length;
-    for (let i = current; i < 2; i++) {
-      const position = screenToWorld(g, { x: 1180, y: i ? 490 : 220 });
-      const escort = spawnEnemy(g, 'beetle', position.x, position.y, i);
-      if (escort) { escort.escort = true; escort.score = 0; }
-    }
+    spawnEscorts(g, e);
   } else if (pattern === 'aim') {
     // Rotate actual released shots across sources: short-lived waves cannot all
     // restart at slow, and boss pattern indices cannot permanently omit fast.
     const speed = g.difficulty.pace ? AIM_SPEEDS[g.aimCounter % AIM_SPEEDS.length] : AIM_SPEEDS[0];
-    const distance = Math.hypot(g.player.x - origin.x, g.player.y - origin.y) - PLAYER_HIT_RADIUS - (e.type === 'boss' ? 7 : 5.5);
-    if (distance / speed < g.difficulty.minimumFlightTime) return false;
-    e.attackAngle = Math.atan2(g.player.y - origin.y, g.player.x - origin.x);
-    enemyBullet(g, e, origin, e.attackAngle, speed, { speedTier: ['slow', 'medium', 'fast'][AIM_SPEEDS.indexOf(speed)],
-      type: speed === 340 ? 'needle' : e.type === 'boss' ? 'plasma' : 'orb', aimedAt: { x: g.player.x, y: g.player.y } });
-    if (g.difficulty.pace) g.aimCounter++;
-  } else if (pattern === 'B04') {
-    // Every ray originates at a real port. A fixed world cross-section supplies the moving window.
-    for (let i = 0; i < bundle.count; i++) {
-      const y = 65 + i * 590 / (bundle.count - 1);
-      if (Math.abs(y - safeCenter) < safeHalf) continue;
-      const port = e.muzzles[i % e.muzzles.length];
-      const target = sequenceToWorld(plan, { x: referenceX, y });
-      enemyBullet(g, e, port, Math.atan2(target.y - port.y, target.x - port.x), bundle.speed,
-        { windowY: safeCenter, referenceX, corridorWidth: g.difficulty.corridorWidth });
+    const target = e.aimTarget = { x: g.player.x, y: g.player.y };
+    const distance = Math.hypot(target.x - origin.x, target.y - origin.y) - PLAYER_HIT_RADIUS - (e.type === 'boss' ? 7 : 5.5);
+    if (distance / speed < g.difficulty.minimumFlightTime) {
+      // A denied single aimed shot must not suspend its source indefinitely.
+      // Structured rings/curtains keep their whole pre-reserved geometry.
+      emit(g, 'attackSkipped', { enemyId: e.id, bossKind: e.bossKind, pattern, reason: 'minimum-flight-time' });
+      return true;
     }
+    e.attackAngle = Math.atan2(target.y - origin.y, target.x - origin.x);
+    enemyBullet(g, e, origin, e.attackAngle, speed, { speedTier: ['slow', 'medium', 'fast'][AIM_SPEEDS.indexOf(speed)],
+      type: speed === 340 ? 'needle' : e.type === 'boss' ? 'plasma' : 'orb', aimedAt: { x: target.x, y: target.y } });
+    if (g.difficulty.pace) g.aimCounter++;
   } else {
     const safeTarget = sequenceToWorld(plan, { x: referenceX, y: e.safeLane });
-    const safeAngle = Math.atan2(safeTarget.y - origin.y, safeTarget.x - origin.x);
-    const distance = Math.max(220, Math.hypot(safeTarget.x - origin.x, safeTarget.y - origin.y));
-    const gapAngle = Math.atan2(safeHalf, distance);
-    for (let i = 0; i < bundle.count; i++) {
-      let angle;
-      if (pattern === 'B01') angle = i * Math.PI * 2 / bundle.count + bundle.phase - plan.roll;
-      else if (pattern === 'B02') angle = Math.PI - plan.roll + bundle.phase + (i - 1) * 0.075;
-      else angle = Math.PI - plan.roll + (i / (bundle.count - 1) - 0.5) * 1.8 + bundle.phase + Math.floor(i / 3) % 2 * 0.014;
-      const difference = Math.abs(Math.atan2(Math.sin(angle - safeAngle), Math.cos(angle - safeAngle)));
-      if (difference < gapAngle && pattern !== 'B02') continue;
-      enemyBullet(g, e, origin, angle, bundle.speed);
+    const points = patternGeometry(bundle, { pattern, roll: plan.roll, safeLane: e.safeLane,
+      safeDirection: e.safeDirection, corridorWidth: g.difficulty.corridorWidth,
+      playerRadius: PLAYER_HIT_RADIUS, bulletRadius: e.type === 'boss' ? 7 : 5.5,
+      origin, safeTarget, referenceX, portCount: e.muzzles.length });
+    for (const point of points) {
+      const port = e.muzzles[point.port % e.muzzles.length];
+      const target = Number.isFinite(point.targetY) ? sequenceToWorld(plan, { x: point.targetX ?? referenceX, y: point.targetY }) : null;
+      const angle = target ? Math.atan2(target.y - port.y, target.x - port.x) : point.angle;
+      enemyBullet(g, e, port, angle, point.speed ?? bundle.speed,
+        Number.isFinite(point.windowY) ? { windowY: point.windowY, referenceX, corridorWidth: point.corridorWidth } : {});
     }
   }
   const bulletCount = g.enemyBullets.length - before;
-  emit(g, 'enemyShot', { ...origin, enemyId: e.id, bulletCount, boss: e.type === 'boss', bossKind: e.bossKind,
-    enemyType: e.type, attackName: pattern, pattern, speedTier: pattern === 'aim' ? g.enemyBullets.at(-1)?.speedTier : 'pattern' });
+  const launchMuzzles = [...new Map(g.enemyBullets.slice(before).map(bullet => [`${bullet.x}:${bullet.y}`, { x: bullet.x, y: bullet.y }])).values()];
+  if (bulletCount) e.fireFlash = 0.12;
+  emit(g, pattern === 'escort' ? 'escortDeployed' : 'enemyShot', { ...origin, enemyId: e.id, bulletCount, launchMuzzles, boss: e.type === 'boss', bossKind: e.bossKind,
+    enemyType: e.type, attackName: pattern, pattern, attackIndex: e.attackIndex ?? e.attack,
+    armorOpen: Boolean(e.armorOpen), corePhase: e.corePhase || 0,
+    speedTier: pattern === 'aim' ? g.enemyBullets.at(-1)?.speedTier : 'pattern' });
   return true;
+}
+
+function setArmorOpen(g, e, open) {
+  const changed = e.armorOpen !== Boolean(open);
+  e.armorOpen = Boolean(open);
+  const core = getMechaSpec(e)?.runtimeCore;
+  e.coreVulnerable = Boolean(open && core);
+  if (changed && e.coreVulnerable) emit(g, 'coreOpen', { ...mechaAnchorWorld(e, core),
+    enemyId: e.id, boss: e.type === 'boss', bossKind: e.bossKind,
+    attackName: e.attackName, attackIndex: e.attackIndex, armorOpen: true, corePhase: e.corePhase });
 }
 
 function updateAttack(g, e, dt) {
@@ -394,10 +430,13 @@ function updateAttack(g, e, dt) {
     && screen.y - e.radius >= 50 && screen.y + e.radius <= 670;
   if (!visible || screen.x < WORLD_WIDTH * 0.33 + 120) {
     e.locked = false; e.telegraph = 0; e.sequence = null; e.reservedBullets = 0;
+    if (boss) setArmorOpen(g, e, false);
     return;
   }
   if (e.sequence && !e.locked) {
     const sequence = e.sequence;
+    if (boss) setArmorOpen(g, e, e.attackSpec?.armorOpen && !e.escortShield);
+    e.muzzles = enemyMuzzles(e);
     sequence.elapsed += dt;
     while (sequence.index < sequence.bundles.length && sequence.bundles[sequence.index].at <= sequence.elapsed + 1e-9) {
       const bundle = sequence.bundles[sequence.index];
@@ -408,29 +447,44 @@ function updateAttack(g, e, dt) {
     if (sequence.index === sequence.bundles.length) {
       e.sequence = null; e.reservedBullets = 0; e.attack++;
       e.attackActiveUntil = g.time + 0.15;
-      e.fireCooldown = (boss ? g.difficulty.bossFireInterval * (e.phase ? 0.85 : 1) : g.difficulty.fireInterval);
+      const recovery = boss ? (e.attackSpec?.pauseAfter || 0) : 0;
+      e.coreOpenUntil = g.time + recovery;
+      e.fireCooldown = (boss ? g.difficulty.bossFireInterval * (e.phase ? 0.85 : 1) : g.difficulty.fireInterval) + recovery;
     }
     return;
   }
   if (!e.locked) {
     if (g.phase === 'normal' && g.normalTime >= RULES.quietAt) return;
+    if (!boss && e.pattern && (e.holdUntil <= g.time || (e.encounterBlock && e.encounterBlock !== g.encounter.blockId))) return;
+    if (boss && g.time >= (e.coreOpenUntil || 0)) setArmorOpen(g, e, false);
     e.fireCooldown -= dt;
     if (e.fireCooldown > 0 || e.attackActiveUntil > g.time) return;
     const attackers = g.enemies.filter(other => !other.dead && other !== e && (other.locked || other.sequence || other.attackActiveUntil > g.time));
     if (attackers.length >= g.difficulty.maxAttackers) return;
-    const pattern = boss ? (e.bossKind === 'carrier' ? ['B04', 'B03', 'escort'] : ['B01', 'aim', 'B04'])[e.attack % 3] : e.pattern || 'aim';
-    if (pattern.startsWith('B') && attackers.some(other => other.attackName?.startsWith('B'))) return;
-    if (pattern === 'aim' && attackers.filter(other => other.attackName === 'aim').length >= (g.difficulty.pace ? 2 : 1)) return;
+    const attack = boss ? bossAttack(g.bossesDefeated, e.attack) : null;
+    const pattern = attack?.pattern || e.pattern || 'aim';
+    const policy = attackPolicy(pattern, g.difficulty.pace);
+    const encounter = g.phase === 'normal' ? g.encounter : null;
+    const aimLimit = Math.min(policy.aimLimit, encounter?.aimLimit ?? attack?.aimLimit ?? policy.aimLimit);
+    const pressure = new Set(g.enemyBullets.filter(bullet => {
+      if (bullet.dead) return false;
+      const position = worldToScreen(g, bullet);
+      return position.x > 40 && position.x < WORLD_WIDTH + 80 && position.y > 20 && position.y < WORLD_HEIGHT - 20;
+    }).map(bullet => bullet.pattern));
+    // Required travel windows remain exclusive until their tail has passed the
+    // player's flight corridor, not merely until the emitter's last release.
+    const routePressure = pressure.has('B04') || pressure.has('B05');
+    if (pattern === 'aim' && (aimLimit === 0 || routePressure || attackers.some(other => other.sequence?.movementWindow))) return;
+    if (policy.movementWindow && (pressure.size || attackers.length)) return;
+    if (pattern.startsWith('B') && (attackers.some(other => other.attackName?.startsWith('B'))
+      || [...pressure].some(active => active?.startsWith('B') && active !== pattern))) return;
+    if (pattern === 'aim' && attackers.filter(other => other.attackName === 'aim').length >= aimLimit) return;
     if (pattern === 'aim' && !g.difficulty.pace && attackers.some(other => other.attackName === 'B02'
       || (other.attackName?.startsWith('B') && (other.sequence?.index || 0) === 0))) return;
     // Sequence reservations include all future ports and rings, including other sources.
     // A waiting source must not consume combat randomness on every frame.
     const attackSeed = (Math.imul(g.seed ^ e.id, 0x45d9f3b) ^ Math.imul(e.attack, 0x119de1f3)) >>> 0;
     const plan = barragePlan(pattern, g.difficulty.pace, attackSeed / 4294967296);
-    if (boss && e.bossKind === 'carrier' && pattern === 'B03') {
-      plan.bundles.push({ at: 1.4, count: 1, port: 0, pattern: 'aim' });
-      plan.bundles.sort((a, b) => a.at - b.at); plan.total++;
-    }
     const reserved = g.enemies.reduce((n, other) => n + (other.reservedBullets || 0), 0);
     if (plan.total > g.difficulty.maxSequenceBullets || plan.bundles.some(bundle => bundle.count > g.difficulty.maxPatternBullets)
       || g.enemyBullets.length + reserved + plan.total > g.difficulty.maxEnemyBullets) return;
@@ -439,14 +493,25 @@ function updateAttack(g, e, dt) {
     plan.roll = roll; plan.index = 0; plan.elapsed = 0;
     e.sequence = plan; e.reservedBullets = plan.total;
     e.attackName = pattern; e.locked = true;
-    e.safeLane = [240, 360, 480][Math.floor(e.attack / 3) % 3];
+    e.attackIndex = e.attack; e.attackSpec = attack;
+    if (boss && e.bossKind === 'apex') e.attackSpec.armorOpen = pattern === 'B03' || pattern === 'B05';
+    const safeLanes = e.safeLanes || encounter?.safeLanes || [240, 360, 480];
+    e.safeLane = attack?.safeLane ?? safeLanes[Math.floor(e.attack / 3) % safeLanes.length];
     e.safeDirection = e.safeLane >= 400 ? -1 : 1;
     e.safeWidth = g.difficulty.corridorWidth + 2 * (PLAYER_HIT_RADIUS + (boss ? 7 : 5.5));
-    e.chargeDuration = Math.max(g.difficulty.minTelegraph, boss ? 0.8 : e.type === 'needle' ? 0.75 : 0);
+    e.routeLanes = plan.movementWindow ? plan.bundles.map(bundle => clamp(e.safeLane + (bundle.safeOffset || 0) * e.safeDirection, 155, 565)) : [];
+    e.chargeDuration = Math.max(g.difficulty.minTelegraph, attack?.telegraph || (e.type === 'needle' ? 0.75 : 0));
     e.chargeTime = e.chargeDuration;
+    e.aimTarget = { x: g.player.x, y: g.player.y };
+    if (boss) { e.corePhase = attack.corePhase; setArmorOpen(g, e, false); }
+    const activeMuzzles = e.muzzles.filter((_, index) => plan.movementWindow || plan.bundles.some(bundle => bundle.port % e.muzzles.length === index));
+    emit(g, 'charge', { ...e.muzzles[0], muzzles: activeMuzzles, enemyId: e.id, enemyType: e.type, boss, bossKind: e.bossKind,
+      attackName: pattern, attackIndex: e.attackIndex, armorOpen: false, corePhase: e.corePhase || 0,
+      routeLanes: [...e.routeLanes], duration: e.chargeDuration });
   }
   const origin = e.muzzles[0];
-  e.attackAngle = Math.atan2(g.player.y - origin.y, g.player.x - origin.x);
+  e.aimTarget = { x: g.player.x, y: g.player.y };
+  e.attackAngle = Math.atan2(e.aimTarget.y - origin.y, e.aimTarget.x - origin.x);
   e.chargeTime = Math.max(0, e.chargeTime - dt);
   e.telegraph = Math.max(0.03, 1 - e.chargeTime / e.chargeDuration);
   if (e.chargeTime <= 1e-9) { e.locked = false; e.telegraph = 0; }
@@ -463,6 +528,7 @@ function destroyEnemy(g, enemy, projectile = {}) {
   emit(g, 'explosion', {
     x: enemy.x, y: enemy.y, radius: enemy.radius,
     enemyType: enemy.type, boss: enemy.type === 'boss', score: points,
+    bossKind: enemy.bossKind, attackName: enemy.attackName, armorOpen: enemy.armorOpen, corePhase: enemy.corePhase,
     tension: Boolean(projectile.tension), weaponMode: projectile.weaponMode || 'normal', drone: Boolean(projectile.drone), chain: g.combo,
   });
   if (enemy.type === 'boss') {
@@ -470,6 +536,8 @@ function destroyEnemy(g, enemy, projectile = {}) {
     g.bossesDefeated += 1;
     g.cycle = g.bossesDefeated + 1;
     g.stage = g.cycle;
+    g.difficulty = difficultyAt(g.time, g.bossesDefeated);
+    g.encounter = normalEncounter(0, g.bossesDefeated);
     g.phase = 'normal'; g.phaseTime = 0; g.normalTime = 0;
     g.returnFromNight = g.night; g.returnSpeed = g.backgroundSpeed;
     g.recoverySpawned = false; g.droneMarked = false; g.patternSection = null;
@@ -477,7 +545,9 @@ function destroyEnemy(g, enemy, projectile = {}) {
     g.nextWaveAt = g.time + 0.7;
     clearCombat(g);
     spawnPickup(g, 'health', enemy.x - 70, enemy.y);
-    emit(g, 'bossDefeated', { x: enemy.x, y: enemy.y, bossKind: enemy.bossKind });
+    emit(g, 'bossDefeated', { x: enemy.x, y: enemy.y, bossKind: enemy.bossKind, bossName: enemy.bossName,
+      attackName: enemy.attackName, attackIndex: enemy.attackIndex, armorOpen: enemy.armorOpen,
+      corePhase: enemy.corePhase, cycle: g.cycle, hell: g.difficulty.hell });
     emit(g, 'phaseChange', { phase: g.phase, cycle: g.cycle });
   } else if (enemy.markedDrone && !enemy.escort) {
     spawnPickup(g, 'drone', enemy.x, enemy.y);
@@ -540,14 +610,16 @@ function updatePlayer(g, dt, input) {
   } else {
     const dx = clamp(Number(input.x) || 0, -1, 1);
     const dy = clamp(Number(input.y) || 0, -1, 1);
-    let targetVX = dx * 225;
-    let targetVY = dy * 490;
+    let targetVX = dx * FLIGHT_CONTROL.horizontalSpeed;
+    let targetVY = dy * FLIGHT_CONTROL.verticalSpeed;
     if (input.pointer && Number.isFinite(input.pointer.x) && Number.isFinite(input.pointer.y)) {
-      targetVX = clamp((input.pointer.x - p.x) * 7, -225, 225);
-      targetVY = clamp((input.pointer.y - p.y) * 11, -490, 490);
+      targetVX = clamp((input.pointer.x - p.x) * 10, -FLIGHT_CONTROL.horizontalSpeed, FLIGHT_CONTROL.horizontalSpeed);
+      targetVY = clamp((input.pointer.y - p.y) * 14, -FLIGHT_CONTROL.verticalSpeed, FLIGHT_CONTROL.verticalSpeed);
     }
-    p.vx = lerp(p.vx || 0, targetVX, 1 - Math.exp(-dt * 7));
-    p.vy = lerp(p.vy || 0, targetVY, 1 - Math.exp(-dt * 16));
+    const responseX = !targetVX || targetVX * p.vx < 0 ? FLIGHT_CONTROL.horizontalBrake : FLIGHT_CONTROL.horizontalResponse;
+    const responseY = !targetVY || targetVY * p.vy < 0 ? FLIGHT_CONTROL.verticalBrake : FLIGHT_CONTROL.verticalResponse;
+    p.vx = lerp(p.vx || 0, targetVX, 1 - Math.exp(-dt * responseX));
+    p.vy = lerp(p.vy || 0, targetVY, 1 - Math.exp(-dt * responseY));
     p.x += p.vx * dt;
     p.y += p.vy * dt;
   }
@@ -568,26 +640,35 @@ function updateEnemies(g, dt, starts) {
     starts.set(e, { x: e.x, y: e.y, angle: e.angle || 0 });
     e.age = (e.age || 0) + dt;
     e.flash = Math.max(0, (e.flash || 0) - dt);
+    e.fireFlash = Math.max(0, (e.fireFlash || 0) - dt);
     e.fireCooldown ??= 0.5;
     if (e.type === 'boss') {
       e.phase = e.hp / e.maxHp < 0.5 ? 1 : 0;
+      const motion = e.motion || bossProfile(Math.max(0, BOSS_KINDS.indexOf(e.bossKind))).motion;
       if (g.phase === 'boss-entry') {
         const progress = clamp(g.phaseTime / RULES.bossEntry, 0, 1);
-        e.x = lerp(e.entryX, e.bossKind === 'carrier' ? 1035 : 1030, 1 - (1 - progress) ** 3);
-        e.y = 320;
-      } else if (e.bossKind === 'carrier') {
-        e.x = 1035; e.y = 320 + Math.sin(g.phaseTime * 0.42) * 65; e.angle = Math.cos(g.phaseTime * 0.42) * 0.03;
+        Object.assign(e, screenToWorld(g, { x: lerp(1490, motion.x, 1 - (1 - progress) ** 3), y: motion.centerY }));
       } else {
-        e.x = 1030; e.y = 320 + Math.sin(g.phaseTime * 0.82) * 155; e.angle = Math.cos(g.phaseTime * 0.82) * 0.075;
+        let centerY = motion.centerY;
+        if (e.bossKind === 'lancer') {
+          const targetY = clamp(720 - worldToScreen(g, g.player).y, 260, 440);
+          if (!e.locked && !e.sequence) e.altitudeCenter = lerp(e.altitudeCenter ?? motion.centerY, targetY, 1 - Math.exp(-dt * 1.8));
+          centerY = e.altitudeCenter ?? motion.centerY;
+        }
+        Object.assign(e, screenToWorld(g, { x: motion.x, y: centerY + Math.sin(g.phaseTime * motion.frequency) * motion.amplitude }));
+        e.angle = Math.cos(g.phaseTime * motion.frequency) * motion.bank;
       }
-      // Retain each boss's vertical path in the visible flight corridor as the
-      // player's wider altitude travel moves the camera. Its world X is unchanged.
-      const roll = cameraRoll(g), screenY = e.y;
-      e.y = 360 + (screenY + g.cameraY - 360 - (e.x - 640) * Math.sin(roll)) / Math.cos(roll);
+      e.artAngle = e.angle;
+      e.escortShield = e.bossKind === 'carrier' && g.enemies.some(other => !other.dead && other.escort && other.sourceBossId === e.id);
       e.dashTime = Math.max(0, (e.dashTime || 0) - dt);
     } else {
       const speed = e.speed || 0, phase = e.phase || 0, baseY = e.baseY ?? e.y;
-      if (e.pattern && (e.holdUntil > g.time || e.sequence || e.locked)) {
+      if (e.escort && g.boss?.id === e.sourceBossId) {
+        const bossScreen = worldToScreen(g, g.boss);
+        const y = clamp(bossScreen.y + (e.escortSlot ? 125 : -125), 110, 610);
+        Object.assign(e, screenToWorld(g, { x: 820 + Math.sin(e.age * 1.8 + e.escortSlot * Math.PI) * 32, y }));
+        e.angle = Math.sin(e.age * 1.8) * 0.12;
+      } else if (e.pattern && (e.holdUntil > g.time || e.sequence || e.locked)) {
         e.x = Math.max(960, e.x - speed * dt);
         const roll = cameraRoll(g);
         const sy = clamp(e.holdScreenY || 360, e.radius + 60, 660 - e.radius);
@@ -647,9 +728,15 @@ function updateProjectiles(g, dt, playerStart, enemyStarts) {
       if (overlapsEnemy(enemy, bullet, 0.82)) {
         if (bullet.pierce > 0) { bullet.pierce -= 1; bullet.hits.push(enemy.id); }
         else bullet.dead = true;
-        enemy.hp -= bullet.power;
+        const art = getMechaSpec(enemy), core = enemy.coreVulnerable && art?.runtimeCore;
+        const coreHit = Boolean(core && distanceSquared(bullet, mechaAnchorWorld(enemy, core)) < (bullet.radius + core.radius) ** 2);
+        const escortShield = enemy.bossKind === 'carrier' && g.enemies.some(other => !other.dead && other.escort && other.sourceBossId === enemy.id);
+        enemy.hp -= bullet.power * (coreHit ? 1.2 : 1) * (escortShield ? 0.7 : 1);
         enemy.flash = 0.07;
-        emit(g, 'hit', { x: bullet.x, y: bullet.y, player: false, enemyType: enemy.type, weaponMode: bullet.weaponMode || 'normal', drone: Boolean(bullet.drone), tension: Boolean(bullet.tension), impactCue: bullet.impactCue });
+        emit(g, 'hit', { x: bullet.x, y: bullet.y, player: false, enemyType: enemy.type,
+          boss: enemy.type === 'boss', bossKind: enemy.bossKind, attackName: enemy.attackName,
+          attackIndex: enemy.attackIndex, armorOpen: Boolean(enemy.armorOpen), corePhase: enemy.corePhase || 0, coreHit,
+          weaponMode: bullet.weaponMode || 'normal', drone: Boolean(bullet.drone), tension: Boolean(bullet.tension), impactCue: bullet.impactCue });
         if (enemy.hp <= 0) destroyEnemy(g, enemy, bullet);
         break;
       }
@@ -820,12 +907,13 @@ function updatePhase(g, dt) {
     const previousNormalTime = g.normalTime;
     g.normalTime += dt;
     if (previousNormalTime < RULES.quietAt - 1e-9 && g.normalTime >= RULES.quietAt - 1e-9) {
-      const variant = g.bossesDefeated % BOSS_KINDS.length;
-      emit(g, 'bossWarning', { bossKind: BOSS_KINDS[variant], bossName: ['WARDEN', 'IRON CARRIER'][variant], remaining: 3 });
+      const profile = bossProfile(g.bossesDefeated);
+      emit(g, 'bossWarning', { bossKind: profile.kind, bossName: profile.name, remaining: 3, hell: profile.hell });
     }
     if (g.time >= g.nextBossAt - 1e-9) spawnBoss(g);
   } else if (g.phase === 'boss-entry' && g.phaseTime >= RULES.bossEntry - 1e-9) {
     g.phase = 'boss'; g.phaseTime = 0;
+    if (g.boss?.bossKind === 'carrier') spawnEscorts(g, g.boss);
     emit(g, 'phaseChange', { phase: g.phase, cycle: g.cycle });
   }
   const smooth = t => { const n = clamp(t, 0, 1); return n * n * (3 - 2 * n); };
@@ -872,6 +960,7 @@ function step(g, dt, input) {
   updatePlayer(g, dt, input);
   const flightY = worldToScreen(g, g.player).y + g.cameraY;
   const flightAltitude = clamp((FLIGHT_MAX_Y - flightY) / (FLIGHT_MAX_Y - FLIGHT_MIN_Y), 0, 1);
+  g.flightAltitude = flightAltitude;
   const routeOffset = Math.cos(g.time * 0.12) * 0.15 * 4 * flightAltitude * (1 - flightAltitude);
   g.targetAltitude = clamp(flightAltitude + routeOffset, 0, 1);
   g.altitude = lerp(g.altitude, g.targetAltitude, 1 - Math.exp(-dt * 1.1));
@@ -879,7 +968,8 @@ function step(g, dt, input) {
   if (wasPlaying) {
     updateSupply(g);
     if (g.phase === 'normal') {
-      const section = normalPattern(g.normalTime);
+      g.encounter = normalEncounter(g.normalTime, g.bossesDefeated);
+      const section = g.encounter.blockId;
       if (section !== g.patternSection) { g.patternSection = section; if (Number.isFinite(g.nextWaveAt)) g.nextWaveAt = Math.min(g.nextWaveAt, g.time); }
       if (g.normalTime < RULES.quietAt && g.time >= g.nextWaveAt) {
         spawnWave(g); g.nextWaveAt = g.time + g.difficulty.waveInterval;

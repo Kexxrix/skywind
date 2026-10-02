@@ -159,7 +159,7 @@ test('enemy cue corona uses light compositing without a dark backing and leaves 
   Renderer.prototype.drawCombatCues.call({presentation:{threatVariant:'C'},flashes:[]},c,{mode:'title',enemies:[],enemyBullets:[b]});
   assert.deepEqual(fills,['lighter']);
   assert.ok(stops.every(([,color])=>color.startsWith('rgba(255,')));
-  assert.deepEqual(arcs,[5.5*.72,5.5*.32]);
+  assert.deepEqual(arcs,[5.5,5.5*.32]);
   assert.equal(b.radius,5.5);
 });
 

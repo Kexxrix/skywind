@@ -93,6 +93,48 @@ async function readyAudio(t, options = {}, missingAsset = null) {
   return { audio, context: audio.context, requests: () => requests };
 }
 
+test('five boss identities give immediate distinct warnings and releases using only cached approved samples', async t => {
+  const { audio, context, requests } = await readyAudio(t);
+  const signatures = new Set(), beforeRequests = requests();
+  for (const bossKind of ['warden', 'carrier', 'lancer', 'bastion', 'apex']) {
+    audio.resetEffects();
+    const event = Object.freeze({ type: 'boss', bossKind });
+    audio.playEvent(event);
+    const arrival = [...audio._uiTones][0].oscillator;
+    assert.equal(arrival.startedAt, context.currentTime);
+    audio.playEvent(Object.freeze({ type: 'enemyShot', boss: true, bossKind, bulletCount: 40 }));
+    const voice = [...audio._voices].at(-1);
+    assert.match(voice.sampleName, /^enemy-0[12]$/);
+    assert.equal(voice.source.startedAt, context.currentTime);
+    assert.equal(audio._voices.size, 1, 'one cue for the actual volley');
+    signatures.add(`${arrival.frequency.events[0][1]}:${voice.source.playbackRate.value}`);
+    assert.deepEqual(event, { type: 'boss', bossKind });
+  }
+  assert.equal(signatures.size, 5);
+  assert.equal(requests(), beforeRequests, 'new identities do not fetch or decode assets during combat');
+});
+
+test('attack/core cues stay bounded under dense event traffic and player damage suppresses decorative tones', async t => {
+  const { audio, context } = await readyAudio(t);
+  for (let index = 0; index < 500; index += 1) {
+    context.advance(0.01);
+    audio.playEvent({ type: 'charge', boss: true, bossKind: ['warden', 'carrier', 'lancer', 'bastion', 'apex'][index % 5], enemyId: index });
+    audio.playEvent({ type: 'coreOpen', bossKind: 'apex', enemyId: index });
+    audio.playEvent({ type: 'enemyShot', boss: true, bossKind: 'apex', bulletCount: 48 });
+    assert.ok([...audio._uiTones].filter(tone => tone.combat).length <= 4);
+    assert.ok(audio._voices.size <= 20);
+  }
+  assert.ok(audio._lastEffects.size <= 6, 'per-enemy identifiers never become unbounded throttle keys');
+  audio.playEvent({ type: 'hit', player: true });
+  const count = context.sources.length;
+  context.advance(0.09);
+  audio.playEvent({ type: 'charge', boss: true, bossKind: 'apex' });
+  audio.playEvent({ type: 'coreOpen', bossKind: 'apex' });
+  assert.equal(context.sources.length, count, 'damage has a quiet interval for decorative cues');
+  audio.setPaused(true);
+  assert.equal(audio._uiTones.size + audio._voices.size + audio._retiringVoices.size, 0);
+});
+
 test('samples load/decode once; combat reuses buffers without fetching and music routing is preserved', async t => {
   const { audio, context, requests } = await readyAudio(t);
   assert.equal(requests(), 51);

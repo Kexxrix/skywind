@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, startGame, updateGame, consumeEvents, screenToWorld, worldToScreen, PLAYER_HIT_RADIUS, WEAPON_DURATION } from '../src/game.js';
+import { bossProfile } from '../src/level.js';
 const STEP = 1 / 120;
 const close = (a, b, epsilon = 1e-7) => assert.ok(Math.abs(a - b) <= epsilon, `${a} != ${b}`);
 function playable(seed = 73) {
@@ -39,13 +40,14 @@ test('entry preserves the background but does not consume combat or supply time'
   close(g.supply.items[0].remaining, 3);
 });
 
-test('both bosses enter combat without a vertical warp at any altitude or frame rate', () => {
-  for (const variant of [0, 1]) for (const direction of [-1, 0, 1]) for (const frame of [1 / 30, 1 / 60, 1 / 144]) {
+test('all five bosses enter combat without a vertical warp at any altitude or frame rate', () => {
+  for (const variant of [0, 1, 2, 3, 4]) for (const direction of [-1, 0, 1]) for (const frame of [1 / 30, 1 / 60, 1 / 144]) {
     const g = playable(); advance(g, 6, { y: direction });
     g.bossesDefeated = variant; g.nextBossAt = g.time + STEP;
     updateGame(g, STEP, { y: direction });
     let lastY = worldToScreen(g, g.boss).y;
-    close(lastY, 320);
+    const profile = bossProfile(variant), maxVerticalSpeed = variant === 2 ? 260 : 128;
+    close(lastY, profile.motion.centerY);
     const originalHp = g.boss.hp, supplyClock = g.nextPickupAt;
     let crossed = false;
     for (let t = 0; t < 1.5; t += frame) {
@@ -53,8 +55,8 @@ test('both bosses enter combat without a vertical warp at any altitude or frame 
       // Reverse during entry too: the camera must move without moving the boss's screen path.
       updateGame(g, frame, { y: t > 0.55 ? -direction : direction });
       const y = worldToScreen(g, g.boss).y;
-      assert.ok(Math.abs(y - lastY) <= 128 * frame + 1e-6, `${g.boss.bossKind} moved ${y - lastY}px`);
-      if (entering && g.phase === 'boss') { crossed = true; assert.ok(Math.abs(y - 320) <= 128 * frame); }
+      assert.ok(Math.abs(y - lastY) <= maxVerticalSpeed * frame + 1e-6, `${g.boss.bossKind} moved ${y - lastY}px`);
+      if (entering && g.phase === 'boss') { crossed = true; assert.ok(Math.abs(y - profile.motion.centerY) <= maxVerticalSpeed * frame); }
       lastY = y;
     }
     assert.ok(crossed);

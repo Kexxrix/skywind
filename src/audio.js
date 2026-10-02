@@ -43,6 +43,15 @@ const WEAPON_SOUNDS = {
   helix: { sample: 'fire-helix', volume: 0.9, duration: 0.2 },
   drone: { sample: 'fire-drone', volume: 0.56, duration: 0.12 },
 };
+// Five mechanical identities reuse the approved samples. No extra network assets
+// or beat clock; warning, release and core response follow the actual event.
+const BOSS_SOUNDS = Object.freeze({
+  warden: { arrival: 146, fireRate: 0.82, charge: 196, core: 784 },
+  carrier: { arrival: 110, fireRate: 0.72, charge: 147, core: 659 },
+  lancer: { arrival: 175, fireRate: 1.04, charge: 262, core: 988 },
+  bastion: { arrival: 98, fireRate: 0.66, charge: 131, core: 587 },
+  apex: { arrival: 164, fireRate: 0.94, charge: 220, core: 880 },
+});
 // Short event accents use their own small budget, never a music/beat clock.
 const COMBAT_ACCENTS = {
   maxTones: 4,
@@ -593,7 +602,9 @@ export class AudioDirector {
     const weaponMode = event.drone || event.weaponMode === 'drone' ? 'drone'
       : event.type === 'shot' && event.powered === false ? 'normal'
         : Object.hasOwn(WEAPON_SOUNDS, event.weaponMode) ? event.weaponMode : 'normal';
-    const targetProfile = TARGET_SOUNDS[event.enemyType] || 'targetLight';
+    const bossSound = BOSS_SOUNDS[event.bossKind] || BOSS_SOUNDS.warden;
+    const targetProfile = event.armorOpen === true && event.coreHit === true ? 'targetSpecial'
+      : TARGET_SOUNDS[event.enemyType] || 'targetLight';
     const tension = event.tension === true, accent = COMBAT_ACCENTS.weapons[weaponMode];
     const pickupEffect = PICKUP_EFFECTS.has(event.effect) ? event.effect
       : (event.pickupType || event.itemType) === 'health' ? 'health' : 'change';
@@ -618,7 +629,15 @@ export class AudioDirector {
         break;
       }
       case 'enemyShot':
-        this._sample('enemy', 'enemy', event.boss ? 0.27 : 0.17, event, 1, event.boss ? 0.82 : 1, 0.2);
+        this._sample('enemy', 'enemy', event.boss ? 0.27 : 0.17, event, 1, event.boss ? bossSound.fireRate : 1, 0.2);
+        break;
+      case 'charge':
+        // One onset per attack, not one sound per bullet or telegraph frame.
+        this._combatAccent('attack-charge', event.boss ? bossSound.charge : 330,
+          event.boss ? bossSound.charge * 1.5 : 440, 0.18, event.boss ? 0.065 : 0.035, 'triangle', 0.18, 2);
+        break;
+      case 'coreOpen':
+        this._combatAccent('core-open', bossSound.core * 0.75, bossSound.core, 0.14, 0.045, 'sine', 0.3, 2);
         break;
       case 'explosion': {
         if (event.boss || event.player) {
@@ -693,8 +712,8 @@ export class AudioDirector {
       }
       case 'boss':
         [0, 0.32, 0.64].forEach(delay => {
-          this._tone(146, 110, 0.24, 0.13, 'sawtooth', delay);
-          this._tone(73, 55, 0.28, 0.13, 'sine', delay);
+          this._tone(bossSound.arrival, bossSound.arrival * 0.75, 0.24, 0.13, 'sawtooth', delay);
+          this._tone(bossSound.arrival / 2, bossSound.arrival * 0.375, 0.28, 0.13, 'sine', delay);
         });
         break;
       case 'bossDefeated':
