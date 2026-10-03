@@ -13,7 +13,20 @@
 
 ## 게시 상태
 
-기존 Sites 공개 사이트 업데이트 및 GitHub main 백업을 진행 중이다. 성공 결과는 아래에 후속 기록한다. 새 사이트·터널·공개 범위 변경은 없다.
+**기존 공개 사이트 버전8 반영 성공, GitHub main의 게임 소스·제작 원본 백업 완료.** 새 사이트·터널·공개 범위 변경은 없다.
+
+- 공개 주소: https://skywind.kexxadrix.chatgpt.site
+- GitHub: https://github.com/Kexxrix/skywind — 게임·원본 백업 커밋 `3399c17ef7c9e09f6a39c0d2566390b520c915b3`. 이 문서의 게시 영수증은 후속 문서 커밋에 포함한다.
+- Sites 버전: `8` / `appgprj_6a9c5fa064288191a799816ed259f986~appgver_23ff3fe7a8dc81918cc9fc6076f18b5a`.
+- 배포: `appgdep_6ac12528f15c81919bf909684ab8a4eb`, `succeeded`, 2026-10-04 00:54:38 KST.
+- Sites 소스 커밋: `f7bec1890cc50285ec09e6d811cea2cfef9b5ff1`. Sites와 GitHub 저장소는 서로 다른 커밋 이력을 사용하며 실행 파일의 동일성은 위 SHA256으로 확인한다.
+- 업로드된 패키지: 게임233파일 + 호스팅 설정1파일. 패키지 안 게임 파일도 전부 원본과 바이트 단위로 일치한다.
+
+Sites native 배포 성공 상태·URL을 확인했다. 게시 후 별도 공개 브라우저 플레이/직접 청음은 수행하지 않았으며, 이전 동일 후보의 실제 화면 QA와 이번 재현 빌드·패키지 검증을 구분한다. Windows 패키징 실행 환경의 Git Bash 경로와 tar의 로컬 드라이브 처리를 보정했으며 게임 또는 호스팅 설정은 바꾸지 않았다.
+
+롤백이 필요하면 이전 Sites 버전7 `appgprj_6a9c5fa064288191a799816ed259f986~appgver_0429a344995c81918f7a038aabdc5f5e`를 같은 사이트에 재배포한다. Git 강제 push/reset은 필요하지 않다.
+
+이번 게시용 로컬 소스는 `E:/codexwork/Skywind/.work/release-20261004/github`에 있다. 기존 프로젝트 루트의 이전 브랜치·미커밋 문서와 `.work/12h-build/checkout`은 원형 보존했으며 그 폴더들을 최신본으로 덮어쓰지 않았다.
 
 ## 백업 내용과 다른 환경 실행
 

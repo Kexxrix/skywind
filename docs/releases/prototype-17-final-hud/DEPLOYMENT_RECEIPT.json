@@ -1,0 +1,40 @@
+{
+  "published": {
+    "id": "appgdep_6ac12528f15c81919bf909684ab8a4eb",
+    "project_id": "appgprj_6a9c5fa064288191a799816ed259f986",
+    "title": "SkyWind",
+    "version_id": "appgprj_6a9c5fa064288191a799816ed259f986~appgver_23ff3fe7a8dc81918cc9fc6076f18b5a",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://skywind.kexxadrix.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a9c5fa064288191a799816ed259f986",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-03T15:54:38.763337+00:00"
+  },
+  "savedVersion": {
+    "id": "appgprj_6a9c5fa064288191a799816ed259f986~appgver_23ff3fe7a8dc81918cc9fc6076f18b5a",
+    "project_id": "appgprj_6a9c5fa064288191a799816ed259f986",
+    "version_number": 8,
+    "source": {
+      "commit_sha": "f7bec1890cc50285ec09e6d811cea2cfef9b5ff1"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000950482068359f6d29e97dacf",
+      "content_hash": "sha256:585bf833e1668d7244767416f5d9cc58f8247a686dc6a4fe50f2abdb90187d7a",
+      "size_bytes": 58204160,
+      "file_count": 234
+    },
+    "screenshot_url": null,
+    "deployment_id": null
+  },
+  "source": {
+    "project_id": "appgprj_6a9c5fa064288191a799816ed259f986",
+    "commit_sha": "f7bec1890cc50285ec09e6d811cea2cfef9b5ff1",
+    "archive": "E:/codexwork/Skywind/.work/release-20261004/SkyWind_prototype17_site.tar.gz"
+  },
+  "githubGameplayCommit": "3399c17ef7c9e09f6a39c0d2566390b520c915b3"
+}

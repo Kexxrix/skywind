@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-03T15:53:50.161273+00:00",
+  "archiveFiles": 234,
+  "runtimeFiles": 233,
+  "runtimeCanonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f",
+  "allRuntimeBytesMatch": true,
+  "hosting": {
+    "project_id": "appgprj_6a9c5fa064288191a799816ed259f986",
+    "static": {
+      "directory": "dist"
+    }
+  }
+}
