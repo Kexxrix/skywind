@@ -1,0 +1,24 @@
+{
+  "carrier": {
+    "loader": "PASS",
+    "contractExactSemanticStates": 24,
+    "runtimeUniquePNGs": 21,
+    "sourceSnapshots": 20,
+    "sourceBytesPreserved": true,
+    "hashes": "PASS",
+    "newRemainingRendered": 17,
+    "reusedRepresentative": 3,
+    "portCount": 2
+  },
+  "lancer": {
+    "loader": "PASS",
+    "contractExactSemanticStates": 14,
+    "runtimeUniquePNGs": 10,
+    "sourceSnapshots": 10,
+    "sourceBytesPreserved": true,
+    "hashes": "PASS",
+    "newRemainingRendered": 7,
+    "reusedRepresentative": 3,
+    "portCount": 2
+  }
+}

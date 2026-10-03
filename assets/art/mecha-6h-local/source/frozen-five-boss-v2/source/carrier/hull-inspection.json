@@ -1,0 +1,677 @@
+{
+  "local-carrier-design-revision-v3/phase_000_payload2": {
+    "decodedRGBASha256": "33e9016b7e47ff6046eb480fe378da80d03348e57e0aee5fdec878b03352a0f1",
+    "hullPixels": 33941,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload2_fire": {
+    "decodedRGBASha256": "ef1ffaa6e522778aee7b213c1dce909dbae196a9da769baa663478d533dd05d8",
+    "hullPixels": 33840,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload1near": {
+    "decodedRGBASha256": "7ae048e3fd07555b44421014ac9eb83d13b49a7e3ca530d5292522d12cbfbfa9",
+    "hullPixels": 33479,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload1near_fire": {
+    "decodedRGBASha256": "38c37b06b06b6070564a33fd96bd49c4d1953995619874515f751e19cbd0deac",
+    "hullPixels": 33378,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload1far": {
+    "decodedRGBASha256": "1566a6a4326f0f6abfd985cd380b08a07739d2a164eb0d2b50aca6a18f33276d",
+    "hullPixels": 33096,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload1far_fire": {
+    "decodedRGBASha256": "4303fdc7d016642c3c951d8e99c1b5d2acac5b95b0b95a8c25a0deeb8a92a382",
+    "hullPixels": 32995,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload0": {
+    "decodedRGBASha256": "5cd766b003ca414cfb48059fe0deba09da79b6a4e5850b0ab1c9150eb3d1ce54",
+    "hullPixels": 32634,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_000_payload0_fire": {
+    "decodedRGBASha256": "a7ed3700b4c08151dd4b1c0ade77144c08ff84ec31afe0685ccc2eb0976c433a",
+    "hullPixels": 32533,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload2": {
+    "decodedRGBASha256": "630ad9ee3a60097d42fe6408b469dda2a9f4de4a9dcee5207087849f430c3e38",
+    "hullPixels": 34423,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload2_fire": {
+    "decodedRGBASha256": "55e0a539ab658b9d9a4bdb540a3449c11aa6740b99e0812da32e89285da9ea1f",
+    "hullPixels": 34322,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload1near": {
+    "decodedRGBASha256": "4b29b71391953ca5b8b6b2b4a1e079b73b459e64d6ca1d5d47e67ea593bc7f8c",
+    "hullPixels": 33961,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload1near_fire": {
+    "decodedRGBASha256": "c161f971a30cc5f3f06c6b7d6021bf23125f26be757be0606402328f89df576c",
+    "hullPixels": 33860,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload1far": {
+    "decodedRGBASha256": "c0404db52eec026a09eb68a33f328caf067aa8a43b9da14578935669198ff43a",
+    "hullPixels": 33578,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload1far_fire": {
+    "decodedRGBASha256": "79e8d5bb8ee0c9732cd485aa063e6bcd3de8367c267e239a72c18f2ce972ff48",
+    "hullPixels": 33477,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload0": {
+    "decodedRGBASha256": "f564f7f35c1d7afd8991a41fb7592da2d4a77efa243f9cbc74b9c3486d3b7870",
+    "hullPixels": 33116,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_025_payload0_fire": {
+    "decodedRGBASha256": "207fafbb0ab987d5096ab79829b7dbaab5894b444970484ad21c53187807f955",
+    "hullPixels": 33015,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload2": {
+    "decodedRGBASha256": "6375dfb9d9065825f72286c7efe1868aa6073162c01ea9d35a1f9799425f3732",
+    "hullPixels": 34415,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload2_fire": {
+    "decodedRGBASha256": "661f991042e6c874e9f4d3731fcaae643953837b2b43074f04a3c9e36e2bd81b",
+    "hullPixels": 34314,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload1near": {
+    "decodedRGBASha256": "b5d5fef22d12a551b060cc7d711b2a8a8f9ca78e1f398249977f1f997a64878d",
+    "hullPixels": 33953,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload1near_fire": {
+    "decodedRGBASha256": "da0e8d5470720ba8c52526ae08aca9f26e30d36e05fd165c8f5483e600c7bc5f",
+    "hullPixels": 33852,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload1far": {
+    "decodedRGBASha256": "6b888dd5e04025d9191f10a7ed04416adcf9202eedafbbd73387d146726c1240",
+    "hullPixels": 33687,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload1far_fire": {
+    "decodedRGBASha256": "5fbff3fcd5a46087a1e62680108444a29ba51a0b0e0f401e2b93e17c8448946d",
+    "hullPixels": 33586,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload0": {
+    "decodedRGBASha256": "663dad6e5ee8e809dda07544f40f62e93677a800f472db81acff717ad8aaea2b",
+    "hullPixels": 33225,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_050_payload0_fire": {
+    "decodedRGBASha256": "3e342ac2f8ab514cb4370fdc7bfdf9d5e73c4eeb34c1e229f7beeae562a371fc",
+    "hullPixels": 33124,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload2": {
+    "decodedRGBASha256": "f72add3550fdc910408f816d40225c18da57e22b5c820efc1ab74cc8205160c3",
+    "hullPixels": 34992,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload2_fire": {
+    "decodedRGBASha256": "dad2c9f7d5dda0349e28829e9e4c0a1e376961457ee061a25d0824712166746e",
+    "hullPixels": 34891,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload1near": {
+    "decodedRGBASha256": "dca57253045b8aa4e2d484bb128723703ab78097ab3943590e8d9fdef8db6c11",
+    "hullPixels": 34530,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload1near_fire": {
+    "decodedRGBASha256": "8caee56f7ab3edde44cbd42842c99d7a34ef0818c7bee329125a3195d794e6ad",
+    "hullPixels": 34429,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload1far": {
+    "decodedRGBASha256": "f0ea8e666df77ba6584fe5d74413e96ccd82e1b0d9ae61e1a64a563f06d33f6c",
+    "hullPixels": 34147,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload1far_fire": {
+    "decodedRGBASha256": "ac6e5c8851a844b018825aca189041064f1e516a5d15028d26c74d2c11d78e10",
+    "hullPixels": 34046,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload0": {
+    "decodedRGBASha256": "0eca1c60ccf25fb69845ffb537d54d9a9974ef3d06b3520523cbc19d37dff3ec",
+    "hullPixels": 33685,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_075_payload0_fire": {
+    "decodedRGBASha256": "3eda7f90fe98aef1e491303a5abdf8fa803224baca26ccb6edb865799857daec",
+    "hullPixels": 33584,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload2": {
+    "decodedRGBASha256": "40a9b07a3cea05e1ff8b4cee473ee5ec4b0574862831bb31d562040c667e53ac",
+    "hullPixels": 36588,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload2_fire": {
+    "decodedRGBASha256": "d9be7a6a89ecf09d7465e2c1524b7f7401b8299c5f3f6225a9018e9042c698cd",
+    "hullPixels": 36487,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload1near": {
+    "decodedRGBASha256": "a4c05566cada5d652a4f837903c9b2bc54195f119d8f0d015b7eff3fb35a813f",
+    "hullPixels": 36126,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload1near_fire": {
+    "decodedRGBASha256": "169485b0ca82b17fa52b524b1a6a0e00b7652969baa120cf21891f9fa651ae36",
+    "hullPixels": 36025,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload1far": {
+    "decodedRGBASha256": "fbab8435553e33bd26b40002cd22607743f16d43d84f5cd59bd7d9719fe99e83",
+    "hullPixels": 35743,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload1far_fire": {
+    "decodedRGBASha256": "d780441e81404a3b3912589dc91a1197872f22cd8de09455e98bf3d44c4e3915",
+    "hullPixels": 35642,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload0": {
+    "decodedRGBASha256": "ad04cae33406c1dad830aa372f55adb475f64ca84724a31ccf101e57409b2db5",
+    "hullPixels": 35281,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/phase_100_payload0_fire": {
+    "decodedRGBASha256": "67528f42a270bf50b65c2949bc3906b155ce909fb0bceb5fa324ed71a31e7ecc",
+    "hullPixels": 35180,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/idle": {
+    "decodedRGBASha256": "33e9016b7e47ff6046eb480fe378da80d03348e57e0aee5fdec878b03352a0f1",
+    "hullPixels": 33941,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/charge": {
+    "decodedRGBASha256": "33e9016b7e47ff6046eb480fe378da80d03348e57e0aee5fdec878b03352a0f1",
+    "hullPixels": 33941,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/open": {
+    "decodedRGBASha256": "40a9b07a3cea05e1ff8b4cee473ee5ec4b0574862831bb31d562040c667e53ac",
+    "hullPixels": 36588,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      10,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "local-carrier-design-revision-v3/fire": {
+    "decodedRGBASha256": "ef1ffaa6e522778aee7b213c1dce909dbae196a9da769baa663478d533dd05d8",
+    "hullPixels": 33840,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      47,
+      92,
+      345,
+      312
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "local-carrier-child-largeform-v1/idle": {
+    "decodedRGBASha256": "85df41f94caef2b79262d71ef607aa732cb14c97127eb894c2922c4fa37f9796",
+    "hullPixels": 1369,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      156,
+      170,
+      227,
+      210
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 1
+  }
+}

@@ -1,20 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { supplyPresentation, tensionPresentation, gameViewport, SUPPLY_COLORS } from '../src/presentation.js';
+import { supplyPresentation, tensionPresentation, healthPresentation, weaponPresentation, pickupPresentation, gameViewport, SUPPLY_COLORS } from '../src/presentation.js';
 import { createGame, getWeaponStatus } from '../src/game.js';
 
 const near = (actual, expected) => assert.ok(Math.abs(actual - expected) < 1e-8, `${actual} differs from ${expected}`);
 const supply = (side, type = 'change', extra = {}) => ({ id: side === 'top' ? 41 : 42, side, type, weaponMode: 'lance', status: 'preview', remaining: 3, ...extra });
 
-test('supply direction colors stay fixed when change and maintain swap altitude', () => {
+test('supply action colors stay yellow for maintenance and blue for replacement at either altitude', () => {
   const player = Object.freeze({ basicLevel: 2, powerTime: 0 });
   for (const type of ['change', 'maintain']) {
     const top = supplyPresentation(Object.freeze(supply('top', type)), player);
     const bottom = supplyPresentation(Object.freeze(supply('bottom', type)), player);
-    assert.equal(top.color, '#FFD46B');
-    assert.equal(bottom.color, '#78F4BA');
-    assert.equal(top.color, SUPPLY_COLORS.top);
-    assert.equal(bottom.color, SUPPLY_COLORS.bottom);
+    const group=type==='change'?'change':'maintain';
+    assert.equal(top.color, type==='change'?'#70BCFF':'#FFD46B');
+    assert.equal(bottom.color,top.color);
+    assert.equal(top.color,SUPPLY_COLORS[group]);
+    assert.equal(bottom.colorGroup,group);
     assert.ok(top.label.startsWith('↑ '));
     assert.ok(bottom.label.startsWith('↓ '));
     assert.equal(top.effect, bottom.effect);
@@ -30,7 +31,7 @@ test('an announced change keeps its chosen weapon through player expiry, growth 
     { powerTime: 45, basicLevel: 5, weaponMode: 'lance' },
   ]) {
     const shown = supplyPresentation(item, Object.freeze(player));
-    assert.equal(shown.effect, 'HELIX');
+    assert.equal(shown.effect, 'SWAP · HELIX 18s');
     assert.equal(shown.mode, 'helix');
     assert.equal(shown.id, 41);
   }
@@ -43,9 +44,12 @@ test('maintain label follows current main weapon, including the exact expiry and
     [{ powerTime: 0.001, basicLevel: 2 }, 'EXTEND +15s'],
     [{ powerTime: 0, basicLevel: 2 }, 'BASE Lv.2 → 3'],
     [{ powerTime: 0, basicLevel: 4, droneTime: 15 }, 'BASE Lv.4 → 5'],
-    [{ powerTime: 0, basicLevel: 5, droneTime: 0 }, 'MAX · DRONE 15s'],
-    [{ powerTime: 0, basicLevel: 5, droneTime: 9 }, 'MAX · DRONE 15s'],
-    [{ powerTime: 45, basicLevel: 5, droneTime: 15 }, 'EXTEND +15s'],
+    [{ powerTime: 0, basicLevel: 5, droneTime: 0 }, 'DRONE 15s'],
+    [{ powerTime: 0, basicLevel: 5, droneTime: 9 }, 'DRONE 15s'],
+    [{ powerTime: 35, basicLevel: 5, droneTime: 15 }, 'EXTEND +10s'],
+    [{ powerTime: 44.5, basicLevel: 5, droneTime: 15 }, 'EXTEND +0.5s'],
+    [{ powerTime: 44.999, basicLevel: 5, droneTime: 15 }, 'EXTEND +<0.1s'],
+    [{ powerTime: 45, basicLevel: 5, droneTime: 15 }, 'MAX 45s'],
   ];
   for (const [player, expected] of cases) assert.equal(supplyPresentation(item, Object.freeze(player)).effect, expected);
   assert.equal(item.weaponMode, 'lance', 'current-effect labels do not mutate the supply seed or selection');
@@ -56,7 +60,7 @@ test('preview is arrival countdown, active is collection lifetime and neither cr
   const previewItem = Object.freeze(supply('top', 'change', { remaining: 1.5 }));
   const preview = supplyPresentation(previewItem, player);
   assert.equal(preview.phase, 'APPROACH');
-  assert.equal(preview.label, '↑ LANCE · 1.5s');
+  assert.equal(preview.label, '↑ SWAP · LANCE 18s · 1.5s');
   near(preview.gauge, 0.5);
   const active = supplyPresentation(Object.freeze({ ...previewItem, status: 'active', remaining: 1.05 }), player);
   assert.equal(active.phase, 'COLLECT');
@@ -158,4 +162,58 @@ test('compact and responsive boundaries use the game rectangle rather than the o
   const shortened = gameViewport(844, 280);
   assert.equal(shortened.compact, true); assert.equal(shortened.short, true);
   near(shortened.top, 0);
+});
+
+test('HP warning labels and meter use actual HP with exact warning boundaries', () => {
+  for (const [hp,state,label] of [[100,'stable','HP'],[56,'stable','HP'],[55,'warning','CAUTION'],
+    [31,'warning','CAUTION'],[30,'critical','LOW HP'],[1,'critical','LOW HP'],[0,'critical','LOW HP']]) {
+    const player=Object.freeze({hp,maxHp:100}),shown=healthPresentation(player);
+    assert.equal(shown.state,state);assert.equal(shown.label,label);
+    assert.equal(shown.value,String(hp));near(shown.gauge,hp/100);
+    assert.equal(player.hp,hp,'HUD cannot heal or damage the player');
+  }
+  assert.equal(healthPresentation({hp:120,maxHp:150}).value,'120');
+  near(healthPresentation({hp:120,maxHp:150}).gauge,.8);
+  assert.equal(healthPresentation({hp:200,maxHp:150}).gauge,1);
+  assert.equal(healthPresentation({hp:-1,maxHp:100}).gauge,0);
+});
+
+test('weapon projection retains the last combat fraction and returns to the actual base growth', () => {
+  const base=createGame(74912).player;
+  for (const level of [1,2,3,4,5]) {
+    const player=Object.freeze({...base,basicLevel:level,weaponMode:'helix',powerTime:0,droneTime:0});
+    const shown=weaponPresentation(player);
+    assert.equal(shown.mode,'normal');assert.equal(shown.special,false);
+    assert.equal(shown.time,level===5?'MAX':`Lv.${level}`);near(shown.gauge,level/5);
+    assert.equal(shown.drone,null);
+  }
+  for (const remaining of [45,18,3,.001]) {
+    const player=Object.freeze({...base,basicLevel:4,weaponMode:'helix',powerTime:remaining,droneTime:.001});
+    const before=JSON.stringify(player),shown=weaponPresentation(player);
+    assert.equal(shown.mode,'helix');assert.equal(shown.special,true);
+    assert.equal(shown.warning,remaining<=3);near(shown.gauge,remaining/45);
+    assert.equal(shown.drone.time,'0.1s');assert.equal(shown.drone.warning,true);
+    assert.equal(JSON.stringify(player),before);
+  }
+  assert.equal(weaponPresentation({...base,powerTime:.001,weaponMode:'helix'}).time,'0.1s');
+});
+
+test('item action projection distinguishes extension, base growth, support and real replacement without side input', () => {
+  const base=createGame(74912).player;
+  const cases=[
+    [{...base,powerTime:18,weaponMode:'lance'},'maintain','extend','maintain','EXTEND +15s'],
+    [{...base,powerTime:44.5,weaponMode:'lance'},'maintain','extend','maintain','EXTEND +0.5s'],
+    [{...base,powerTime:45,weaponMode:'lance'},'maintain','extend','maintain','MAX 45s'],
+    [{...base,powerTime:0,basicLevel:4},'maintain','levelUp','maintain','BASE Lv.4 → 5'],
+    [{...base,powerTime:0,basicLevel:5},'maintain','drone','maintain','DRONE 15s'],
+    [{...base,powerTime:45,weaponMode:'lance'},'power','change','change','SWAP · HELIX 18s'],
+    [{...base,hp:90},'health','heal','heal','HP +10'],
+  ];
+  for (const [player,type,action,group,label] of cases) {
+    const item=Object.freeze({type,weaponMode:'helix'}),before=JSON.stringify(player);
+    const shown=pickupPresentation(item,Object.freeze(player));
+    assert.equal(shown.action,action);assert.equal(shown.colorGroup,group);
+    assert.equal(shown.color,SUPPLY_COLORS[group]);assert.equal(shown.effect,label);
+    assert.equal(JSON.stringify(player),before);
+  }
 });

@@ -7,7 +7,7 @@ import { createGame, startGame, updateGame, consumeEvents, worldToScreen, screen
 test('difficulty has five learning stages and a capped endless sixth row without clock progression', () => {
   const rows = Array.from({ length: 6 }, (_, i) => trialDifficulty(i));
   assert.deepEqual(rows.map(row => row.pace), [0, 1, 2, 3, 4, 5]);
-  assert.deepEqual(rows.map(row => row.maxEnemyBullets), [120, 180, 240, 300, 360, 420]);
+  assert.deepEqual(rows.map(row => row.maxEnemyBullets), [180, 180, 240, 300, 360, 420]);
   assert.deepEqual(rows.map(row => row.minimumFlightTime), [.9, .7, .65, .6, .55, .5]);
   assert.equal(rows[5].hell, true);
   assert.equal(trialDifficulty(1000).maxEnemies, rows[5].maxEnemies);
@@ -136,7 +136,7 @@ test('an uninterrupted runtime reaches all five bosses and hell only after six r
   assert.ok(patternSets[1].has('B04'));
   assert.ok(patternSets[2].has('B02'));
   assert.ok(patternSets[3].has('B05'));
-  assert.ok(patternSets[4].has('B01'));
+  for(const pattern of ['loom','rail','petal'])assert.ok(patternSets[4].has(pattern),'Apex organ script '+pattern);
   assert.ok(waveBlocks.size >= 20, 'the actual wave runtime consumes stage-specific block scripts');
 });
 

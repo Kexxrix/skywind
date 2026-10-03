@@ -1,0 +1,152 @@
+{
+  "lancer/phase_000": {
+    "decodedRGBASha256": "657e6ac6c49ce1982be82f78ee6eeb98f165e7f2b1eb7ba04f89080682fceef3",
+    "hullPixels": 21556,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      14,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_000_fire": {
+    "decodedRGBASha256": "bf5964a95c2ba44e0660c8db6ad0c3b98442ca02208c6af4bc3a607d1a5c25f7",
+    "hullPixels": 20051,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      51,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_025": {
+    "decodedRGBASha256": "9e1c5ea13e6864fef5b0c8f9740276e6fe5a430040e918c95a6c15d8bee9333b",
+    "hullPixels": 21994,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      14,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_025_fire": {
+    "decodedRGBASha256": "806cf2b8daf6132912a29aa1033b2b27b04872ab7387243a882d91b9cf577c9a",
+    "hullPixels": 20489,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      51,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_050": {
+    "decodedRGBASha256": "5dcbec2c3ef78f922d3dcea7c8b8e85be3ce15b726755e1926d428dc41355cb7",
+    "hullPixels": 23890,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      14,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_050_fire": {
+    "decodedRGBASha256": "bc7d419293e39e5104074c6653e1b74dc800677a3f00e10cac8ea52782498ebd",
+    "hullPixels": 22385,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      51,
+      78,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_075": {
+    "decodedRGBASha256": "9b532780663b3b3bc6a2f375b968ec5640f9b0f5667cde2cceb9ad965b1e7bc2",
+    "hullPixels": 25385,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      14,
+      58,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_075_fire": {
+    "decodedRGBASha256": "f8d49c224969946cb4cbc17f0c0dd4997557af495d73ce0f57ee6ec0b033cfcc",
+    "hullPixels": 23880,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      51,
+      58,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  },
+  "lancer/phase_100": {
+    "decodedRGBASha256": "17d203780efdabe0df7f42d0a4322bff0d93d4baf71cdb830ea074580753336e",
+    "hullPixels": 25276,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      14,
+      25,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  },
+  "lancer/phase_100_fire": {
+    "decodedRGBASha256": "606d1ec4bc03fa91adafd3e538a1d1bc8943dd106287c6c795bb102bbe55dbc5",
+    "hullPixels": 23771,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      51,
+      25,
+      343,
+      250
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 2
+  }
+}

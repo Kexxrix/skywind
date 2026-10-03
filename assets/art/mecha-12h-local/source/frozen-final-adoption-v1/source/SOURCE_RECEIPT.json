@@ -1,0 +1,244 @@
+[
+  {
+    "key": "local-v8-warden-depth",
+    "roles": [
+      "warden"
+    ],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/warden/manifest-candidate.json",
+    "originalManifestSHA256": "26d7695b62792c1ee35c4b9649addea601f88a82fd5eddb37e08a04baa77cf07",
+    "originalBlend": "frozen-five-boss-finish-v1/warden/actual.blend",
+    "copiedBlend": "editable/warden/actual.blend",
+    "blendSHA256": "33e4226592eeb755232e4385dec8a445fa81663195cb3de0cd6bab109e243279",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-carrier-finish-v1",
+    "roles": [
+      "carrier"
+    ],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/carrier/manifest-candidate.json",
+    "originalManifestSHA256": "e3d9de1766f4ecfc19616194dc725caeda8d57efff10f358040e9d5b69689b9a",
+    "originalBlend": "frozen-five-boss-finish-v1/carrier/actual.blend",
+    "copiedBlend": "editable/carrier/actual.blend",
+    "blendSHA256": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-carrier-child-finish-v1",
+    "roles": [],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/carrier/manifest-candidate.json",
+    "originalManifestSHA256": "e3d9de1766f4ecfc19616194dc725caeda8d57efff10f358040e9d5b69689b9a",
+    "originalBlend": "frozen-five-boss-finish-v1/carrier/actual.blend",
+    "copiedBlend": "editable/carrier/actual.blend",
+    "blendSHA256": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-lancer-finish-v1",
+    "roles": [
+      "lancer"
+    ],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/lancer/manifest-candidate.json",
+    "originalManifestSHA256": "55d35a22b0444bfbec4d9ba5ad2ee2937677737db4c7e14de0f0697dea7397cc",
+    "originalBlend": "frozen-five-boss-finish-v1/lancer/actual.blend",
+    "copiedBlend": "editable/lancer/actual.blend",
+    "blendSHA256": "ebdcbad947dd136e2e414a36311676cf2445618f41ef0a5df8f2e5f88309843e",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-bastion-finish-v1",
+    "roles": [
+      "bastion"
+    ],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/bastion/manifest-candidate.json",
+    "originalManifestSHA256": "3c179337a2f51cc6c12b6d3889f0eba76e14249c22824e0a971ff7b6ced3fbb2",
+    "originalBlend": "frozen-five-boss-finish-v1/bastion/actual.blend",
+    "copiedBlend": "editable/bastion/actual.blend",
+    "blendSHA256": "9a97f84c70789675b7b7394d7aa866c70b6333d368981446fb38320610487c18",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-apex-finish-v1",
+    "roles": [
+      "apex"
+    ],
+    "group": "boss",
+    "originalManifest": "frozen-five-boss-finish-v1/apex/manifest-candidate.json",
+    "originalManifestSHA256": "6e08fe15c697352694659111180a23a97c18d300d27b5c0040f4345b0ec3f18a",
+    "originalBlend": "frozen-five-boss-finish-v1/apex/actual.blend",
+    "copiedBlend": "editable/apex/actual.blend",
+    "blendSHA256": "048481ec8b033e3a04375cc6c93d937542cd39ef13e6423be1c91e69070cec3f",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-dragonfly-v1",
+    "roles": [
+      "dragonfly"
+    ],
+    "group": "normal7",
+    "originalManifest": "normal-dragonfly/manifest-candidate.json",
+    "originalManifestSHA256": "4052b9f2cded1293fafdcdf689927f6e32dce098185f6cd56bb44db7e1a74b40",
+    "originalBlend": "normal-dragonfly/actual.blend",
+    "copiedBlend": "editable/dragonfly/actual.blend",
+    "blendSHA256": "18c6bc12ec8690163e4d232913ccdc0f288b6b9aa87439806af37a7c7216cae1",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-wasp-v1",
+    "roles": [
+      "wasp"
+    ],
+    "group": "normal7",
+    "originalManifest": "normal-wasp/manifest-candidate.json",
+    "originalManifestSHA256": "e4ffc58228e43fcb6cf65ca018842f54626db2066ac8a41707877585d3919460",
+    "originalBlend": "normal-wasp/actual.blend",
+    "copiedBlend": "editable/wasp/actual.blend",
+    "blendSHA256": "e04e3e2b82a39b07d4455b3de35f5813efce867867d1ddd33766f844b191bdc3",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-normal-ray-v1",
+    "roles": [
+      "ray"
+    ],
+    "group": "normal7",
+    "originalManifest": "normal-ray-worm/ray-v1/manifest-candidate.json",
+    "originalManifestSHA256": "53c639fdf70f04cb0151b293af775dab3923a5f9059c89328da1d60f4c41b01e",
+    "originalBlend": "normal-ray-worm/ray-v1/actual.blend",
+    "copiedBlend": "editable/ray/actual.blend",
+    "blendSHA256": "694ca0d75600a15711515d43863f313cffcfc0da37660a3afe4f60d4d18d8de0",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-normal-worm-v1",
+    "roles": [
+      "worm"
+    ],
+    "group": "normal7",
+    "originalManifest": "normal-ray-worm/worm-v1/manifest-candidate.json",
+    "originalManifestSHA256": "09f9d9a9f7b6d08619ac7b1ea1c3fdaf67311aa4c73647ac23781da70e07c9fe",
+    "originalBlend": "normal-ray-worm/worm-v1/actual.blend",
+    "copiedBlend": "editable/worm/actual.blend",
+    "blendSHA256": "7ea5795dcf15ced648cd8e76dd846940d1c7d85fc744bd1e83e733794445ba38",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-dart-representative-v1",
+    "roles": [
+      "dart"
+    ],
+    "group": "normal7",
+    "originalManifest": "frozen-dart-scarab-v1/sources/dart/manifest-candidate.json",
+    "originalManifestSHA256": "165dec88828df7588c1734553bf7d9bdb601481246703e8cfb849aaa0532b107",
+    "originalBlend": "frozen-dart-scarab-v1/sources/dart/actual.blend",
+    "copiedBlend": "editable/dart/actual.blend",
+    "blendSHA256": "7864dce645e94fa29cb1e398a12652b8a93583b344491f75f4ba82dd7ad00d23",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-scarab-v2",
+    "roles": [
+      "scarab"
+    ],
+    "group": "normal7",
+    "originalManifest": "frozen-dart-scarab-v1/sources/scarab/manifest-candidate.json",
+    "originalManifestSHA256": "54fb368e2b6fc4765b77f9ace3e0e0aea85027be480f529962d7efc2d67cc005",
+    "originalBlend": "frozen-dart-scarab-v1/sources/scarab/actual.blend",
+    "copiedBlend": "editable/scarab/actual.blend",
+    "blendSHA256": "388fbe1cd5350faa2cb72df60d4649048bef941fef8d23e8841dee2226675637",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-scarab-child-v2",
+    "roles": [],
+    "group": "normal7",
+    "originalManifest": "frozen-dart-scarab-v1/sources/scarab/manifest-candidate.json",
+    "originalManifestSHA256": "54fb368e2b6fc4765b77f9ace3e0e0aea85027be480f529962d7efc2d67cc005",
+    "originalBlend": "frozen-dart-scarab-v1/sources/scarab/actual.blend",
+    "copiedBlend": "editable/scarab/actual.blend",
+    "blendSHA256": "388fbe1cd5350faa2cb72df60d4649048bef941fef8d23e8841dee2226675637",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-v2-pincer",
+    "roles": [
+      "pincer"
+    ],
+    "group": "normal7",
+    "originalManifest": "frozen-boss-candidates-v2/sources/pincer/manifest-candidate.json",
+    "originalManifestSHA256": "3050cd3aa25de114429a559fad4464889b33c104e38ffedcc6b9f8033881a98a",
+    "originalBlend": "frozen-boss-candidates-v2/sources/pincer/actual.blend",
+    "copiedBlend": "editable/pincer/actual.blend",
+    "blendSHA256": "b99f28fe0dee4ec8e4a85f56809cc844eba8e6658596aaac29629d91490f2075",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-mantis-representative-v2",
+    "roles": [
+      "mantis"
+    ],
+    "group": "normal4",
+    "originalManifest": "normal-mantis-needle/representative-v2/mantis/manifest-candidate.json",
+    "originalManifestSHA256": "c4641a5e052cd17a7616abfbba2207d73fd85abdfc1dc5bc144b525e11d76cf6",
+    "originalBlend": "normal-mantis-needle/representative-v2/mantis/actual.blend",
+    "copiedBlend": "editable/mantis/actual.blend",
+    "blendSHA256": "f5bb5faca912e1b1281f40238d8cdfdf89185e590633d03f66b5f61964fd21e9",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-normal-orb-v3",
+    "roles": [
+      "orb"
+    ],
+    "group": "normal4",
+    "originalManifest": "normal-orb/orb-representative-v3/manifest-candidate.json",
+    "originalManifestSHA256": "8191c22b409c434f4d24cbb6c5b4f038ec8e025cd9f23baca92dbd2851b7ab2d",
+    "originalBlend": "normal-orb/orb-representative-v3/actual.blend",
+    "copiedBlend": "editable/orb/actual.blend",
+    "blendSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-claw-drumgun-representative-v2",
+    "roles": [
+      "claw"
+    ],
+    "group": "normal4",
+    "originalManifest": "normal-claw-representative-v2/manifest-candidate.json",
+    "originalManifestSHA256": "94e4e27ee653ab01654a71f96df486f9eb304fe54a5ce67b94ab014ded9c6f9d",
+    "originalBlend": "normal-claw-representative-v2/actual.blend",
+    "copiedBlend": "editable/claw/actual.blend",
+    "blendSHA256": "b530fa7a0f30cb310dac92ca181f39fbf15a35edd2313941a8e956227ae6779b",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "local-needle-representative-v2",
+    "roles": [
+      "needle"
+    ],
+    "group": "normal4",
+    "originalManifest": "normal-mantis-needle/representative-v2/needle/manifest-candidate.json",
+    "originalManifestSHA256": "d69270ed7a70827c109a696891f47a9ebc1773c680c2229720cd54f51ee91b84",
+    "originalBlend": "normal-mantis-needle/representative-v2/needle/actual.blend",
+    "copiedBlend": "editable/needle/actual.blend",
+    "blendSHA256": "836766005ec39a4eccec03ecda5200a4d54c4f54d0cff3bee249d0e22f4d82fa",
+    "sourceOriginalUnchanged": true
+  },
+  {
+    "key": "int01-wedge",
+    "roles": [
+      "beetle"
+    ],
+    "group": "preservedBeetle",
+    "originalManifest": "../checkout/assets/art/mecha-12h-local.json",
+    "originalBlend": "../checkout/assets/art/mecha-8h/source/family-revision1/editable-export/family/sources/beetle.blend",
+    "copiedBlend": "editable/beetle/actual.blend",
+    "blendSHA256": "2c4c216fda22bb5b499f65611428fd43ba81af3ee055a67717138b85892a53aa",
+    "sourceOriginalUnchanged": true
+  }
+]

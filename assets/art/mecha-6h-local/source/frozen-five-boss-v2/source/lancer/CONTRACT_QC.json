@@ -1,0 +1,52 @@
+[
+  {
+    "state": "phase_000",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_000_fire",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_025",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_025_fire",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_050",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_050_fire",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_075",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_075_fire",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_100",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  },
+  {
+    "state": "phase_100_fire",
+    "legacyAnchorsExact": true,
+    "forwardLeft": true
+  }
+]

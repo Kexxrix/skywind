@@ -1,0 +1,102 @@
+[
+  {
+    "entryKey": "local-carrier-child-finish-v1",
+    "sourceBlend": "editable/carrier/actual.blend",
+    "parentDockWorld": [
+      -0.949999988079071,
+      -0.5600000023841858,
+      -0.6399999856948853
+    ],
+    "standaloneTranslation": [
+      0.949999988079071,
+      0.5600000023841858,
+      0.6399999856948853
+    ],
+    "names": [
+      "child_0_rail",
+      "child_0_rail_direction",
+      "child_0_nozzle"
+    ],
+    "cameraPolicy": "same parent camera and ortho scale; translated child meshes and markers only",
+    "checks": [
+      {
+        "empty": "child_0_rail",
+        "field": "muzzlesPixels",
+        "projected": {
+          "x": 156.52571868896484,
+          "y": 194.64339065551758
+        },
+        "errorPixels": 2.089489791566039e-05
+      },
+      {
+        "empty": "child_0_rail_direction",
+        "field": "muzzleDirectionsPixels",
+        "projected": {
+          "x": 130.19428253173828,
+          "y": 194.64339065551758
+        },
+        "errorPixels": 1.9810591091918364e-05
+      },
+      {
+        "empty": "child_0_nozzle",
+        "field": "nozzlesPixels",
+        "projected": {
+          "x": 228.57142639160156,
+          "y": 191.9999771118164
+        },
+        "errorPixels": 3.493401752822146e-05
+      }
+    ],
+    "pass": true
+  },
+  {
+    "entryKey": "local-scarab-child-v2",
+    "sourceBlend": "editable/scarab/actual.blend",
+    "parentDockWorld": [
+      -0.7599999904632568,
+      -0.5899999737739563,
+      -0.4699999988079071
+    ],
+    "standaloneTranslation": [
+      0.7599999904632568,
+      0.5899999737739563,
+      0.4699999988079071
+    ],
+    "names": [
+      "child_muzzle",
+      "child_direction",
+      "child_nozzle"
+    ],
+    "cameraPolicy": "same parent camera and ortho scale; translated child meshes and markers only",
+    "checks": [
+      {
+        "empty": "child_muzzle",
+        "field": "muzzlesPixels",
+        "projected": {
+          "x": 136.32000732421875,
+          "y": 196.6259422302246
+        },
+        "errorPixels": 4.286065854409061e-05
+      },
+      {
+        "empty": "child_direction",
+        "field": "muzzleDirectionsPixels",
+        "projected": {
+          "x": 107.52000045776367,
+          "y": 196.6259422302246
+        },
+        "errorPixels": 4.223270554935224e-05
+      },
+      {
+        "empty": "child_nozzle",
+        "field": "nozzlesPixels",
+        "projected": {
+          "x": 240.63999938964844,
+          "y": 191.9999771118164
+        },
+        "errorPixels": 2.289632016797458e-05
+      }
+    ],
+    "pass": true
+  }
+]

@@ -184,7 +184,7 @@ function gameWithWorm() {
   game.nextWaveAt = 0;
   updateGame(game, 1 / 120);
   const worm = game.enemies.find(enemy => enemy.type === 'worm');
-  Object.assign(worm, { x: 270, y: 360, baseY: 360, phase: 0, age: 0, speed: 0, fireCooldown: 10 });
+  Object.assign(worm, { x: 270, y: 360, baseY: 360, phase: 0, age: 0, speed: 0, fireCooldown: 10, deployment: null });
   worm.pattern = null;
   game.enemies = [worm];
   game.nextWaveAt = Infinity;
@@ -298,8 +298,8 @@ test('title starts above the cloud band and entering preserves the current backd
 test('combat tier is independent of elapsed time, advances through five victories and stays bounded in hell', () => {
   assert.deepEqual(difficultyAt(0), difficultyAt(7200));
   const first = difficultyAt(0), second = difficultyAt(0, 1), late = difficultyAt(7200, 50);
-  assert.equal(first.maxAttackers, 2); assert.equal(second.maxAttackers, 3);
-  assert.equal(first.maxEnemyBullets, 120); assert.equal(second.maxEnemyBullets, 180);
+  assert.equal(first.maxAttackers, 3); assert.equal(second.maxAttackers, 3);
+  assert.equal(first.maxEnemyBullets, 180); assert.equal(second.maxEnemyBullets, 180);
   assert.equal(late.maxEnemyBullets, difficultyAt(0, 5).maxEnemyBullets);
   assert.ok(late.maxEnemyBullets > second.maxEnemyBullets);
   assert.equal(late.pace, 5);
@@ -318,7 +318,7 @@ test('D52 normal scripts actually admit all twelve roles and their silhouette-ma
       for (const event of consumeEvents(game)) if (event.type === 'dashStart') dashTypes.add(event.enemyType);
     }
   }
-  assert.deepEqual([...patterns].sort(), ['deploy', 'halo', 'loom', 'lunge', 'petal', 'rail', 'seed', 'snapshot', 'trident', 'zipper']);
+  assert.deepEqual([...patterns].sort(), ['B04', 'deploy', 'halo', 'loom', 'lunge', 'petal', 'rail', 'seed', 'snapshot', 'trident', 'zipper']);
   assert.deepEqual([...types].sort(), ['beetle', 'claw', 'dart', 'dragonfly', 'mantis', 'needle', 'orb', 'pincer', 'ray', 'scarab', 'wasp', 'worm']);
   assert.ok(dashTypes.has('wasp') && dashTypes.has('pincer'), 'both body attack roles actually start a committed dash');
 });

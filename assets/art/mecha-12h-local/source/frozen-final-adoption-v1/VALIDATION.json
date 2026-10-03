@@ -1,0 +1,1529 @@
+{
+  "assetKeys": [
+    {
+      "key": "int01-wedge",
+      "roles": [
+        "beetle"
+      ],
+      "displayWidth": 87,
+      "sourceBlend": "editable/beetle/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "ANCHOR_muzzle_primary"
+        ],
+        "directionPointNames": [],
+        "nozzleNames": [
+          "ANCHOR_nozzle_port",
+          "ANCHOR_nozzle_starboard"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-v8-warden-depth",
+      "roles": [
+        "warden"
+      ],
+      "displayWidth": 380,
+      "sourceBlend": "editable/warden/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "tower_-1_0",
+          "tower_-1_1",
+          "tower_1_0",
+          "tower_1_1",
+          "center_lance"
+        ],
+        "directionPointNames": [
+          "tower_-1_0_direction",
+          "tower_-1_1_direction",
+          "tower_1_0_direction",
+          "tower_1_1_direction",
+          "center_lance_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_-1",
+          "nozzle_1"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "open",
+        "phase_0",
+        "phase_25",
+        "phase_50",
+        "phase_75",
+        "phase_100",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [
+        {
+          "state": "phase_0",
+          "progress": 0
+        },
+        {
+          "state": "phase_25",
+          "progress": 0.25
+        },
+        {
+          "state": "phase_50",
+          "progress": 0.5
+        },
+        {
+          "state": "phase_75",
+          "progress": 0.75
+        },
+        {
+          "state": "phase_100",
+          "progress": 1
+        }
+      ],
+      "matchingChild": null
+    },
+    {
+      "key": "local-carrier-finish-v1",
+      "roles": [
+        "carrier"
+      ],
+      "displayWidth": 448,
+      "sourceBlend": "editable/carrier/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "defence_upper",
+          "defence_keel"
+        ],
+        "directionPointNames": [
+          "defence_upper_direction",
+          "defence_keel_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_0",
+          "nozzle_-0.81"
+        ]
+      },
+      "states": [
+        "phase_000_payload2",
+        "phase_000_payload1near",
+        "phase_000_payload1far",
+        "phase_000_payload0",
+        "phase_025_payload2",
+        "phase_025_payload1near",
+        "phase_025_payload1far",
+        "phase_025_payload0",
+        "phase_050_payload2",
+        "phase_050_payload1near",
+        "phase_050_payload1far",
+        "phase_050_payload0",
+        "phase_075_payload2",
+        "phase_075_payload1near",
+        "phase_075_payload1far",
+        "phase_075_payload0",
+        "phase_100_payload2",
+        "phase_100_payload1near",
+        "phase_100_payload1far",
+        "phase_100_payload0",
+        "idle",
+        "charge",
+        "open",
+        "fire",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [
+        {
+          "progress": 0,
+          "state": "phase_000_payload2"
+        },
+        {
+          "progress": 0.25,
+          "state": "phase_025_payload2"
+        },
+        {
+          "progress": 0.5,
+          "state": "phase_050_payload2"
+        },
+        {
+          "progress": 0.75,
+          "state": "phase_075_payload2"
+        },
+        {
+          "progress": 1,
+          "state": "phase_100_payload2"
+        }
+      ],
+      "matchingChild": {
+        "entryKey": "local-carrier-child-finish-v1",
+        "dockCentersPixels": [
+          {
+            "x": 122.5143,
+            "y": 245.7479
+          },
+          {
+            "x": 202.24,
+            "y": 245.7479
+          }
+        ],
+        "sameCameraScale": true,
+        "dockNames": [
+          "near=forward exit dock0",
+          "far=aft dock1"
+        ],
+        "spawnPivotRule": "parent pivot + (dockPixel-parentPivot)*448/384; child display448 preserves world scale"
+      }
+    },
+    {
+      "key": "local-carrier-child-finish-v1",
+      "roles": [],
+      "displayWidth": 448,
+      "sourceBlend": "editable/carrier/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "child_0_rail"
+        ],
+        "directionPointNames": [
+          "child_0_rail_direction"
+        ],
+        "nozzleNames": [
+          "child_0_nozzle"
+        ],
+        "parentAssembly": "editable/carrier/actual.blend",
+        "standaloneTranslation": [
+          0.949999988079071,
+          0.5600000023841858,
+          0.6399999856948853
+        ],
+        "parentDockWorld": [
+          -0.949999988079071,
+          -0.5600000023841858,
+          -0.6399999856948853
+        ],
+        "cameraPolicy": "same parent camera and ortho scale; translated child meshes and markers only"
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-lancer-finish-v1",
+      "roles": [
+        "lancer"
+      ],
+      "displayWidth": 400,
+      "sourceBlend": "editable/lancer/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "siege_lance",
+          "offset_suppressor"
+        ],
+        "directionPointNames": [
+          "siege_lance_direction",
+          "offset_suppressor_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_main"
+        ]
+      },
+      "states": [
+        "phase_000",
+        "phase_000_fire",
+        "phase_025",
+        "phase_025_fire",
+        "phase_050",
+        "phase_050_fire",
+        "phase_075",
+        "phase_075_fire",
+        "phase_100",
+        "phase_100_fire",
+        "idle",
+        "charge",
+        "open",
+        "fire",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [
+        {
+          "progress": 0,
+          "state": "phase_000"
+        },
+        {
+          "progress": 0.25,
+          "state": "phase_025"
+        },
+        {
+          "progress": 0.5,
+          "state": "phase_050"
+        },
+        {
+          "progress": 0.75,
+          "state": "phase_075"
+        },
+        {
+          "progress": 1,
+          "state": "phase_100"
+        }
+      ],
+      "matchingChild": null
+    },
+    {
+      "key": "local-bastion-finish-v1",
+      "roles": [
+        "bastion"
+      ],
+      "displayWidth": 432,
+      "sourceBlend": "editable/bastion/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "upper_beam",
+          "lower_fan_a",
+          "lower_fan_b"
+        ],
+        "directionPointNames": [
+          "upper_beam_direction",
+          "lower_fan_a_direction",
+          "lower_fan_b_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_-0.5",
+          "nozzle_0.5"
+        ]
+      },
+      "states": [
+        "phase_000",
+        "phase_000_fire",
+        "phase_025",
+        "phase_025_fire",
+        "phase_050",
+        "phase_050_fire",
+        "phase_075",
+        "phase_075_fire",
+        "phase_100",
+        "phase_100_fire",
+        "idle",
+        "charge",
+        "fire",
+        "open",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [
+        {
+          "progress": 0,
+          "state": "phase_000"
+        },
+        {
+          "progress": 0.25,
+          "state": "phase_025"
+        },
+        {
+          "progress": 0.5,
+          "state": "phase_050"
+        },
+        {
+          "progress": 0.75,
+          "state": "phase_075"
+        },
+        {
+          "progress": 1,
+          "state": "phase_100"
+        }
+      ],
+      "matchingChild": null
+    },
+    {
+      "key": "local-apex-finish-v1",
+      "roles": [
+        "apex"
+      ],
+      "displayWidth": 448,
+      "sourceBlend": "editable/apex/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "wrist_precision_beam",
+          "lower_siege_rail",
+          "upper_tracking"
+        ],
+        "directionPointNames": [
+          "wrist_precision_beam_direction",
+          "lower_siege_rail_direction",
+          "upper_tracking_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_main",
+          "nozzle_trim"
+        ]
+      },
+      "states": [
+        "idle",
+        "mechanism_25",
+        "mechanism_50",
+        "mechanism_75",
+        "open",
+        "fire",
+        "mechanism_25_fire",
+        "mechanism_50_fire",
+        "mechanism_75_fire",
+        "open_fire",
+        "charge",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [
+        {
+          "progress": 0,
+          "state": "idle"
+        },
+        {
+          "progress": 0.25,
+          "state": "mechanism_25"
+        },
+        {
+          "progress": 0.5,
+          "state": "mechanism_50"
+        },
+        {
+          "progress": 0.75,
+          "state": "mechanism_75"
+        },
+        {
+          "progress": 1,
+          "state": "open"
+        }
+      ],
+      "matchingChild": null
+    },
+    {
+      "key": "local-dragonfly-v1",
+      "roles": [
+        "dragonfly"
+      ],
+      "displayWidth": 88,
+      "sourceBlend": "editable/dragonfly/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "nose_gun"
+        ],
+        "directionPointNames": [
+          "nose_gun_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_single"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-wasp-v1",
+      "roles": [
+        "wasp"
+      ],
+      "displayWidth": 76,
+      "sourceBlend": "editable/wasp/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [],
+        "directionPointNames": [],
+        "nozzleNames": [
+          "nozzle_single"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-normal-ray-v1",
+      "roles": [
+        "ray"
+      ],
+      "displayWidth": 118,
+      "sourceBlend": "editable/ray/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "route_0",
+          "route_1"
+        ],
+        "directionPointNames": [
+          "route_0_direction",
+          "route_1_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_main"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-normal-worm-v1",
+      "roles": [
+        "worm"
+      ],
+      "displayWidth": 170,
+      "sourceBlend": "editable/worm/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "front_field",
+          "middle_field",
+          "rear_field"
+        ],
+        "directionPointNames": [
+          "front_field_direction",
+          "middle_field_direction",
+          "rear_field_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_upper",
+          "nozzle_lower"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-dart-representative-v1",
+      "roles": [
+        "dart"
+      ],
+      "displayWidth": 96,
+      "sourceBlend": "editable/dart/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "single_rail_muzzle"
+        ],
+        "directionPointNames": [
+          "single_rail_muzzle_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_single"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-scarab-v2",
+      "roles": [
+        "scarab"
+      ],
+      "displayWidth": 144,
+      "sourceBlend": "editable/scarab/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [],
+        "directionPointNames": [],
+        "nozzleNames": [
+          "nozzle_main"
+        ]
+      },
+      "states": [
+        "idle_payload2",
+        "idle_payload1dock0",
+        "idle_payload1dock1",
+        "idle_payload0",
+        "charge_payload2",
+        "charge_payload1dock0",
+        "charge_payload1dock1",
+        "charge_payload0",
+        "fire_payload2",
+        "fire_payload1dock0",
+        "fire_payload1dock1",
+        "fire_payload0",
+        "idle",
+        "charge",
+        "fire",
+        "open_payload2",
+        "open_payload1dock0",
+        "open_payload1dock1",
+        "open_payload0",
+        "open",
+        "locked",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": {
+        "entryKey": "local-scarab-child-v2",
+        "dockCentersPixels": [
+          {
+            "x": 94.72,
+            "y": 265.4265
+          },
+          {
+            "x": 81.92,
+            "y": 153.0209
+          }
+        ],
+        "sameCameraScale": true,
+        "spawnPivotRule": "parent pivot + (dockPixels-192)*144/384; child display144 preserves true world size",
+        "projectilePortsStatus": "parent0 deploy only; child1 actual gun/direction/nozzle; docks are not guns",
+        "canonicalChildType": "dragonfly"
+      }
+    },
+    {
+      "key": "local-scarab-child-v2",
+      "roles": [],
+      "displayWidth": 144,
+      "sourceBlend": "editable/scarab/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "child_muzzle"
+        ],
+        "directionPointNames": [
+          "child_direction"
+        ],
+        "nozzleNames": [
+          "child_nozzle"
+        ],
+        "parentAssembly": "editable/scarab/actual.blend",
+        "standaloneTranslation": [
+          0.7599999904632568,
+          0.5899999737739563,
+          0.4699999988079071
+        ],
+        "parentDockWorld": [
+          -0.7599999904632568,
+          -0.5899999737739563,
+          -0.4699999988079071
+        ],
+        "cameraPolicy": "same parent camera and ortho scale; translated child meshes and markers only"
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-v2-pincer",
+      "roles": [
+        "pincer"
+      ],
+      "displayWidth": 96,
+      "sourceBlend": "editable/pincer/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [],
+        "directionPointNames": [],
+        "nozzleNames": [
+          "nozzle_single"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "fire",
+        "recovery",
+        "locked"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-mantis-representative-v2",
+      "roles": [
+        "mantis"
+      ],
+      "displayWidth": 96,
+      "sourceBlend": "editable/mantis/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "upper_dual",
+          "lower_dual"
+        ],
+        "directionPointNames": [
+          "upper_dual_direction",
+          "lower_dual_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_primary"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-normal-orb-v3",
+      "roles": [
+        "orb"
+      ],
+      "displayWidth": 82,
+      "sourceBlend": "editable/orb/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "trident_2",
+          "trident_1",
+          "trident_0"
+        ],
+        "directionPointNames": [
+          "trident_2_direction",
+          "trident_1_direction",
+          "trident_0_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_main"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-claw-drumgun-representative-v2",
+      "roles": [
+        "claw"
+      ],
+      "displayWidth": 108,
+      "sourceBlend": "editable/claw/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "barrel_0",
+          "barrel_1"
+        ],
+        "directionPointNames": [
+          "barrel_0_direction",
+          "barrel_1_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_single"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    },
+    {
+      "key": "local-needle-representative-v2",
+      "roles": [
+        "needle"
+      ],
+      "displayWidth": 112,
+      "sourceBlend": "editable/needle/actual.blend",
+      "sourcePortBindings": {
+        "muzzleNames": [
+          "coil_nose"
+        ],
+        "directionPointNames": [
+          "coil_nose_direction"
+        ],
+        "nozzleNames": [
+          "nozzle_axial"
+        ]
+      },
+      "states": [
+        "idle",
+        "charge",
+        "locked",
+        "fire",
+        "recovery"
+      ],
+      "mechanismFrames": [],
+      "matchingChild": null
+    }
+  ],
+  "entries": 19,
+  "canonicalRoles": 17,
+  "normalSpecies": 12,
+  "bosses": 5,
+  "appearanceOnlyChildren": 2,
+  "duplicateRole": 0,
+  "duplicateKey": 0,
+  "missingReferences": 0,
+  "unusedRuntimePaths": 0,
+  "stateLookupChecks": 169,
+  "runtimeUniquePNGPaths": 102,
+  "decodedRGBABytesIfAllUniqueRuntimePathsLoaded": 60162048,
+  "decodedRGBA_MiB": 57.375,
+  "decodedMeaning": "IHDR dimensions ×4 bytes; CPU RGBA footprint only, not measured GPU VRAM/peak browser memory",
+  "roleMapSHA256": "bec440b2c18ae37eb092c9d8d65f6f7707ccd0a2820ab7c4c2a9962317cc211a",
+  "modelGenerationsThisPackaging": 0,
+  "newRendersThisPackaging": 0,
+  "generationAttemptTotal": "not reconstructed; historical generators/failures remain in original local-art",
+  "PNG": [
+    {
+      "path": "runtime/beetle/int01-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111164,
+      "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40"
+    },
+    {
+      "path": "runtime/warden/warden-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112816,
+      "sha256": "00e081671984a18290e7597a74cdebf31357a9adfc9c7faf940fd08e9017f4ee"
+    },
+    {
+      "path": "runtime/warden/warden-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112886,
+      "sha256": "991b146b975da53df1f3d0e97f143ac70cab04f0f788e24d404fff53a8f0b855"
+    },
+    {
+      "path": "runtime/warden/warden-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111238,
+      "sha256": "581c8f0edceb2f04ea6338d04c8948d3a567c1cd414f39a471532a10615b5462"
+    },
+    {
+      "path": "runtime/warden/warden-open.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 116040,
+      "sha256": "7da79be646ee93434d3f814c1370253c122c4b6cb5d25ca2312f4a512aa520dc"
+    },
+    {
+      "path": "runtime/warden/warden-phase_0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112886,
+      "sha256": "6c1acd00ae21dfc87f3d6735ccebdcd6fd6c16ccbc643bb0b3f7b827c4016f9c"
+    },
+    {
+      "path": "runtime/warden/warden-phase_25.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114245,
+      "sha256": "3074d426d55cfa1d663c6f417dddbe28757baefa466f80af0f3a9d3b961befa7"
+    },
+    {
+      "path": "runtime/warden/warden-phase_50.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 115449,
+      "sha256": "287af17886dc14bc7b6776f8d983ff35e6a98659a55b01637cf725a405e64bbf"
+    },
+    {
+      "path": "runtime/warden/warden-phase_75.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 115255,
+      "sha256": "db2bf719d9236e4e7e7399d9d0a0dcf082bead5b5e1a9db6533071a6becbed1a"
+    },
+    {
+      "path": "runtime/warden/warden-phase_100.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 116044,
+      "sha256": "9108391e25b39a927a35a4d4d9ac933b175ff6978ee881c26870ea79541148a1"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_000_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113530,
+      "sha256": "02c4ce9bbe668010b365d880ae865d2f410089e73f0197ad5cf09da5a0777ed8"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_000_payload1near.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112237,
+      "sha256": "9afd881006baa6dabab074e339075ef6c0f5fb83e112a974e6cb762fb7f19558"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_000_payload1far.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111862,
+      "sha256": "8ab30a22c2429fde113afe21c1d3fd7d0b3c94b643bf0b71e7538a87f3cc2fe5"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_000_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 110387,
+      "sha256": "07df2b6718d2607531876101c2da4e4e6358b3158e9e667afb1c9163a7d2599c"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_025_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114529,
+      "sha256": "292d821320bb9f59577c4742cc1e1f1c450358baf9150708d22d69a5adda97b9"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_025_payload1near.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113551,
+      "sha256": "6a9d623e5ab36f6beffee6352e6436723d8283847124ef93695a92d914279752"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_025_payload1far.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112762,
+      "sha256": "e6c0842dcc45c354b5334b94d44423d1b46a21828bc76d62b2bdf41fb02e9124"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_025_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111455,
+      "sha256": "bf6905261843f5869b75f8e0de1eb6a91e7c56b6471a73ded248db85063d9dcb"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_050_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114546,
+      "sha256": "c263f1a6da7da27b4de6d3218a7f52abd259cd48a15154b32e3b00c072f5cc77"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_050_payload1near.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113272,
+      "sha256": "a0a04d49f48c137dacea0fbb760382e7dd92f14b1283f562775151fd36661cee"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_050_payload1far.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112781,
+      "sha256": "50a396ad746038b0aba0a3356b0f8fbebdc43fa6ab5bf31ad8ae55a9869e2db8"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_050_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111225,
+      "sha256": "9f420b6337ffe0c9de8ea38476b3a440ba65c0ca1a6cc475afca317e38e1de7b"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_075_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114675,
+      "sha256": "c67ec6ebe4b47c7e30f80f057c01e3bc42accce46c6f7998cdc0d1a144a69201"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_075_payload1near.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113249,
+      "sha256": "0906bdc04b4b93320d9e098cef6f2b6e4ee4922bd95f509bc8c82c4edd997179"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_075_payload1far.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113038,
+      "sha256": "688afab0a14370dc2b226032d25fe6885aeb8b2045b209e4d3103ce38f1b5a02"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_075_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111239,
+      "sha256": "ebd830d632362074fe8630f9f852cec28d9ee65b97bc875a9d3d8ed0da3d330e"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_100_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 117095,
+      "sha256": "88ad489ca01b87a6817c348cc6558f232281807c2f3a3ef2ce425f58faae900a"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_100_payload1near.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114790,
+      "sha256": "844a67b7eece4395ac87a82d077c05c26a70d5613e1ae8c617f2dd70f0c726db"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_100_payload1far.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114552,
+      "sha256": "9ea54ef568c24b970adca8a7f64289e23c37fb389fff34215f9c767f843ad729"
+    },
+    {
+      "path": "runtime/carrier/carrier-phase_100_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112823,
+      "sha256": "08801348694323fd2545d9428fcbabeb0139eb23f1299cffa602a8ccb7f5331d"
+    },
+    {
+      "path": "runtime/local-carrier-child-finish-v1/carrier-child.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 39243,
+      "sha256": "2afbac046c628a08a216459a2c353c2412c44ebbadb487bc32d43118b142193a"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_000.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 87498,
+      "sha256": "393218a78f5814d438983dee2dfefc0668aeed60b6c59922c62373f5b1af6f98"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_000_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 86494,
+      "sha256": "4d6c13acbc4ec8e0356beca9322143d7f38232dabc4cd2e947df064fee157b4e"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_025.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 87129,
+      "sha256": "e9abcf73ef1509ab1e47d2cf1eeee8fdca4a1f0c3dee2a243fc1ab7e9a7fb8cc"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_025_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 85577,
+      "sha256": "c1ab60987d59341772964c845a39cd15b4fc8b0b4bb00816c245c7170acbb36a"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_050.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 87965,
+      "sha256": "5668a96cf9eeb6439900318cd2d73767f21a57464daa8660f5ae35212d3ba8a8"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_050_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 87004,
+      "sha256": "a5b1d22f73966587ef681e5abee9df20d8362e3ff246945f7d8dbf0913fc2f2d"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_075.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 92432,
+      "sha256": "53bbb1d93464342526020109fa79e4902779fff2fad942dc2e7abec7d1e59453"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_075_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 90803,
+      "sha256": "98be642f71774b8f36560a3dd5c9ba697d135d29d207795d4bdff2dd1db66079"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_100.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 97179,
+      "sha256": "7d9dce8c06633c90d2e568490ada0808f1e37a789e6808eba165d6797cfc9aa6"
+    },
+    {
+      "path": "runtime/lancer/lancer-phase_100_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 95663,
+      "sha256": "29e504541b858d38d24a8c1ac3ccde4113a22f6d1a46476c3a9c5d941979458f"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_000.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113733,
+      "sha256": "8e507991c1c5b8a990a89e298e2d9daf09a0ba37bf123dfe61f74c5bee7f5885"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_000_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111722,
+      "sha256": "cbab660beb7e392d718a932c8162dbe810bb306225531d9b69128a5f6e510836"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_025.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113217,
+      "sha256": "940760183a6d2efff5f15f7267c3d97b9ad878436b4e78115d22ed1668f7fb03"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_025_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111610,
+      "sha256": "8d7b29aaf7f24e399f0d76435d5867dc8b120bdbd63fd54c1a7df996377d3e2e"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_050.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113234,
+      "sha256": "2f4d3415fba04d896244df454cb3942196cbac95877bca65ba56ed522dfbc076"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_050_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111481,
+      "sha256": "62c5d7ee8935cc8aca1cadb75742177c79a3f267b2abbc1503ff50e4ce8bb29c"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_075.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113529,
+      "sha256": "291b7b772f3c701433826369d24c2a24817f6573dc27d9c19c2a75b3a3c092e0"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_075_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111777,
+      "sha256": "3dfcdf695a4730bfff03a19bfa9c7dcc53a7629358e150e355f5a2961515d3ae"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_100.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114346,
+      "sha256": "d43af01cdb5b2cc27b42f7273173d514f70f17eb927b8692759a001a537f5867"
+    },
+    {
+      "path": "runtime/bastion/bastion-phase_100_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112235,
+      "sha256": "f0ea1d2e946e0b9dc90f577e6de3a2e4a44ff16624948462a732447dca90acfd"
+    },
+    {
+      "path": "runtime/apex/apex-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 108327,
+      "sha256": "0524cc27ea1abf242c84c2d64049702cc17886e08334247e5094bbdd47968dc2"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_25.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 108280,
+      "sha256": "a86aab5907dde82488d0bbe4b2b2ef47c83eb588a22ed2e3fb23d58ddadae115"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_50.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 108487,
+      "sha256": "f562653bcbf05e44a9bafddd394cfb24d5d62a6f18ee81a108009f6d700c2b89"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_75.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 108378,
+      "sha256": "dbca0cd7c638615bdb2b3830dea5aa4ec40569c3ecdcfd6b0814baa3f750f598"
+    },
+    {
+      "path": "runtime/apex/apex-open.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 108692,
+      "sha256": "44b47c5f8c8053deec5aeabe049c5fb0825905858fe0f77b2c248628d36b707e"
+    },
+    {
+      "path": "runtime/apex/apex-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 107712,
+      "sha256": "25b82fd90ca149dffff50f05834c99762c72d1055a2427130e9632d82aedd1d2"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_25_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 107552,
+      "sha256": "048e045c8fcadd3f01fff2f6c60da835cc6da1fcb3a474e247338a31f15a7a85"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_50_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 107579,
+      "sha256": "a18552dd69ee8f5949c9b520b13ee49250366c66312fd25771742d53ac5cd5f9"
+    },
+    {
+      "path": "runtime/apex/apex-mechanism_75_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 107432,
+      "sha256": "dd96dec2c9035917487ac8366697c520d248c1f66c20fd5d85d44f602251b05a"
+    },
+    {
+      "path": "runtime/apex/apex-open_fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 107635,
+      "sha256": "35022911f39c3a1269a0e9d2028f396fd46ddd4eb9ceaeca9181e98085be3732"
+    },
+    {
+      "path": "runtime/dragonfly/dragonfly-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 85487,
+      "sha256": "6764f2fceede9bf1cec3bf60424e05ecb67d6ae477221e649fbd29b0253ee576"
+    },
+    {
+      "path": "runtime/dragonfly/dragonfly-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 86084,
+      "sha256": "475b6791d03bb507497fa65e9720ffd7067e24105527070465ca50c3c57a7786"
+    },
+    {
+      "path": "runtime/dragonfly/dragonfly-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 85425,
+      "sha256": "304f8d39819c69f5d8274361b8cb35196e2e6309cdad54da15e5155b03563c07"
+    },
+    {
+      "path": "runtime/dragonfly/dragonfly-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 85698,
+      "sha256": "6e415c44223f3db8a724c76139599ce3ffe1dd5fb48562bf29f7307e2dfe834d"
+    },
+    {
+      "path": "runtime/wasp/wasp-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 73246,
+      "sha256": "2b3f6ea810bb7db65e6a128c9751af036e07d06d21a6748f7848e4f0f165233d"
+    },
+    {
+      "path": "runtime/wasp/wasp-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 70770,
+      "sha256": "c7001d7ffa4460ab45da9cf0a96c4f41944d62cfc31c0b645d24d0ec59efc04b"
+    },
+    {
+      "path": "runtime/wasp/wasp-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 67639,
+      "sha256": "9adca878737c431e6e4094d15fb39da4a349e8495f86188998bbd41361e73cc4"
+    },
+    {
+      "path": "runtime/wasp/wasp-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 72059,
+      "sha256": "3d8cfbdba006ffcaf3e84c0d0c4b399117bcfa2455293ca8856fc61d21576423"
+    },
+    {
+      "path": "runtime/ray/ray-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112821,
+      "sha256": "c69748a89ef6955b2270497e00e4a6cc2e26174cc5960551b654a0aee29e9c56"
+    },
+    {
+      "path": "runtime/ray/ray-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 111582,
+      "sha256": "a7318e9c0fb5042244e1a85762e10497370b80a1dbe2b480a59e15f6f77fd7ff"
+    },
+    {
+      "path": "runtime/ray/ray-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 117380,
+      "sha256": "558ba79740d47377e46ca4f7c28719d55043d9658c28b0a51841f4bd20b466a1"
+    },
+    {
+      "path": "runtime/ray/ray-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 112509,
+      "sha256": "801fd48a778a944f49d6acd60676cb114526c36e219084dfa0deabc9941b9b36"
+    },
+    {
+      "path": "runtime/worm/worm-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 73728,
+      "sha256": "05269fe6a4c7b95dd0a6c95784cd3647914fd88219ca21e8c1b3b30de4a9c45f"
+    },
+    {
+      "path": "runtime/worm/worm-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 73162,
+      "sha256": "5da07f797aaf0699dd530a9155cb580323d5085ee23a594178329987e818635d"
+    },
+    {
+      "path": "runtime/worm/worm-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 75472,
+      "sha256": "8788d7291b13d6361af8b8bb78eed35bbb9f411c94b2388b460b300da74e9cd3"
+    },
+    {
+      "path": "runtime/worm/worm-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 73606,
+      "sha256": "6af00b6819c3849e163f64e68571e5880765e5fc8626ff90ee5671a26187e2a7"
+    },
+    {
+      "path": "runtime/dart/dart-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 61871,
+      "sha256": "a3781da40e7b2fc2c82a394778e32fd844a43e5a17e8ade89a1b4f04c2b633c1"
+    },
+    {
+      "path": "runtime/dart/dart-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 61567,
+      "sha256": "3866b22ff490cf7b9fcf877f3677f1abaef74ae8fe7685e8ae69e184792b4e86"
+    },
+    {
+      "path": "runtime/dart/dart-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 61487,
+      "sha256": "eb39dcce314b43bc94e04725aa11e2f740fd2553bc81f9bd7f44246dd06ad4a1"
+    },
+    {
+      "path": "runtime/dart/dart-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 61813,
+      "sha256": "ea3fc0f580a413e2e5c4b646e8575c205aeb05ac7816290647f2bf48e1bc2ecf"
+    },
+    {
+      "path": "runtime/scarab/scarab-idle_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 125920,
+      "sha256": "55266929fc0d6b7928aec53a4d766172ec8ec3b9c1d41314943ec76037f4c61c"
+    },
+    {
+      "path": "runtime/scarab/scarab-idle_payload1dock0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 119620,
+      "sha256": "b3dc2fea60cb8ebde9be7b77411f7f546ad616c610c5d4c8444ddca5cfc4cb11"
+    },
+    {
+      "path": "runtime/scarab/scarab-idle_payload1dock1.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 119751,
+      "sha256": "d311916d1cdf219d5318a01a1da8eb93f1f1212fbeafe85a70908b65c7b18dc7"
+    },
+    {
+      "path": "runtime/scarab/scarab-idle_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 113299,
+      "sha256": "ac74e48b0759c94ab1924a0411c251a73a69878196aa7f5abffc05fbe244ffc7"
+    },
+    {
+      "path": "runtime/scarab/scarab-charge_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 127280,
+      "sha256": "a80c668f22455546cd0c8f1396fdd9851e44dd1ec9bd57ec3f715a9c5fadf93e"
+    },
+    {
+      "path": "runtime/scarab/scarab-charge_payload1dock0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 121160,
+      "sha256": "9e584e9b5a056f39efe10c869d18009fb14f1a14d48b087e35936048bf3ef5d0"
+    },
+    {
+      "path": "runtime/scarab/scarab-charge_payload1dock1.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 121307,
+      "sha256": "dbf51856d7e831eb5953f7d72a66626367c40464f51fa9613261588ac9530761"
+    },
+    {
+      "path": "runtime/scarab/scarab-charge_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 114905,
+      "sha256": "8379222b30ec420abd2f612a417bbf633a506125304c6fe68fb0b0fb799e2f96"
+    },
+    {
+      "path": "runtime/scarab/scarab-fire_payload2.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 129381,
+      "sha256": "114ed2b6004503ff85074a96e474847215fe180b1c274f564ab5a4d8fbfa1b7b"
+    },
+    {
+      "path": "runtime/scarab/scarab-fire_payload1dock0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 123368,
+      "sha256": "f0ba8f46f93cede9f41608b8c5632f23f237658934f6695ba030134a662195f6"
+    },
+    {
+      "path": "runtime/scarab/scarab-fire_payload1dock1.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 123336,
+      "sha256": "4cd110bae4d1920f214edd43f41a208b9be34afea08a93acfac7de4803abd5ef"
+    },
+    {
+      "path": "runtime/scarab/scarab-fire_payload0.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 117035,
+      "sha256": "eab56ae90851a21f1dd82af897b28665c3eb46ff05158141c765156b4f7fc04d"
+    },
+    {
+      "path": "runtime/local-scarab-child-v2/scarab-child.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 45769,
+      "sha256": "d7db7b8e0aa18f8c55827fc4ed37e0d1fceb77f6bdceabb3a8c13c7d8207bc19"
+    },
+    {
+      "path": "runtime/pincer/pincer-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 78966,
+      "sha256": "7d2ef40c0ebef1527700358ef3a4e95913afc08cd0882ae1c342bad5ec993b6a"
+    },
+    {
+      "path": "runtime/pincer/pincer-charge.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 71983,
+      "sha256": "7bedce2368690aff87930186701a97cecfbc8ca037e49c1f45a61571ac8d6764"
+    },
+    {
+      "path": "runtime/pincer/pincer-fire.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 82924,
+      "sha256": "f37ff6ac262ca33e2ec6c4d4791a8bf982697a4079b89b2b742f88c2d01109e9"
+    },
+    {
+      "path": "runtime/pincer/pincer-recovery.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 76285,
+      "sha256": "027b91013eae3abdda818993d93fb017cefff95a287cee6f4794e5683d50cdf2"
+    },
+    {
+      "path": "runtime/mantis/mantis-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 82575,
+      "sha256": "7f4eda5ec23a5111fd7f2616a2b41bb9857fc52bacbf3766e265508e460c6235"
+    },
+    {
+      "path": "runtime/orb/orb-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 98979,
+      "sha256": "ed040e5fa080def26e859f40f0a49b56199bd51e15d1a88267d8d706d598f594"
+    },
+    {
+      "path": "runtime/claw/claw-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 86283,
+      "sha256": "e1c3260b612229f907c93e6682f786e3621cb42bdeec977c2821053a84745725"
+    },
+    {
+      "path": "runtime/needle/needle-idle.png",
+      "width": 384,
+      "height": 384,
+      "bytes": 84585,
+      "sha256": "955c15862e318f2ca392ffc3948adafd0bc47fad3623693452c9eee751c2ab1e"
+    }
+  ]
+}

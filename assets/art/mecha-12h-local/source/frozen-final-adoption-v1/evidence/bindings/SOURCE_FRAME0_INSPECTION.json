@@ -1,0 +1,534 @@
+{
+  "policy": "read-only source model introspection; source scene frame0 evaluates earliest authored idle; no source rewrite or render",
+  "entries": [
+    {
+      "role": "carrier",
+      "entryKey": "local-carrier-finish-v1",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\carrier-lancer-finish-v1/full-candidate/carrier-finish-v1\\actual.blend",
+      "sourceSHA256": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+      "sourceFrame": 0,
+      "idleAlias": "phase_000_payload2",
+      "displayWidth": 448,
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "camera": {
+        "name": "fixed orthographic source camera",
+        "location": [
+          0.0,
+          -16.0,
+          3.0999999046325684
+        ],
+        "rotation": [
+          1.3794175386428833,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.25
+      },
+      "ports": [
+        {
+          "index": 0,
+          "muzzleEmpty": "defence_upper",
+          "forwardEmpty": "defence_upper_direction",
+          "sourceFrame0Muzzle": {
+            "name": "defence_upper",
+            "world": [
+              -1.0549999475479126,
+              -0.5,
+              0.9300000071525574
+            ],
+            "projected384": {
+              "x": 114.83428573608398,
+              "y": 132.1753692626953
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "defence_upper_direction",
+            "world": [
+              -1.4149999618530273,
+              -0.5,
+              0.9300000071525574
+            ],
+            "projected384": {
+              "x": 88.50286102294922,
+              "y": 132.1753692626953
+            }
+          },
+          "metadataErrorPixels": 4.963861789548942e-05
+        },
+        {
+          "index": 1,
+          "muzzleEmpty": "defence_keel",
+          "forwardEmpty": "defence_keel_direction",
+          "sourceFrame0Muzzle": {
+            "name": "defence_keel",
+            "world": [
+              0.5149999856948853,
+              -0.4699999988079071,
+              -1.190000057220459
+            ],
+            "projected384": {
+              "x": 229.66857147216797,
+              "y": 283.98986434936523
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "defence_keel_direction",
+            "world": [
+              0.1549999713897705,
+              -0.4699999988079071,
+              -1.190000057220459
+            ],
+            "projected384": {
+              "x": 203.3371353149414,
+              "y": 283.98986434936523
+            }
+          },
+          "metadataErrorPixels": 5.018080155438458e-05
+        }
+      ],
+      "nozzleEmpties": [
+        {
+          "name": "nozzle_0",
+          "world": [
+            2.0199999809265137,
+            0.07999999821186066,
+            0.0
+          ],
+          "projected384": {
+            "x": 339.7485809326172,
+            "y": 190.88697052001953
+          }
+        },
+        {
+          "name": "nozzle_-0.81",
+          "world": [
+            2.0199999809265137,
+            0.07999999821186066,
+            -0.8100000023841858
+          ],
+          "projected384": {
+            "x": 339.7485809326172,
+            "y": 249.05102920532227
+          }
+        }
+      ],
+      "coreEmpties": [
+        {
+          "name": "core_center",
+          "world": [
+            1.2300000190734863,
+            -0.3199999928474426,
+            -0.4399999976158142
+          ],
+          "projected384": {
+            "x": 281.96571350097656,
+            "y": 228.04733276367188
+          }
+        },
+        {
+          "name": "core_radius",
+          "world": [
+            1.440000057220459,
+            -0.3199999928474426,
+            -0.4399999976158142
+          ],
+          "projected384": {
+            "x": 297.32572174072266,
+            "y": 228.04733276367188
+          }
+        }
+      ],
+      "coreFalse": false,
+      "docks": [
+        {
+          "name": "dock_0",
+          "world": [
+            -0.949999988079071,
+            -0.5600000023841858,
+            -0.6399999856948853
+          ],
+          "projected384": {
+            "x": 122.51428985595703,
+            "y": 245.74788665771484
+          }
+        },
+        {
+          "name": "dock_1",
+          "world": [
+            0.14000000059604645,
+            -0.5600000023841858,
+            -0.6399999856948853
+          ],
+          "projected384": {
+            "x": 202.239990234375,
+            "y": 245.74788665771484
+          }
+        }
+      ],
+      "childSourceMeshes": {
+        "0": [
+          "child 0 clipped wing",
+          "child 0 lower stabilizer",
+          "child 0 motor",
+          "child 0 pointed spine",
+          "child_0_rail bore recess",
+          "child_0_rail outer tube"
+        ],
+        "1": [
+          "child 1 clipped wing",
+          "child 1 lower stabilizer",
+          "child 1 motor",
+          "child 1 pointed spine",
+          "child_1_rail bore recess",
+          "child_1_rail outer tube"
+        ]
+      },
+      "childSourceEmpties": {
+        "0": [
+          {
+            "name": "child_0_rail",
+            "world": [
+              -1.434999942779541,
+              -0.75,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 87.04000282287598,
+              "y": 248.39130020141602
+            }
+          },
+          {
+            "name": "child_0_rail_direction",
+            "world": [
+              -1.7949999570846558,
+              -0.75,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 60.70857238769531,
+              "y": 248.39130020141602
+            }
+          },
+          {
+            "name": "child_0_nozzle",
+            "world": [
+              -0.44999998807907104,
+              -0.5600000023841858,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 159.0857162475586,
+              "y": 245.74788665771484
+            }
+          }
+        ],
+        "1": [
+          {
+            "name": "child_1_rail",
+            "world": [
+              -0.3449999988079071,
+              -0.75,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 166.76570892333984,
+              "y": 248.39130020141602
+            }
+          },
+          {
+            "name": "child_1_rail_direction",
+            "world": [
+              -0.7050000429153442,
+              -0.75,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 140.43428421020508,
+              "y": 248.39130020141602
+            }
+          },
+          {
+            "name": "child_1_nozzle",
+            "world": [
+              0.6399999856948853,
+              -0.5600000023841858,
+              -0.6399999856948853
+            ],
+            "projected384": {
+              "x": 238.81141662597656,
+              "y": 245.74788665771484
+            }
+          }
+        ]
+      }
+    },
+    {
+      "role": "lancer",
+      "entryKey": "local-lancer-finish-v1",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\carrier-lancer-finish-v1/full-candidate/lancer-finish-v1\\actual.blend",
+      "sourceSHA256": "ebdcbad947dd136e2e414a36311676cf2445618f41ef0a5df8f2e5f88309843e",
+      "sourceFrame": 0,
+      "idleAlias": "phase_000",
+      "displayWidth": 400,
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "camera": {
+        "name": "fixed orthographic source camera",
+        "location": [
+          0.0,
+          -16.0,
+          3.0999999046325684
+        ],
+        "rotation": [
+          1.3794175386428833,
+          -0.0,
+          0.0
+        ],
+        "orthoScale": 5.349999904632568
+      },
+      "ports": [
+        {
+          "index": 0,
+          "muzzleEmpty": "siege_lance",
+          "forwardEmpty": "siege_lance_direction",
+          "sourceFrame0Muzzle": {
+            "name": "siege_lance",
+            "world": [
+              -2.4750001430511475,
+              -0.05999999865889549,
+              0.12999999523162842
+            ],
+            "projected384": {
+              "x": 14.355126857757568,
+              "y": 183.65865325927734
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "siege_lance_direction",
+            "world": [
+              -2.8350000381469727,
+              -0.05999999865889549,
+              0.12999999523162842
+            ],
+            "projected384": {
+              "x": -11.484118223190308,
+              "y": 183.65865325927734
+            }
+          },
+          "metadataErrorPixels": 5.3907645997387064e-05
+        },
+        {
+          "index": 1,
+          "muzzleEmpty": "offset_suppressor",
+          "forwardEmpty": "offset_suppressor_direction",
+          "sourceFrame0Muzzle": {
+            "name": "offset_suppressor",
+            "world": [
+              -0.41499999165534973,
+              -0.5899999737739563,
+              0.75
+            ],
+            "projected384": {
+              "x": 162.2130889892578,
+              "y": 147.20608520507812
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "offset_suppressor_direction",
+            "world": [
+              -0.7749999761581421,
+              -0.5899999737739563,
+              0.75
+            ],
+            "projected384": {
+              "x": 136.37382888793945,
+              "y": 147.20608520507812
+            }
+          },
+          "metadataErrorPixels": 3.245616674166546e-05
+        }
+      ],
+      "nozzleEmpties": [
+        {
+          "name": "nozzle_main",
+          "world": [
+            2.119999885559082,
+            0.15000000596046448,
+            -0.10000000149011612
+          ],
+          "projected384": {
+            "x": 344.16448974609375,
+            "y": 196.99861907958984
+          }
+        }
+      ],
+      "coreEmpties": [
+        {
+          "name": "core_center",
+          "world": [
+            0.75,
+            -0.4099999964237213,
+            0.25
+          ],
+          "projected384": {
+            "x": 245.83177185058594,
+            "y": 179.98125457763672
+          }
+        },
+        {
+          "name": "core_radius",
+          "world": [
+            0.9599999785423279,
+            -0.4099999964237213,
+            0.25
+          ],
+          "projected384": {
+            "x": 260.90467071533203,
+            "y": 179.98125457763672
+          }
+        }
+      ],
+      "coreFalse": false
+    },
+    {
+      "role": "orb",
+      "entryKey": "local-normal-orb-v3",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\normal-orb/orb-representative-v3\\actual.blend",
+      "sourceSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+      "sourceFrame": 0,
+      "idleAlias": "idle",
+      "displayWidth": 82,
+      "pivotPixels": {
+        "x": 192,
+        "y": 192
+      },
+      "camera": {
+        "name": "fixed Orb source camera",
+        "location": [
+          -3.0,
+          -16.0,
+          3.0999999046325684
+        ],
+        "rotation": [
+          1.3826179504394531,
+          2.0118896770782158e-08,
+          -0.18534795939922333
+        ],
+        "orthoScale": 3.5999999046325684
+      },
+      "ports": [
+        {
+          "index": 0,
+          "muzzleEmpty": "trident_2",
+          "forwardEmpty": "trident_2_direction",
+          "sourceFrame0Muzzle": {
+            "name": "trident_2",
+            "world": [
+              -1.2560324668884277,
+              -0.05000000074505806,
+              -0.736587643623352
+            ],
+            "projected384": {
+              "x": 61.300798416137695,
+              "y": 274.78175354003906
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "trident_2_direction",
+            "world": [
+              -1.5719451904296875,
+              -0.05000000074505806,
+              -0.787569522857666
+            ],
+            "projected384": {
+              "x": 28.180606842041016,
+              "y": 281.2855339050293
+            }
+          },
+          "metadataErrorPixels": 4.6486950726595976e-05
+        },
+        {
+          "index": 1,
+          "muzzleEmpty": "trident_1",
+          "forwardEmpty": "trident_1_direction",
+          "sourceFrame0Muzzle": {
+            "name": "trident_1",
+            "world": [
+              -1.6749999523162842,
+              -0.05000000074505806,
+              0.029999999329447746
+            ],
+            "projected384": {
+              "x": 17.376365661621094,
+              "y": 195.99658584594727
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "trident_1_direction",
+            "world": [
+              -1.9950000047683716,
+              -0.05000000074505806,
+              0.029999999329447746
+            ],
+            "projected384": {
+              "x": -16.172332763671875,
+              "y": 197.17332458496094
+            }
+          },
+          "metadataErrorPixels": 4.096191521961162e-05
+        },
+        {
+          "index": 2,
+          "muzzleEmpty": "trident_0",
+          "forwardEmpty": "trident_0_direction",
+          "sourceFrame0Muzzle": {
+            "name": "trident_0",
+            "world": [
+              -1.009225606918335,
+              -0.05000000074505806,
+              0.7667580842971802
+            ],
+            "projected384": {
+              "x": 87.17595863342285,
+              "y": 116.3481216430664
+            }
+          },
+          "sourceFrame0Forward": {
+            "name": "trident_0_direction",
+            "world": [
+              -1.3251383304595947,
+              -0.05000000074505806,
+              0.8177399635314941
+            ],
+            "projected384": {
+              "x": 54.05576133728027,
+              "y": 112.16777801513672
+            }
+          },
+          "metadataErrorPixels": 4.668635805568335e-05
+        }
+      ],
+      "nozzleEmpties": [
+        {
+          "name": "nozzle_main",
+          "world": [
+            1.2300000190734863,
+            0.07000000029802322,
+            0.07999999821186066
+          ],
+          "projected384": {
+            "x": 319.5768127441406,
+            "y": 177.72132110595703
+          }
+        }
+      ],
+      "coreEmpties": [],
+      "coreFalse": true
+    }
+  ]
+}

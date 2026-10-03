@@ -1,0 +1,74 @@
+{
+  "role": "claw",
+  "displayWidth": 108,
+  "ports": 2,
+  "nozzles": 1,
+  "coreDisabled": true,
+  "checks": [
+    {
+      "source": "source-idle.blend",
+      "maxAnchorErrorPixels": 6.139840318334989e-05,
+      "anchors": [
+        {
+          "anchor": "barrel_0",
+          "errorPixels": 2.8762659200773513e-05
+        },
+        {
+          "anchor": "barrel_1",
+          "errorPixels": 4.49822393469652e-05
+        },
+        {
+          "anchor": "barrel_0_direction",
+          "errorPixels": 5.0731179969495747e-05
+        },
+        {
+          "anchor": "barrel_1_direction",
+          "errorPixels": 6.139840318334989e-05
+        },
+        {
+          "anchor": "nozzle_single",
+          "errorPixels": 3.484581474238901e-05
+        }
+      ],
+      "orthographic": true,
+      "resolution": [
+        384,
+        384
+      ],
+      "renderDevice": "CPU"
+    },
+    {
+      "source": "actual.blend",
+      "maxAnchorErrorPixels": 6.139840318334989e-05,
+      "anchors": [
+        {
+          "anchor": "barrel_0",
+          "errorPixels": 2.8762659200773513e-05
+        },
+        {
+          "anchor": "barrel_1",
+          "errorPixels": 4.49822393469652e-05
+        },
+        {
+          "anchor": "barrel_0_direction",
+          "errorPixels": 5.0731179969495747e-05
+        },
+        {
+          "anchor": "barrel_1_direction",
+          "errorPixels": 6.139840318334989e-05
+        },
+        {
+          "anchor": "nozzle_single",
+          "errorPixels": 3.484581474238901e-05
+        }
+      ],
+      "orthographic": true,
+      "resolution": [
+        384,
+        384
+      ],
+      "renderDevice": "CPU"
+    }
+  ],
+  "pass": true
+}

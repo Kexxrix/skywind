@@ -1,0 +1,3563 @@
+{
+  "at": "2026-10-03T09:38:27.525Z",
+  "frozenCanonical": "read-only-prototype16-final-source-receipt",
+  "frozenSourceHash": "0ff394ef7695fb4c6a5653936a6b701a1b8b5299a93137079e2b817c3d44f9c6",
+  "originalManifestHash": "e8edd8a480f38ea4e10496734d525f51d51fee059a64c3cc0f2c64cf236e30f4",
+  "unchangedFrozenIdentityAfter": true,
+  "kind": "candidate authored fullphase geometry against unchanged read-only prototype16-final actual collision engine; static motion-only 33 horizontal approaches per phase/recoil, not natural gameplay validation",
+  "reports": [
+    {
+      "bossKind": "apex",
+      "entryKey": "apex",
+      "manifestSHA256": "8c4f262ed5677aa5b78e675fb1ce63c8171dbe96a42e8312dd2140de69867aef",
+      "rows": [
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": -20,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 428.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": -16,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 432.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": -12,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 436.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": -8,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 440.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": -4,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 444.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 0,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 448.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 4,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 452.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 8,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 456.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 12,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 460.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 16,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 464.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0,
+          "offset": 20,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 468.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": -20,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 427.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": -16,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 431.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": -12,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 435.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": -8,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 439.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": -4,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 443.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 0,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 447.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 4,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 451.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 8,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 455.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 12,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 459.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 16,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 463.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": -0.035,
+          "offset": 20,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 467.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": -20,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 429.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": -16,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 433.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": -12,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 437.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": -8,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 441.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": -4,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 445.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 0,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 449.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 4,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 453.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 8,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 457.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 12,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 461.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 16,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 465.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open",
+          "angle": 0.035,
+          "offset": 20,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 469.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": -20,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 428.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": -16,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 432.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": -12,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 436.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": -8,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 440.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": -4,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 444.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 0,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 448.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 4,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 452.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 8,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 456.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 12,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 460.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 16,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 464.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0,
+          "offset": 20,
+          "core": {
+            "x": 1015.1478260084037,
+            "y": 448.7178111271391
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 468.7178111271391
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": -20,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 427.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": -16,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 431.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": -12,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 435.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": -8,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 439.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": -4,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 443.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 0,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 447.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 4,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 451.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 8,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 455.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 12,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 459.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 16,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 463.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": -0.035,
+          "offset": 20,
+          "core": {
+            "x": 1015.9351340861209,
+            "y": 447.96121808199536
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 467.96121808199536
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": -20,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 429.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": -16,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 433.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": -12,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 437.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": -8,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [
+            {
+              "index": 51,
+              "name": "cyan locked heart"
+            }
+          ],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 441.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": -4,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 445.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 0,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 449.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 4,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 453.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 8,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 457.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 12,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.6666666666666667,
+            "point": {
+              "x": 997.3333333333346,
+              "y": 461.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 16,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 465.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        },
+        {
+          "state": "open_fire",
+          "angle": 0.035,
+          "offset": 20,
+          "core": {
+            "x": 1014.3345247572355,
+            "y": 449.4463906492551
+          },
+          "coreRadius": 18.470199999999977,
+          "preCoreBlockers": [],
+          "preCoreStructuralMaterialBlockers": [],
+          "coreOwnMeshEarlyContacts": [],
+          "hit": {
+            "coreHit": true,
+            "damage": 1.2000000000000455,
+            "at": 0.675,
+            "point": {
+              "x": 1008.666666666668,
+              "y": 469.4463906492551
+            }
+          },
+          "impactFrame": "open"
+        }
+      ],
+      "protectedRows": [
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": -0.035,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0,
+          "angle": 0.035,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": -0.035,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": -20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": -16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": -12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": -8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": -4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 0,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 4,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 8,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 12,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 16,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.25,
+          "angle": 0.035,
+          "offset": 20,
+          "state": "idle",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": -20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": -16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": -12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": -8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": -4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 0,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0,
+          "offset": 20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": -20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": -16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": -12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": -8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": -4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 0,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": -0.035,
+          "offset": 20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": -20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": -16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": -12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": -8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": -4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 0,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 4,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 8,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 12,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 16,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.5,
+          "angle": 0.035,
+          "offset": 20,
+          "state": "mechanism_25",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": -0.035,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.75,
+          "angle": 0.035,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": -0.035,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": -20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": -16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": -12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": -8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": -4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 0,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 4,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 8,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 12,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 16,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        },
+        {
+          "progress": 0.999,
+          "angle": 0.035,
+          "offset": 20,
+          "state": "mechanism_50",
+          "coreExposed": false,
+          "hit": {
+            "coreHit": false,
+            "damage": 1
+          }
+        }
+      ],
+      "protectedSummary": {
+        "total": 165,
+        "bodyHit": 165,
+        "coreHit": 0,
+        "missed": 0
+      },
+      "summary": [
+        {
+          "state": "open",
+          "coreHits": 33,
+          "total": 33,
+          "clearPreCoreIncludingCoreOwnMesh": 25,
+          "clearStructuralMaterialApproaches": 33,
+          "firstCenterBlockers": []
+        },
+        {
+          "state": "open_fire",
+          "coreHits": 33,
+          "total": 33,
+          "clearPreCoreIncludingCoreOwnMesh": 25,
+          "clearStructuralMaterialApproaches": 33,
+          "firstCenterBlockers": []
+        }
+      ]
+    }
+  ],
+  "interpretation": "16-final natural-controller-selected motion-only fixture; requested source pose can remap during controller ticks; not fixed source-pose access or natural gameplay validation",
+  "requestedToObservedImpactFrames": {
+    "open": {
+      "open": 33
+    },
+    "open_fire": {
+      "open": 33
+    }
+  },
+  "protectedRequestedProgressToInitialControllerFrames": {
+    "0": {
+      "idle": 33
+    },
+    "0.25": {
+      "idle": 33
+    },
+    "0.5": {
+      "mechanism_25": 33
+    },
+    "0.75": {
+      "mechanism_50": 33
+    },
+    "0.999": {
+      "mechanism_50": 33
+    }
+  },
+  "fixedSourcePoseFixtureStatus": "parent-owned strengthening pending; separate result required"
+}

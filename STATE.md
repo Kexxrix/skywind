@@ -1,13 +1,55 @@
 # SkyWind 현재 작업 상태
 
-2026-10-02. **SKYWIND — 8H AUTONOMOUS BUILD**의 로컬 제작과 통합 검증을 조기 종료했다. 결과는 **기능·통합검증 완료, 청감·실기 검수 보류**다. [최종 작업 보고서](docs/WORK_REPORT_20261002_8H.ko.md)에 실행본·검증·종료 상태·재개 첫 작업을 기록했다. 사용자 요청 전 추가 제작은 중단한다. 이전 읽기 전용 조사 결과는 [현황 보고서](docs/STATUS_REPORT_20261002.ko.md)에 보존한다.
+기준: 2026-10-04 KST / prototype-17-final-hud.
 
-- 승인: 최신 사용자 지시에 따른 로컬 조작·전투·5단계 난도와 무한 지옥·5종 보스 행동·메카닉·전투 연출·효과음 연결·검증. 로컬 브랜치와 체크포인트 커밋 포함.
-- 시간: 시작 `2026-10-02 12:09:20 UTC`, 기능/새 자산 계열 동결 `19:09:20 UTC`, 종료 `20:09:20 UTC`. 중단이나 재개로 연장하지 않는다.
-- 기준: `bd0357a430c8c3d83b712cf982ab7354bbe1a7a6`에서 `autonomous/skywind-8h-20261002`. 시작 때 있던 미추적 현황 보고서는 보존한다. 원격 차이는 읽기 전용으로 확인했으며 동기화하지 않았다.
-- 보존: Canvas 2D + WebGL 2, SV01 본체/21프레임, 파일럿, 핵 반경1.85, 숲·구름·하늘, 기존 BGM, 키보드·포인터·터치·일시정지·재시작.
-- 제외: 원격 게시/배포, Adobe/Premiere, 새 계정·설치·과금, 강제 초기화/삭제. 사용자 파일을 덮어쓰지 않는다.
-- 검증 상태: 두 QA 결함을 최소 수정한 checkpoint-03에서 최종 독립 QA를 마쳤다. 새 게임의 정상 피해·시간·입력으로 연속5보스 격파와 지옥 진입을 관측했다. 검증된 게임 커밋·고정 빌드 바이트를 유지하고 보고서·상태 문서만 후속 저장한다. 직접 청음·사람 난도/재미·물리 모바일 승인은 미확인이다. 자동 검사/실제 관측/에이전트 검토/사용자 승인을 구분한다.
-- 증거 제한: 이번 작업 스크린샷 총24장 이하, 영상 없음. 임시 QA·로그 총2GB 이하. 게임 자산과 제작 원본은 별도 보존한다.
+사용자가 지정한 로컬 실행본의 소스·자산을 반영했다. 현재 게시 진행과 검증 결과는 [배포·백업 기록](docs/PUBLIC_UPDATE_20261004.md)을 따른다. 게임 추가 수정은 하지 않는다.
 
-담당 영역·검사·최종 Git/Library 인계 기록은 `.work/8h-build/`에 보존한다. 과거 구현 인계는 [HANDOFF.md](HANDOFF.md), 영역별 사양은 [레벨](docs/plan/LEVEL_DESIGN.md)·[탄막](docs/plan/BARRAGE_DESIGN.md)·[메카닉](docs/plan/MECHA_ART.md)·[빛과 소리](docs/plan/AUDIO_VISUAL.md)를 참고한다.
+- 일반전 45초, 서로 다른 5보스와 반복 HELL, 편대 독립 진입·공격·퇴각, 일반분홍25/패턴33/직사10 피해 분류, 확대 스침, 최상단 파일럿 HUD 가림 방지가 적용된 버전이다.
+- 원래 루트와 기존 작업 checkout의 미커밋 변경은 보존했다. 다른 환경에서는 GitHub main을 내려받아 npm start로 실행한다. 과거 .work 경로 없이 빌드할 수 있다.
+- 기존 동일 소스 검사 437/437, 실제 HUD 낮밤·desktop/portrait 4조건 QA 통과. 이번 재현 빌드·파일 동일성 결과는 배포 기록에 구분한다.
+- 지속 압박 목표·정상 native 60초 생존·사람 체감/최종 미감·직접 청음·실물 모바일 정량 성능은 완료로 판정하지 않았다.
+- 이전 로컬 진행 상태와 결정은 docs/history/LOCAL_STATE_20261003.md 및 LOCAL_DECISIONS_20261003.md에 당시 기록으로 보존했다. 재개 명령이 아니다.
+
+## SOURCE OF TRUTH ROUTING
+
+프로젝트 설명:
+[README.md](README.md)
+
+게임 진행 / 보스 / 난이도:
+[docs/plan/LEVEL_DESIGN.md](docs/plan/LEVEL_DESIGN.md)
+
+탄막 / 텐션:
+[docs/plan/BARRAGE_DESIGN.md](docs/plan/BARRAGE_DESIGN.md)
+
+시청각 연출:
+[docs/plan/AUDIO_VISUAL.md](docs/plan/AUDIO_VISUAL.md)
+
+메카닉 / 아트:
+[docs/plan/MECHA_ART.md](docs/plan/MECHA_ART.md)
+
+검증:
+[docs/plan/QUALITY.md](docs/plan/QUALITY.md)
+
+사용자 결정:
+[docs/plan/DECISIONS.md](docs/plan/DECISIONS.md) — 승인·충돌·선택 확인이 필요할 때 상단 Index부터.
+
+최신 milestone report:
+[docs/PUBLIC_UPDATE_20261004.md](docs/PUBLIC_UPDATE_20261004.md) — prototype-17-final-hud 게시·백업 결과.
+
+과거 구현 인계:
+[HANDOFF.md](HANDOFF.md) — 과거 구현 원인·수치·검증 근거가 필요할 때만.
+
+과거 QA / evidence:
+필요할 때만 해당 `docs/` 하위 자료 참조. R1·PATCH2 등의 당시 결과를 현재 버전 전체 검증으로 재사용하지 않음.
+
+작업별 추가 경로:
+
+- 전체 연결·HUD는 [IMPLEMENTATION.md](docs/plan/IMPLEMENTATION.md), 1차 포함/보류 범위는 [FIRST_IMPLEMENTATION.md](docs/plan/FIRST_IMPLEMENTATION.md).
+- 효과음 제작 도구·자율 평가 조사는 [SFX_WORKBENCH.md](docs/plan/SFX_WORKBENCH.md). 초기 환경 인계의 역사적 절차는 [FIRST_IMPLEMENTATION_HANDOFF.md](FIRST_IMPLEMENTATION_HANDOFF.md).
+- 실제 동작은 관련 현재 소스가 기준: 진행·흡수 [src/game.js](src/game.js), 시험값 [src/level.js](src/level.js), 패턴 [src/barrage.js](src/barrage.js), HUD [src/main.js](src/main.js)·[src/presentation.js](src/presentation.js), 표현 [src/renderer.js](src/renderer.js), 사운드 [src/audio.js](src/audio.js).
+
+읽기 주의:
+
+- 분야 문서는 상세 사양·제안을 찾는 경로다. `LEVEL_DESIGN`/`BARRAGE_DESIGN`의 “구현 미승인”과 `QUALITY`의 “게임 구현 미시작”은 작성 당시 표현이다. D42의 1차 승인·적용을 취소하거나 전체 제작 승인으로 확대하지 않는다.
+- `LEVEL_DESIGN`의 자동 흡수 금지와 `IMPLEMENTATION`/`FIRST_IMPLEMENTATION`의 초기 배경 속도는 현재 동작과 다르다. 관련 작업에서는 Index의 D43·D45~D48, 현재 소스와 최신 milestone report를 대조한다. 분야 문서 본문과 과거 인계·QA는 이번에 다시 쓰지 않았다.
+- 배포 기록과 Git 상태는 별개다. 이번에는 공개 사이트를 조회·배포하지 않았으며, D41/D49의 과거 게시 승인을 이번 변경의 게시 권한으로 재사용하지 않는다.

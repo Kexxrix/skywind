@@ -1,0 +1,17 @@
+{
+  "local-normal-orb-v3/idle": {
+    "decodedRGBASha256": "10454d5ac59fe41cd8a960dfb74137607a30782b3ca7d987fec129537eeb85a6",
+    "hullPixels": 29963,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      16,
+      98,
+      320,
+      290
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  }
+}

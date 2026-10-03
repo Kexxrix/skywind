@@ -1,0 +1,331 @@
+{
+  "method": "earclip original local prism XZ cap, merge adjacent cells iff union convex, clip exact evaluated geometry in local cells and project source camera",
+  "sourcePNGByteMismatch": 0,
+  "sourceResaved": false,
+  "rendered": false,
+  "sourceByteLedger": {
+    "actual.blend": "ac4cc8a5d7f83efb667a32900440c2167ea885e07dc60191944b31dd7083f7be",
+    "bastion-phase_000.png": "9587e889ff22a0c65c3670bc698ea3cdb8fe7498f8a4986e37a160fae2d02443",
+    "bastion-phase_000_fire.png": "631a42da1e743db20de4401bab7e383b8b1a6bfe1298ad144ff02c5882027ec6",
+    "bastion-phase_025.png": "ebeeaaf2b915aa7105c8286c22d5b3361811b4ef79214b13fbcd2c2eeec9bb69",
+    "bastion-phase_025_fire.png": "dbdae4b3fe5ad239f3583515eb4dbcc991f6e18032af27db1d0e8589bab59c2a",
+    "bastion-phase_050.png": "25279c995e62e6887af420190ccd5122609c655fcddcdbd7b0b5937ad636ed54",
+    "bastion-phase_050_fire.png": "a96524f7cd469ff4557a3ceb927cc4c4fae6e396c03117a11825823b8edfa0b8",
+    "bastion-phase_075.png": "29aea09c802e9f8a342a76c897782e9d90ee1d885b665b05d8598f0fcdcea52c",
+    "bastion-phase_075_fire.png": "2fc2c2df41887e583faa0b49e869d24cd652958580727b19138125c5b70d6472",
+    "bastion-phase_100.png": "f85f5af7c84dfad4fbc1157d45c116fe79af74a3c5b13f979e3a077c7312d15b",
+    "bastion-phase_100_fire.png": "a5be001f6b3a455704e9f9be3c27f0d01e5cbcbb7e29400fd0cf931f7bcce01f",
+    "source-phase_000.blend": "ea3e3bd5c197b5d3ccaa99f37cda8bb9177f3062c9c9ef0dc822460e3ddd2f7d",
+    "source-phase_000_fire.blend": "16d6c37909d8758d8855092db98dadd198b0fd21d5881ef3265e51382e14c857",
+    "source-phase_025.blend": "d3389a688d49b534b6c2d05dd7bd305400d54a9fed87d2f17647909027b8a217",
+    "source-phase_025_fire.blend": "8e979471440cbb286a2aae93cf82a3b990efe262aa83b89896dd7d8a7271ce73",
+    "source-phase_050.blend": "4241e3859ed86da61c26d5543aff5dcc1be3fd90664da211aef8be40f1fa0d19",
+    "source-phase_050_fire.blend": "aa9c260987367672e6793a1326220f873609f2838cf2304a7bf12b901bb3a1f9",
+    "source-phase_075.blend": "8c4f4b4d564768218a904aa7f8cc493ebd1cd244d82c7bcdfda0eed17384f04a",
+    "source-phase_075_fire.blend": "b02106898d8ce86376461060b2bd3009422c61a71d405123f26461fbe684e01a",
+    "source-phase_100.blend": "b4b72b4b708c7be82a1e15b0f087952ca6152b246ec5b6573049a7da0a41bfe3",
+    "source-phase_100_fire.blend": "2333cf8277810684449a72e1dd097e811e809a5d4c8bf25529c7faa68ceb5801"
+  },
+  "poses": [
+    {
+      "sourceState": "phase_000",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_000_fire",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_025",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_025_fire",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_050",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_050_fire",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_075",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_075_fire",
+      "componentCount": 60,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_100",
+      "componentCount": 61,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    },
+    {
+      "sourceState": "phase_100_fire",
+      "componentCount": 61,
+      "splitMeshes": [
+        {
+          "name": "brushed sharpened leading edge -1",
+          "cells": 3
+        },
+        {
+          "name": "brushed sharpened leading edge 1",
+          "cells": 3
+        },
+        {
+          "name": "jaw load blade -1",
+          "cells": 2
+        },
+        {
+          "name": "jaw load blade 1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell -1",
+          "cells": 2
+        },
+        {
+          "name": "violet predator jaw shell 1",
+          "cells": 2
+        }
+      ]
+    }
+  ]
+}

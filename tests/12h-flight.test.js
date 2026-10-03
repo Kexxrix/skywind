@@ -52,11 +52,11 @@ test('a safe moving rail really releases and damages after the minimum flight ti
   assert.ok(shot.lockAt < shot.launchedAt);
   assert.ok(hit.simulationAt - shot.launchedAt >= g.difficulty.minimumFlightTime);
   assert.equal(shot.armedAfter, 0);
-  assert.equal(g.player.hp, 88);
+  assert.equal(g.player.hp, 90);
 });
 
 test('a normal moving dart preserves the flight minimum at the independently reproduced 144 Hz boundary', () => {
-  for (const offset of [0, 8]) {
+  for (const offset of [0, 8, 24, 32]) {
     registerMechaManifest({ schemaVersion: 1, entries: [] });
     const g = createGame(120201), events = [];
     g.mode = 'playing'; g.bossesDefeated = 2;
@@ -76,19 +76,32 @@ test('a normal moving dart preserves the flight minimum at the independently rep
     const shots = events.filter(event => event.type === 'enemyShot').flatMap(event => event.shots);
     const hit = events.find(event => event.type === 'hit' && event.player);
     assert.ok(lock);
-    if (offset === 0) {
-      // Frozen prototype-02 damages HP here after only .645833 seconds.
-      assert.ok(events.some(event => event.type === 'attackSkipped' && event.reason === 'minimum-flight-time'));
+    const skipped=events.filter(event=>event.type==='attackSkipped'&&event.reason==='minimum-flight-time');
+    if (offset < 32) {
+      // Keep the historical early-hit source and its old +8 positive fixture:
+      // at the approved 460 speed both are now inside the unsafe boundary.
+      // +24 is just beyond .65s but inside the same-substep travel margin.
+      assert.equal(skipped.length,3);
+      assert.ok(skipped.every(event=>event.speed===460&&event.reachableAt<event.minimumFlightTime+event.releaseStepSeconds));
+      if(offset===24){
+        assert.ok(skipped[0].reachableAt>=g.difficulty.minimumFlightTime);
+        assert.ok(skipped[0].reachableAt<g.difficulty.minimumFlightTime+1/144);
+      }
       assert.equal(shots.length, 0);
       assert.equal(hit, undefined);
       assert.equal(g.player.hp, 100);
     } else {
-      // A nearby safe launch must still happen and inflict ordinary damage.
+      // +32 crosses the new 460-speed boundary: the first shot is safe, while
+      // ordinary forward input makes the later two burst releases unsafe.
+      assert.equal(shots.length,1);assert.equal(skipped.length,2);
       assert.ok(hit); assert.equal(hit.sourceKind, 'projectile');
       const shot = shots.find(candidate => candidate.id === hit.bulletId);
       assert.ok(shot); assert.deepEqual(shot.lockedTarget, lock.lockedTarget);
+      assert.ok(Math.abs(Math.hypot(shot.vx,shot.vy)-460)<1e-7);
+      assert.ok(shot.launchedAt-shot.lockAt>=.25-1/144);
       assert.ok(hit.simulationAt - shot.launchedAt >= g.difficulty.minimumFlightTime);
-      assert.equal(g.player.hp, 88);
+      assert.equal(shot.armedAfter,0);assert.equal(hit.damage,10);
+      assert.equal(g.player.hp, 90);
     }
   }
 });

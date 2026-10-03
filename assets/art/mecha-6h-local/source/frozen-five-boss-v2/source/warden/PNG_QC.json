@@ -1,0 +1,82 @@
+[
+  {
+    "file": "warden-phase_0_fire.png",
+    "bytes": 114631,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_0.png",
+    "bytes": 117155,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_100_fire.png",
+    "bytes": 119666,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_100.png",
+    "bytes": 121682,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_25_fire.png",
+    "bytes": 116590,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_25.png",
+    "bytes": 118801,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_50_fire.png",
+    "bytes": 117934,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_50.png",
+    "bytes": 120766,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_75_fire.png",
+    "bytes": 118701,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  },
+  {
+    "file": "warden-phase_75.png",
+    "bytes": 121164,
+    "width": 384,
+    "height": 384,
+    "rgba": true,
+    "borderAlphaPixels": 0
+  }
+]

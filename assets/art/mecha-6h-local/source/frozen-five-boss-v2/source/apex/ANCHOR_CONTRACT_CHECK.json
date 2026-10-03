@@ -1,0 +1,6 @@
+{
+  "anchorContractMismatchCount": 0,
+  "issues": [],
+  "geometryHullPolicy": "new real evaluated mesh compound hulls; no reuse of obsolete wide torso hull",
+  "status": "postbuild check, not pre-render approval"
+}

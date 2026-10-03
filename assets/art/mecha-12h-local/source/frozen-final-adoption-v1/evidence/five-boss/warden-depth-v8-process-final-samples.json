@@ -1,0 +1,314 @@
+[
+  {
+    "utc": "2026-10-02T23:32:20.1121029Z",
+    "cpuSeconds": 0.0,
+    "workingSetBytes": 3190784,
+    "threads": 1
+  },
+  {
+    "utc": "2026-10-02T23:32:20.6493265Z",
+    "cpuSeconds": 0.484375,
+    "workingSetBytes": 189075456,
+    "threads": 10
+  },
+  {
+    "utc": "2026-10-02T23:32:21.1685126Z",
+    "cpuSeconds": 1.1875,
+    "workingSetBytes": 250904576,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:21.6804812Z",
+    "cpuSeconds": 2.21875,
+    "workingSetBytes": 250916864,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:22.1949617Z",
+    "cpuSeconds": 3.21875,
+    "workingSetBytes": 250916864,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:22.7119568Z",
+    "cpuSeconds": 4.25,
+    "workingSetBytes": 400728064,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:23.2241828Z",
+    "cpuSeconds": 5.25,
+    "workingSetBytes": 407793664,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:23.7379675Z",
+    "cpuSeconds": 6.125,
+    "workingSetBytes": 290344960,
+    "threads": 12
+  },
+  {
+    "utc": "2026-10-02T23:32:24.2499672Z",
+    "cpuSeconds": 6.9375,
+    "workingSetBytes": 294862848,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:24.7622598Z",
+    "cpuSeconds": 7.96875,
+    "workingSetBytes": 294862848,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:25.2769097Z",
+    "cpuSeconds": 8.984375,
+    "workingSetBytes": 398958592,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:25.7919035Z",
+    "cpuSeconds": 10.0,
+    "workingSetBytes": 421650432,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:26.3043602Z",
+    "cpuSeconds": 11.015625,
+    "workingSetBytes": 436117504,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:26.8195152Z",
+    "cpuSeconds": 11.9375,
+    "workingSetBytes": 331710464,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:27.3329446Z",
+    "cpuSeconds": 12.953125,
+    "workingSetBytes": 331710464,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:27.8433176Z",
+    "cpuSeconds": 13.953125,
+    "workingSetBytes": 332066816,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:28.3578594Z",
+    "cpuSeconds": 14.9375,
+    "workingSetBytes": 435884032,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:28.8696682Z",
+    "cpuSeconds": 15.9375,
+    "workingSetBytes": 388407296,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:29.3814407Z",
+    "cpuSeconds": 16.859375,
+    "workingSetBytes": 330547200,
+    "threads": 12
+  },
+  {
+    "utc": "2026-10-02T23:32:29.8943306Z",
+    "cpuSeconds": 17.8125,
+    "workingSetBytes": 326926336,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:30.4062517Z",
+    "cpuSeconds": 18.8125,
+    "workingSetBytes": 326926336,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:30.9210949Z",
+    "cpuSeconds": 19.78125,
+    "workingSetBytes": 417447936,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:31.4354703Z",
+    "cpuSeconds": 20.796875,
+    "workingSetBytes": 435003392,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:31.9502682Z",
+    "cpuSeconds": 21.8125,
+    "workingSetBytes": 440434688,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:32.4622818Z",
+    "cpuSeconds": 22.671875,
+    "workingSetBytes": 330174464,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:32.9755932Z",
+    "cpuSeconds": 23.703125,
+    "workingSetBytes": 330174464,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:33.4914402Z",
+    "cpuSeconds": 24.734375,
+    "workingSetBytes": 330174464,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:34.0032822Z",
+    "cpuSeconds": 25.75,
+    "workingSetBytes": 439123968,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:34.5147053Z",
+    "cpuSeconds": 26.734375,
+    "workingSetBytes": 397381632,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:35.0298263Z",
+    "cpuSeconds": 27.734375,
+    "workingSetBytes": 341356544,
+    "threads": 12
+  },
+  {
+    "utc": "2026-10-02T23:32:35.5448375Z",
+    "cpuSeconds": 28.609375,
+    "workingSetBytes": 332189696,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:36.0572696Z",
+    "cpuSeconds": 29.640625,
+    "workingSetBytes": 332189696,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:36.5728926Z",
+    "cpuSeconds": 30.671875,
+    "workingSetBytes": 431702016,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:37.0866970Z",
+    "cpuSeconds": 31.6875,
+    "workingSetBytes": 439369728,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:37.6004625Z",
+    "cpuSeconds": 32.71875,
+    "workingSetBytes": 436428800,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:38.1125103Z",
+    "cpuSeconds": 33.5625,
+    "workingSetBytes": 333463552,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:38.6287909Z",
+    "cpuSeconds": 34.59375,
+    "workingSetBytes": 335511552,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:39.1427554Z",
+    "cpuSeconds": 35.59375,
+    "workingSetBytes": 335511552,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:39.6557324Z",
+    "cpuSeconds": 36.59375,
+    "workingSetBytes": 439676928,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:40.1704898Z",
+    "cpuSeconds": 37.609375,
+    "workingSetBytes": 442048512,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:40.6855398Z",
+    "cpuSeconds": 38.625,
+    "workingSetBytes": 444420096,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:41.2020649Z",
+    "cpuSeconds": 39.5,
+    "workingSetBytes": 337047552,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:41.7126217Z",
+    "cpuSeconds": 40.53125,
+    "workingSetBytes": 337047552,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:42.2254970Z",
+    "cpuSeconds": 41.5625,
+    "workingSetBytes": 426672128,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:42.7370796Z",
+    "cpuSeconds": 42.59375,
+    "workingSetBytes": 443637760,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:43.2534536Z",
+    "cpuSeconds": 43.609375,
+    "workingSetBytes": 442249216,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:43.7666236Z",
+    "cpuSeconds": 44.421875,
+    "workingSetBytes": 325140480,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:44.2793269Z",
+    "cpuSeconds": 45.453125,
+    "workingSetBytes": 334135296,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:44.7911583Z",
+    "cpuSeconds": 46.484375,
+    "workingSetBytes": 334135296,
+    "threads": 13
+  },
+  {
+    "utc": "2026-10-02T23:32:45.3050153Z",
+    "cpuSeconds": 47.484375,
+    "workingSetBytes": 438001664,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:45.8219004Z",
+    "cpuSeconds": 48.515625,
+    "workingSetBytes": 440373248,
+    "threads": 14
+  },
+  {
+    "utc": "2026-10-02T23:32:46.3325417Z",
+    "cpuSeconds": 49.53125,
+    "workingSetBytes": 445403136,
+    "threads": 14
+  }
+]

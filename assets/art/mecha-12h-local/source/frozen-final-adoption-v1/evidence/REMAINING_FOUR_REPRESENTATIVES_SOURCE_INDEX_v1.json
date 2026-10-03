@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "role": "mantis",
+      "folder": "normal-mantis-needle/representative-v2/mantis",
+      "displayWidth": 96,
+      "ports": 2,
+      "actualSHA256": "f5bb5faca912e1b1281f40238d8cdfdf89185e590633d03f66b5f61964fd21e9",
+      "manifestSHA256": "c4641a5e052cd17a7616abfbba2207d73fd85abdfc1dc5bc144b525e11d76cf6",
+      "idleSHA256": "7f4eda5ec23a5111fd7f2616a2b41bb9857fc52bacbf3766e265508e460c6235",
+      "scope": "one idle endpoint representative; additional source states are not adopted runtime states"
+    },
+    {
+      "role": "orb",
+      "folder": "normal-orb/orb-representative-v3",
+      "displayWidth": 82,
+      "ports": 3,
+      "actualSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+      "manifestSHA256": "8191c22b409c434f4d24cbb6c5b4f038ec8e025cd9f23baca92dbd2851b7ab2d",
+      "idleSHA256": "ed040e5fa080def26e859f40f0a49b56199bd51e15d1a88267d8d706d598f594",
+      "scope": "one idle endpoint representative; additional source states are not adopted runtime states"
+    },
+    {
+      "role": "claw",
+      "folder": "normal-claw-representative-v2",
+      "displayWidth": 108,
+      "ports": 2,
+      "actualSHA256": "b530fa7a0f30cb310dac92ca181f39fbf15a35edd2313941a8e956227ae6779b",
+      "manifestSHA256": "94e4e27ee653ab01654a71f96df486f9eb304fe54a5ce67b94ab014ded9c6f9d",
+      "idleSHA256": "e1c3260b612229f907c93e6682f786e3621cb42bdeec977c2821053a84745725",
+      "scope": "one idle endpoint representative; additional source states are not adopted runtime states"
+    },
+    {
+      "role": "needle",
+      "folder": "normal-mantis-needle/representative-v2/needle",
+      "displayWidth": 112,
+      "ports": 1,
+      "actualSHA256": "836766005ec39a4eccec03ecda5200a4d54c4f54d0cff3bee249d0e22f4d82fa",
+      "manifestSHA256": "d69270ed7a70827c109a696891f47a9ebc1773c680c2229720cd54f51ee91b84",
+      "idleSHA256": "955c15862e318f2ca392ffc3948adafd0bc47fad3623693452c9eee751c2ab1e",
+      "scope": "one idle endpoint representative; additional source states are not adopted runtime states"
+    }
+  ],
+  "roleMapSHA256": "bec440b2c18ae37eb092c9d8d65f6f7707ccd0a2820ab7c4c2a9962317cc211a",
+  "speciesPlan": "seven established + four remaining + preserved beetle = twelve; appearance-only matching children add no new species"
+}

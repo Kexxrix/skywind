@@ -1,0 +1,17 @@
+{
+  "local-claw-drumgun-representative-v2/idle": {
+    "decodedRGBASha256": "62f9fa2d81b3c6473cffdf1a0f520f65633e7578ccbc07e396d080f8c3b9a601",
+    "hullPixels": 27712,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      36,
+      118,
+      330,
+      262
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 2
+  }
+}

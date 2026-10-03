@@ -1,0 +1,110 @@
+{
+  "sourceFrame": 0,
+  "verification": "actual.blend reopened read-only; projected port/forward errors <.000054px; no model/PNG/common metadata writes",
+  "entries": [
+    {
+      "role": "carrier",
+      "entryKey": "local-carrier-finish-v1",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\carrier-lancer-finish-v1/full-candidate/carrier-finish-v1\\actual.blend",
+      "sourceSHA256": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+      "muzzles": [
+        {
+          "index": 0,
+          "empty": "defence_upper",
+          "directionPointEmpty": "defence_upper_direction"
+        },
+        {
+          "index": 1,
+          "empty": "defence_keel",
+          "directionPointEmpty": "defence_keel_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_0",
+        "nozzle_-0.81"
+      ],
+      "coreEmpties": [
+        "core_center",
+        "core_radius"
+      ]
+    },
+    {
+      "role": "lancer",
+      "entryKey": "local-lancer-finish-v1",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\carrier-lancer-finish-v1/full-candidate/lancer-finish-v1\\actual.blend",
+      "sourceSHA256": "ebdcbad947dd136e2e414a36311676cf2445618f41ef0a5df8f2e5f88309843e",
+      "muzzles": [
+        {
+          "index": 0,
+          "empty": "siege_lance",
+          "directionPointEmpty": "siege_lance_direction"
+        },
+        {
+          "index": 1,
+          "empty": "offset_suppressor",
+          "directionPointEmpty": "offset_suppressor_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_main"
+      ],
+      "coreEmpties": [
+        "core_center",
+        "core_radius"
+      ]
+    },
+    {
+      "role": "orb",
+      "entryKey": "local-normal-orb-v3",
+      "actualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\normal-orb/orb-representative-v3\\actual.blend",
+      "sourceSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+      "muzzles": [
+        {
+          "index": 0,
+          "empty": "trident_2",
+          "directionPointEmpty": "trident_2_direction"
+        },
+        {
+          "index": 1,
+          "empty": "trident_1",
+          "directionPointEmpty": "trident_1_direction"
+        },
+        {
+          "index": 2,
+          "empty": "trident_0",
+          "directionPointEmpty": "trident_0_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_main"
+      ],
+      "coreEmpties": []
+    },
+    {
+      "role": "carrierMatchingChild",
+      "entryKey": "local-carrier-child-finish-v1",
+      "independentActualBlendFound": false,
+      "parentActualSource": "E:\\codexwork\\Skywind\\.work\\12h-build\\local-art\\carrier-lancer-finish-v1/full-candidate/carrier-finish-v1\\actual.blend",
+      "parentSHA256": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+      "sourceGroup": "child0 six mesh objects plus three child0 Empty; see recipe",
+      "muzzles": [
+        {
+          "index": 0,
+          "empty": "child_0_rail",
+          "directionPointEmpty": "child_0_rail_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "child_0_nozzle"
+      ],
+      "coreEmpties": [],
+      "translationForStandaloneCenterWorld": [
+        0.95,
+        0.56,
+        0.64
+      ],
+      "cameraPolicy": "parent fixed camera/ortho5.25 unchanged; child display448/384RG\u00adBA/pivot192",
+      "recipe": "CARRIER_CHILD_SOURCE_RECIPE.ko.md"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { Renderer, projectilePalette, TENSION_PALETTE, COMBAT_FX, AIM_SHOT_VISUALS } from '../src/renderer.js';
-import { sequenceToWorld } from '../src/game.js';
+import { sequenceToWorld, enemyChargeMuzzles } from '../src/game.js';
 import { VolumeEnvironment } from '../src/volume-environment.js';
 import { Terrain3D } from '../src/terrain3d.js';
 import { WEAPON_PRESENTATION } from '../src/presentation.js';
@@ -103,6 +103,39 @@ test('three aimed speeds have ordered directional lengths and the same danger-co
   assert.deepEqual(cores[0],cores[1]);assert.deepEqual(cores[1],cores[2]);
 });
 
+test('locked direct-shot contrast preserves tell geometry, maximum width and immutable combat state',()=>{
+  const measure=enemy=>{
+    const strokes=[],glows=[],stack=[];let path=[];
+    const state={globalCompositeOperation:'source-over',globalAlpha:1,lineWidth:1,strokeStyle:'#000000'};
+    const c=new Proxy({save(){stack.push({...state});},restore(){Object.assign(state,stack.pop());},
+      beginPath(){path=[];},moveTo(x,y){path.push(['move',x,y]);},lineTo(x,y){path.push(['line',x,y]);},
+      arc(x,y,r){path.push(['arc',x,y,r]);},stroke(){strokes.push({path:structuredClone(path),...state});}},
+      {get(target,key){return key in target?target[key]:key in state?state[key]:()=>{};},set(target,key,value){state[key]=value;return true;}});
+    const game={enemies:[enemy],player:{x:700,y:620}},before=structuredClone(game);
+    Renderer.prototype.drawThreats.call({glow(...args){glows.push(args);}},c,game);
+    assert.deepEqual(game,before,'painting cannot change a lock, clock, release or player state');
+    return {strokes,glows};
+  };
+  const lock={x:225,y:360},bundle={at:0,count:1,pattern:'rail',released:false,lockedTarget:lock,speed:460};
+  const dart={type:'dart',x:1060,y:545,radius:20,telegraph:.7,attackName:'rail',
+    muzzles:[{x:1020,y:545}],sequence:{pattern:'rail',index:0,bundles:[bundle]}};
+  const {strokes,glows}=measure(dart);
+  assert.equal(strokes.length,2);assert.deepEqual(strokes[0].path,strokes[1].path);
+  assert.deepEqual(strokes[0].path,[['arc',0,0,10+(1-.7)*18]]);
+  assert.equal(strokes[0].lineWidth,1.25);assert.ok(strokes[1].lineWidth<1.25);
+  assert.ok(strokes.every(s=>s.globalCompositeOperation==='source-over'&&s.globalAlpha>=.85));
+  const brightness=s=>s.strokeStyle.slice(1).match(/../g).reduce((n,v)=>n+parseInt(v,16),0)/3;
+  assert.ok(brightness(strokes[0])<50&&brightness(strokes[1])>220,'separate dark/day and light/night edges');
+  assert.equal(glows.length,1);assert.equal(glows[0][3],38+.7*26,'flare footprint stays unchanged');
+  const needleEnemy={...dart,type:'needle',attackName:'snapshot'},origin=enemyChargeMuzzles({},needleEnemy)[0];
+  const needle=measure(needleEnemy);
+  assert.deepEqual(needle.strokes[0].path,[['move',origin.x,origin.y],['line',225,360]]);
+  assert.deepEqual(needle.strokes[0].path,needle.strokes[1].path);
+  assert.deepEqual(needle.strokes[2].path,[['arc',225,360,8]]);
+  assert.ok(needle.strokes.slice(0,4).every(s=>s.lineWidth<=1),'existing locked guide never widens');
+  assert.equal(measure({...dart,telegraph:0}).strokes.length,0,'no earlier or later tell is fabricated');
+});
+
 test('B04 window brackets use the actual firing snapshot even while the current camera moves',()=>{
   const roll=-.12,plan={cos:Math.cos(roll),sin:Math.sin(roll),cameraY:-156,roll,index:1,bundles:[{row:0},{row:1}]};
   const enemy={x:920,y:310,telegraph:.8,attackName:'B04',sequence:plan,safeLane:240,safeDirection:1,safeWidth:94.7,muzzles:[{x:850,y:290},{x:850,y:330}]};
@@ -170,14 +203,16 @@ test('enemy cue corona follows its palette with light compositing and preserves 
   }
 });
 
-test('supply light colors follow side independently of item type and never draw a dark panel',()=>{
+test('supply light colors follow actual action at either altitude and never draw a dark panel',()=>{
   for(const side of ['top','bottom'])for(const type of ['change','maintain']) {
     const colors=[],glows=[];
     const c=new Proxy({fillRect(){colors.push(this.fillStyle);},createLinearGradient(){return {addColorStop(){}};}}, {get(target,key){return key in target?target[key]:()=>{};}});
     const item={id:83,x:270,y:100,side,type};
-    Renderer.prototype.drawPickup.call({reducedMotion:false,glow(...args){glows.push(args);}},c,item,3);
-    assert.equal(glows[0][4],side==='top'?'supplyTop':'supplyBottom');
-    assert.ok(colors.every(color=>['#fffceb','#ffcf75','#68f5ba'].includes(color)));
+    const player={basicLevel:2,powerTime:0,weaponMode:'normal'},before=structuredClone(player);
+    Renderer.prototype.drawPickup.call({reducedMotion:false,glow(...args){glows.push(args);}},c,item,3,player);
+    assert.equal(glows[0][4],type==='change'?'supplyChange':'supplyMaintain');
+    assert.ok(colors.every(color=>['#fffceb','#FFD46B','#70BCFF'].includes(color)));
+    assert.deepEqual(player,before);
     assert.deepEqual(item,{id:83,x:270,y:100,side,type});
   }
 });

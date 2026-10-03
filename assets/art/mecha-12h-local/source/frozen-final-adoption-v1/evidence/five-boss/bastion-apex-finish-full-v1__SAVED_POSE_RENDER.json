@@ -1,0 +1,104 @@
+{
+  "device": "CPU",
+  "threads": 2,
+  "elapsedSeconds": 41.35534048080444,
+  "newFrames": [
+    {
+      "role": "bastion",
+      "state": "phase_000_fire",
+      "sourcePose": "source-phase_000_fire.blend",
+      "filename": "bastion-phase_000_fire.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_025",
+      "sourcePose": "source-phase_025.blend",
+      "filename": "bastion-phase_025.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_025_fire",
+      "sourcePose": "source-phase_025_fire.blend",
+      "filename": "bastion-phase_025_fire.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_050",
+      "sourcePose": "source-phase_050.blend",
+      "filename": "bastion-phase_050.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_050_fire",
+      "sourcePose": "source-phase_050_fire.blend",
+      "filename": "bastion-phase_050_fire.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_075",
+      "sourcePose": "source-phase_075.blend",
+      "filename": "bastion-phase_075.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_075_fire",
+      "sourcePose": "source-phase_075_fire.blend",
+      "filename": "bastion-phase_075_fire.png"
+    },
+    {
+      "role": "bastion",
+      "state": "phase_100",
+      "sourcePose": "source-phase_100.blend",
+      "filename": "bastion-phase_100.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_25",
+      "sourcePose": "source-mechanism_25.blend",
+      "filename": "apex-mechanism_25.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_50",
+      "sourcePose": "source-mechanism_50.blend",
+      "filename": "apex-mechanism_50.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_75",
+      "sourcePose": "source-mechanism_75.blend",
+      "filename": "apex-mechanism_75.png"
+    },
+    {
+      "role": "apex",
+      "state": "open",
+      "sourcePose": "source-open.blend",
+      "filename": "apex-open.png"
+    },
+    {
+      "role": "apex",
+      "state": "fire",
+      "sourcePose": "source-fire.blend",
+      "filename": "apex-fire.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_25_fire",
+      "sourcePose": "source-mechanism_25_fire.blend",
+      "filename": "apex-mechanism_25_fire.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_50_fire",
+      "sourcePose": "source-mechanism_50_fire.blend",
+      "filename": "apex-mechanism_50_fire.png"
+    },
+    {
+      "role": "apex",
+      "state": "mechanism_75_fire",
+      "sourcePose": "source-mechanism_75_fire.blend",
+      "filename": "apex-mechanism_75_fire.png"
+    }
+  ],
+  "sourceSavePerformed": false
+}

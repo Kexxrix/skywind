@@ -1,0 +1,96 @@
+{
+  "scope": "This six-hour local art revision only, including preserved rejected candidates and final169 asset render frames. Runtime81 unique PNG; semantic aliases and diagnostic images are not render frames. Earlier twelve-hour attempts excluded.",
+  "jobs": [
+    {
+      "id": "bastion-representative-v1",
+      "renderedFrames": 2
+    },
+    {
+      "id": "bastion-full-v1",
+      "renderedFrames": 10,
+      "status": "preserved earlier candidate"
+    },
+    {
+      "id": "warden-full-v1",
+      "renderedFrames": 10,
+      "finalGeometry": "warden-full-v2 exact metadata decomposition"
+    },
+    {
+      "id": "bastion-full-v2",
+      "renderedFrames": 10,
+      "finalGeometry": "bastion-full-v3 exact metadata decomposition"
+    },
+    {
+      "id": "carrier-lancer-prep full renderer",
+      "renderedFrames": 31
+    },
+    {
+      "id": "apex-full-v1",
+      "renderedFrames": 10,
+      "status": "preserved earlier disconnected lower load candidate"
+    },
+    {
+      "id": "apex-full-v3",
+      "renderedFrames": 10,
+      "reason": "real lower siege to spine load cantilever"
+    },
+    {
+      "id": "carrier-full-v2 recoil renderer",
+      "renderedFrames": 20,
+      "reason": "actual recoil+occupied payload contract"
+    },
+    {
+      "id": "Warden design2 representative",
+      "renderedFrames": 2,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Carrier design2 representative",
+      "renderedFrames": 2,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Lancer design2 representative",
+      "renderedFrames": 2,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Warden design2 full",
+      "renderedFrames": 10,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Lancer design2 full",
+      "renderedFrames": 10,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Carrier design3 representative",
+      "renderedFrames": 2,
+      "renderProcesses": 1
+    },
+    {
+      "id": "Carrier design3 remaining full",
+      "renderedFrames": 38,
+      "renderProcesses": 1
+    }
+  ],
+  "knownRenderedAssetFrames": 169,
+  "headlessRenderProcesses": 15,
+  "renderPolicy": "CPU2, sequential heavy renders; GPU telemetry unavailable",
+  "helperFailures": [
+    {
+      "id": "prepare-representative-script",
+      "renderedFrames": 0,
+      "reason": "stray triple quote syntax error corrected before model generation"
+    }
+  ],
+  "preservedFailedValidation": [
+    "bastion-full-v2/hull-inspection.json:3.7366% concavity approximation",
+    "warden-full-v1/hull-inspection.json:2.7664% concavity approximation",
+    "apex-full-v1 and v2:concavity/lower load visual issue",
+    "Lancer design2 full initial mandatory idle alias omission: loader rejected; aliases fixed, all15 lookups passed before freeze; no additional asset rendering"
+  ],
+  "captures": 0,
+  "videos": 0
+}

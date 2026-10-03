@@ -1,0 +1,614 @@
+{
+  "entries": 6,
+  "roles": [
+    "warden",
+    "carrier",
+    "lancer",
+    "bastion",
+    "apex"
+  ],
+  "lookups": 100,
+  "pass": true,
+  "rows": [
+    {
+      "key": "warden",
+      "state": "phase_0",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_0_fire",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_25",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_25_fire",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_50",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_50_fire",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_75",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_75_fire",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "phase_100",
+      "ports": 5,
+      "coreExposed": true
+    },
+    {
+      "key": "warden",
+      "state": "phase_100_fire",
+      "ports": 5,
+      "coreExposed": true
+    },
+    {
+      "key": "warden",
+      "state": "idle",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "charge",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "fire",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "warden",
+      "state": "open",
+      "ports": 5,
+      "coreExposed": true
+    },
+    {
+      "key": "warden",
+      "state": "damaged",
+      "ports": 5,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload2",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload2_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload1near",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload1near_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload1far",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload1far_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload0",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_000_payload0_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload2",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload2_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload1near",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload1near_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload1far",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload1far_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload0",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_025_payload0_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload2",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload2_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload1near",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload1near_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload1far",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload1far_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload0",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_050_payload0_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload2",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload2_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload1near",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload1near_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload1far",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload1far_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload0",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_075_payload0_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload2",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload2_fire",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload1near",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload1near_fire",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload1far",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload1far_fire",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload0",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "phase_100_payload0_fire",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "idle",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "charge",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "carrier",
+      "state": "open",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "carrier",
+      "state": "fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "local-carrier-child-largeform-v1",
+      "state": "idle",
+      "ports": 1,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_000",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_000_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_025",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_025_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_050",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_050_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_075",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_075_fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "phase_100",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "lancer",
+      "state": "phase_100_fire",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "lancer",
+      "state": "idle",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "charge",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "fire",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "lancer",
+      "state": "open",
+      "ports": 2,
+      "coreExposed": true
+    },
+    {
+      "key": "lancer",
+      "state": "damaged",
+      "ports": 2,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_000",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_000_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_025",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_025_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_050",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_050_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_075",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_075_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "phase_100",
+      "ports": 3,
+      "coreExposed": true
+    },
+    {
+      "key": "bastion",
+      "state": "phase_100_fire",
+      "ports": 3,
+      "coreExposed": true
+    },
+    {
+      "key": "bastion",
+      "state": "idle",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "charge",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "bastion",
+      "state": "open",
+      "ports": 3,
+      "coreExposed": true
+    },
+    {
+      "key": "bastion",
+      "state": "damaged",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "idle",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_25",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_50",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_75",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "open",
+      "ports": 3,
+      "coreExposed": true
+    },
+    {
+      "key": "apex",
+      "state": "fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_25_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_50_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "mechanism_75_fire",
+      "ports": 3,
+      "coreExposed": false
+    },
+    {
+      "key": "apex",
+      "state": "open_fire",
+      "ports": 3,
+      "coreExposed": true
+    }
+  ]
+}

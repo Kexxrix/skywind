@@ -1,0 +1,7369 @@
+{
+  "at": "2026-10-03T10:26:36.270Z",
+  "bossKind": "lancer",
+  "entryKey": "lancer",
+  "kind": "Explicit immutable source-pose binding fixture; candidate-derived manifest mechanism map contains target source state at progress0; semantic aliases removed only in fixture, authored PNG/anchors/hulls retained. Original engine physics/damage files unchanged. Tests authored poses, not natural boss timing or difficulty.",
+  "engineRoot": "E:\\codexwork\\Skywind\\.work\\speed-tuning-20261003\\prototype-16-final\\dist",
+  "engineSourceSHA256": {
+    "game.js": "0ff394ef7695fb4c6a5653936a6b701a1b8b5299a93137079e2b817c3d44f9c6",
+    "mecha-art.js": "824206687b77fc85e37cc2bbcf99b57d088ad6b5820e59966aa35a6609c27e59",
+    "mecha-collision.js": "1104782a1eee18fd8cc9eb384b52766d1f346cc8d626192bce25791353c8c591",
+    "level.js": "2461fb12427989bcc56c4b226d8b73f0c7194eeda355029706bf685d1c7cb99c"
+  },
+  "unchangedAfter": true,
+  "candidateManifestSHA256": "fb826182724641a62cce9c76bc394429da700dc01d99efce5a506cea1da987fd",
+  "rows": [
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8452873195406,
+        "y": 422.4180006680415
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.853516510432,
+        "y": 422.37308936047754
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.853516510432,
+        "y": 422.37308936047754
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.853516510432,
+        "y": 422.37308936047754
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.853516510432,
+        "y": 422.37308936047754
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.853516510432,
+        "y": 422.37308936047754
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7163603370514,
+        "y": 420.4911854994035
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7163603370514,
+        "y": 420.4911854994035
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7163603370514,
+        "y": 420.4911854994035
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.70813114616,
+        "y": 420.53609680696746
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7163603370514,
+        "y": 420.4911854994035
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7163603370514,
+        "y": 420.4911854994035
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9165063051507,
+        "y": 424.303551466697
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9165063051507,
+        "y": 424.303551466697
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9165063051507,
+        "y": 424.303551466697
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.924735496042,
+        "y": 424.25864015913305
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.924735496042,
+        "y": 424.25864015913305
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.924735496042,
+        "y": 424.25864015913305
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.924735496042,
+        "y": 424.25864015913305
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.924735496042,
+        "y": 424.25864015913305
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9413370791904,
+        "y": 424.16793651556657
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5500000000000005
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9665579685266,
+        "y": 424.0298915658193
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "lancer-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.992104571699,
+        "y": 423.8897645021905
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8784850907682,
+        "y": 422.2366224859906
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8868928469556,
+        "y": 422.19060321848616
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8868928469556,
+        "y": 422.19060321848616
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.7585135084037,
+        "y": 422.8698986271391
+      },
+      "impactCore": {
+        "x": 1047.8868928469556,
+        "y": 422.19060321848616
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.749736673575,
+        "y": 420.30869935741214
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.621357335023,
+        "y": 420.98799476606507
+      },
+      "impactCore": {
+        "x": 1047.7413289173876,
+        "y": 420.3547186249166
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9497040763783,
+        "y": 424.1221732846461
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9581118325657,
+        "y": 424.0761540171417
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9581118325657,
+        "y": 424.0761540171417
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9581118325657,
+        "y": 424.0761540171417
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.9750402212296,
+        "y": 423.9833981624723
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "lancer-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1047.8297324940138,
+        "y": 424.7554494257946
+      },
+      "impactCore": {
+        "x": 1047.992104571699,
+        "y": 423.8897645021905
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4909897527556,
+        "y": 401.2683803702016
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4909897527556,
+        "y": 401.2683803702016
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4402222602469,
+        "y": 401.5465523835777
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5500000000000005
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4236206770986,
+        "y": 401.6372560271442
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4236206770986,
+        "y": 401.6372560271442
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4236206770986,
+        "y": 401.6372560271442
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4236206770986,
+        "y": 401.6372560271442
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4236206770986,
+        "y": 401.6372560271442
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4153914862072,
+        "y": 401.68216733470814
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4153914862072,
+        "y": 401.68216733470814
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4153914862072,
+        "y": 401.68216733470814
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6713975584586,
+        "y": 400.78949416947694
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6542132367746,
+        "y": 400.8839190863406
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6542132367746,
+        "y": 400.8839190863406
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.628666633602,
+        "y": 401.0240461499694
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6034457442659,
+        "y": 401.1620910997167
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5500000000000005
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5951220075037,
+        "y": 401.20758478848734
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5416666666666672
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5868441611176,
+        "y": 401.2527947432832
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5868441611176,
+        "y": 401.2527947432832
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5868441611176,
+        "y": 401.2527947432832
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5868441611176,
+        "y": 401.2527947432832
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.5786149702262,
+        "y": 401.2977060508471
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2630329051228,
+        "y": 401.9600594079003
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5500000000000005
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2464313219746,
+        "y": 402.0507630514668
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2464313219746,
+        "y": 402.0507630514668
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2464313219746,
+        "y": 402.0507630514668
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2464313219746,
+        "y": 402.0507630514668
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2464313219746,
+        "y": 402.0507630514668
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2382021310832,
+        "y": 402.09567435903074
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2382021310832,
+        "y": 402.09567435903074
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2382021310832,
+        "y": 402.09567435903074
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2382021310832,
+        "y": 402.09567435903074
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "lancer-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2382021310832,
+        "y": 402.09567435903074
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5250000000000006
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4909897527556,
+        "y": 401.2683803702016
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4909897527556,
+        "y": 401.2683803702016
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4739254022861,
+        "y": 401.36201403048346
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4569970136222,
+        "y": 401.4547698851528
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.4569970136222,
+        "y": 401.4547698851528
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1005.3286176750704,
+        "y": 402.13406529380575
+      },
+      "impactCore": {
+        "x": 1005.448589257435,
+        "y": 401.50078915265726
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6713975584586,
+        "y": 400.78949416947694
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6542132367746,
+        "y": 400.8839190863406
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6542132367746,
+        "y": 400.8839190863406
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6542132367746,
+        "y": 400.8839190863406
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.628666633602,
+        "y": 401.0240461499694
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6202204976412,
+        "y": 401.0703086012918
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.6202204976412,
+        "y": 401.0703086012918
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.611812741454,
+        "y": 401.11632786879625
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.611812741454,
+        "y": 401.11632786879625
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.611812741454,
+        "y": 401.11632786879625
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1004.4918411590894,
+        "y": 401.74960400994473
+      },
+      "impactCore": {
+        "x": 1004.611812741454,
+        "y": 401.11632786879625
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.3138003976316,
+        "y": 401.6818873945242
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2798076584982,
+        "y": 401.8682769094754
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2798076584982,
+        "y": 401.8682769094754
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2798076584982,
+        "y": 401.8682769094754
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "lancer-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1006.1514283199464,
+        "y": 402.54757231812835
+      },
+      "impactCore": {
+        "x": 1006.2713999023109,
+        "y": 401.91429617697986
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0869108142085,
+        "y": 380.3905335713326
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0610939194222,
+        "y": 380.53244287020163
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0610939194222,
+        "y": 380.53244287020163
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0186934241016,
+        "y": 380.7648516526573
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5583333333333338
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0020026901514,
+        "y": 380.8561085723484
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5416666666666672
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5505103105382,
+        "y": 381.5035149284801
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5505103105382,
+        "y": 381.5035149284801
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.4991468125794,
+        "y": 381.785551290978
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6613167634395,
+        "y": 379.3319968851178
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6354998686531,
+        "y": 379.47390618398686
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6354998686531,
+        "y": 379.47390618398686
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.5764086393823,
+        "y": 379.7975718861336
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5416666666666672
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.5681307929962,
+        "y": 379.84278184092943
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "lancer-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.5681307929962,
+        "y": 379.84278184092943
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5333333333333339
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0869108142085,
+        "y": 380.3905335713326
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0782782411062,
+        "y": 380.438017953338
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0610939194222,
+        "y": 380.53244287020163
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0610939194222,
+        "y": 380.53244287020163
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0440295689527,
+        "y": 380.6260765304835
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 962.898721841737,
+        "y": 381.39812779380577
+      },
+      "impactCore": {
+        "x": 963.0271011802888,
+        "y": 380.71883238515284
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5505103105382,
+        "y": 381.5035149284801
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5505103105382,
+        "y": 381.5035149284801
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5418777374359,
+        "y": 381.5509993104855
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5246934157519,
+        "y": 381.64542422734917
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 961.3623213380667,
+        "y": 382.5111091509533
+      },
+      "impactCore": {
+        "x": 961.5076290652825,
+        "y": 381.739057887631
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6613167634395,
+        "y": 379.3319968851178
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6250000000000002
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6526841903371,
+        "y": 379.3794812671232
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6354998686531,
+        "y": 379.47390618398686
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6354998686531,
+        "y": 379.47390618398686
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6000000000000003
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6184355181837,
+        "y": 379.5675398442687
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6015071295197,
+        "y": 379.66029569893806
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "lancer-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 964.473127790968,
+        "y": 380.339591107591
+      },
+      "impactCore": {
+        "x": 964.6015071295197,
+        "y": 379.66029569893806
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "lancer-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 920.4688260084038,
+        "y": 360.6622944604724
+      },
+      "impactCore": {
+        "x": 920.622649952512,
+        "y": 359.8435304828744
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 918.2328051621332,
+        "y": 363.27271839483296
+      },
+      "impactCore": {
+        "x": 918.3866291062415,
+        "y": 362.45395441723497
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "lancer-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 922.7948236169004,
+        "y": 358.1317139999247
+      },
+      "impactCore": {
+        "x": 922.9486475610087,
+        "y": 357.31295002232673
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.175755649583,
+        "y": 339.20090326716377
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.175755649583,
+        "y": 339.20090326716377
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "lancer-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.175755649583,
+        "y": 339.20090326716377
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.1673095136222,
+        "y": 339.24716571848614
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 878.0389301750704,
+        "y": 339.9264611271391
+      },
+      "impactCore": {
+        "x": 878.175755649583,
+        "y": 339.20090326716377
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 875.1032889861996,
+        "y": 344.0343276387126
+      },
+      "impactCore": {
+        "x": 875.2316683247514,
+        "y": 343.3550322300597
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2448987813848,
+        "y": 335.24454148360553
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "lancer-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 881.116519442833,
+        "y": 335.92383689225846
+      },
+      "impactCore": {
+        "x": 881.2533449173457,
+        "y": 335.19827903228315
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.5750000000000004
+      }
+    }
+  ],
+  "stateSummary": [
+    {
+      "state": "phase_000",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_000_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_025",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_025_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_050",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_050_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_075",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_075_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100_fire",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    }
+  ]
+}

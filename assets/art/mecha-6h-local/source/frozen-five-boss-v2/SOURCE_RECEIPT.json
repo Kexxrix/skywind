@@ -1,0 +1,37 @@
+[
+  {
+    "role": "warden",
+    "producerFolder": "design-revision-v2/warden-full",
+    "inputManifestSHA256": "6d1aa8087e246a09d91e58d9c4fb833f452d43c066a9cd2d1c0d0c34fc0b7c00",
+    "editableSourceRoot": "editable/warden",
+    "runtimeRoot": "runtime/warden"
+  },
+  {
+    "role": "carrier",
+    "producerFolder": "design-revision-v3/carrier",
+    "inputManifestSHA256": "fe5f40426ff9aaacbef47a963e33f11fc4674210ac10951f208cb052e6ce84a8",
+    "editableSourceRoot": "editable/carrier",
+    "runtimeRoot": "runtime/carrier"
+  },
+  {
+    "role": "lancer",
+    "producerFolder": "design-revision-v2/lancer-full",
+    "inputManifestSHA256": "fb826182724641a62cce9c76bc394429da700dc01d99efce5a506cea1da987fd",
+    "editableSourceRoot": "editable/lancer",
+    "runtimeRoot": "runtime/lancer"
+  },
+  {
+    "role": "bastion",
+    "producerFolder": "bastion-full-v3",
+    "inputManifestSHA256": "4e302c68fc3aba300a4d4a785beb8d9ad1ee080a330dafb3d415db29c2707038",
+    "editableSourceRoot": "editable/bastion",
+    "runtimeRoot": "runtime/bastion"
+  },
+  {
+    "role": "apex",
+    "producerFolder": "apex-full-v3",
+    "inputManifestSHA256": "8c4f262ed5677aa5b78e675fb1ce63c8171dbe96a42e8312dd2140de69867aef",
+    "editableSourceRoot": "editable/apex",
+    "runtimeRoot": "runtime/apex"
+  }
+]

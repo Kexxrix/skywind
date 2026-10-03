@@ -1,0 +1,41 @@
+{
+  "blender": "5.2.2 LTS",
+  "renderExecuted": true,
+  "device": "CPU",
+  "threads": 2,
+  "samples": 24,
+  "elapsedSeconds": 0.12097716331481934,
+  "camera": {
+    "location": [
+      -3.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "rotation": [
+      1.3826179504394531,
+      2.0118896770782158e-08,
+      -0.18534795939922333
+    ],
+    "orthoScale": 3.6
+  },
+  "portOrder": [
+    "trident_2",
+    "trident_1",
+    "trident_0"
+  ],
+  "hullMethod": "evaluated actual mesh per convex component; no body-union hull",
+  "sourceScriptSHA256": "a104a24d14ad2a8c956fd1b44e48061cc597cd2d7afca9686dae681676834c8a",
+  "files": {
+    "actual.blend": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+    "orb-idle.png": "ed040e5fa080def26e859f40f0a49b56199bd51e15d1a88267d8d706d598f594",
+    "source-charge.blend": "d7c68ce0f32be69044e4e24f4bcf25e014d055e34d1fe11e2ccfe8464acf0674",
+    "source-fire.blend": "f268633be7be0c6c93573bfd1103dc9aeef63658ac83028dd143c0fdd5ef25a7",
+    "source-idle.blend": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4"
+  },
+  "representativeRenderedStates": [
+    "idle"
+  ],
+  "sourceBytesUnchanged": true,
+  "idleRenderSeconds": 2.2514607906341553,
+  "renderDriverSHA256": "a7f84f96f8eba25809d3f284dcbe3c7be62e9dda4d595ff020ca3142ea2305a0"
+}

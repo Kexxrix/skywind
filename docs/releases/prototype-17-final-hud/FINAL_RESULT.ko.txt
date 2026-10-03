@@ -1,0 +1,27 @@
+SkyWind 17-final-hud 독립 QA 최종 delta 결과
+2026-10-03T14:28:31.181Z
+정확 실행본: E:\codexwork\Skywind\.work\6h-feedback-20261003\prototype-17-final-hud\dist
+URL: http://127.0.0.1:5173/.work/6h-feedback-20261003/prototype-17-final-hud/dist/index.html
+canonical: 2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f
+233개 /58,021,489bytes. 검사 전후 모든 파일 바이트·SHA 동일. sixth→final 변경4개/동일229개/+2,425bytes.
+변경: assets/art/mecha-12h-local.json,src/main.js,src/presentation.js,style.css. game/renderer/level/barrage/피해/이동/카메라/PNG 동일. Git·제품·설정·자산 수정0.
+
+판정: 범위 내 기능 delta 통과, 기존 최상단 파일럿 가림은 검사한 낮밤·두 화면에서 해소. 확인된 잔여P1 없음. 지속 압박 전체 목표는 미달이며 인간 체감·재미는 미검증이다. 서로 다른 이 세 판정을 합쳐 전체목표 완료로 부르지 않는다.
+메타데이터: 실제고유PNG123개×384×384×4=72,548,352bytes와선언일치. 이전46,006,272오류정정. 다른manifest값은동일하고runtime registry deepEqual. 이선언값을로더/할당/cap이읽지않으며실제브라우저메모리사용측정치는아니다.
+
+실제 Chrome 4조건: desktop1280×720 낮·밤,portrait390×844 낮·밤. actualmain RAF·ArrowUp/Down으로최상단Y48·중앙·재상승을관측했다. 173개표본에서dataset/CSS변수와실제mainviewport를사용한pilotClearance일치,helper전후state동일,core1.85,HP/무기opacity1·game경계내. 마스크CSS와실제Canvascore의최대분수픽셀잔차0.201078CSSpx. 원래207.936,48지점도각최상단마스크의alpha0내부에포함된다.
+파일럿panel만opacity.12와core중심80canonicalpx투명/88px복원gradient가적용됐다. HP/무기/보급패널은투명화하지않는다. 위협만남으면감쇠가유지되는조건과기체중앙+위협없음의opacity1/masknone복원을구분했다. 후자는배열의위협을제거한명시적fixture다. 실제중앙이동자체는방향키로수행했다.
+초기native보조도구는DOMrect의분수픽셀반올림값으로helper를재계산하여portrait xassert에걸렸다. 제품결함이아니며원본실패·첫desktopcapture를보존했다. 실제main과같은shell.clientWidth/clientHeight 및Canvas버퍼/CSS배율로좌표대조만정정했다. 수치원본·게임·마스크출력주입·추가캡처없음. 최종CSS/Canvas분수pixel잔차허용.75px와helper변수오차1e−7은서로다른대조다.
+
+픽셀2장확인: 낮desktop에서기체/core·실탄petal/greenfield와HP67/HELIX17.9s읽힘. portrait밤에서최상단기체/core와주변purple탄이파일럿얼굴에가려지지않고HP30/HELIX17.7s읽힘. 세로letterbox게임영역이작으므로실물모바일정량가독성/성능보증으로확대하지않는다. 파일럿표정은위협영역에서일시감쇠되고중앙복원에서opacity1로돌아온다.
+사진: E:\codexwork\Skywind\.work\independent-qa-6h-20261003\prototype-17-final-hud\15-final-desktop-day-core-clear.png /1280×720 /SHA 9c1639d640d7a91456d54587358aa06f904becf29980de835956e7b2c9826519
+사진: E:\codexwork\Skywind\.work\independent-qa-6h-20261003\prototype-17-final-hud\16-final-portrait-night-core-clear.png /390×844 /SHA cba13bdfabc1122c12141aea0397752fb51f6a4a2d5012273c62283569235338
+두사진은시각fixture·정지순간증거이며정상회피/탈출합격사진이아니다. desktop사진은상단부Y약100인초기순간이고이후Y48 실제추종은별도173표본으로확인했다. portrait사진은실제최상단Y48부근이다.
+
+기존sixth범위재사용: byte동일근거로자연official60초/피해25·33·10/graze/core1.85/director/caps/petal동결면96발/발사후world보존/native5보스→HELL/탄꼬리 검사를전체재실행하지않았다. main/presentation/style은이번동적HUD관측으로따로검사했다. sixth관측무적1000+내부발사선자동키의진행결과를정상무적없는완주라고부르지않는다.
+기존RAF간격은samePNG/renderer/game근거로보존하지만HUD새코드비용의독점정량성능회귀합격은아니다. 이번브라우저실행중console/exception/실패요청0,마스크미지원/화면배치실패없음.
+지속압박미달유지: 같은official120202 TENSION44.86→43.62%,최대비활성10.91→14.94초. 부모graze120201 first60 63.08%/후반83.47%·maxgap4.83초. 정책·seed·phase노출을혼합해목표완료로만들지않는다. AI경로·stock·검사통과·무적생존은사람체감/재미/첫1분=옛5분의승인이아니다.
+정상native60초생존의미: fifth검사실행·게임오버로그보존,고정키18.601초/포인터12.058초사망. 정상피격→HP소진이며기능실패·로그누락·실행장애가아니다. 이경로의60초생존근거없음을다른무적진행으로대체하지않는다.
+
+정리완료: exactfinalURL·mutedtrue·title·time0·QAglobalfalse,deviceoverride해제·CDPsocket종료. Chrome/server/사용자프로세스보존. own검사세션exit0. 공용캡처16/16·잔여0·영상/주기적캡처0. 설치·비용·권한변경·Git쓰기·push·게시·배포0.
+T0 08:54:55/안정화13:54:55/절대종료14:54:55 UTC 유지. 이보고서는검사종료기록이며프로젝트전체제작목표승인·공개배포·최종미감/청음완료선언이아니다.

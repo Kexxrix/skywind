@@ -1,0 +1,51 @@
+{
+  "blender": "5.2.2 LTS",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 24,
+  "camera": {
+    "location": [
+      0.0,
+      -18.0,
+      3.0
+    ],
+    "rotation": [
+      1.4056476354599,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.699999809265137
+  },
+  "elapsedSeconds": 26.00232768058777,
+  "hullMethod": "evaluated exact mesh vertices; convex component hulls; no union across C/arm gaps",
+  "rendered": true,
+  "generatorSHA256": "8eaaa0bf43b4606ac15f6a164a01e43ca2df016915e6155ecbc7a460fd1b3c09",
+  "files": {
+    "actual.blend": "ef9434f2ef0dc4f022b10ef07469d3c7200449e3f0da1eb3d9bf8d7fd6edd452",
+    "apex-fire.png": "498cc5349af5a32a60b03ffa825905462c628cad40eeee0901c0adc679b0dec0",
+    "apex-idle.png": "09b7addb75b9a1ba117d542e451f617fffc8a18fa809beeccc7412b1acac66e0",
+    "apex-mechanism_25.png": "b0e184e4e249390b54006078239e2050ffce19de3fd66f0468657a8ff9116fe7",
+    "apex-mechanism_25_fire.png": "94e08fdc09edf1da194b1ceb166209d688413165eac48b71c1c17b2a385040a1",
+    "apex-mechanism_50.png": "f8f503bb01ed5b1fdc8923631f7d3d741eeca50e31ea9ffce7230ccdc25b62cc",
+    "apex-mechanism_50_fire.png": "ff634697701af4079d45c8608de9e945fc56b8dd8e1058e82af5d7629bd20db4",
+    "apex-mechanism_75.png": "5f8f1207129d060e176e03d2253c6e88ff0807df88c973ec6df013086dcc5fa4",
+    "apex-mechanism_75_fire.png": "c8cfaa4ebdcb1cddacfe6dbaaad1f076465f06f1fa23111e7ac53b7dc52a70fa",
+    "apex-open.png": "ead6f048daed2a38423865f915836fefb9a11e93f4eb678b6be690ee59c5a432",
+    "apex-open_fire.png": "ac8b839c1f078192dbef2e70e1ed56b9538f06d8bf0d0e8d81bcbdfdc24d908b",
+    "source-fire.blend": "cf612e64220378f9b167f41392df243c63c498a25ed4d1f54c1e719792f8d968",
+    "source-idle.blend": "56006da2af6b652e659667ac93afc267865fe708556dd521a5026a5113bb8dc7",
+    "source-mechanism_25.blend": "8cf099b7bcd83a8265dd332f6427f15f8a66f2c812e838ac62735de3948bd727",
+    "source-mechanism_25_fire.blend": "e103ac3542a050d2fca849663ee2f89a065d8bb4ca758622bae837ea00e96e0f",
+    "source-mechanism_50.blend": "e141c0874cf890b1adb60f9aba6071b06796587e9d9726a8af1c09d7f879f4aa",
+    "source-mechanism_50_fire.blend": "3aec28f9854b97746fdb044706256ce8c0482b1030021280f93491161963bd05",
+    "source-mechanism_75.blend": "6e7a2ee44853920e08ce2c0a4283b543f6f5730395bb1e43726c80ddec8fc7cc",
+    "source-mechanism_75_fire.blend": "d8d0eb61e0c64726621f52778ed403cdb9de347471d8c2a6d9535a9236b9068e",
+    "source-open.blend": "0616d82aee8666d59b6b2d44e9ed16eed03dbec20c0f19739129f72df2f4ed2c",
+    "source-open_fire.blend": "d92e041d5e1842181b783462d4e5e05c182c7abbd327ce4e4aa3e271fe2ed6f2"
+  },
+  "dependencyPath": "dependency_v1.py",
+  "dependencySHA256": "f227a28ed953ccf5c3ef742cc13b97557efd14670fc2ffcef10f031b779296a4",
+  "exactFrames": 10,
+  "design": "asymmetric vertical execution wings; narrow gold vertebral tendon; actual open load skeleton; original three joint weapon coordinates",
+  "attackAuthority": "runtime code; art cannot change core vulnerability or attack timing"
+}

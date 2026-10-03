@@ -49,7 +49,8 @@ test('density grid limits comparisons for a reproducible spread-out hell-sized f
   assert.ok(result.comparisons<bullets.length*(bullets.length-1)*.035,`${result.comparisons} candidate comparisons`);
   const before=structuredClone(bullets),alphas=[];
   Renderer.prototype.drawBullets.call({presentation:{threatVariant:'C'},glow(c,x,y,size,color,alpha){alphas.push(alpha);}},context(),{bullets:[],enemyBullets:bullets});
-  assert.equal(alphas[100*2],.88/Math.sqrt(1+result.counts[100]*.35));
+  assert.equal(alphas.length,bullets.length,'one additive halo per shot');
+  assert.ok(alphas[100]>0&&alphas[100]<=.66/Math.sqrt(1+result.counts[100]*.35),'outer halo remains density restrained');
   assert.deepEqual(bullets,before);
 });
 
@@ -298,7 +299,7 @@ test('a projected worm middle-port launch remains over the body and foreground a
     flashes:[{kind:'enemyShot',x:976,y:315,life:.12,max:.18}],presentation:{threatVariant:'C'},
     environment:{update(){},drawBack(){},drawFront(){order.push('foreground');}},drawEnemy(){order.push('hull');},
     drawEffects(){order.push('rear-effects');},drawCombatCues(ctx,g){Renderer.prototype.drawCombatCues.call(this,ctx,g);}};
-  for(const method of ['drawAtmosphere','updateEffects','drawExitGhosts','drawTrail','drawPickup','drawBullets','drawPlayer','drawSpeedLines','drawThreats','drawTension','drawLight'])renderer[method]=()=>{};
+  for(const method of ['sampleProjectileMotion','drawAtmosphere','updateEffects','drawExitGhosts','drawTrail','drawPickup','drawBullets','drawPlayer','drawSpeedLines','drawThreats','drawTension','drawLight'])renderer[method]=()=>{};
   const g={mode:'playing',sceneTime:0,altitude:.5,daylight:1,time:0,shake:0,player:{x:200,y:300,hp:100,powerTime:0},enemies:[{type:'worm',x:980,y:315}],pickups:[],enemyBullets:[]};
   Renderer.prototype.draw.call(renderer,g,0);
   assert.ok(order.indexOf('hull')<order.indexOf('foreground'));assert.ok(order.indexOf('foreground')<order.indexOf('cue'));

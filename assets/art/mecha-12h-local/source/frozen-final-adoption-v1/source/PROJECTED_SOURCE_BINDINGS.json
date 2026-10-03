@@ -1,0 +1,1124 @@
+[
+  {
+    "entryKey": "int01-wedge",
+    "roles": [
+      "beetle"
+    ],
+    "sourceBlend": "editable/beetle/actual.blend",
+    "selectedFrame": "neutral",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "ANCHOR_muzzle_primary",
+            "projectionErrorPixels": 3.73462929576055e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": []
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "ANCHOR_nozzle_port",
+            "projectionErrorPixels": 4.573808989322392e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "ANCHOR_nozzle_starboard",
+            "projectionErrorPixels": 4.347091626228501e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "ANCHOR_core",
+      "ANCHOR_core_radius",
+      "ANCHOR_muzzle_primary",
+      "ANCHOR_nozzle_port",
+      "ANCHOR_nozzle_starboard",
+      "ANCHOR_pivot",
+      "INT01_ROOT | fixed pivot"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-v8-warden-depth",
+    "roles": [
+      "warden"
+    ],
+    "sourceBlend": "editable/warden/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "tower_-1_0",
+            "projectionErrorPixels": 2.95952846819967e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_-1_1",
+            "projectionErrorPixels": 1.1879393681412801e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_1_0",
+            "projectionErrorPixels": 2.881827757005449e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_1_1",
+            "projectionErrorPixels": 4.421659868755771e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "center_lance",
+            "projectionErrorPixels": 3.9857950788886385e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "tower_-1_0_direction",
+            "projectionErrorPixels": 2.9899408192666733e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_-1_1_direction",
+            "projectionErrorPixels": 1.261799227695391e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_1_0_direction",
+            "projectionErrorPixels": 2.9130514189900318e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "tower_1_1_direction",
+            "projectionErrorPixels": 4.442073090753695e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "center_lance_direction",
+            "projectionErrorPixels": 1.5802973211679924e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_-1",
+            "projectionErrorPixels": 4.137812145860468e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "nozzle_1",
+            "projectionErrorPixels": 2.061536652590199e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "center_lance",
+      "center_lance_direction",
+      "core_center",
+      "core_radius",
+      "nozzle_-1",
+      "nozzle_1",
+      "tower_-1_0",
+      "tower_-1_0_direction",
+      "tower_-1_1",
+      "tower_-1_1_direction",
+      "tower_1_0",
+      "tower_1_0_direction",
+      "tower_1_1",
+      "tower_1_1_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-carrier-finish-v1",
+    "roles": [
+      "carrier"
+    ],
+    "sourceBlend": "editable/carrier/actual.blend",
+    "selectedFrame": "phase_000_payload2",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "defence_upper",
+            "projectionErrorPixels": 3.388570789124076e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "defence_keel",
+            "projectionErrorPixels": 4.56596644518829e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "defence_upper_direction",
+            "projectionErrorPixels": 4.963861789548942e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "defence_keel_direction",
+            "projectionErrorPixels": 5.018080155438458e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_0",
+            "projectionErrorPixels": 3.5108892551296805e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "nozzle_-0.81",
+            "projectionErrorPixels": 3.487858851888933e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "child_0_nozzle",
+      "child_0_rail",
+      "child_0_rail_direction",
+      "child_1_nozzle",
+      "child_1_rail",
+      "child_1_rail_direction",
+      "core_center",
+      "core_radius",
+      "defence_keel",
+      "defence_keel_direction",
+      "defence_upper",
+      "defence_upper_direction",
+      "dock_0",
+      "dock_1",
+      "nozzle_-0.81",
+      "nozzle_0"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-carrier-child-finish-v1",
+    "roles": [],
+    "sourceBlend": "editable/carrier/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "child_0_nozzle",
+            "projectionErrorPixels": 51.168566911105856,
+            "exactMatch": false
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "dock_0",
+            "projectionErrorPixels": 51.6783427787807,
+            "exactMatch": false
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "child_1_nozzle",
+            "projectionErrorPixels": 54.71465307091728,
+            "exactMatch": false
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "child_0_nozzle",
+      "child_0_rail",
+      "child_0_rail_direction",
+      "child_1_nozzle",
+      "child_1_rail",
+      "child_1_rail_direction",
+      "core_center",
+      "core_radius",
+      "defence_keel",
+      "defence_keel_direction",
+      "defence_upper",
+      "defence_upper_direction",
+      "dock_0",
+      "dock_1",
+      "nozzle_-0.81",
+      "nozzle_0"
+    ],
+    "sourceAssembly": "parent"
+  },
+  {
+    "entryKey": "local-lancer-finish-v1",
+    "roles": [
+      "lancer"
+    ],
+    "sourceBlend": "editable/lancer/actual.blend",
+    "selectedFrame": "phase_000",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "siege_lance",
+            "projectionErrorPixels": 5.3907645997387064e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "offset_suppressor",
+            "projectionErrorPixels": 1.8442509496091256e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "siege_lance_direction",
+            "projectionErrorPixels": 5.0167517582454315e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "offset_suppressor_direction",
+            "projectionErrorPixels": 3.245616674166546e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 2.1660409531915052e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "core_center",
+      "core_radius",
+      "nozzle_main",
+      "offset_suppressor",
+      "offset_suppressor_direction",
+      "siege_lance",
+      "siege_lance_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-bastion-finish-v1",
+    "roles": [
+      "bastion"
+    ],
+    "sourceBlend": "editable/bastion/actual.blend",
+    "selectedFrame": "phase_000",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "upper_beam",
+            "projectionErrorPixels": 1.8283352054323147e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_fan_a",
+            "projectionErrorPixels": 2.5045047550471896e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_fan_b",
+            "projectionErrorPixels": 4.668493282204785e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "upper_beam_direction",
+            "projectionErrorPixels": 5.8940888559659744e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_fan_a_direction",
+            "projectionErrorPixels": 1.7867552015101307e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_fan_b_direction",
+            "projectionErrorPixels": 5.550842319071593e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_-0.5",
+            "projectionErrorPixels": 4.789649603539944e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "nozzle_0.5",
+            "projectionErrorPixels": 3.662923288430494e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "core_center",
+      "core_radius",
+      "lower_fan_a",
+      "lower_fan_a_direction",
+      "lower_fan_b",
+      "lower_fan_b_direction",
+      "nozzle_-0.5",
+      "nozzle_0.5",
+      "upper_beam",
+      "upper_beam_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-apex-finish-v1",
+    "roles": [
+      "apex"
+    ],
+    "sourceBlend": "editable/apex/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "wrist_precision_beam",
+            "projectionErrorPixels": 3.5848412834149725e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_siege_rail",
+            "projectionErrorPixels": 4.0772515004437434e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "upper_tracking",
+            "projectionErrorPixels": 4.946436375729425e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "wrist_precision_beam_direction",
+            "projectionErrorPixels": 2.2807236019444067e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_siege_rail_direction",
+            "projectionErrorPixels": 3.948326280411298e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "upper_tracking_direction",
+            "projectionErrorPixels": 4.021012816684914e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 5.303408086622842e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "nozzle_trim",
+            "projectionErrorPixels": 4.3207745425724044e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "arm_joint_0",
+      "arm_joint_1",
+      "arm_joint_2",
+      "arm_joint_3",
+      "core_center",
+      "core_radius",
+      "lower_siege_rail",
+      "lower_siege_rail_direction",
+      "nozzle_main",
+      "nozzle_trim",
+      "upper_tracking",
+      "upper_tracking_direction",
+      "wrist_precision_beam",
+      "wrist_precision_beam_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-dragonfly-v1",
+    "roles": [
+      "dragonfly"
+    ],
+    "sourceBlend": "editable/dragonfly/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "nose_gun",
+            "projectionErrorPixels": 5.5733125598676374e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "nose_gun_direction",
+            "projectionErrorPixels": 5.494555829777122e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_single",
+            "projectionErrorPixels": 2.4651328166103614e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "gun_feed_actuator",
+      "nose_gun",
+      "nose_gun_direction",
+      "nozzle_single",
+      "steering_sensor_not_muzzle"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-wasp-v1",
+    "roles": [
+      "wasp"
+    ],
+    "sourceBlend": "editable/wasp/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": []
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": []
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_single",
+            "projectionErrorPixels": 1.991332000968604e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "nozzle_single"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-normal-ray-v1",
+    "roles": [
+      "ray"
+    ],
+    "sourceBlend": "editable/ray/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "route_0",
+            "projectionErrorPixels": 4.3956075511621936e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "route_1",
+            "projectionErrorPixels": 3.486009054993463e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "route_0_direction",
+            "projectionErrorPixels": 2.9607488123116006e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "route_1_direction",
+            "projectionErrorPixels": 2.509938709027814e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 4.024376807057705e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "nozzle_main",
+      "route_0",
+      "route_0_direction",
+      "route_1",
+      "route_1_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-normal-worm-v1",
+    "roles": [
+      "worm"
+    ],
+    "sourceBlend": "editable/worm/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "front_field",
+            "projectionErrorPixels": 2.6541515121137845e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "middle_field",
+            "projectionErrorPixels": 3.7573159414411475e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "rear_field",
+            "projectionErrorPixels": 4.8390889439012204e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "front_field_direction",
+            "projectionErrorPixels": 6.137823350255694e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "middle_field_direction",
+            "projectionErrorPixels": 4.044809383625074e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "rear_field_direction",
+            "projectionErrorPixels": 5.631772608142483e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_upper",
+            "projectionErrorPixels": 3.767075206897883e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "nozzle_lower",
+            "projectionErrorPixels": 2.962947243376811e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "front_field",
+      "front_field_direction",
+      "middle_field",
+      "middle_field_direction",
+      "nozzle_lower",
+      "nozzle_upper",
+      "rear_field",
+      "rear_field_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-dart-representative-v1",
+    "roles": [
+      "dart"
+    ],
+    "sourceBlend": "editable/dart/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "single_rail_muzzle",
+            "projectionErrorPixels": 4.9232696221483994e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "single_rail_muzzle_direction",
+            "projectionErrorPixels": 4.539781505408151e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_single",
+            "projectionErrorPixels": 4.5039877755372394e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "nozzle_single",
+      "single_rail_muzzle",
+      "single_rail_muzzle_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-scarab-v2",
+    "roles": [
+      "scarab"
+    ],
+    "sourceBlend": "editable/scarab/actual.blend",
+    "selectedFrame": "idle_payload2",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": []
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": []
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 2.434847146628173e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "child_direction",
+      "child_direction dock1",
+      "child_forward_reference",
+      "child_muzzle",
+      "child_muzzle dock1",
+      "child_nozzle",
+      "child_nozzle dock1",
+      "dock_second",
+      "dock_single",
+      "nozzle_main"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-scarab-child-v2",
+    "roles": [],
+    "sourceBlend": "editable/scarab/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "child_nozzle dock1",
+            "projectionErrorPixels": 43.98383647064662,
+            "exactMatch": false
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "child_nozzle dock1",
+            "projectionErrorPixels": 49.31776505254619,
+            "exactMatch": false
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 105.48175243856907,
+            "exactMatch": false
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "child_direction",
+      "child_direction dock1",
+      "child_forward_reference",
+      "child_muzzle",
+      "child_muzzle dock1",
+      "child_nozzle",
+      "child_nozzle dock1",
+      "dock_second",
+      "dock_single",
+      "nozzle_main"
+    ],
+    "sourceAssembly": "parent"
+  },
+  {
+    "entryKey": "local-v2-pincer",
+    "roles": [
+      "pincer"
+    ],
+    "sourceBlend": "editable/pincer/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": []
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": []
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_single",
+            "projectionErrorPixels": 2.1576987846294936e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "nozzle_single",
+      "ram_warning_not_muzzle"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-mantis-representative-v2",
+    "roles": [
+      "mantis"
+    ],
+    "sourceBlend": "editable/mantis/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "upper_dual",
+            "projectionErrorPixels": 1.6640499686617275e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_dual",
+            "projectionErrorPixels": 1.274458784448203e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "upper_dual_direction",
+            "projectionErrorPixels": 3.0370164967862523e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "lower_dual_direction",
+            "projectionErrorPixels": 2.842296975477041e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_primary",
+            "projectionErrorPixels": 6.129784532784279e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "feed_follower_-1",
+      "feed_follower_1",
+      "lower_dual",
+      "lower_dual_direction",
+      "nozzle_primary",
+      "upper_dual",
+      "upper_dual_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-normal-orb-v3",
+    "roles": [
+      "orb"
+    ],
+    "sourceBlend": "editable/orb/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "trident_2",
+            "projectionErrorPixels": 4.6486950726595976e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "trident_1",
+            "projectionErrorPixels": 3.7141102228659615e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "trident_0",
+            "projectionErrorPixels": 4.668635805568335e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "trident_2_direction",
+            "projectionErrorPixels": 3.4588502945490635e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "trident_1_direction",
+            "projectionErrorPixels": 4.096191521961162e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "trident_0_direction",
+            "projectionErrorPixels": 4.4476287052448914e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_main",
+            "projectionErrorPixels": 2.465511188610551e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "nozzle_main",
+      "trident_0",
+      "trident_0_direction",
+      "trident_1",
+      "trident_1_direction",
+      "trident_2",
+      "trident_2_direction"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-claw-drumgun-representative-v2",
+    "roles": [
+      "claw"
+    ],
+    "sourceBlend": "editable/claw/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "barrel_0",
+            "projectionErrorPixels": 2.8762659200773513e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "barrel_1",
+            "projectionErrorPixels": 4.49822393469652e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "barrel_0_direction",
+            "projectionErrorPixels": 5.0731179969495747e-05,
+            "exactMatch": true
+          },
+          {
+            "name": "barrel_1_direction",
+            "projectionErrorPixels": 6.139840318334989e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_single",
+            "projectionErrorPixels": 3.484581474238901e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "barrel_0",
+      "barrel_0_direction",
+      "barrel_1",
+      "barrel_1_direction",
+      "nozzle_single"
+    ],
+    "sourceAssembly": "own"
+  },
+  {
+    "entryKey": "local-needle-representative-v2",
+    "roles": [
+      "needle"
+    ],
+    "sourceBlend": "editable/needle/actual.blend",
+    "selectedFrame": "idle",
+    "bindings": [
+      {
+        "field": "muzzlesPixels",
+        "matches": [
+          {
+            "name": "coil_nose",
+            "projectionErrorPixels": 2.0275218909594114e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "muzzleDirectionsPixels",
+        "matches": [
+          {
+            "name": "coil_nose_direction",
+            "projectionErrorPixels": 4.4388336838957384e-05,
+            "exactMatch": true
+          }
+        ]
+      },
+      {
+        "field": "nozzlesPixels",
+        "matches": [
+          {
+            "name": "nozzle_axial",
+            "projectionErrorPixels": 3.856397905064411e-05,
+            "exactMatch": true
+          }
+        ]
+      }
+    ],
+    "emptyNames": [
+      "capacitor_contact",
+      "coil_nose",
+      "coil_nose_direction",
+      "nozzle_axial"
+    ],
+    "sourceAssembly": "own"
+  }
+]

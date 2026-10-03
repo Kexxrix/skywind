@@ -1,0 +1,26 @@
+[
+  {
+    "role": "bastion",
+    "semanticStates": 14,
+    "uniquePNG": 10,
+    "decodedDistinct": 10,
+    "borderAlphaMax": 0,
+    "maxHullTransparentPercent": 0.0655,
+    "exactFullContractEqual": true,
+    "productionHashMismatch": 0,
+    "partialCoreExposureMismatch": 0,
+    "actualSHA256": "9a97f84c70789675b7b7394d7aa866c70b6333d368981446fb38320610487c18"
+  },
+  {
+    "role": "apex",
+    "semanticStates": 10,
+    "uniquePNG": 10,
+    "decodedDistinct": 10,
+    "borderAlphaMax": 0,
+    "maxHullTransparentPercent": 0.0531,
+    "exactFullContractEqual": true,
+    "productionHashMismatch": 0,
+    "partialCoreExposureMismatch": 0,
+    "actualSHA256": "048481ec8b033e3a04375cc6c93d937542cd39ef13e6423be1c91e69070cec3f"
+  }
+]

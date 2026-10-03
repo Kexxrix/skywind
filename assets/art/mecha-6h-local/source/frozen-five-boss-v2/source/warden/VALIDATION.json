@@ -1,0 +1,24 @@
+{
+  "status": "direction-approved real fullphase/recoil candidate; integration pending",
+  "runtimePNG": 10,
+  "actualSourcePoses": 10,
+  "stateLookups": 15,
+  "sourceReopenPass": true,
+  "sourceMaxProjectedErrorPixels": 6.699837921168488e-05,
+  "hullTransparentFractionMax": 0.0,
+  "borderAlphaMax": 0.0,
+  "actualSourceposeBulletRows": 330,
+  "openCoreHits": 66,
+  "protectedBodyHits": 264,
+  "missed": 0,
+  "impactPoseMismatch": 0,
+  "decodedDistinctActualPNG": 10,
+  "renderSeconds": 34.96217894554138,
+  "manifestAtPhysicsRunSHA256": "049315508b73a07bd8e7a51801f8ffe752f45a86b52ace917d5191292476da91",
+  "finalManifestSHA256": "6d1aa8087e246a09d91e58d9c4fb833f452d43c066a9cd2d1c0d0c34fc0b7c00",
+  "metadataOnlyAfterPhysics": "per-frame PNG sha256 field added; geometry/anchors/hulls/maps unchanged",
+  "remaining": [
+    "current game integration and natural runtime QA",
+    "user final approval"
+  ]
+}

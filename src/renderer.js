@@ -1,8 +1,9 @@
-import { cameraRoll, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION, enemyChargeMuzzles, enemyDeployDocks } from './game.js';
+import { cameraRoll, worldToScreen, screenToWorld, sequenceToWorld, playerHeading, PLAYER_HIT_RADIUS, PICKUP_ATTRACTION, enemyChargeMuzzles, enemyDeployDocks } from './game.js';
 import { VolumeEnvironment } from './volume-environment.js';
-import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT } from './presentation.js';
+import { WEAPON_PRESENTATION, DEFAULT_THREAT_VARIANT, SUPPLY_COLORS, pickupPresentation } from './presentation.js';
 import { MECHA_MANIFEST_PATH, registerMechaManifest, getMechaSpec, mechaAnchorWorld, mechaTransform } from './mecha-art.js';
-import { projectileStyle, PROJECTILE_PALETTES } from './projectile-style.js';
+import { projectileAppearance, projectileSurfacePixels, PROJECTILE_PALETTES } from './projectile-style.js';
+import { grazeOuterRadius } from './combat-damage.js';
 
 const W = 1280, H = 720;
 const TAU = Math.PI * 2;
@@ -29,41 +30,113 @@ export function projectilePalette(projectile) {
 const effectColor=event=>event.tension?'tension':event.drone?'drone':event.weaponMode in WEAPON_PRESENTATION?event.weaponMode:'normal';
 const effectPalette=color=>color==='tension'?TENSION_PALETTE:WEAPON_PRESENTATION[color];
 
-function drawProjectileShape(c,b,view) {
+const projectedPoint=(point,camera)=>({
+  x:640+(point.x-640)*Math.cos(camera.roll)-(point.y-360)*Math.sin(camera.roll),
+  y:360+(point.x-640)*Math.sin(camera.roll)+(point.y-360)*Math.cos(camera.roll)-camera.cameraY,
+});
+
+// The camera translation and changing roll are part of apparent motion. Return
+// a direction in the current world frame so the enclosing Canvas transform
+// projects the trail onto the measured screen displacement exactly once.
+export function projectileScreenTrail(b,camera,previous,maxLength=19) {
+  const roll=Number.isFinite(camera.roll)?camera.roll:0;
+  const current={...camera,roll,cameraY:camera.cameraY||0},point=projectedPoint(b,current);
+  let vx=(b.vx||0)*Math.cos(roll)-(b.vy||0)*Math.sin(roll);
+  let vy=(b.vx||0)*Math.sin(roll)+(b.vy||0)*Math.cos(roll),source='velocity';
+  const elapsed=current.time-previous?.time;
+  if(elapsed>1e-6&&elapsed<=.12&&Number.isFinite(previous?.x)&&Number.isFinite(previous?.y)) {
+    vx=(point.x-previous.x)/elapsed;vy=(point.y-previous.y)/elapsed;source='sample';
+  }
+  const speed=Math.hypot(vx,vy),angle=speed>1e-6?Math.atan2(vy,vx)-roll:0;
+  const length=speed>1e-6?(source==='sample'?Math.min(maxLength,speed*.03):maxLength):0;
+  return {angle,length,screenVX:vx,screenVY:vy,source,point};
+}
+
+function enemyProjectileView(b) {
+  return b.style||b.palette||b.damageClass?projectileAppearance(b):null;
+}
+function enemyProjectileTrail(renderer,b,profile) {
+  return renderer.projectileTrails?.get(b)||projectileScreenTrail(b,
+    {roll:renderer.roll||0,cameraY:renderer.cameraY||0},null,profile?.trail||13);
+}
+
+export const PROJECTILE_LIGHT_LIMITS=Object.freeze({maxDiameter:42,maxAdditiveArea:96000,frontAlpha:.26,trailAlpha:.18});
+export function projectileLightBudget(bullets,density=true) {
+  const neighbors=density?threatNeighborCounts(bullets).counts:null;
+  const lights=bullets.map((b,index)=>{
+    const view=enemyProjectileView(b),material=view?.material;
+    const diameter=Math.min(PROJECTILE_LIGHT_LIMITS.maxDiameter,Math.max(24,b.radius*6)*(material?.halo||1));
+    const frontDiameter=Math.min(PROJECTILE_LIGHT_LIMITS.maxDiameter,b.radius*5.2);
+    const alpha=(b.arming>0?.22:material?.emission||.66)/Math.sqrt(1+(neighbors?.[index]||0)*.35);
+    const trailWidth=Math.min(8,b.radius*.8);
+    const area=diameter*diameter+frontDiameter*frontDiameter*PROJECTILE_LIGHT_LIMITS.frontAlpha
+      +(Math.min(48,view?.trail||30)*trailWidth+Math.PI*trailWidth*trailWidth/4)*PROJECTILE_LIGHT_LIMITS.trailAlpha;
+    return {diameter,frontDiameter,alpha,area};
+  });
+  const requestedArea=lights.reduce((sum,light)=>sum+light.area*light.alpha,0);
+  const attenuation=requestedArea>0?Math.min(1,PROJECTILE_LIGHT_LIMITS.maxAdditiveArea/requestedArea):1;
+  for(const light of lights)light.alpha*=attenuation;
+  return {lights,requestedArea,attenuation,additiveArea:requestedArea*attenuation};
+}
+function enemyProjectileLights(renderer,g) {
+  const cached=renderer.projectileLightFrame;
+  if(cached?.bullets===g.enemyBullets&&cached.time===g.time)return cached.lights;
+  const budget=projectileLightBudget(g.enemyBullets,renderer.presentation?.threatVariant==='C');
+  renderer.projectileLightFrame={bullets:g.enemyBullets,time:g.time,...budget};
+  return budget.lights;
+}
+
+function drawProjectileShape(c,b,view,angle,trailLength) {
   const r=b.radius,{palette,shape}=view;
-  c.save();c.translate(b.x,b.y);c.rotate(Math.atan2(b.vy,b.vx));
+  c.save();c.translate(b.x,b.y);c.rotate(angle);
+  if((shape==='needle'||shape==='rail')&&trailLength<=0){c.restore();return;}
   c.strokeStyle=palette.color;c.fillStyle=palette.color;c.lineWidth=1.35;
   if(shape==='bead') {
     c.beginPath();c.arc(0,0,r*1.48,0,TAU);c.stroke();
   } else if(shape==='seed') {
     c.beginPath();c.moveTo(r*1.6,0);
     c.quadraticCurveTo(-r*.7,-r*2.1,-r*2.7,0);
-    c.quadraticCurveTo(-r*.7,r*2.1,r*1.6,0);c.closePath();c.stroke();
+    c.quadraticCurveTo(-r*.7,r*2.1,r*1.6,0);c.closePath();c.globalAlpha*=.38;c.fill();c.globalAlpha/= .38;c.stroke();
   } else if(shape==='needle') {
-    c.beginPath();c.moveTo(-view.trail,0);c.lineTo(r*1.8,0);
-    c.moveTo(-r*1.1,-r*.9);c.lineTo(r*1.8,0);c.lineTo(-r*1.1,r*.9);c.stroke();
-    c.strokeStyle=palette.core;c.lineWidth=1.3;c.beginPath();c.moveTo(-view.shoulder,0);c.lineTo(r*1.35,0);c.stroke();
+    c.lineWidth=r*.7;c.globalAlpha*=.55;
+    c.beginPath();c.moveTo(-trailLength,0);c.lineTo(0,0);c.stroke();
+    c.globalAlpha/= .55;c.strokeStyle=palette.core;c.lineWidth=1.3;
+    c.beginPath();c.moveTo(-Math.min(trailLength,view.shoulder),0);c.lineTo(0,0);c.stroke();
   } else if(shape==='rail') {
     c.beginPath();
     for(const side of [-1,1]) {
-      c.moveTo(-view.trail,side*r*1.15);c.lineTo(r*1.2,side*r*1.15);
-      c.moveTo(-view.trail*.65,side*r*.75);c.lineTo(-view.trail*.65,side*r*1.55);
+      c.moveTo(-trailLength,side*r*.75);c.lineTo(0,side*r*.75);
     }
     c.stroke();c.strokeStyle=palette.core;c.lineWidth=1.8;
-    c.beginPath();c.moveTo(-view.shoulder,0);c.lineTo(r*1.9,0);c.stroke();
+    c.beginPath();c.moveTo(-Math.min(trailLength,view.shoulder),0);c.lineTo(0,0);c.stroke();
   } else if(shape==='petal') {
     c.beginPath();
     for(const side of [-1,1]) {
       c.moveTo(r*.9,0);c.bezierCurveTo(-r*.6,side*r*2.5,-r*2.7,side*r*1.5,-r*2.25,0);
       c.bezierCurveTo(-r*1.1,side*r*.5,-r*.2,side*r*.4,r*.9,0);
     }
-    c.moveTo(-r*.8,-r*1.6);c.quadraticCurveTo(r*2.9,0,-r*.8,r*1.6);c.stroke();
+    c.moveTo(-r*.8,-r*1.6);c.quadraticCurveTo(r*2.9,0,-r*.8,r*1.6);c.globalAlpha*=.32;c.fill();c.globalAlpha/= .32;c.stroke();
   } else if(shape==='crescent') {
     c.beginPath();c.moveTo(-r*1.3,-r*1.9);
     c.bezierCurveTo(r*2.7,-r*2.2,r*2.7,r*2.2,-r*1.3,r*1.9);
-    c.bezierCurveTo(r*.6,r*1.15,r*.6,-r*1.15,-r*1.3,-r*1.9);c.closePath();c.stroke();
+    c.bezierCurveTo(r*.6,r*1.15,r*.6,-r*1.15,-r*1.3,-r*1.9);c.closePath();c.globalAlpha*=.35;c.fill();c.globalAlpha/= .35;c.stroke();
   }
   c.restore();
+}
+
+export function playerGrazeCue(g) {
+  if(g.mode!=='playing'||!g.player||g.player.invincible>0)return null;
+  let cue=null,nearest=Infinity;
+  for(const b of g.enemyBullets) {
+    if(b.dead||b.grazed||b.arming>0||!Number.isFinite(b.radius))continue;
+    const screen=worldToScreen(g,b);
+    if(!Number.isFinite(screen.x)||!Number.isFinite(screen.y)||screen.x<0||screen.x>W||screen.y<0||screen.y>H)continue;
+    const distance=Math.hypot(b.x-g.player.x,b.y-g.player.y);
+    const radius=grazeOuterRadius(PLAYER_HIT_RADIUS+b.radius);
+    if(distance>radius*1.35||distance<=PLAYER_HIT_RADIUS+b.radius||distance>=nearest)continue;
+    nearest=distance;cue={radius,proximity:clamp(1-distance/(radius*1.35),0,1)};
+  }
+  return cue;
 }
 
 function fillDenseNeighbors(bullets,radiiSq,counts) {
@@ -91,6 +164,15 @@ function drawEscortArmor(c,e) {
 }
 
 const isBodyRunner=e=>e.type==='pincer'||e.combat?.bodyAttack?.projectiles===false;
+function strokeAimTell(c,strength,width) {
+  // The dark and light passes share the original path and outer width.
+  // Source-over keeps the thin backing readable on sunlit cloud; the inner
+  // line carries the same cue on night cloud without adding flare or area.
+  c.save();c.globalCompositeOperation='source-over';
+  c.strokeStyle='#172633';c.globalAlpha=.85+strength*.1;c.lineWidth=width;c.stroke();
+  c.strokeStyle='#ffe0ef';c.globalAlpha=.9+strength*.08;c.lineWidth=width*.52;c.stroke();
+  c.restore();
+}
 function drawRamTell(c,e,strength) {
   // A body-wide bracket and chevrons distinguish contact charge from a gun.
   // This uses the combat-selected direction, never a renderer-picked target.
@@ -183,6 +265,13 @@ function glowTexture(color,scatter=false) {
   return canvas;
 }
 
+function projectileSurfaceTexture(palette,surface) {
+  const canvas=document.createElement('canvas');canvas.width=canvas.height=64;
+  const ctx=canvas.getContext('2d'),image=ctx.createImageData(64,64);
+  image.data.set(projectileSurfacePixels(palette,surface,64));ctx.putImageData(image,0,0);
+  return canvas;
+}
+
 export class Renderer {
   constructor(canvas) {
     this.canvas = canvas;
@@ -193,6 +282,8 @@ export class Renderer {
     this.flashes = [];
     this.labels = [];
     this.exitGhosts = [];
+    this.projectileSamples=new WeakMap();
+    this.projectileTrails=new WeakMap();
     this.impactShake=0;
     this.exposure=0;
     this.presentation={threatVariant:DEFAULT_THREAT_VARIANT};
@@ -200,7 +291,10 @@ export class Renderer {
     for(const [mode,{color}] of Object.entries(WEAPON_PRESENTATION))this.glows[mode]=glowTexture(color);
     this.glows.tension=glowTexture(TENSION_PALETTE.color);
     for(const palette of Object.values(PROJECTILE_PALETTES))this.glows[palette.glow]=glowTexture(palette.color);
-    this.glows.supplyTop=glowTexture('#ffcf75');this.glows.supplyBottom=glowTexture('#68f5ba');
+    this.projectileSurfaces={};
+    for(const palette of Object.keys(PROJECTILE_PALETTES))for(const surface of ['pearl','frost','filament'])
+      this.projectileSurfaces[palette+':'+surface]=projectileSurfaceTexture(palette,surface);
+    this.glows.supplyMaintain=glowTexture(SUPPLY_COLORS.maintain);this.glows.supplyChange=glowTexture(SUPPLY_COLORS.change);
     this.glows.mistCyan=glowTexture('#45ffc1',true);this.glows.mistPink=glowTexture('#ff66b2',true);
     this.reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.frozen = false;
@@ -261,7 +355,29 @@ export class Renderer {
     return {x:x*c-y*s+W/2,y:x*s+y*c+H/2};
   }
 
-  reset() { this.trail.length=0; this.particles.length=0; this.flashes.length=0; this.labels.length=0; this.exitGhosts.length=0;this.impactShake=0;this.exposure=0;this.flowKick=0;this.frozen=false; }
+  reset() { this.trail.length=0; this.particles.length=0; this.flashes.length=0; this.labels.length=0; this.exitGhosts.length=0;this.impactShake=0;this.exposure=0;this.flowKick=0;this.frozen=false;this.projectileSamples=new WeakMap();this.projectileTrails=new WeakMap();this.projectileSampleMode=null;this.projectileLightFrame=null; }
+
+  sampleProjectileMotion(g) {
+    if(g.mode==='paused')return;
+    if(this.projectileSampleMode!==g.mode) {
+      this.projectileSamples=new WeakMap();this.projectileTrails=new WeakMap();
+      this.projectileSampleMode=g.mode;
+    }
+    const camera={roll:this.roll||0,cameraY:g.cameraY||0,time:g.time};
+    for(const b of g.enemyBullets) {
+      const previous=this.projectileSamples.get(b),view=enemyProjectileView(b);
+      const profile=view||AIM_SHOT_VISUALS[b.speedTier];
+      // Repeated draws while paused retain the same sample. Render frequency
+      // neither advances the cache clock nor alters the simulation object.
+      if(previous?.time===g.time&&this.projectileTrails.has(b))continue;
+      const trail=projectileScreenTrail(b,camera,previous,profile?.trail||13);
+      // Without a recent measured displacement, omit the directional tail.
+      // A fresh spawn or resumed stale frame cannot claim an apparent heading.
+      if(trail.source==='velocity')trail.length=0;
+      this.projectileTrails.set(b,trail);
+      this.projectileSamples.set(b,{...trail.point,time:g.time});
+    }
+  }
 
   handleEvents(events) {
     for (const e of events) {
@@ -292,7 +408,7 @@ export class Renderer {
         if (e.score) this.labels.push({x:e.x,y:e.y-30,text:`+${e.score}${e.chain>1?`  ×${e.chain}`:''}`,life:1.3,max:1.3});
       }
       if(e.type === 'pickup') {
-        const color=e.pickupType==='power'||e.pickupType==='change'?mode:e.pickupType==='drone'?'drone':e.pickupType==='maintain'?'supplyBottom':'cyan';
+        const color=e.effect==='change'?'supplyChange':['extend','levelUp','drone'].includes(e.effect)?'supplyMaintain':'cyan';
         this.burst(e.x,e.y,28,color,180,.65);
         this.flashes.push({x:e.x,y:e.y,life:.6,max:.6,size:200,color,rgb:WEAPON_PRESENTATION[color]?.rgb,ring:true,kind:'pickup'});
       }
@@ -336,6 +452,7 @@ export class Renderer {
     this.roll=cameraRoll(g);
     this.cameraY=g.cameraY||0;
     this.cameraOffset={x:-Math.sin(this.roll)*this.cameraY,y:-Math.cos(this.roll)*this.cameraY};
+    this.sampleProjectileMotion(g);
     this.environment.update(g,dt);
     c.setTransform(1,0,0,1,0,0); c.fillStyle='#030b15'; c.fillRect(0,0,this.canvas.width,this.canvas.height);
     c.setTransform(this.scale,0,0,this.scale,this.offsetX,this.offsetY);
@@ -354,7 +471,7 @@ export class Renderer {
       this.updateEffects(g,dt);
       this.drawExitGhosts(c);
       this.drawTrail(c,g);
-      for(const p of g.pickups) if(!p.side&&!p.attracting) this.drawPickup(c,p,t);
+      for(const p of g.pickups) if(!p.side&&!p.attracting) this.drawPickup(c,p,t,g.player);
       for(const e of g.enemies) this.drawEnemy(c,e,t);
       this.drawBullets(c,g);
       this.drawPlayer(c,g,t);
@@ -368,7 +485,7 @@ export class Renderer {
     c.save();c.translate(this.cameraOffset.x,this.cameraOffset.y);
     // Altitude supplies stay visible through foreground cloud/treetop layers.
     if(g.mode==='playing'||g.mode==='entering'||g.mode==='gameover') {
-      for(const p of g.pickups) if(p.side||p.attracting) this.drawPickup(c,p,t);
+      for(const p of g.pickups) if(p.side||p.attracting) this.drawPickup(c,p,t,g.player);
     }
     this.drawThreats(c,g);
     this.drawTension(c,g,t);
@@ -588,18 +705,20 @@ export class Renderer {
       c.globalAlpha=.95;c.lineWidth=lance?3.5:b.powered?2.8:1.7;c.strokeStyle=palette.core;c.beginPath();c.moveTo(b.x-dx,b.y-dy);c.lineTo(b.x,b.y);c.stroke();
       this.glow(c,b.x,b.y,(b.powered?44:28)*(b.tension?1.4:1),color,.9);
     }
-    const density=this.presentation?.threatVariant==='C'?threatNeighborCounts(g.enemyBullets).counts:null;
+    const lights=enemyProjectileLights(this,g);
     for(let index=0;index<g.enemyBullets.length;index++) {
       const b=g.enemyBullets[index];
-      const size=Math.max(30,b.radius*7),angle=Math.atan2(b.vy,b.vx);
-      const view=b.style||b.palette?projectileStyle(b.style,b.palette):null;
+      const view=enemyProjectileView(b);
       const profile=view||AIM_SHOT_VISUALS[b.speedTier],color=view?.palette.glow||'pink';
-      const neighbors=density?.[index]||0;
-      // Only the outer halo is restrained in dense clusters; the core is unchanged.
-      const alpha=(b.arming>0?.3:.88)/Math.sqrt(1+neighbors*.35);
-      this.glow(c,b.x,b.y,size,color,alpha);
-      c.save();c.translate(b.x,b.y);c.rotate(angle);c.scale(profile?.stretch||2.4,.24);
-      this.glow(c,-3,0,size*.8,color,alpha*.7);c.restore();
+      const {angle,length}=enemyProjectileTrail(this,b,profile),light=lights[index];
+      // One compact halo replaces the former circular + stretched glow pair.
+      // A short trail uses the same measured motion as the foreground core.
+      this.glow(c,b.x,b.y,light.diameter,color,light.alpha);
+      if(length>0) {
+        c.globalAlpha=light.alpha*PROJECTILE_LIGHT_LIMITS.trailAlpha;c.strokeStyle=view?.palette.color||'#ff73b2';
+        c.lineWidth=Math.min(8,b.radius*.8);c.beginPath();c.moveTo(b.x-Math.cos(angle)*length,b.y-Math.sin(angle)*length);
+        c.lineTo(b.x,b.y);c.stroke();
+      }
     }
     c.restore();
   }
@@ -621,39 +740,50 @@ export class Renderer {
       c.globalCompositeOperation='source-over';c.globalAlpha=.85;c.strokeStyle='#a9fff0';c.lineWidth=1.2;
       c.beginPath();c.moveTo(core.x-radius-3,core.y);c.lineTo(core.x,core.y-radius-3);c.lineTo(core.x+radius+3,core.y);c.lineTo(core.x,core.y+radius+3);c.closePath();c.stroke();
     }
-    for(const b of g.enemyBullets) {
-      const angle=Math.atan2(b.vy,b.vx);
-      const view=b.style||b.palette?projectileStyle(b.style,b.palette):null;
+    const lights=enemyProjectileLights(this,g);
+    for(let index=0;index<g.enemyBullets.length;index++) {
+      const b=g.enemyBullets[index],light=lights[index];
+      const view=enemyProjectileView(b);
       const profile=view||AIM_SHOT_VISUALS[b.speedTier],colors=view?.palette;
+      const motion=enemyProjectileTrail(this,b,profile),angle=motion.angle;
       c.globalCompositeOperation='source-over';c.globalAlpha=b.arming>0?.55:1;
       if(this.presentation.threatVariant!=='A') {
         // An emissive corona remains over foreground cloud. No dark backing is
         // painted under a danger core; saturated pink and the white nucleus
         // keep its identity against the gold player shots and blue environment.
-        const r=b.radius*3.2;
-        const backing=c.createRadialGradient(b.x,b.y,0,b.x,b.y,r);
-        backing.addColorStop(0,(colors?.core||'#ffdbf2')+'b8');
-        backing.addColorStop(.35,(colors?.color||'#ff70b9')+'59');
-        backing.addColorStop(1,(colors?.color||'#ff70b9')+'00');c.globalCompositeOperation='lighter';c.fillStyle=backing;c.fillRect(b.x-r,b.y-r,r*2,r*2);
+        const r=light.frontDiameter/2;
+        c.globalCompositeOperation='lighter';c.globalAlpha=light.alpha*PROJECTILE_LIGHT_LIMITS.frontAlpha;
+        if(this.glows&&this.glow)this.glow(c,b.x,b.y,light.frontDiameter,colors?.glow||'pink',c.globalAlpha);
+        else {
+          const backing=c.createRadialGradient(b.x,b.y,0,b.x,b.y,r);
+          backing.addColorStop(0,(colors?.core||'#ffdbf2')+'b8');
+          backing.addColorStop(.35,(colors?.color||'#ff70b9')+'59');
+          backing.addColorStop(1,(colors?.color||'#ff70b9')+'00');c.fillStyle=backing;c.fillRect(b.x-r,b.y-r,r*2,r*2);
+        }
       }
-      c.globalCompositeOperation='source-over';
-      const trail=profile?.trail||13;
-      c.lineWidth=1.5;c.strokeStyle=colors?.color||'#ff73b2';c.beginPath();c.moveTo(b.x-Math.cos(angle)*trail,b.y-Math.sin(angle)*trail);c.lineTo(b.x,b.y);c.stroke();
-      if(profile){
+      c.globalCompositeOperation='source-over';c.globalAlpha=b.arming>0?.55:1;
+      const trail=motion.length;
+      if(trail>0) {
+        c.lineWidth=1.5;c.strokeStyle=colors?.color||'#ff73b2';c.beginPath();c.moveTo(b.x-Math.cos(angle)*trail,b.y-Math.sin(angle)*trail);c.lineTo(b.x,b.y);c.stroke();
+      }
+      if(profile&&Math.min(trail,profile.shoulder)>0){
         // Length conveys approach speed; neither the circular danger core nor
         // the physical radius is stretched with this directional shoulder.
         c.lineWidth=b.radius*.8;c.strokeStyle=colors?.color||'#ff6dab';c.beginPath();
-        c.moveTo(b.x-Math.cos(angle)*profile.shoulder,b.y-Math.sin(angle)*profile.shoulder);c.lineTo(b.x,b.y);c.stroke();
+        const shoulder=Math.min(trail,profile.shoulder);
+        c.moveTo(b.x-Math.cos(angle)*shoulder,b.y-Math.sin(angle)*shoulder);c.lineTo(b.x,b.y);c.stroke();
       }
       // The saturated nucleus covers the complete physical damage radius;
       // the much larger decorative flare never implies additional damage.
       if(view) {
-        drawProjectileShape(c,b,view);
+        drawProjectileShape(c,b,view,angle,trail);
         // A one-pixel rim lies wholly outside the physical nucleus and keeps
         // its saturated edge readable against both sunlit and dark clouds.
         c.strokeStyle=colors.edge;c.lineWidth=1;c.beginPath();c.arc(b.x,b.y,b.radius+.5,0,TAU);c.stroke();
       }
       c.fillStyle=colors?.color||'#ff6dab';c.beginPath();c.arc(b.x,b.y,b.radius,0,TAU);c.fill();
+      const surface=view&&this.projectileSurfaces?.[view.palette.id+':'+view.material.surface];
+      if(surface)c.drawImage(surface,b.x-b.radius,b.y-b.radius,b.radius*2,b.radius*2);
       c.fillStyle=colors?.core||'#fff4df';c.beginPath();c.arc(b.x,b.y,Math.max(1.3,b.radius*.32),0,TAU);c.fill();
       if(b.type==='mine') {
         c.strokeStyle=b.arming>0?'#ffc8ea':'#ff62a4';c.globalAlpha=b.arming>0?.4:.85;c.lineWidth=1.5;
@@ -668,6 +798,18 @@ export class Renderer {
       c.beginPath();c.moveTo(f.x-7,f.y-4);c.lineTo(f.x+3,f.y);c.lineTo(f.x-7,f.y+4);c.stroke();
     }
     if(g.mode==='playing'){
+      c.globalCompositeOperation='source-over';
+      const graze=playerGrazeCue(g);
+      if(graze) {
+        c.globalCompositeOperation='source-over';c.globalAlpha=.15+graze.proximity*.16;
+        c.strokeStyle='#89dccc';c.lineWidth=.75;c.beginPath();
+        for(let index=0;index<4;index++) {
+          const start=index*TAU/4+.52;
+          c.moveTo(g.player.x+Math.cos(start)*graze.radius,g.player.y+Math.sin(start)*graze.radius);
+          c.arc(g.player.x,g.player.y,graze.radius,start,index*TAU/4+1.05);
+        }
+        c.stroke();
+      }
       // Draw the contrast backing outside the damage core, never over its edge.
       // The former 2.6 arc's 1.5 stroke left only a 1.85 radius clear nucleus.
       c.globalAlpha=1;c.fillStyle='#173c46';
@@ -722,10 +864,24 @@ export class Renderer {
     for(const e of g.enemies) {
       const body=isBodyRunner(e),bodyActive=body&&['bait','brace','dash'].includes(e.bodyState);
       const windowActive=['B04','B05'].includes(e.attackName)&&e.sequence?.bundles[e.sequence.index];
-      if(!(e.telegraph>0)&&!windowActive&&!bodyActive)continue;
+      const curveBundle=e.fieldShape==='curve-arc'&&e.sequence?.bundles.slice(e.sequence.index||0).find(bundle=>!bundle.released&&bundle.motion?.kind==='curve');
+      if(!(e.telegraph>0)&&!windowActive&&!bodyActive&&!curveBundle)continue;
       const strength=e.telegraph>0?clamp(e.telegraph,0,1):.6;
       if(body) {drawRamTell(c,e,strength);continue;}
       const muzzles=enemyChargeMuzzles(g,e);
+      const aimTell=['aim','rail','snapshot'].includes(e.attackName);
+      if(e.type==='needle') {
+        // The same idle image aliases charge/lock; the real immutable target
+        // owns this guide. Art and HUD clocks never decide or retarget a shot.
+        const locked=e.sequence?.bundles.slice(e.sequence.index||0)
+          .find(bundle=>!bundle.released&&bundle.lockedTarget)?.lockedTarget;
+        if(locked&&muzzles.length) {
+          c.strokeStyle='#ffc0df';c.globalAlpha=.4+strength*.3;c.lineWidth=1;
+          c.setLineDash([4,11]);c.beginPath();c.moveTo(muzzles[0].x,muzzles[0].y);
+          c.lineTo(locked.x,locked.y);strokeAimTell(c,strength,1);c.setLineDash([]);
+          c.beginPath();c.arc(locked.x,locked.y,8,0,TAU);strokeAimTell(c,strength,1);
+        }
+      }
       // Bay brackets identify the real remaining payload docks. They do not
       // turn a deployment into a gun flash or invent a projectile origin.
       for(const dock of enemyDeployDocks(g,e)) {
@@ -770,7 +926,19 @@ export class Renderer {
         this.glow(c,muzzle.x,muzzle.y,38+strength*26,'pink',strength*.42);
         c.save();c.translate(muzzle.x,muzzle.y);c.strokeStyle='#ff91bb';c.globalAlpha=.3+strength*.45;c.lineWidth=1.25;
         const r=10+(1-strength)*18;
-        c.beginPath();c.arc(0,0,r,0,TAU);c.stroke();
+        c.beginPath();c.arc(0,0,r,0,TAU);
+        if(aimTell)strokeAimTell(c,strength,1.25);else c.stroke();
+        if(e.type==='needle') {
+          for(const offset of [-10,0,10]) {
+            c.beginPath();c.ellipse(offset,0,3+strength*2,12,0,0,TAU);c.stroke();
+          }
+        }
+        if(curveBundle) {
+          const direction=curveBundle.motion.turnRate>0?-1:1;
+          c.beginPath();c.moveTo(-r-5,0);c.quadraticCurveTo(-r-29,0,-r-38,direction*20);
+          c.moveTo(-r-38,direction*20);c.lineTo(-r-31,direction*15);
+          c.moveTo(-r-38,direction*20);c.lineTo(-r-39,direction*12);c.stroke();
+        }
         // Compact source glyphs indicate the coming family, without claiming
         // that the player position at warning time is the final aim target.
         if(e.attackName==='B01') {
@@ -782,7 +950,7 @@ export class Renderer {
         } else if(e.attackName==='B05') {
           c.beginPath();c.moveTo(-r-8,-12);c.lineTo(-r-18,-12);c.lineTo(-r-18,0);c.lineTo(-r-28,0);c.lineTo(-r-28,12);c.stroke();
         } else if(e.attackName==='aim') {
-          c.beginPath();c.moveTo(-r-18,-5);c.lineTo(-r-24,0);c.lineTo(-r-18,5);c.stroke();
+          c.beginPath();c.moveTo(-r-18,-5);c.lineTo(-r-24,0);c.lineTo(-r-18,5);strokeAimTell(c,strength,1.25);
         }
         c.restore();
       }
@@ -790,9 +958,9 @@ export class Renderer {
     c.restore();
   }
 
-  drawPickup(c,p,t) {
+  drawPickup(c,p,t,player) {
     const supply=p.type==='change'||p.type==='maintain';
-    const color=supply?(p.side==='top'?'#ffcf75':'#68f5ba'):p.type==='power'?'#bfffe6':p.type==='drone'?'#a9e8ff':'#9affdc';
+    const shown=pickupPresentation(p,player||{}),color=shown.color||'#9affdc';
     c.save();c.globalCompositeOperation='lighter';
     if(p.attracting&&p.attractFrom) {
       const dx=p.attractFrom.x-p.x,dy=p.attractFrom.y-p.y,distance=Math.hypot(dx,dy);
@@ -813,7 +981,7 @@ export class Renderer {
     }
     if(supply) {
       c.rotate(-(this.roll||0));
-      const glow=p.side==='top'?'supplyTop':'supplyBottom',pulse=this.reducedMotion?1:.84+Math.sin(t*4+p.id)*.16;
+      const glow=shown.glow,pulse=this.reducedMotion?1:.84+Math.sin(t*4+p.id)*.16;
       this.glow(c,0,0,108,glow,.6*pulse);
       if(p.side&&!p.attracting) {
         c.save();
@@ -829,7 +997,7 @@ export class Renderer {
       }
       c.strokeStyle=color;c.lineWidth=5;c.globalAlpha=.25*pulse;
       c.beginPath();c.arc(0,0,23,0,TAU);c.stroke();
-      c.strokeStyle=p.side==='top'?'#fff4ce':'#dcfff0';c.lineWidth=1.4;c.globalAlpha=.94;c.stroke();
+      c.strokeStyle='#f5fbff';c.lineWidth=1.4;c.globalAlpha=.94;c.stroke();
       c.save();c.rotate(this.reducedMotion?.35:t*.8+p.id);
       c.strokeStyle=color;c.lineWidth=1;c.globalAlpha=.6;
       for(const start of [.15,Math.PI+.15]){c.beginPath();c.arc(0,0,29,start,start+1.8);c.stroke();}
@@ -840,11 +1008,13 @@ export class Renderer {
         c.globalAlpha=Math.sin(phase*Math.PI)*.8;c.fillStyle=i%2?'#fffceb':color;c.fillRect(x-1,y-1,2,2);
       }
       c.globalAlpha=1;c.strokeStyle='#fff9df';c.lineWidth=2.4;c.beginPath();
-      if(p.type==='change'){c.moveTo(3,-11);c.lineTo(-6,2);c.lineTo(3,2);c.lineTo(-3,11);}
+      if(shown.action==='change'){c.moveTo(3,-11);c.lineTo(-6,2);c.lineTo(3,2);c.lineTo(-3,11);}
+      else if(shown.action==='extend'){c.arc(0,0,10,-Math.PI/2,Math.PI*1.5);c.moveTo(0,-6);c.lineTo(0,0);c.lineTo(5,3);}
+      else if(shown.action==='drone'){for(const x of [-7,7]){c.moveTo(x,-7);c.lineTo(x+5,0);c.lineTo(x,7);c.lineTo(x-5,0);c.closePath();}}
       else {c.moveTo(-8,-1);c.lineTo(0,-8);c.lineTo(8,-1);c.moveTo(-8,8);c.lineTo(0,1);c.lineTo(8,8);}
       c.stroke();c.restore();return;
     }
-    this.glow(c,0,0,66,supply?(p.side==='top'?'supplyTop':'supplyBottom'):'cyan',.24+Math.sin(t*4+p.id)*.07);
+    this.glow(c,0,0,66,supply||p.type==='power'||p.type==='drone'?shown.glow:'cyan',.24+Math.sin(t*4+p.id)*.07);
     c.rotate(.26+Math.sin(t*1.5+p.id)*.12);c.strokeStyle=color;c.lineWidth=2;
     c.strokeRect(-11,-11,22,22);c.globalAlpha=.25;c.lineWidth=6;c.strokeRect(-11,-11,22,22);c.globalAlpha=1;c.lineWidth=2;
     c.beginPath();

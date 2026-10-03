@@ -1,0 +1,607 @@
+{
+  "at": "2026-10-03T14:28:31.181Z",
+  "fixedSession": {
+    "T0": "2026-10-03T08:54:55Z",
+    "stabilization": "2026-10-03T13:54:55Z",
+    "end": "2026-10-03T14:54:55Z"
+  },
+  "build": {
+    "root": "E:\\codexwork\\Skywind\\.work\\6h-feedback-20261003\\prototype-17-final-hud\\dist",
+    "url": "http://127.0.0.1:5173/.work/6h-feedback-20261003/prototype-17-final-hud/dist/index.html",
+    "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f",
+    "files": 233,
+    "bytes": 58021489,
+    "unchangedBeforeAfter": true,
+    "deltaFromSixth": [
+      "assets/art/mecha-12h-local.json",
+      "src/main.js",
+      "src/presentation.js",
+      "style.css"
+    ],
+    "identicalFiles": 229,
+    "byteDelta": 2425
+  },
+  "verdict": {
+    "functionalDeltaPass": true,
+    "HUDOcclusionResolvedWithinCheckedConditions": true,
+    "confirmedP1Remaining": 0,
+    "continuousPressureGoalComplete": false,
+    "humanFeelValidated": false,
+    "normalNative60SurvivalClaim": false
+  },
+  "metadata": {
+    "uniquePNG": 123,
+    "decodedRGBABytes": 72548352,
+    "declaredMatchesPNG": true,
+    "registryDeepEqualToSixth": true,
+    "manifestOnlyChangedField": "decodedRGBABytes",
+    "actualBrowserMemoryMeasurement": false
+  },
+  "nativeHUD": {
+    "cases": 4,
+    "observations": 173,
+    "coverage": [
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "night": false,
+        "actualUpperCore": {
+          "x": 195.19799276938005,
+          "y": 47.99999999999996
+        },
+        "maskCoreClear": true,
+        "opacity": "0.12",
+        "innerCSS": 80,
+        "observations": 44,
+        "threatOnlyFrames": 10,
+        "nonOccludedFrames": 14,
+        "restored": true,
+        "restorationFixture": {
+          "removedBullets": 147,
+          "removedActors": 3
+        },
+        "returned": true,
+        "upperCanonicalY": 47.99999999999996,
+        "originalPointInsideTransparentRadius": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "night": true,
+        "actualUpperCore": {
+          "x": 193.43034443446828,
+          "y": 47.99999999999993
+        },
+        "maskCoreClear": true,
+        "opacity": "0.12",
+        "innerCSS": 24.333333333333332,
+        "observations": 43,
+        "threatOnlyFrames": 11,
+        "nonOccludedFrames": 9,
+        "restored": true,
+        "restorationFixture": {
+          "removedBullets": 53,
+          "removedActors": 1
+        },
+        "returned": true,
+        "upperCanonicalY": 47.99999999999993,
+        "originalPointInsideTransparentRadius": true
+      },
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "night": true,
+        "actualUpperCore": {
+          "x": 194.57299123125875,
+          "y": 48.0000000000001
+        },
+        "maskCoreClear": true,
+        "opacity": "0.12",
+        "innerCSS": 80,
+        "observations": 43,
+        "threatOnlyFrames": 12,
+        "nonOccludedFrames": 10,
+        "restored": true,
+        "restorationFixture": {
+          "removedBullets": 53,
+          "removedActors": 1
+        },
+        "returned": true,
+        "upperCanonicalY": 48.0000000000001,
+        "originalPointInsideTransparentRadius": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "night": false,
+        "actualUpperCore": {
+          "x": 192.97562436891502,
+          "y": 48.00000000000007
+        },
+        "maskCoreClear": true,
+        "opacity": "0.12",
+        "innerCSS": 24.333333333333332,
+        "observations": 43,
+        "threatOnlyFrames": 11,
+        "nonOccludedFrames": 10,
+        "restored": true,
+        "restorationFixture": {
+          "removedBullets": 147,
+          "removedActors": 3
+        },
+        "returned": true,
+        "upperCanonicalY": 48.00000000000007,
+        "originalPointInsideTransparentRadius": true
+      }
+    ],
+    "maxMaskVsActualCanvasCoreCSSResidual": 0.2010781703396095,
+    "coreRadius": 1.85,
+    "projectionStateUnchanged": true,
+    "HPAndWeaponOwnOpacity1": true,
+    "HPAndWeaponInGameBounds": true,
+    "CSSMaskSupported": true,
+    "errors": 0,
+    "failedRequests": 0,
+    "coordinateCorrection": "초기 보조 검사는 반올림된 DOM rect로 helper를 다시 계산했다. 실제 main과 같은 shell.clientWidth/clientHeight를 사용하며 Canvas의 실제 버퍼·CSS 배율을 대조한다. CSS/Canvas 분수픽셀 잔차는.75CSSpx이내이고 raw 실패를 보존한다.",
+    "initialFailurePreserved": "E:\\codexwork\\Skywind\\.work\\independent-qa-6h-20261003\\prototype-17-final-hud\\NATIVE_FINAL_HUD_INITIAL_COORDINATE_FAILURE.json",
+    "scope": "정확 final 실제 Chrome main RAF·Canvas+WebGL·CSS. 시각 fixture: 낮 Stage1 24초 블록/밤 Stage4 보스 직접 초기화, 실제wave를1/120초6.1/10초 진행, 초기HP67/30·관측무적120·HELIX18초·재현 core위치 지정. 이후 실제 방향키 이동. 이미지/스타일/마스크 결과 주입0. 정상회피·난이도·압박·사람체감·청음 증거아님.",
+    "restorationIsIsolatedFixture": true
+  },
+  "reuse": {
+    "sixthReceipt": "E:\\codexwork\\Skywind\\.work\\independent-qa-6h-20261003\\prototype-17-sixth\\FINAL_RECEIPT.json",
+    "reason": "game/level/barrage/renderer/damage/projectile motion/PNG/manifest registry 등229개 동일. 실제5보스→HELL·캡·피해·petal·꼬리 검사를 반복하지 않고 범위 재사용. main/presentation/style 변경은 이번 실제nativeHUD검사로 별도 확인.",
+    "sixthNativeScope": "초기 관측무적1000·내부세계발사선 자동키. phase/time/보스처치/탄/적 주입0. 사람 생존·정상난이도 승인이 아님.",
+    "performanceScope": "기존 제한된 관측 RAF 간격을 같은 PNG/renderer/game의 근거로 보존하되 신규 HUD비용을 포함한 정량 성능 회귀·CPU/GPU 독점·기기별 FPS보증은 없음."
+  },
+  "pressure": {
+    "officialSeed120202": {
+      "fifthTensionPct": 44.86111111111093,
+      "sixthTensionPct": 43.62499999999983,
+      "fifthMaxInactive": 10.908333333332713,
+      "sixthMaxInactive": 14.941666666665817
+    },
+    "parentGrazeSeed120201": {
+      "first60": 63.0833,
+      "last60": 83.4722,
+      "lastMaxInactive": 4.833333
+    },
+    "policiesNotMixed": true,
+    "goalIncomplete": true
+  },
+  "fifthNormalNative": {
+    "executed": true,
+    "gameoverLogPresent": true,
+    "pointerDiedAt": 12.058333333333387,
+    "keyboardDiedAt": 18.600666666666516,
+    "meaning": "정상 피해 규칙·무적 주입 없는 자동 고정 입력이 사망하여 해당 경로의60초 관측을 채우지 못함. 정상게임오버이며 기능실패·로그누락·실행장애가 아님."
+  },
+  "captures": {
+    "shared": 16,
+    "limit": 16,
+    "remaining": 0,
+    "ownFinal": 2,
+    "photos": [
+      {
+        "file": "E:\\codexwork\\Skywind\\.work\\independent-qa-6h-20261003\\prototype-17-final-hud\\15-final-desktop-day-core-clear.png",
+        "sha256": "9c1639d640d7a91456d54587358aa06f904becf29980de835956e7b2c9826519",
+        "width": 1280,
+        "height": 720,
+        "at": 6.283200000000101,
+        "core": {
+          "x": 210.66148374829908,
+          "y": 99.92867144407973
+        },
+        "hp": 67,
+        "night": 0,
+        "pixelsInspected": true,
+        "escapePassClaim": false
+      },
+      {
+        "file": "E:\\codexwork\\Skywind\\.work\\independent-qa-6h-20261003\\prototype-17-final-hud\\16-final-portrait-night-core-clear.png",
+        "sha256": "cba13bdfabc1122c12141aea0397752fb51f6a4a2d5012273c62283569235338",
+        "width": 390,
+        "height": 844,
+        "at": 10.383300000000052,
+        "core": {
+          "x": 192.81822173506572,
+          "y": 47.999999999999986
+        },
+        "hp": 30,
+        "night": 1,
+        "pixelsInspected": true,
+        "escapePassClaim": false
+      }
+    ]
+  },
+  "cleanup": {
+    "at": "2026-10-03T14:24:21.642Z",
+    "url": "http://127.0.0.1:5173/.work/6h-feedback-20261003/prototype-17-final-hud/dist/index.html",
+    "title": "SkyWind",
+    "viewport": {
+      "width": 1350,
+      "height": 673
+    },
+    "mode": "title",
+    "time": 0,
+    "night": 0,
+    "daylight": 1,
+    "hp": 100,
+    "player": {
+      "x": -147.60650757768713,
+      "y": 500.27112753977065
+    },
+    "weapon": {
+      "mode": "normal",
+      "remaining": 0,
+      "gauge": 0,
+      "level": 1,
+      "maxDuration": 45,
+      "drone": null
+    },
+    "tension": 0,
+    "supply": null,
+    "muted": true,
+    "paused": false,
+    "loaded": 123,
+    "bullets": 0,
+    "overlay": false,
+    "dom": {
+      "game": {
+        "text": "",
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "rect": {
+          "x": 76.78125,
+          "y": 0,
+          "width": 1196.4375,
+          "height": 673,
+          "top": 0,
+          "right": 1273.21875,
+          "bottom": 673,
+          "left": 76.78125
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {},
+        "aria": "비행 화면. WASD 또는 방향키로 이동, Space로 발사",
+        "supplyColor": ""
+      },
+      "game-ui": {
+        "text": "SKYWIND\nSTART\n\nBEST 157300\n\nW A S D / ↑ ↓ ← → 이동\nSPACE / 마우스 누르기 발사",
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "rect": {
+          "x": 76.78125,
+          "y": 0.125,
+          "width": 1196,
+          "height": 672.75,
+          "top": 0.125,
+          "right": 1272.78125,
+          "bottom": 672.875,
+          "left": 76.78125
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "size": "medium",
+          "compact": "false",
+          "short": "false"
+        },
+        "aria": null,
+        "supplyColor": ""
+      },
+      "pilot-hud": {
+        "text": "\n      \n        \n        \n        !\n        \n      \n      \n    ",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "mode": "normal",
+          "occluded": "false",
+          "coreClear": "false"
+        },
+        "aria": "파일럿: 정상",
+        "supplyColor": ""
+      },
+      "hud": {
+        "text": "\n      STAGE 0145.0s000000\n      \n        HP100/ 100\n        \n      \n      \n        \n          \n          TWIN CANNONLv.1\n          \n        \n      \n      \n        BASE Lv.1\n        \n          \n          DRONE ×2\n          \n        \n        TENSIONGRAZE\n      \n      \n    ",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "health": "stable"
+        },
+        "aria": "비행 상태",
+        "supplyColor": ""
+      },
+      "health-block": {
+        "text": "\n        HP100/ 100\n        \n      ",
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(164, 242, 186)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "state": "stable"
+        },
+        "aria": "HP 100 / 100",
+        "supplyColor": ""
+      },
+      "weapon-row": {
+        "text": "\n          \n          TWIN CANNONLv.1\n          \n        ",
+        "hidden": false,
+        "display": "grid",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "12px",
+        "color": "rgb(120, 232, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "mode": "normal",
+          "warning": "false",
+          "special": "false",
+          "fresh": "false"
+        },
+        "aria": "TWIN CANNON, Lv.1",
+        "supplyColor": ""
+      },
+      "drone-row": {
+        "text": "\n          \n          DRONE ×2\n          \n        ",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "9px",
+        "color": "rgb(115, 242, 175)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {},
+        "aria": "독립 드론 2기",
+        "supplyColor": ""
+      },
+      "base-level": {
+        "text": "BASE Lv.1",
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "9px",
+        "color": "rgb(211, 230, 239)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "max": "false"
+        },
+        "aria": "BASE Lv.1",
+        "supplyColor": ""
+      },
+      "tension-row": {
+        "text": "TENSIONGRAZE",
+        "hidden": false,
+        "display": "flex",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "8px",
+        "color": "rgb(227, 216, 174)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "active": "false",
+          "fresh": "false"
+        },
+        "aria": "근접 비행으로 텐션 활성화",
+        "supplyColor": ""
+      },
+      "supply-top": {
+        "text": "\n        \n        ↑ APPROACH\n      ",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "side": "top"
+        },
+        "aria": null,
+        "supplyColor": ""
+      },
+      "supply-bottom": {
+        "text": "\n        \n        ↓ APPROACH\n      ",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {
+          "side": "bottom"
+        },
+        "aria": null,
+        "supplyColor": ""
+      },
+      "boss-hud": {
+        "text": "WARDEN",
+        "hidden": true,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {},
+        "aria": null,
+        "supplyColor": ""
+      },
+      "pause-button": {
+        "text": "",
+        "hidden": false,
+        "display": "grid",
+        "visibility": "hidden",
+        "rect": {
+          "x": 1116.78125,
+          "y": 12.125,
+          "width": 44,
+          "height": 44,
+          "top": 12.125,
+          "right": 1160.78125,
+          "bottom": 56.125,
+          "left": 1116.78125
+        },
+        "font": "16px",
+        "color": "rgba(217, 250, 255, 0.58)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {},
+        "aria": "일시정지",
+        "supplyColor": ""
+      },
+      "touch-controls": {
+        "text": "SHOT",
+        "hidden": false,
+        "display": "none",
+        "visibility": "visible",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "font": "16px",
+        "color": "rgb(236, 252, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "dataset": {},
+        "aria": null,
+        "supplyColor": ""
+      }
+    },
+    "qa": false,
+    "ownedPageClosed": false
+  },
+  "productWrites": 0,
+  "gitWrites": 0,
+  "install": 0,
+  "permissionChanges": 0,
+  "videos": 0,
+  "publication": 0,
+  "remaining": [
+    "거의 지속적인 압박 목표 미달. 인간 체감·재미·첫1분=옛5분 요구 미검증.",
+    "직접 청음·실물 모바일·사람 정상native생존·미감 승인 없음.",
+    "독점 성능 회귀·actual browser/GPU메모리 측정 없음. PNG합계는RGBA산술값.",
+    "이번 시각검사는 직접stage/HP/무적/weapon 초기값·core배치 fixture. 중앙복원은위협제거fixture를명시. 정지사진을회피합격으로확대하지않음."
+  ]
+}

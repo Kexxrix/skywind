@@ -1,0 +1,152 @@
+{
+  "open": {
+    "borderAlphaMax": 0,
+    "coreExposed": true,
+    "sha256": "EAD6F048DAED2A38423865F915836FEFB9A11E93F4EB678B6BE690EE59C5A432",
+    "alphaBounds": [
+      60,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "F559126418152CC8D82C0024DB5A919F9B452F17532AC133FAB8B2667A311D27",
+    "hullCount": 64,
+    "progress": 1,
+    "hullTransparentPercent": 0.0754
+  },
+  "mechanism_25": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "B0E184E4E249390B54006078239E2050FFCE19DE3FD66F0468657A8FF9116FE7",
+    "alphaBounds": [
+      37,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "1500C55E4B46D4250CE0C04BB46375775040E603F50AF7C45AA29EDD3D6976AA",
+    "hullCount": 63,
+    "progress": 0.25,
+    "hullTransparentPercent": 0.1203
+  },
+  "mechanism_75_fire": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "C8CFAA4EBDCB1CDDACFE6DBAAAD1F076465F06F1FA23111E7AC53B7DC52A70FA",
+    "alphaBounds": [
+      47,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "B8478543105522A132232C124158E1544ABE96DE2E40A4C46D3060140DFD9F2E",
+    "hullCount": 63,
+    "progress": 0.75,
+    "hullTransparentPercent": 0.0965
+  },
+  "open_fire": {
+    "borderAlphaMax": 0,
+    "coreExposed": true,
+    "sha256": "AC8B839C1F078192DBEF2E70E1ED56B9538F06D8BF0D0E8D81BCBDFDC24D908B",
+    "alphaBounds": [
+      56,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "36EC53FD128CC2D4308780193A04C2C1E29A3ED2FA48CDD0968A039BEA13834C",
+    "hullCount": 64,
+    "progress": 1,
+    "hullTransparentPercent": 0.0767
+  },
+  "fire": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "498CC5349AF5A32A60B03FFA825905462C628CAD40EEEE0901C0ADC679B0DEC0",
+    "alphaBounds": [
+      28,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "9CE0E38650C1B73409A3A0D685D58F9F971DAA43F6A3A7AC5D0D4FBD7625A59E",
+    "hullCount": 63,
+    "progress": 0,
+    "hullTransparentPercent": 0.1149
+  },
+  "mechanism_25_fire": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "94E08FDC09EDF1DA194B1CEB166209D688413165EAC48B71C1C17B2A385040A1",
+    "alphaBounds": [
+      34,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "C4A78F2461BC3E3FEFA3AD61D975DBFE18C8504BEAAE31A106E50110E69DB1D2",
+    "hullCount": 63,
+    "progress": 0.25,
+    "hullTransparentPercent": 0.1224
+  },
+  "mechanism_75": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "5F8F1207129D060E176E03D2253C6E88FF0807DF88C973EC6DF013086DCC5FA4",
+    "alphaBounds": [
+      52,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "8AFAA4882E2267712743F225073F4E36ADB5F6203DEC889DE11B7D9BFB55C879",
+    "hullCount": 63,
+    "progress": 0.75,
+    "hullTransparentPercent": 0.0949
+  },
+  "mechanism_50": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "F8F503BB01ED5B1FDC8923631F7D3D741EECA50E31EA9FFCE7230CCDC25B62CC",
+    "alphaBounds": [
+      44,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "31A636B7FF9C1B4EFA4EA28E16B9B8CBDD469281E35DF0F5A3D4BE4E906416F1",
+    "hullCount": 63,
+    "progress": 0.5,
+    "hullTransparentPercent": 0.1117
+  },
+  "idle": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "09B7ADDB75B9A1BA117D542E451F617FFFC8A18FA809BEECCC7412B1ACAC66E0",
+    "alphaBounds": [
+      30,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "254B22D2D17DE76A53EB085E804A0A13294C9F95658F69C229BD2701FC922152",
+    "hullCount": 63,
+    "progress": 0,
+    "hullTransparentPercent": 0.1129
+  },
+  "mechanism_50_fire": {
+    "borderAlphaMax": 0,
+    "coreExposed": false,
+    "sha256": "FF634697701AF4079D45C8608DE9E945FC56B8DD8E1058E82AF5D7629BD20DB4",
+    "alphaBounds": [
+      41,
+      39,
+      324,
+      330
+    ],
+    "decodedPixelsSHA256": "7B4AE0A53552766889887B595B80CA95AFA25661BB68EC62628C4525F3D07CE0",
+    "hullCount": 63,
+    "progress": 0.5,
+    "hullTransparentPercent": 0.1136
+  }
+}

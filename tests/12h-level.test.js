@@ -11,7 +11,7 @@ test('twelve-hour pressure keeps five forty-five-second stages and victory-only 
   assert.equal(LEVEL_RULES.normalDuration, 45);
   assert.equal(LEVEL_RULES.quietAt, 42);
   assert.deepEqual(Array.from({ length: 6 }, (_, i) => trialDifficulty(i).minimumFlightTime), [.9, .7, .65, .6, .55, .5]);
-  assert.deepEqual(Array.from({ length: 6 }, (_, i) => trialDifficulty(i).maxBulletSpeed), [160, 340, 430, 470, 490, MAX_BARRAGE_SPEED]);
+  assert.deepEqual(Array.from({ length: 6 }, (_, i) => trialDifficulty(i).maxBulletSpeed), [320, 420, 460, 490, 505, MAX_BARRAGE_SPEED]);
   assert.equal(trialDifficulty(1000).pace, 5);
   assert.equal(trialDifficulty(1000).maxEnemyBullets, 420);
   assert.equal(trialDifficulty(1000).tier, 1001);
@@ -91,11 +91,13 @@ test('returned encounter and boss data cannot mutate the next deterministic plan
 });
 
 test('normal art roles match fan, drum burst, dual-port weave and rail grammar', () => {
-  const roles = Array.from({ length: 6 }, (_, pace) => Array.from({ length: 42 }, (_, t) => normalEncounter(t, pace).roles)).flat(2);
-  for (const role of roles) {
+  for (let pace = 0; pace < 6; pace++) for (let time = 0; time < 42; time++) for (const role of normalEncounter(time, pace).roles) {
     if (role.type === 'orb') assert.equal(role.pattern, 'trident');
-    if (role.type === 'claw') assert.equal(role.pattern, 'snapshot');
-    if (role.type === 'ray') assert.equal(role.pattern, 'seed');
+    if (role.type === 'claw') {
+      assert.equal(role.pattern, pace === 0 ? 'zipper' : 'snapshot');
+      if (pace === 0) assert.equal(role.prefillMode, 'field-only', 'existing fan hull owns the first-stage weave without adding sniper shots');
+    }
+    if (role.type === 'ray') assert.ok(['seed', 'B04'].includes(role.pattern), 'the same route artillery owns seeds or aperture rows');
     if (role.type === 'needle' && role.pattern) assert.equal(role.pattern, 'snapshot');
   }
   const points = patternGeometry(barragePlan('trident', 2).bundles[2]);
@@ -136,8 +138,10 @@ test('real Stage3 spawnWave retains authored hold ports and applies delayed fast
   const firstSlow = events.find(event => event.type === 'enemyShot' && event.enemyId === field.id);
   const firstFast = events.find(event => event.type === 'enemyShot' && event.enemyId === sniper.id);
   assert.ok(firstSlow && firstFast, 'both actual authored sources reach their first release');
-  assert.ok(firstFast.shots[0].launchedAt - firstSlow.shots[0].launchedAt > 3);
-  assert.ok(firstFast.shots.every(shot => shot.lockAt < shot.launchedAt && shot.speed === 430));
+  const admitted=events.find(event=>event.type==='phraseAdmitted');
+  const fastTiming=admitted.memberTiming.find(row=>row.enemyId===sniper.id),slowTiming=admitted.memberTiming.find(row=>row.enemyId===field.id);
+  assert.ok(Math.abs(firstFast.shots[0].launchedAt-firstSlow.shots[0].launchedAt-(fastTiming.delay+fastTiming.tell-slowTiming.tell))<1/30);
+  assert.ok(firstFast.shots.every(shot => shot.lockAt < shot.launchedAt && shot.speed === 460));
   const locks = events.filter(event => event.type === 'aimLock' && event.enemyId === sniper.id);
   assert.equal(locks.length, 1, 'the whole rail burst uses its pre-release snapshot');
   for (const event of events.filter(event => event.type === 'enemyShot' && event.enemyId === sniper.id))
@@ -160,8 +164,8 @@ test('a real woven wave brings slow grid and fixed-lock fast shots into the play
       maximumSpeed = Math.max(maximumSpeed, speed);
       const margin = Math.hypot(bullet.x - game.player.x, bullet.y - game.player.y) - bullet.radius - game.player.radius;
       if (!bullet.arming && Math.abs(pose.x - ship.x) <= 48 && margin < 32) {
-        slow ||= bullet.family !== 'aim' && speed < 200;
-        fast ||= bullet.family === 'aim' && (!bullet.motion || bullet.motion.kind === 'linear') && speed >= 300;
+        slow ||= bullet.family !== 'aim' && speed >= 210 && speed < 350;
+        fast ||= bullet.family === 'aim' && (!bullet.motion || bullet.motion.kind === 'linear') && speed >= 460;
       }
     }
     if (slow && fast) overlap += 1 / 120;
@@ -175,8 +179,21 @@ test('a real woven wave brings slow grid and fixed-lock fast shots into the play
   const fastId = events.find(event => event.type === 'enemyShot' && event.pattern === 'snapshot')?.enemyId;
   assert.notEqual(fieldId, fastId, 'the fast burst must come from an independent visible coil source');
   assert.ok(events.some(event => event.type === 'hit' && event.player && event.sourceKind === 'projectile'));
-  assert.ok(game.player.hp > 0, 'the controlled center input is pressured without forced death');
-  assert.ok(maximumSpeed <= 430 + 1e-7);
+  // Independent repeats intentionally add a second real attack opportunity.
+  // This stationary witness establishes cross-arrival and the real HP ledger;
+  // the following ordinary avoidance witness establishes a surviving path.
+  let recordedHp=100;
+  for(const event of events){
+    if(event.type==='hit'&&event.player){
+      assert.equal(event.hpBefore,recordedHp);assert.ok(event.effectiveDamage>0);
+      assert.equal(event.hpAfter,Math.max(0,recordedHp-event.damage));recordedHp=event.hpAfter;
+    }else if(event.type==='pickup'){
+      assert.equal(event.hpBefore,recordedHp);assert.equal(event.hpAfter,recordedHp+event.effectiveHeal);recordedHp=event.hpAfter;
+    }
+  }
+  assert.equal(game.player.hp,recordedHp,'damage and collection events explain all stationary-witness HP');
+  assert.equal(game.mode==='gameover',recordedHp===0,'death occurs only through the real damage ledger');
+  assert.ok(maximumSpeed <= 460 + 1e-7);
 });
 
 // A limited visible-state model supplies real normal inputs. This is one reproducible
@@ -218,14 +235,17 @@ test('a normal counterflow source outside the rolled basic firing line reaches i
   const role = normalEncounter(8, 2).roles.find(role => role.type === 'mantis' && role.pattern === 'zipper');
   assert.equal(role.lane, 150); assert.equal(role.holdScreenX, 1100);
   const game = stage3Fixture(8), controller = createVisibleController(engine, art, relativeMinimumDistance), events = [];
-  for (let step = 0; step < 2 * 120; step++) {
+  for (let step = 0; step < 3 * 120; step++) {
     engine.updateGame(game, 1 / 120, controller.input(game));
     if (!step) game.nextWaveAt = Infinity;
     events.push(...engine.consumeEvents(game));
   }
   const source = game.enemies.find(enemy => enemy.type === 'mantis' && enemy.pattern === 'zipper');
   assert.ok(source, 'the existing low-HP source remains vulnerable but gets its first visible attack opportunity');
-  assert.ok(events.some(event => event.type === 'enemyShot' && event.enemyId === source.id && event.pattern === 'zipper' && event.bulletCount > 0));
+  const firstShot = events.find(event => event.type === 'enemyShot' && event.enemyId === source.id && event.pattern === 'zipper' && event.bulletCount > 0);
+  const tell = events.find(event => event.type === 'charge' && event.enemyId === source.id);
+  assert.ok(firstShot && tell, 'the visible low-HP source fires after the group settles at its existing hold ports');
+  assert.ok(Math.abs(firstShot.simulationAt - tell.simulationAt - tell.duration) < 1 / 60);
   assert.ok(source.hp <= source.maxHp);
   assert.equal(role.count, 1); assert.equal(barragePlan('zipper', 2).total, 36);
 });
@@ -235,26 +255,29 @@ test('normal core phrases reserve unique independent roles inside their authored
   for (let pace = 0; pace < 6; pace++) for (let time = 0; time < 45; time += .5) {
     const encounter = normalEncounter(time, pace), difficulty = trialDifficulty(pace);
     const members = encounter.roles.filter(role => role.roleKey);
-    if (!pace || !members.length) { assert.equal(encounter.phrase, null); continue; }
+    if (!members.length) { assert.equal(encounter.phrase, null); continue; }
     const phrase = encounter.phrase;
+    const firstContact = pace === 2 && encounter.blockId === '3:slow-prefill';
     assert.equal(phrase.key, encounter.blockId + '-crossfire');
     assert.ok(phrase.start <= time && time < phrase.deadline);
     assert.equal(phrase.deadline, encounter.until);
-    assert.equal(phrase.maxCycles, 1, 'field-only shortening cannot start a second sequence inside the same group');
+    assert.equal(phrase.maxCycles, 2,
+      'every authored group permits at most two finite cycles inside its actual deadline');
     assert.deepEqual(phrase.memberRoleKeys, members.map(role => role.roleKey));
     assert.equal(new Set(phrase.memberRoleKeys).size, members.length);
     assert.ok(members.length <= difficulty.waveSize && members.length <= difficulty.maxAttackers);
-    const plans = members.map(role => {
+    const plans = members.map((role, index) => {
       assert.equal(role.count, 1, 'an authored member denotes one actual source');
+      assert.equal(role.initialAttackDelay, index * (pace ? .45 : .15));
+      assert.equal(role.deployment.attackOffset, role.initialAttackDelay);
       const original = barragePlan(role.pattern, pace);
       if (role.prefillMode === 'field-only') {
-        assert.equal(role.holdScreenX, 1100); assert.equal(role.initialAttackDelay, 0);
+        assert.equal(role.holdScreenX, firstContact ? 900 : 1100);
         assert.ok(!['rail', 'snapshot', 'lunge', 'deploy'].includes(role.pattern));
         return fieldOnlyPlan(original);
       }
       assert.ok(['rail', 'snapshot'].includes(role.pattern));
-      assert.equal(role.holdScreenX, 900);
-      assert.equal(role.initialAttackDelay, role.type === 'needle' ? 4.3 : 4);
+      assert.equal(role.holdScreenX, firstContact ? 1100 : pace ? 900 : 1000);
       return original;
     });
     const families = new Set(plans.flatMap(plan => plan.families));

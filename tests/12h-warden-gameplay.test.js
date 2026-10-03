@@ -12,7 +12,7 @@ test('the adopted Warden mechanism denies forced early open frames and retracts 
   const g=createGame(120201);startGame(g);g.mode='playing';g.nextWaveAt=g.nextPickupAt=Infinity;g.nextBossAt=0;
   // This isolated animation/permission fixture is not a difficulty or survival run.
   g.player.invincible=100;advance(g,1.3);
-  const e=g.boss;assert.equal(g.phase,'boss');assert.equal(getMechaSpec(e).key,'local-v2-warden');
+  const e=g.boss;assert.equal(g.phase,'boss');assert.equal(getMechaSpec(e).key,'warden');
   e.mechanismProgress=0;e.artFrame='phase_100';
   e.sequence={elapsed:0,index:0,duration:10,bundles:[{at:10,count:0,pattern:'lunge'}]};
   e.attackSpec={openWindow:{delay:0,duration:1.2,enabled:true}};e.chargeDuration=.1;

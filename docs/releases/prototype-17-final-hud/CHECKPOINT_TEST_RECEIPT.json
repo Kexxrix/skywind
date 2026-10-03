@@ -1,0 +1,62 @@
+{
+  "confirmedAt": "2026-10-03T14:07:17.741Z",
+  "label": "17-final-hud",
+  "live": {
+    "command": "npm test",
+    "passed": 437,
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "sessionID": 21996,
+    "durationMs": 16479.6569,
+    "log": ".work/6h-feedback-20261003/final-hud-test-live.txt",
+    "sha256": "e6647f0d1ac5f3b84674cbef57d563e9c971a0a36f6bae08e4116c30a0a436a0"
+  },
+  "checkpoint": {
+    "command": "npm test",
+    "passed": 437,
+    "failed": 0,
+    "skipped": 0,
+    "exitCode": 0,
+    "sessionID": 77750,
+    "durationMs": 15845.4734,
+    "log": ".work/6h-feedback-20261003/final-hud-test-checkpoint.txt",
+    "sha256": "afe38cda20fc307c6bf1dfaea07e9721876eb0adf36940f3f9b89614c2be9899"
+  },
+  "hudFocused": {
+    "passed": 23,
+    "failed": 0,
+    "sourceFreezeAt": "2026-10-03T13:59:30Z",
+    "lastSourceWriteAt": "2026-10-03T13:58:43.882Z",
+    "owner": "c_visuals"
+  },
+  "syntax": {
+    "command": "npm run check; node --check tools/build-site.mjs",
+    "exitCode": 0,
+    "sessionID": 64363,
+    "log": ".work/6h-feedback-20261003/final-hud-check.txt",
+    "sha256": "320593af7d4d0720104c9df18d70bbe7a7e2ddc3d0f7258f0038943e5fd06ade"
+  },
+  "build": {
+    "sessionID": 31266,
+    "exitCode": 0
+  },
+  "exactDeltaAndFrozenInputsAndHTTP": {
+    "sessionID": 90106,
+    "exitCode": 0
+  },
+  "diffAndOriginalPreservation": {
+    "sessionID": 46175,
+    "exitCode": 0
+  },
+  "ownedProcesses": {
+    "allListedSessionsExited": true,
+    "gameSimulationSessions": 0,
+    "renderSessions": 0,
+    "GUI": 0,
+    "captures": 0,
+    "unknownNodeOwnership": "Unresolved; no command-line permission retry, no kill"
+  },
+  "nativeQA": "Pending parent for exact HUD candidate; old-sixth actual RAF is not a replacement for new HUD pixels",
+  "humanApproval": false
+}

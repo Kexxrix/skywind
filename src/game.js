@@ -1,9 +1,10 @@
 import { LEVEL_RULES as RULES, trialDifficulty, normalEncounter, bossProfile, bossAttack, attackPolicy, LEVEL_BOSS_KINDS, basicWeapon } from './level.js';
-import { barragePlan, fieldOnlyPlan, fitPrefillPlan, patternGeometry, AIM_SPEEDS, MAX_BARRAGE_SPEED, relativeMinimumDistance } from './barrage.js';
+import { barragePlan, apexAttackPlan, fieldOnlyPlan, fitPrefillPlan, patternGeometry, AIM_SPEEDS, MAX_BARRAGE_SPEED, relativeMinimumDistance } from './barrage.js';
 import { getMechaSpec, mechaAnchorWorld } from './mecha-art.js';
 import { advanceHostileProjectile } from './projectile-motion.js';
 import { combatProfile, recoveryPolicy } from './combat-tuning.js';
 import { mechaBodyContact } from './mecha-collision.js';
+import { hostileDamageSpec, grazeOuterRadius } from './combat-damage.js';
 export const WORLD_WIDTH = 1280;
 export const WORLD_HEIGHT = 720;
 export const FLIGHT_CENTER_Y = 360;
@@ -272,6 +273,9 @@ function spawnWave(g) {
     id: `${encounter.phrase.key}:${wave}`, blockId: encounter.blockId, phaseId: g.stage,
     memberIds: [], admittedAt: null, deadlineAt: g.time + encounter.phrase.deadline - g.normalTime,
     maxCycles: encounter.phrase.maxCycles || 1,
+    independentRepeats: encounter.phrase.independentRepeats === true,
+    independentEntry: encounter.phrase.independentEntry === true,
+    ...(encounter.phrase.contactPlane ? { contactPlane: { ...encounter.phrase.contactPlane } } : {}),
   } : null;
   if (coreCount && !coreOccupied && !phrase)
     emit(g, 'phraseSkipped', { phraseKey: encounter.phrase.key, reason: 'enemy-cap', requestedActors: coreCount, availableActors: budget });
@@ -283,16 +287,27 @@ function spawnWave(g) {
     for (let i = 0; i < role.count && emitted < budget; i++) {
       const lane = role.lane ?? 360;
       const formation = role.formation || 'stagger';
-      const y = clamp(formation === 'pincer' ? (i % 2 ? 720 - lane : lane)
+      const deployment = role.deployment && !['wasp', 'pincer'].includes(role.type) ? role.deployment : null;
+      const y = deployment ? clamp(deployment.spawnY, 96, 624) : clamp(formation === 'pincer' ? (i % 2 ? 720 - lane : lane)
         : formation === 'column' ? lane + (i - (role.count - 1) / 2) * 64
           : formation === 'line' ? lane : lane + (i % 3 - 1) * 48, 96, 624);
-      const position = screenToWorld(g, { x: 1320 + emitted * (formation === 'column' ? 24 : 65), y });
+      const spawnX = deployment ? 1320 + Math.max(0, deployment.spawnOffsetX || 0) + i * (formation === 'column' ? 24 : 65)
+        : 1320 + emitted * (formation === 'column' ? 24 : 65);
+      const position = screenToWorld(g, { x: spawnX, y });
       const enemy = spawnEnemy(g, role.type, position.x, position.y, emitted);
       if (!enemy) break;
       enemy.encounterBlock = encounter.blockId;
       enemy.formation = formation;
+      if (deployment) {
+        enemy.deployment = Object.freeze({ spawnY: y,
+          holdY: clamp(deployment.holdY ?? lane, enemy.radius + 60, 660 - enemy.radius),
+          holdX: clamp(deployment.holdX ?? role.holdScreenX ?? 960, WORLD_WIDTH * .33 + 120 + enemy.radius, WORLD_WIDTH - enemy.radius - 20),
+          approachSeconds: Math.max(0, deployment.approachSeconds || 0),
+          attackOffset: Math.max(0, deployment.attackOffset || 0), bankSign: deployment.bankSign < 0 ? -1 : 1 });
+        enemy.deploymentElapsed = 0;
+      }
       if (phraseMember) {
-        enemy.phrase = phrase; enemy.roleKey = role.roleKey; enemy.prefillMode = role.prefillMode;
+        enemy.phrase = phrase; enemy.roleKey = role.roleKey; enemy.prefillMode = role.prefillMode;enemy.fieldShape=role.fieldShape;
         enemy.phraseDelay = Math.max(0, role.initialAttackDelay || 0);
         phrase.memberIds.push(enemy.id);
       }
@@ -300,9 +315,9 @@ function spawnWave(g) {
         enemy.fireCooldown = Math.max(enemy.fireCooldown, Math.max(0, role.initialAttackDelay));
       if (role.pattern) {
         enemy.pattern = role.pattern;
-        enemy.holdScreenY = lane;
-        if (Number.isFinite(role.holdScreenX))
-          enemy.holdScreenX = clamp(role.holdScreenX, WORLD_WIDTH * .33 + 120 + enemy.radius, WORLD_WIDTH - enemy.radius - 20);
+        enemy.holdScreenY = enemy.deployment?.holdY ?? lane;
+        if (enemy.deployment || Number.isFinite(role.holdScreenX))
+          enemy.holdScreenX = enemy.deployment?.holdX ?? clamp(role.holdScreenX, WORLD_WIDTH * .33 + 120 + enemy.radius, WORLD_WIDTH - enemy.radius - 20);
         enemy.holdUntil = g.time + (role.holdSeconds || 6);
         enemy.safeLanes = encounter.safeLanes;
       }
@@ -462,22 +477,33 @@ function syncMechanismPose(e) {
   if(e.bossKind==='carrier'&&spec.matchingChild&&spec.payloadMechanismSelection){
     const occupied=e.payloadDockOccupied||spec.payloadVisible||[true,true];
     const payload=occupied[0]?(occupied[1]?'payload2':'payload1near'):(occupied[1]?'payload1far':'payload0');
-    const state=base.state.replace(/payload2$/,payload);
+    let state=base.state.replace(/payload2$/,payload);
+    // Occupancy and recoil select one authored snapshot together. A fire pose
+    // must not bring back a spent child mesh, port, core or collision hull.
+    if(e.fireFlash>0){
+      const fireBase=Object.entries(spec.semanticAliases?.fireByProgress||{})
+        .find(([value])=>Number(value)===base.progress)?.[1]||base.state+'_fire';
+      const fireState=fireBase.replace(/payload2(?=_fire$)/,payload);
+      if(getMechaSpec({...e,artFrame:fireState})?.state===fireState)state=fireState;
+    }
     if(getMechaSpec({...e,artFrame:state})?.state===state)e.artFrame=state;
-  }else if(e.bossKind==='lancer'&&e.fireFlash>0&&getMechaSpec({...e,artFrame:base.state+'_fire'})?.state===base.state+'_fire'){
-    e.artFrame=base.state+'_fire';
+  }else if(e.fireFlash>0){
+    const fireState=Object.entries(spec.semanticAliases?.fireByProgress||{})
+      .find(([value])=>Number(value)===base.progress)?.[1]||base.state+'_fire';
+    if(getMechaSpec({...e,artFrame:fireState})?.state===fireState)e.artFrame=fireState;
   }
 }
 
 function enemyBullet(g, e, origin, angle, speed, options = {}) {
   const velocity = Math.min(MAX_ENEMY_BULLET_SPEED, g.difficulty.maxBulletSpeed, speed);
+  const damage = hostileDamageSpec({ pattern: options.pattern || e.attackName, family: options.family });
   const motion = options.motion ? { ...options.motion, maxSpeed: Math.min(MAX_ENEMY_BULLET_SPEED,
     g.difficulty.maxBulletSpeed, options.motion.maxSpeed ?? g.difficulty.maxBulletSpeed) } : undefined;
   g.enemyBullets.push({ id: nextId(g), sourceId: e.id, ...origin,
     vx: Math.cos(angle) * velocity, vy: Math.sin(angle) * velocity,
     radius: e.type === 'boss' ? 7 : 5.5, power: e.type === 'boss' ? 17 : 12,
     type: e.type === 'boss' ? 'plasma' : 'orb', color: e.type === 'boss' ? '#ff663b' : '#ffbd70', age: 0,
-    pattern: e.attackName, ...options, motion, speed: velocity,
+    pattern: e.attackName, ...options, ...damage, motion, speed: velocity,
     launchedAt: g.time, armedAfter: options.arming || 0,
     phraseId: e.phrase?.id, phaseId: e.phrase?.phaseId, ownerId: e.id, ownerKind: 'enemy' });
 }
@@ -523,18 +549,19 @@ function deployChildren(g, e, action = {}) {
   let count = 0;
   const art=getMechaSpec(e),matching=art?.matchingChild;
   if(matching){
-    const appearanceKey=matching.entryKey;
-    if(getMechaSpec({type:action.childType||'beetle',appearanceKey})?.key!==appearanceKey){
+    const appearanceKey=matching.entryKey,childType=action.childType||brood?.childType||'beetle';
+    if(getMechaSpec({type:childType,appearanceKey})?.key!==appearanceKey){
       emit(g,'attackSkipped',{enemyId:e.id,bossKind:e.bossKind,pattern:'deploy',reason:'matching-child-unavailable'});return;
     }
     e.payloadDockOccupied??=matching.runtimeDockCenters.map(()=>true);
     for(const dock of payloadDocks(e,art).filter(dock=>dock.occupied)){
       if(count>=(action.count??2)||alive>=limit)break;
-      const child=spawnEnemy(g,action.childType||'beetle',dock.position.x,dock.position.y,dock.index);
+      const child=spawnEnemy(g,childType,dock.position.x,dock.position.y,dock.index);
       if(!child)break;
       Object.assign(child,{appearanceKey,summoned:true,parentId:e.id,payloadDockIndex:dock.index,score:0,markedDrone:false,
         bossRewardEligible:false,dropHealth:false,canDeploy:false,fireCooldown:brood?.childFirstAttackDelay??.6,
         angle:e.angle||0,artAngle:e.artAngle||0,artFlipX:e.artFlipX,artFlipY:e.artFlipY,
+        launchBrakeSeconds:child.type==='dragonfly'?(brood?.childFirstAttackDelay??.6)+child.combat.firstTell:0,
         payloadTransferredAt:g.time,handoffAngle:e.artAngle||0});
       // Begin the existing oscillation at the transferred pivot, without a
       // random phase offset teleporting the matching child on its first frame.
@@ -591,7 +618,10 @@ function captureAimLocks(g, e, sequence) {
 
 function releaseBundle(g,e,bundle,dt) {
   const plan=e.sequence,pattern=bundle.pattern||plan.pattern,policy=attackPolicy(pattern,g.difficulty.pace);
-  if(policy.family==='deploy'){deployChildren(g,e,e.attackSpec?.action);bundle.released=true;return true;}
+  if(policy.family==='deploy'){
+    if(e.type!=='boss'&&getMechaSpec(e)?.matchingChild)e.fireFlash=.12;
+    deployChildren(g,e,e.attackSpec?.action);bundle.released=true;return true;
+  }
   if(policy.family==='body'){bundle.released=true;return true;}
   const previous=e.fireFlash||0;
   e.fireFlash=.12;syncMechanismPose(e);e.muzzles=enemyMuzzles(e);
@@ -638,13 +668,18 @@ function releaseBundle(g,e,bundle,dt) {
   const bullets=g.enemyBullets.slice(before);e.shotsReleased=(e.shotsReleased||0)+bullets.length;
   e.firstShotAt??=bullets.length?g.time:undefined;
   const launchMuzzles=[...new Map(bullets.map(b=>[b.x+':'+b.y,{x:b.x,y:b.y}])).values()];
+  const selected=getMechaSpec(e),launchPorts=launchMuzzles.map(origin=>{
+    const index=e.muzzles.findIndex(muzzle=>Math.hypot(muzzle.x-origin.x,muzzle.y-origin.y)<1e-8);
+    return {index,name:selected?.muzzleNames?.[index]??null,...origin};
+  });
   if(!bullets.length)e.fireFlash=previous;
-  emit(g,'enemyShot',{...origin,enemyId:e.id,bulletCount:bullets.length,launchMuzzles,boss:e.type==='boss',bossKind:e.bossKind,
+  emit(g,'enemyShot',{...origin,enemyId:e.id,bulletCount:bullets.length,launchMuzzles,launchPorts,boss:e.type==='boss',bossKind:e.bossKind,
     phraseId:e.phrase?.id,phaseId:e.phrase?.phaseId,deadlineAt:e.phrase?.deadlineAt,
     enemyType:e.type,attackName:pattern,pattern,family:policy.family,attackIndex:e.attackIndex??e.attack,
     armorOpen:Boolean(e.armorOpen),corePhase:e.corePhase||0,speedTier:policy.family==='aim'?bullets.at(-1)?.speedTier:'pattern',
     bulletIds:bullets.map(b=>b.id),shots:bullets.map(b=>({id:b.id,x:b.x,y:b.y,vx:b.vx,vy:b.vy,speed:b.speed,radius:b.radius,
-      style:b.style,palette:b.palette,armedAfter:b.armedAfter,launchedAt:b.launchedAt,lockAt:b.lockAt,lockedTarget:b.aimedAt,
+      style:b.style,palette:b.palette,power:b.power,damageClass:b.damageClass,
+      armedAfter:b.armedAfter,launchedAt:b.launchedAt,lockAt:b.lockAt,lockedTarget:b.aimedAt,
       phraseId:b.phraseId,phaseId:b.phaseId,ownerId:b.ownerId}))});
   return true;
 }
@@ -686,9 +721,15 @@ function attackWaiting(g,e,pattern,reason){
 
 function authoredAttackPlan(g,e,pattern) {
   const seed=(Math.imul(g.seed^e.id,0x45d9f3b)^Math.imul(e.attack,0x119de1f3))>>>0;
-  let plan=barragePlan(pattern,g.difficulty.pace,seed/4294967296);
-  if(e.type!=='boss'&&e.prefillMode==='field-only')plan=fieldOnlyPlan(plan);
-  const source=enemyMuzzles(e)[0];
+  let plan=e.bossKind==='apex'?apexAttackPlan(pattern,g.difficulty.pace,seed/4294967296):barragePlan(pattern,g.difficulty.pace,seed/4294967296);
+  if(e.combat?.rail&&pattern==='rail'){
+    const first=plan.bundles[0];
+    plan.bundles=Array.from({length:e.combat.rail.shotCount},(_,row)=>({...first,row,at:row*e.combat.rail.shotInterval,port:0}));
+    plan.total=plan.bundles.length;plan.duration=plan.bundles.at(-1).at;
+  }
+  if(e.type!=='boss'&&e.prefillMode==='field-only')plan=fieldOnlyPlan(plan,{shape:e.fieldShape});
+  const firstField=plan.bundles.find(bundle=>bundle.family!=='aim'&&bundle.count>0);
+  const source=enemyMuzzles(e)[firstField?.port||0];
   if(source&&plan.contactWindow){
     const target=screenToWorld(g,{x:plan.contactWindow.referenceX??360,y:worldToScreen(g,source).y});
     plan=fitPrefillPlan(plan,Math.hypot(source.x-target.x,source.y-target.y));
@@ -703,23 +744,83 @@ function cancelPhraseMember(g,e,reason) {
   e.pendingAttackPlan=null;e.sequence=null;e.reservedBullets=0;e.locked=false;e.telegraph=0;
 }
 
+function deploymentAttackReady(g, e) {
+  if (!e.deployment) return true;
+  if (e.deploymentElapsed < e.deployment.approachSeconds) return false;
+  const bounds = getMechaSpec(e)?.runtimeBodyBounds;
+  const points = bounds ? [[bounds.minX, bounds.minY], [bounds.minX, bounds.maxY],
+    [bounds.maxX, bounds.minY], [bounds.maxX, bounds.maxY]].map(([x,y]) => mechaAnchorWorld(e,{x,y}))
+    : [{x:e.x-e.radius,y:e.y-e.radius},{x:e.x+e.radius,y:e.y+e.radius}];
+  points.push(...enemyMuzzles(e));
+  return points.every(point => {
+    const screen = worldToScreen(g, point);
+    return screen.x >= 0 && screen.x <= WORLD_WIDTH && screen.y >= 50 && screen.y <= 670;
+  });
+}
+
+function firstAttackPhraseReservesSlot(g) {
+  if (g.phase !== 'normal') return false;
+  const waiting=g.enemies.filter(member => !member.dead && !member.phraseExpired
+    && member.phrase && (member.phrase.independentEntry?!(member.phraseAdmissions>0):member.phrase.admittedAt===null)
+    && member.phrase.blockId === g.encounter.blockId
+    && g.time < member.phrase.deadlineAt - 1e-9);
+  const active=g.enemies.filter(member=>isAttacking(member,g)).length;
+  // Preserve only the slots the real first group needs. A smaller group leaves
+  // its spare slots available to ordinary fire and independently warned runners.
+  return waiting.length>0 && waiting.length+active>=g.difficulty.maxAttackers;
+}
+
 function admitAttackPhrase(g,e) {
   const phrase=e.phrase;
-  const members=g.enemies.filter(other=>!other.dead&&phrase.memberIds.includes(other.id));
-  const plans=members.map(member=>({member,plan:authoredAttackPlan(g,member,member.pattern),
-    tell:Math.max(g.difficulty.minTelegraph,member.combat?.firstTell||0)}));
+  const independent=phrase.independentEntry||(phrase.independentRepeats&&phrase.admittedAt!==null);
+  const members=independent?[e]:g.enemies.filter(other=>!other.dead&&phrase.memberIds.includes(other.id));
+  const cycleIndex=independent?e.attack:(phrase.cyclesAdmitted||0);
   const wait=reason=>{attackWaiting(g,e,e.pattern,reason);phrase.waitStartedAt??=g.time;return false;};
+  if(cycleIndex>=phrase.maxCycles)return false;
+  // Default entry reserves the opposing group together; authored staggered
+  // entry spends only its own fully visible slot. A cancelled committed first
+  // tell cannot restart as a hidden repeat in either mode.
+  if(independent&&cycleIndex===0&&(!phrase.independentEntry||e.phraseAdmissions>0))return wait('phrase-first-cycle');
+  // A repeat belongs to the same surviving group. It cannot replace an active
+  // tell, steal a pending reservation, or shorten any member's actual recovery.
+  if(cycleIndex&&members.some(member=>member.attack<cycleIndex||isAttacking(member,g)||member.fireCooldown>1e-9))
+    return wait('phrase-recovery');
+  const plans=members.map(member=>({member,plan:authoredAttackPlan(g,member,member.pattern),delay:independent&&cycleIndex>0?0:member.phraseDelay||0,
+    tell:Math.max(g.difficulty.minTelegraph,member.combat?.firstTell||0)}));
   if(!plans.length)return false;
+  if(plans.some(({member})=>!deploymentAttackReady(g,member)))return wait('phrase-deployment');
   if(plans.some(({member})=>{const p=worldToScreen(g,member);return p.x-member.radius<=0||p.x+member.radius>=WORLD_WIDTH||p.y-member.radius<50||p.y+member.radius>670;}))
     return wait('phrase-emitter-visibility');
   if(plans.some(({member})=>!enemyMuzzles(member).length))return wait('no-authored-muzzle');
-  const lastRelease=Math.max(...plans.map(({member,plan,tell})=>g.time+(member.phraseDelay||0)+tell+plan.duration));
+  if(phrase.contactPlane&&plans.some(({member})=>Math.abs(worldToScreen(g,member).x-member.holdScreenX)>1))
+    return wait('phrase-emitter-position');
+  // A fixed authored flight section schedules the independent locked sniper
+  // inside the slow train. Actual visible ports are sampled once at admission;
+  // neither future player position nor trajectory retargeting participates.
+  const contact = phrase.contactPlane;
+  if (contact) {
+    const field = plans.find(row => row.member.roleKey === contact.fieldRoleKey), bundle = field?.plan.bundles.find(b => b.family !== 'aim');
+    const port = field && bundle && enemyMuzzles(field.member)[bundle.port || 0];
+    if (port && (bundle.horizontalSpeed > 0 || bundle.forwardArc)) {
+      const source = worldToScreen(g, port), target=screenToWorld(g,contact);
+      const slowTravel=bundle.horizontalSpeed>0?Math.abs(source.x-contact.x)/bundle.horizontalSpeed
+        :Math.hypot(port.x-target.x,port.y-target.y)/bundle.speed;
+      const contactDelay = field.tell + slowTravel + field.plan.duration * .5;
+      for (const row of plans) if (row.plan.families.includes('aim')) {
+        const first = row.plan.bundles.find(b => b.family === 'aim'), fastPort = enemyMuzzles(row.member)[first.port || 0], fast = worldToScreen(g, fastPort);
+        row.delay = Math.max(0, contactDelay - row.tell - Math.hypot(fast.x - contact.x, fast.y - contact.y) / first.speed)
+          + (row.member.deployment?.attackOffset || 0);
+      }
+    }
+  }
+  const lastRelease=Math.max(...plans.map(({plan,tell,delay})=>g.time+delay+tell+plan.duration));
   // Start and release each round to a simulation substep. Leave both intervals
   // inside the deadline rather than admitting a volley that can only arrive late.
   if(lastRelease+1/60>phrase.deadlineAt+1e-9){
     for(const member of members)member.phraseExpired=true;
+    phrase.expiryReported=true;
     emit(g,'phraseSkipped',{phraseId:phrase.id,reason:'phrase-deadline',deadlineAt:phrase.deadlineAt,
-      latestReleaseAt:lastRelease,waitSeconds:phrase.waitStartedAt?g.time-phrase.waitStartedAt:0});
+      cycleIndex,latestReleaseAt:lastRelease,waitSeconds:phrase.waitStartedAt?g.time-phrase.waitStartedAt:0});
     return false;
   }
   const others=g.enemies.filter(other=>!members.includes(other)&&isAttacking(other,g));
@@ -733,21 +834,25 @@ function admitAttackPhrase(g,e) {
   const total=plans.reduce((sum,{plan})=>sum+plan.total,0);
   if(plans.some(({plan})=>plan.total>g.difficulty.maxSequenceBullets||plan.bundles.some(b=>b.count>g.difficulty.maxPatternBullets))
     ||g.enemyBullets.length+reserved+total>g.difficulty.maxEnemyBullets)return wait('bullet-reservation-cap');
-  phrase.admittedAt=g.time;
-  for(const {member,plan} of plans){
-    member.pendingAttackPlan={plan,startAt:g.time+(member.phraseDelay||0)};
+  phrase.admittedAt??=g.time;phrase.lastAdmittedAt=g.time;phrase.cyclesAdmitted=Math.max(phrase.cyclesAdmitted||0,cycleIndex+1);
+  for(const {member,plan,delay} of plans){
+    member.phraseAdmissions=Math.max(member.phraseAdmissions||0,cycleIndex+1);
+    member.phraseDelay=delay;member.pendingAttackPlan={plan,startAt:g.time+delay};
     member.reservedBullets=plan.total;member.attackName=member.pattern;member.lastWaitReason=null;
   }
   emit(g,'phraseAdmitted',{phraseId:phrase.id,phaseId:phrase.phaseId,memberIds:members.map(member=>member.id),
-    suppressedMemberIds:phrase.memberIds.filter(id=>!members.some(member=>member.id===id)),
-    families,reservedBullets:total,admittedAt:g.time,deadlineAt:phrase.deadlineAt,
+    suppressedMemberIds:phrase.memberIds.filter(id=>!g.enemies.some(member=>!member.dead&&member.id===id)),
+    deferredMemberIds:phrase.memberIds.filter(id=>g.enemies.some(member=>!member.dead&&member.id===id)&&!members.some(member=>member.id===id)),
+    families,reservedBullets:total,admittedAt:g.time,firstAdmittedAt:phrase.admittedAt,cycleIndex,independent,deadlineAt:phrase.deadlineAt,
+    memberTiming:plans.map(({member,delay,tell,plan})=>({enemyId:member.id,delay,tell,duration:plan.duration})),
     latestReleaseAt:lastRelease,waitSeconds:phrase.waitStartedAt?g.time-phrase.waitStartedAt:0});
+  phrase.waitStartedAt=null;
   return true;
 }
 
 function updateAttack(g,e,dt) {
   e.muzzles=enemyMuzzles(e);
-  if(g.phase==='boss-entry'||e.combat?.bodyAttack)return;
+  if(g.phase==='boss-entry'||e.combat?.bodyAttack||e.withdrawing)return;
   if(e.phrase&&(e.phraseExpired||g.phase!=='normal'||g.time>=e.phrase.deadlineAt-1e-9)){
     if(e.phrase.admittedAt===null&&!e.phrase.expiryReported){
       emit(g,'phraseSkipped',{phraseId:e.phrase.id,reason:g.phase==='normal'?'phrase-deadline':'phase-end',
@@ -757,7 +862,8 @@ function updateAttack(g,e,dt) {
     cancelPhraseMember(g,e,g.phase==='normal'?'phrase-deadline':'phase-end');e.phraseExpired=true;return;
   }
   const screen=worldToScreen(g,e),boss=e.type==='boss';
-  const visible=screen.x-e.radius>0&&screen.x+e.radius<WORLD_WIDTH&&screen.y-e.radius>=50&&screen.y+e.radius<=670;
+  const visible=screen.x-e.radius>0&&screen.x+e.radius<WORLD_WIDTH&&screen.y-e.radius>=50&&screen.y+e.radius<=670
+    && deploymentAttackReady(g,e);
   const committedBodySequence=boss&&e.sequence&&e.attackSpec?.action?.kind==='lunge';
   if((!visible||screen.x<WORLD_WIDTH*.33+120)&&!committedBodySequence){
     if(e.sequence)emit(g,'attackCancelled',{enemyId:e.id,pattern:e.attackName,reason:'emitter-visibility'});
@@ -803,12 +909,18 @@ function updateAttack(g,e,dt) {
   let prepared;
   if(e.phrase){
     if(e.attack>=e.phrase.maxCycles)return;
-    if(e.phrase.admittedAt===null&&!admitAttackPhrase(g,e))return;
+    if(!e.pendingAttackPlan){
+      e.fireCooldown=Math.max(0,e.fireCooldown-dt);
+      if(!admitAttackPhrase(g,e))return;
+    }
     if(!e.pendingAttackPlan||g.time<e.pendingAttackPlan.startAt-1e-9)return;
     prepared=e.pendingAttackPlan.plan;e.pendingAttackPlan=null;
   }else{
     e.fireCooldown-=dt;
     if(e.fireCooldown>0||e.attackActiveUntil>g.time)return;
+    // Reserve the first group's opportunity during entry. Already launched
+    // bullets and already committed sequences continue through the branch above.
+    if(!boss&&firstAttackPhraseReservesSlot(g)){attackWaiting(g,e,e.pattern||'aim','phrase-first-priority');return;}
   }
   const attackers=g.enemies.filter(other=>other!==e&&isAttacking(other,g));
   const attack=boss?bossAttack(g.bossesDefeated,e.attack,e.committedHealthRatio??1):null;
@@ -896,7 +1008,7 @@ function damagePlayer(g, damage, x, y, source = {}) {
   g.shake = 11;
   g.combo = 0;
   g.comboTime = 0;
-  if (g.tensionTime > 0) emit(g, 'tensionEnd', { reason: 'hit' });
+  if (g.tensionTime > 0) emit(g, 'tensionEnd', { reason: 'hit', remainingBefore: g.tensionTime, remainingAfter: 0 });
   g.tensionTime = 0;
   emit(g, 'hit', { x: p.x, y: p.y, damage, effectiveDamage: hpBefore - p.hp,
     hpBefore, hpAfter: p.hp, player: true, sourceX: x, sourceY: y, ...source });
@@ -934,8 +1046,12 @@ function updatePlayer(g, dt, input) {
     if (previous > 3 + 1e-9 && p[timer] <= 3 + 1e-9) emit(g, 'weaponWarning', { slot, weaponMode });
     if (previous > 0 && p[timer] === 0) emit(g, 'weaponExpired', { slot, weaponMode });
   }
-  p.fireCooldown -= dt;
-  p.droneCooldown -= dt;
+  // Carry only the current cooldown's substep overrun. Resetting every shot
+  // loses that fraction at different frame rates; idle time must not bank it.
+  const fireOverrun = p.fireCooldown > 0 ? Math.min(0, p.fireCooldown - dt) : 0;
+  const droneOverrun = p.droneCooldown > 0 ? Math.min(0, p.droneCooldown - dt) : 0;
+  p.fireCooldown = Math.max(0, p.fireCooldown - dt);
+  p.droneCooldown = Math.max(0, p.droneCooldown - dt);
   const oldY = p.y;
   if (g.mode === 'entering') {
     p.entryTime = Math.min(1.2, p.entryTime + dt);
@@ -960,19 +1076,54 @@ function updatePlayer(g, dt, input) {
   }
   p.angle = lerp(p.angle, clamp((p.y - oldY) / Math.max(dt, 0.001) / 900, -0.48, 0.48), 1 - Math.exp(-10 * dt));
   if (g.mode === 'playing') constrainPlayer(g, dt);
-  if (input.shoot && g.mode === 'playing' && p.fireCooldown <= 0) firePlayer(g);
-  if (input.shoot && g.mode === 'playing' && p.droneTime > 0 && p.droneCooldown <= 0) {
+  if (input.shoot && g.mode === 'playing' && p.fireCooldown <= 1e-9) {
+    firePlayer(g);
+    p.fireCooldown += fireOverrun;
+  }
+  if (input.shoot && g.mode === 'playing' && p.droneTime > 0 && p.droneCooldown <= 1e-9) {
     playerShot(g, p.x + 5, p.y - 47, -18, false, true);
     playerShot(g, p.x + 5, p.y + 47, 18, false, true);
     emit(g, 'shot', { x: p.x + 5, y: p.y, weaponMode: 'drone', drone: true, powered: false, tension: g.tensionTime > 0 });
-    p.droneCooldown = 0.17;
+    p.droneCooldown = 0.17 + droneOverrun;
   }
 }
 
 function updateBodyRunner(g,e,dt) {
   const config=e.combat.bodyAttack,screen=worldToScreen(g,e);
   e.bodyState??='approach';e.bodyTimer??=0;e.attackName='lunge';
+  if(e.bodyState==='exit'){
+    e.x+=e.exitVX*dt;e.y+=e.exitVY*dt;e.exitTime+=dt;
+    const position=worldToScreen(g,e);
+    const outside=position.x < -200 || position.x > WORLD_WIDTH+200
+      || position.y < -260 || position.y > WORLD_HEIGHT+260;
+    if(outside||e.exitTime>=3){
+      e.retired=true;
+      emit(g,'bodyRetired',{enemyId:e.id,enemyType:e.type,completed:e.bodyAttacksCompleted,
+        reason:outside?'offscreen':'exit-timeout'});
+    }
+    return;
+  }
+  const tellVisible=()=>{
+    const position=worldToScreen(g,e);
+    if(position.y<=85||position.y>=635)return false;
+    const bounds=getMechaSpec(e)?.runtimeBodyBounds;
+    if(!bounds)return position.x-e.radius>0&&position.x+e.radius<WORLD_WIDTH;
+    const corners=[[bounds.minX,bounds.minY],[bounds.minX,bounds.maxY],
+      [bounds.maxX,bounds.minY],[bounds.maxX,bounds.maxY]];
+    return corners.every(([x,y])=>{
+      const point=worldToScreen(g,mechaAnchorWorld(e,{x,y}));
+      return point.x>=0&&point.x<=WORLD_WIDTH&&point.y>=50&&point.y<=670;
+    });
+  };
   const brace=()=>{
+    // Bait travel and camera following may hide a previously visible body.
+    // Recheck the real charge hull before fixing the next committed direction.
+    if(!tellVisible()){
+      e.bodyState='approach';e.bodyTimer=0;e.baseY=e.y;e.fireCooldown=.2;
+      e.locked=false;e.telegraph=0;e.artState='idle';
+      emit(g,'bodyAttackCancelled',{enemyId:e.id,enemyType:e.type,reason:'offscreen-tell',completed:e.bodyAttacksCompleted||0});
+      return;
+    }
     e.bodyState='brace';e.bodyTimer=config.braceSeconds;e.locked=true;e.artState='charge';
     e.aimTarget={x:g.player.x,y:g.player.y};e.dashLockedTarget={...e.aimTarget};e.dashLockAt=g.time;
     e.attackAngle=Math.atan2(e.aimTarget.y-e.y,e.aimTarget.x-e.x);
@@ -982,10 +1133,13 @@ function updateBodyRunner(g,e,dt) {
   };
   if(e.bodyState==='approach'){
     e.artState='idle';
-    if(screen.x>860)e.x-=e.speed*dt;
+    // A runner unable to brace at an altitude edge or during the quiet period
+    // continues its flyby instead of waiting forever at the approach column.
     e.y=e.baseY+Math.sin(e.age*1.6+e.phase)*24;e.angle=Math.cos(e.age*1.6+e.phase)*.06;
+    const visible=tellVisible();
+    if(screen.x>860||!visible||g.normalTime>=RULES.quietAt)e.x-=e.speed*dt;
     e.fireCooldown-=dt;
-    if(screen.x<=860&&screen.y>85&&screen.y<635&&e.fireCooldown<=0&&g.normalTime<RULES.quietAt
+    if(screen.x<=860&&visible&&e.fireCooldown<=0&&g.normalTime<RULES.quietAt&&!firstAttackPhraseReservesSlot(g)
       &&g.enemies.filter(other=>other!==e&&isAttacking(other,g)).length<g.difficulty.maxAttackers){
       if(!attackFamiliesFit(g,e,['body'],attackPolicy('lunge',g.difficulty.pace))){
         attackWaiting(g,e,'lunge','family-cap');return;
@@ -1009,8 +1163,18 @@ function updateBodyRunner(g,e,dt) {
   }else if(e.bodyState==='dash'){
     const travel=Math.min(dt,e.dashTime);e.x+=e.dashVX*travel;e.y+=e.dashVY*travel;
     e.angle=e.attackAngle-Math.PI;e.dashTime=Math.max(0,e.dashTime-dt);
-    if(!e.dashTime){e.bodyState='recover';e.bodyTimer=config.recoverySeconds;e.artState=e.type==='pincer'?'recovery':'idle';
-      emit(g,'dashEnd',{enemyId:e.id,enemyType:e.type,x:e.x,y:e.y,retarget:false});}
+    if(!e.dashTime){
+      e.bodyAttacksCompleted=(e.bodyAttacksCompleted||0)+1;
+      emit(g,'dashEnd',{enemyId:e.id,enemyType:e.type,x:e.x,y:e.y,retarget:false,completed:e.bodyAttacksCompleted});
+      if(e.bodyAttacksCompleted>=3){
+        const length=Math.hypot(e.dashVX,e.dashVY),speed=config.dashSpeed||e.speed||320;
+        e.exitVX=length>1e-9?e.dashVX/length*speed:-speed;
+        e.exitVY=length>1e-9?e.dashVY/length*speed:0;
+        e.bodyState='exit';e.exitTime=0;e.bodyTimer=0;e.locked=false;e.telegraph=0;e.artState='idle';
+        e.sequence=null;e.pendingAttackPlan=null;e.reservedBullets=0;e.attackActiveUntil=0;
+        emit(g,'bodyExit',{enemyId:e.id,enemyType:e.type,x:e.x,y:e.y,completed:e.bodyAttacksCompleted});
+      }else{e.bodyState='recover';e.bodyTimer=config.recoverySeconds;e.artState=e.type==='pincer'?'recovery':'idle';}
+    }
   }else{
     e.bodyTimer=Math.max(0,e.bodyTimer-dt);e.x-=e.speed*.45*dt;e.angle*=Math.exp(-dt*5);
     if(!e.bodyTimer){e.bodyState='approach';e.fireCooldown=.2;e.attack++;e.baseY=e.y;}
@@ -1057,6 +1221,19 @@ function updateBossMovement(g,e,dt) {
     return;
   }
   const clock=g.phaseTime,kind=movement?.kind||'anchor-shift';
+  // During the .6s physical opening the Orrery settles its approach and turns
+  // the real aperture toward incoming horizontal fire. Holding world position
+  // keeps camera/HUD motion separate from the target. Full exposure then lasts
+  // 1.6s; the next protected phase resumes bounded travel, not a teleport.
+  if(kind==='orrery'&&e.armorOpen){
+    e.exposedOrbitPose??={x:e.x,y:e.y};
+    Object.assign(e,e.exposedOrbitPose);
+    const angle=e.artAngle||0;e.angle=e.artAngle=Math.sign(angle)*Math.max(0,Math.abs(angle)-dt*1.2);
+    e.screenPose=worldToScreen(g,e);return;
+  }
+  e.exposedOrbitPose=null;
+  if(kind==='crescent-orbit'&&e.armorOpen)e.exposedCrescentY??=e.y;
+  else e.exposedCrescentY=null;
   let x=motion.x,y=motion.centerY,angle=0;
   if(kind==='anchor-shift'){
     const bands=e.responseSpace?.bands||[190,360,530],target=bands[(e.attack+(e.combatPhase||0))%bands.length];
@@ -1072,7 +1249,10 @@ function updateBossMovement(g,e,dt) {
     angle=sequence?.actionTarget?Math.atan2(sequence.actionTarget.y-e.y,sequence.actionTarget.x-e.x)-Math.PI:0;
   }else if(kind==='crescent-orbit'){
     x+=Math.sin(clock*.48)*movement.horizontalAmplitude;y+=Math.cos(clock*.48)*motion.amplitude;
-    angle=Math.sin(clock*.48)*.32;
+    // The crescent keeps its orbit during an opening, but its real forward
+    // aperture settles through the mechanical phase before full exposure.
+    const previous=e.artAngle||0;
+    angle=e.armorOpen?Math.sign(previous)*Math.max(0,Math.abs(previous)-dt*1.2):Math.sin(clock*.48)*.32;
   }else{
     x+=Math.sin(clock*.55)*movement.horizontalAmplitude;y+=Math.sin(clock*.61)*motion.amplitude;
     angle=Math.sin(clock*.3)*.5;
@@ -1081,6 +1261,11 @@ function updateBossMovement(g,e,dt) {
   const distance=Math.hypot(x-current.x,y-current.y),amount=distance?Math.min(1,maxTravel/distance):1;
   e.screenPose={x:lerp(current.x,x,amount),y:lerp(current.y,y,amount)};
   Object.assign(e,screenToWorld(g,e.screenPose));
+  // The crescent continues its horizontal sweep while holding the opened
+  // aperture's height. Recovery resumes the bounded orbit from this pose.
+  if(e.exposedCrescentY!==null&&Number.isFinite(e.exposedCrescentY)) {
+    e.y=e.exposedCrescentY;e.screenPose=worldToScreen(g,e);
+  }
   e.angle=angle;e.artAngle=angle;
   e.escortShield=e.bossKind==='carrier'&&g.enemies.some(other=>!other.dead&&other.summoned&&other.parentId===e.id);
 }
@@ -1102,13 +1287,52 @@ function updateEnemies(g, dt, starts) {
     } else {
       const speed = e.speed || 0, phase = e.phase || 0, baseY = e.baseY ?? e.y;
       e.combat ??= combatProfile(e.type, g.difficulty.pace);
-      if (e.combat.bodyAttack) {
+      // Finished stations leave visibly through their entry side. Their live
+      // bodies occupy the enemy budget until the whole hull leaves the screen;
+      // launched projectiles keep their original lifetime and collision rules.
+      const finishedStation=e.phrase?.independentRepeats&&!isAttacking(e,g)
+        &&(e.phraseExpired||e.attack>=e.phrase.maxCycles||g.time>=e.phrase.deadlineAt
+          ||e.encounterBlock!==g.encounter.blockId);
+      if(finishedStation&&!e.withdrawing){
+        e.withdrawing=true;e.phraseExpired=true;
+        emit(g,'sourceDeparting',{enemyId:e.id,enemyType:e.type,pattern:e.pattern,
+          phraseId:e.phrase.id,attackCount:e.attack,reason:e.attack>=e.phrase.maxCycles?'cycles-complete':'block-ended',
+          hp:e.hp,...worldToScreen(g,e)});
+      }
+      if(e.withdrawing){
+        const screen=worldToScreen(g,e);
+        Object.assign(e,screenToWorld(g,{x:screen.x+speed*dt,y:screen.y}));
+        e.angle=-Math.sin(Math.min(1,(e.departureAge=(e.departureAge||0)+dt)))*.08;
+        e.artAngle=e.angle;
+        const bounds=getMechaSpec(e)?.runtimeBodyBounds;
+        const outside=bounds?[[bounds.minX,bounds.minY],[bounds.minX,bounds.maxY],
+          [bounds.maxX,bounds.minY],[bounds.maxX,bounds.maxY]].every(([x,y])=>
+            worldToScreen(g,mechaAnchorWorld(e,{x,y})).x>WORLD_WIDTH+120)
+          :worldToScreen(g,e).x-e.radius>WORLD_WIDTH+120;
+        if(outside){
+          e.retired=true;
+          emit(g,'sourceRetired',{enemyId:e.id,enemyType:e.type,pattern:e.pattern,
+            phraseId:e.phrase.id,reason:'visible-departure',hp:e.hp,...worldToScreen(g,e)});
+        }
+      } else if (e.combat.bodyAttack) {
         updateBodyRunner(g, e, dt);
       } else if (e.escort && g.boss?.id === e.sourceBossId) {
         const bossScreen = worldToScreen(g, g.boss);
         const y = clamp(bossScreen.y + (e.escortSlot ? 125 : -125), 110, 610);
         Object.assign(e, screenToWorld(g, { x: 820 + Math.sin(e.age * 1.8 + e.escortSlot * Math.PI) * 32, y }));
         e.angle = Math.sin(e.age * 1.8) * 0.12;
+      } else if (e.deployment && e.deploymentElapsed < e.deployment.approachSeconds) {
+        const deployment=e.deployment,screen=worldToScreen(g,e);
+        e.deploymentElapsed=Math.min(deployment.approachSeconds,e.deploymentElapsed+dt);
+        const progress=e.deploymentElapsed/deployment.approachSeconds,smooth=progress*progress*(3-2*progress);
+        Object.assign(e,screenToWorld(g,{x:Math.max(deployment.holdX,screen.x-speed*dt),
+          y:deployment.spawnY+(deployment.holdY-deployment.spawnY)*smooth}));
+        e.angle=deployment.bankSign*Math.sin(Math.PI*progress)*.22;
+        if(e.deploymentElapsed>=deployment.approachSeconds){
+          e.baseY=e.y;
+          emit(g,'deploymentReady',{enemyId:e.id,enemyType:e.type,pattern:e.pattern,
+            seconds:e.deploymentElapsed,spawnY:deployment.spawnY,holdY:deployment.holdY,...worldToScreen(g,e)});
+        }
       } else if (e.pattern && (e.holdUntil > g.time || e.sequence || e.locked)) {
         const screen = worldToScreen(g, e);
         Object.assign(e, screenToWorld(g, {
@@ -1142,7 +1366,11 @@ function updateEnemies(g, dt, starts) {
         if (!e.locked) e.y = baseY + Math.sin(e.age * 0.8 + phase) * 55;
         e.angle = e.locked ? e.attackAngle - Math.PI : Math.cos(e.age * 0.8 + phase) * 0.05;
       } else {
-        e.x -= speed * (e.type === 'wasp' && e.locked ? 0.14 : 1) * dt;
+        // A finite bay's fast child shows its departure/tell before accelerating
+        // to the unchanged dragonfly cruise speed. Otherwise its .6s delayed
+        // first tell carries it too close to release any safely guarded shot.
+        const departure=e.launchBrakeSeconds>0?Math.min(1,.4+Math.max(0,e.age-e.launchBrakeSeconds)*.8):1;
+        e.x -= speed * (e.type === 'wasp' && e.locked ? 0.14 : departure) * dt;
         const amplitude = e.type === 'worm' ? 75 : e.type === 'dragonfly' ? 60 : 34;
         const frequency = e.type === 'worm' ? 1.9 : e.type === 'dragonfly' ? 3.4 : 2.1;
         e.y = baseY + Math.sin(e.age * frequency + phase) * amplitude;
@@ -1152,7 +1380,7 @@ function updateEnemies(g, dt, starts) {
     e.artAngle = Number.isFinite(e.handoffAngle)&&e.age<.2?lerp(e.handoffAngle,e.angle||0,e.age/.2):(e.angle||0);
     updateAttack(g, e, dt);
   }
-  g.enemies = g.enemies.filter(e => !e.dead && e.x > -200 && e.y > FLIGHT_MIN_Y - 260 && e.y < FLIGHT_MAX_Y + 260);
+  g.enemies = g.enemies.filter(e => !e.dead && !e.retired && e.x > -200 && e.y > FLIGHT_MIN_Y - 260 && e.y < FLIGHT_MAX_Y + 260);
 }
 
 function updateProjectiles(g, dt, playerStart, enemyStarts) {
@@ -1211,10 +1439,11 @@ function updateProjectiles(g, dt, playerStart, enemyStarts) {
       if (sweptInsideCircle(from, to, radius, activeFrom)) {
         bullet.dead = true;
         damagePlayer(g, bullet.power || 13, bullet.x, bullet.y, { sourceKind: 'projectile',
-          sourceId: bullet.sourceId, bulletId: bullet.id, pattern: bullet.pattern, style: bullet.style });
+          sourceId: bullet.sourceId, bulletId: bullet.id, pattern: bullet.pattern, family: bullet.family,
+          damageClass: bullet.damageClass, style: bullet.style });
         if (g.mode === 'gameover') break;
       } else if (!bullet.grazed && playerStart.invincible <= 0
-        && relativeMinimumDistance(from, to, activeFrom) <= radius + RULES.grazeMargin + 1e-9) grazes.push(bullet);
+        && relativeMinimumDistance(from, to, activeFrom) <= grazeOuterRadius(radius, RULES.grazeMargin) + 1e-9) grazes.push(bullet);
     }
     if (g.mode === 'playing') {
       for (const enemy of g.enemies) {
@@ -1229,9 +1458,11 @@ function updateProjectiles(g, dt, playerStart, enemyStarts) {
     // Damage wins across the whole step, regardless of projectile/body array order.
     if (g.mode === 'playing' && g.player.invincible <= 0 && grazes.length) {
       const refresh = g.tensionTime > 0;
+      const remainingBefore = g.tensionTime;
       for (const bullet of grazes) bullet.grazed = true;
       g.tensionTime = TENSION_DURATION;
-      emit(g, 'tension', { x: g.player.x, y: g.player.y, refresh, remaining: TENSION_DURATION, count: grazes.length });
+      emit(g, 'tension', { x: g.player.x, y: g.player.y, refresh, remaining: TENSION_DURATION,
+        remainingBefore, remainingAfter: TENSION_DURATION, count: grazes.length, bulletIds: grazes.map(bullet => bullet.id) });
     }
   }
   const visible = b => {
@@ -1243,12 +1474,14 @@ function updateProjectiles(g, dt, playerStart, enemyStarts) {
   g.enemies = g.enemies.filter(e => !e.dead);
 }
 
-function applyPickup(g, item) {
-  const p = g.player;
-  const hpBefore = p.hp;
+// HUD previews and actual collection share one rule. This calculation never
+// mutates the player/item or consumes combat randomness.
+export function getPickupEffect(player, item) {
+  const p={hp:player.hp,weaponMode:player.weaponMode,powerTime:player.powerTime||0,
+    basicLevel:player.basicLevel||1,droneTime:player.droneTime||0,powerPickups:player.powerPickups||0};
   const rawHeal = item.type === 'health' ? (item.healAmount ?? 30) : 0;
   let effect = item.type;
-  if (item.type === 'health') p.hp = Math.min(p.maxHp, p.hp + rawHeal);
+  if (item.type === 'health') p.hp = Math.min(player.maxHp, p.hp + rawHeal);
   if (item.type === 'change' || item.type === 'power') {
     // Legacy test/manual power pickups stay valid, but no legacy scheduler creates them.
     p.weaponMode = item.weaponMode || ['spread', 'lance', 'helix'][p.powerPickups++ % 3];
@@ -1261,7 +1494,18 @@ function applyPickup(g, item) {
     else { p.droneTime = DRONE_DURATION; effect = 'drone'; }
   }
   if (item.type === 'drone') p.droneTime = DRONE_DURATION;
-  if (item.type === 'health' || item.type === 'drone' || item.type === 'power') g.score += 50;
+  return {...p,effect,action:effect==='health'?'heal':effect,
+    colorGroup:effect==='health'?'heal':effect==='change'?'change':'maintain',
+    changesWeapon:effect==='change',extendsWeapon:effect==='extend',
+    powerTimeDelta:p.powerTime-(player.powerTime||0),droneTimeDelta:p.droneTime-(player.droneTime||0),
+    basicLevelDelta:p.basicLevel-(player.basicLevel||1),rawHeal,
+    scoreDelta:['health','drone','power'].includes(item.type)?50:0};
+}
+
+function applyPickup(g, item) {
+  const p=g.player,hpBefore=p.hp,result=getPickupEffect(p,item),{effect,rawHeal}=result;
+  for(const key of ['hp','weaponMode','powerTime','basicLevel','droneTime','powerPickups'])p[key]=result[key];
+  g.score+=result.scoreDelta;
   emit(g, 'pickup', { x: item.x, y: item.y, pickupType: item.type, itemType: item.type,
     effect, weaponMode: p.weaponMode, basicLevel: p.basicLevel, side: item.side,
     pickupId: item.id, hpBefore, hpAfter: p.hp, rawHeal, effectiveHeal: p.hp - hpBefore,
@@ -1416,7 +1660,7 @@ function step(g, dt, input) {
     updatePhase(g, dt);
     const oldTension = g.tensionTime;
     g.tensionTime = Math.max(0, g.tensionTime - dt);
-    if (oldTension > 0 && g.tensionTime === 0) emit(g, 'tensionEnd', { reason: 'expired' });
+    if (oldTension > 0 && g.tensionTime === 0) emit(g, 'tensionEnd', { reason: 'expired', remainingBefore: oldTension, remainingAfter: 0 });
   }
   g.comboTime = Math.max(0, g.comboTime - dt);
   if (g.comboTime === 0) g.combo = 0;

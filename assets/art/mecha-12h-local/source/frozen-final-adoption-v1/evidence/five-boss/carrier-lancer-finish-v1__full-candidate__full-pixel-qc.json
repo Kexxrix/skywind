@@ -1,0 +1,20 @@
+{
+  "carrier": {
+    "semanticQCStates": 25,
+    "sourcePoseStates": 20,
+    "distinctDecodedPoseHashes": 20,
+    "maxHullTransparentPixels": 0,
+    "maxBorderAlpha": 0.0,
+    "allPartialHidden": true,
+    "allFinalExposed": true
+  },
+  "lancer": {
+    "semanticQCStates": 14,
+    "sourcePoseStates": 10,
+    "distinctDecodedPoseHashes": 10,
+    "maxHullTransparentPixels": 0,
+    "maxBorderAlpha": 0.0,
+    "allPartialHidden": true,
+    "allFinalExposed": true
+  }
+}

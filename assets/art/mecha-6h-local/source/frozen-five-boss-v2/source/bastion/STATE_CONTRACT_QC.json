@@ -1,0 +1,169 @@
+{
+  "bossKind": "bastion",
+  "manifestKey": "sixh-bastion-predator-full-v3",
+  "stateLookups": 15,
+  "uniquePNGPaths": 10,
+  "neutralGeometryPoses": [
+    {
+      "progress": 0,
+      "state": "phase_000",
+      "hullHash": "3d7c43696be39f7b223fb8e5766ce53fc28e2e55bfcfc2eb195c943fd2301543",
+      "ports": [
+        {
+          "x": 55.0999,
+          "y": 109.6921
+        },
+        {
+          "x": 64.5486,
+          "y": 286.097
+        },
+        {
+          "x": 75.8024,
+          "y": 307.4798
+        }
+      ]
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_025",
+      "hullHash": "b90d549c0620f8c34ba1a06b7eacc2810b974407f4fd54f298f9022b7fde925a",
+      "ports": [
+        {
+          "x": 55.0999,
+          "y": 107.3731
+        },
+        {
+          "x": 64.5486,
+          "y": 288.4161
+        },
+        {
+          "x": 75.8024,
+          "y": 309.7988
+        }
+      ]
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_050",
+      "hullHash": "d02c0216f734403de5ddec0fc8c3c83eecacdab6220cd33528eccd3290e42e62",
+      "ports": [
+        {
+          "x": 55.0999,
+          "y": 105.0541
+        },
+        {
+          "x": 64.5486,
+          "y": 290.7351
+        },
+        {
+          "x": 75.8024,
+          "y": 312.1179
+        }
+      ]
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_075",
+      "hullHash": "4dcd03a3bce9dd5cd2b101ad9a6d1b2e8077c58b1b43655b09112bd1be97c1f4",
+      "ports": [
+        {
+          "x": 55.0999,
+          "y": 102.735
+        },
+        {
+          "x": 64.5486,
+          "y": 293.0541
+        },
+        {
+          "x": 75.8024,
+          "y": 314.4369
+        }
+      ]
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "hullHash": "1eab719564fd0093a4ac26bd355be806fef80f74185e11d2e09f943fc6c503ad",
+      "ports": [
+        {
+          "x": 55.0999,
+          "y": 100.416
+        },
+        {
+          "x": 64.5486,
+          "y": 295.3732
+        },
+        {
+          "x": 75.8024,
+          "y": 316.7559
+        }
+      ]
+    }
+  ],
+  "selection": [
+    {
+      "progress": 0,
+      "state": "phase_000",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.249,
+      "state": "phase_000",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_025",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.499,
+      "state": "phase_025",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_050",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.749,
+      "state": "phase_050",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_075",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.999,
+      "state": "phase_075",
+      "coreExposed": false
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "coreExposed": true
+    }
+  ],
+  "semanticAliases": {
+    "charge": "neutral current mechanism plus actual authored muzzle telegraph",
+    "damaged": "retain current mechanism/recoil pose plus runtime effect",
+    "neutralByProgress": {
+      "0": "phase_000",
+      "1": "phase_100",
+      "0.25": "phase_025",
+      "0.5": "phase_050",
+      "0.75": "phase_075"
+    },
+    "fireByProgress": {
+      "0": "phase_000_fire",
+      "1": "phase_100_fire",
+      "0.25": "phase_025_fire",
+      "0.5": "phase_050_fire",
+      "0.75": "phase_075_fire"
+    }
+  },
+  "pass": true
+}

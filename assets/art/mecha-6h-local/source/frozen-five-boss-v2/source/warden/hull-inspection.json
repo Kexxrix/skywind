@@ -1,0 +1,227 @@
+{
+  "warden/phase_0": {
+    "decodedRGBASha256": "c85f979fac8f1747b769b350c8d2d8a1498a88efea2ead232c9e2f018e00e23e",
+    "hullPixels": 38403,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      35,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_0_fire": {
+    "decodedRGBASha256": "90f4cbe093b070d69a1bbf4cc6b3fe5b51a658f22644b779990b785dbfc5134f",
+    "hullPixels": 36926,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      46,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_25": {
+    "decodedRGBASha256": "6d2afbee31d9753b274aba4032e7a14984b3fce33a0002c1a918caf89b5906ba",
+    "hullPixels": 39558,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      37,
+      48,
+      271,
+      335
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_25_fire": {
+    "decodedRGBASha256": "94d16b05a83af46fe184559baf3bf67d35e8a32aca46306cc8cbc27a1ef6d6aa",
+    "hullPixels": 38126,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      48,
+      48,
+      271,
+      335
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_50": {
+    "decodedRGBASha256": "3e1ac37677d4496b8a3646c29833ace685ae4bcc42c5a4878c7b3d431827f566",
+    "hullPixels": 40222,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      39,
+      44,
+      271,
+      339
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_50_fire": {
+    "decodedRGBASha256": "5032efabee586057593f496a693cdfb062b20bd2e3deac22b1c85aef6d1143bb",
+    "hullPixels": 38788,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      50,
+      44,
+      271,
+      339
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_75": {
+    "decodedRGBASha256": "2609b70cbaf15f0863d148f2cef5a0e5473f3cabce27a3136a7561b6b10e9444",
+    "hullPixels": 40212,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      41,
+      40,
+      271,
+      343
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_75_fire": {
+    "decodedRGBASha256": "0161b274b99981c37222928267107e3afab2499ed5972fedb418431cacfce833",
+    "hullPixels": 38801,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      52,
+      40,
+      271,
+      343
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/phase_100": {
+    "decodedRGBASha256": "61a6613a5b11312f637a48e2b8c1e32cdeee1484761167a86c4fc5ef9dd91846",
+    "hullPixels": 39811,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      43,
+      36,
+      273,
+      347
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 5
+  },
+  "warden/phase_100_fire": {
+    "decodedRGBASha256": "8cb4fe3c624ee4b9af665e61c4dd97d4a6aa7867b7bc8aa6a3584799b6de7ac6",
+    "hullPixels": 38394,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      54,
+      36,
+      273,
+      347
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 5
+  },
+  "warden/idle": {
+    "decodedRGBASha256": "c85f979fac8f1747b769b350c8d2d8a1498a88efea2ead232c9e2f018e00e23e",
+    "hullPixels": 38403,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      35,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/charge": {
+    "decodedRGBASha256": "c85f979fac8f1747b769b350c8d2d8a1498a88efea2ead232c9e2f018e00e23e",
+    "hullPixels": 38403,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      35,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/fire": {
+    "decodedRGBASha256": "90f4cbe093b070d69a1bbf4cc6b3fe5b51a658f22644b779990b785dbfc5134f",
+    "hullPixels": 36926,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      46,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  },
+  "warden/open": {
+    "decodedRGBASha256": "61a6613a5b11312f637a48e2b8c1e32cdeee1484761167a86c4fc5ef9dd91846",
+    "hullPixels": 39811,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      43,
+      36,
+      273,
+      347
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 5
+  },
+  "warden/damaged": {
+    "decodedRGBASha256": "c85f979fac8f1747b769b350c8d2d8a1498a88efea2ead232c9e2f018e00e23e",
+    "hullPixels": 38403,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      35,
+      52,
+      271,
+      331
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 5
+  }
+}

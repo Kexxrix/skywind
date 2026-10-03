@@ -1,0 +1,40 @@
+{
+  "key": "apex",
+  "runtimePNG": 10,
+  "sourcePoseBlend": 10,
+  "actualBlendSHA256": "ef9434f2ef0dc4f022b10ef07469d3c7200449e3f0da1eb3d9bf8d7fd6edd452",
+  "exactAnchorMismatch": 0,
+  "strictHullTransparentPixelsAllStates": 0,
+  "strictBorderAlphaMaxAllStates": 0,
+  "decodedDistinct": 10,
+  "hullCounts": {
+    "idle": 63,
+    "mechanism_25": 63,
+    "mechanism_50": 63,
+    "mechanism_75": 63,
+    "open": 64,
+    "fire": 63,
+    "mechanism_25_fire": 63,
+    "mechanism_50_fire": 63,
+    "mechanism_75_fire": 63,
+    "open_fire": 64
+  },
+  "productionSHA256Mismatch": 0,
+  "frameSHA256Mismatch": 0,
+  "ports": [
+    "wrist_precision_beam",
+    "lower_siege_rail",
+    "upper_tracking"
+  ],
+  "controllerRequestedToObservedImpactFrames": {
+    "open": {
+      "open": 33
+    },
+    "open_fire": {
+      "open": 33
+    }
+  },
+  "fixedSourcePosePhysics": "parent additional fixture pending",
+  "actualPixelViews": "raw10 + baseline idle/open_fire day/night/silhouette6 directly inspected",
+  "adoption": "candidate; independent review/user approval/runtime integration not claimed"
+}

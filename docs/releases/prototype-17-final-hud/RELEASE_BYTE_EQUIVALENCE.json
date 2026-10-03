@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-03T15:47:10.406Z",
+  "target": "prototype-17-final-hud",
+  "original": {
+    "files": 233,
+    "bytes": 58021489,
+    "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f"
+  },
+  "rebuilt": {
+    "files": 233,
+    "bytes": 58021489,
+    "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f"
+  },
+  "staged": {
+    "files": 233,
+    "bytes": 58021489,
+    "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f"
+  },
+  "gameplayChangesThisTask": false
+}

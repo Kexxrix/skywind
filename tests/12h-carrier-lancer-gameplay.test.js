@@ -12,7 +12,8 @@ function fixture(victories){const g=createGame(120201);startGame(g);g.mode='play
   g.player.invincible=100;for(let step=0;step<156;step++){updateGame(g,1/120,{});consumeEvents(g);}return g;}
 
 test('the actual carrier transfers both finite payloads at their matching pivots without entry duplicates or first-step movement',()=>registered(()=>{
-  const g=fixture(1),e=g.boss;assert.equal(getMechaSpec(e).key,'local-carrier-v2');assert.equal(g.enemies.length,1);
+  const g=fixture(1),e=g.boss;assert.equal(getMechaSpec(e).key,'carrier');assert.equal(g.enemies.length,1);
+  const childKey=getMechaSpec(e).matchingChild.entryKey;
   const transfers=[];let bayCue=false;
   for(let step=0;step<240&&!transfers.length;step++){
     if(enemyDeployDocks(g,e).length===2)bayCue=true;
@@ -21,7 +22,7 @@ test('the actual carrier transfers both finite payloads at their matching pivots
   assert.equal(bayCue,true);assert.equal(transfers.length,2);assert.deepEqual(e.payloadDockOccupied,[false,false]);
   assert.deepEqual(transfers.map(event=>event.dockIndex),[0,1]);assert.equal(transfers[0].toFrame,'phase_100_payload1far');assert.equal(transfers[1].toFrame,'phase_100_payload0');
   for(const transfer of transfers){const child=g.enemies.find(other=>other.id===transfer.childId);
-    assert.equal(child.appearanceKey,'local-carrier-child-v2');assert.equal(getMechaSpec(child).key,child.appearanceKey);
+    assert.equal(child.appearanceKey,childKey);assert.equal(getMechaSpec(child).key,child.appearanceKey);
     assert.equal(child.x,transfer.x);assert.equal(child.y,transfer.y);assert.equal(child.artAngle,e.artAngle);
     assert.equal(child.score,0);assert.equal(child.canDeploy,false);assert.equal(child.bossRewardEligible,false);
   }
@@ -47,7 +48,7 @@ test('a full enemy budget consumes no carrier payload and one free slot consumes
 }));
 
 test('lancer real releases use the recoil snapshot muzzle and protected closing never leaves a final fire core',()=>registered(()=>{
-  const g=fixture(2),e=g.boss;assert.equal(getMechaSpec(e).key,'local-lancer-v2');
+  const g=fixture(2),e=g.boss;assert.equal(getMechaSpec(e).key,'lancer');
   let shot;
   for(let step=0;step<300&&!shot;step++){
     updateGame(g,1/120,{});shot=consumeEvents(g).find(event=>event.type==='enemyShot'&&event.enemyId===e.id&&event.bulletCount>0);
@@ -55,7 +56,12 @@ test('lancer real releases use the recoil snapshot muzzle and protected closing 
   assert.ok(shot);assert.match(getMechaSpec(e).state,/_fire$/);
   const actual=enemyMuzzles(e);assert.ok(shot.launchMuzzles.every(origin=>actual.some(muzzle=>Math.hypot(origin.x-muzzle.x,origin.y-muzzle.y)<1e-8)));
   const recoil=getMechaSpec(e),neutral=getMechaSpec({...e,artFrame:undefined,fireFlash:0});
-  assert.ok(Math.abs(Math.hypot(recoil.runtimeMuzzles[0].x-neutral.runtimeMuzzles[0].x,recoil.runtimeMuzzles[0].y-neutral.runtimeMuzzles[0].y)-38.87854)<.001);
+  const entry=manifest().entries.find(entry=>entry.roles.includes('lancer'));
+  const from=entry.frames[neutral.state].muzzlesPixels[0],to=entry.frames[recoil.state].muzzlesPixels[0],scale=entry.displayWidth/entry.canvasWidth;
+  const dx=(to.x-from.x)*scale,dy=(to.y-from.y)*scale;
+  assert.ok(Math.hypot(dx,dy)>0,'the selected source pose has actual main-gun recoil');
+  assert.ok(Math.abs(recoil.runtimeMuzzles[0].x-neutral.runtimeMuzzles[0].x-dx)<1e-8);
+  assert.ok(Math.abs(recoil.runtimeMuzzles[0].y-neutral.runtimeMuzzles[0].y-dy)<1e-8);
   e.sequence=null;e.locked=false;e.fireCooldown=100;e.coreOpenUntil=0;e.mechanismProgress=1;e.artFrame='phase_100_fire';e.armorOpen=true;e.coreVulnerable=true;
   updateGame(g,1/120,{});consumeEvents(g);assert.ok(e.mechanismProgress<=.75);assert.equal(e.coreVulnerable,false);assert.equal(getMechaSpec(e).coreExposed,false);
   assert.notEqual(getMechaSpec(e).state,'phase_100_fire');

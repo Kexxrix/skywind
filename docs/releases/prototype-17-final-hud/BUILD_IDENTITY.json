@@ -1,0 +1,2491 @@
+{
+  "at": "2026-10-03T14:03:56.066Z",
+  "version": "17-final-hud",
+  "status": "frozen local candidate; QA pending",
+  "root": "E:\\codexwork\\Skywind\\.work\\6h-feedback-20261003\\prototype-17-final-hud\\dist",
+  "files": 233,
+  "bytes": 58021489,
+  "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f",
+  "algorithm": "SHA256 of UTF8 code-lexicographic path + NUL + file SHA256 + LF",
+  "rows": [
+    {
+      "path": "assets/art/bosses-v2.png",
+      "bytes": 1460168,
+      "sha256": "9ed7b4e467f80775de0fa9e135a2056a9cb04645049b184d1b1081c44ac8b8e2"
+    },
+    {
+      "path": "assets/art/enemies-v2.png",
+      "bytes": 1357230,
+      "sha256": "72f845c689717b2fbeb901c94c37200efe01caa5e54fcdd177d7c589fa5513a1"
+    },
+    {
+      "path": "assets/art/enemies.png",
+      "bytes": 815547,
+      "sha256": "feaec887467b00bc3521e618b2b43a2d3c01f3b0c8aef277ee8c7508315010e6"
+    },
+    {
+      "path": "assets/art/leaf-surface-v3.png",
+      "bytes": 3603085,
+      "sha256": "1d22911b917dacb70f603a9b7e934efe4fed9bacb8554a527a4e9541da872ee0"
+    },
+    {
+      "path": "assets/art/mecha-12h-local.json",
+      "bytes": 13989858,
+      "sha256": "d13037abc79d31d2eb4af952b1406027f500ef50ab536730c6a6ae3ccf824ffa"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/beetle/int01-idle.png",
+      "bytes": 111164,
+      "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/claw/claw-idle.png",
+      "bytes": 86283,
+      "sha256": "e1c3260b612229f907c93e6682f786e3621cb42bdeec977c2821053a84745725"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dart/dart-charge.png",
+      "bytes": 61567,
+      "sha256": "3866b22ff490cf7b9fcf877f3677f1abaef74ae8fe7685e8ae69e184792b4e86"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dart/dart-fire.png",
+      "bytes": 61487,
+      "sha256": "eb39dcce314b43bc94e04725aa11e2f740fd2553bc81f9bd7f44246dd06ad4a1"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dart/dart-idle.png",
+      "bytes": 61871,
+      "sha256": "a3781da40e7b2fc2c82a394778e32fd844a43e5a17e8ade89a1b4f04c2b633c1"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dart/dart-recovery.png",
+      "bytes": 61813,
+      "sha256": "ea3fc0f580a413e2e5c4b646e8575c205aeb05ac7816290647f2bf48e1bc2ecf"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dragonfly/dragonfly-charge.png",
+      "bytes": 86084,
+      "sha256": "475b6791d03bb507497fa65e9720ffd7067e24105527070465ca50c3c57a7786"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dragonfly/dragonfly-fire.png",
+      "bytes": 85425,
+      "sha256": "304f8d39819c69f5d8274361b8cb35196e2e6309cdad54da15e5155b03563c07"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dragonfly/dragonfly-idle.png",
+      "bytes": 85487,
+      "sha256": "6764f2fceede9bf1cec3bf60424e05ecb67d6ae477221e649fbd29b0253ee576"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/dragonfly/dragonfly-recovery.png",
+      "bytes": 85698,
+      "sha256": "6e415c44223f3db8a724c76139599ce3ffe1dd5fb48562bf29f7307e2dfe834d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/local-scarab-child-v2/scarab-child.png",
+      "bytes": 45769,
+      "sha256": "d7db7b8e0aa18f8c55827fc4ed37e0d1fceb77f6bdceabb3a8c13c7d8207bc19"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/mantis/mantis-idle.png",
+      "bytes": 82575,
+      "sha256": "7f4eda5ec23a5111fd7f2616a2b41bb9857fc52bacbf3766e265508e460c6235"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/needle/needle-idle.png",
+      "bytes": 84585,
+      "sha256": "955c15862e318f2ca392ffc3948adafd0bc47fad3623693452c9eee751c2ab1e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/orb/orb-idle.png",
+      "bytes": 98979,
+      "sha256": "ed040e5fa080def26e859f40f0a49b56199bd51e15d1a88267d8d706d598f594"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/pincer/pincer-charge.png",
+      "bytes": 71983,
+      "sha256": "7bedce2368690aff87930186701a97cecfbc8ca037e49c1f45a61571ac8d6764"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/pincer/pincer-fire.png",
+      "bytes": 82924,
+      "sha256": "f37ff6ac262ca33e2ec6c4d4791a8bf982697a4079b89b2b742f88c2d01109e9"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/pincer/pincer-idle.png",
+      "bytes": 78966,
+      "sha256": "7d2ef40c0ebef1527700358ef3a4e95913afc08cd0882ae1c342bad5ec993b6a"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/pincer/pincer-recovery.png",
+      "bytes": 76285,
+      "sha256": "027b91013eae3abdda818993d93fb017cefff95a287cee6f4794e5683d50cdf2"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/ray/ray-charge.png",
+      "bytes": 111582,
+      "sha256": "a7318e9c0fb5042244e1a85762e10497370b80a1dbe2b480a59e15f6f77fd7ff"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/ray/ray-fire.png",
+      "bytes": 117380,
+      "sha256": "558ba79740d47377e46ca4f7c28719d55043d9658c28b0a51841f4bd20b466a1"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/ray/ray-idle.png",
+      "bytes": 112821,
+      "sha256": "c69748a89ef6955b2270497e00e4a6cc2e26174cc5960551b654a0aee29e9c56"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/ray/ray-recovery.png",
+      "bytes": 112509,
+      "sha256": "801fd48a778a944f49d6acd60676cb114526c36e219084dfa0deabc9941b9b36"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-charge_payload0.png",
+      "bytes": 114905,
+      "sha256": "8379222b30ec420abd2f612a417bbf633a506125304c6fe68fb0b0fb799e2f96"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-charge_payload1dock0.png",
+      "bytes": 121160,
+      "sha256": "9e584e9b5a056f39efe10c869d18009fb14f1a14d48b087e35936048bf3ef5d0"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-charge_payload1dock1.png",
+      "bytes": 121307,
+      "sha256": "dbf51856d7e831eb5953f7d72a66626367c40464f51fa9613261588ac9530761"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-charge_payload2.png",
+      "bytes": 127280,
+      "sha256": "a80c668f22455546cd0c8f1396fdd9851e44dd1ec9bd57ec3f715a9c5fadf93e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-fire_payload0.png",
+      "bytes": 117035,
+      "sha256": "eab56ae90851a21f1dd82af897b28665c3eb46ff05158141c765156b4f7fc04d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-fire_payload1dock0.png",
+      "bytes": 123368,
+      "sha256": "f0ba8f46f93cede9f41608b8c5632f23f237658934f6695ba030134a662195f6"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-fire_payload1dock1.png",
+      "bytes": 123336,
+      "sha256": "4cd110bae4d1920f214edd43f41a208b9be34afea08a93acfac7de4803abd5ef"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-fire_payload2.png",
+      "bytes": 129381,
+      "sha256": "114ed2b6004503ff85074a96e474847215fe180b1c274f564ab5a4d8fbfa1b7b"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-idle_payload0.png",
+      "bytes": 113299,
+      "sha256": "ac74e48b0759c94ab1924a0411c251a73a69878196aa7f5abffc05fbe244ffc7"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-idle_payload1dock0.png",
+      "bytes": 119620,
+      "sha256": "b3dc2fea60cb8ebde9be7b77411f7f546ad616c610c5d4c8444ddca5cfc4cb11"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-idle_payload1dock1.png",
+      "bytes": 119751,
+      "sha256": "d311916d1cdf219d5318a01a1da8eb93f1f1212fbeafe85a70908b65c7b18dc7"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/scarab/scarab-idle_payload2.png",
+      "bytes": 125920,
+      "sha256": "55266929fc0d6b7928aec53a4d766172ec8ec3b9c1d41314943ec76037f4c61c"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/wasp/wasp-charge.png",
+      "bytes": 70770,
+      "sha256": "c7001d7ffa4460ab45da9cf0a96c4f41944d62cfc31c0b645d24d0ec59efc04b"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/wasp/wasp-fire.png",
+      "bytes": 67639,
+      "sha256": "9adca878737c431e6e4094d15fb39da4a349e8495f86188998bbd41361e73cc4"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/wasp/wasp-idle.png",
+      "bytes": 73246,
+      "sha256": "2b3f6ea810bb7db65e6a128c9751af036e07d06d21a6748f7848e4f0f165233d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/wasp/wasp-recovery.png",
+      "bytes": 72059,
+      "sha256": "3d8cfbdba006ffcaf3e84c0d0c4b399117bcfa2455293ca8856fc61d21576423"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/worm/worm-charge.png",
+      "bytes": 73162,
+      "sha256": "5da07f797aaf0699dd530a9155cb580323d5085ee23a594178329987e818635d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/worm/worm-fire.png",
+      "bytes": 75472,
+      "sha256": "8788d7291b13d6361af8b8bb78eed35bbb9f411c94b2388b460b300da74e9cd3"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/worm/worm-idle.png",
+      "bytes": 73728,
+      "sha256": "05269fe6a4c7b95dd0a6c95784cd3647914fd88219ca21e8c1b3b30de4a9c45f"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/worm/worm-recovery.png",
+      "bytes": 73606,
+      "sha256": "6af00b6819c3849e163f64e68571e5880765e5fc8626ff90ee5671a26187e2a7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-fire.png",
+      "bytes": 108966,
+      "sha256": "498cc5349af5a32a60b03ffa825905462c628cad40eeee0901c0adc679b0dec0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-idle.png",
+      "bytes": 109673,
+      "sha256": "09b7addb75b9a1ba117d542e451f617fffc8a18fa809beeccc7412b1acac66e0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25.png",
+      "bytes": 109941,
+      "sha256": "b0e184e4e249390b54006078239e2050ffce19de3fd66f0468657a8ff9116fe7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25_fire.png",
+      "bytes": 109264,
+      "sha256": "94e08fdc09edf1da194b1ceb166209d688413165eac48b71c1c17b2a385040a1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50.png",
+      "bytes": 110116,
+      "sha256": "f8f503bb01ed5b1fdc8923631f7d3d741eeca50e31ea9ffce7230ccdc25b62cc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50_fire.png",
+      "bytes": 109418,
+      "sha256": "ff634697701af4079d45c8608de9e945fc56b8dd8e1058e82af5d7629bd20db4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75.png",
+      "bytes": 110150,
+      "sha256": "5f8f1207129d060e176e03d2253c6e88ff0807df88c973ec6df013086dcc5fa4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75_fire.png",
+      "bytes": 109335,
+      "sha256": "c8cfaa4ebdcb1cddacfe6dbaaad1f076465f06f1fa23111e7ac53b7dc52a70fa"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open.png",
+      "bytes": 110674,
+      "sha256": "ead6f048daed2a38423865f915836fefb9a11e93f4eb678b6be690ee59c5a432"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open_fire.png",
+      "bytes": 109883,
+      "sha256": "ac8b839c1f078192dbef2e70e1ed56b9538f06d8bf0d0e8d81bcbdfdc24d908b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000.png",
+      "bytes": 111434,
+      "sha256": "9587e889ff22a0c65c3670bc698ea3cdb8fe7498f8a4986e37a160fae2d02443"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000_fire.png",
+      "bytes": 111299,
+      "sha256": "631a42da1e743db20de4401bab7e383b8b1a6bfe1298ad144ff02c5882027ec6"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025.png",
+      "bytes": 111718,
+      "sha256": "ebeeaaf2b915aa7105c8286c22d5b3361811b4ef79214b13fbcd2c2eeec9bb69"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025_fire.png",
+      "bytes": 111657,
+      "sha256": "dbdae4b3fe5ad239f3583515eb4dbcc991f6e18032af27db1d0e8589bab59c2a"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050.png",
+      "bytes": 111820,
+      "sha256": "25279c995e62e6887af420190ccd5122609c655fcddcdbd7b0b5937ad636ed54"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050_fire.png",
+      "bytes": 111540,
+      "sha256": "a96524f7cd469ff4557a3ceb927cc4c4fae6e396c03117a11825823b8edfa0b8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075.png",
+      "bytes": 112312,
+      "sha256": "29aea09c802e9f8a342a76c897782e9d90ee1d885b665b05d8598f0fcdcea52c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075_fire.png",
+      "bytes": 112201,
+      "sha256": "2fc2c2df41887e583faa0b49e869d24cd652958580727b19138125c5b70d6472"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100.png",
+      "bytes": 113336,
+      "sha256": "f85f5af7c84dfad4fbc1157d45c116fe79af74a3c5b13f979e3a077c7312d15b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100_fire.png",
+      "bytes": 113268,
+      "sha256": "a5be001f6b3a455704e9f9be3c27f0d01e5cbcbb7e29400fd0cf931f7bcce01f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier-child/carrier-child.png",
+      "bytes": 39277,
+      "sha256": "62394acc36fd52569f8e0660c1aefe2df7a3209ba89a1d75216961ba1c491727"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0.png",
+      "bytes": 109224,
+      "sha256": "24df3ad4ab54068a599b849cbc18d5d0bdd32936ec25f28de1e71b337b2d159f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0_fire.png",
+      "bytes": 108869,
+      "sha256": "a47d80ea2595e82a1910a605dbde6b9c417aefa8cd13df81efee875f5436a188"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far.png",
+      "bytes": 110614,
+      "sha256": "f2ad3e2d72ec8c1572effeba8037db9fe233c886e176219458fad4f13496ac5e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far_fire.png",
+      "bytes": 110580,
+      "sha256": "e86542479093eb0431b4c79e3791793de756675ab462be34daf25c36e8e3ffc9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near.png",
+      "bytes": 111247,
+      "sha256": "3b739393c4f45611117227c686a036af68f350ddfa97af6f3d621ccdb148dfca"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near_fire.png",
+      "bytes": 111010,
+      "sha256": "bd791f5645673aaf76541477a68e24fe3cb809b4c8355b8a3170269422aaada1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2.png",
+      "bytes": 112584,
+      "sha256": "4399348008405e259de4ba68f6ac3f35c162a89a3b08458cc5c3ea6d80403094"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2_fire.png",
+      "bytes": 112361,
+      "sha256": "141cc399de5108a8c4c6d9bc7ba80de70f325a0ebb108254ad9fafc58945b247"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0.png",
+      "bytes": 109952,
+      "sha256": "b1208ad9ae78394885213a87d4a84fb41a9e6cac61fe50e3cc96f4c2478d6ad9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0_fire.png",
+      "bytes": 109826,
+      "sha256": "7f688ce938c57df4cf0a697744f3271e8538fd17828ba67f18d5911cc2d222b0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far.png",
+      "bytes": 111523,
+      "sha256": "1d13d88f46fdec859fbb2c24ced71abc88bb1a128ed5f0fa79d4edf9aec7bc41"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far_fire.png",
+      "bytes": 111392,
+      "sha256": "23645d8badcc8987db4f77a1377ae5751a00325cd7098db7d691f13ffb1868b7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near.png",
+      "bytes": 111859,
+      "sha256": "c5e81081157ec783862ddfc43cb715d3798108fdb6f931975dd2e14087eca579"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near_fire.png",
+      "bytes": 111663,
+      "sha256": "a016043db029623e4f3ff1e7c3c20e70477ef9bf0b4ee87f77fee260e7e06206"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2.png",
+      "bytes": 113212,
+      "sha256": "614133e3e0d8df1639c97fb2d0ed94085c509cdd1881136665e88bf112e925de"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2_fire.png",
+      "bytes": 113042,
+      "sha256": "a9642eafa349458911f7fb02b74fc29df4958eb3fd6d6e22b33d7092c3d5fa75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0.png",
+      "bytes": 110029,
+      "sha256": "8060a658c6fbf3cd8542701ee0b62326e3c084f5f67c6cec9c9f52d764317c5f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0_fire.png",
+      "bytes": 109857,
+      "sha256": "49721cd5f0bf6af2933f2c1ef150f583a0d2b7e6b8499ded2ebc00c1d13f983b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far.png",
+      "bytes": 111690,
+      "sha256": "e06f7e8c190b27407b36841978ce94450ee1a44a3165310461277e6312af8f47"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far_fire.png",
+      "bytes": 111439,
+      "sha256": "b5255a1300978a37edd93185facb5a68fbcd5c73e6e66a26046fbc7b0823ad9c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near.png",
+      "bytes": 111763,
+      "sha256": "a3ac39f5aa5b1e10e01c396d647afdc641ca00240709c158ca6e4b288ec2587b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near_fire.png",
+      "bytes": 111600,
+      "sha256": "1bb53e72688cc2e55123887ac18a23ee4dd8345a36544d78f1fb1038d7e21005"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2.png",
+      "bytes": 113137,
+      "sha256": "b5fdde4432480338afd567e76d67cf0d784f0e9ac8140a6e7a9660cd040b2b2e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2_fire.png",
+      "bytes": 113048,
+      "sha256": "9bc97d92dbd7cd52030705aea0118d4aeb63fad77e44edc8bf83f59fc7640370"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0.png",
+      "bytes": 110706,
+      "sha256": "9d2b02afae12ecd91d907235d6956f00ce34865287610d0306c160a44734d2c1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0_fire.png",
+      "bytes": 110591,
+      "sha256": "3131778b4bbacfdf05c2db0885e8b3a0c5643c694f1a94ca69c1df525c066fd8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far.png",
+      "bytes": 112142,
+      "sha256": "7285b3f4e828516d581afc49e89a7c19402966199792f65b841151627df8ad72"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far_fire.png",
+      "bytes": 111931,
+      "sha256": "473f1c629dc0ea3e480345c5811da1b00531f83d92084fa6c4663c1b079b1f75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near.png",
+      "bytes": 112535,
+      "sha256": "4720ed2a354e8fb17e477ef6390e629637970b870949aae4d385bc12bf5439f3"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near_fire.png",
+      "bytes": 112381,
+      "sha256": "51637714951b081e737715399343290125b60da1deabb7dd01f4daf657bdb01b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2.png",
+      "bytes": 113794,
+      "sha256": "4afca56c4abd3a3d67b049c215e5df796e2968487d0d805ad436afef1c4d59d7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2_fire.png",
+      "bytes": 113561,
+      "sha256": "24d85ba6d81d9fc81ccc5c7bc20311163c07f4e655dd2348ca4028a502e0df58"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0.png",
+      "bytes": 114040,
+      "sha256": "8130cb73ea0b8fdf315a827c30ae1f4db1408f1bf190c8c1a89f0716eb026102"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0_fire.png",
+      "bytes": 114017,
+      "sha256": "aa976655216e808068c7c39caf6851df7eeafad5475323575ec6580059ada5d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far.png",
+      "bytes": 115970,
+      "sha256": "63ec89e7d616fb58832ca2f28fd989efdf8851f393c7b14113e390797324e3d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far_fire.png",
+      "bytes": 115585,
+      "sha256": "679d108eb28652911be67812ea2c0a0264a964033660c23c39aabc546bf5886e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near.png",
+      "bytes": 116427,
+      "sha256": "a4282e3941e0b57ea3ba5b097b778c230423f7048ebdcb4c66470c362cc5d24d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near_fire.png",
+      "bytes": 116163,
+      "sha256": "fd737210c3fb5f4df92c098278b2ae60e9005a513135aed513207af33a3a8d95"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2.png",
+      "bytes": 117940,
+      "sha256": "fa9e139d5bd765c334fda759acd492c934cac87530b731f0a406f000b4a47e42"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2_fire.png",
+      "bytes": 117710,
+      "sha256": "7a723fa5e3884c2a7fd4bf92fc613aeda1bf63c8ce646c9c89ec6ca8f904d131"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000.png",
+      "bytes": 80095,
+      "sha256": "7284c171b16a9c430f2818e2e41d7380abbc9c4223cd04f4f85db334d15a89d8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000_fire.png",
+      "bytes": 78354,
+      "sha256": "f0a57c4d40238f617cf433f88ee07951aba98533879c9573f3d10a2298921b7d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025.png",
+      "bytes": 80753,
+      "sha256": "d24bbd01b91fc43425043461c1db20c397db2db355cb74c14891828ddcf3905b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025_fire.png",
+      "bytes": 79069,
+      "sha256": "3eb34dba05f57574b71fcff784443e7072f2ea06e4a997cb405501b2b425f483"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050.png",
+      "bytes": 83576,
+      "sha256": "01078cf1234cfcfe315c1d16353b263680d42954b13a3aa149067e0b7649f710"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050_fire.png",
+      "bytes": 81935,
+      "sha256": "57b2a36ef72dfa08d588386469764601870f6499fb9859f6d53f68699b4ef908"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075.png",
+      "bytes": 87228,
+      "sha256": "492c077bddecb6ad2513b5e0b5fc1aafb6618ba7e3372b1e28b78a1752faf47c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075_fire.png",
+      "bytes": 85660,
+      "sha256": "f5a25a43d932be9c37b155854fd770a9f1bd2dcb2a425325147b693bef02f7f2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100.png",
+      "bytes": 90152,
+      "sha256": "141fa89cb3a08b8d929e2a64241d73653a0d271c57444f9899e1c13b90069223"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100_fire.png",
+      "bytes": 88862,
+      "sha256": "7329f376f277131437b5f91ba6a2b31dbbb84b6b381e4d34d88d52b2ca1bad5b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0.png",
+      "bytes": 117155,
+      "sha256": "b9bd2860cd1b414b2e2a25fa19a5c7862266e5976083addb8bd28f4e192a1e4c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0_fire.png",
+      "bytes": 114631,
+      "sha256": "a3639a0aaa28c147e9458be351a92b5bec672574bcd0b9ecde528ad30f6b45fd"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100.png",
+      "bytes": 121682,
+      "sha256": "e95e73b3fdf1ced8c80b9493c0a4fdac39b4825e189f7e78bbd37a36ace8ddd0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100_fire.png",
+      "bytes": 119666,
+      "sha256": "753425dc0f479dbd01c0fceea4dec172012d498b0471624db251044a00084312"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25.png",
+      "bytes": 118801,
+      "sha256": "babe32de283cc589cc1c49729a6d2d58a68094af910979cb2acb9346aab83dcc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25_fire.png",
+      "bytes": 116590,
+      "sha256": "ebe2f1c78d7b6e4d1982accaa66f34ba11fa0746733cd7304a74388efde52629"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50.png",
+      "bytes": 120766,
+      "sha256": "8ee4204a1b76208e0511e28eb69b19c97cf9f2c34c84bdb38fa48b3be3b2ba7b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50_fire.png",
+      "bytes": 117934,
+      "sha256": "662011b5b3a389487b17cdc8f0c27ea723aa919f4e4e3b7d4533c80cf4ea6198"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75.png",
+      "bytes": 121164,
+      "sha256": "305d2d30a20c53bf6e74d696a67eb145b562465f74f9863d43c4ca4d62a8d07b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75_fire.png",
+      "bytes": 118701,
+      "sha256": "d4e73d967559ece8c41aa1fc51661146fda06a8766733fe1164c06a3e1dc3d24"
+    },
+    {
+      "path": "assets/art/pilot/blink.png",
+      "bytes": 351986,
+      "sha256": "8f75651e648a9ed3fec5a05665271da83cb1c77326caccee51bf3547ad8c744c"
+    },
+    {
+      "path": "assets/art/pilot/hit.png",
+      "bytes": 384011,
+      "sha256": "6000a8c74c65aad12f1ab1ef8538dc11b64288fc85571e7c32a042de87760827"
+    },
+    {
+      "path": "assets/art/pilot/low-hp.png",
+      "bytes": 353482,
+      "sha256": "b89c3f2d338ee32b09acc1e2b46324addabba12f3642ba55a3a0f2ead919787a"
+    },
+    {
+      "path": "assets/art/pilot/normal.png",
+      "bytes": 356780,
+      "sha256": "e21bed7adabcf3f336e6685b77f943240172b556745c45c4d8a765e71db190e3"
+    },
+    {
+      "path": "assets/art/pilot/powerup.png",
+      "bytes": 360356,
+      "sha256": "b92a2ad5f26665d7697efdaac55bfa983a9e06d84321569ab4afc5e6e994d3e2"
+    },
+    {
+      "path": "assets/art/player.png",
+      "bytes": 260289,
+      "sha256": "5a2af138af79982c63565b2751c6ada54da58230fc6a8c6f0f68848d18a3fd06"
+    },
+    {
+      "path": "assets/art/player/sv01/manifest.json",
+      "bytes": 14171,
+      "sha256": "f7f100dfb3d09015ac8dd93dd66ec1a98c4b41251e9d96beb15a2bc8218d4c5f"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_00_desc_74.webp",
+      "bytes": 16072,
+      "sha256": "2e1f4a8a4c1483dcab182a1370d7114e167eb4d0ca24295dd3cec1ef2079ea27"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_01_desc_66p6.webp",
+      "bytes": 15420,
+      "sha256": "63dea08df8bfaef9a46bff8c137f2ffee9df978d3365defc81944a4fb3051052"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_02_desc_59p2.webp",
+      "bytes": 14760,
+      "sha256": "a1ed7aca8f05009e283b041e0a3baea030435943d99493cf8d12291af69dc559"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_03_desc_51p8.webp",
+      "bytes": 14010,
+      "sha256": "d033acac5c46a0ffa409583ede5e6cfdd3a0270464208ccf5d22d0cd312a9f0a"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_04_desc_44p4.webp",
+      "bytes": 13258,
+      "sha256": "7f655c7d342ea2e23fca8299f1642f72c2daa61e0a8d3b6049f1b54453604013"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_05_desc_37p0.webp",
+      "bytes": 12460,
+      "sha256": "cfe9384b834ab479fd27ab5b9dec266907a3ae30771c19e277fd4acd22921151"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_06_desc_29p6.webp",
+      "bytes": 11560,
+      "sha256": "f70d3af949b894364a34ec9afb94c19d9b6f6917d56d467b4a886a77664b3a12"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_07_desc_22p2.webp",
+      "bytes": 10380,
+      "sha256": "fcfe1f5dc6eccfd319ef33d6756e6cedbcaebd35b5f7b0923a39e251bd1d0aa3"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_08_desc_14p8.webp",
+      "bytes": 9248,
+      "sha256": "7eebc27b34501c4512daab338a249d1c9ea9cc5cd5cdd4a812ae697be07a4de7"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_09_desc_7p4.webp",
+      "bytes": 8562,
+      "sha256": "9ec05e4774dea1329842d25aadb14cae1ef9772c0f0baa79bf33d2b9c265f45a"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_10_neutral_0.webp",
+      "bytes": 7986,
+      "sha256": "4cf8c9c032f22228880e49021c1b650388c9e5a74a4cdc17141394bf4759cb50"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_11_asc_7p4.webp",
+      "bytes": 8242,
+      "sha256": "2dba56427951b1b57df31b360bfa14bbefbddbd5f4c0c701cd7ecd48de35856f"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_12_asc_14p8.webp",
+      "bytes": 9086,
+      "sha256": "1093466de1e0721706fe134350bac07b17940c8749add5b23b5d3208ca11308e"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_13_asc_22p2.webp",
+      "bytes": 9912,
+      "sha256": "2fe4f630ab514db7b1ef2dccd72a93941bb6d666b13bc814dffcf9b455a1f07c"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_14_asc_29p6.webp",
+      "bytes": 11022,
+      "sha256": "43b9e974929656671b5732af0d0cac21eb05e939e74e9bdb2d0a82ce5ae6facd"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_15_asc_37p0.webp",
+      "bytes": 11560,
+      "sha256": "e2d27c5bccd4f6f263417f761370d77910f4440bc015c09ef5055befd10d3dde"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_16_asc_44p4.webp",
+      "bytes": 12214,
+      "sha256": "3ffbbe53c9b269cf5eee75abd36a2008724f773ac20fb24928a4dd0bd3435118"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_17_asc_51p8.webp",
+      "bytes": 12994,
+      "sha256": "d4b41b03f4da2b8290d029a03dfb0b22dbbe1bce81490b3960d581b2170b656c"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_18_asc_59p2.webp",
+      "bytes": 13788,
+      "sha256": "0ad94eb500a5a3bb21c53e89b920aa6273bd77783b011baeb706d7b332a1a5e3"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_19_asc_66p6.webp",
+      "bytes": 14342,
+      "sha256": "fedad4f53307fbdc9d54cc3c559f3550da3c92e21ef89866fcfc86e16a854cd4"
+    },
+    {
+      "path": "assets/art/player/sv01/webp/sv01_bank_20_asc_74.webp",
+      "bytes": 14148,
+      "sha256": "0821a073fbfd9530244aa5c80a91cda6c617fb01ef911d37687966e37c0af764"
+    },
+    {
+      "path": "assets/audio/boss-v2.m4a",
+      "bytes": 3265511,
+      "sha256": "c3538c185e06bab6dc963aadab490c321c7b145983b1ec30bed393300d35baab"
+    },
+    {
+      "path": "assets/audio/danger-v2.m4a",
+      "bytes": 3475695,
+      "sha256": "703b82f9cb33dc2816bf5098f4fb5e9468b3edc13a86ac98a444ee07c01ec47f"
+    },
+    {
+      "path": "assets/audio/ending-v2.m4a",
+      "bytes": 3268296,
+      "sha256": "4b097e75d8e8672d3cbcc6ed0649915ab691aecca591d6849185a83b098c2529"
+    },
+    {
+      "path": "assets/audio/manifest.json",
+      "bytes": 252,
+      "sha256": "9fd4c92cb6287ba99313bb419986f438e7685f5c67cf1280aa49877565296faa"
+    },
+    {
+      "path": "assets/audio/normal-v2.m4a",
+      "bytes": 3341532,
+      "sha256": "3e2361eec40e3f896a1640f81f2674daaa946ec8608f183c796fcbab43e11901"
+    },
+    {
+      "path": "assets/audio/powerup-v2.m4a",
+      "bytes": 3245705,
+      "sha256": "5d4cebf981b8cd003afb4c98c2686f93e7c8b5bd20acc26fbc087ab6f8625aa7"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-armored-01.wav",
+      "bytes": 17324,
+      "sha256": "d7c21127226cf5869fb23082d8eddde41e8d33ca8c36636620ef6000c28168e7"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-armored-02.wav",
+      "bytes": 17324,
+      "sha256": "3377ddd9049f6dc1c27f4b81315461cdb9ccc1bf55e232c440998d92dbdb9905"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-armored-03.wav",
+      "bytes": 17324,
+      "sha256": "698ef878b83cd93f9880a2fa0ce660b802dfc13b8308a8ac20c28e05a82efb0c"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-light-01.wav",
+      "bytes": 16844,
+      "sha256": "1c7f50b31227e2c18768c61c6e3bfb04af6daeec8c37e5ab477c07a2a8cc6786"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-light-02.wav",
+      "bytes": 16844,
+      "sha256": "a091064a65a2929098f6904f64f1d5e84760f6eae91d2f1a59ec8e6f578eb608"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-special-01.wav",
+      "bytes": 10604,
+      "sha256": "702f524a002dbc6c3238729f66e8102244d9eaa485fc2ae71bb17ce747ad1cd5"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-target-special-02.wav",
+      "bytes": 10604,
+      "sha256": "ccdba5d05ef0aa7d96db9309aea9ad4fe00626cb285be53cd87ca450e511ccd8"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-weapon-drone.wav",
+      "bytes": 4364,
+      "sha256": "44dda80424447fdff5a6ba47240180afeb36263405449a9caa439e95c3ecb535"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-weapon-helix.wav",
+      "bytes": 11564,
+      "sha256": "bca0184f7e1a98517366246c05797aff133b4e637881b464bef52896222b1333"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-weapon-lance.wav",
+      "bytes": 9644,
+      "sha256": "ca58a72b5800e242b21330d1a97f53af5c03fa461f6a2da948ff941ea49806ae"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-weapon-normal.wav",
+      "bytes": 4364,
+      "sha256": "b633925e574a3161eff8a27e17a62ba8891ba46fce4acde0dfffc27e9b160f0e"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/hit-weapon-spread.wav",
+      "bytes": 7148,
+      "sha256": "f64303c4ce907f68c334f60bb1f0d48bae7d0610db443ca393b297c869b3e154"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/player-damage-fixed.wav",
+      "bytes": 28844,
+      "sha256": "4e9b3901af17d6cfc08d33a9ebf96ec241744556c35d59cc6b27037390c3d58a"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-drone-01.wav",
+      "bytes": 6572,
+      "sha256": "5cb90898e00081238ff74c52758802ec70453a8107b1271d4fa451219a9e67a1"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-drone-02.wav",
+      "bytes": 6572,
+      "sha256": "6db7363a878e809267addf37ec76072853f6b50c3a37c4972ca54c937a8f7ee2"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-drone-03.wav",
+      "bytes": 6572,
+      "sha256": "8e56f3eaaf3224a8fd0abd93e3407427a70ec0f5aab0c9412280d9c0ccea0b9d"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-helix-01.wav",
+      "bytes": 13964,
+      "sha256": "6af7c400a0ed4e4044f7a0411adb68e59a23215b462483327743387ae72d236b"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-helix-02.wav",
+      "bytes": 13964,
+      "sha256": "b3907c350f5eb4c43b42ad3701a3f19ef8d7e6ce89291e0538e5abe805696214"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-helix-03.wav",
+      "bytes": 13964,
+      "sha256": "cce73541133666be6873f213baa6e7875d534a1f96ba66ab1e1e9b4e1b507622"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-lance-01.wav",
+      "bytes": 12044,
+      "sha256": "363f3e36ef1e5b8b7add3bcaaee7a30bb4ce12e4a1a1e8e95c9fddc14b75e205"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-lance-02.wav",
+      "bytes": 13004,
+      "sha256": "c11d8271b0d3a3b4cdf0055dd61eaf97a9d32f8b0ff2c485242a5e1188a5da96"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-lance-03.wav",
+      "bytes": 12524,
+      "sha256": "ea3d574cebff4e5fb465c49075e880c39ae14b71a07d1e79f98c5e2f5b8ee328"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-normal-01.wav",
+      "bytes": 9188,
+      "sha256": "35646cdcf9f262a2220e093d0d70f0f34809be207dbac7d7d858e688577f011c"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-normal-02.wav",
+      "bytes": 9066,
+      "sha256": "194c2cae18d123582d521059b424bb32a1f88b60135acf4f96269eeaed8ebc65"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-normal-03.wav",
+      "bytes": 9432,
+      "sha256": "597c3208a89072c902b88702113e39f0fe96d4c9fa145434cbc4af0fdbc881fc"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-spread-01.wav",
+      "bytes": 8108,
+      "sha256": "5e399757ba0747c0e20286434860e0c1f23a7d9b6d318d0fb9928139104e28bb"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-spread-02.wav",
+      "bytes": 8108,
+      "sha256": "88f3d548439bcfc2177a71666e5b0ff6d19a20c6b1f28f7764181b4e288f5990"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/shot-spread-03.wav",
+      "bytes": 8108,
+      "sha256": "a3abb897793b22f712c66a8c022d55eeeac0bc63f1b241b9a67454fb5a844815"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/weapon-change.wav",
+      "bytes": 34604,
+      "sha256": "227c41e3201950f6d9f272a6b093393c3fa7af77470c4a3dc0b16767e224487a"
+    },
+    {
+      "path": "assets/audio/sfx-patch1/edited/weapon-expire.wav",
+      "bytes": 26924,
+      "sha256": "46385f2d9c02971faa9abd958fefa0908fbe0c7a96f33bc1491de777167cb2aa"
+    },
+    {
+      "path": "assets/audio/sfx-v3/charge.wav",
+      "bytes": 48554,
+      "sha256": "b32102d5bb11ebbf706db95d4dcea11514d8fd27010730484970de665326ad4c"
+    },
+    {
+      "path": "assets/audio/sfx-v3/enemy-01.wav",
+      "bytes": 22976,
+      "sha256": "a7c7074309130cc95722503c2f07832c181039ab3c5ed743d96834b9ae3b94c9"
+    },
+    {
+      "path": "assets/audio/sfx-v3/enemy-02.wav",
+      "bytes": 22976,
+      "sha256": "83fd9cdd2c5c792df81909e1be6002d907d9ff8605a0f6ab9f11d2b793afb439"
+    },
+    {
+      "path": "assets/audio/sfx-v3/explosion-01.wav",
+      "bytes": 99462,
+      "sha256": "dad78f7185954e2ae5fe027caf367dd14d271ecc702dd447f95fe7f8f0f5b18e"
+    },
+    {
+      "path": "assets/audio/sfx-v3/explosion-02.wav",
+      "bytes": 109832,
+      "sha256": "3235bd87613eb045b14a458ac2605d2d282218783bae01d0a3294eb85555d268"
+    },
+    {
+      "path": "assets/audio/sfx-v3/explosion-03.wav",
+      "bytes": 110294,
+      "sha256": "90bb39bcac86899a02f8abfe776b6e712f6fd103ccc8c0468ee33dcaae83c79d"
+    },
+    {
+      "path": "assets/audio/sfx-v3/explosion-heavy.wav",
+      "bytes": 198508,
+      "sha256": "731ca76949f01fe4fa2109c9a073b1af386c84da8cbae408eda17f472af301d4"
+    },
+    {
+      "path": "assets/audio/sfx-v3/helix-01.wav",
+      "bytes": 23048,
+      "sha256": "27b9a4596c62cd5a86029daa0169427346e106370070a1509cd23c6de286dd78"
+    },
+    {
+      "path": "assets/audio/sfx-v3/helix-02.wav",
+      "bytes": 19920,
+      "sha256": "c6495f7c1ace126c0e1d64030b1c5be6cf594a5cee0f6e5b7d23858505e19696"
+    },
+    {
+      "path": "assets/audio/sfx-v3/hit-01.wav",
+      "bytes": 16272,
+      "sha256": "4602b1c3ced84b62000be49470b747a3ce02e31ea17fcf174039f91dc45255cc"
+    },
+    {
+      "path": "assets/audio/sfx-v3/hit-02.wav",
+      "bytes": 16272,
+      "sha256": "c35378d42c973a460c3ceab96859761115991f91a4a7c2fbb4ad2625d27ebaf2"
+    },
+    {
+      "path": "assets/audio/sfx-v3/hit-03.wav",
+      "bytes": 16272,
+      "sha256": "e59eaaa6bcfe09f88bb81d65fdf71b398532f16ad6f195b8d14f210a24f5c757"
+    },
+    {
+      "path": "assets/audio/sfx-v3/lance-01.wav",
+      "bytes": 34090,
+      "sha256": "7df880bd0d238feba8f41cca67fb8b217d312a056880b9897441d51699f54661"
+    },
+    {
+      "path": "assets/audio/sfx-v3/lance-02.wav",
+      "bytes": 34090,
+      "sha256": "3def3e575323071ec6d157278dad12d776263896f7ad8dbad07b8843aadfbf63"
+    },
+    {
+      "path": "assets/audio/sfx-v3/player-hit.wav",
+      "bytes": 45466,
+      "sha256": "f2f824e6c54c8851cf6c18197d65ebf9c14e7177d272cde0a36d762ac3345fe3"
+    },
+    {
+      "path": "assets/audio/sfx-v3/shot-01.wav",
+      "bytes": 16802,
+      "sha256": "789ea86998484847944cb90fa9e6ba6fa94c5da9f4e031efe8bfd265c7ffc037"
+    },
+    {
+      "path": "assets/audio/sfx-v3/shot-02.wav",
+      "bytes": 16802,
+      "sha256": "0e87292ada56b0b09a7fd56904b15b7667ab342f9cbaa858a70528a56b4ac2e7"
+    },
+    {
+      "path": "assets/audio/sfx-v3/shot-03.wav",
+      "bytes": 16802,
+      "sha256": "a1b81667755373782ee81c0a16f01c2b65f8a37cdaa00a9299fc8d4d46adab63"
+    },
+    {
+      "path": "assets/audio/sfx-v3/spread-01.wav",
+      "bytes": 22094,
+      "sha256": "c40f623ddb181200501c04dc05ce91cf68e83c9d2c96f4088e8a655ff133f6b4"
+    },
+    {
+      "path": "assets/audio/sfx-v3/spread-02.wav",
+      "bytes": 22094,
+      "sha256": "27c49350099a84bb2d89387d5c83c6dda89243f54d1abcedc7d82f1557ce569e"
+    },
+    {
+      "path": "assets/audio/title-v2.m4a",
+      "bytes": 3472014,
+      "sha256": "67ba85ff085f4943e1932b9bbc8c8696b54e28ad5c3d710a2e1d08b4d03ddc89"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7309,
+      "sha256": "a7e8c4216b24292c9597858166077be8d307eb969ec22c8edc5dab2d975f3f66"
+    },
+    {
+      "path": "src/audio.js",
+      "bytes": 35706,
+      "sha256": "cafd754905cfd751da4d19199fd8ff4a2cd4af7455599b7a3f49c5c1d9edbb73"
+    },
+    {
+      "path": "src/barrage.js",
+      "bytes": 24537,
+      "sha256": "95bb4256df06d7b4e8d37836bf350bd1ae35c1e99727e00da0785285fd289ee7"
+    },
+    {
+      "path": "src/boot.js",
+      "bytes": 1218,
+      "sha256": "9c7406f0b228ef589e378e6b691851249963f4328b9076556c2cc3d4003657a5"
+    },
+    {
+      "path": "src/combat-damage.js",
+      "bytes": 1645,
+      "sha256": "60edcd09a1ff03978499878368e9f23d432fa49e14e63e7b8e443f5d914e1746"
+    },
+    {
+      "path": "src/combat-tuning.js",
+      "bytes": 5708,
+      "sha256": "29539b31870110290377261fbbafcc4f2435fd106d4078a7a9dee2962b844bc1"
+    },
+    {
+      "path": "src/game.js",
+      "bytes": 99544,
+      "sha256": "bb362d593ffe36c4ad8011c512caeedd19b57880eb1e65ff847f472918ef14cc"
+    },
+    {
+      "path": "src/level.js",
+      "bytes": 23017,
+      "sha256": "cdf1a4114b01287c139adfb84a4e9caa44f6de575cf4b242e7d717c0e949c6a3"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 18362,
+      "sha256": "b7b396c563abe6c7aa771bf694df8ca0649aa01c0a2eefd2b14e8d8f29cec041"
+    },
+    {
+      "path": "src/mecha-art.js",
+      "bytes": 15675,
+      "sha256": "b3e47b6027e11308b7568e411f507b3727909bb865115ff2e862d4a3d0e1dfdf"
+    },
+    {
+      "path": "src/mecha-collision.js",
+      "bytes": 9821,
+      "sha256": "1104782a1eee18fd8cc9eb384b52766d1f346cc8d626192bce25791353c8c591"
+    },
+    {
+      "path": "src/pilot-state.js",
+      "bytes": 6621,
+      "sha256": "04ad43f961c06954cf582a07fe1b895678fadfccc80173f030f18eebd2608490"
+    },
+    {
+      "path": "src/pilot-ui.js",
+      "bytes": 2922,
+      "sha256": "826205b5e01f76cece3cfeb716bce84f42525478b19b96605d337b62d10cedce"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 6444,
+      "sha256": "d551e6551e244ba350a3d2e080ca64a62c5374ec983d562ded1a31b013c18cde"
+    },
+    {
+      "path": "src/projectile-motion.js",
+      "bytes": 3530,
+      "sha256": "a3c838b4994c1a4eb3718b744f15bcc25d4fa90563c114dbc3f52dfeac97801b"
+    },
+    {
+      "path": "src/projectile-style.js",
+      "bytes": 4474,
+      "sha256": "b283bb08fef295b9176ba53a14ea9aac01fc7ddbb6686ffccc7daad7a3396287"
+    },
+    {
+      "path": "src/renderer.js",
+      "bytes": 65394,
+      "sha256": "58b99d7ec246507706ffa64f7fb29bfe3313d9b0b4552b19e8930dc91910c295"
+    },
+    {
+      "path": "src/terrain3d.js",
+      "bytes": 22464,
+      "sha256": "f2ac883e7a8863070c52999334b84dfd04f36e309249385cc91dc6b93f6d64dc"
+    },
+    {
+      "path": "src/volume-environment.js",
+      "bytes": 27900,
+      "sha256": "b6c5b6c6f3bc16465810f9f31084ba6c58696b7cadf1afde08487c1a21062e34"
+    },
+    {
+      "path": "style.css",
+      "bytes": 37715,
+      "sha256": "9ad2463c7b74a4be74c7fe4fab6ebe008ffdf29c3f34bec9654f36311091ec3a"
+    }
+  ],
+  "url": "http://127.0.0.1:5173/.work/6h-feedback-20261003/prototype-17-final-hud/dist/index.html",
+  "previousCanonical": "f933cb25d0251abdd07b2d5d4be3a7d0756a96350e368b22b94217493f434ba8",
+  "delta": [
+    {
+      "path": "assets/art/mecha-12h-local.json",
+      "bytes": 13989858,
+      "sha256": "d13037abc79d31d2eb4af952b1406027f500ef50ab536730c6a6ae3ccf824ffa"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-fire.png",
+      "bytes": 108966,
+      "sha256": "498cc5349af5a32a60b03ffa825905462c628cad40eeee0901c0adc679b0dec0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-idle.png",
+      "bytes": 109673,
+      "sha256": "09b7addb75b9a1ba117d542e451f617fffc8a18fa809beeccc7412b1acac66e0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25.png",
+      "bytes": 109941,
+      "sha256": "b0e184e4e249390b54006078239e2050ffce19de3fd66f0468657a8ff9116fe7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25_fire.png",
+      "bytes": 109264,
+      "sha256": "94e08fdc09edf1da194b1ceb166209d688413165eac48b71c1c17b2a385040a1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50.png",
+      "bytes": 110116,
+      "sha256": "f8f503bb01ed5b1fdc8923631f7d3d741eeca50e31ea9ffce7230ccdc25b62cc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50_fire.png",
+      "bytes": 109418,
+      "sha256": "ff634697701af4079d45c8608de9e945fc56b8dd8e1058e82af5d7629bd20db4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75.png",
+      "bytes": 110150,
+      "sha256": "5f8f1207129d060e176e03d2253c6e88ff0807df88c973ec6df013086dcc5fa4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75_fire.png",
+      "bytes": 109335,
+      "sha256": "c8cfaa4ebdcb1cddacfe6dbaaad1f076465f06f1fa23111e7ac53b7dc52a70fa"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open.png",
+      "bytes": 110674,
+      "sha256": "ead6f048daed2a38423865f915836fefb9a11e93f4eb678b6be690ee59c5a432"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open_fire.png",
+      "bytes": 109883,
+      "sha256": "ac8b839c1f078192dbef2e70e1ed56b9538f06d8bf0d0e8d81bcbdfdc24d908b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000.png",
+      "bytes": 111434,
+      "sha256": "9587e889ff22a0c65c3670bc698ea3cdb8fe7498f8a4986e37a160fae2d02443"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000_fire.png",
+      "bytes": 111299,
+      "sha256": "631a42da1e743db20de4401bab7e383b8b1a6bfe1298ad144ff02c5882027ec6"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025.png",
+      "bytes": 111718,
+      "sha256": "ebeeaaf2b915aa7105c8286c22d5b3361811b4ef79214b13fbcd2c2eeec9bb69"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025_fire.png",
+      "bytes": 111657,
+      "sha256": "dbdae4b3fe5ad239f3583515eb4dbcc991f6e18032af27db1d0e8589bab59c2a"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050.png",
+      "bytes": 111820,
+      "sha256": "25279c995e62e6887af420190ccd5122609c655fcddcdbd7b0b5937ad636ed54"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050_fire.png",
+      "bytes": 111540,
+      "sha256": "a96524f7cd469ff4557a3ceb927cc4c4fae6e396c03117a11825823b8edfa0b8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075.png",
+      "bytes": 112312,
+      "sha256": "29aea09c802e9f8a342a76c897782e9d90ee1d885b665b05d8598f0fcdcea52c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075_fire.png",
+      "bytes": 112201,
+      "sha256": "2fc2c2df41887e583faa0b49e869d24cd652958580727b19138125c5b70d6472"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100.png",
+      "bytes": 113336,
+      "sha256": "f85f5af7c84dfad4fbc1157d45c116fe79af74a3c5b13f979e3a077c7312d15b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100_fire.png",
+      "bytes": 113268,
+      "sha256": "a5be001f6b3a455704e9f9be3c27f0d01e5cbcbb7e29400fd0cf931f7bcce01f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier-child/carrier-child.png",
+      "bytes": 39277,
+      "sha256": "62394acc36fd52569f8e0660c1aefe2df7a3209ba89a1d75216961ba1c491727"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0.png",
+      "bytes": 109224,
+      "sha256": "24df3ad4ab54068a599b849cbc18d5d0bdd32936ec25f28de1e71b337b2d159f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0_fire.png",
+      "bytes": 108869,
+      "sha256": "a47d80ea2595e82a1910a605dbde6b9c417aefa8cd13df81efee875f5436a188"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far.png",
+      "bytes": 110614,
+      "sha256": "f2ad3e2d72ec8c1572effeba8037db9fe233c886e176219458fad4f13496ac5e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far_fire.png",
+      "bytes": 110580,
+      "sha256": "e86542479093eb0431b4c79e3791793de756675ab462be34daf25c36e8e3ffc9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near.png",
+      "bytes": 111247,
+      "sha256": "3b739393c4f45611117227c686a036af68f350ddfa97af6f3d621ccdb148dfca"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near_fire.png",
+      "bytes": 111010,
+      "sha256": "bd791f5645673aaf76541477a68e24fe3cb809b4c8355b8a3170269422aaada1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2.png",
+      "bytes": 112584,
+      "sha256": "4399348008405e259de4ba68f6ac3f35c162a89a3b08458cc5c3ea6d80403094"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2_fire.png",
+      "bytes": 112361,
+      "sha256": "141cc399de5108a8c4c6d9bc7ba80de70f325a0ebb108254ad9fafc58945b247"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0.png",
+      "bytes": 109952,
+      "sha256": "b1208ad9ae78394885213a87d4a84fb41a9e6cac61fe50e3cc96f4c2478d6ad9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0_fire.png",
+      "bytes": 109826,
+      "sha256": "7f688ce938c57df4cf0a697744f3271e8538fd17828ba67f18d5911cc2d222b0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far.png",
+      "bytes": 111523,
+      "sha256": "1d13d88f46fdec859fbb2c24ced71abc88bb1a128ed5f0fa79d4edf9aec7bc41"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far_fire.png",
+      "bytes": 111392,
+      "sha256": "23645d8badcc8987db4f77a1377ae5751a00325cd7098db7d691f13ffb1868b7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near.png",
+      "bytes": 111859,
+      "sha256": "c5e81081157ec783862ddfc43cb715d3798108fdb6f931975dd2e14087eca579"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near_fire.png",
+      "bytes": 111663,
+      "sha256": "a016043db029623e4f3ff1e7c3c20e70477ef9bf0b4ee87f77fee260e7e06206"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2.png",
+      "bytes": 113212,
+      "sha256": "614133e3e0d8df1639c97fb2d0ed94085c509cdd1881136665e88bf112e925de"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2_fire.png",
+      "bytes": 113042,
+      "sha256": "a9642eafa349458911f7fb02b74fc29df4958eb3fd6d6e22b33d7092c3d5fa75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0.png",
+      "bytes": 110029,
+      "sha256": "8060a658c6fbf3cd8542701ee0b62326e3c084f5f67c6cec9c9f52d764317c5f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0_fire.png",
+      "bytes": 109857,
+      "sha256": "49721cd5f0bf6af2933f2c1ef150f583a0d2b7e6b8499ded2ebc00c1d13f983b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far.png",
+      "bytes": 111690,
+      "sha256": "e06f7e8c190b27407b36841978ce94450ee1a44a3165310461277e6312af8f47"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far_fire.png",
+      "bytes": 111439,
+      "sha256": "b5255a1300978a37edd93185facb5a68fbcd5c73e6e66a26046fbc7b0823ad9c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near.png",
+      "bytes": 111763,
+      "sha256": "a3ac39f5aa5b1e10e01c396d647afdc641ca00240709c158ca6e4b288ec2587b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near_fire.png",
+      "bytes": 111600,
+      "sha256": "1bb53e72688cc2e55123887ac18a23ee4dd8345a36544d78f1fb1038d7e21005"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2.png",
+      "bytes": 113137,
+      "sha256": "b5fdde4432480338afd567e76d67cf0d784f0e9ac8140a6e7a9660cd040b2b2e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2_fire.png",
+      "bytes": 113048,
+      "sha256": "9bc97d92dbd7cd52030705aea0118d4aeb63fad77e44edc8bf83f59fc7640370"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0.png",
+      "bytes": 110706,
+      "sha256": "9d2b02afae12ecd91d907235d6956f00ce34865287610d0306c160a44734d2c1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0_fire.png",
+      "bytes": 110591,
+      "sha256": "3131778b4bbacfdf05c2db0885e8b3a0c5643c694f1a94ca69c1df525c066fd8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far.png",
+      "bytes": 112142,
+      "sha256": "7285b3f4e828516d581afc49e89a7c19402966199792f65b841151627df8ad72"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far_fire.png",
+      "bytes": 111931,
+      "sha256": "473f1c629dc0ea3e480345c5811da1b00531f83d92084fa6c4663c1b079b1f75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near.png",
+      "bytes": 112535,
+      "sha256": "4720ed2a354e8fb17e477ef6390e629637970b870949aae4d385bc12bf5439f3"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near_fire.png",
+      "bytes": 112381,
+      "sha256": "51637714951b081e737715399343290125b60da1deabb7dd01f4daf657bdb01b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2.png",
+      "bytes": 113794,
+      "sha256": "4afca56c4abd3a3d67b049c215e5df796e2968487d0d805ad436afef1c4d59d7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2_fire.png",
+      "bytes": 113561,
+      "sha256": "24d85ba6d81d9fc81ccc5c7bc20311163c07f4e655dd2348ca4028a502e0df58"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0.png",
+      "bytes": 114040,
+      "sha256": "8130cb73ea0b8fdf315a827c30ae1f4db1408f1bf190c8c1a89f0716eb026102"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0_fire.png",
+      "bytes": 114017,
+      "sha256": "aa976655216e808068c7c39caf6851df7eeafad5475323575ec6580059ada5d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far.png",
+      "bytes": 115970,
+      "sha256": "63ec89e7d616fb58832ca2f28fd989efdf8851f393c7b14113e390797324e3d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far_fire.png",
+      "bytes": 115585,
+      "sha256": "679d108eb28652911be67812ea2c0a0264a964033660c23c39aabc546bf5886e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near.png",
+      "bytes": 116427,
+      "sha256": "a4282e3941e0b57ea3ba5b097b778c230423f7048ebdcb4c66470c362cc5d24d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near_fire.png",
+      "bytes": 116163,
+      "sha256": "fd737210c3fb5f4df92c098278b2ae60e9005a513135aed513207af33a3a8d95"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2.png",
+      "bytes": 117940,
+      "sha256": "fa9e139d5bd765c334fda759acd492c934cac87530b731f0a406f000b4a47e42"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2_fire.png",
+      "bytes": 117710,
+      "sha256": "7a723fa5e3884c2a7fd4bf92fc613aeda1bf63c8ce646c9c89ec6ca8f904d131"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000.png",
+      "bytes": 80095,
+      "sha256": "7284c171b16a9c430f2818e2e41d7380abbc9c4223cd04f4f85db334d15a89d8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000_fire.png",
+      "bytes": 78354,
+      "sha256": "f0a57c4d40238f617cf433f88ee07951aba98533879c9573f3d10a2298921b7d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025.png",
+      "bytes": 80753,
+      "sha256": "d24bbd01b91fc43425043461c1db20c397db2db355cb74c14891828ddcf3905b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025_fire.png",
+      "bytes": 79069,
+      "sha256": "3eb34dba05f57574b71fcff784443e7072f2ea06e4a997cb405501b2b425f483"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050.png",
+      "bytes": 83576,
+      "sha256": "01078cf1234cfcfe315c1d16353b263680d42954b13a3aa149067e0b7649f710"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050_fire.png",
+      "bytes": 81935,
+      "sha256": "57b2a36ef72dfa08d588386469764601870f6499fb9859f6d53f68699b4ef908"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075.png",
+      "bytes": 87228,
+      "sha256": "492c077bddecb6ad2513b5e0b5fc1aafb6618ba7e3372b1e28b78a1752faf47c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075_fire.png",
+      "bytes": 85660,
+      "sha256": "f5a25a43d932be9c37b155854fd770a9f1bd2dcb2a425325147b693bef02f7f2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100.png",
+      "bytes": 90152,
+      "sha256": "141fa89cb3a08b8d929e2a64241d73653a0d271c57444f9899e1c13b90069223"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100_fire.png",
+      "bytes": 88862,
+      "sha256": "7329f376f277131437b5f91ba6a2b31dbbb84b6b381e4d34d88d52b2ca1bad5b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0.png",
+      "bytes": 117155,
+      "sha256": "b9bd2860cd1b414b2e2a25fa19a5c7862266e5976083addb8bd28f4e192a1e4c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0_fire.png",
+      "bytes": 114631,
+      "sha256": "a3639a0aaa28c147e9458be351a92b5bec672574bcd0b9ecde528ad30f6b45fd"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100.png",
+      "bytes": 121682,
+      "sha256": "e95e73b3fdf1ced8c80b9493c0a4fdac39b4825e189f7e78bbd37a36ace8ddd0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100_fire.png",
+      "bytes": 119666,
+      "sha256": "753425dc0f479dbd01c0fceea4dec172012d498b0471624db251044a00084312"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25.png",
+      "bytes": 118801,
+      "sha256": "babe32de283cc589cc1c49729a6d2d58a68094af910979cb2acb9346aab83dcc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25_fire.png",
+      "bytes": 116590,
+      "sha256": "ebe2f1c78d7b6e4d1982accaa66f34ba11fa0746733cd7304a74388efde52629"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50.png",
+      "bytes": 120766,
+      "sha256": "8ee4204a1b76208e0511e28eb69b19c97cf9f2c34c84bdb38fa48b3be3b2ba7b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50_fire.png",
+      "bytes": 117934,
+      "sha256": "662011b5b3a389487b17cdc8f0c27ea723aa919f4e4e3b7d4533c80cf4ea6198"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75.png",
+      "bytes": 121164,
+      "sha256": "305d2d30a20c53bf6e74d696a67eb145b562465f74f9863d43c4ca4d62a8d07b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75_fire.png",
+      "bytes": 118701,
+      "sha256": "d4e73d967559ece8c41aa1fc51661146fda06a8766733fe1164c06a3e1dc3d24"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7309,
+      "sha256": "a7e8c4216b24292c9597858166077be8d307eb969ec22c8edc5dab2d975f3f66"
+    },
+    {
+      "path": "src/barrage.js",
+      "bytes": 24537,
+      "sha256": "95bb4256df06d7b4e8d37836bf350bd1ae35c1e99727e00da0785285fd289ee7"
+    },
+    {
+      "path": "src/combat-damage.js",
+      "bytes": 1645,
+      "sha256": "60edcd09a1ff03978499878368e9f23d432fa49e14e63e7b8e443f5d914e1746"
+    },
+    {
+      "path": "src/game.js",
+      "bytes": 99544,
+      "sha256": "bb362d593ffe36c4ad8011c512caeedd19b57880eb1e65ff847f472918ef14cc"
+    },
+    {
+      "path": "src/level.js",
+      "bytes": 23017,
+      "sha256": "cdf1a4114b01287c139adfb84a4e9caa44f6de575cf4b242e7d717c0e949c6a3"
+    },
+    {
+      "path": "src/main.js",
+      "bytes": 18362,
+      "sha256": "b7b396c563abe6c7aa771bf694df8ca0649aa01c0a2eefd2b14e8d8f29cec041"
+    },
+    {
+      "path": "src/mecha-art.js",
+      "bytes": 15675,
+      "sha256": "b3e47b6027e11308b7568e411f507b3727909bb865115ff2e862d4a3d0e1dfdf"
+    },
+    {
+      "path": "src/presentation.js",
+      "bytes": 6444,
+      "sha256": "d551e6551e244ba350a3d2e080ca64a62c5374ec983d562ded1a31b013c18cde"
+    },
+    {
+      "path": "src/projectile-style.js",
+      "bytes": 4474,
+      "sha256": "b283bb08fef295b9176ba53a14ea9aac01fc7ddbb6686ffccc7daad7a3396287"
+    },
+    {
+      "path": "src/renderer.js",
+      "bytes": 65394,
+      "sha256": "58b99d7ec246507706ffa64f7fb29bfe3313d9b0b4552b19e8930dc91910c295"
+    },
+    {
+      "path": "style.css",
+      "bytes": 37715,
+      "sha256": "9ad2463c7b74a4be74c7fe4fab6ebe008ffdf29c3f34bec9654f36311091ec3a"
+    }
+  ],
+  "omittedRuntimeFiles": [
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-fire.png",
+      "bytes": 107712,
+      "sha256": "25b82fd90ca149dffff50f05834c99762c72d1055a2427130e9632d82aedd1d2"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-idle.png",
+      "bytes": 108327,
+      "sha256": "0524cc27ea1abf242c84c2d64049702cc17886e08334247e5094bbdd47968dc2"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_25.png",
+      "bytes": 108280,
+      "sha256": "a86aab5907dde82488d0bbe4b2b2ef47c83eb588a22ed2e3fb23d58ddadae115"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_25_fire.png",
+      "bytes": 107552,
+      "sha256": "048e045c8fcadd3f01fff2f6c60da835cc6da1fcb3a474e247338a31f15a7a85"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_50.png",
+      "bytes": 108487,
+      "sha256": "f562653bcbf05e44a9bafddd394cfb24d5d62a6f18ee81a108009f6d700c2b89"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_50_fire.png",
+      "bytes": 107579,
+      "sha256": "a18552dd69ee8f5949c9b520b13ee49250366c66312fd25771742d53ac5cd5f9"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_75.png",
+      "bytes": 108378,
+      "sha256": "dbca0cd7c638615bdb2b3830dea5aa4ec40569c3ecdcfd6b0814baa3f750f598"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-mechanism_75_fire.png",
+      "bytes": 107432,
+      "sha256": "dd96dec2c9035917487ac8366697c520d248c1f66c20fd5d85d44f602251b05a"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-open.png",
+      "bytes": 108692,
+      "sha256": "44b47c5f8c8053deec5aeabe049c5fb0825905858fe0f77b2c248628d36b707e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/apex/apex-open_fire.png",
+      "bytes": 107635,
+      "sha256": "35022911f39c3a1269a0e9d2028f396fd46ddd4eb9ceaeca9181e98085be3732"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_000.png",
+      "bytes": 113733,
+      "sha256": "8e507991c1c5b8a990a89e298e2d9daf09a0ba37bf123dfe61f74c5bee7f5885"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_000_fire.png",
+      "bytes": 111722,
+      "sha256": "cbab660beb7e392d718a932c8162dbe810bb306225531d9b69128a5f6e510836"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_025.png",
+      "bytes": 113217,
+      "sha256": "940760183a6d2efff5f15f7267c3d97b9ad878436b4e78115d22ed1668f7fb03"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_025_fire.png",
+      "bytes": 111610,
+      "sha256": "8d7b29aaf7f24e399f0d76435d5867dc8b120bdbd63fd54c1a7df996377d3e2e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_050.png",
+      "bytes": 113234,
+      "sha256": "2f4d3415fba04d896244df454cb3942196cbac95877bca65ba56ed522dfbc076"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_050_fire.png",
+      "bytes": 111481,
+      "sha256": "62c5d7ee8935cc8aca1cadb75742177c79a3f267b2abbc1503ff50e4ce8bb29c"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_075.png",
+      "bytes": 113529,
+      "sha256": "291b7b772f3c701433826369d24c2a24817f6573dc27d9c19c2a75b3a3c092e0"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_075_fire.png",
+      "bytes": 111777,
+      "sha256": "3dfcdf695a4730bfff03a19bfa9c7dcc53a7629358e150e355f5a2961515d3ae"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_100.png",
+      "bytes": 114346,
+      "sha256": "d43af01cdb5b2cc27b42f7273173d514f70f17eb927b8692759a001a537f5867"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/bastion/bastion-phase_100_fire.png",
+      "bytes": 112235,
+      "sha256": "f0ea1d2e946e0b9dc90f577e6de3a2e4a44ff16624948462a732447dca90acfd"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_000_payload0.png",
+      "bytes": 110387,
+      "sha256": "07df2b6718d2607531876101c2da4e4e6358b3158e9e667afb1c9163a7d2599c"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_000_payload1far.png",
+      "bytes": 111862,
+      "sha256": "8ab30a22c2429fde113afe21c1d3fd7d0b3c94b643bf0b71e7538a87f3cc2fe5"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_000_payload1near.png",
+      "bytes": 112237,
+      "sha256": "9afd881006baa6dabab074e339075ef6c0f5fb83e112a974e6cb762fb7f19558"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_000_payload2.png",
+      "bytes": 113530,
+      "sha256": "02c4ce9bbe668010b365d880ae865d2f410089e73f0197ad5cf09da5a0777ed8"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_025_payload0.png",
+      "bytes": 111455,
+      "sha256": "bf6905261843f5869b75f8e0de1eb6a91e7c56b6471a73ded248db85063d9dcb"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_025_payload1far.png",
+      "bytes": 112762,
+      "sha256": "e6c0842dcc45c354b5334b94d44423d1b46a21828bc76d62b2bdf41fb02e9124"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_025_payload1near.png",
+      "bytes": 113551,
+      "sha256": "6a9d623e5ab36f6beffee6352e6436723d8283847124ef93695a92d914279752"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_025_payload2.png",
+      "bytes": 114529,
+      "sha256": "292d821320bb9f59577c4742cc1e1f1c450358baf9150708d22d69a5adda97b9"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_050_payload0.png",
+      "bytes": 111225,
+      "sha256": "9f420b6337ffe0c9de8ea38476b3a440ba65c0ca1a6cc475afca317e38e1de7b"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_050_payload1far.png",
+      "bytes": 112781,
+      "sha256": "50a396ad746038b0aba0a3356b0f8fbebdc43fa6ab5bf31ad8ae55a9869e2db8"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_050_payload1near.png",
+      "bytes": 113272,
+      "sha256": "a0a04d49f48c137dacea0fbb760382e7dd92f14b1283f562775151fd36661cee"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_050_payload2.png",
+      "bytes": 114546,
+      "sha256": "c263f1a6da7da27b4de6d3218a7f52abd259cd48a15154b32e3b00c072f5cc77"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_075_payload0.png",
+      "bytes": 111239,
+      "sha256": "ebd830d632362074fe8630f9f852cec28d9ee65b97bc875a9d3d8ed0da3d330e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_075_payload1far.png",
+      "bytes": 113038,
+      "sha256": "688afab0a14370dc2b226032d25fe6885aeb8b2045b209e4d3103ce38f1b5a02"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_075_payload1near.png",
+      "bytes": 113249,
+      "sha256": "0906bdc04b4b93320d9e098cef6f2b6e4ee4922bd95f509bc8c82c4edd997179"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_075_payload2.png",
+      "bytes": 114675,
+      "sha256": "c67ec6ebe4b47c7e30f80f057c01e3bc42accce46c6f7998cdc0d1a144a69201"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_100_payload0.png",
+      "bytes": 112823,
+      "sha256": "08801348694323fd2545d9428fcbabeb0139eb23f1299cffa602a8ccb7f5331d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_100_payload1far.png",
+      "bytes": 114552,
+      "sha256": "9ea54ef568c24b970adca8a7f64289e23c37fb389fff34215f9c767f843ad729"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_100_payload1near.png",
+      "bytes": 114790,
+      "sha256": "844a67b7eece4395ac87a82d077c05c26a70d5613e1ae8c617f2dd70f0c726db"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/carrier/carrier-phase_100_payload2.png",
+      "bytes": 117095,
+      "sha256": "88ad489ca01b87a6817c348cc6558f232281807c2f3a3ef2ce425f58faae900a"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_000.png",
+      "bytes": 87498,
+      "sha256": "393218a78f5814d438983dee2dfefc0668aeed60b6c59922c62373f5b1af6f98"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_000_fire.png",
+      "bytes": 86494,
+      "sha256": "4d6c13acbc4ec8e0356beca9322143d7f38232dabc4cd2e947df064fee157b4e"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_025.png",
+      "bytes": 87129,
+      "sha256": "e9abcf73ef1509ab1e47d2cf1eeee8fdca4a1f0c3dee2a243fc1ab7e9a7fb8cc"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_025_fire.png",
+      "bytes": 85577,
+      "sha256": "c1ab60987d59341772964c845a39cd15b4fc8b0b4bb00816c245c7170acbb36a"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_050.png",
+      "bytes": 87965,
+      "sha256": "5668a96cf9eeb6439900318cd2d73767f21a57464daa8660f5ae35212d3ba8a8"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_050_fire.png",
+      "bytes": 87004,
+      "sha256": "a5b1d22f73966587ef681e5abee9df20d8362e3ff246945f7d8dbf0913fc2f2d"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_075.png",
+      "bytes": 92432,
+      "sha256": "53bbb1d93464342526020109fa79e4902779fff2fad942dc2e7abec7d1e59453"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_075_fire.png",
+      "bytes": 90803,
+      "sha256": "98be642f71774b8f36560a3dd5c9ba697d135d29d207795d4bdff2dd1db66079"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_100.png",
+      "bytes": 97179,
+      "sha256": "7d9dce8c06633c90d2e568490ada0808f1e37a789e6808eba165d6797cfc9aa6"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/lancer/lancer-phase_100_fire.png",
+      "bytes": 95663,
+      "sha256": "29e504541b858d38d24a8c1ac3ccde4113a22f6d1a46476c3a9c5d941979458f"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/local-carrier-child-finish-v1/carrier-child.png",
+      "bytes": 39243,
+      "sha256": "2afbac046c628a08a216459a2c353c2412c44ebbadb487bc32d43118b142193a"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-charge.png",
+      "bytes": 112886,
+      "sha256": "991b146b975da53df1f3d0e97f143ac70cab04f0f788e24d404fff53a8f0b855"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-fire.png",
+      "bytes": 111238,
+      "sha256": "581c8f0edceb2f04ea6338d04c8948d3a567c1cd414f39a471532a10615b5462"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-idle.png",
+      "bytes": 112816,
+      "sha256": "00e081671984a18290e7597a74cdebf31357a9adfc9c7faf940fd08e9017f4ee"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-open.png",
+      "bytes": 116040,
+      "sha256": "7da79be646ee93434d3f814c1370253c122c4b6cb5d25ca2312f4a512aa520dc"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-phase_0.png",
+      "bytes": 112886,
+      "sha256": "6c1acd00ae21dfc87f3d6735ccebdcd6fd6c16ccbc643bb0b3f7b827c4016f9c"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-phase_100.png",
+      "bytes": 116044,
+      "sha256": "9108391e25b39a927a35a4d4d9ac933b175ff6978ee881c26870ea79541148a1"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-phase_25.png",
+      "bytes": 114245,
+      "sha256": "3074d426d55cfa1d663c6f417dddbe28757baefa466f80af0f3a9d3b961befa7"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-phase_50.png",
+      "bytes": 115449,
+      "sha256": "287af17886dc14bc7b6776f8d983ff35e6a98659a55b01637cf725a405e64bbf"
+    },
+    {
+      "path": "assets/art/mecha-12h-local/final-adoption-v1/runtime/warden/warden-phase_75.png",
+      "bytes": 115255,
+      "sha256": "db2bf719d9236e4e7e7399d9d0a0dcf082bead5b5e1a9db6533071a6becbed1a"
+    },
+    {
+      "path": "assets/art/mecha-8h/manifest.json",
+      "bytes": 69734,
+      "sha256": "d6771f4ba223f579537ad581affad9f68402baf968f1e6a8a5a576cdde423d42"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/apex-idle.png",
+      "bytes": 148764,
+      "sha256": "8b90fe0cbc58dcea47099c4ecc2dcce97069512ef54679daa40ce0665e0c4075"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/apex-open.png",
+      "bytes": 159292,
+      "sha256": "99daf7f591307a5ae408a84e218a19ba7c158245b0b21720aa92da20c5b24a7d"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/bastion-idle.png",
+      "bytes": 146392,
+      "sha256": "355a3883994cf05c168a0b6e3f2f5fdbfb4029efcc73c185637bbe13b1dacc56"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/bastion-open.png",
+      "bytes": 153256,
+      "sha256": "cb1555f67e3ab758fcd3b4f4315f8bab269c95becd57457cfe5df0294cb651c7"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/carrier-idle.png",
+      "bytes": 149340,
+      "sha256": "1eb71c452140971456ec306e1c3b0530da795becd07a99b4c53c09de1699b016"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/carrier-open.png",
+      "bytes": 155343,
+      "sha256": "3b26562c76b5e7e6f4caab92942b8b28ff2e922ceb59a140fb302adc075d5f4e"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/claw-fire.png",
+      "bytes": 125630,
+      "sha256": "49fdc9f6cc90b90e393285f8d21979f46791c51376167ce0510f8a86343b26b4"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/claw-idle.png",
+      "bytes": 119466,
+      "sha256": "c804b03e16b6f3abbf749bf9c5a23aa72900d56fd4fe0f08cfee1b8b49e21963"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/dragonfly-idle.png",
+      "bytes": 107166,
+      "sha256": "f437abcb988f6405c5e69e40e078fb46e3f8a21e5774bd9a036dcf1ac2347535"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/int01-idle.png",
+      "bytes": 111164,
+      "sha256": "56a199a1a012ce07ba241abf08d434e93a8aab75cf36df72f88243e851057c40"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/lancer-idle.png",
+      "bytes": 113824,
+      "sha256": "163ccd372cee457c3fc4879212e6d1e7ee24bcc2f4463002d314cc675184d724"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/lancer-open.png",
+      "bytes": 120131,
+      "sha256": "a4ab6ecf0f61d8a030d85dea1208b6c5f6bfc3ec4cf970a3bbaf8c6a32f97907"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/mantis-fire.png",
+      "bytes": 109063,
+      "sha256": "97804fe622538e140ed5f6ec3fd310bcd04a6428c9ffddd879fb2a9105d688ab"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/mantis-idle.png",
+      "bytes": 105651,
+      "sha256": "0200293c75b0fd6cace8f095b4f6e37a8438d297385f7a4cf4abd8525b6fd849"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/needle-fire.png",
+      "bytes": 99587,
+      "sha256": "ccd11c0679003b942e09f2a8f8bc9428182c0ffb54b38385d94da5d613c94438"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/needle-idle.png",
+      "bytes": 100497,
+      "sha256": "31fe579acede552e4ab28a34dcbc2bb856b784f12c5a1b55c76304bc510072b9"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/orb-fire.png",
+      "bytes": 131785,
+      "sha256": "487a9c0f1a9ea3bd194027cb0865298d55067367ee4248888abf9099267fc698"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/orb-idle.png",
+      "bytes": 126961,
+      "sha256": "0a2b2fa8eb8434c5381246f8d2ce22b853b0a3978ce3780145853915b1fb611b"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/ray-fire.png",
+      "bytes": 135069,
+      "sha256": "e032a39b491c726e4eea84ae89c77a474a5a14c43a5beefc1d9e7ddcb21a7253"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/ray-idle.png",
+      "bytes": 129899,
+      "sha256": "08cc0fc6f5fb1fe243b04c3f7f8b2979844f7f29b7ff0c9e01b0238d2c02aa40"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/warden-idle.png",
+      "bytes": 134926,
+      "sha256": "6ca5683a5fa0b3e6016aa60916099dc3826559ab8c2ebec920a6b0fdac435b8a"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/warden-open.png",
+      "bytes": 136125,
+      "sha256": "3044745cd06631535f88c6f896502340d61fbcd50c4ca343317353556ff7677b"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/wasp-idle.png",
+      "bytes": 104711,
+      "sha256": "d1efd3343864c50e3a107d4b555da67a42eebac4ee42dc55a5ac1909456bdff5"
+    },
+    {
+      "path": "assets/art/mecha-8h/runtime/worm-idle.png",
+      "bytes": 102166,
+      "sha256": "6a063d60073c5846e5605844775806caf4491110c0c7b0585998f562f59fdd85"
+    }
+  ],
+  "assetChanges": [
+    {
+      "path": "assets/art/mecha-12h-local.json",
+      "bytes": 13989858,
+      "sha256": "d13037abc79d31d2eb4af952b1406027f500ef50ab536730c6a6ae3ccf824ffa"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-fire.png",
+      "bytes": 108966,
+      "sha256": "498cc5349af5a32a60b03ffa825905462c628cad40eeee0901c0adc679b0dec0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-idle.png",
+      "bytes": 109673,
+      "sha256": "09b7addb75b9a1ba117d542e451f617fffc8a18fa809beeccc7412b1acac66e0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25.png",
+      "bytes": 109941,
+      "sha256": "b0e184e4e249390b54006078239e2050ffce19de3fd66f0468657a8ff9116fe7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_25_fire.png",
+      "bytes": 109264,
+      "sha256": "94e08fdc09edf1da194b1ceb166209d688413165eac48b71c1c17b2a385040a1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50.png",
+      "bytes": 110116,
+      "sha256": "f8f503bb01ed5b1fdc8923631f7d3d741eeca50e31ea9ffce7230ccdc25b62cc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_50_fire.png",
+      "bytes": 109418,
+      "sha256": "ff634697701af4079d45c8608de9e945fc56b8dd8e1058e82af5d7629bd20db4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75.png",
+      "bytes": 110150,
+      "sha256": "5f8f1207129d060e176e03d2253c6e88ff0807df88c973ec6df013086dcc5fa4"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-mechanism_75_fire.png",
+      "bytes": 109335,
+      "sha256": "c8cfaa4ebdcb1cddacfe6dbaaad1f076465f06f1fa23111e7ac53b7dc52a70fa"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open.png",
+      "bytes": 110674,
+      "sha256": "ead6f048daed2a38423865f915836fefb9a11e93f4eb678b6be690ee59c5a432"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/apex/apex-open_fire.png",
+      "bytes": 109883,
+      "sha256": "ac8b839c1f078192dbef2e70e1ed56b9538f06d8bf0d0e8d81bcbdfdc24d908b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000.png",
+      "bytes": 111434,
+      "sha256": "9587e889ff22a0c65c3670bc698ea3cdb8fe7498f8a4986e37a160fae2d02443"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_000_fire.png",
+      "bytes": 111299,
+      "sha256": "631a42da1e743db20de4401bab7e383b8b1a6bfe1298ad144ff02c5882027ec6"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025.png",
+      "bytes": 111718,
+      "sha256": "ebeeaaf2b915aa7105c8286c22d5b3361811b4ef79214b13fbcd2c2eeec9bb69"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_025_fire.png",
+      "bytes": 111657,
+      "sha256": "dbdae4b3fe5ad239f3583515eb4dbcc991f6e18032af27db1d0e8589bab59c2a"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050.png",
+      "bytes": 111820,
+      "sha256": "25279c995e62e6887af420190ccd5122609c655fcddcdbd7b0b5937ad636ed54"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_050_fire.png",
+      "bytes": 111540,
+      "sha256": "a96524f7cd469ff4557a3ceb927cc4c4fae6e396c03117a11825823b8edfa0b8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075.png",
+      "bytes": 112312,
+      "sha256": "29aea09c802e9f8a342a76c897782e9d90ee1d885b665b05d8598f0fcdcea52c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_075_fire.png",
+      "bytes": 112201,
+      "sha256": "2fc2c2df41887e583faa0b49e869d24cd652958580727b19138125c5b70d6472"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100.png",
+      "bytes": 113336,
+      "sha256": "f85f5af7c84dfad4fbc1157d45c116fe79af74a3c5b13f979e3a077c7312d15b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/bastion/bastion-phase_100_fire.png",
+      "bytes": 113268,
+      "sha256": "a5be001f6b3a455704e9f9be3c27f0d01e5cbcbb7e29400fd0cf931f7bcce01f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier-child/carrier-child.png",
+      "bytes": 39277,
+      "sha256": "62394acc36fd52569f8e0660c1aefe2df7a3209ba89a1d75216961ba1c491727"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0.png",
+      "bytes": 109224,
+      "sha256": "24df3ad4ab54068a599b849cbc18d5d0bdd32936ec25f28de1e71b337b2d159f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload0_fire.png",
+      "bytes": 108869,
+      "sha256": "a47d80ea2595e82a1910a605dbde6b9c417aefa8cd13df81efee875f5436a188"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far.png",
+      "bytes": 110614,
+      "sha256": "f2ad3e2d72ec8c1572effeba8037db9fe233c886e176219458fad4f13496ac5e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1far_fire.png",
+      "bytes": 110580,
+      "sha256": "e86542479093eb0431b4c79e3791793de756675ab462be34daf25c36e8e3ffc9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near.png",
+      "bytes": 111247,
+      "sha256": "3b739393c4f45611117227c686a036af68f350ddfa97af6f3d621ccdb148dfca"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload1near_fire.png",
+      "bytes": 111010,
+      "sha256": "bd791f5645673aaf76541477a68e24fe3cb809b4c8355b8a3170269422aaada1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2.png",
+      "bytes": 112584,
+      "sha256": "4399348008405e259de4ba68f6ac3f35c162a89a3b08458cc5c3ea6d80403094"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_000_payload2_fire.png",
+      "bytes": 112361,
+      "sha256": "141cc399de5108a8c4c6d9bc7ba80de70f325a0ebb108254ad9fafc58945b247"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0.png",
+      "bytes": 109952,
+      "sha256": "b1208ad9ae78394885213a87d4a84fb41a9e6cac61fe50e3cc96f4c2478d6ad9"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload0_fire.png",
+      "bytes": 109826,
+      "sha256": "7f688ce938c57df4cf0a697744f3271e8538fd17828ba67f18d5911cc2d222b0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far.png",
+      "bytes": 111523,
+      "sha256": "1d13d88f46fdec859fbb2c24ced71abc88bb1a128ed5f0fa79d4edf9aec7bc41"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1far_fire.png",
+      "bytes": 111392,
+      "sha256": "23645d8badcc8987db4f77a1377ae5751a00325cd7098db7d691f13ffb1868b7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near.png",
+      "bytes": 111859,
+      "sha256": "c5e81081157ec783862ddfc43cb715d3798108fdb6f931975dd2e14087eca579"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload1near_fire.png",
+      "bytes": 111663,
+      "sha256": "a016043db029623e4f3ff1e7c3c20e70477ef9bf0b4ee87f77fee260e7e06206"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2.png",
+      "bytes": 113212,
+      "sha256": "614133e3e0d8df1639c97fb2d0ed94085c509cdd1881136665e88bf112e925de"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_025_payload2_fire.png",
+      "bytes": 113042,
+      "sha256": "a9642eafa349458911f7fb02b74fc29df4958eb3fd6d6e22b33d7092c3d5fa75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0.png",
+      "bytes": 110029,
+      "sha256": "8060a658c6fbf3cd8542701ee0b62326e3c084f5f67c6cec9c9f52d764317c5f"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload0_fire.png",
+      "bytes": 109857,
+      "sha256": "49721cd5f0bf6af2933f2c1ef150f583a0d2b7e6b8499ded2ebc00c1d13f983b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far.png",
+      "bytes": 111690,
+      "sha256": "e06f7e8c190b27407b36841978ce94450ee1a44a3165310461277e6312af8f47"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1far_fire.png",
+      "bytes": 111439,
+      "sha256": "b5255a1300978a37edd93185facb5a68fbcd5c73e6e66a26046fbc7b0823ad9c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near.png",
+      "bytes": 111763,
+      "sha256": "a3ac39f5aa5b1e10e01c396d647afdc641ca00240709c158ca6e4b288ec2587b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload1near_fire.png",
+      "bytes": 111600,
+      "sha256": "1bb53e72688cc2e55123887ac18a23ee4dd8345a36544d78f1fb1038d7e21005"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2.png",
+      "bytes": 113137,
+      "sha256": "b5fdde4432480338afd567e76d67cf0d784f0e9ac8140a6e7a9660cd040b2b2e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_050_payload2_fire.png",
+      "bytes": 113048,
+      "sha256": "9bc97d92dbd7cd52030705aea0118d4aeb63fad77e44edc8bf83f59fc7640370"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0.png",
+      "bytes": 110706,
+      "sha256": "9d2b02afae12ecd91d907235d6956f00ce34865287610d0306c160a44734d2c1"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload0_fire.png",
+      "bytes": 110591,
+      "sha256": "3131778b4bbacfdf05c2db0885e8b3a0c5643c694f1a94ca69c1df525c066fd8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far.png",
+      "bytes": 112142,
+      "sha256": "7285b3f4e828516d581afc49e89a7c19402966199792f65b841151627df8ad72"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1far_fire.png",
+      "bytes": 111931,
+      "sha256": "473f1c629dc0ea3e480345c5811da1b00531f83d92084fa6c4663c1b079b1f75"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near.png",
+      "bytes": 112535,
+      "sha256": "4720ed2a354e8fb17e477ef6390e629637970b870949aae4d385bc12bf5439f3"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload1near_fire.png",
+      "bytes": 112381,
+      "sha256": "51637714951b081e737715399343290125b60da1deabb7dd01f4daf657bdb01b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2.png",
+      "bytes": 113794,
+      "sha256": "4afca56c4abd3a3d67b049c215e5df796e2968487d0d805ad436afef1c4d59d7"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_075_payload2_fire.png",
+      "bytes": 113561,
+      "sha256": "24d85ba6d81d9fc81ccc5c7bc20311163c07f4e655dd2348ca4028a502e0df58"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0.png",
+      "bytes": 114040,
+      "sha256": "8130cb73ea0b8fdf315a827c30ae1f4db1408f1bf190c8c1a89f0716eb026102"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload0_fire.png",
+      "bytes": 114017,
+      "sha256": "aa976655216e808068c7c39caf6851df7eeafad5475323575ec6580059ada5d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far.png",
+      "bytes": 115970,
+      "sha256": "63ec89e7d616fb58832ca2f28fd989efdf8851f393c7b14113e390797324e3d2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1far_fire.png",
+      "bytes": 115585,
+      "sha256": "679d108eb28652911be67812ea2c0a0264a964033660c23c39aabc546bf5886e"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near.png",
+      "bytes": 116427,
+      "sha256": "a4282e3941e0b57ea3ba5b097b778c230423f7048ebdcb4c66470c362cc5d24d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload1near_fire.png",
+      "bytes": 116163,
+      "sha256": "fd737210c3fb5f4df92c098278b2ae60e9005a513135aed513207af33a3a8d95"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2.png",
+      "bytes": 117940,
+      "sha256": "fa9e139d5bd765c334fda759acd492c934cac87530b731f0a406f000b4a47e42"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/carrier/carrier-phase_100_payload2_fire.png",
+      "bytes": 117710,
+      "sha256": "7a723fa5e3884c2a7fd4bf92fc613aeda1bf63c8ce646c9c89ec6ca8f904d131"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000.png",
+      "bytes": 80095,
+      "sha256": "7284c171b16a9c430f2818e2e41d7380abbc9c4223cd04f4f85db334d15a89d8"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_000_fire.png",
+      "bytes": 78354,
+      "sha256": "f0a57c4d40238f617cf433f88ee07951aba98533879c9573f3d10a2298921b7d"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025.png",
+      "bytes": 80753,
+      "sha256": "d24bbd01b91fc43425043461c1db20c397db2db355cb74c14891828ddcf3905b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_025_fire.png",
+      "bytes": 79069,
+      "sha256": "3eb34dba05f57574b71fcff784443e7072f2ea06e4a997cb405501b2b425f483"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050.png",
+      "bytes": 83576,
+      "sha256": "01078cf1234cfcfe315c1d16353b263680d42954b13a3aa149067e0b7649f710"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_050_fire.png",
+      "bytes": 81935,
+      "sha256": "57b2a36ef72dfa08d588386469764601870f6499fb9859f6d53f68699b4ef908"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075.png",
+      "bytes": 87228,
+      "sha256": "492c077bddecb6ad2513b5e0b5fc1aafb6618ba7e3372b1e28b78a1752faf47c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_075_fire.png",
+      "bytes": 85660,
+      "sha256": "f5a25a43d932be9c37b155854fd770a9f1bd2dcb2a425325147b693bef02f7f2"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100.png",
+      "bytes": 90152,
+      "sha256": "141fa89cb3a08b8d929e2a64241d73653a0d271c57444f9899e1c13b90069223"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/lancer/lancer-phase_100_fire.png",
+      "bytes": 88862,
+      "sha256": "7329f376f277131437b5f91ba6a2b31dbbb84b6b381e4d34d88d52b2ca1bad5b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0.png",
+      "bytes": 117155,
+      "sha256": "b9bd2860cd1b414b2e2a25fa19a5c7862266e5976083addb8bd28f4e192a1e4c"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_0_fire.png",
+      "bytes": 114631,
+      "sha256": "a3639a0aaa28c147e9458be351a92b5bec672574bcd0b9ecde528ad30f6b45fd"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100.png",
+      "bytes": 121682,
+      "sha256": "e95e73b3fdf1ced8c80b9493c0a4fdac39b4825e189f7e78bbd37a36ace8ddd0"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_100_fire.png",
+      "bytes": 119666,
+      "sha256": "753425dc0f479dbd01c0fceea4dec172012d498b0471624db251044a00084312"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25.png",
+      "bytes": 118801,
+      "sha256": "babe32de283cc589cc1c49729a6d2d58a68094af910979cb2acb9346aab83dcc"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_25_fire.png",
+      "bytes": 116590,
+      "sha256": "ebe2f1c78d7b6e4d1982accaa66f34ba11fa0746733cd7304a74388efde52629"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50.png",
+      "bytes": 120766,
+      "sha256": "8ee4204a1b76208e0511e28eb69b19c97cf9f2c34c84bdb38fa48b3be3b2ba7b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_50_fire.png",
+      "bytes": 117934,
+      "sha256": "662011b5b3a389487b17cdc8f0c27ea723aa919f4e4e3b7d4533c80cf4ea6198"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75.png",
+      "bytes": 121164,
+      "sha256": "305d2d30a20c53bf6e74d696a67eb145b562465f74f9863d43c4ca4d62a8d07b"
+    },
+    {
+      "path": "assets/art/mecha-6h-local/five-boss-v2/runtime/warden/warden-phase_75_fire.png",
+      "bytes": 118701,
+      "sha256": "d4e73d967559ece8c41aa1fc51661146fda06a8766733fe1164c06a3e1dc3d24"
+    }
+  ],
+  "incompleteBossArt": false,
+  "bossAppearanceUserApproval": false,
+  "gui": 0,
+  "captures": 0,
+  "videos": 0,
+  "gitWrites": 0
+}

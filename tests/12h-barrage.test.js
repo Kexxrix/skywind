@@ -48,7 +48,7 @@ test('slow prefill and faster snapshot arrivals overlap at the authored contact 
   for (const pattern of ['halo', 'loom']) for (let pace = 1; pace < 6; pace++) {
     const plan = barragePlan(pattern, pace), slow = plan.bundles.find(bundle => bundle.family !== 'aim');
     const shots = plan.bundles.filter(bundle => bundle.family === 'aim');
-    assert.ok(shots.length === 3 && shots[0].at > 2);
+    assert.ok(shots.length === 3 && shots[0].at >= shots[0].lockLead);
     assert.ok(plan.families.includes('aim') && plan.families.length === 2);
     assert.ok(plan.prefillSeconds > 0);
     for (const shot of shots) {
@@ -56,7 +56,7 @@ test('slow prefill and faster snapshot arrivals overlap at the authored contact 
       assert.ok(arrival >= plan.contactWindow.from - 1e-9 && arrival <= plan.contactWindow.to + 1e-9);
       assert.equal(shot.aimLock, 'snapshot');
       assert.ok(shot.lockLead >= .25 && shot.lockLead <= .45);
-      assert.ok(shot.speed > slow.speed * 2);
+      assert.ok(shot.speed >= slow.speed * 1.5 && shot.speed - slow.speed >= 150);
     }
   }
   assert.equal(prefillDelay(125, 430), 600 / 125 - 600 / 430);
@@ -151,7 +151,7 @@ test('cathedral opens with four real tower ports and a delayed locked center lan
   const plan = barragePlan('cathedral', 2, .4);
   assert.deepEqual(plan.bundles.filter(bundle => bundle.pattern === 'cathedral').map(bundle => bundle.port), [0, 1, 2, 3]);
   assert.ok(plan.bundles.filter(bundle => bundle.pattern === 'snapshot').every(bundle => bundle.port === 4));
-  assert.ok(plan.bundles.at(-1).at > 3);
+  assert.ok(plan.bundles.find(bundle => bundle.pattern === 'snapshot').at > plan.bundles.filter(bundle => bundle.pattern === 'cathedral').at(-1).at + .35);
   for (const bundle of plan.bundles.filter(bundle => bundle.pattern === 'cathedral')) {
     assert.ok(patternGeometry(bundle).every(point => point.port === bundle.port));
   }
@@ -197,7 +197,7 @@ test('loom cells reach their fixed plane together under actual source and frozen
     assert.equal(points.length, bundle.count);
     for (const point of points) {
       assert.equal(point.targetX, 240);
-      assert.ok(point.speed < 200 && point.speed <= trialDifficulty(pace).maxBulletSpeed);
+      assert.ok(point.speed <= bundle.speedLimit && point.speed < SNAPSHOT_SPEEDS[pace]);
       assert.equal(point.motion.maxSpeed, point.speed);
       const shot = shotFrom(point, source);
       let low = 0, high = 9;
@@ -218,12 +218,12 @@ test('loom cells reach their fixed plane together under actual source and frozen
   }
 });
 
-test('near extreme loom ports retain the slow cap even when perfect plane alignment is impossible', () => {
+test('near extreme loom ports retain their field cap even when perfect plane alignment is impossible', () => {
   const bundle = barragePlan('loom', 5).bundles[0];
   const points = patternGeometry(bundle, { screenOrigin: { x: 550, y: 90 } });
   assert.equal(points.length, bundle.count);
-  assert.ok(points.some(point => point.speed === 199), 'long diagonal cells reach the authored slow cap');
-  assert.ok(points.every(point => point.speed <= 199 && point.motion.maxSpeed <= 199));
+  assert.ok(points.some(point => point.speed === bundle.speedLimit), 'long diagonal cells reach the authored field cap');
+  assert.ok(points.every(point => point.speed <= bundle.speedLimit && point.motion.maxSpeed <= bundle.speedLimit));
   const arrivals = points.map(point => {
     const shot = shotFrom(point, { x: 550, y: 90 });
     let low = 0, high = 9;
@@ -233,7 +233,7 @@ test('near extreme loom ports retain the slow cap even when perfect plane alignm
     }
     return (low + high) / 2;
   });
-  assert.ok(Math.max(...arrivals) - Math.min(...arrivals) > .5, 'clamped ports explicitly do not inherit the normal distant-port arrival guarantee');
+  assert.ok(Math.max(...arrivals) / Math.min(...arrivals) > 1.2, 'clamped ports retain meaningful relative arrival drift instead of inheriting the distant-port plane guarantee');
 });
 
 test('seed and loom share space-control accounting while keeping arming and grid behavior distinct', () => {
@@ -248,12 +248,15 @@ test('seed and loom share space-control accounting while keeping arming and grid
 });
 
 
-test('a field-only normal plan removes its late sniper dependency without changing the field shape', () => {
+test('a field-only normal plan preserves its finite budget and boss source while concentrating Stage3 halos forward', () => {
   for (let pace = 1; pace < 6; pace++) for (const pattern of ['halo', 'loom', 'petal', 'seed', 'zipper']) {
     const original = barragePlan(pattern, pace, .37), retained = structuredClone(original);
     const field = fieldOnlyPlan(original), difficulty = trialDifficulty(pace);
     assert.ok(!field.families.includes('aim'));
-    assert.deepEqual(field.bundles, original.bundles.filter(bundle => bundle.family !== 'aim'));
+    if (pattern === 'halo' && pace >= 2) {
+      assert.equal(field.bundles.length, pace===2?2:4);assert.ok(field.bundles.every(bundle => pace===2?bundle.forwardArc:bundle.forwardField));
+      assert.equal(field.total, original.bundles.filter(bundle => bundle.family !== 'aim').reduce((sum, bundle) => sum + bundle.count, 0));
+    } else assert.deepEqual(field.bundles, original.bundles.filter(bundle => bundle.family !== 'aim'));
     assert.ok(field.total <= original.total && field.total <= difficulty.maxSequenceBullets);
     assert.ok(field.bundles.every(bundle => bundle.count <= difficulty.maxPatternBullets));
     assert.equal(field.duration, field.bundles.at(-1)?.at || 0);
@@ -289,4 +292,19 @@ test('field-only contact fitting updates real slow travel without adding hidden 
   const fullBoss = barragePlan('loom', 4);
   assert.equal(fullBoss.bundles.filter(bundle => bundle.family === 'aim').length, 3);
   assert.deepEqual(fullBoss.families, ['loom', 'aim']);
+});
+
+test('normal forward halo rows keep finite hostile speeds and fixed surface gaps without carving around observed player lanes',()=>{
+  for(let pace=2;pace<6;pace++){
+    const original=barragePlan('halo',pace,.37),field=fieldOnlyPlan(original),rows=field.bundles;
+    for(const row of rows){
+      const points=patternGeometry(row,{screenOrigin:{x:900,y:220}});
+      assert.equal(points.length,row.count);assert.ok(points.every(point=>point.targetX===240&&point.speed<SNAPSHOT_SPEEDS[pace]));
+      const otherLane=patternGeometry(row,{screenOrigin:{x:900,y:220},safeLane:570});
+      assert.deepEqual(points.map(p=>p.targetY),otherLane.map(p=>p.targetY),'the observed player lane cannot remove or move a field projectile');
+      const widths=points.slice(1).map((point,index)=>point.targetY-points[index].targetY-2*(5.5+1.85));
+      assert.ok(widths.every(width=>width>2),'surface clearance includes both bullet radius and player1.85');
+    }
+    assert.ok(patternGeometry(original.bundles[0]).every(point=>Number.isFinite(point.angle)&&point.targetY===undefined),'full boss halo remains radial');
+  }
 });

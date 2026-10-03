@@ -1,7 +1,7 @@
-import { createGame, startGame, updateGame, consumeEvents, getWeaponStatus } from './game.js';
+import { createGame, startGame, updateGame, consumeEvents } from './game.js';
 import { Renderer } from './renderer.js';
 import { AudioDirector } from './audio.js';
-import { WEAPON_PRESENTATION, WEAPON_NAMES, supplyPresentation, tensionPresentation, gameViewport } from './presentation.js';
+import { WEAPON_PRESENTATION, WEAPON_NAMES, supplyPresentation, tensionPresentation, healthPresentation, weaponPresentation, gameViewport, hudLayout, pilotClearance } from './presentation.js';
 import { PilotUI } from './pilot-ui.js';
 import { LEVEL_RULES } from './level.js';
 
@@ -14,6 +14,7 @@ const pilot = new PilotUI($('pilot-hud'));
 let ready = false, paused = false, best = 0, recordBeforeRun = 0;
 let noticeTime = 0, weaponFeedbackTime = 0, previousMode = 'loading', lastStage = 1, lastFrame = 0;
 let lastPilotFrame = 0;
+let hudView={width:1280,height:720};
 let pointer = null, pointerHeld = false, touchFire = false, touchFirePointer = null, joystickPointer = null;
 const joystickInput = {x:0,y:0};
 const keys = new Set();
@@ -37,9 +38,12 @@ function refreshSoundButton() {
 
 function resizeHUD() {
   const shell=$('game-shell'),ui=$('game-ui'),view=gameViewport(shell.clientWidth,shell.clientHeight);
+  hudView=view;
   for(const name of ['width','height','left','top'])ui.style[name]=`${view[name]}px`;
   ui.dataset.size=view.size;ui.dataset.compact=String(view.compact);ui.dataset.short=String(view.short);
   ui.style.setProperty('--game-width',`${view.width}px`);
+  const layout=hudLayout(view.width,view.height);
+  for(const [name,value] of Object.entries(layout))ui.style.setProperty(`--hud-${name}`,`${value}px`);
   pilot.scale=Math.min(1,Math.max(96,view.width*362/1920)/362);
 }
 new ResizeObserver(resizeHUD).observe($('game-shell'));
@@ -105,6 +109,12 @@ function finish() {
 
 function updateUI() {
   const active=game.mode==='playing'||game.mode==='entering';
+  const clearance=pilotClearance(game,hudView.width,hudView.height),pilotHUD=$('pilot-hud');
+  pilotHUD.dataset.occluded=String(clearance.occluded);
+  pilotHUD.dataset.coreClear=String(clearance.coreClear);
+  for(const name of ['x','y','inner','outer'])pilotHUD.style.setProperty(`--pilot-clear-${name}`,`${clearance[name]}px`);
+  const compact=$('game-ui').dataset.compact==='true';
+  const dense=$('game-ui').dataset.size==='small';
   document.body.classList.toggle('in-game',active);
   $('title-screen').hidden=game.mode!=='title';$('gameover-screen').hidden=game.mode!=='gameover';
   $('pause-screen').hidden=!paused;$('hud').hidden=!active;
@@ -112,44 +122,64 @@ function updateUI() {
   $('cycle-label').textContent=game.difficulty.hell?`HELL ${String(Math.max(1,game.cycle-5)).padStart(2,'0')}`:`STAGE ${String(Math.min(5,game.cycle||1)).padStart(2,'0')}`;
   const phaseRemaining=Math.max(0,LEVEL_RULES.normalDuration-(game.normalTime||0));
   $('phase-label').textContent=game.phase==='boss-entry'?'INCOMING':game.phase==='boss'?'BOSS':`${game.normalTime>=42?'BOSS ':''}${phaseRemaining.toFixed(1)}s`;
-  $('energy-fill').style.width=`${game.player.hp}%`;
-  $('energy-fill').style.background=game.player.hp<=30?'#ff728b':game.player.hp<=55?'#e8dc75':'#82ee75';
-  $('hp-value').textContent=String(game.player.hp);$('score').textContent=formatScore(game.score);
+  const health=healthPresentation(game.player),healthBlock=$('health-block');
+  healthBlock.dataset.state=health.state;$('hud').dataset.health=health.state;
+  $('hud').style.setProperty('--hp-color',health.color);
+  $('energy-fill').style.width=`${100*health.gauge}%`;
+  $('energy-fill').style.background=health.color;
+  $('hp-value').textContent=health.value;$('hp-max').textContent=`/ ${health.maximum}`;
+  $('hp-state').textContent=health.label;
+  const healthMeter=healthBlock.querySelector('.energy-track');
+  healthMeter.setAttribute('aria-valuemax',String(health.maximum));healthMeter.setAttribute('aria-valuenow',String(health.hp));
+  healthBlock.setAttribute('aria-label',`${health.label} ${health.value} / ${health.maximum}`);
+  $('score').textContent=formatScore(game.score);
   $('combo').textContent=game.combo>1?`×${Math.min(5,1+Math.floor(game.combo/8))}  ${game.combo} CHAIN`:'';
-  const weapon=getWeaponStatus(game.player), row=$('weapon-row');
+  const weapon=weaponPresentation(game.player), row=$('weapon-row');
   row.style.setProperty('--weapon-color',WEAPON_PRESENTATION[weapon.mode].color);
   $('drone-row').style.setProperty('--weapon-color',WEAPON_PRESENTATION.drone.color);
-  if(row.dataset.mode!==weapon.mode){row.dataset.mode=weapon.mode;$('weapon-icon').setAttribute('d',weaponIcons[weapon.mode]);$('weapon-name').textContent=weaponLabels[weapon.mode];}
+  if(row.dataset.mode!==weapon.mode){row.dataset.mode=weapon.mode;$('weapon-icon').setAttribute('d',weaponIcons[weapon.mode]);}
+  $('weapon-name').textContent=compact&&weapon.mode==='normal'?'TWIN':weaponLabels[weapon.mode];
+  $('weapon-name').title=weaponLabels[weapon.mode];
   const level=weapon.level||game.player.basicLevel||1;
-  $('weapon-time').textContent=weapon.remaining>0?`${(Math.ceil(weapon.remaining*10)/10).toFixed(1)}s`:level===5?'MAX':`Lv.${level}`;
+  $('weapon-time').textContent=weapon.time;
   $('weapon-time').setAttribute('aria-label',weapon.remaining>0?'무기 남은 시간':'기본 무기, 시간 제한 없음');
-  $('weapon-gauge').style.transform=`scaleX(${weapon.remaining>0?weapon.gauge:1})`;
-  row.dataset.warning=String(weapon.remaining>0&&weapon.remaining<=3);
+  $('weapon-gauge').style.width=weapon.special?'100%':`${100*weapon.gauge}%`;
+  $('weapon-gauge').style.transform=`scaleX(${weapon.special?weapon.gauge:1})`;
+  row.dataset.warning=String(weapon.warning);row.dataset.special=String(weapon.special);
+  row.setAttribute('aria-label',`${weapon.name}, ${weapon.time}${weapon.warning?', 종료 임박':''}`);
   row.dataset.fresh=String(weaponFeedbackTime>0);
   row.style.setProperty('--warning-opacity',String(.7+Math.sin(game.time*4)*.2));
   $('drone-row').hidden=!weapon.drone;
   if(weapon.drone){
-    $('drone-time').textContent=`${(Math.ceil(weapon.drone.remaining*10)/10).toFixed(1)}s`;
+    $('drone-name').textContent=compact?'DRONE':'DRONE ×2';
+    $('drone-time').textContent=weapon.drone.time;
+    $('drone-row').setAttribute('aria-label',`독립 드론 2기, ${weapon.drone.time}${weapon.drone.warning?', 종료 임박':''}`);
     $('drone-gauge').style.transform=`scaleX(${weapon.drone.gauge})`;
-    $('drone-row').dataset.warning=String(weapon.drone.remaining<=3);
+    $('drone-row').dataset.warning=String(weapon.drone.warning);
     $('drone-row').dataset.fresh=String(weapon.drone.remaining>14.3);
   }
-  $('base-level').textContent=`BASE Lv.${level}${level===5?' · MAX':''}`;
-  $('base-level').hidden=weapon.remaining<=0;
+  $('base-level').textContent=dense?`BASE ${level}/5`:weapon.growth;
+  $('base-level').setAttribute('aria-label',weapon.growth);
+  $('base-level').hidden=false;$('base-level').dataset.max=String(level===5);
   const tension=tensionPresentation(game.tensionTime,game.tensionDuration);
   $('tension-row').dataset.active=String(tension.active);
   $('tension-row').dataset.fresh=String(tension.active&&tension.remaining>1.82);
-  $('tension-label').textContent=tension.active?'TENSION UP':'TENSION';
-  $('tension-time').textContent=tension.label;$('tension-gauge').style.transform=`scaleX(${tension.gauge})`;
+  $('tension-label').textContent=tension.active&&!dense?'TENSION UP':'TENSION';
+  $('tension-time').textContent=tension.active?tension.label:'GRAZE';
+  $('tension-row').setAttribute('aria-label',tension.active?`텐션 강화 ${tension.label}`:'근접 비행으로 텐션 활성화');
+  $('tension-gauge').style.transform=`scaleX(${tension.gauge})`;
   $('supply-hud').hidden=!active;
   for(const side of ['top','bottom']) {
     const element=$(`supply-${side}`),item=game.supply?.items.find(item=>item.side===side);
     const supply=supplyPresentation(item,game.player);element.hidden=!supply;
     if(supply){
-      element.dataset.phase=item.status;element.style.setProperty('--supply-color',supply.color);
-      element.querySelector('.supply-copy').textContent=supply.label;
-      element.querySelector('.supply-icon path').setAttribute('d',item.type==='change'?weaponIcons[item.weaponMode]||weaponIcons.normal:game.player.powerTime>0?'M12 3a9 9 0 1 0 9 9M12 6v6l4 2M18 2v6M15 5h6':'M12 5v14M5 12h14');
-      element.querySelector('.supply-phase').textContent=supply.phase;
+      element.dataset.phase=item.status;element.dataset.action=supply.action;
+      element.dataset.colorGroup=supply.colorGroup;element.style.setProperty('--supply-color',supply.color);
+      element.setAttribute('aria-label',supply.label);
+      element.querySelector('.supply-copy').textContent=supply.effect;
+      element.querySelector('.supply-time').textContent=`${supply.remaining.toFixed(1)}s`;
+      element.querySelector('.supply-icon path').setAttribute('d',supply.action==='change'?weaponIcons[supply.mode]||weaponIcons.normal:supply.action==='extend'?'M12 3a9 9 0 1 0 9 9M12 6v6l4 2M18 2v6M15 5h6':supply.action==='drone'?'M2 7L7 2L12 7L7 12ZM12 17L17 12L22 17L17 22Z':'M12 5v14M5 12h14');
+      element.querySelector('.supply-phase').textContent=`${side==='top'?'↑':'↓'} ${supply.phase}`;
       element.querySelector('.supply-label b').style.transform=`scaleX(${supply.gauge})`;
     }
   }

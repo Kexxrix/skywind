@@ -1,0 +1,76 @@
+{
+  "status": "full local finishing technical QC PASS; independent full review/runtime adoption pending",
+  "runtimeUniquePNGs": 31,
+  "sourcePoseCount": 30,
+  "mainSemanticStates": 38,
+  "roles": {
+    "carrier": {
+      "files": {
+        "actual.blend": "6574099818e0292018ee8e97acf036063bd9417a72f60be5b960ca80cf4bfa42",
+        "carrier-child.png": "2afbac046c628a08a216459a2c353c2412c44ebbadb487bc32d43118b142193a",
+        "carrier-phase_000_payload0.png": "07df2b6718d2607531876101c2da4e4e6358b3158e9e667afb1c9163a7d2599c",
+        "carrier-phase_000_payload1far.png": "8ab30a22c2429fde113afe21c1d3fd7d0b3c94b643bf0b71e7538a87f3cc2fe5",
+        "carrier-phase_000_payload1near.png": "9afd881006baa6dabab074e339075ef6c0f5fb83e112a974e6cb762fb7f19558",
+        "carrier-phase_000_payload2.png": "02c4ce9bbe668010b365d880ae865d2f410089e73f0197ad5cf09da5a0777ed8",
+        "carrier-phase_025_payload0.png": "bf6905261843f5869b75f8e0de1eb6a91e7c56b6471a73ded248db85063d9dcb",
+        "carrier-phase_025_payload1far.png": "e6c0842dcc45c354b5334b94d44423d1b46a21828bc76d62b2bdf41fb02e9124",
+        "carrier-phase_025_payload1near.png": "6a9d623e5ab36f6beffee6352e6436723d8283847124ef93695a92d914279752",
+        "carrier-phase_025_payload2.png": "292d821320bb9f59577c4742cc1e1f1c450358baf9150708d22d69a5adda97b9",
+        "carrier-phase_050_payload0.png": "9f420b6337ffe0c9de8ea38476b3a440ba65c0ca1a6cc475afca317e38e1de7b",
+        "carrier-phase_050_payload1far.png": "50a396ad746038b0aba0a3356b0f8fbebdc43fa6ab5bf31ad8ae55a9869e2db8",
+        "carrier-phase_050_payload1near.png": "a0a04d49f48c137dacea0fbb760382e7dd92f14b1283f562775151fd36661cee",
+        "carrier-phase_050_payload2.png": "c263f1a6da7da27b4de6d3218a7f52abd259cd48a15154b32e3b00c072f5cc77",
+        "carrier-phase_075_payload0.png": "ebd830d632362074fe8630f9f852cec28d9ee65b97bc875a9d3d8ed0da3d330e",
+        "carrier-phase_075_payload1far.png": "688afab0a14370dc2b226032d25fe6885aeb8b2045b209e4d3103ce38f1b5a02",
+        "carrier-phase_075_payload1near.png": "0906bdc04b4b93320d9e098cef6f2b6e4ee4922bd95f509bc8c82c4edd997179",
+        "carrier-phase_075_payload2.png": "c67ec6ebe4b47c7e30f80f057c01e3bc42accce46c6f7998cdc0d1a144a69201",
+        "carrier-phase_100_payload0.png": "08801348694323fd2545d9428fcbabeb0139eb23f1299cffa602a8ccb7f5331d",
+        "carrier-phase_100_payload1far.png": "9ea54ef568c24b970adca8a7f64289e23c37fb389fff34215f9c767f843ad729",
+        "carrier-phase_100_payload1near.png": "844a67b7eece4395ac87a82d077c05c26a70d5613e1ae8c617f2dd70f0c726db",
+        "carrier-phase_100_payload2.png": "88ad489ca01b87a6817c348cc6558f232281807c2f3a3ef2ce425f58faae900a",
+        "hull-inspection.json": "9cf3a221597f263455e6f0405c6d81bb6b03b362634697b2e90ddc26db4fb879",
+        "manifest-candidate.json": "e3d9de1766f4ecfc19616194dc725caeda8d57efff10f358040e9d5b69689b9a",
+        "production.json": "114fcb73ee5d4648235b1abc7f9139cf8159d6c8934ee0e7031a0b7ae9a4a9f7"
+      },
+      "runtimeUniquePNGs": 21,
+      "sourceBytesSameAsFinalRepresentative": true,
+      "sourceProvenance": "../carrier-finish-v1/actual.blend bytecopy",
+      "sourcePoseEvidence": "../source-pose-verification.json",
+      "childShaderEvidence": "../matching-child-shader.json"
+    },
+    "lancer": {
+      "files": {
+        "actual.blend": "ebdcbad947dd136e2e414a36311676cf2445618f41ef0a5df8f2e5f88309843e",
+        "hull-inspection.json": "5e0404db4537a675638ddade6db9abf30bf3ba41b158cb9ff2508fc8b34bb074",
+        "lancer-phase_000.png": "393218a78f5814d438983dee2dfefc0668aeed60b6c59922c62373f5b1af6f98",
+        "lancer-phase_000_fire.png": "4d6c13acbc4ec8e0356beca9322143d7f38232dabc4cd2e947df064fee157b4e",
+        "lancer-phase_025.png": "e9abcf73ef1509ab1e47d2cf1eeee8fdca4a1f0c3dee2a243fc1ab7e9a7fb8cc",
+        "lancer-phase_025_fire.png": "c1ab60987d59341772964c845a39cd15b4fc8b0b4bb00816c245c7170acbb36a",
+        "lancer-phase_050.png": "5668a96cf9eeb6439900318cd2d73767f21a57464daa8660f5ae35212d3ba8a8",
+        "lancer-phase_050_fire.png": "a5b1d22f73966587ef681e5abee9df20d8362e3ff246945f7d8dbf0913fc2f2d",
+        "lancer-phase_075.png": "53bbb1d93464342526020109fa79e4902779fff2fad942dc2e7abec7d1e59453",
+        "lancer-phase_075_fire.png": "98be642f71774b8f36560a3dd5c9ba697d135d29d207795d4bdff2dd1db66079",
+        "lancer-phase_100.png": "7d9dce8c06633c90d2e568490ada0808f1e37a789e6808eba165d6797cfc9aa6",
+        "lancer-phase_100_fire.png": "29e504541b858d38d24a8c1ac3ccde4113a22f6d1a46476c3a9c5d941979458f",
+        "manifest-candidate.json": "55d35a22b0444bfbec4d9ba5ad2ee2937677737db4c7e14de0f0697dea7397cc",
+        "production.json": "e3799a823e9bbfe53bab477c4d6f844b54004ee0f5a83f682fc8291a68c1f2aa"
+      },
+      "runtimeUniquePNGs": 10,
+      "sourceBytesSameAsFinalRepresentative": true,
+      "sourceProvenance": "../lancer-finish-v1/actual.blend bytecopy",
+      "sourcePoseEvidence": "../source-pose-verification.json",
+      "childShaderEvidence": "../matching-child-shader.json"
+    }
+  },
+  "evidence": {
+    "manifest.json": "327bef1081596215da12986dac4ccc29bfa056fbf3a79457d0700176fe9fb0c7",
+    "full-pixel-qc.json": "ea1dcdfe62ca91c95b2ffd333eff7f8b42b1d7040b7a5c4211910a84041f07ea",
+    "FULL_REPORT.ko.md": "8a4f1ea90f733a590f2cc22dac18d3680f266db9ea3cf89390d007aa21d20e6f",
+    "validation.json": "531922820575de65195ea152a60adea69096973cd8f40761603543ecf075bc60",
+    "contract-equality.json": "82995cf1b974de0ac124f0761757e7f86c94d030530f7a62699b49c573af371e",
+    "matching-child-shader.json": "41f47fcc1ecda8b3f23360a30d51f43af58785687fedfabfd1c76f1e0bd67431",
+    "source-pose-verification.json": "5d269f305f2965fde57cab093a5f2af39a2511f4b56d5959afc5295d988e8a0d"
+  },
+  "driverSHA256": "5279ceb1f6a939b0e3ba50a804e49fe79229744cce7e582cc8ea27947b3b3ebc",
+  "validationSHA256": "531922820575de65195ea152a60adea69096973cd8f40761603543ecf075bc60"
+}

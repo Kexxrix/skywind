@@ -1,0 +1,147 @@
+{
+  "bossKind": "lancer",
+  "manifestKey": "lancer",
+  "stateLookups": 15,
+  "uniquePNGPaths": 10,
+  "neutralGeometryPoses": [
+    {
+      "progress": 0,
+      "state": "phase_000",
+      "hullHash": "49e06bfa03290332a34d7f9f8c8f4ea06d313d768d617f365da7e95e73c26cfe",
+      "ports": [
+        {
+          "x": 14.3551,
+          "y": 183.6587
+        },
+        {
+          "x": 162.2131,
+          "y": 245.1528
+        }
+      ]
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_025",
+      "hullHash": "f51748c8cd25ec3b81872b3af9ecacd8cff9e73d2e381910e491de6a72e2bd57",
+      "ports": [
+        {
+          "x": 14.3551,
+          "y": 183.6587
+        },
+        {
+          "x": 162.2131,
+          "y": 245.1528
+        }
+      ]
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_050",
+      "hullHash": "abab51d02b107f66043ca2f1e26c972db5a8b85cc7ffb9665b0660d12e815074",
+      "ports": [
+        {
+          "x": 14.3551,
+          "y": 183.6587
+        },
+        {
+          "x": 162.2131,
+          "y": 245.1528
+        }
+      ]
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_075",
+      "hullHash": "c47969098c61729aa354b38a7a55ea7b22e6350865157e5673796e83c3f1be4e",
+      "ports": [
+        {
+          "x": 14.3551,
+          "y": 183.6587
+        },
+        {
+          "x": 162.2131,
+          "y": 245.1528
+        }
+      ]
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "hullHash": "2785ccbeefd91bb62d9b1e66c9ca51229626a2034128925df5a788311e917fef",
+      "ports": [
+        {
+          "x": 14.3551,
+          "y": 183.6587
+        },
+        {
+          "x": 162.2131,
+          "y": 245.1528
+        }
+      ]
+    }
+  ],
+  "selection": [
+    {
+      "progress": 0,
+      "state": "phase_000",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.249,
+      "state": "phase_000",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_025",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.499,
+      "state": "phase_025",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_050",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.749,
+      "state": "phase_050",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_075",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.999,
+      "state": "phase_075",
+      "coreExposed": false
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "coreExposed": true
+    }
+  ],
+  "semanticAliases": {
+    "neutralByProgress": {
+      "0": "phase_000",
+      "1": "phase_100",
+      "0.25": "phase_025",
+      "0.5": "phase_050",
+      "0.75": "phase_075"
+    },
+    "fireByProgress": {
+      "0": "phase_000_fire",
+      "1": "phase_100_fire",
+      "0.25": "phase_025_fire",
+      "0.5": "phase_050_fire",
+      "0.75": "phase_075_fire"
+    }
+  },
+  "pass": true
+}

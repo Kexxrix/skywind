@@ -1,0 +1,52 @@
+[
+  {
+    "state": "phase_000",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_000_fire",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_025",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_025_fire",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_050",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_050_fire",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_075",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_075_fire",
+    "sourceExact": true,
+    "coreHidden": true
+  },
+  {
+    "state": "phase_100",
+    "sourceExact": true,
+    "coreHidden": false
+  },
+  {
+    "state": "phase_100_fire",
+    "sourceExact": true,
+    "coreHidden": false
+  }
+]

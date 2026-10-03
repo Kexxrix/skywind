@@ -29,24 +29,27 @@
     </div>
     <div id="status-group">
     <section id="hud" aria-label="비행 상태" hidden>
-      <div id="flight-status"><span id="cycle-label">STAGE 01</span><span id="phase-label">45.0s</span></div>
-      <div class="energy-label"><span>ENERGY</span><span id="hp-value">100</span></div>
-      <div class="energy-track"><div id="energy-fill"></div></div>
-      <output id="score">000000</output>
+      <div class="hud-header"><div id="flight-status"><span id="cycle-label">STAGE 01</span><span id="phase-label">45.0s</span></div><output id="score" aria-label="점수">000000</output></div>
+      <div id="health-block" data-state="stable">
+        <div class="energy-label"><span id="hp-state">HP</span><span class="hp-number"><strong id="hp-value">100</strong><small id="hp-max">/ 100</small></span></div>
+        <div class="energy-track" role="meter" aria-label="남은 HP" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div id="energy-fill"></div></div>
+      </div>
       <div id="power-status" aria-label="무기 상태">
         <div id="weapon-row" class="weapon-row" data-mode="normal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path id="weapon-icon" d="M3 7H21M3 17H21"/></svg>
           <span id="weapon-name">TWIN CANNON</span><span id="weapon-time" class="weapon-time">Lv.1</span>
           <span class="weapon-meter"><i id="weapon-gauge"></i></span>
         </div>
-        <div id="drone-row" class="weapon-row drone-row" hidden>
+      </div>
+      <div class="hud-footer">
+        <div id="base-level">BASE Lv.1</div>
+        <div id="drone-row" class="drone-row" aria-label="독립 드론 2기" hidden>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7L7 2L12 7L7 12ZM12 17L17 12L22 17L17 22Z"/></svg>
-          <span>DRONE ×2</span><span id="drone-time" class="weapon-time"></span>
+          <span id="drone-name">DRONE ×2</span><span id="drone-time" class="weapon-time"></span>
           <span class="weapon-meter"><i id="drone-gauge"></i></span>
         </div>
+        <div id="tension-row" data-active="false"><span id="tension-label">TENSION</span><span id="tension-time">GRAZE</span><i><b id="tension-gauge"></b></i></div>
       </div>
-      <div id="base-level">BASE Lv.1</div>
-      <div id="tension-row" data-active="false"><span id="tension-label">TENSION</span><span id="tension-time">GRAZE TO CHARGE</span><i><b id="tension-gauge"></b></i></div>
       <div id="combo"></div>
     </section>
     <div id="notice" role="status"></div>
@@ -54,11 +57,11 @@
     <div id="supply-hud" aria-label="상하 보급 안내" hidden>
       <div id="supply-top" class="supply-side" data-side="top" hidden>
         <svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-hidden="true"><path class="visor-arc" d="M24 147Q185 72 445 37M835 37Q1095 72 1256 147"/><path class="visor-stream" d="M24 147Q185 72 445 37M835 37Q1095 72 1256 147"/><path class="visor-direction" d="m633 15 7-9 7 9M844 46l12 12h65"/></svg>
-        <div class="supply-label"><span class="supply-phase">APPROACH</span><svg class="supply-icon" viewBox="0 0 24 24" aria-hidden="true"><path/></svg><strong class="supply-copy"></strong><i><b></b></i></div>
+        <div class="supply-label"><div class="supply-heading"><span class="supply-phase">↑ APPROACH</span><span class="supply-time"></span></div><svg class="supply-icon" viewBox="0 0 24 24" aria-hidden="true"><path/></svg><strong class="supply-copy"></strong><i><b></b></i></div>
       </div>
       <div id="supply-bottom" class="supply-side" data-side="bottom" hidden>
         <svg viewBox="0 0 1280 720" preserveAspectRatio="none" aria-hidden="true"><path class="visor-arc" d="M24 573Q175 658 440 678M840 678Q1105 658 1256 573"/><path class="visor-stream" d="M24 573Q175 658 440 678M840 678Q1105 658 1256 573"/><path class="visor-direction" d="m633 701 7 9 7-9M844 674l12-12h65"/></svg>
-        <div class="supply-label"><span class="supply-phase">APPROACH</span><svg class="supply-icon" viewBox="0 0 24 24" aria-hidden="true"><path/></svg><strong class="supply-copy"></strong><i><b></b></i></div>
+        <div class="supply-label"><div class="supply-heading"><span class="supply-phase">↓ APPROACH</span><span class="supply-time"></span></div><svg class="supply-icon" viewBox="0 0 24 24" aria-hidden="true"><path/></svg><strong class="supply-copy"></strong><i><b></b></i></div>
       </div>
     </div>
     <div id="boss-hud" hidden><span>WARDEN</span><div><i id="boss-fill"></i></div></div>

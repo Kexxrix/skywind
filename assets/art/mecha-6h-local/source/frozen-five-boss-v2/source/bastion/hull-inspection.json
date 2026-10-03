@@ -1,0 +1,227 @@
+{
+  "sixh-bastion-predator-full-v3/phase_000": {
+    "decodedRGBASha256": "964a0a4bc35b8449d687bad8d1b9e4113fb5624ef829a967e1047212318e20ca",
+    "hullPixels": 26262,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_000_fire": {
+    "decodedRGBASha256": "a7c050fc8f0e921956505b48c37045bda993004e91021b8d2b692523af57e9a9",
+    "hullPixels": 26181,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_025": {
+    "decodedRGBASha256": "62ecb91296d4b24bb3431255b45c78e83708aff9ecb4d623fae9cabfc27d0e4e",
+    "hullPixels": 26512,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_025_fire": {
+    "decodedRGBASha256": "df307f21c0b60e4f4430d25c3da5b7bb7cfe6a4621495715ca4c07cadf82d21d",
+    "hullPixels": 26426,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_050": {
+    "decodedRGBASha256": "0faa2116744335fdb866b840dadf37588137eb3fb794e76f0d22ba78c18d3881",
+    "hullPixels": 26736,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_050_fire": {
+    "decodedRGBASha256": "c1ba01cfff9892382d8f9477d38ea4c327a2b0f030e5e082bf8e01a611f8dc83",
+    "hullPixels": 26656,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_075": {
+    "decodedRGBASha256": "f6d8d09fa18f1f34a92ab857779c400df15ee864037bd17d298b27741da64680",
+    "hullPixels": 26945,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_075_fire": {
+    "decodedRGBASha256": "00738ffd4c86d8c4ba452cce7c19e699aa4a23182d01c5213ba0fa992474dd16",
+    "hullPixels": 26865,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_100": {
+    "decodedRGBASha256": "39e66bfd672d83eee55130030e900c49ec94450468d9bfacdaf02990f12c1e44",
+    "hullPixels": 27040,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      322
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/phase_100_fire": {
+    "decodedRGBASha256": "5dc0b060454a8c3d24641d0e21d2e8cac0689fcb782e9e84642fe80700b32025",
+    "hullPixels": 26954,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      322
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/idle": {
+    "decodedRGBASha256": "964a0a4bc35b8449d687bad8d1b9e4113fb5624ef829a967e1047212318e20ca",
+    "hullPixels": 26262,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/charge": {
+    "decodedRGBASha256": "964a0a4bc35b8449d687bad8d1b9e4113fb5624ef829a967e1047212318e20ca",
+    "hullPixels": 26262,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/fire": {
+    "decodedRGBASha256": "a7c050fc8f0e921956505b48c37045bda993004e91021b8d2b692523af57e9a9",
+    "hullPixels": 26181,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/open": {
+    "decodedRGBASha256": "39e66bfd672d83eee55130030e900c49ec94450468d9bfacdaf02990f12c1e44",
+    "hullPixels": 27040,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      322
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": true,
+    "muzzles": 3
+  },
+  "sixh-bastion-predator-full-v3/damaged": {
+    "decodedRGBASha256": "964a0a4bc35b8449d687bad8d1b9e4113fb5624ef829a967e1047212318e20ca",
+    "hullPixels": 26262,
+    "hullTransparentPixels": 0,
+    "hullTransparentFraction": 0.0,
+    "alphaBounds": [
+      40,
+      47,
+      333,
+      319
+    ],
+    "borderAlphaMax": 0.0,
+    "coreExposed": false,
+    "muzzles": 3
+  }
+}

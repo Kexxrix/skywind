@@ -1,0 +1,198 @@
+{
+  "method": "earclip concave authored XZ section then merge adjacent triangles iff union convex; clip actual evaluated mesh to cells; source geometry unchanged",
+  "cells": {
+    "narrow tilted vertebral load spar": [
+      [
+        [
+          0.96,
+          -0.88
+        ],
+        [
+          0.8,
+          -1.48
+        ],
+        [
+          1.09,
+          -1.22
+        ]
+      ],
+      [
+        [
+          0.77,
+          0.74
+        ],
+        [
+          0.96,
+          -0.88
+        ],
+        [
+          1.09,
+          -1.22
+        ],
+        [
+          1.18,
+          0.32
+        ],
+        [
+          0.96,
+          1.25
+        ]
+      ]
+    ],
+    "exposed continuous gold structural tendon": [
+      [
+        [
+          0.98,
+          -0.94
+        ],
+        [
+          0.87,
+          -1.34
+        ],
+        [
+          1.02,
+          -1.13
+        ]
+      ],
+      [
+        [
+          0.84,
+          0.77
+        ],
+        [
+          0.98,
+          -0.94
+        ],
+        [
+          1.02,
+          -1.13
+        ],
+        [
+          1.08,
+          0.22
+        ],
+        [
+          0.9,
+          1.15
+        ]
+      ]
+    ],
+    "upper swept vertical execution wing": [
+      [
+        [
+          0.44,
+          2.28
+        ],
+        [
+          0.88,
+          0.56
+        ],
+        [
+          1.1,
+          0.32
+        ],
+        [
+          1.32,
+          0.72
+        ],
+        [
+          0.69,
+          2.03
+        ]
+      ]
+    ],
+    "upper blade metallic load facet": [
+      [
+        [
+          0.53,
+          2.09
+        ],
+        [
+          0.87,
+          0.79
+        ],
+        [
+          1.12,
+          0.76
+        ],
+        [
+          0.72,
+          1.76
+        ]
+      ]
+    ],
+    "upper blade gold leading tendon": [
+      [
+        [
+          0.44,
+          2.28
+        ],
+        [
+          0.88,
+          0.6
+        ],
+        [
+          0.96,
+          0.66
+        ],
+        [
+          0.51,
+          2.17
+        ]
+      ]
+    ],
+    "ventral reverse sweep execution wing": [
+      [
+        [
+          0.61,
+          -2.09
+        ],
+        [
+          0.79,
+          -1.94
+        ],
+        [
+          1.26,
+          -1.04
+        ],
+        [
+          1.13,
+          -0.63
+        ],
+        [
+          0.99,
+          -0.83
+        ]
+      ]
+    ],
+    "ventral wing tapered metallic load facet": [
+      [
+        [
+          0.71,
+          -1.91
+        ],
+        [
+          0.92,
+          -1.58
+        ],
+        [
+          1.14,
+          -1.03
+        ],
+        [
+          1.0,
+          -1.01
+        ]
+      ]
+    ]
+  },
+  "pieceCounts": {
+    "narrow tilted vertebral load spar": 2,
+    "exposed continuous gold structural tendon": 2,
+    "upper swept vertical execution wing": 1,
+    "upper blade metallic load facet": 1,
+    "upper blade gold leading tendon": 1,
+    "ventral reverse sweep execution wing": 1,
+    "ventral wing tapered metallic load facet": 1
+  }
+}

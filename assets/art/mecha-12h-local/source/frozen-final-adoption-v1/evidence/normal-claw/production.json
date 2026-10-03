@@ -1,0 +1,28 @@
+{
+  "blender": "5.2.2 LTS",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 24,
+  "camera": {
+    "location": [
+      0,
+      -16,
+      3.0999999046325684
+    ],
+    "orthoScale": 3.799999952316284
+  },
+  "elapsedSeconds": 6.924478769302368,
+  "generatorSHA256": "edd1c007aa81c4cb96f28cf7611072c7b9d688b8ea85668c509f4a054acd3b1f",
+  "helperSourceSHA256": "04a5f2c649ef1109e9e772dde1d7ca5686d18b54445d9949bc7293e101620b6a",
+  "files": {
+    "actual.blend": "b530fa7a0f30cb310dac92ca181f39fbf15a35edd2313941a8e956227ae6779b",
+    "source-idle.blend": "855094b2dd1c3e8ded03c409181c4d4202d23bbc29feca82d19aa881b2c3a20a",
+    "claw-idle.png": "e1c3260b612229f907c93e6682f786e3621cb42bdeec977c2821053a84745725",
+    "generator-original.py": "edd1c007aa81c4cb96f28cf7611072c7b9d688b8ea85668c509f4a054acd3b1f",
+    "bastion_full_v3_generator.py": "04a5f2c649ef1109e9e772dde1d7ca5686d18b54445d9949bc7293e101620b6a"
+  },
+  "originalSourceFolder": "normal-claw",
+  "sourceRecreated": false,
+  "newRendering": false,
+  "sourcePoseScope": "actual/source-idle only in this representative; full three-state source remains in original normal-claw"
+}

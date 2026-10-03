@@ -88,11 +88,14 @@ function payloadSelection(entry,child) {
   if(!child)throw new Error('Invalid mecha payload selection without matching child');
   for(const key of ['frameTemplate','progressRule','selectionPriority','spawnRule'])
     if(typeof raw[key]!=='string'||!raw[key])throw new Error('Invalid mecha payload selection template');
+  if(raw.fireFrameTemplate!=null&&(typeof raw.fireFrameTemplate!=='string'||!raw.fireFrameTemplate))
+    throw new Error('Invalid mecha payload fire template');
   const near=raw.nearDockIndex,far=raw.farDockIndex;
   if(!Number.isInteger(near)||!Number.isInteger(far)||near===far||near<0||far<0||near>=2||far>=2)
     throw new Error('Invalid mecha payload dock indices');
   return Object.freeze({frameTemplate:raw.frameTemplate,progressRule:raw.progressRule,selectionPriority:raw.selectionPriority,
-    nearDockIndex:near,farDockIndex:far,spawnRule:raw.spawnRule});
+    nearDockIndex:near,farDockIndex:far,spawnRule:raw.spawnRule,
+    ...(raw.fireFrameTemplate?{fireFrameTemplate:raw.fireFrameTemplate}:{})});
 }
 function framePayload(frame,pivot,scale,child,selection) {
   const docks=dockCenters(frame.dockCentersPixels,pivot,scale);
@@ -108,6 +111,27 @@ function framePayload(frame,pivot,scale,child,selection) {
   const expected=count===2?'payload2':count===0?'payload0':frame.payloadVisible[selection.nearDockIndex]?'payload1near':'payload1far';
   if(variant!==expected)throw new Error('Invalid mecha payload variant');
   return {runtimeDockCenters:docks,payloadVisible:Object.freeze([...frame.payloadVisible]),payloadCount:count,payloadVariant:variant};
+}
+function semanticAliases(entry,states,mechanism) {
+  const raw=entry.semanticAliases;
+  if(raw==null)return null;
+  const result={};
+  for(const key of ['charge','damaged'])if(raw[key]!=null) {
+    if(typeof raw[key]!=='string')throw new Error('Invalid mecha semantic alias description');
+    result[key]=raw[key];
+  }
+  for(const key of ['neutralByProgress','fireByProgress'])if(raw[key]!=null) {
+    const seen=new Set(),map={};
+    for(const [value,state] of Object.entries(raw[key])) {
+      const progress=Number(value);
+      if(!Number.isFinite(progress)||seen.has(progress)||!mechanism.some(frame=>frame.progress===progress)
+        ||typeof state!=='string'||!Object.hasOwn(states,state))throw new Error('Invalid mecha semantic progress alias');
+      seen.add(progress);map[value]=state;
+    }
+    if(seen.size!==mechanism.length)throw new Error('Invalid incomplete mecha semantic progress aliases');
+    result[key]=Object.freeze(map);
+  }
+  return Object.freeze(result);
 }
 const safeFilename = filename => {
   if (typeof filename !== 'string' || !/^[\w./-]+$/.test(filename) || filename.startsWith('/') || filename.split('/').includes('..')) {
@@ -136,17 +160,21 @@ export function registerMechaManifest(manifest) {
         return Object.freeze({x:dx/length,y:dy/length});
       });
       const nozzles = (frame.nozzlesPixels || []).map(anchor => point(anchor, pivot, scale));
+      if(frame.muzzleNames!=null&&(!Array.isArray(frame.muzzleNames)||frame.muzzleNames.length!==muzzles.length||frame.muzzleNames.some(name=>typeof name!=='string')))
+        throw new Error('Invalid mecha muzzle names');
       const core = frame.corePixels ? Object.freeze({...point(frame.corePixels,pivot,scale),radius:finite(frame.corePixels.radius,'core radius')*scale}) : null;
       if (core && core.radius <= 0) throw new Error('Invalid mecha core radius');
       states[name] = Object.freeze({filename:safeFilename(frame.filename),runtimeMuzzles:Object.freeze(muzzles),runtimeMuzzleDirections:Object.freeze(directions),runtimeNozzles:Object.freeze(nozzles),runtimeCore:core,
         runtimeBodyHulls:bodyHulls(frame.bodyHullPixels??entry.bodyHullPixels,pivot,scale),runtimeBodyBounds:bodyBounds(frame.bodyBoundsPixels??entry.bodyBoundsPixels,pivot,scale),
-        coreExposed:frame.coreExposed===true,sourceState:frame.sourceState||name,...framePayload(frame,pivot,scale,child,selection)});
+        coreExposed:frame.coreExposed===true,sourceState:frame.sourceState||name,
+        ...(frame.muzzleNames?{muzzleNames:Object.freeze([...frame.muzzleNames])}:{}),...framePayload(frame,pivot,scale,child,selection)});
     }
     const mechanism=mechanismFrames(entry,states);
+    const aliases=semanticAliases(entry,states,mechanism);
     const common = {key:entry.key,canvasWidth:width,canvasHeight:height,displayWidth,displayHeight:height*scale,mechanismFrames:mechanism,
       weakpointEnabled:entry.weakpointEnabled===true&&Object.values(states).some(frame=>frame.coreExposed===true&&frame.runtimeCore),facing:entry.facing||'left',
       pivot:Object.freeze({x:pivot.x*scale,y:pivot.y*scale}),
-      ...(child?{matchingChild:child}:{}),...(selection?{payloadMechanismSelection:selection}:{})};
+      ...(child?{matchingChild:child}:{}),...(selection?{payloadMechanismSelection:selection}:{}),...(aliases?{semanticAliases:aliases}:{})};
     const views = Object.freeze(Object.fromEntries(Object.entries(states).map(([state,frame])=>[state,Object.freeze({...common,...frame,state})])));
     const spec = Object.freeze({...common,states:Object.freeze(states),views,mechanismFrames:mechanism});
     nextEntries.set(entry.key,spec);
@@ -185,6 +213,16 @@ export function getMechaSpec(enemy) {
   }
   if(typeof enemy.artState==='string'&&Object.hasOwn(spec.views,enemy.artState))return spec.views[enemy.artState];
   const state = enemy.fireFlash > 0 && spec.views.fire ? 'fire' : enemy.armorOpen ? 'open' : enemy.telegraph > 0 ? 'charge' : 'idle';
+  // A finite normal bay owns visible semantic poses rather than boss opening
+  // progress. Select pixels, hulls and occupied docks as one live snapshot.
+  if (!spec.mechanismFrames.length && spec.matchingChild && spec.payloadMechanismSelection) {
+    const occupied = enemy.payloadDockOccupied || spec.views.idle.payloadVisible;
+    if (occupied?.length === 2) {
+      const view = Object.values(spec.views).find(frame => frame.state.startsWith(state + '_')
+        && frame.payloadVisible?.every((visible, index) => visible === occupied[index]));
+      if (view) return view;
+    }
+  }
   return spec.views[state] || spec.views.idle;
 }
 

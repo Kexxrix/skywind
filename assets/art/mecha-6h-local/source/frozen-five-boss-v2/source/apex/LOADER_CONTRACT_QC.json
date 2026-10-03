@@ -1,0 +1,82 @@
+{
+  "source": "read-only16-final/dist/src/mecha-art.js",
+  "standaloneRegister": true,
+  "key": "apex",
+  "frames": 10,
+  "neutralFloor": [
+    {
+      "progress": 0,
+      "state": "idle",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.1,
+      "state": "idle",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.25,
+      "state": "mechanism_25",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.49,
+      "state": "mechanism_25",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.5,
+      "state": "mechanism_50",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.74,
+      "state": "mechanism_50",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.75,
+      "state": "mechanism_75",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.999,
+      "state": "mechanism_75",
+      "coreExposed": false
+    },
+    {
+      "progress": 1,
+      "state": "open",
+      "coreExposed": true
+    }
+  ],
+  "fireByProgress": [
+    {
+      "progress": 0,
+      "state": "fire",
+      "muzzles": 3
+    },
+    {
+      "progress": 1,
+      "state": "open_fire",
+      "muzzles": 3
+    },
+    {
+      "progress": 0.25,
+      "state": "mechanism_25_fire",
+      "muzzles": 3
+    },
+    {
+      "progress": 0.5,
+      "state": "mechanism_50_fire",
+      "muzzles": 3
+    },
+    {
+      "progress": 0.75,
+      "state": "mechanism_75_fire",
+      "muzzles": 3
+    }
+  ],
+  "frameSHA256MismatchCount": 0,
+  "portNamesMismatchCount": 0
+}

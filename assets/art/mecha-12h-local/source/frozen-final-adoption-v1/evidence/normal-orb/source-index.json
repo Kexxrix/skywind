@@ -1,0 +1,49 @@
+{
+  "status": "idle representative local technical QC PASS; independent4normal direction gate pending; charge/fire source prepared not rendered",
+  "runtimePNGCount": 1,
+  "sourcePoseCount": 3,
+  "actualSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+  "files": {
+    "actual.blend": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+    "source-idle.blend": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4",
+    "source-charge.blend": "d7c68ce0f32be69044e4e24f4bcf25e014d055e34d1fe11e2ccfe8464acf0674",
+    "source-fire.blend": "f268633be7be0c6c93573bfd1103dc9aeef63658ac83028dd143c0fdd5ef25a7",
+    "orb-idle.png": "ed040e5fa080def26e859f40f0a49b56199bd51e15d1a88267d8d706d598f594",
+    "manifest-candidate.json": "8191c22b409c434f4d24cbb6c5b4f038ec8e025cd9f23baca92dbd2851b7ab2d",
+    "manifest-source-poses.json": "575a123c61e46478c8fcddbbff64e987f89f0b242d32fafdc51ba4418e6e07d5",
+    "production.json": "2560bd595e26ea04e15a5db547e4305806e7524dfe8103ad2dddd80c988f8ed1",
+    "source-anchor-inspection.json": "f0799a0bbc39c6e90520b046552f6fe7d0e82e0e85a4b9f2e67bf9dd62d734c8",
+    "validation.json": "12448d2925b2b3e3d73cdde0cb858583798ae8b28a1857d1825c7556f05bf8b3",
+    "hull-inspection.json": "3276de2497ec9e02c50cb7b62fce99805eb53c13edc086f9522b536294a51ca0",
+    "REPORT.ko.md": "beb11a3deecc1e79089bad09637ba82551dcf004fd6a8339636f3d9bfc8864bd"
+  },
+  "scripts": {
+    "generate_representative_v3.py": "a104a24d14ad2a8c956fd1b44e48061cc597cd2d7afca9686dae681676834c8a",
+    "render_idle_v3.py": "a7f84f96f8eba25809d3f284dcbe3c7be62e9dda4d595ff020ca3142ea2305a0",
+    "inspect_source_v3.py": "1a83749e594b7a145f304e456f251b0dc4fe97571845b62fb9059e009317b164",
+    "validate_v3.mjs": "bf86eff67047842e49fc3608c6e246e86774c2a944a7380ec7e3010a464221fb",
+    "compose_idle_v3.ps1": "a77d82ee6bc8ce2795a0d6e29c2f427c488d6eeb7f78c224382b8062079b1c6f",
+    "compose_normal_comparison.ps1": "ea968d9257a2248e0469c30222729ad45b586318963438e918e96b822b732815"
+  },
+  "portIndexContract": [
+    {
+      "index": 0,
+      "name": "trident_2",
+      "placement": "lower",
+      "canonicalPhase": -0.22
+    },
+    {
+      "index": 1,
+      "name": "trident_1",
+      "placement": "center",
+      "canonicalPhase": 0
+    },
+    {
+      "index": 2,
+      "name": "trident_0",
+      "placement": "upper",
+      "canonicalPhase": 0.22
+    }
+  ],
+  "angleAuthority": "current checkout game.js enemyMuzzles uses authored origin only; releaseBundle uses patternGeometry point.angle; physical forward .16 is never added to canonical phase; no code change"
+}

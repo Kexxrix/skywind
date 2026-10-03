@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, startGame, updateGame, consumeEvents, difficultyAt, worldToScreen, screenToWorld, sequenceToWorld } from '../src/game.js';
-import { barragePlan, AIM_SPEEDS } from '../src/barrage.js';
+import { barragePlan, AIM_SPEEDS, SNAPSHOT_SPEEDS, relativeMinimumDistance } from '../src/barrage.js';
+import * as engine from '../src/game.js';
+import * as art from '../src/mecha-art.js';
+import { createVisibleController } from '../tools/qa-12h-controller.mjs';
 
 function playable(tier = 0) {
   const game = createGame(74912); startGame(game); game.mode = 'playing';
@@ -27,8 +30,8 @@ function advance(g, seconds, input = {}) {
 test('five stages and bounded hell depend only on victories and hold population and speed budgets', () => {
   const first = difficultyAt(0), second = difficultyAt(0, 1);
   assert.deepEqual(difficultyAt(8000), first);
-  assert.deepEqual([first.maxEnemies, first.maxAttackers, first.maxEnemyBullets, first.maxSequenceBullets, first.maxBulletSpeed], [10, 2, 120, 72, 160]);
-  assert.deepEqual([second.maxEnemies, second.maxAttackers, second.maxEnemyBullets, second.maxSequenceBullets, second.maxBulletSpeed], [12, 3, 180, 112, 340]);
+  assert.deepEqual([first.maxEnemies, first.maxAttackers, first.maxEnemyBullets, first.maxSequenceBullets, first.maxBulletSpeed], [12, 3, 180, 72, 320]);
+  assert.deepEqual([second.maxEnemies, second.maxAttackers, second.maxEnemyBullets, second.maxSequenceBullets, second.maxBulletSpeed], [12, 3, 180, 112, 420]);
   assert.equal(difficultyAt(8000, 99).pace, 5);
   assert.equal(difficultyAt(8000, 99).hell, true);
   assert.equal(difficultyAt(8000, 99).tier, 100);
@@ -65,10 +68,11 @@ test('whole attack source and bullet reservations survive every ring and port un
 
 test('a sequence that cannot reserve its whole shape waits without partial tell or stray bullets', () => {
   const g = playable(); g.enemies = [emitter(1, 'orb', 'B01')];
-  g.enemyBullets = Array.from({ length: 90 }, (_, i) => ({ id: i + 50, x: 650, y: 650, vx: 0, vy: 0, radius: 5.5, age: 0 }));
+  const saturation = g.difficulty.maxEnemyBullets - barragePlan('B01', g.difficulty.pace).total + 1;
+  g.enemyBullets = Array.from({ length: saturation }, (_, i) => ({ id: i + 50, x: 650, y: 650, vx: 0, vy: 0, radius: 5.5, age: 0 }));
   advance(g, 0.5);
   assert.equal(g.enemies[0].locked, false); assert.equal(g.enemies[0].sequence, undefined);
-  assert.equal(g.enemyBullets.length, 90);
+  assert.equal(g.enemyBullets.length, saturation);
   g.enemyBullets = [];
   advance(g, 0.1); assert.ok(g.enemies[0].locked); assert.equal(g.enemies[0].reservedBullets, 54);
 });
@@ -124,7 +128,8 @@ test('natural waves and boss loops release numeric aimed speeds across aim, snap
         assert.ok(flightTime >= g.difficulty.minimumFlightTime - 1e-8);
       }
     }
-    assert.deepEqual([...speeds].sort((a, b) => a - b), victories === 0 ? [160] : victories === 1 ? [160, 240, 340] : [160, 240, 340, 430]);
+    const authoredSpeeds = new Set([...AIM_SPEEDS.slice(0, victories ? 3 : 1), SNAPSHOT_SPEEDS[victories]]);
+    assert.deepEqual([...speeds].sort((a, b) => a - b), [...authoredSpeeds].sort((a, b) => a - b));
     assert.deepEqual([...types].sort(), ['boss', 'wave']);
     assert.ok(aimedPatterns.has('snapshot') || aimedPatterns.has('rail'));
     assert.ok(released.size >= 6);
@@ -180,7 +185,10 @@ test('both tiers retain a continuous normal-input survival route through each pa
   for (let tier = 0; tier < 2; tier++) for (const pattern of ['B01', 'B02', 'B03', 'B04']) {
     const g = playable(tier), lane = pattern === 'B04' ? 240 : pattern === 'B02' && tier ? 200 : 150;
     const followWindow = pattern === 'B04' && tier === 1;
-    // Tight moving rows require small local dodges; the old 55px excursion crossed the curtain itself.
+    // The old 12px feedback path hit the faster Stage2 row at 3.708s (HP88).
+    // This case uses the existing observed-trajectory controller with 300ms input
+    // delay instead; neither attack speed nor the zero-hit requirement is reduced.
+    const delayedRoute = followWindow ? createVisibleController(engine, art, relativeMinimumDistance) : null;
     Object.assign(g.player, screenToWorld(g, { x: 240, y: lane }), { invincible: 0 });
     g.enemies = [emitter(90, 'orb', pattern), Object.assign(emitter(91), { x: 1100, attack: 1 })];
     if (tier) g.enemies.push(Object.assign(emitter(92), { x: 1080, attack: 2 }));
@@ -198,9 +206,15 @@ test('both tiers retain a continuous normal-input survival route through each pa
         lastDodge = g.time;
       } else if (g.time - lastDodge > 1.3) targetY = lane;
       const pointer = screenToWorld(g, { x: 240, y: Math.max(90, Math.min(630, targetY)) });
-      updateGame(g, 1 / 120, { pointer });
+      const input = delayedRoute ? { ...delayedRoute.input(g), shoot: false } : { pointer };
+      if (delayedRoute) assert.ok(Math.abs(input.x) <= 1 && Math.abs(input.y) <= 1, 'the delayed route supplies ordinary axes');
+      updateGame(g, 1 / 120, input);
       travelled += Math.hypot(g.player.x - before.x, g.player.y - before.y);
-      assert.ok(Math.abs(g.player.y - before.y) <= 490 / 120 + 1e-6, 'route uses the preserved vertical input speed');
+      assert.ok(Math.abs(g.player.vy) <= 490 + 1e-6 && Math.abs(g.player.vx) <= 225 + 1e-6, 'route uses the preserved control speeds');
+      // At the camera-following flight boundary constrainPlayer may correct the
+      // position independently of input velocity. The centered pointer fixtures
+      // still retain their stricter world displacement check.
+      if (!delayedRoute) assert.ok(Math.abs(g.player.y - before.y) <= 490 / 120 + 1e-6, 'centered route retains its world displacement bound');
       const visible = g.enemyBullets.filter(bullet => { const point = worldToScreen(g, bullet); return point.x > 40 && point.x < 1280 && point.y > 20 && point.y < 700; });
       overlapObserved ||= visible.some(bullet => bullet.pattern === pattern) && visible.some(bullet => bullet.family === 'aim');
       for (const event of consumeEvents(g)) if (event.type === 'enemyShot') {

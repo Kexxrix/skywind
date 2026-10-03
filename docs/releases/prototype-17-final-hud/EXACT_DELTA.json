@@ -1,0 +1,111 @@
+{
+  "at": "2026-10-03T14:05:24.883Z",
+  "label": "17-final-hud",
+  "canonical": "2138373d7fecd78610daf6684d1528c3d3b34b5185faf1bbef21f946c646fd5f",
+  "files": 233,
+  "bytes": 58021489,
+  "sourceCheckpoint": {
+    "at": "2026-10-03T14:03:58.841Z",
+    "canonical": "2103e0b7ff03bb4bc9ff3f300dcc4630bdc66d502c60168b710ac841216e8176",
+    "files": 410,
+    "bytes": 79761607
+  },
+  "fromSixth": {
+    "label": "17-sixth",
+    "canonical": "a7450536bbd7cce43543bb1cd0772f4c4ee522f733f2168a0e92225a11f70415",
+    "changed": [
+      {
+        "path": "assets/art/mecha-12h-local.json",
+        "beforeSHA256": "abffa0ad2684d5bf8d9ec231a7ba862c89a0b4956e1b1e15f3ceec4c9ce9516c",
+        "afterSHA256": "d13037abc79d31d2eb4af952b1406027f500ef50ab536730c6a6ae3ccf824ffa",
+        "beforeBytes": 13989858,
+        "afterBytes": 13989858,
+        "byteDelta": 0
+      },
+      {
+        "path": "src/main.js",
+        "beforeSHA256": "29cdb9cbd944729d6020b28e031a0fb6c981b4d5b78f2c74486f674290406eb7",
+        "afterSHA256": "b7b396c563abe6c7aa771bf694df8ca0649aa01c0a2eefd2b14e8d8f29cec041",
+        "beforeBytes": 17964,
+        "afterBytes": 18362,
+        "byteDelta": 398
+      },
+      {
+        "path": "src/presentation.js",
+        "beforeSHA256": "d396fe1c3ccd13dd7c99a36af7e6ad5aba5d27ecaefe065b79a43972226cb64e",
+        "afterSHA256": "d551e6551e244ba350a3d2e080ca64a62c5374ec983d562ded1a31b013c18cde",
+        "beforeBytes": 4932,
+        "afterBytes": 6444,
+        "byteDelta": 1512
+      },
+      {
+        "path": "style.css",
+        "beforeSHA256": "b48bfd50030c10d3358f35de46c8ded15abe3287202144fb524a5a3745a86ecf",
+        "afterSHA256": "9ad2463c7b74a4be74c7fe4fab6ebe008ffdf29c3f34bec9654f36311091ec3a",
+        "beforeBytes": 37200,
+        "afterBytes": 37715,
+        "byteDelta": 515
+      }
+    ],
+    "totalByteDelta": 2425,
+    "unchangedFiles": 229
+  },
+  "fromMetadata": {
+    "label": "17-final",
+    "canonical": "783b8c458d10ad2a7151b17f4bb1a1402ddd800486b611ca2e6c3fb1da0bdf56",
+    "changed": [
+      {
+        "path": "src/main.js",
+        "beforeSHA256": "29cdb9cbd944729d6020b28e031a0fb6c981b4d5b78f2c74486f674290406eb7",
+        "afterSHA256": "b7b396c563abe6c7aa771bf694df8ca0649aa01c0a2eefd2b14e8d8f29cec041",
+        "beforeBytes": 17964,
+        "afterBytes": 18362,
+        "byteDelta": 398
+      },
+      {
+        "path": "src/presentation.js",
+        "beforeSHA256": "d396fe1c3ccd13dd7c99a36af7e6ad5aba5d27ecaefe065b79a43972226cb64e",
+        "afterSHA256": "d551e6551e244ba350a3d2e080ca64a62c5374ec983d562ded1a31b013c18cde",
+        "beforeBytes": 4932,
+        "afterBytes": 6444,
+        "byteDelta": 1512
+      },
+      {
+        "path": "style.css",
+        "beforeSHA256": "b48bfd50030c10d3358f35de46c8ded15abe3287202144fb524a5a3745a86ecf",
+        "afterSHA256": "9ad2463c7b74a4be74c7fe4fab6ebe008ffdf29c3f34bec9654f36311091ec3a",
+        "beforeBytes": 37200,
+        "afterBytes": 37715,
+        "byteDelta": 515
+      }
+    ],
+    "totalByteDelta": 2425,
+    "unchangedFiles": 230
+  },
+  "sourceDeltaFromMetadata": [
+    "STATE.md",
+    "src/main.js",
+    "src/presentation.js",
+    "style.css",
+    "tests/6h-hud.test.js"
+  ],
+  "gameplayModulesUnchanged": [
+    "src/game.js",
+    "src/level.js",
+    "src/barrage.js",
+    "src/combat-tuning.js",
+    "src/combat-damage.js",
+    "src/projectile-motion.js",
+    "src/renderer.js",
+    "src/projectile-style.js",
+    "src/mecha-art.js",
+    "src/mecha-collision.js",
+    "src/audio.js"
+  ],
+  "imageBytesUnchanged": true,
+  "manifestMatchesMetadataCandidate": true,
+  "metadataBudget": 72548352,
+  "coreAndMovementAndRecoveryRulesUnchanged": true,
+  "geometryScope": "HUD-only projection/mask envelope is unrelated to physical hit radius; actual pixels await parent QA.",
+  "pass": true
+}

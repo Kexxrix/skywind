@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 1,
+  "createdUTC": "2026-10-03T00:40:30.047401+00:00",
+  "checkoutHEAD": "5d60b998875edf19ab225966460d6842023776f1",
+  "scope": "읽기 전용 최종 동결 연결 감사; 모델/기존metadata/게임 파일 변경0",
+  "sourceFilesSHA256": {
+    ".work\\12h-build\\checkout\\src\\mecha-art.js": "824206687b77fc85e37cc2bbcf99b57d088ad6b5820e59966aa35a6609c27e59",
+    ".work\\12h-build\\checkout\\src\\game.js": "7b31fecd5f08a9e2094612119109b9f2d28431e6b4bfd9cf2c9c3d7daafab069",
+    ".work\\12h-build\\checkout\\src\\combat-tuning.js": "29539b31870110290377261fbbafcc4f2435fd106d4078a7a9dee2962b844bc1",
+    ".work\\12h-build\\checkout\\src\\level.js": "c4fab93cc157da028f36318c99b2612fc53df0acce6b435b51610ec8223a7cd2",
+    ".work\\12h-build\\checkout\\src\\renderer.js": "b684bd7d9d961635090de5ded7690bfbc67283eb73ecc28509f6195d585580e2"
+  },
+  "actualPortAnchorMismatchCount": 0,
+  "entries": [
+    {
+      "role": "bastion",
+      "entryKey": "local-bastion-finish-v1",
+      "manifest": ".work\\12h-build\\local-art\\bastion-apex-finish-full-v1\\bastion\\manifest-candidate.json",
+      "manifestSHA256": "3c179337a2f51cc6c12b6d3889f0eba76e14249c22824e0a971ff7b6ced3fbb2",
+      "display": 432,
+      "pivot": [
+        192,
+        192
+      ],
+      "facing": "left",
+      "sourceActualSHA256": "9a97f84c70789675b7b7394d7aa866c70b6333d368981446fb38320610487c18",
+      "portsInRuntimeOrder": [
+        {
+          "runtimeIndex": 0,
+          "sourceEmpty": "upper_beam",
+          "forwardPointEmpty": "upper_beam_direction"
+        },
+        {
+          "runtimeIndex": 1,
+          "sourceEmpty": "lower_fan_a",
+          "forwardPointEmpty": "lower_fan_a_direction"
+        },
+        {
+          "runtimeIndex": 2,
+          "sourceEmpty": "lower_fan_b",
+          "forwardPointEmpty": "lower_fan_b_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_-0.5",
+        "nozzle_0.5"
+      ],
+      "authoredPoses": [
+        {
+          "semanticState": "phase_000",
+          "sourcePose": "source-phase_000.blend",
+          "PNG": "bastion-phase_000.png",
+          "progress": 0,
+          "recoil": false
+        },
+        {
+          "semanticState": "phase_000_fire",
+          "sourcePose": "source-phase_000_fire.blend",
+          "PNG": "bastion-phase_000_fire.png",
+          "progress": 0,
+          "recoil": true
+        },
+        {
+          "semanticState": "phase_025",
+          "sourcePose": "source-phase_025.blend",
+          "PNG": "bastion-phase_025.png",
+          "progress": 0.25,
+          "recoil": false
+        },
+        {
+          "semanticState": "phase_025_fire",
+          "sourcePose": "source-phase_025_fire.blend",
+          "PNG": "bastion-phase_025_fire.png",
+          "progress": 0.25,
+          "recoil": true
+        },
+        {
+          "semanticState": "phase_050",
+          "sourcePose": "source-phase_050.blend",
+          "PNG": "bastion-phase_050.png",
+          "progress": 0.5,
+          "recoil": false
+        },
+        {
+          "semanticState": "phase_050_fire",
+          "sourcePose": "source-phase_050_fire.blend",
+          "PNG": "bastion-phase_050_fire.png",
+          "progress": 0.5,
+          "recoil": true
+        },
+        {
+          "semanticState": "phase_075",
+          "sourcePose": "source-phase_075.blend",
+          "PNG": "bastion-phase_075.png",
+          "progress": 0.75,
+          "recoil": false
+        },
+        {
+          "semanticState": "phase_075_fire",
+          "sourcePose": "source-phase_075_fire.blend",
+          "PNG": "bastion-phase_075_fire.png",
+          "progress": 0.75,
+          "recoil": true
+        },
+        {
+          "semanticState": "phase_100",
+          "sourcePose": "source-phase_100.blend",
+          "PNG": "bastion-phase_100.png",
+          "progress": 1,
+          "recoil": false
+        },
+        {
+          "semanticState": "phase_100_fire",
+          "sourcePose": "source-phase_100_fire.blend",
+          "PNG": "bastion-phase_100_fire.png",
+          "progress": 1,
+          "recoil": true
+        },
+        {
+          "semanticState": "idle",
+          "sourcePose": "source-phase_000.blend",
+          "PNG": "bastion-phase_000.png",
+          "progress": 0,
+          "recoil": false
+        },
+        {
+          "semanticState": "charge",
+          "sourcePose": "source-phase_000.blend",
+          "PNG": "bastion-phase_000.png",
+          "progress": 0,
+          "recoil": false
+        },
+        {
+          "semanticState": "fire",
+          "sourcePose": "source-phase_000_fire.blend",
+          "PNG": "bastion-phase_000_fire.png",
+          "progress": 0,
+          "recoil": true
+        },
+        {
+          "semanticState": "open",
+          "sourcePose": "source-phase_100.blend",
+          "PNG": "bastion-phase_100.png",
+          "progress": 1,
+          "recoil": false
+        }
+      ],
+      "selection": {
+        "progressRule": "clamp [0,1]; authored progress <= live progress 중 최대값을 floor 선택",
+        "authority": "checkout/src/game.js syncMechanismPose / setArmorOpen; mecha-art.js getMechaSpec",
+        "neutralByProgress": {
+          "0": "phase_000",
+          "0.25": "phase_025",
+          "0.5": "phase_050",
+          "0.75": "phase_075",
+          "1": "phase_100"
+        },
+        "fireByProgress": {
+          "0": "phase_000_fire",
+          "0.25": "phase_025_fire",
+          "0.5": "phase_050_fire",
+          "0.75": "phase_075_fire",
+          "1": "phase_100_fire"
+        },
+        "recoilCondition": "enemy.fireFlash > 0",
+        "charge": "현재 progress neutral pose + runtime VFX",
+        "damaged": "현재 선택 pose + runtime effect",
+        "partialProtection": "progress<1 회색 물리 장갑; core visible/vulnerable 최종1만",
+        "portPoseRule": "선택 PNG와 같은 frame metadata의 muzzles/directions/hulls/core를 함께 선택"
+      }
+    },
+    {
+      "role": "apex",
+      "entryKey": "local-apex-finish-v1",
+      "manifest": ".work\\12h-build\\local-art\\bastion-apex-finish-full-v1\\apex\\manifest-candidate.json",
+      "manifestSHA256": "6e08fe15c697352694659111180a23a97c18d300d27b5c0040f4345b0ec3f18a",
+      "display": 448,
+      "pivot": [
+        192,
+        192
+      ],
+      "facing": "left",
+      "sourceActualSHA256": "048481ec8b033e3a04375cc6c93d937542cd39ef13e6423be1c91e69070cec3f",
+      "portsInRuntimeOrder": [
+        {
+          "runtimeIndex": 0,
+          "sourceEmpty": "wrist_precision_beam",
+          "forwardPointEmpty": "wrist_precision_beam_direction"
+        },
+        {
+          "runtimeIndex": 1,
+          "sourceEmpty": "lower_siege_rail",
+          "forwardPointEmpty": "lower_siege_rail_direction"
+        },
+        {
+          "runtimeIndex": 2,
+          "sourceEmpty": "upper_tracking",
+          "forwardPointEmpty": "upper_tracking_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_main",
+        "nozzle_trim"
+      ],
+      "authoredPoses": [
+        {
+          "semanticState": "idle",
+          "sourcePose": "source-idle.blend",
+          "PNG": "apex-idle.png",
+          "progress": 0,
+          "recoil": false
+        },
+        {
+          "semanticState": "mechanism_25",
+          "sourcePose": "source-mechanism_25.blend",
+          "PNG": "apex-mechanism_25.png",
+          "progress": 0.25,
+          "recoil": false
+        },
+        {
+          "semanticState": "mechanism_50",
+          "sourcePose": "source-mechanism_50.blend",
+          "PNG": "apex-mechanism_50.png",
+          "progress": 0.5,
+          "recoil": false
+        },
+        {
+          "semanticState": "mechanism_75",
+          "sourcePose": "source-mechanism_75.blend",
+          "PNG": "apex-mechanism_75.png",
+          "progress": 0.75,
+          "recoil": false
+        },
+        {
+          "semanticState": "open",
+          "sourcePose": "source-open.blend",
+          "PNG": "apex-open.png",
+          "progress": 1,
+          "recoil": false
+        },
+        {
+          "semanticState": "fire",
+          "sourcePose": "source-fire.blend",
+          "PNG": "apex-fire.png",
+          "progress": 0,
+          "recoil": true
+        },
+        {
+          "semanticState": "mechanism_25_fire",
+          "sourcePose": "source-mechanism_25_fire.blend",
+          "PNG": "apex-mechanism_25_fire.png",
+          "progress": 0.25,
+          "recoil": true
+        },
+        {
+          "semanticState": "mechanism_50_fire",
+          "sourcePose": "source-mechanism_50_fire.blend",
+          "PNG": "apex-mechanism_50_fire.png",
+          "progress": 0.5,
+          "recoil": true
+        },
+        {
+          "semanticState": "mechanism_75_fire",
+          "sourcePose": "source-mechanism_75_fire.blend",
+          "PNG": "apex-mechanism_75_fire.png",
+          "progress": 0.75,
+          "recoil": true
+        },
+        {
+          "semanticState": "open_fire",
+          "sourcePose": "source-open_fire.blend",
+          "PNG": "apex-open_fire.png",
+          "progress": 1,
+          "recoil": true
+        }
+      ],
+      "selection": {
+        "progressRule": "clamp [0,1]; authored progress <= live progress 중 최대값을 floor 선택",
+        "authority": "checkout/src/game.js syncMechanismPose / setArmorOpen; mecha-art.js getMechaSpec",
+        "neutralByProgress": {
+          "0": "idle",
+          "0.25": "mechanism_25",
+          "0.5": "mechanism_50",
+          "0.75": "mechanism_75",
+          "1": "open"
+        },
+        "fireByProgress": {
+          "0": "fire",
+          "0.25": "mechanism_25_fire",
+          "0.5": "mechanism_50_fire",
+          "0.75": "mechanism_75_fire",
+          "1": "open_fire"
+        },
+        "recoilCondition": "enemy.fireFlash > 0",
+        "charge": "현재 progress neutral pose + runtime VFX",
+        "damaged": "현재 선택 pose + runtime effect",
+        "partialProtection": "progress<1 회색 물리 장갑; core visible/vulnerable 최종1만",
+        "portPoseRule": "선택 PNG와 같은 frame metadata의 muzzles/directions/hulls/core를 함께 선택"
+      }
+    },
+    {
+      "role": "mantis",
+      "entryKey": "local-mantis-representative-v2",
+      "manifest": ".work\\12h-build\\local-art\\normal-mantis-needle\\representative-v2\\mantis\\manifest-candidate.json",
+      "manifestSHA256": "c4641a5e052cd17a7616abfbba2207d73fd85abdfc1dc5bc144b525e11d76cf6",
+      "display": 96,
+      "pivot": [
+        192,
+        192
+      ],
+      "facing": "left",
+      "sourceActualSHA256": "f5bb5faca912e1b1281f40238d8cdfdf89185e590633d03f66b5f61964fd21e9",
+      "portsInRuntimeOrder": [
+        {
+          "runtimeIndex": 0,
+          "sourceEmpty": "upper_dual",
+          "forwardPointEmpty": "upper_dual_direction"
+        },
+        {
+          "runtimeIndex": 1,
+          "sourceEmpty": "lower_dual",
+          "forwardPointEmpty": "lower_dual_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_primary"
+      ],
+      "authoredPoses": [
+        {
+          "semanticState": "idle",
+          "sourcePose": "source-idle.blend",
+          "PNG": "mantis-idle.png",
+          "progress": 0,
+          "recoil": false
+        }
+      ],
+      "selection": {
+        "authoredRuntimePose": "idle only",
+        "newPhysicalStates": 0,
+        "integrationAliases": {
+          "idle": "idle",
+          "charge": "idle",
+          "locked": "idle",
+          "fire": "idle",
+          "recovery": "idle",
+          "damaged": "idle"
+        },
+        "aliasStatus": "최종 통합용 연결 정책; 원본 대표 manifest는 idle만 포함하며 이 감사는 manifest를 수정하지 않음",
+        "runtimeEffectRule": "charge/locked=실제 코드 telegraph 및 snapshot aimTarget; fire=실제 port0/1 muzzle flash/projectile; recovery=코드 cooldown; damaged=동일 현재 pose+hit effect",
+        "physicalMechanismClaims": "새 idle 밖 기구/반동 pose를 주장하지 않음",
+        "portPoseRule": "모든 alias에서 idle의 동일 PNG/ports/forward/nozzle/hull; code timing 별도",
+        "coreEnabled": false
+      }
+    },
+    {
+      "role": "needle",
+      "entryKey": "local-needle-representative-v2",
+      "manifest": ".work\\12h-build\\local-art\\normal-mantis-needle\\representative-v2\\needle\\manifest-candidate.json",
+      "manifestSHA256": "d69270ed7a70827c109a696891f47a9ebc1773c680c2229720cd54f51ee91b84",
+      "display": 112,
+      "pivot": [
+        192,
+        192
+      ],
+      "facing": "left",
+      "sourceActualSHA256": "836766005ec39a4eccec03ecda5200a4d54c4f54d0cff3bee249d0e22f4d82fa",
+      "portsInRuntimeOrder": [
+        {
+          "runtimeIndex": 0,
+          "sourceEmpty": "coil_nose",
+          "forwardPointEmpty": "coil_nose_direction"
+        }
+      ],
+      "nozzleEmpties": [
+        "nozzle_axial"
+      ],
+      "authoredPoses": [
+        {
+          "semanticState": "idle",
+          "sourcePose": "source-idle.blend",
+          "PNG": "needle-idle.png",
+          "progress": 0,
+          "recoil": false
+        }
+      ],
+      "selection": {
+        "authoredRuntimePose": "idle only",
+        "newPhysicalStates": 0,
+        "integrationAliases": {
+          "idle": "idle",
+          "charge": "idle",
+          "locked": "idle",
+          "fire": "idle",
+          "recovery": "idle",
+          "damaged": "idle"
+        },
+        "aliasStatus": "최종 통합용 연결 정책; 원본 대표 manifest는 idle만 포함하며 이 감사는 manifest를 수정하지 않음",
+        "runtimeEffectRule": "charge/locked=실제 코드 telegraph 및 snapshot aimTarget; fire=실제 port0/1 muzzle flash/projectile; recovery=코드 cooldown; damaged=동일 현재 pose+hit effect",
+        "physicalMechanismClaims": "새 idle 밖 기구/반동 pose를 주장하지 않음",
+        "portPoseRule": "모든 alias에서 idle의 동일 PNG/ports/forward/nozzle/hull; code timing 별도",
+        "coreEnabled": false
+      },
+      "timing": {
+        "minimumTellSeconds": 0.65,
+        "source": "checkout/src/combat-tuning.js needle.minimumTell; firstTell=max(TELL_FLOOR+tellExtra,minimumTell)",
+        "chargeDurationRule": "max(difficulty.minTelegraph,attack.telegraph||0,combat.firstTell||0)",
+        "snapshotAimLock": "실제 bundle.aimLock===snapshot일 때 lockAt=max(-chargeDuration,bundle.at-(bundle.lockLead??.35)); 실제 목표를 한 번 캡처하고 launch에서 lockedTarget 사용",
+        "aimLockEvent": "game.js captureAimLocks emits aimLock with lockedTarget/lockAt/duration; art는 목표/시점/재조준 권한 없음",
+        "releaseVFX": "renderer.js real enemyChargeMuzzles에서 tell ring/glow; game.js releaseBundle fireFlash=.12 및 enemyMuzzles 재선택",
+        "codeAuthority": "코드 총괄 소유; 자산 alias가 minimumTell/aim lock/projectile/recovery 시간을 변경하지 않음"
+      }
+    }
+  ]
+}

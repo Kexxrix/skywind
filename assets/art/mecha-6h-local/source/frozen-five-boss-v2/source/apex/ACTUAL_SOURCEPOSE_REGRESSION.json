@@ -1,0 +1,7369 @@
+{
+  "at": "2026-10-03T09:39:33.833Z",
+  "bossKind": "apex",
+  "entryKey": "apex",
+  "kind": "Explicit immutable source-pose binding fixture; candidate-derived manifest mechanism map contains target source state at progress0; semantic aliases removed only in fixture, authored PNG/anchors/hulls retained. Original engine physics/damage files unchanged. Tests authored poses, not natural boss timing or difficulty.",
+  "engineRoot": "E:\\codexwork\\Skywind\\.work\\speed-tuning-20261003\\prototype-16-final\\dist",
+  "engineSourceSHA256": {
+    "game.js": "0ff394ef7695fb4c6a5653936a6b701a1b8b5299a93137079e2b817c3d44f9c6",
+    "mecha-art.js": "824206687b77fc85e37cc2bbcf99b57d088ad6b5820e59966aa35a6609c27e59",
+    "mecha-collision.js": "1104782a1eee18fd8cc9eb384b52766d1f346cc8d626192bce25791353c8c591",
+    "level.js": "2461fb12427989bcc56c4b226d8b73f0c7194eeda355029706bf685d1c7cb99c"
+  },
+  "unchangedAfter": true,
+  "candidateManifestSHA256": "8c4f262ed5677aa5b78e675fb1ce63c8171dbe96a42e8312dd2140de69867aef",
+  "rows": [
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "idle",
+      "sourceFilename": "apex-idle.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "idle",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25",
+      "sourceFilename": "apex-mechanism_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50",
+      "sourceFilename": "apex-mechanism_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75",
+      "sourceFilename": "apex-mechanism_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3882754666779,
+        "y": 447.42205026340196
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3882754666779,
+        "y": 447.42205026340196
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open",
+      "sourceFilename": "apex-open.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5749742155097,
+        "y": 448.15062978551794
+      },
+      "impactFrame": "open",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "fire",
+      "sourceFilename": "apex-fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_25_fire",
+      "sourceFilename": "apex-mechanism_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_50_fire",
+      "sourceFilename": "apex-mechanism_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3707764847524,
+        "y": 447.51867380767345
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1580845624695,
+        "y": 446.7620807625297
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "mechanism_75_fire",
+      "sourceFilename": "apex-mechanism_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5574752335841,
+        "y": 448.24725332978943
+      },
+      "impactFrame": "mechanism_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3882754666779,
+        "y": 447.42205026340196
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3795172545451,
+        "y": 447.4704268836523
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.1478260084037,
+        "y": 448.7178111271391
+      },
+      "impactCore": {
+        "x": 1015.3882754666779,
+        "y": 447.42205026340196
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1668253322623,
+        "y": 446.71383383850855
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1015.9351340861209,
+        "y": 447.96121808199536
+      },
+      "impactCore": {
+        "x": 1016.1755835443951,
+        "y": 446.6654572182582
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5662160033769,
+        "y": 448.1990064057683
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.6666666666666667
+      }
+    },
+    {
+      "state": "open_fire",
+      "sourceFilename": "apex-open_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1014.3345247572355,
+        "y": 449.4463906492551
+      },
+      "impactCore": {
+        "x": 1014.5749742155097,
+        "y": 448.15062978551794
+      },
+      "impactFrame": "open_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.675
+      }
+    }
+  ],
+  "stateSummary": [
+    {
+      "state": "idle",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_25",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_50",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_75",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "open",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_25_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_50_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "mechanism_75_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "open_fire",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    }
+  ]
+}

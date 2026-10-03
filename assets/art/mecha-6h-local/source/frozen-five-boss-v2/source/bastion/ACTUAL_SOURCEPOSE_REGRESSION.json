@@ -1,0 +1,7369 @@
+{
+  "at": "2026-10-03T09:35:12.315Z",
+  "bossKind": "bastion",
+  "entryKey": "sixh-bastion-predator-full-v3",
+  "kind": "Explicit immutable source-pose binding fixture; candidate-derived manifest mechanism map contains target source state at progress0; semantic aliases removed only in fixture, authored PNG/anchors/hulls retained. Original engine physics/damage files unchanged. Tests authored poses, not natural boss timing or difficulty.",
+  "engineRoot": "E:\\codexwork\\Skywind\\.work\\speed-tuning-20261003\\prototype-16-final\\dist",
+  "engineSourceSHA256": {
+    "game.js": "0ff394ef7695fb4c6a5653936a6b701a1b8b5299a93137079e2b817c3d44f9c6",
+    "mecha-art.js": "824206687b77fc85e37cc2bbcf99b57d088ad6b5820e59966aa35a6609c27e59",
+    "mecha-collision.js": "1104782a1eee18fd8cc9eb384b52766d1f346cc8d626192bce25791353c8c591",
+    "level.js": "2461fb12427989bcc56c4b226d8b73f0c7194eeda355029706bf685d1c7cb99c"
+  },
+  "unchangedAfter": true,
+  "candidateManifestSHA256": "c2a1596c15e107b361922f97a1a4ec6ade1031b77ade3a4b2fcd908a5fd1dbbd",
+  "rows": [
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000",
+      "sourceFilename": "bastion-phase_000.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_000_fire",
+      "sourceFilename": "bastion-phase_000_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_000_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025",
+      "sourceFilename": "bastion-phase_025.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_025_fire",
+      "sourceFilename": "bastion-phase_025_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_025_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050",
+      "sourceFilename": "bastion-phase_050.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_050_fire",
+      "sourceFilename": "bastion-phase_050_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_050_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075",
+      "sourceFilename": "bastion-phase_075.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_075_fire",
+      "sourceFilename": "bastion-phase_075_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_075_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "bastion-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1342796455854,
+        "y": 432.6653573544366
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.8409801750704,
+        "y": 434.25374446047243
+      },
+      "impactCore": {
+        "x": 1099.1431283276268,
+        "y": 432.6162452338744
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3641919173092,
+        "y": 428.98896027064984
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1099.0708924467942,
+        "y": 430.5773473766857
+      },
+      "impactCore": {
+        "x": 1099.3730405993506,
+        "y": 428.93984815008764
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7758605521321,
+        "y": 436.33145758817443
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7249999999999999
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "bastion-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 1098.4825610816172,
+        "y": 437.91984469421027
+      },
+      "impactCore": {
+        "x": 1098.7847092341735,
+        "y": 436.28234546761223
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.2000000000000455,
+        "at": 0.7333333333333332
+      }
+    }
+  ],
+  "stateSummary": [
+    {
+      "state": "phase_000",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_000_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_025",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_025_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_050",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_050_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_075",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_075_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100_fire",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    }
+  ]
+}

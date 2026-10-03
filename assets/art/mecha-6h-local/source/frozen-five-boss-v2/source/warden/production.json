@@ -1,0 +1,46 @@
+{
+  "blender": "5.2.2 LTS",
+  "device": "CPU",
+  "threads": 2,
+  "samples": 24,
+  "camera": {
+    "location": [
+      0.0,
+      -16.0,
+      4.0
+    ],
+    "rotation": [
+      1.3258177042007446,
+      -0.0,
+      0.0
+    ],
+    "orthoScale": 5.5
+  },
+  "elapsedSeconds": 34.96217894554138,
+  "generatorSHA256": "3087f1a5a7755c341b75ce5ea31949ebb50c841c6b2623ed1cb9e151adf9b96e",
+  "hullMethod": "separate convex projected actual mesh vertices; bevel excluded",
+  "status": "mechanism and hull revision awaiting independent review",
+  "files": {
+    "actual.blend": "b479e4b21d49b69b3e9c2e9cd04fe72abb814bd48293fae3f6abe847241f7bdc",
+    "source-phase_0.blend": "3580180644187b0ca6c3c5e50aa7fc39be782bcaa8d08fea34bda94879381758",
+    "source-phase_0_fire.blend": "dbf54e09abba9d6639e4e462dd9129894dc22b391a8715ad179a02fd404b7ea1",
+    "source-phase_100.blend": "d3e710cf083fd7ba71f38d1537512332b880d7195e17e76dfc4833c677a52696",
+    "source-phase_100_fire.blend": "3c2d16c8833d5f714429ab2c26735540b66210e167567d3f334ca66be2e81da7",
+    "source-phase_25.blend": "67d88b4ab6bf80238baf031b5de55bb0645b9831d86e95e4863e91f94f34f077",
+    "source-phase_25_fire.blend": "887676f728e5082df7ea5c5fbaa0efe4eba14df02cc0efa124e4d087732026a0",
+    "source-phase_50.blend": "ae8a5e7f6c413bbaf5bfc22ecab929d8f71dee156328fcfa3b35cc155e6ebe81",
+    "source-phase_50_fire.blend": "603307ab7d2f1e0384a56dc2d991c7401cda37009faba6dfb44c67275a316644",
+    "source-phase_75.blend": "46e540f747ab739a0d79e2e24ed1529bbc92d92782b24bdbe5e85899bf2296c1",
+    "source-phase_75_fire.blend": "50725d07d9a497276a97e73c48a5190e616b64d8bbde4e23e61df4d4e1ce3b80",
+    "warden-phase_0.png": "b9bd2860cd1b414b2e2a25fa19a5c7862266e5976083addb8bd28f4e192a1e4c",
+    "warden-phase_0_fire.png": "a3639a0aaa28c147e9458be351a92b5bec672574bcd0b9ecde528ad30f6b45fd",
+    "warden-phase_100.png": "e95e73b3fdf1ced8c80b9493c0a4fdac39b4825e189f7e78bbd37a36ace8ddd0",
+    "warden-phase_100_fire.png": "753425dc0f479dbd01c0fceea4dec172012d498b0471624db251044a00084312",
+    "warden-phase_25.png": "babe32de283cc589cc1c49729a6d2d58a68094af910979cb2acb9346aab83dcc",
+    "warden-phase_25_fire.png": "ebe2f1c78d7b6e4d1982accaa66f34ba11fa0746733cd7304a74388efde52629",
+    "warden-phase_50.png": "8ee4204a1b76208e0511e28eb69b19c97cf9f2c34c84bdb38fa48b3be3b2ba7b",
+    "warden-phase_50_fire.png": "662011b5b3a389487b17cdc8f0c27ea723aa919f4e4e3b7d4533c80cf4ea6198",
+    "warden-phase_75.png": "305d2d30a20c53bf6e74d696a67eb145b562465f74f9863d43c4ca4d62a8d07b",
+    "warden-phase_75_fire.png": "d4e73d967559ece8c41aa1fc51661146fda06a8766733fe1164c06a3e1dc3d24"
+  }
+}

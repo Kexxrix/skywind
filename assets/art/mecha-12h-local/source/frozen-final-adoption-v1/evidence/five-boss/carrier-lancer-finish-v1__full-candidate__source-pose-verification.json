@@ -1,0 +1,594 @@
+{
+  "carrier": {
+    "snapshots": [
+      {
+        "state": "phase_000_payload2",
+        "timelineFrame": 300,
+        "mechanismProgress": 0,
+        "recoilProgress": 0,
+        "payloadVariant": "payload2",
+        "coreSourceWorld": [
+          1.2300000190734863,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.54363452079273e-05
+      },
+      {
+        "state": "phase_000_payload1near",
+        "timelineFrame": 310,
+        "mechanismProgress": 0,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1near",
+        "coreSourceWorld": [
+          1.2300000190734863,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.54363452079273e-05
+      },
+      {
+        "state": "phase_000_payload1far",
+        "timelineFrame": 320,
+        "mechanismProgress": 0,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1far",
+        "coreSourceWorld": [
+          1.2300000190734863,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.54363452079273e-05
+      },
+      {
+        "state": "phase_000_payload0",
+        "timelineFrame": 330,
+        "mechanismProgress": 0,
+        "recoilProgress": 0,
+        "payloadVariant": "payload0",
+        "coreSourceWorld": [
+          1.2300000190734863,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.54363452079273e-05
+      },
+      {
+        "state": "phase_025_payload2",
+        "timelineFrame": 340,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 0,
+        "payloadVariant": "payload2",
+        "coreSourceWorld": [
+          0.35500001907348633,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.328563759107365e-05
+      },
+      {
+        "state": "phase_025_payload1near",
+        "timelineFrame": 350,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1near",
+        "coreSourceWorld": [
+          0.35500001907348633,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.328563759107365e-05
+      },
+      {
+        "state": "phase_025_payload1far",
+        "timelineFrame": 360,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1far",
+        "coreSourceWorld": [
+          0.35500001907348633,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.328563759107365e-05
+      },
+      {
+        "state": "phase_025_payload0",
+        "timelineFrame": 370,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 0,
+        "payloadVariant": "payload0",
+        "coreSourceWorld": [
+          0.35500001907348633,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.328563759107365e-05
+      },
+      {
+        "state": "phase_050_payload2",
+        "timelineFrame": 380,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 0,
+        "payloadVariant": "payload2",
+        "coreSourceWorld": [
+          -0.5199999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -1.75,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.898654610129379e-05
+      },
+      {
+        "state": "phase_050_payload1near",
+        "timelineFrame": 390,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1near",
+        "coreSourceWorld": [
+          -0.5199999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -1.75,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.898654610129379e-05
+      },
+      {
+        "state": "phase_050_payload1far",
+        "timelineFrame": 400,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1far",
+        "coreSourceWorld": [
+          -0.5199999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -1.75,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.898654610129379e-05
+      },
+      {
+        "state": "phase_050_payload0",
+        "timelineFrame": 410,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 0,
+        "payloadVariant": "payload0",
+        "coreSourceWorld": [
+          -0.5199999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -1.75,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.898654610129379e-05
+      },
+      {
+        "state": "phase_075_payload2",
+        "timelineFrame": 420,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 0,
+        "payloadVariant": "payload2",
+        "coreSourceWorld": [
+          -1.3949999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -2.625,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.5436345218755753e-05
+      },
+      {
+        "state": "phase_075_payload1near",
+        "timelineFrame": 430,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1near",
+        "coreSourceWorld": [
+          -1.3949999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -2.625,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.5436345218755753e-05
+      },
+      {
+        "state": "phase_075_payload1far",
+        "timelineFrame": 440,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1far",
+        "coreSourceWorld": [
+          -1.3949999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -2.625,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.5436345218755753e-05
+      },
+      {
+        "state": "phase_075_payload0",
+        "timelineFrame": 450,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 0,
+        "payloadVariant": "payload0",
+        "coreSourceWorld": [
+          -1.3949999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -2.625,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.5436345218755753e-05
+      },
+      {
+        "state": "phase_100_payload2",
+        "timelineFrame": 460,
+        "mechanismProgress": 1,
+        "recoilProgress": 0,
+        "payloadVariant": "payload2",
+        "coreSourceWorld": [
+          -2.2699999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -3.2799999713897705,
+          0.0,
+          0.7799999713897705
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 3.581054490448459e-05
+      },
+      {
+        "state": "phase_100_payload1near",
+        "timelineFrame": 470,
+        "mechanismProgress": 1,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1near",
+        "coreSourceWorld": [
+          -2.2699999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -3.2799999713897705,
+          0.0,
+          0.7799999713897705
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 3.581054490448459e-05
+      },
+      {
+        "state": "phase_100_payload1far",
+        "timelineFrame": 480,
+        "mechanismProgress": 1,
+        "recoilProgress": 0,
+        "payloadVariant": "payload1far",
+        "coreSourceWorld": [
+          -2.2699999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -3.2799999713897705,
+          0.0,
+          0.7799999713897705
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 3.581054490448459e-05
+      },
+      {
+        "state": "phase_100_payload0",
+        "timelineFrame": 490,
+        "mechanismProgress": 1,
+        "recoilProgress": 0,
+        "payloadVariant": "payload0",
+        "coreSourceWorld": [
+          -2.2699999809265137,
+          -0.3199999928474426,
+          -0.4399999976158142
+        ],
+        "grayLockWorld": [
+          -3.2799999713897705,
+          0.0,
+          0.7799999713897705
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 3.581054490448459e-05
+      }
+    ],
+    "maxCoreProjectionErrorPixels": 3.898654610129379e-05,
+    "actualCamera": [
+      0.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "orthoScale": 5.25
+  },
+  "lancer": {
+    "snapshots": [
+      {
+        "state": "phase_000",
+        "timelineFrame": 300,
+        "mechanismProgress": 0,
+        "recoilProgress": 0,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          0.75,
+          -0.4099999964237213,
+          0.25
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 5.3437632786199406e-05
+      },
+      {
+        "state": "phase_000_fire",
+        "timelineFrame": 310,
+        "mechanismProgress": 0,
+        "recoilProgress": 1,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          0.75,
+          -0.4099999964237213,
+          0.25
+        ],
+        "grayLockWorld": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 5.3437632786199406e-05
+      },
+      {
+        "state": "phase_025",
+        "timelineFrame": 320,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 0,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          0.3125,
+          -0.4099999964237213,
+          0.42500001192092896
+        ],
+        "grayLockWorld": [
+          -0.4375,
+          0.0,
+          0.17499999701976776
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 1.9616589071702733e-05
+      },
+      {
+        "state": "phase_025_fire",
+        "timelineFrame": 330,
+        "mechanismProgress": 0.25,
+        "recoilProgress": 1,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          0.3125,
+          -0.4099999964237213,
+          0.42500001192092896
+        ],
+        "grayLockWorld": [
+          -0.4375,
+          0.0,
+          0.17499999701976776
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 1.9616589071702733e-05
+      },
+      {
+        "state": "phase_050",
+        "timelineFrame": 340,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 0,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -0.125,
+          -0.4099999964237213,
+          0.6000000238418579
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.3499999940395355
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.9345306909315585e-05
+      },
+      {
+        "state": "phase_050_fire",
+        "timelineFrame": 350,
+        "mechanismProgress": 0.5,
+        "recoilProgress": 1,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -0.125,
+          -0.4099999964237213,
+          0.6000000238418579
+        ],
+        "grayLockWorld": [
+          -0.875,
+          0.0,
+          0.3499999940395355
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 3.9345306909315585e-05
+      },
+      {
+        "state": "phase_075",
+        "timelineFrame": 360,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 0,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -0.5625,
+          -0.4099999964237213,
+          0.7749999761581421
+        ],
+        "grayLockWorld": [
+          -1.3125,
+          0.0,
+          0.5249999761581421
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 4.2377781463460996e-05
+      },
+      {
+        "state": "phase_075_fire",
+        "timelineFrame": 370,
+        "mechanismProgress": 0.75,
+        "recoilProgress": 1,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -0.5625,
+          -0.4099999964237213,
+          0.7749999761581421
+        ],
+        "grayLockWorld": [
+          -1.3125,
+          0.0,
+          0.5249999761581421
+        ],
+        "cyanHidden": true,
+        "projectedErrorPixels": 4.2377781463460996e-05
+      },
+      {
+        "state": "phase_100",
+        "timelineFrame": 380,
+        "mechanismProgress": 1,
+        "recoilProgress": 0,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -1.0,
+          -0.4099999964237213,
+          0.949999988079071
+        ],
+        "grayLockWorld": [
+          -1.5299999713897705,
+          0.0,
+          1.5399999618530273
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 4.863830636005101e-05
+      },
+      {
+        "state": "phase_100_fire",
+        "timelineFrame": 390,
+        "mechanismProgress": 1,
+        "recoilProgress": 1,
+        "payloadVariant": null,
+        "coreSourceWorld": [
+          -1.0,
+          -0.4099999964237213,
+          0.949999988079071
+        ],
+        "grayLockWorld": [
+          -1.5299999713897705,
+          0.0,
+          1.5399999618530273
+        ],
+        "cyanHidden": false,
+        "projectedErrorPixels": 4.863830636005101e-05
+      }
+    ],
+    "maxCoreProjectionErrorPixels": 5.3437632786199406e-05,
+    "actualCamera": [
+      0.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "orthoScale": 5.349999904632568
+  }
+}

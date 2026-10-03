@@ -19,7 +19,12 @@ function fixture() {
 function advance(f, input = {}) {
   updateGame(f.g, DT, input);
   const current = consumeEvents(f.g); f.events.push(...current);
-  if (!f.members.length) f.members = f.g.enemies.filter(e => e.phrase);
+  if (!f.members.length) {
+    f.members = f.g.enemies.filter(e => e.phrase);
+    // Explicitly preserve the original atomic-repeat adapter boundary. Normal
+    // play now uses independent repeats, verified in its director contracts.
+    for (const member of f.members) member.phrase.independentRepeats = false;
+  }
   if (current.some(e => e.type === 'wave')) f.g.nextWaveAt = Infinity;
   return current;
 }
@@ -135,8 +140,9 @@ test('killing a pending sniper immediately releases its cached reservation throu
   assertBudgets(f.g);
 });
 
-test('each admitted member completes one sequence while every observed family, aim and bullet budget stays legal', () => {
+test('a short block permits only the fitting cycle while every observed family, aim and bullet budget stays legal', () => {
   const f = fixture(), { field, sniper } = admit(f);
+  assert.equal(field.phrase.maxCycles, 2);
   for (let i = 0; i < 900 && f.g.time < 7.8; i++) { advance(f); assertBudgets(f.g); }
   for (const e of [field, sniper]) {
     assert.equal(e.attack, 1);
@@ -147,17 +153,25 @@ test('each admitted member completes one sequence while every observed family, a
 });
 
 test('boss entry clears active and pending phrase claims plus inflight without subsequent old-source emissions', () => {
-  const f = fixture(), { field, sniper } = admit(f);
-  until(f, () => f.events.some(e => e.type === 'enemyShot' && e.enemyId === field.id), 2);
-  assert.ok(sniper.pendingAttackPlan); assert.ok(f.g.enemyBullets.length);
-  f.g.nextBossAt = f.g.time + DT;
-  advance(f);
-  const clearAt = f.events.find(e => e.type === 'combatClear').simulationAt;
-  assert.equal(f.g.phase, 'boss-entry'); assert.equal(reserved(f.g), 0);
-  assert.equal(f.g.enemyBullets.length, 0); assert.equal(f.g.enemies.filter(e => e.phrase).length, 0);
-  // Continue past the cancelled sniper's original first-release time, including
-  // the boss-entry -> boss transition, rather than checking only the clear tick.
-  for (let i = 0; i < 600; i++) advance(f);
-  assert.equal(f.events.filter(e => e.type === 'enemyShot' && [field.id, sniper.id].includes(e.enemyId)
-    && e.simulationAt >= clearAt).length, 0);
+  // Source deployment and its stagger can place the sniper's charge after the
+  // first field release. Exercise the actual pending and active/inflight states.
+  for (const at of ['pending', 'inflight']) {
+    const f = fixture(), { field, sniper } = admit(f);
+    if (at === 'pending') {
+      assert.ok(sniper.pendingAttackPlan); assert.ok(field.sequence);
+    } else {
+      until(f, () => sniper.sequence && f.events.some(e => e.type === 'enemyShot' && e.enemyId === field.id), 2);
+      assert.ok(sniper.sequence); assert.ok(f.g.enemyBullets.length);
+    }
+    f.g.nextBossAt = f.g.time + DT;
+    advance(f);
+    const clearAt = f.events.find(e => e.type === 'combatClear').simulationAt;
+    assert.equal(f.g.phase, 'boss-entry'); assert.equal(reserved(f.g), 0);
+    assert.equal(f.g.enemyBullets.length, 0); assert.equal(f.g.enemies.filter(e => e.phrase).length, 0);
+    // Continue past the cancelled sniper's original first-release time, including
+    // the boss-entry -> boss transition, rather than checking only the clear tick.
+    for (let i = 0; i < 600; i++) advance(f);
+    assert.equal(f.events.filter(e => e.type === 'enemyShot' && [field.id, sniper.id].includes(e.enemyId)
+      && e.simulationAt >= clearAt).length, 0);
+  }
 });

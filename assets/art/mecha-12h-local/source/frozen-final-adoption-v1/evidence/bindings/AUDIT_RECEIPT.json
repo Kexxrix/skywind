@@ -1,0 +1,13 @@
+{
+  "scope": "existing local-art .blend pathname search; no independent Carrier matching child actual.blend found; two paths containing child are pre-child-material-fix parent backups, not standalone child sources",
+  "sourceReadOnly": true,
+  "newModels": 0,
+  "renders": 0,
+  "existingFilesModified": 0,
+  "deliverables": {
+    "PORT_SOURCE_BINDINGS.json": "e5a33ce9ed9a48ef67b67217b33186b533f438e47fd5243d8654f2f70082a782",
+    "SOURCE_FRAME0_INSPECTION.json": "8addbb6095f441f263573ade415403467953706bd592b7e26ddd314ec4649667",
+    "CARRIER_CHILD_SOURCE_RECIPE.ko.md": "9fae244b5935524ed09613b39c5c8b76c2bc8b39dce875b25c2fbda0073a7ff2",
+    "inspect_bindings.py": "fec0213c74ba3b195a62f89c0e61f006348ec0a686d5fff677761e30cf1ea3ec"
+  }
+}

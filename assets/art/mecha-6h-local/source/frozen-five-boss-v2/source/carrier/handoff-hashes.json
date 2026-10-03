@@ -1,0 +1,11 @@
+{
+  "FULL_REPORT.ko.md": "3abe38ff013aa14e0accb6401e09a468fbbcb5b7f7515d8e65e082303869e1ef",
+  "source-index.json": "fd0961c264dec7f1e3362587cde74b34165ebbe8d7c957783478c896449414a1",
+  "validation.json": "16fb4a4483c178c10a5c01ef00bd96ddcf5e3ac853c3851e6015c0e7fcf63ae1",
+  "manifest-candidate.json": "fe5f40426ff9aaacbef47a963e33f11fc4674210ac10951f208cb052e6ce84a8",
+  "manifest-full-source.json": "fe5f40426ff9aaacbef47a963e33f11fc4674210ac10951f208cb052e6ce84a8",
+  "production.json": "d9ccc8060465204845b432447879ed643861d9c37ff567f4609b6067bff9a41f",
+  "hull-inspection.json": "b1b2234ffa95f0934cbaae101eda18bbe6b8c8e3632da16927325073b2913be2",
+  "loader-qc.json": "612ccd83f3d9482d3360041d1ae7dc04671c884805605d00a035301647721bc2",
+  "source-front-gate-representative.json": "ec7566f813970be21fafc6b35f2ff025603c0cd296427b73c58379b9a5eac73c"
+}

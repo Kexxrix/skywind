@@ -21,6 +21,9 @@ body:not(.in-game) #status-group{top:18%}
 @media(max-width:700px){#status-group{top:11px;width:184px}}
 /* Pilot frame: the supplied 362 x 108 mask at (0,32) on a 1920 x 1080 view. */
 #pilot-hud{position:absolute;left:0;top:2.962963%;width:18.854167%;aspect-ratio:362/108;z-index:3;pointer-events:none;--pilot-color:64,192,255;--pilot-fx-opacity:0;--pilot-tint-opacity:0;--pilot-impact:0;--pilot-scan-y:50%}
+/* Reveal combat under the portrait immediately; separate HP/weapon HUD stays opaque. */
+#game-ui #pilot-hud[data-occluded=true]{opacity:.12}
+#game-ui #pilot-hud[data-core-clear=true]{mask-image:radial-gradient(circle at var(--pilot-clear-x) var(--pilot-clear-y),transparent 0,transparent var(--pilot-clear-inner),#000 var(--pilot-clear-outer));-webkit-mask-image:radial-gradient(circle at var(--pilot-clear-x) var(--pilot-clear-y),transparent 0,transparent var(--pilot-clear-inner),#000 var(--pilot-clear-outer))}
 .pilot-mask{position:absolute;inset:0;overflow:hidden;clip-path:polygon(0 0,100% 0,77.90055% 100%,0 100%);background:#061526;isolation:isolate}
 .pilot-images{position:absolute;inset:-12px;will-change:transform}
 .pilot-images img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block}
@@ -140,3 +143,126 @@ body.in-game #game-ui[data-compact=true] .utilities #sound-button,body.in-game #
 #game-ui[data-short=true] .result-content .subtle-button{margin-top:1px;padding:5px;font-size:9px}
 #game-ui[data-short=true] .text-button{font-size:11px;padding-top:9px;padding-bottom:13px}
 @media(prefers-reduced-motion:reduce){.supply-side>svg{filter:drop-shadow(0 0 3px currentColor)}.visor-arc,.visor-stream,.supply-label::after,#tension-row[data-active=true]::before{animation:none}.visor-arc{opacity:.9}.supply-label::after{display:none}#tension-row[data-active=true]::before{opacity:.9}}
+
+/* Visor HUD: pilot-adjacent information, open rails and local text contrast. */
+#game-ui[data-size] #status-group{left:var(--hud-left,104px);top:var(--hud-top,6px);width:var(--hud-width,206px);right:auto;max-width:none;transform:none}
+#game-ui[data-size] #hud{position:relative;inset:auto;left:0;top:0;transform:none;display:grid;grid-template-columns:var(--hud-healthWidth,54px) minmax(0,1fr);gap:6px var(--hud-gap,8px);width:100%;padding:0;border:0;border-radius:0;background:none;box-shadow:none;text-align:left;text-shadow:0 1px 2px #00101eef,0 0 4px #00101edd,0 0 9px #00101e88}
+#hud::before{content:"";position:absolute;top:18px;bottom:24px;left:-7px;width:5px;border-left:1px solid #b3ebff88;border-top:1px solid #b3ebff88;transform:skewY(-28deg);filter:drop-shadow(0 0 3px #83dfff66);pointer-events:none}
+.hud-header{grid-column:1/3;display:flex;align-items:center;justify-content:space-between;gap:10px}
+#game-ui[data-size] #flight-status{flex:1;gap:10px;margin:0;font:10px/1.2 Consolas,monospace;letter-spacing:.06em;color:#daeff8}
+#game-ui[data-size] #score{margin:0;font:10px/1.2 Consolas,monospace;letter-spacing:.08em;color:#bdd7e4}
+#score::before{content:"SCORE ";font-size:8px;color:#b6cbd5}
+#health-block{grid-column:1;grid-row:2;margin:0;color:var(--hp-color,#A4F2BA)}
+#game-ui[data-size] .energy-label{display:flex;flex-direction:column;align-items:flex-start;gap:2px;margin:0 0 5px;font:700 9px/1 Consolas,monospace;letter-spacing:.05em;color:inherit}
+.hp-number{display:flex;align-items:baseline;gap:3px}
+#game-ui[data-size] #hp-value{font:700 24px/1 Consolas,monospace;letter-spacing:-.05em;color:#f5fffc;text-shadow:0 1px 2px #03131d,0 0 4px #03131ddd,0 0 9px color-mix(in srgb,var(--hp-color) 45%,transparent)}
+#hp-max{font:9px/1 Consolas,monospace;letter-spacing:-.03em;color:#d0e0e9}
+#game-ui[data-size] .energy-track{position:relative;height:4px;border-radius:0;background:#03111d66;box-shadow:0 1px 0 #d0f4ff22;overflow:hidden}
+#game-ui[data-size] .energy-track>div{box-shadow:0 0 5px color-mix(in srgb,var(--hp-color) 35%,transparent);transition:width .12s ease-out,background .16s}
+.energy-track::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 calc(10% - 1px),#02111d66 calc(10% - 1px) 10%);pointer-events:none}
+#hud[data-health=critical]::before{border-color:#ff8099;filter:drop-shadow(0 0 3px #ff608366)}
+#health-block[data-state=critical] #hp-state::before{content:"! ";font-weight:800}
+#hud[data-health=critical] #hp-value{color:#ffb8c7}
+#game-ui[data-size] #power-status{grid-column:2;grid-row:2;min-width:0;margin:0;font:600 12px/1.2 Consolas,monospace;letter-spacing:0}
+#game-ui[data-size] .weapon-row{display:grid;grid-template-columns:var(--hud-iconWidth,20px) minmax(0,1fr) var(--hud-timerWidth,50px);align-items:center;min-width:0;gap:3px 5px;padding:2px 0 3px;color:var(--weapon-color,#78E8FF);border:0;border-radius:0;background:linear-gradient(100deg,#04152033,transparent 85%);box-shadow:none;filter:none;text-align:left}
+#game-ui[data-size] .weapon-row svg{grid-row:1/3;width:var(--hud-iconWidth,20px);height:var(--hud-iconWidth,20px);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 3px color-mix(in srgb,currentColor 50%,transparent))}
+#game-ui[data-size] #weapon-name{overflow:hidden;white-space:nowrap;font:600 12px/1.2 Consolas,monospace;letter-spacing:.015em;color:#edfbff}
+#game-ui[data-size] .weapon-time{font:700 16px/1 Consolas,monospace;letter-spacing:-.04em;font-variant-numeric:tabular-nums;text-align:right;color:#f6fcff}
+#game-ui[data-size] .weapon-meter{position:relative;grid-column:2/4;height:3px;margin-top:1px;background:#06141b55;overflow:hidden}
+#game-ui[data-size] .weapon-meter i{display:block;width:100%;height:100%;background:var(--weapon-color,#78E8FF);transform-origin:left;box-shadow:0 0 5px color-mix(in srgb,var(--weapon-color) 45%,transparent)}
+#game-ui[data-size] .weapon-row[data-mode=normal] .weapon-meter{opacity:1}
+.weapon-row[data-mode=normal] .weapon-meter::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 calc(20% - 1px),#03111d88 calc(20% - 1px) 20%)}
+#game-ui[data-size] .weapon-row[data-warning=true]{border:0;background:linear-gradient(100deg,#ffcf7b0d,transparent 80%);box-shadow:none;filter:none}
+#game-ui[data-size] .weapon-row[data-warning=true] .weapon-time{color:#ffe4b5;opacity:1;text-shadow:0 1px 2px #07101a,0 0 7px #ffae5366}
+#game-ui[data-size] .weapon-row[data-fresh=true]{border:0;box-shadow:none}
+#game-ui[data-size] .weapon-row[data-fresh=true] svg{filter:drop-shadow(0 0 5px currentColor)}
+.hud-footer{grid-column:1/3;display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin:0}
+#game-ui[data-size] #base-level{flex:0 0 auto;padding:0;font:9px/1.2 Consolas,monospace;color:#d3e6ef;text-align:left;white-space:nowrap}
+#base-level[data-max=true]{color:#f0fbff}
+#game-ui[data-size] .drone-row{position:relative;display:flex;align-items:center;gap:4px;min-width:0;margin:0;padding:0 0 4px;border:0;background:none;box-shadow:none;color:var(--weapon-color,#73F2AF);font:9px/1 Consolas,monospace;white-space:nowrap}
+.drone-row svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#game-ui[data-size] .drone-row .weapon-time{font-size:12px}
+#game-ui[data-size] .drone-row .weapon-meter{position:absolute;left:0;right:0;bottom:0;height:1.5px;margin:0}
+#game-ui[data-size] .drone-row[data-warning=true] .weapon-time{color:#ffe4b5}
+#game-ui[data-size] .drone-row[data-fresh=true] .weapon-meter i{background:#d5ffe7;box-shadow:0 0 6px #73ffab88}
+#game-ui[data-size] #tension-row{position:relative;flex:1;min-width:0;display:flex;align-items:center;justify-content:flex-end;gap:4px;margin:0;padding:0 0 4px;font:8px/1 Consolas,monospace;letter-spacing:0;white-space:nowrap;color:#e3d8ae}
+#game-ui[data-size] #tension-row>i{position:absolute;left:0;right:0;bottom:0;height:1.5px;background:#ffdc6626;overflow:hidden;box-shadow:none}
+#game-ui[data-size] #tension-row::before{content:none;animation:none;background:none;border:0;box-shadow:none}
+#game-ui[data-size] #tension-gauge{box-shadow:0 0 5px #ffd56955;background:#ffe69b}
+#game-ui[data-size] #tension-row[data-active=true]{color:#fff0bd;text-shadow:0 1px 2px #02101a,0 0 5px #ffd45266}
+#game-ui[data-size] #tension-row[data-active=true]>span:first-child{font-weight:700;letter-spacing:0}
+#game-ui[data-size] #tension-row[data-active=true] #tension-time{font:700 13px/1 Consolas,monospace;color:#fff6d9}
+#game-ui[data-size] #tension-row[data-active=false] #tension-time{font-size:8px}
+#game-ui[data-size] #combo{grid-column:1/3;height:auto;min-height:0;margin:0;font:9px/1.2 Consolas,monospace;letter-spacing:.04em;color:#e8d49a}
+#combo:empty{display:none}
+#game-ui[data-size] #notice{position:relative;left:auto;top:auto;width:100%;max-width:none;margin:6px 0 0;padding:0;transform:none;text-align:left;background:none;border:0;box-shadow:none;font:10px/1.35 Consolas,monospace;letter-spacing:.03em;color:#e9faff;text-shadow:0 1px 2px #02111d,0 0 5px #02111dcc}
+#game-ui[data-size] #boss-hud{width:300px;bottom:18px;padding:0;background:none;border:0;border-radius:0;box-shadow:none;text-shadow:0 1px 2px #03101d,0 0 5px #03101ddd}
+#game-ui[data-size] #boss-hud>span{display:block;font:600 11px/1 Consolas,monospace;letter-spacing:.16em;color:#ffdfc9}
+#game-ui[data-size] #boss-hud>div{height:4px;margin-top:5px;background:#09131d88;box-shadow:0 1px 0 #ffd8bd33}
+#boss-fill{box-shadow:0 0 5px #ffac6c77}
+
+/* Supply labels use the same open rail and glow as the pilot telemetry. */
+.supply-side>svg{filter:drop-shadow(0 1px 1px #03111dcc) drop-shadow(0 0 3px currentColor)}
+.visor-direction{stroke:currentColor;stroke-width:2;filter:none}
+.visor-stream{opacity:.62}
+#game-ui[data-size] .supply-label{right:14%;top:9%;left:auto;width:max-content;max-width:40%;padding:4px 7px 6px;border:0;border-left:1px solid currentColor;border-radius:0;background:linear-gradient(105deg,#06152259,transparent 90%);box-shadow:inset 0 1px 0 color-mix(in srgb,currentColor 30%,transparent);text-shadow:0 1px 2px #02111de8,0 0 4px #02111dbb,0 0 8px color-mix(in srgb,currentColor 35%,transparent);text-align:left;transform:none}
+#game-ui[data-size] [data-side=bottom] .supply-label{top:auto;bottom:10%;border:0;border-left:1px solid currentColor;background:linear-gradient(105deg,#06152259,transparent 90%);text-align:left}
+.supply-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:3px}
+#game-ui[data-size] .supply-phase{display:block;margin:0;font:700 9px/1 Consolas,monospace;letter-spacing:.06em;opacity:1;color:inherit}
+.supply-time{font:700 14px/1 Consolas,monospace;color:#f7fcff;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+#game-ui[data-size] .supply-copy{font:600 12px/1.2 Consolas,monospace;letter-spacing:0;white-space:nowrap;color:#f0fbff}
+#game-ui[data-size] .supply-icon{width:15px;height:15px;margin-right:5px;vertical-align:-3px;fill:none;stroke:currentColor;stroke-width:1.8}
+#game-ui[data-size] .supply-label>i{height:1.5px;left:7px;right:7px;bottom:1px}
+.supply-label::after{display:none}
+#game-ui[data-size] .supply-side[data-phase=active] .supply-label{box-shadow:inset 0 1px 0 color-mix(in srgb,currentColor 60%,transparent)}
+#game-ui[data-size=medium] #boss-hud{width:240px;bottom:13px}
+#game-ui[data-size=medium] [data-side=top] .supply-label{right:5%;top:18%}
+#game-ui[data-size=small] #score::before{display:none}
+#game-ui[data-size=small] #flight-status{font-size:9px;gap:7px}
+#game-ui[data-size=small] #score{font-size:9px}
+#game-ui[data-size=small] #hp-value{font-size:22px}
+#game-ui[data-size=small] #weapon-name{font-size:11px}
+#game-ui[data-size=small] .weapon-time{font-size:14px}
+#game-ui[data-size=small] #base-level{font-size:8px}
+#game-ui[data-size=small] .drone-row{font-size:8px;gap:3px}
+#game-ui[data-size=small] .drone-row .weapon-time{font-size:11px}
+#game-ui[data-size=small] #boss-hud{width:min(220px,48%);bottom:9px}
+#game-ui[data-size=small] #boss-hud>span{font-size:9px}
+#game-ui[data-size=small] .supply-label{right:5%;top:36%;max-width:43%;padding:4px 6px 6px}
+#game-ui[data-size=small] [data-side=bottom] .supply-label{left:50%;right:auto;top:auto;bottom:17%;max-width:min(240px,calc(100% - 184px));transform:translateX(-50%)}
+#game-ui[data-size=small] .supply-phase{font-size:8px}
+#game-ui[data-size=small] .supply-copy{font-size:11px;white-space:normal}
+#game-ui[data-size=small] .supply-time{font-size:12px}
+#game-ui[data-compact=true] #hud{gap:4px var(--hud-gap,8px)}
+#game-ui[data-compact=true] #hud::before{top:14px;bottom:18px;left:-5px;width:3px}
+#game-ui[data-compact=true] .hud-header{gap:5px}
+#game-ui[data-compact=true] #flight-status{font-size:8px;letter-spacing:0;gap:4px}
+#game-ui[data-compact=true] #score{font-size:9px;letter-spacing:0}
+#game-ui[data-compact=true] .energy-label{font-size:8px;gap:2px;margin-bottom:3px}
+#game-ui[data-compact=true] .hp-number{gap:2px}
+#game-ui[data-compact=true] #hp-value{font-size:18px}
+#game-ui[data-compact=true] #hp-max{font-size:8px}
+#game-ui[data-compact=true] .energy-track{height:3px}
+#game-ui[data-compact=true] .weapon-row{gap:2px 3px;padding:1px 0 2px}
+#game-ui[data-compact=true] #weapon-name{font-size:10px;letter-spacing:0}
+#game-ui[data-compact=true] .weapon-time{font-size:12px}
+#game-ui[data-compact=true] .weapon-meter{height:2px}
+#game-ui[data-compact=true] .hud-footer{gap:4px}
+#game-ui[data-compact=true] #base-level{font-size:8px}
+#game-ui[data-compact=true] .drone-row{gap:3px;font-size:7px;letter-spacing:-.03em}
+#game-ui[data-compact=true] .drone-row svg{width:10px;height:10px}
+#game-ui[data-compact=true] .drone-row .weapon-time{font-size:10px}
+#game-ui[data-compact=true] #tension-row{gap:3px;font-size:7px;justify-content:space-between}
+#game-ui[data-compact=true] #tension-row[data-active=true] #tension-time{font-size:11px}
+#game-ui[data-compact=true] #tension-row[data-active=false] #tension-time{font-size:7px}
+#game-ui[data-compact=true] #combo{font-size:8px}
+#game-ui[data-compact=true] #notice{font-size:9px;margin-top:4px}
+#game-ui[data-compact=true] .supply-label{left:6px;right:auto;top:max(42px,calc(12.962963% + 6px));width:94px;max-width:none;padding:4px 6px 6px}
+#game-ui[data-compact=true] [data-side=bottom] .supply-label{left:50%;right:auto;top:auto;bottom:26px;width:min(230px,calc(100% - 184px));max-width:none;transform:translateX(-50%)}
+#game-ui[data-compact=true] .supply-copy{font-size:10px;line-height:1.15}
+#game-ui[data-compact=true] .supply-heading{gap:2px;margin-bottom:2px}
+#game-ui[data-compact=true] .supply-icon{width:12px;height:12px;margin-right:3px;vertical-align:-2px}
+#game-ui[data-compact=true] #boss-hud{bottom:5px;width:45%;max-width:220px}
+#game-ui[data-compact=true] #boss-hud>span{font-size:8px}
+#game-ui[data-compact=true] #boss-hud>div{height:3px;margin-top:3px}
+@media(prefers-reduced-motion:reduce){#hud::before,.weapon-row svg{filter:none}}

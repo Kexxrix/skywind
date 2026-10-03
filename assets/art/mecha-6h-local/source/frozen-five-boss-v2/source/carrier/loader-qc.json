@@ -1,0 +1,437 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_000_payload2",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_000_payload2_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_000_payload1near",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_000_payload1near_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_000_payload1far",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_000_payload1far_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_000_payload0",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_000_payload0_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_025_payload2",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_025_payload2_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_025_payload1near",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_025_payload1near_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_025_payload1far",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_025_payload1far_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_025_payload0",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.25,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_025_payload0_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_050_payload2",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_050_payload2_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_050_payload1near",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_050_payload1near_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_050_payload1far",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_050_payload1far_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_050_payload0",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.5,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_050_payload0_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_075_payload2",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_075_payload2_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_075_payload1near",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_075_payload1near_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_075_payload1far",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_075_payload1far_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_075_payload0",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.75,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_075_payload0_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_075_payload2",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_075_payload2_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_075_payload1near",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_075_payload1near_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_075_payload1far",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_075_payload1far_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_075_payload0",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 0.999,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_075_payload0_fire",
+      "coreExposed": false,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload2",
+      "fire": false,
+      "state": "phase_100_payload2",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload2",
+      "fire": true,
+      "state": "phase_100_payload2_fire",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload1near",
+      "fire": false,
+      "state": "phase_100_payload1near",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload1near",
+      "fire": true,
+      "state": "phase_100_payload1near_fire",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload1far",
+      "fire": false,
+      "state": "phase_100_payload1far",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload1far",
+      "fire": true,
+      "state": "phase_100_payload1far_fire",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload0",
+      "fire": false,
+      "state": "phase_100_payload0",
+      "coreExposed": true,
+      "ports": 2
+    },
+    {
+      "role": "carrier",
+      "p": 1,
+      "variant": "payload0",
+      "fire": true,
+      "state": "phase_100_payload0_fire",
+      "coreExposed": true,
+      "ports": 2
+    }
+  ]
+}

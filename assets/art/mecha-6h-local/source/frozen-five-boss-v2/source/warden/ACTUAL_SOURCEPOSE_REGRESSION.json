@@ -1,0 +1,7369 @@
+{
+  "at": "2026-10-03T10:23:34.458Z",
+  "bossKind": "warden",
+  "entryKey": "warden",
+  "kind": "Explicit immutable source-pose binding fixture; candidate-derived manifest mechanism map contains target source state at progress0; semantic aliases removed only in fixture, authored PNG/anchors/hulls retained. Original engine physics/damage files unchanged. Tests authored poses, not natural boss timing or difficulty.",
+  "engineRoot": "E:\\codexwork\\Skywind\\.work\\speed-tuning-20261003\\prototype-16-final\\dist",
+  "engineSourceSHA256": {
+    "game.js": "0ff394ef7695fb4c6a5653936a6b701a1b8b5299a93137079e2b817c3d44f9c6",
+    "mecha-art.js": "824206687b77fc85e37cc2bbcf99b57d088ad6b5820e59966aa35a6609c27e59",
+    "mecha-collision.js": "1104782a1eee18fd8cc9eb384b52766d1f346cc8d626192bce25791353c8c591",
+    "level.js": "2461fb12427989bcc56c4b226d8b73f0c7194eeda355029706bf685d1c7cb99c"
+  },
+  "unchangedAfter": true,
+  "candidateManifestSHA256": "049315508b73a07bd8e7a51801f8ffe752f45a86b52ace917d5191292476da91",
+  "rows": [
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5096584719555,
+        "y": 436.89792613515283
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5096584719555,
+        "y": 436.89792613515283
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5096584719555,
+        "y": 436.89792613515283
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5096584719555,
+        "y": 436.89792613515283
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5265868606194,
+        "y": 436.8051702804835
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9349348059749,
+        "y": 436.677102341529
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.0970791514179,
+        "y": 437.0116263802221
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.0970791514179,
+        "y": 437.0116263802221
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.0970791514179,
+        "y": 437.0116263802221
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1140075400818,
+        "y": 436.91887052555273
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1482562122353,
+        "y": 436.7308119484072
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0",
+      "sourceFilename": "warden-phase_0.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5181046079164,
+        "y": 436.85166368383045
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5181046079164,
+        "y": 436.85166368383045
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5181046079164,
+        "y": 436.85166368383045
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5181046079164,
+        "y": 436.85166368383045
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.535103077512,
+        "y": 436.75845756620777
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9434510228674,
+        "y": 436.6303896272533
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1055252873788,
+        "y": 436.9653639288997
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1055252873788,
+        "y": 436.9653639288997
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1055252873788,
+        "y": 436.9653639288997
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1225237569744,
+        "y": 436.872157811277
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1482562122353,
+        "y": 436.7308119484072
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6166666666666669
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_0_fire",
+      "sourceFilename": "warden-phase_0_fire.png",
+      "progress": 0,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_0_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5265868606194,
+        "y": 436.8051702804835
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5781253565436,
+        "y": 436.52197393367015
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.918006417311,
+        "y": 436.76985819619836
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5666666666666671
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9349348059749,
+        "y": 436.677102341529
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5833333333333337
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9864733018991,
+        "y": 436.3939059947157
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.165546036006,
+        "y": 436.6356741787394
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6333333333333335
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25",
+      "sourceFilename": "warden-phase_25.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.535103077512,
+        "y": 436.75845756620777
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5868056899274,
+        "y": 436.47416019523365
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9264525532718,
+        "y": 436.723595744876
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.5750000000000004
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9434510228674,
+        "y": 436.6303896272533
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.591666666666667
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 997.9951536352828,
+        "y": 436.3460922562792
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1742263693898,
+        "y": 436.5878604403029
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6416666666666668
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_25_fire",
+      "sourceFilename": "warden-phase_25_fire.png",
+      "progress": 0.25,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_25_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50",
+      "sourceFilename": "warden-phase_50.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_50_fire",
+      "sourceFilename": "warden-phase_50_fire.png",
+      "progress": 0.5,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_50_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75",
+      "sourceFilename": "warden-phase_75.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.5955075888019,
+        "y": 436.4261943446008
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0038555341573,
+        "y": 436.2981264056463
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1829282682643,
+        "y": 436.53989458967004
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6500000000000001
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_75_fire",
+      "sourceFilename": "warden-phase_75_fire.png",
+      "progress": 0.75,
+      "coreExposed": false,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_75_fire",
+      "hit": {
+        "coreHit": false,
+        "damage": 1,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100",
+      "sourceFilename": "warden-phase_100.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.3812791334037,
+        "y": 437.57722154380576
+      },
+      "impactCore": {
+        "x": 997.6042296097523,
+        "y": 436.3780842243401
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": -0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 997.7896270787592,
+        "y": 437.4491536048513
+      },
+      "impactCore": {
+        "x": 998.0125775551078,
+        "y": 436.25001628538564
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": -0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.18,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.36,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.54,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.72,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    },
+    {
+      "state": "phase_100_fire",
+      "sourceFilename": "warden-phase_100_fire.png",
+      "progress": 1,
+      "coreExposed": true,
+      "angle": 0.035,
+      "offsetFactor": 0.9,
+      "launchCore": {
+        "x": 996.9686998128661,
+        "y": 437.690921788875
+      },
+      "impactCore": {
+        "x": 997.1916502892147,
+        "y": 436.49178446940937
+      },
+      "impactFrame": "phase_100_fire",
+      "hit": {
+        "coreHit": true,
+        "damage": 1.1999999999999886,
+        "at": 0.6583333333333334
+      }
+    }
+  ],
+  "stateSummary": [
+    {
+      "state": "phase_0",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_0_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_25",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_25_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_50",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_50_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_75",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_75_fire",
+      "coreExposed": false,
+      "total": 33,
+      "coreHits": 0,
+      "bodyHits": 33,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    },
+    {
+      "state": "phase_100_fire",
+      "coreExposed": true,
+      "total": 33,
+      "coreHits": 33,
+      "bodyHits": 0,
+      "missed": 0,
+      "impactFrameMismatch": 0
+    }
+  ]
+}

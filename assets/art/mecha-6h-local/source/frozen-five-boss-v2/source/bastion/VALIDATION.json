@@ -1,0 +1,30 @@
+{
+  "role": "bastion",
+  "candidateKey": "bastion",
+  "status": "independent review candidate, not adopted",
+  "actualSourceStates": 10,
+  "runtimePNG": 10,
+  "stateLookups": 15,
+  "coreOpenActualNormalBullets": {
+    "total": 66,
+    "coreHit": 66
+  },
+  "protectedActualNormalBullets": {
+    "total": 264,
+    "bodyHit": 264,
+    "coreHit": 0
+  },
+  "impactPoseMismatch": 0,
+  "hullTransparentFractionMax": 0.0,
+  "borderAlphaMax": 0.0,
+  "sourcePNGByteMismatch": 0,
+  "engineFilesUnchanged": true,
+  "blender": "5.2.2 LTS",
+  "renderSeconds": 25.609065294265747,
+  "actualBlendBytes": 139612,
+  "missing": [
+    "independent final appearance review",
+    "current six-hour runtime integration and native gameplay QA"
+  ],
+  "limits": "Sourcepose binding fixture tests individual authored collision snapshots, not natural game clock or difficulty. Earlier controller probe is preserved in origin folder."
+}

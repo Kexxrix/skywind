@@ -1,0 +1,94 @@
+{
+  "roleMapSHA256": "bec440b2c18ae37eb092c9d8d65f6f7707ccd0a2820ab7c4c2a9962317cc211a",
+  "loaderModuleSHA256": "b0ef96e9ff184acbb59d1b8a39d9706094b0b55c2e9240242d2c9f2917121994",
+  "results": [
+    {
+      "role": "mantis",
+      "displayWidth": 96,
+      "actualPorts": 2,
+      "coreFalse": true,
+      "nozzleCount": 1,
+      "sourceProjectedPortChecks": [
+        {
+          "projectedMuzzle": {
+            "x": 37.4154,
+            "y": 145.7052
+          },
+          "projectedForwardPoint": {
+            "x": 0.9846,
+            "y": 145.7052
+          },
+          "outsideAllComponentHulls": true,
+          "muzzleOutsideAllComponentHulls": true
+        },
+        {
+          "projectedMuzzle": {
+            "x": 37.4154,
+            "y": 238.9422
+          },
+          "projectedForwardPoint": {
+            "x": 0.9846,
+            "y": 238.9422
+          },
+          "outsideAllComponentHulls": true,
+          "muzzleOutsideAllComponentHulls": true
+        }
+      ],
+      "pixelQC": {
+        "hullCount": 19,
+        "borderMax": 0,
+        "alphaBounds": [
+          37,
+          84,
+          323,
+          262
+        ],
+        "coreExposed": false,
+        "sha256": "7F4EDA5EC23A5111FD7F2616A2B41BB9857FC52BACBF3766E265508E460C6235",
+        "hullTransparentPercent": 0.029,
+        "muzzles": 2
+      },
+      "sourceSHA256": "5a70e6e8a48af776812f1f1fb3c2bcd632db2c05717553db7e87db98a322d3aa",
+      "actualSHA256": "f5bb5faca912e1b1281f40238d8cdfdf89185e590633d03f66b5f61964fd21e9",
+      "standalone": true
+    },
+    {
+      "role": "needle",
+      "displayWidth": 112,
+      "actualPorts": 1,
+      "coreFalse": true,
+      "nozzleCount": 1,
+      "sourceProjectedPortChecks": [
+        {
+          "projectedMuzzle": {
+            "x": 36.1412,
+            "y": 192.2785
+          },
+          "projectedForwardPoint": {
+            "x": -5.647,
+            "y": 192.2785
+          },
+          "outsideAllComponentHulls": true,
+          "muzzleOutsideAllComponentHulls": true
+        }
+      ],
+      "pixelQC": {
+        "hullCount": 63,
+        "borderMax": 0,
+        "alphaBounds": [
+          36,
+          97,
+          349,
+          252
+        ],
+        "coreExposed": false,
+        "sha256": "955C15862E318F2CA392FFC3948ADAFD0BC47FAD3623693452C9EEE751C2AB1E",
+        "hullTransparentPercent": 0.028,
+        "muzzles": 1
+      },
+      "sourceSHA256": "ed2304fa8aa8a547ae773da9ebdab021d6b2165dbf04bd1f6129c52a716ecb80",
+      "actualSHA256": "836766005ec39a4eccec03ecda5200a4d54c4f54d0cff3bee249d0e22f4d82fa",
+      "standalone": true
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "physicalBoreChecks": [
+      {
+        "name": "trident_2",
+        "mouthErrorWorld": 5.960464477539063e-08,
+        "forwardErrorWorld": 1.4901161193847656e-08
+      },
+      {
+        "name": "trident_1",
+        "mouthErrorWorld": 1.862645149230957e-09,
+        "forwardErrorWorld": 1.210576058124894e-07
+      },
+      {
+        "name": "trident_0",
+        "mouthErrorWorld": 3.725290298461914e-09,
+        "forwardErrorWorld": 1.316562074949763e-07
+      }
+    ],
+    "state": "idle",
+    "maxProjectedAnchorErrorPixels": 4.668635805568335e-05,
+    "camera": [
+      -3.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "orthoScale": 3.5999999046325684,
+    "coreFalse": true,
+    "portOrder": [
+      "trident_2",
+      "trident_1",
+      "trident_0"
+    ]
+  },
+  {
+    "physicalBoreChecks": [
+      {
+        "name": "trident_2",
+        "mouthErrorWorld": 5.960464477539063e-08,
+        "forwardErrorWorld": 1.4901161193847656e-08
+      },
+      {
+        "name": "trident_1",
+        "mouthErrorWorld": 1.862645149230957e-09,
+        "forwardErrorWorld": 2.1073424255447017e-08
+      },
+      {
+        "name": "trident_0",
+        "mouthErrorWorld": 5.972094663188382e-08,
+        "forwardErrorWorld": 1.316562074949763e-07
+      }
+    ],
+    "state": "charge",
+    "maxProjectedAnchorErrorPixels": 6.41802104754483e-05,
+    "camera": [
+      -3.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "orthoScale": 3.5999999046325684,
+    "coreFalse": true,
+    "portOrder": [
+      "trident_2",
+      "trident_1",
+      "trident_0"
+    ]
+  },
+  {
+    "physicalBoreChecks": [
+      {
+        "name": "trident_2",
+        "mouthErrorWorld": 5.960464477539063e-08,
+        "forwardErrorWorld": 1.4901161193847656e-08
+      },
+      {
+        "name": "trident_1",
+        "mouthErrorWorld": 1.862645149230957e-09,
+        "forwardErrorWorld": 2.1073424255447017e-08
+      },
+      {
+        "name": "trident_0",
+        "mouthErrorWorld": 3.725290298461914e-09,
+        "forwardErrorWorld": 1.316562074949763e-07
+      }
+    ],
+    "state": "fire",
+    "maxProjectedAnchorErrorPixels": 4.560366643281574e-05,
+    "camera": [
+      -3.0,
+      -16.0,
+      3.0999999046325684
+    ],
+    "orthoScale": 3.5999999046325684,
+    "coreFalse": true,
+    "portOrder": [
+      "trident_2",
+      "trident_1",
+      "trident_0"
+    ]
+  }
+]

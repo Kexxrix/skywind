@@ -1,0 +1,21 @@
+{
+  "sourceModule": "E:\\codexwork\\Skywind\\src\\mecha-art.js",
+  "results": [
+    {
+      "role": "mantis",
+      "displayWidth": 96,
+      "actualPorts": 2,
+      "nozzles": 1,
+      "coreEnabled": false,
+      "forwardLeft": true
+    },
+    {
+      "role": "needle",
+      "displayWidth": 112,
+      "actualPorts": 1,
+      "nozzles": 1,
+      "coreEnabled": false,
+      "forwardLeft": true
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createGame, startGame, updateGame, consumeEvents, screenToWorld, worldToScreen, PLAYER_HIT_RADIUS, WEAPON_DURATION } from '../src/game.js';
 import { bossProfile } from '../src/level.js';
+import { grazeOuterRadius } from '../src/combat-damage.js';
 const STEP = 1 / 120;
 const close = (a, b, epsilon = 1e-7) => assert.ok(Math.abs(a - b) <= epsilon, `${a} != ${b}`);
 function playable(seed = 73) {
@@ -113,8 +114,10 @@ test('pause and gameover freeze simulation and explicit seed restart clears run-
   assert.equal(g.supply, null); assert.equal(g.bossesDefeated, 0); assert.equal(g.scrollTime, distance);
 });
 
-test('graze uses the real radius and its closed twelve-unit outer boundary', () => {
-  for (const [margin, damage, tension] of [[-0.01, 12, false], [0, 0, true], [12, 0, true], [12.01, 0, false]]) {
+test('graze uses the real radius and doubles its complete former outer boundary', () => {
+  const outerMargin=grazeOuterRadius(PLAYER_HIT_RADIUS+5.5)-PLAYER_HIT_RADIUS-5.5;
+  for (const [margin, damage, tension] of [[-0.01, 12, false], [0, 0, true], [12.01, 0, true],
+    [outerMargin,0,true],[outerMargin+.01,0,false]]) {
     const g = playable(); g.enemyBullets.push(bullet(g, margin)); updateGame(g, STEP);
     assert.equal(g.player.hp, 100 - damage); assert.equal(g.tensionTime > 0, tension, `margin ${margin}`);
   }

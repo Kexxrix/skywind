@@ -1,0 +1,18 @@
+[
+  {
+    "state": "phase_000_payload2",
+    "pixel": [
+      190,
+      130
+    ],
+    "alpha": 0
+  },
+  {
+    "state": "phase_100_payload0",
+    "pixel": [
+      190,
+      130
+    ],
+    "alpha": 0
+  }
+]

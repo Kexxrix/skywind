@@ -1,0 +1,18 @@
+{
+  "loader": "PASS",
+  "renderedStates": [
+    "idle"
+  ],
+  "preparedSourceStates": [
+    "idle",
+    "charge",
+    "fire"
+  ],
+  "ports": 3,
+  "nozzles": 1,
+  "hulls": 30,
+  "coreFalse": true,
+  "displayWidth": 82,
+  "hashes": "PASS",
+  "actualSHA256": "187f2305a21ba108ad274e9eb6a93779f8aaec7fbce9656fa62dfc18113443f4"
+}

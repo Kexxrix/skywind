@@ -1,0 +1,209 @@
+{
+  "bossKind": "warden",
+  "manifestKey": "warden",
+  "stateLookups": 15,
+  "uniquePNGPaths": 10,
+  "neutralGeometryPoses": [
+    {
+      "progress": 0,
+      "state": "phase_0",
+      "hullHash": "fe1c0552d035401e592c309f387ebb4c2cbc8df4bb980bdd8ed4d1f5970b2588",
+      "ports": [
+        {
+          "x": 57.9491,
+          "y": 309.1791
+        },
+        {
+          "x": 57.9491,
+          "y": 281.4084
+        },
+        {
+          "x": 34.9091,
+          "y": 115.4611
+        },
+        {
+          "x": 34.9091,
+          "y": 87.6903
+        },
+        {
+          "x": 55.1564,
+          "y": 190.3067
+        }
+      ]
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_25",
+      "hullHash": "54552dc6e18bfc622134bbccccef56d7ada8939e273448017b74a89e3a19784e",
+      "ports": [
+        {
+          "x": 60.0436,
+          "y": 313.0738
+        },
+        {
+          "x": 60.0436,
+          "y": 285.303
+        },
+        {
+          "x": 37.0036,
+          "y": 111.5664
+        },
+        {
+          "x": 37.0036,
+          "y": 83.7957
+        },
+        {
+          "x": 55.1564,
+          "y": 176.76
+        }
+      ]
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_50",
+      "hullHash": "6b3fb7a13dcb42b75ae8352cfb338673f6d0157032b53c674bfa8e46ad268ef1",
+      "ports": [
+        {
+          "x": 62.1382,
+          "y": 316.9685
+        },
+        {
+          "x": 62.1382,
+          "y": 289.1977
+        },
+        {
+          "x": 39.0982,
+          "y": 107.6717
+        },
+        {
+          "x": 39.0982,
+          "y": 79.901
+        },
+        {
+          "x": 55.1564,
+          "y": 163.2133
+        }
+      ]
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_75",
+      "hullHash": "a0799f9521cf50ccbcce150a21be64afe7230c3622e33a5cb9dcbcb87f947ee7",
+      "ports": [
+        {
+          "x": 64.2327,
+          "y": 320.8632
+        },
+        {
+          "x": 64.2327,
+          "y": 293.0924
+        },
+        {
+          "x": 41.1927,
+          "y": 103.777
+        },
+        {
+          "x": 41.1927,
+          "y": 76.0063
+        },
+        {
+          "x": 55.1564,
+          "y": 149.6665
+        }
+      ]
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "hullHash": "3858f428aa4ae2e5a3bd7e64e77cf8afbdc5857eb0cd03d444f9917ab11cd26a",
+      "ports": [
+        {
+          "x": 66.3273,
+          "y": 324.7579
+        },
+        {
+          "x": 66.3273,
+          "y": 296.9871
+        },
+        {
+          "x": 43.2873,
+          "y": 99.8824
+        },
+        {
+          "x": 43.2873,
+          "y": 72.1116
+        },
+        {
+          "x": 55.1564,
+          "y": 136.1198
+        }
+      ]
+    }
+  ],
+  "selection": [
+    {
+      "progress": 0,
+      "state": "phase_0",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.249,
+      "state": "phase_0",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.25,
+      "state": "phase_25",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.499,
+      "state": "phase_25",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.5,
+      "state": "phase_50",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.749,
+      "state": "phase_50",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.75,
+      "state": "phase_75",
+      "coreExposed": false
+    },
+    {
+      "progress": 0.999,
+      "state": "phase_75",
+      "coreExposed": false
+    },
+    {
+      "progress": 1,
+      "state": "phase_100",
+      "coreExposed": true
+    }
+  ],
+  "semanticAliases": {
+    "charge": "current neutral + actual muzzle telegraph",
+    "damaged": "retain mechanism/recoil + runtime effects",
+    "neutralByProgress": {
+      "0": "phase_0",
+      "1": "phase_100",
+      "0.25": "phase_25",
+      "0.5": "phase_50",
+      "0.75": "phase_75"
+    },
+    "fireByProgress": {
+      "0": "phase_0_fire",
+      "1": "phase_100_fire",
+      "0.25": "phase_25_fire",
+      "0.5": "phase_50_fire",
+      "0.75": "phase_75_fire"
+    }
+  },
+  "pass": true
+}
